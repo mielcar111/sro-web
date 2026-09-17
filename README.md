@@ -1,196 +1,208 @@
-# Silkroad Online — Tarayıcı MMO (istemci + sunucu + veritabanı paketi)
+# Silkroad Online — MMO w przeglądarce (klient + serwer + pakiet bazy danych)
 
-Silkroad evreninde geçen, tamamen tarayıcıda çalışan bir MMORPG:
-Babylon.js tabanlı web istemcisi + Node.js sunucu yeniden-uygulaması +
-vSRO türevi SQL Server veritabanı şeması. Kurulum bittiğinde oyun
-`http://localhost:3000` adresinde açılır.
+MMORPG osadzone w uniwersum Silkroad, działające w całości w przeglądarce:
+klient webowy oparty na Babylon.js + reimplementacja serwera w Node.js +
+schemat bazy SQL Server będący pochodną vSRO. Po zakończeniu instalacji gra
+otwiera się pod adresem `http://localhost:3000`.
 
-```
+​```
 FORUM-SHARE/
-├── README.md            bu dosya
-├── BASLAT.bat           sunucuyu başlatır (ilk koşumda npm install yapar)
-├── client/              web istemcisi (Babylon.js; sunucu buradan servis eder)
-├── server/              Node.js sunucu (~40 modül) + data/ + config.example.json
+├── README.md              ten plik
+├── BASLAT.bat             uruchamia serwer (przy pierwszym starcie wykonuje npm install)
+├── client/                klient webowy (Babylon.js; serwer serwuje go stąd)
+├── server/                serwer Node.js (~40 modułów) + data/ + config.example.json
 └── DATABASE/
-    ├── 03_SRO_WEB_GAME.bak      web şeması (seed dolu, oyuncu tabloları boş)
-    ├── SURUM-UYARISI.txt        .bak sürüm uyarısı + RESTORE örneği
-    └── QUERY/                   01..08 numaralı .sql seti (.bak'a alternatif)
-```
+    ├── 03_SRO_WEB_GAME.bak       schemat web (dane seed wypełnione, tabele graczy puste)
+    ├── OSTRZEZENIE-WERSJI.txt    ostrzeżenie o wersji .bak + przykład RESTORE
+    └── QUERY/                    zestaw plików .sql o numerach 01..08 (alternatywa dla .bak)
+​```
 
-> **ÖNEMLİ — klasör yerleşimi:** `server/` ve `client/` klasörleri **kardeş**
-> kalmalıdır. Sunucu istemciyi `../client` yolundan servis eder ve bazı
-> yerelleştirme dosyalarını oradan okur; klasörleri ayırır ya da yeniden
-> adlandırırsanız sunucu açılmaz veya eksik çalışır.
+> **WAŻNE — układ katalogów:** foldery `server/` i `client/` muszą pozostać
+> **jako rodzeństwo** (na tym samym poziomie). Serwer serwuje klienta ze
+> ścieżki `../client` i czyta stamtąd niektóre pliki lokalizacji; jeśli je
+> rozdzielisz albo zmienisz nazwy, serwer nie wystartuje lub będzie działał
+> niekompletnie.
 
 ---
 
-## Gereksinimler
+## Wymagania
 
-| Bileşen | Sürüm | Not |
+| Komponent | Wersja | Uwagi |
 |---|---|---|
-| Windows | 10/11 | (Linux'ta da çalışır; BASLAT.bat yerine `cd server && npm install && node server.js`) |
-| Bir vSRO veritabanı seti | `SRO_VT_SHARD` + `SRO_VT_ACCOUNT` | **pakete dahil değildir** — vSRO topluluk standardıdır, kendi setinizi kullanın |
-| Microsoft SQL Server | `03_SRO_WEB_GAME.bak` için **2025 (17.x) veya üzeri** | Daha eski sürüm (2019/2022) bu .bak'ı **reddeder**; alternatif için Kurulum 1. adıma bakın |
-| Node.js | **18+** (npm dahil) | Bağımlılıklar yalnız `ws` + `mssql` |
-| Tarayıcı | WebGL2 destekli güncel Chrome/Edge/Firefox | |
-| Disk | ~2 GB | istemci varlıkları ~1.4 GB |
+| Windows | 10/11 | (Działa też na Linuksie; zamiast BASLAT.bat użyj `cd server && npm install && node server.js`) |
+| Zestaw baz vSRO | `SRO_VT_SHARD` + `SRO_VT_ACCOUNT` | **nie jest dołączony do pakietu** — to standard społeczności vSRO, użyj własnego zestawu |
+| Microsoft SQL Server | dla `03_SRO_WEB_GAME.bak` **2025 (17.x) lub nowszy** | Starsze wersje (2019/2022) **odrzucą** ten .bak; alternatywę znajdziesz w kroku 1 instalacji |
+| Node.js | **18+** (wraz z npm) | Zależności to tylko `ws` + `mssql` |
+| Przeglądarka | Aktualny Chrome/Edge/Firefox z obsługą WebGL2 | |
+| Dysk | ~2 GB | zasoby klienta ~1,4 GB |
 
 ---
 
-## Kurulum (5 adım)
+## Instalacja (5 kroków)
 
-### 1) Veritabanlarını kur
+### 1) Zainstaluj bazy danych
 
-**Önce vSRO tarafı — kendi setiniz:** `SRO_VT_SHARD` ve `SRO_VT_ACCOUNT`
-bu pakete **dahil değildir** (herkeste zaten bulunan vSRO topluluk
-standardıdır). Elinizdeki hazır bir vSRO veritabanı setini geri yükleyin,
-sonra **`DATABASE/QUERY/06_shard_parite.sql` dosyasını KENDİ shard'ınıza**
-uygulayın (bu sunucunun beklediği parite eklerini kurar; dosyanın başında
-ne yaptığı yazar).
+**Najpierw strona vSRO — twój własny zestaw:** `SRO_VT_SHARD` i
+`SRO_VT_ACCOUNT` **nie są dołączone** do tego pakietu (to standard
+społeczności vSRO, który każdy już ma). Przywróć własny gotowy zestaw baz
+vSRO, a następnie **zastosuj plik `DATABASE/QUERY/06_shard_parite.sql` do
+SWOJEGO sharda** (dodaje on rozszerzenia parytetu wymagane przez ten
+serwer; w nagłówku pliku opisano, co robi).
 
-**Sonra web tarafı — `SRO_WEB_GAME` (bu paketin kendi şeması), iki yol:**
+**Następnie strona web — `SRO_WEB_GAME` (własny schemat tego pakietu), dwie drogi:**
 
-**A yolu — `.bak` geri yükle (SQL Server 2025+):**
+**Droga A — przywrócenie `.bak` (SQL Server 2025+):**
 
-```sql
-RESTORE DATABASE SRO_WEB_GAME FROM DISK = N'C:\YOL\03_SRO_WEB_GAME.bak'
+​```sql
+RESTORE DATABASE SRO_WEB_GAME FROM DISK = N'C:\SCIEZKA\03_SRO_WEB_GAME.bak'
 WITH MOVE 'SRO_WEB_GAME'     TO N'C:\SQLDATA\SRO_WEB_GAME.mdf',
      MOVE 'SRO_WEB_GAME_LOG' TO N'C:\SQLDATA\SRO_WEB_GAME_log.ldf';
--- mantıksal adlar için: RESTORE FILELISTONLY FROM DISK = N'...bak'
-```
+-- aby uzyskać nazwy logiczne: RESTORE FILELISTONLY FROM DISK = N'...bak'
+​```
 
-Ayrıntı ve sürüm uyarısı: `DATABASE/SURUM-UYARISI.txt`.
+Szczegóły i ostrzeżenie o wersji: `DATABASE/OSTRZEZENIE-WERSJI.txt`.
 
-**B yolu — QUERY seti ile sıfırdan (eski SQL Server için):**
-`DATABASE/QUERY/01..05` dosyalarını **sırayla** çalıştırın (her dosyanın
-başında ne yaptığı ve koşum sırası yazar). QUERY seti yalnız **web
-tarafını** (SRO_WEB_GAME + lonca/meslek yordamları) kurar; 06 her iki
-yolda da kendi shard'ınıza uygulanır, 07–08 bakım/GM içindir.
+**Droga B — od zera przez zestaw QUERY (dla starszego SQL Servera):**
+Uruchom pliki `DATABASE/QUERY/01..05` **po kolei** (w nagłówku każdego
+pliku opisano, co robi i w jakiej kolejności uruchamiać). Zestaw QUERY
+instaluje tylko **stronę web** (SRO_WEB_GAME + procedury guild/job); plik
+06 stosuje się do własnego sharda w obu drogach, a 07–08 służą do
+konserwacji/GM.
 
-> **İki yol da aynı yere çıkar:** `.bak` ile QUERY seti aynı şemayı üretir —
-> **39 tablo, 43 saklı yordam, 243 kolon, 52 indeks**; dolu olan tek şey
-> tohum tablolarıdır (16 karakter stili + 6 güvenlik sorusu), oyuncu
-> tabloları boştur. Bu eşitlik her sürümde otomatik doğrulanır.
+> **Obie drogi prowadzą do tego samego wyniku:** `.bak` i zestaw QUERY dają
+> identyczny schemat — **39 tabel, 43 procedur składowanych, 243 kolumn,
+> 52 indeksów**; jedyne wypełnione dane to tabele seed (16 stylów postaci
+> + 6 pytań bezpieczeństwa), tabele graczy są puste. Równość ta jest
+> automatycznie weryfikowana w każdej wersji.
 
-> `SRO_VT_LOG` pakete dahil değildir ve sunucunun açılması için gerekmez;
-> `config.json`'daki `log` alanını mevcut ya da boş bir veritabanına
-> işaretleyebilirsiniz.
+> `SRO_VT_LOG` nie jest dołączony do pakietu i nie jest wymagany do
+> uruchomienia serwera; w `config.json` pole `log` możesz wskazać na
+> dowolną istniejącą lub pustą bazę.
 
-### 2) config.json'u oluştur
+### 2) Utwórz config.json
 
-```
+​```
 cd server
 copy config.example.json config.json
 notepad config.json
-```
+​```
 
-`sql.user` / `sql.password` alanlarına **kendi** SQL Server bilgilerinizi
-yazın. Veritabanı adlarını değiştirdiyseniz `sql.databases` alanını **ve**
-QUERY dosyalarındaki adları da aynı şekilde güncelleyin.
-`config.json` olmadan sunucu açılmaz (BASLAT.bat sizi uyarır).
+W polach `sql.user` / `sql.password` wpisz **własne** dane dostępowe do
+SQL Servera. Jeśli zmieniłeś nazwy baz, zaktualizuj odpowiednio pole
+`sql.databases` **oraz** nazwy w plikach QUERY. Bez `config.json` serwer
+nie wystartuje (BASLAT.bat cię ostrzeże).
 
-### 3) Sunucuyu başlat
+### 3) Uruchom serwer
 
-`BASLAT.bat`'a çift tıklayın. İlk koşumda `npm install` çalışır (internet
-gerekir, ~30 sn); sonrasında sunucu açılır ve konsolda
-`SQL bagli -> ...` satırlarını görürsünüz.
+Kliknij dwukrotnie `BASLAT.bat`. Przy pierwszym uruchomieniu wykona się
+`npm install` (wymagane połączenie z internetem, ~30 s); następnie serwer
+wystartuje i zobaczysz w konsoli linie typu `SQL bagli -> ...`.
 
-### 4) Kayıt ol ve oyna
+### 4) Zarejestruj się i graj
 
-Tarayıcıda `http://localhost:3000` → **Kayıt Ol** (kullanıcı adı, şifre,
-e-posta, güvenlik sorusu) → giriş → karakter oluştur. Kayıt/giriş/şifre
-sıfırlama tamamen yereldir; dış bir sunucuya istek gitmez.
+W przeglądarce wejdź na `http://localhost:3000` → **Zarejestruj się**
+(nazwa użytkownika, hasło, e-mail, pytanie bezpieczeństwa) → zaloguj →
+utwórz postać. Rejestracja/logowanie/reset hasła są w pełni lokalne;
+żadne żądania nie wychodzą na zewnętrzne serwery.
 
-### 5) Kendine GM yetkisi ver (isteğe bağlı)
+### 5) Nadaj sobie uprawnienia GM (opcjonalnie)
 
-`DATABASE/QUERY/08_gm_yetki_ornekleri.sql` dosyasını açın, `@kullanici`
-değerini 4. adımda açtığınız hesabın adıyla değiştirin ve çalıştırın.
-Oyunda sohbete `/gm help` yazarak doğrulayın
+Otwórz plik `DATABASE/QUERY/08_gm_yetki_ornekleri.sql`, zamień wartość
+`@kullanici` na nazwę konta utworzonego w kroku 4 i wykonaj skrypt.
+Sprawdź w grze wpisując na czacie `/gm help`
 (`tp`, `spawn`, `heal`, `notice`, `kick`, `reloadcombat` …).
 
 ---
 
-## Veritabanı Mimarisi
+## Architektura bazy danych
 
-**Kural:** vSRO'da karşılığı olan hiçbir veri yeni veritabanına taşınmadı.
-Oyuna Windows istemcisi yerine tarayıcıdan giriliyor ama veri aynı
-yerlerde durur:
+**Zasada:** żadne dane mające swój odpowiednik w vSRO nie zostały
+przeniesione do nowej bazy. Do gry wchodzi się z przeglądarki zamiast z
+klienta Windows, ale dane leżą w tych samych miejscach:
 
-| Veritabanı | Rolü | İçerik |
+| Baza | Rola | Zawartość |
 |---|---|---|
-| `SRO_VT_ACCOUNT` | giriş kapısı | `TB_User`, `SK_Silk` — tablo/yordamlar değiştirilmedi |
-| `SRO_VT_SHARD` | oyun dünyası | `_Char`, `_User`, `_Inventory`, `_Items`, `_CharSkill`, `_Guild` … |
-| `SRO_VT_LOG` | kayıtlar | pakette yok; isteğe bağlı |
-| `SRO_WEB_GAME` | **yeni** | yalnız vSRO'da karşılığı **olmayan** sistemler |
+| `SRO_VT_ACCOUNT` | brama logowania | `TB_User`, `SK_Silk` — tabele/procedury nie zostały zmienione |
+| `SRO_VT_SHARD` | świat gry | `_Char`, `_User`, `_Inventory`, `_Items`, `_CharSkill`, `_Guild` … |
+| `SRO_VT_LOG` | logi | brak w pakiecie; opcjonalnie |
+| `SRO_WEB_GAME` | **nowa** | tylko systemy, które **nie mają** odpowiednika w vSRO |
 
-`SRO_WEB_GAME` neden var (ölçülen kısıtlar, tahmin değil):
+Dlaczego istnieje `SRO_WEB_GAME` (ograniczenia zmierzone, nie zgadywane):
 
-- `TB_User.password` `varchar(50)` — modern tuz+özet (scrypt) sığmaz →
-  gerçek parola malzemesi `WebAuth`'ta; `TB_User` kanonik üyelik satırı olarak kalır.
-- `TB_User.sec_primary/sec_content` `tinyint` — soru **metni** değil; bu
-  shard'da GM bayrağı olarak kullanılır → güvenlik sorusu `WebSecurity`'de.
-- Silk ekonomisi (`WebWallet`, `WebExchange*`, `WebStake`), müzayede,
-  premium, büyüyen pet, unique zamanlayıcıları, arayüz durumu gibi
-  bu sunucuya özgü sistemlerin vSRO'da tablosu yoktur.
+- `TB_User.password` to `varchar(50)` — nowoczesny sól+skrót (scrypt)
+  się nie zmieści → właściwy materiał hasła leży w `WebAuth`;
+  `TB_User` pozostaje kanonicznym rekordem członkostwa.
+- `TB_User.sec_primary/sec_content` to `tinyint` — nie **treść** pytania;
+  na tym shardzie używane jako flaga GM → pytanie bezpieczeństwa jest
+  w `WebSecurity`.
+- Ekonomia Silk (`WebWallet`, `WebExchange*`, `WebStake`), aukcje,
+  konto premium, rosnący pet, timery unikatów, stan interfejsu — te
+  systemy, specyficzne dla tego serwera, nie mają tabel w vSRO.
 
-Bazı tabloları sunucu **çalışma zamanında kendisi kurar**
-(`WebCharInventory`, `WebBank`, `WebCharPet` …) — ilk açılışta konsolda
-`kalicilik: WebCharInventory hazir` benzeri satırlar görmeniz normaldir.
+Część tabel serwer **tworzy sam w czasie działania** (`WebCharInventory`,
+`WebBank`, `WebCharPet` …) — przy pierwszym starcie normalne jest
+zobaczyć w konsoli linie w rodzaju `kalicilik: WebCharInventory hazir`.
 
-Karakter oluşturma doğrudan vSRO tablolarına yazar (16 karakter stili ↔
-`RefObjID` eşlemesi `WebCharStyle`'dadır); koordinatlar istemci dünya
-birimi ↔ vSRO `region+local` köprüsüyle çevrilir.
+Tworzenie postaci pisze bezpośrednio do tabel vSRO (mapowanie 16 stylów
+postaci ↔ `RefObjID` znajduje się w `WebCharStyle`); współrzędne są
+konwertowane pomostem: jednostki świata klienta ↔ vSRO `region+local`.
 
-### Çanta 12 sayfa — sayfa 6–12 nerede saklanır?
+### Torba ma 12 stron — gdzie są przechowywane strony 6–12?
 
-Çanta 12 sayfadır (384 yuva). vSRO `_Inventory.Slot` kolonu `tinyint`
-olduğundan tablo değiştirilmedi (ALTER yok): ilk sayfalar vSRO
-`_Inventory`/`_Items`'ta, **sayfa 6–12'deki eşyalar ise vSRO tablosunda
-GÖRÜNMEZ — `SRO_WEB_GAME.dbo.WebCharInventory`'de tutulur** ve girişte
-otomatik birleştirilir. SSMS'te sayfa 6–12 içeriğine bakmak için:
+Torba liczy 12 stron (384 sloty). Ponieważ w vSRO kolumna
+`_Inventory.Slot` jest `tinyint`, tabela nie została zmieniona (bez
+ALTER): pierwsze strony leżą w vSRO `_Inventory`/`_Items`, natomiast
+**przedmioty ze stron 6–12 NIE SĄ WIDOCZNE w tabeli vSRO — trzymane są
+w `SRO_WEB_GAME.dbo.WebCharInventory`** i przy logowaniu są automatycznie
+łączone. Żeby podejrzeć w SSMS zawartość stron 6–12:
 
-```sql
+​```sql
 SELECT Kap, Slot, StackJson
 FROM SRO_WEB_GAME.dbo.WebCharInventory
 WHERE CharID = (SELECT CharID FROM SRO_VT_SHARD.dbo._Char
-                WHERE CharName16 = N'KARAKTER_ADI')
+                WHERE CharName16 = N'NAZWA_POSTACI')
 ORDER BY Kap, Slot;
-```
+​```
 
-`SELECT MAX(Slot) FROM _Inventory` sorgusunun 255'i hiç aşmaması
-tasarım gereğidir; "eşyam kayıp" sanmayın, üstteki sorguya bakın.
+To, że zapytanie `SELECT MAX(Slot) FROM _Inventory` nigdy nie przekracza
+255, jest zgodne z projektem; nie wyciągaj wniosku „zginął mi przedmiot"
+— sprawdź w powyższym zapytaniu.
 
-### Bakım
+### Konserwacja
 
-`DATABASE/QUERY/07_bakim_CleanDB.sql` web tarafını güvenli sıfırlamak için
-`CleanDB` yordamını kurar (`@Report=1` yalnız sayar, `@KeepAccounts=1`
-hesapları korur). Yordam yalnız `SRO_WEB_GAME` içinde çalışır; canlı
-veritabanı adlarına sabittir — adları değiştirdiyseniz dosyayı da güncelleyin.
+`DATABASE/QUERY/07_bakim_CleanDB.sql` instaluje procedurę `CleanDB` do
+bezpiecznego resetowania strony web (`@Report=1` tylko liczy,
+`@KeepAccounts=1` zachowuje konta). Procedura działa wyłącznie w obrębie
+`SRO_WEB_GAME`; nazwy baz są w niej zaszyte na sztywno — jeśli je
+zmieniłeś, zaktualizuj także ten plik.
 
 ---
 
-## Güvenlik notu
+## Notka bezpieczeństwa
 
-- **Parolanızı değiştirin / döndürün:** `config.example.json` içindeki
-  `DEGISTIRIN` değerlerini mutlaka kendi **güçlü ve benzersiz** parolanızla
-  değiştirin. Bu paketi kendi çalışan sunucunuzdan türetip yeniden
-  paylaşacaksanız, yapılandırma dosyalarında bir kez bile yer almış her SQL
-  parolasını paylaşmadan **önce** gerçek sunucuda döndürün (rotasyon) —
-  dosyadan silinmiş olması yetmez.
-- **`sa` ile bağlanmayın:** sunucu için yalnız bu veritabanlarına yetkili,
-  az yetkili ayrı bir SQL login açın ve `config.json`'a onu yazın:
+- **Zmień / zrotuj swoje hasła:** wartości `DEGISTIRIN` w
+  `config.example.json` obowiązkowo zamień na własne **silne i unikalne**
+  hasło. Jeśli tworzysz ten pakiet z własnego działającego serwera
+  i planujesz go udostępnić dalej, każde hasło SQL, które choć raz
+  pojawiło się w plikach konfiguracyjnych, zrotuj na rzeczywistym
+  serwerze **przed** udostępnieniem — samo usunięcie z pliku to za mało.
+- **Nie łącz się jako `sa`:** dla serwera utwórz osobne, mało
+  uprzywilejowane konto SQL z dostępem tylko do tych baz i wpisz je w
+  `config.json`:
 
-```sql
-CREATE LOGIN silkroad_srv WITH PASSWORD = N'GucluBirParola!';
+​```sql
+CREATE LOGIN silkroad_srv WITH PASSWORD = N'SilneHaslo!';
 USE SRO_VT_SHARD;   CREATE USER silkroad_srv FOR LOGIN silkroad_srv; ALTER ROLE db_owner ADD MEMBER silkroad_srv;
 USE SRO_VT_ACCOUNT; CREATE USER silkroad_srv FOR LOGIN silkroad_srv; ALTER ROLE db_owner ADD MEMBER silkroad_srv;
 USE SRO_WEB_GAME;   CREATE USER silkroad_srv FOR LOGIN silkroad_srv; ALTER ROLE db_owner ADD MEMBER silkroad_srv;
-```
+​```
 
-  (İsterseniz `db_owner` yerine `db_datareader` + `db_datawriter` +
-  yordamlara `GRANT EXECUTE` ile daha da kısabilirsiniz; sunucu ilk açılışta
-  eksik tabloları kendisi kurduğu için en az ilk koşumda DDL yetkisi gerekir.)
-- Sunucu varsayılan olarak tüm arabirimleri dinler (`host: "::"`). Yalnız
-  kendi makinenizde oynayacaksanız `config.json`'da `host`'u `"127.0.0.1"`
-  yapabilirsiniz; internete açacaksanız önüne bir ters vekil (reverse proxy)
-  ve güvenlik duvarı koyun.
+  (Jeśli chcesz, zamiast `db_owner` możesz jeszcze bardziej zawęzić
+  uprawnienia: `db_datareader` + `db_datawriter` + `GRANT EXECUTE` na
+  procedurach; ponieważ serwer sam tworzy brakujące tabele przy
+  pierwszym uruchomieniu, przynajmniej podczas pierwszego startu
+  wymagane są uprawnienia DDL.)
+- Serwer domyślnie nasłuchuje na wszystkich interfejsach (`host: "::"`).
+  Jeśli będziesz grać tylko na własnej maszynie, ustaw w `config.json`
+  `host` na `"127.0.0.1"`; jeśli otwierasz go do internetu, postaw
+  przed nim reverse proxy i firewall.

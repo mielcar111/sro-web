@@ -1,0 +1,34 @@
+OSTRZEŻENIE O WERSJI — plik DATABASE .bak
+=========================================
+
+Plik kopii zapasowej w tym folderze został utworzony w SQL Server 2025
+(wersja 17.0.1125.2):
+
+  03_SRO_WEB_GAME.bak -> SRO_WEB_GAME (schemat web: tabele seed wypełnione,
+                                       tabele graczy puste)
+
+UWAGA: SRO_VT_SHARD i SRO_VT_ACCOUNT NIE SĄ DOŁĄCZONE do pakietu — to
+standard społeczności vSRO. Użyj własnego zestawu baz vSRO i zastosuj
+plik DATABASE/QUERY/06_shard_parite.sql do SWOJEGO sharda (szczegóły
+w README).
+
+WAŻNE: SQL Server potrafi przywrócić kopię zapasową TYLKO w tej samej lub
+NOWSZEJ wersji. Ten plik .bak wymaga SQL Server 2025 (17.x) lub nowszego;
+starsze wersje (2019/2022) ODRZUCĄ go z błędem "The database was backed
+up on a server running version 17...".
+
+Jeśli używasz starszej wersji, ALTERNATYWA: zainstaluj schemat web od
+zera przy pomocy ponumerowanych plików .sql w DATABASE/QUERY (zaczynając
+od 01 po kolei; szczegóły w README).
+
+Przykład przywracania (dostosuj ścieżki do własnej instalacji):
+
+  RESTORE DATABASE SRO_WEB_GAME FROM DISK = N'C:\SCIEZKA\03_SRO_WEB_GAME.bak'
+  WITH MOVE 'SRO_WEB_GAME'     TO N'C:\SQLDATA\SRO_WEB_GAME.mdf',
+       MOVE 'SRO_WEB_GAME_LOG' TO N'C:\SQLDATA\SRO_WEB_GAME_log.ldf';
+
+  (Aby uzyskać listę nazw logicznych: RESTORE FILELISTONLY FROM DISK = N'...bak')
+
+UWAGA: Baza SRO_VT_LOG również NIE JEST DOŁĄCZONA do pakietu (zawiera
+tylko tabele logów). Pole "log" w config.json możesz wskazać na dowolną
+istniejącą lub pustą bazę.
