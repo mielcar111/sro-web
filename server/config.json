@@ -2,7 +2,7 @@
   "http": {
     "port": 3000,
     "host": "::",
-    "$hostNot": "S2 madde 4: ':: ' cift yigin (::1 + 127.0.0.1); IPv6 yigini kapali makinede server.js EADDRNOTAVAIL yakalayip 0.0.0.0 yedegine duser."
+    "$hostNot": "S2 pkt 4: '::' to dual-stack (::1 + 127.0.0.1); na maszynie z wyłączonym stosem IPv6 server.js przechwyci EADDRNOTAVAIL i spadnie na fallback 0.0.0.0."
   },
   "world": {
     "id": "world1",
@@ -12,7 +12,7 @@
     "startX": 10548,
     "startZ": 550,
     "startY": 0,
-    "$tickNot": "gameConfig.tickHz = 10 -> 100 ms. Onceden 200 idi (uydurma)."
+    "$tickNot": "gameConfig.tickHz = 10 -> 100 ms. Wcześniej było 200 (zmyślone)."
   },
   "sql": {
     "enabled": true,
