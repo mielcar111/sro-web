@@ -1,0 +1,474 @@
+{
+  "mobs": [
+    {
+      "id": "mob_dummy_lv01",
+      "name": "Training Dummy 1",
+      "level": 1,
+      "modelKey": "mob_mangyang",
+      "aggro": "passive",
+      "training": true,
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "hp": 10000000,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 7,
+      "magDef": 10,
+      "attackRangeU": 1,
+      "attackIntervalMs": 60000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 0,
+      "leashRangeU": 1,
+      "xp": 0,
+      "dropTableId": "",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 1,
+          "mar": 1,
+          "er": 27,
+          "br": 0,
+          "hr": 27,
+          "chr": 2
+        },
+        "resists": {},
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": []
+      }
+    },
+    {
+      "id": "mob_dummy_lv10",
+      "name": "Training Dummy 10",
+      "level": 10,
+      "modelKey": "mob_mangyang",
+      "aggro": "passive",
+      "training": true,
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "hp": 10000000,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 22,
+      "magDef": 41,
+      "attackRangeU": 1,
+      "attackIntervalMs": 60000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 0,
+      "leashRangeU": 1,
+      "xp": 0,
+      "dropTableId": "",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 10,
+          "mar": 10,
+          "er": 45,
+          "br": 0,
+          "hr": 45,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 20,
+          "ResistFrostbite": 20,
+          "ResistBurn": 20,
+          "ResistEShock": 20,
+          "ResistPoison": 20,
+          "ResistZombie": 20
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": []
+      }
+    },
+    {
+      "id": "mob_dummy_lv20",
+      "name": "Training Dummy 20",
+      "level": 20,
+      "modelKey": "mob_mangyang",
+      "aggro": "passive",
+      "training": true,
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "hp": 10000000,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 64,
+      "magDef": 102,
+      "attackRangeU": 1,
+      "attackIntervalMs": 60000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 0,
+      "leashRangeU": 1,
+      "xp": 0,
+      "dropTableId": "",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 20,
+          "mar": 20,
+          "er": 65,
+          "br": 0,
+          "hr": 65,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 40,
+          "ResistFrostbite": 40,
+          "ResistBurn": 40,
+          "ResistEShock": 40,
+          "ResistPoison": 40,
+          "ResistZombie": 40
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": []
+      }
+    },
+    {
+      "id": "mob_dummy_lv30",
+      "name": "Training Dummy 30",
+      "level": 30,
+      "modelKey": "mob_mangyang",
+      "aggro": "passive",
+      "training": true,
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "hp": 10000000,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 121,
+      "magDef": 175,
+      "attackRangeU": 1,
+      "attackIntervalMs": 60000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 0,
+      "leashRangeU": 1,
+      "xp": 0,
+      "dropTableId": "",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 30,
+          "mar": 30,
+          "er": 85,
+          "br": 0,
+          "hr": 85,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 60,
+          "ResistFrostbite": 60,
+          "ResistBurn": 60,
+          "ResistEShock": 60,
+          "ResistPoison": 60,
+          "ResistZombie": 60
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": []
+      }
+    },
+    {
+      "id": "mob_dummy_lv40",
+      "name": "Training Dummy 40",
+      "level": 40,
+      "modelKey": "mob_mangyang",
+      "aggro": "passive",
+      "training": true,
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "hp": 10000000,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 194,
+      "magDef": 284,
+      "attackRangeU": 1,
+      "attackIntervalMs": 60000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 0,
+      "leashRangeU": 1,
+      "xp": 0,
+      "dropTableId": "",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 40,
+          "mar": 40,
+          "er": 105,
+          "br": 0,
+          "hr": 105,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 78,
+          "ResistFrostbite": 78,
+          "ResistBurn": 78,
+          "ResistEShock": 78,
+          "ResistPoison": 78,
+          "ResistZombie": 78
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": []
+      }
+    },
+    {
+      "id": "mob_dummy_lv50",
+      "name": "Training Dummy 50",
+      "level": 50,
+      "modelKey": "mob_mangyang",
+      "aggro": "passive",
+      "training": true,
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "hp": 10000000,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 282,
+      "magDef": 451,
+      "attackRangeU": 1,
+      "attackIntervalMs": 60000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 0,
+      "leashRangeU": 1,
+      "xp": 0,
+      "dropTableId": "",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 50,
+          "mar": 50,
+          "er": 125,
+          "br": 0,
+          "hr": 125,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 82,
+          "ResistFrostbite": 82,
+          "ResistBurn": 82,
+          "ResistEShock": 82,
+          "ResistPoison": 82,
+          "ResistZombie": 82
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": []
+      }
+    },
+    {
+      "id": "mob_dummy_lv60",
+      "name": "Training Dummy 60",
+      "level": 60,
+      "modelKey": "mob_mangyang",
+      "aggro": "passive",
+      "training": true,
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "hp": 10000000,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 411,
+      "magDef": 657,
+      "attackRangeU": 1,
+      "attackIntervalMs": 60000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 0,
+      "leashRangeU": 1,
+      "xp": 0,
+      "dropTableId": "",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 60,
+          "mar": 60,
+          "er": 137,
+          "br": 0,
+          "hr": 137,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 84,
+          "ResistFrostbite": 84,
+          "ResistBurn": 84,
+          "ResistEShock": 84,
+          "ResistPoison": 84,
+          "ResistZombie": 84
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": []
+      }
+    },
+    {
+      "id": "mob_dummy_lv70",
+      "name": "Training Dummy 70",
+      "level": 70,
+      "modelKey": "mob_mangyang",
+      "aggro": "passive",
+      "training": true,
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "hp": 10000000,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 603,
+      "magDef": 902,
+      "attackRangeU": 1,
+      "attackIntervalMs": 60000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 0,
+      "leashRangeU": 1,
+      "xp": 0,
+      "dropTableId": "",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 70,
+          "mar": 70,
+          "er": 147,
+          "br": 0,
+          "hr": 147,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 86,
+          "ResistFrostbite": 86,
+          "ResistBurn": 86,
+          "ResistEShock": 86,
+          "ResistPoison": 86,
+          "ResistZombie": 86
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": []
+      }
+    },
+    {
+      "id": "mob_dummy_lv80",
+      "name": "Training Dummy 80",
+      "level": 80,
+      "modelKey": "mob_mangyang",
+      "aggro": "passive",
+      "training": true,
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "hp": 10000000,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 838,
+      "magDef": 1257,
+      "attackRangeU": 1,
+      "attackIntervalMs": 60000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 0,
+      "leashRangeU": 1,
+      "xp": 0,
+      "dropTableId": "",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 80,
+          "mar": 80,
+          "er": 157,
+          "br": 20,
+          "hr": 157,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 88,
+          "ResistFrostbite": 88,
+          "ResistBurn": 88,
+          "ResistEShock": 88,
+          "ResistPoison": 88,
+          "ResistZombie": 88
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": []
+      }
+    }
+  ]
+}

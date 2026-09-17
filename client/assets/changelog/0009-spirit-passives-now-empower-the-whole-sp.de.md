@@ -1,0 +1,3 @@
+## Geändert
+
+- **Earth, Cold, Fire und Lightning Spirit stärken den ganzen Zauber** — der Spirit-Prozentsatz multipliziert jetzt die volle Stärke des Zaubers, den eigenen Schaden des Skills eingeschlossen, genau wie es das Original berechnet. Im letzten Update wirkte der Bonus nur auf die magische Angriffskraft, wodurch jeder verstärkte Zauber einen Schritt zu kurz kam. Ground Charge, Earth Shock, Ground Rave, Earth Quake, Ice Bolt, Snow Wind, Frozen Spear, Blizzard, Fire Bolt, Fire Blow, Meteor, Salamander Blow, Lightning Bolt, Charged Wind, Chain Lightning und Charged Squall treffen wieder deutlich härter — auf hohen Spirit-Rängen etwa ein Viertel mehr.

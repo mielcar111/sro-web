@@ -1,0 +1,1923 @@
+{
+  "_meta": {
+    "amac": "Gorev tanimlarinin SAYISAL kismi. data/quests.json yalnizca 81 gorev id'si + i18n baslik/aciklama tasir; mobId/count/minLevel/maxLevel/rewards/repeat orada YOKTUR (bkz. quests.json._meta).",
+    "sema": "Istemci paketindeki YAZIM (authoring) semasi - index-BUMMQVRB.js ofset 8719700: { id: /^[a-z0-9_]+$/, title<=60, description<=400, minLevel>=1, maxLevel>=minLevel, race: chinese|european|all (varsayilan all), objective: {type:'hunt', mobId, alsoCounts?, count>=1}, rewards: {gold?,xp?,sp?,items?[{itemDefId,qty}]} (en az biri dolu olmali), repeat: {type:'none'}|{type:'unlimited'}|{type:'cooldown',hours>0} (varsayilan none), requiresQuest: string|null, enabled: bool (varsayilan true) }",
+    "cipa": {
+      "$aciklama": "TEK GERCEK OLCUM. chain_01_mangyang'in butun sayilari canli referans oyun WS yakalamasindan birebir kopyalandi.",
+      "$kaynak": "referans canli WS yakalamasi zone_init.json -> {\"t\":\"quest.catalog\",\"d\":{\"available\":[...]}} (karakter Test21, chinese, seviye 1, jangan_province)",
+      "degerler": {
+        "minLevel": 1,
+        "maxLevel": 7,
+        "count": 25,
+        "gold": 2600,
+        "xp": 50,
+        "sp": 40
+      }
+    },
+    "turetme": {
+      "$uyari": "chain_01_mangyang DISINDAKI 80 gorevin HICBIR sayisi olculmedi. Hepsi asagidaki kurallarla TURETILDI. Olcum yapilirsa bu dosya yeniden uretilmelidir.",
+      "hedefMob": "tr.json quest:<id>.desc icindeki canavar ADI -> data/mobs.json name -> mobId. Esleme tablosu ureticinin icinde satir satir yorumlandi.",
+      "dogrulukKapisi": "Hedef mobun data/spawns.json icinde EN AZ BIR yuvasi olmali; olmayan gorev yapilamaz olurdu. Tek ikame: eu_chain_14_orderhunter -> mob_archer (Evil Order Hunter lv27) SIFIR yuvali oldugu icin ayni tarikatin lv27 mobu mob_soldier_clon secildi.",
+      "seviyeBandi": "minLevel = mobun data/mobs.json seviyesi; maxLevel = min(sabitler.maxLevel, mobSeviyesi + 6). Cipa bunu birebir uretiyor: mangyang lv1 -> 1..7. Tavan data/progress.json sabitler.maxLevel = 80.",
+      "olcek": "olcek = mobs.json[mobId].xp / mobs.json[mob_mangyang].xp. mobs.json xp sutunu _RefLevel.GUST_Mob_Exp tablosudur (progress.json spExpByMonsterLevel ile birebir ayni), yani \"mob seviyesine gore\" gercek bir egridir - uydurma bir formul degildir.",
+      "oduller": "gold = round(2600 * olcek), xp = round(50 * olcek), sp = round(40 * olcek). Cipa icin olcek = 1, yani chain_01 olculen degerlerin AYNISI cikar (uretici bunu her calismada dogruluyor).",
+      "count": "HEPSINDE 25. Olculen TEK count budur; seviyeye gore bir count egrisi hicbir kaynakta YOK, uydurmamak icin sabit birakildi.",
+      "irk": "eu_chain_* -> european, DIGER HEPSI -> all (semanin kendi varsayilani, paket @8719700 `default all`). race TEL UZERINDE TASINMIYOR (quest.catalog Iht semasinda race alani YOK), yani dogrudan olculemez. eu_chain_* KANITLI: canli yakalamada seviye 1 CINLI karaktere TEK gorev gitti; eu_chain_01_movia'nin hedefi lv1 mob (mob_movoi_clon) oldugu icin bandi da 1..7'dir ve irk kapisi olmasa o katalogda gorunurdu. chain_* icin 'chinese' BILEREK SECILMEDI: kaniti yok, semanin varsayilanina aykiri ve eu_chain_* yalniz lv1-46'yi kapsadigi icin Avrupali karakterleri seviye 52-80 arasinda gorevsiz birakirdi.",
+      "repeat": "id'sinde \"daily\" gecen gorev {type:\"cooldown\",hours:24}, digerleri sema varsayilani {type:\"none\"}. 24 sa \"daily\" kelimesinin karsiligidir.",
+      "requiresQuest": "YALNIZCA hunt_mangyang_novice -> chain_01_mangyang. Gerekce: o gorev cipayla AYNI mobu ve AYNI 1..7 bandini paylasiyor, ama canli yakalamada seviye 1 Cinli karakterin katalogunda TEK gorev vardi. chain_* zincirinin tamamini requiresQuest ile baglamak ise BILEREK YAPILMADI: seviye bandi (mobLv..mobLv+6) yuzunden mevcut yuksek seviyeli karakterler zincirin basina donemez ve 42 gorevin HEPSI kalici olarak kilitlenirdi - yani duzeltilmek istenen sorunun ta kendisi geri gelirdi. Zincir sirasi seviye bandiyla zaten korunuyor.",
+      "esyaOdulu": "YOK. Bazi aciklamalar iksir/erzak vaat ediyor ama HANGI esya ve KAC adet oldugu hicbir kaynakta yok; sema en az bir odul istiyor ve gold/xp/sp zaten dolu.",
+      "alsoCounts": "YOK. Hicbir gorevde ikincil mob listesi olculmedi.",
+      "altinCarpani_changelog0023": "PP Madde 5 / changelog 0023 tr:11-13: 'tum av gorevlerinin altin odulleri uc katina cikti' - bu dosyadaki TUM hunt gorevlerinin rewards.gold degeri x3 uygulanmis haldedir (yalniz gold; xp/sp DEGISMEDI). uret_quest_defs.mjs yeniden calistirilirsa carpan yeniden uygulanmalidir (uretici formulu gold = round(2600 * olcek) x3 olarak okunmali)."
+    },
+    "dogrulama": {
+      "$aciklama": "Uretici her calismada iki kapiyi zorunlu tutar; biri tutmazsa dosya URETILMEZ.",
+      "cipa": "chain_01_mangyang cikti = canli yakalama degerleri.",
+      "seviye1": "Cinli seviye 1 karakterin katalogu TAM 1 gorev (chain_01_mangyang) - canli yakalamadaki available dizisiyle ayni uzunluk.",
+      "icerikBoslugu": "Hem Cinli hem Avrupali icin 1..80 arasi HICBIR seviye gorevsiz degil (madde 27'nin sikayeti buydu).",
+      "dogusKapisi": "Her gorevin hedef mobunun spawns.json'da en az bir yuvasi var."
+    },
+    "aciklama_notu": "Wire'daki title/description yalnizca YEDEKTIR: istemci b5(`quest:<id>.title`, def.title) ile once locale sozlugune bakar (client/assets/locales/tr.json 81 gorevin de baslik/aciklamasini tasir). Buradaki metin capture'daki ASCII tire ile birebir kopyadir.",
+    "uretici": "server/uret_quest_defs.mjs  ->  `node uret_quest_defs.mjs` (bu dosya ELLE DUZENLENMEMELI; mobs.json / spawns.json / quests.json degisirse ureticiyi yeniden calistir. Uretici cipa + seviye-1 paritesi + icerik-boslugu + dogus kapilarini zorunlu tutar, biri tutmazsa dosya yazilmaz.)"
+  },
+  "quests": [
+    {
+      "id": "chain_01_mangyang",
+      "title": "A Hunter's First Steps",
+      "description": "Every hunter starts at Jangan's south gate. The mangyang packs are gentle prey - cull them and learn your blade.",
+      "minLevel": 1,
+      "maxLevel": 7,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_mangyang",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 7800,
+        "xp": 50,
+        "sp": 40
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_02_bigeye",
+      "title": "Karanlıktaki Gözler",
+      "description": "Big-eye hayaletleri alacakaranlıkta mezar höyüklerinden yükselir. Yola sapmadan önce onları huzura kavuştur.",
+      "minLevel": 3,
+      "maxLevel": 9,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bigeyeghost",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 23076,
+        "xp": 148,
+        "sp": 118
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_03_weasel",
+      "title": "Nehir Kıyısı Gelincikleri",
+      "description": "Gelincikler nehir kıyısını sahiplendi ve cüretlendi. Onları oradan sür — ve yol için bu iksirleri al.",
+      "minLevel": 5,
+      "maxLevel": 11,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_gyo",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 38349,
+        "xp": 246,
+        "sp": 197
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_04_waterghost",
+      "title": "Durgun Sular",
+      "description": "Su hayaletleri geçidin doğusundaki sığlıklarda dolaşır. Sayıları az ama ısırıkları hızlıdır — dikkatle avlan.",
+      "minLevel": 7,
+      "maxLevel": 13,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_waterghost",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 53625,
+        "xp": 344,
+        "sp": 275
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_05_tombstone",
+      "title": "Huzursuz Taşlar",
+      "description": "Mezar taşları uyandı ve mezarların arasında sürükleniyor. Onları parçala ve ölüler yeniden huzura ersin.",
+      "minLevel": 9,
+      "maxLevel": 15,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_tombstone",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 68901,
+        "xp": 442,
+        "sp": 353
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_06_bandit_camp",
+      "title": "Ticaret Yolunda Bela",
+      "description": "Haydut yamakları Jangan'ın kuzeyindeki kervanları soyuyor. Kampı seyrelt — tüccarlar bir kese ve erzak teklif etti.",
+      "minLevel": 11,
+      "maxLevel": 17,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bandit_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 84174,
+        "xp": 540,
+        "sp": 432
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_07_young_tiger",
+      "title": "Pençeli Yavrular",
+      "description": "Genç kaplanlar kuzey tepelerinde dolaşıyor, şimdiden tehlikeli. Daha kötü bir şeye dönüşmeden sürüyü azalt.",
+      "minLevel": 13,
+      "maxLevel": 19,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_tiger_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 99450,
+        "xp": 638,
+        "sp": 510
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_08_bandit",
+      "title": "Haydut Reisinin Adamları",
+      "description": "Gerçek haydutlar — çelikleşmiş ve silahlı — yüksek kampları tutuyor. Güçlerini kır, ticaret yolu yeniden nefes alsın.",
+      "minLevel": 16,
+      "maxLevel": 22,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bandit",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 122199,
+        "xp": 783,
+        "sp": 627
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_09_whitetiger",
+      "title": "Beyaz Dehşet",
+      "description": "Bir beyaz kaplan sırtta pusuda ve akrabaları da geldi. Çeliğini tepelerin en vahşi avcılarına karşı kanıtla.",
+      "minLevel": 18,
+      "maxLevel": 24,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_whitetiger",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 137475,
+        "xp": 881,
+        "sp": 705
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_10_chakji",
+      "title": "Chakji Pususu",
+      "description": "Chakji'ler yolun daraldığı yerde pusuya yatar, dikkatsizlere saldırır. Geçidi temizle ki yolcular zarar görmeden geçsin.",
+      "minLevel": 20,
+      "maxLevel": 26,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_chakji",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 152751,
+        "xp": 979,
+        "sp": 783
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_11_devilbug",
+      "title": "Sınırda Sürü",
+      "description": "Şeytan böcekleri sınır çatlaklarından sürüler halinde fışkırıyor. Sınır karakollarını basmadan önce onları temizle.",
+      "minLevel": 22,
+      "maxLevel": 28,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_devilbug",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 171600,
+        "xp": 1100,
+        "sp": 880
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_12_hyungno",
+      "title": "Hayalet Askerler",
+      "description": "Hyungno hayalet askerleri ölümlerinden çok sonra bile eski devriyelerini sürdürüyor. Hayalet bölüğü huzura kavuştur.",
+      "minLevel": 23,
+      "maxLevel": 29,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_hyungno",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 182001,
+        "xp": 1167,
+        "sp": 933
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_13_demonhorse",
+      "title": "Lanetlilerin Toynakları",
+      "description": "Şeytan atları Donwhang ovalarında gürleyerek koşuyor, yollarındaki her şeyi eziyor. Sürüyü indir.",
+      "minLevel": 25,
+      "maxLevel": 31,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_demonhorse",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 204426,
+        "xp": 1310,
+        "sp": 1048
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_14_earthghost",
+      "title": "Topraktan Doğanlar",
+      "description": "Toprak hayaletleri Donwhang toprağından büyük sayılarda tırmanıyor. Ovanın sana verebildiği kadarını yok et.",
+      "minLevel": 27,
+      "maxLevel": 33,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_earthghost",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 229776,
+        "xp": 1473,
+        "sp": 1178
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_15_gunpowder",
+      "title": "Uçucu Bir Düşman",
+      "description": "Barut ruhları köşeye sıkışınca patlar — onları uzaktan avla ve barut tarlalarını temizle.",
+      "minLevel": 28,
+      "maxLevel": 34,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_gunpowderghost",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 243426,
+        "xp": 1560,
+        "sp": 1248
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_16_hyeongcheon",
+      "title": "Hyeongcheon Savaş Bandosu",
+      "description": "Hyeongcheon savaş bandosu çölün kıyısını güçle tutuyor. Sayılarına ancak tecrübeli bir avcı meydan okumalı.",
+      "minLevel": 30,
+      "maxLevel": 36,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_hyeongcheon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 273651,
+        "xp": 1754,
+        "sp": 1403
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_17_scorpion",
+      "title": "Kumların Sokması",
+      "description": "Akrepler kum tepelerini sarıyor, kuyrukları hazır. Kervan kuyularına daha da yaklaşıp yuvalanmadan onları azalt.",
+      "minLevel": 32,
+      "maxLevel": 38,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_scorpion",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 301599,
+        "xp": 1933,
+        "sp": 1547
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_18_bloodflower",
+      "title": "Kan Ölüm Çiçeği",
+      "description": "Çölün derinliklerinde kan ölüm çiçekleri yakınından geçen her şeyle beslenir. Yayılmadan önce onları kes.",
+      "minLevel": 34,
+      "maxLevel": 40,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_deserttrunkz",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 332475,
+        "xp": 2131,
+        "sp": 1705
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_19_robber_archer",
+      "title": "Kumullardan Oklar",
+      "description": "Kara haydut okçuları yolcuları sırtlardan avlıyor. Onları derin kumullardaki yuvalarından söküp at.",
+      "minLevel": 36,
+      "maxLevel": 42,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_blackrobberarcher",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 366600,
+        "xp": 2350,
+        "sp": 1880
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_20_blackrobber",
+      "title": "Derin Çölün Efendileri",
+      "description": "Kara haydutlar derin çölü demirle yönetiyor. Hakimiyetlerini kır — kervanlar cömertçe ve iyi ödeyecek.",
+      "minLevel": 38,
+      "maxLevel": 44,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_blackrobber",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 404301,
+        "xp": 2592,
+        "sp": 2073
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_21_golem",
+      "title": "Kaya Golemleri",
+      "description": "Çölün en uzak ucunda kaya golemleri eski harabeleri koruyor. Onları paramparça et ve bir avcının uzun yolunu tamamla.",
+      "minLevel": 40,
+      "maxLevel": 46,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_golem",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 445575,
+        "xp": 2856,
+        "sp": 2285
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_22_redscorpion",
+      "title": "Kızıl Kumların Zehri",
+      "description": "Kızıl akrepler eski golem harabelerini sardı, zehirleri kuyuları bozuyor. Sayılarını azalt ve çölün kıyısının ötesine ilerle.",
+      "minLevel": 40,
+      "maxLevel": 46,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_redscorpion",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 445575,
+        "xp": 2856,
+        "sp": 2285
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_23_redeyeghost",
+      "title": "Kin Dolu Gözler",
+      "description": "Red-eye hayaletleri kumun taşa döndüğü yerde toplanıyor. Bakışları iradeyi kurutur — kök salmadan önce onları dağıt.",
+      "minLevel": 41,
+      "maxLevel": 47,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_redeyeghost",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 463449,
+        "xp": 2971,
+        "sp": 2377
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_24_maong",
+      "title": "Maong Sürüsü",
+      "description": "Maonglar etekleri büyük sayılarla sarıyor. Sürüyü kır ve ötedeki yaylalara giden yolu aç.",
+      "minLevel": 43,
+      "maxLevel": 49,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_ong_clon2",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 501150,
+        "xp": 3213,
+        "sp": 2570
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_25_bunwang",
+      "title": "Geçitlerin Bunwangları",
+      "description": "Bunwanglar dağ geçitlerini kaba bir kurnazlıkla koruyor. Güvenli geçişi hak etmek için gücünü onlara karşı kanıtla.",
+      "minLevel": 45,
+      "maxLevel": 51,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bunwang",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 542100,
+        "xp": 3475,
+        "sp": 2780
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_26_blooddevil",
+      "title": "Ultra Kan Şeytanları",
+      "description": "Buradaki kan şeytanları düşenlerle beslenerek canavarca büyümüş. Kökleri bütün sırtı boğmadan onları kes.",
+      "minLevel": 46,
+      "maxLevel": 52,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_deserttrunkz_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 563874,
+        "xp": 3615,
+        "sp": 2892
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_27_whitespider",
+      "title": "Beyaz Örümcek Yuvası",
+      "description": "Beyaz örümcekler dar vadiyi ipekle örüp kapattı. Yolcular diri diri kozaya sarılmadan yuvayı yakıp geç.",
+      "minLevel": 48,
+      "maxLevel": 54,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_whitespider",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 609699,
+        "xp": 3908,
+        "sp": 3127
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_28_ujigi",
+      "title": "Sisteki Ujigiler",
+      "description": "Ujigiler dağ sisinde süzülüyor, kaybolanları uçurumlardan aşağı çekiyor. Ruhları huzura kavuştur ve yolu aydınlat.",
+      "minLevel": 50,
+      "maxLevel": 56,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_mujigi_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 659424,
+        "xp": 4227,
+        "sp": 3382
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_29_hashade",
+      "title": "Hashade Yağmacıları",
+      "description": "Hashade yağmacıları parlayan ne varsa almak için dağ tapınaklarını basıyor. Sürüyü kutsal topraktan temelli sür.",
+      "minLevel": 52,
+      "maxLevel": 58,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_ishade_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 706551,
+        "xp": 4529,
+        "sp": 3623
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_30_whitefacespider",
+      "title": "Derin Ormanın Dokumacıları",
+      "description": "Daha derinlerde, beyaz yüzlü örümcekler kadim ormanı yönetiyor. Ağlarında ancak gerçek hünerli bir avcı yürümeli.",
+      "minLevel": 53,
+      "maxLevel": 59,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_spider",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 731250,
+        "xp": 4688,
+        "sp": 3750
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_31_penon",
+      "title": "Penon Savaş Bandosu",
+      "description": "Penon savaşçıları yüksek yaylada toplanıyor; zırhlı ve disiplinli. Hatlarını kır ki kuzeye giden yol açılsın.",
+      "minLevel": 55,
+      "maxLevel": 61,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_penon_w",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 783249,
+        "xp": 5021,
+        "sp": 4017
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_32_sona",
+      "title": "Dikilitaşların Sonaları",
+      "description": "Sonalar dikilitaşlarda dolaşıyor — bu dünyada yarı yarıya var olan öte varlıklar. Çember tümüyle uyanmadan onları kov.",
+      "minLevel": 57,
+      "maxLevel": 63,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_planar_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 839151,
+        "xp": 5379,
+        "sp": 4303
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_33_bigwhitespider",
+      "title": "Büyük Beyaz Dokumacı",
+      "description": "Büyük beyaz örümcekler yaylanın avıyla korkunç bir boyuta ulaştı. Kamplara inmeden önce onları devir.",
+      "minLevel": 58,
+      "maxLevel": 64,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_gwhitespider",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 868401,
+        "xp": 5567,
+        "sp": 4453
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_34_yeti",
+      "title": "Kar Ovasının Dehşeti",
+      "description": "Evil-yeti'ler dünyanın çatısındaki kar ovalarında sinsice geziniyor. Sürüyü azalt ve donmuş geçidi kendi adına sahiplen.",
+      "minLevel": 60,
+      "maxLevel": 66,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_yeti_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 930474,
+        "xp": 5965,
+        "sp": 4772
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_35_edimmu",
+      "title": "Edimmu Lejyonu",
+      "description": "Edimmular donmuş lejyonlarını zirvelerden yürütüyor. Ova kapılarına ulaşmadan saflarını paramparça et.",
+      "minLevel": 63,
+      "maxLevel": 69,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_edimmu",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 1016601,
+        "xp": 6517,
+        "sp": 5213
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_36_darkkarra",
+      "title": "Dark Karra'nın Fısıltıları",
+      "description": "Dark Karralar geçitlerde oyalanan herkese delilik fısıldıyor. Onları sustur ve yolu lanetlerinden kurtar.",
+      "minLevel": 65,
+      "maxLevel": 71,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_deathkara_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 1078674,
+        "xp": 6915,
+        "sp": 5532
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_37_deathkara",
+      "title": "Death Karra",
+      "description": "Death Karraların ta kendileri artık yüksek buzda yürüyor, peşlerinde ölümü sürüklüyorlar. Onlarla yüzleş ve zirvelerin yaşayanlara ait olduğunu kanıtla.",
+      "minLevel": 67,
+      "maxLevel": 73,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_deathkara",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 1144326,
+        "xp": 7335,
+        "sp": 5868
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_38_devileye",
+      "title": "Şeytan Gözünün Bakışı",
+      "description": "Şeytan gözleri geçidin ötesindeki karanlık mağaralarda asılı duruyor; izliyor, bekliyor. Efendileri kıpırdanmadan önce hepsini kör et.",
+      "minLevel": 70,
+      "maxLevel": 76,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_devileye",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 1250274,
+        "xp": 8015,
+        "sp": 6412
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_39_niyaguard",
+      "title": "Niya Duvarı",
+      "description": "Niya muhafızları gömülü şehrin önünde kemikten sarsılmaz bir duvar örüyor. Yarıp geç — ölüler burada kolay huzur bulmaz.",
+      "minLevel": 73,
+      "maxLevel": 79,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bonesoldier",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 1366299,
+        "xp": 8758,
+        "sp": 7007
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_40_niyahunter",
+      "title": "Ölülerin Avcıları",
+      "description": "Niya avcıları harabelerin her gölgesinden kemik oklar yağdırıyor. Kafileni seyreltmeden önce onları söküp çıkar.",
+      "minLevel": 76,
+      "maxLevel": 80,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bonehunter",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 1493049,
+        "xp": 9571,
+        "sp": 7657
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_41_niyashaman",
+      "title": "Şamanın Ayinleri",
+      "description": "Niya şamanları bitmez lejyonlarını ayağa kaldıran ayinleri söylüyor. Ritüeli bitir ki ölü seli nihayet çekilsin.",
+      "minLevel": 78,
+      "maxLevel": 80,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bonemage",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 1584051,
+        "xp": 10154,
+        "sp": 8123
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "chain_42_niyageneral",
+      "title": "Niya Generalinin Düşüşü",
+      "description": "Harabenin kalbinde Niya Generali ölü ordusunu komuta ediyor. Generali indir ve bir avcının en uzun yolunu tamamla.",
+      "minLevel": 80,
+      "maxLevel": 80,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bonegeneral",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 2016624,
+        "xp": 12927,
+        "sp": 10342
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_constantinople_field",
+      "title": "Tapınaklardaki Yılanlar",
+      "description": "Ladonlar her gün yıkık tapınaklara geri dönüyor. Kıvrımlarını seyrelt, rahiplerin gümüşü sana aksın.",
+      "minLevel": 16,
+      "maxLevel": 22,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_ladon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 122199,
+        "xp": 783,
+        "sp": 627
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_constantinople_high",
+      "title": "Şarkıyı Sustur",
+      "description": "Seirenesler her şafak deniz surlarının altında toplanıyor. Liman reisleri indirilen her şarkıcı için günlük ödeme yapar.",
+      "minLevel": 18,
+      "maxLevel": 24,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_siren_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 137475,
+        "xp": 881,
+        "sp": 705
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_constantinople_starter",
+      "title": "Kurt Devriyesi",
+      "description": "Baroi kurtları su kemeri yoluna dönmekten asla vazgeçmiyor. Taze bir sürüyü avla — şehir muhafızları günlük kelle parası öder.",
+      "minLevel": 5,
+      "maxLevel": 11,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_baruswolf_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 38349,
+        "xp": 246,
+        "sp": 197
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_donwhang_desert",
+      "title": "Akrep Kuyuları",
+      "description": "Akrepler her gün kervan kuyularına doğru sokuluyor. Sürekli ödül için onları kumlara sür.",
+      "minLevel": 32,
+      "maxLevel": 38,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_scorpion",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 301599,
+        "xp": 1933,
+        "sp": 1547
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_donwhang_high",
+      "title": "Derin Çöl Sözleşmesi",
+      "description": "Kara haydutlar asla gerçekten azalmaz. Sürekli bir sözleşme, indirdiğin her akıncı için günlük öder.",
+      "minLevel": 38,
+      "maxLevel": 44,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_blackrobber",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 404301,
+        "xp": 2592,
+        "sp": 2073
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_donwhang_plains",
+      "title": "Barut Tarlası Taraması",
+      "description": "Barut ruhları her gece Donwhang ovalarında yeniden oluşuyor. Günün ödülü için tarlaları tekrar temizle.",
+      "minLevel": 28,
+      "maxLevel": 34,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_gunpowderghost",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 243426,
+        "xp": 1560,
+        "sp": 1248
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_jangan_field",
+      "title": "Yolu Açık Tut",
+      "description": "Haydutlar her gün ticaret yoluna dönüyor. Sayılarını düşük tut, tüccarların altını sana aksın.",
+      "minLevel": 16,
+      "maxLevel": 22,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bandit",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 122199,
+        "xp": 783,
+        "sp": 627
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_jangan_high",
+      "title": "Kaplan Ödülü",
+      "description": "Beyaz kaplanlar her şafak kuzey sırtında dolaşır. Avcılar loncası her post için günlük ödeme yapar.",
+      "minLevel": 18,
+      "maxLevel": 24,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_whitetiger",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 137475,
+        "xp": 881,
+        "sp": 705
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_jangan_starter",
+      "title": "Gelincik Devriyesi",
+      "description": "Gelincikler güney nehri kıyısında durmadan ürüyor. Taze bir grubu azalt — muhafız günlük ödül veriyor.",
+      "minLevel": 5,
+      "maxLevel": 11,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_gyo",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 38349,
+        "xp": 246,
+        "sp": 197
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_karakoram_low",
+      "title": "Kar Ovası Ödülü",
+      "description": "Bunwanglar her şafak geçitleri geri alıyor. Dağ bekçileri yolu açık tutmak için günlük ödül ödüyor.",
+      "minLevel": 45,
+      "maxLevel": 51,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bunwang",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 542100,
+        "xp": 3475,
+        "sp": 2780
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_karakoram_mid",
+      "title": "Donmuş Sözleşme",
+      "description": "Evil-yeti'ler kar ovalarında asla gerçekten azalmaz. Sürekli bir sözleşme her gün indirdiğin her postu ödüllendirir.",
+      "minLevel": 60,
+      "maxLevel": 66,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_yeti_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 930474,
+        "xp": 5965,
+        "sp": 4772
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_niya_high",
+      "title": "Bitmeyen Ölüler",
+      "description": "Niyalar ölülerini düştükleri hızda yeniden diriltiyor. Kemik askerleri her gün azalt — ödül de onlar kadar kesin biçimde yenilenir.",
+      "minLevel": 73,
+      "maxLevel": 79,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bonesoldier",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 1366299,
+        "xp": 8758,
+        "sp": 7007
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_samarkand_desert",
+      "title": "Açık Gökyüzü",
+      "description": "Peritonlar her gün kervan kuyularının üzerine geri dönüyor. Daimî ödül için onları gökten sür.",
+      "minLevel": 32,
+      "maxLevel": 38,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_peryton",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 301599,
+        "xp": 1933,
+        "sp": 1547
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_samarkand_high",
+      "title": "Sungsung Sözleşmesi",
+      "description": "Çöl kıyısındaki sungsunglar hiçbir zaman gerçekten azalmaz. Daimî bir sözleşme, yere serdiğin her yağmacı için günlük öder.",
+      "minLevel": 38,
+      "maxLevel": 44,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_monkey",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 404301,
+        "xp": 2592,
+        "sp": 2073
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "daily_samarkand_plains",
+      "title": "Ovayı Tut",
+      "description": "Şeytani Tarikat her gece ovada taze asker topluyor. Günün ücreti için sabah talimlerini yeniden boz.",
+      "minLevel": 28,
+      "maxLevel": 34,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_soldier",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 243426,
+        "xp": 1560,
+        "sp": 1248
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_01_movia",
+      "title": "Surlarda İlk Nöbet",
+      "description": "Her acemi, Konstantinopolis'in kara surlarının dışında başlar. Oradaki çayırlarda movia sürüleri otluyor — onları avla ve silahının ağırlığını öğren.",
+      "minLevel": 1,
+      "maxLevel": 7,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_movoi_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 7800,
+        "xp": 50,
+        "sp": 40
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_02_graesp",
+      "title": "Çayırdaki Dikenler",
+      "description": "Graespler su kemerinin ardındaki çukurlarda kümeleniyor; diken ve açlıktan ibaretler. Çobanlar bir sürü daha kaybetmeden onları temizle.",
+      "minLevel": 3,
+      "maxLevel": 9,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_edenp_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 23076,
+        "xp": 148,
+        "sp": 118
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_03_baroiwolf",
+      "title": "Su Kemerindeki Kurtlar",
+      "description": "Baroi kurtları alacakaranlıkta su kemeri yolu boyunca avlanmaya başladı. Onları defet — ve önündeki nöbetler için şu iksirleri yanına al.",
+      "minLevel": 5,
+      "maxLevel": 11,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_baruswolf_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 38349,
+        "xp": 246,
+        "sp": 197
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_04_logosbaroi",
+      "title": "Logos Baroiler",
+      "description": "Logos baroiler az sayıda ama sıradan bir hayvandan çok daha kurnaz. Surların doğusundaki çalılıkta sinsice dolaşıyorlar — onları dikkatle avla.",
+      "minLevel": 7,
+      "maxLevel": 13,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_baroi_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 53625,
+        "xp": 344,
+        "sp": 275
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_05_misosbaroi",
+      "title": "Dört Ayaklı Nefret",
+      "description": "Misos baroiler iki ayak üstünde yürüyen her şeyden nefret eder ve baskınları gitgide cüretleniyor. Köy bahçelerine ulaşmadan sürüleri dağıt.",
+      "minLevel": 9,
+      "maxLevel": 15,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_baroi",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 68901,
+        "xp": 442,
+        "sp": 353
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_06_dowgenetos",
+      "title": "Dow Genetos Yuvası",
+      "description": "Dow genetoslar nehrin denize kavuştuğu bataklıklarda ürüyor. Yuvayı seyrelt — şehir bir kese altın ve erzak vaat etti.",
+      "minLevel": 11,
+      "maxLevel": 17,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_dowb_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 84174,
+        "xp": 540,
+        "sp": 432
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_07_brontes",
+      "title": "Tepegözlerin Gürleyişi",
+      "description": "Tek gözlü ve devasa Brontesler kayalıklardan indi. Tepegöz soyunu, dıştaki çiftlikleri yerle bir etmeden devir.",
+      "minLevel": 13,
+      "maxLevel": 19,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_kyklopes_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 99450,
+        "xp": 638,
+        "sp": 510
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_08_simosladon",
+      "title": "Ladon'un Kıvrımları",
+      "description": "Simos ladonlar şehrin doğusundaki yıkık tapınakların arasında kıvrılıp duruyor. Aralarından kılıçla geç — rahipler bir kese altın ve iksir vaat etti.",
+      "minLevel": 16,
+      "maxLevel": 22,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_ladon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 122199,
+        "xp": 783,
+        "sp": 627
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_09_seirenes",
+      "title": "Suların Üzerindeki Şarkı",
+      "description": "Seirenesler denizcileri şarkılarıyla deniz surlarının altındaki kayalara çekiyor. Şarkıları bir gemi daha almadan sürüyü sustur.",
+      "minLevel": 18,
+      "maxLevel": 24,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_siren_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 137475,
+        "xp": 881,
+        "sp": 705
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_10_seiren",
+      "title": "Kadim Seirenler",
+      "description": "Kadim seirenler, şarkılarının batırdığı enkazlarla beslenip güçlendi. Onlarla, kayalıkların denize döküldüğü yerde yüzleş.",
+      "minLevel": 20,
+      "maxLevel": 26,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_siren",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 152751,
+        "xp": 979,
+        "sp": 783
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_11_megalopa",
+      "title": "Kıyıdaki Kıskaçlar",
+      "description": "Megalopalar zırhlı sürüler hâlinde sığlıklardan çıkıyor. Kabuklarını kır ve iskeleleri balıkçılara aç.",
+      "minLevel": 21,
+      "maxLevel": 27,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_crab_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 161850,
+        "xp": 1038,
+        "sp": 830
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_12_brigand",
+      "title": "Sahil Yolu Haydutları",
+      "description": "Korsan haydutlar Semerkant'a giden kervanları soyuyor. Kamplarını seyrelt — tüccarlar bir kese altın ve erzak vaat etti.",
+      "minLevel": 23,
+      "maxLevel": 29,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_rogue",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 182001,
+        "xp": 1167,
+        "sp": 933
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_13_evilwolf",
+      "title": "Bozkırın Kurtları",
+      "description": "Şeytani kurtlar aç sürüler hâlinde bozkırı arşınlayıp kervan yollarını taciz ediyor. Kış onları daha da cüretlendirmeden sürüleri yere ser.",
+      "minLevel": 25,
+      "maxLevel": 31,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_wolf",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 204426,
+        "xp": 1310,
+        "sp": 1048
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_14_orderhunter",
+      "title": "Şeytani Tarikatın Okları",
+      "description": "Şeytani Tarikat'ın avcıları Semerkant dışındaki sırtlardan yolcuları vuruyor. Onları tüneklerinden söküp at.",
+      "minLevel": 27,
+      "maxLevel": 33,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_soldier_clon",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 229776,
+        "xp": 1473,
+        "sp": 1178
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_15_ordersoldier",
+      "title": "Tarikatın Piyadeleri",
+      "description": "Şeytani Tarikat'ın askerleri ovada gittikçe büyüyen bölükler hâlinde talim yapıyor. Şehre yürümeden saflarını dağıt.",
+      "minLevel": 28,
+      "maxLevel": 34,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_soldier",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 243426,
+        "xp": 1560,
+        "sp": 1248
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_16_punisher",
+      "title": "Cezalandırıcılar",
+      "description": "Tarikat, direnen herkesin üzerine cezalandırıcılarını salıyor. Onlarla açık arazide karşılaş — bu sayıya ancak pişmiş bir avcı kalkışmalı.",
+      "minLevel": 30,
+      "maxLevel": 36,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_punisher",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 273651,
+        "xp": 1754,
+        "sp": 1403
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_17_periton",
+      "title": "Kanatlı Gölgeler",
+      "description": "Peritonlar yüksek geçitlerin üzerinde süzülürken yere insan gölgesi düşürüyor. Sürüler dağılmadan kanatlı avcıları gökten indir.",
+      "minLevel": 32,
+      "maxLevel": 38,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_peryton",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 301599,
+        "xp": 1933,
+        "sp": 1547
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_18_ong",
+      "title": "Ong Kampları",
+      "description": "Ong yağmacıları Semerkant'ın doğusundaki yol boyunca mevzilendi. Kamplarını yak ve İpek Yolu'nu yeniden aç.",
+      "minLevel": 34,
+      "maxLevel": 40,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_ca_ong",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 332475,
+        "xp": 2131,
+        "sp": 1705
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_19_hunshooter",
+      "title": "Hun Okçuları",
+      "description": "Hun okçuları tüccar yolunda kıpırdayan her şeye ok yağdırıyor. Onları yuvalandıkları kumullardan ve sırtlardan söküp avla.",
+      "minLevel": 36,
+      "maxLevel": 42,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_hunarcher",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 366600,
+        "xp": 2350,
+        "sp": 1880
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_20_sungsung",
+      "title": "Sungsung Sürüsü",
+      "description": "Sungsunglar çölün kıyısındaki meyve bahçeleriyle tahıl ambarlarına üşüşüyor. Sürüyü dağıt — yetiştiriciler eli açık ve seve seve öder.",
+      "minLevel": 38,
+      "maxLevel": 44,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_monkey",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 404301,
+        "xp": 2592,
+        "sp": 2073
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "eu_chain_21_rockgolem",
+      "title": "Semerkant'ın Kaya Golemleri",
+      "description": "Semerkant ovasının en uç noktasında kaya golemleri şehirden bile eski harabeleri bekliyor. Onları parçala ve bir avcının uzun yolunu tamamla.",
+      "minLevel": 40,
+      "maxLevel": 46,
+      "race": "european",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_golem",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 445575,
+        "xp": 2856,
+        "sp": 2285
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "ghost_lights_daily",
+      "title": "Hayalet Işıkları",
+      "description": "Big-eye hayaletleri her gece mezar höyüklerine geri süzülüyor. Birinin onların sayısını dizginlemesi gerek — bugün o kişi sensin.",
+      "minLevel": 3,
+      "maxLevel": 9,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_bigeyeghost",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 23076,
+        "xp": 148,
+        "sp": 118
+      },
+      "repeat": {
+        "type": "cooldown",
+        "hours": 24
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "gyo_menace",
+      "title": "Gyo Belası",
+      "description": "Mangyanglar temizlenince nehir kıyısını gyolar sahiplendi. Onları oradan sür, yol için de şu iksirleri yanına al.",
+      "minLevel": 5,
+      "maxLevel": 11,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_gyo",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 38349,
+        "xp": 246,
+        "sp": 197
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": null,
+      "enabled": true
+    },
+    {
+      "id": "hunt_mangyang_novice",
+      "title": "Mangyang Kırımı",
+      "description": "Jangan'ın güney kapısının dışındaki mangyang sürüleri iyice cüretlendi. Kervanların başına dert olmadan sayılarını azalt.",
+      "minLevel": 1,
+      "maxLevel": 7,
+      "race": "all",
+      "objective": {
+        "type": "hunt",
+        "mobId": "mob_mangyang",
+        "count": 25
+      },
+      "rewards": {
+        "gold": 7800,
+        "xp": 50,
+        "sp": 40
+      },
+      "repeat": {
+        "type": "none"
+      },
+      "requiresQuest": "chain_01_mangyang",
+      "enabled": true
+    }
+  ]
+}

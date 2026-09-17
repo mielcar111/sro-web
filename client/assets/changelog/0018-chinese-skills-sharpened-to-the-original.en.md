@@ -1,0 +1,18 @@
+## Changed
+
+- **Combo skills step by step** — Crosswise and Flying Stone Smash, all six Sword Chains, Devil and Demon Cut Blade, Dragon Sore Blade, the Spear Chains, Jade Breaking and Windless Spear, Lightning Bird Spear, both Soul Spears and the 4/5 Arrow Combos now play out as in the original. Each blow of a combo is its own confirmed step with its own timing and recovery, instead of one long merged action, and an interrupted combo simply stops there. You no longer stand locked for the whole chain after a single press.
+- **Skill data now comes from the original server's own tables** — the seven Chinese trees read their cooldowns, buff durations, requirements and effect values from the table the original game server actually loads, rather than from a later database copy. Everything this moved is listed below.
+- **Guard of Ice, Fire Protection, Flame Body, Piercing Force, Concentration and Fire Shield now expire** — these self-buffs used to last a full day. In the original they run between roughly 5½ and 12 minutes depending on rank, and they now do too. Plan to refresh them.
+- **Faster healing and curing** — Force healing skills now recover in 3 seconds instead of 10, self-healing and the Force Cures in about 2 seconds instead of 10 and 16. Cure Therapy, the area cure, is slower at 30 seconds. The Arrow Combos come back in 4 seconds instead of 6, and Grass Walk in 2 seconds instead of 25.
+- **Vital Spot debuffs land far more often** — Vital Spot Body, Mind and Zero now apply at their original 80% chance instead of 45%.
+- **Area skills pick their extra victims like the original** — Soul Blade Force, the Sword Dances, Ghost and Dancing Demon Spear, Chain Spear Shura and Dragon, the Wolf Bite Spear line, Berserker/Demon/Devil Arrow, the Mind Bows, Snow Storm Ice Rain, Flame Wave Wide, the Lion Shouts and the Thunderbolts now choose which enemies get caught — and which of them take the reduced damage — the way the original sweeps the area, instead of by an internal ordering that had no meaning in game.
+- **Snow Shield costs more mana** — the shield now spends 1.5 mana for every point of damage it takes off your health, as in the original, instead of 1.2. It absorbs the same share of the hit.
+- **Ice and Fire Walls no longer vanish on their own** — a wall now stands until it is shattered, until you cannot pay its upkeep, or until you cancel it. Previously an untouched wall quietly disappeared after a day.
+- **Resurrection restores a touch less** — the health and mana a revived character wakes with are now rounded down as the original does, which can be one point lower than before.
+- **First skill of each tree needs mastery 5** — Strike Smash, Wolf Bite Spear, Anti Devil Bow, the three elemental forces and Self Breathe Heal now require mastery level 5 to learn, exactly as the original does. New characters should put their first mastery points in before buying their opening skill.
+- **Fire Combustion and Vision Fire Combustion** — these two detection skills still have no effect, since hiding and invisibility are not part of the game.
+
+## Fixed
+
+- **Fire Shield needs a shield again for the right reason** — the requirement is now read straight from the original's own data instead of being patched in, and behaves identically: you need a shield to cast it, and the protection stays if you swap the shield away afterwards.
+- **Cures pick which ailment to treat exactly as the original does** — Force Cures, Cure Therapy and purification pills now use the original's own way of drawing at random, so treating one of several ailments follows the same odds.

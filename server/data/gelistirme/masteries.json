@@ -1,0 +1,93 @@
+[
+ {
+  "id": "bicheon",
+  "name": "Bicheon",
+  "description": "You will soar high into the sky mastering swords. This swordmanship is very moderate and powerful.",
+  "icon": "sro_mastery_bicheon",
+  "race": "chinese"
+ },
+ {
+  "id": "heuksal",
+  "name": "Heuksal",
+  "description": "Heuksalchangbeop is the spearmanship of the heuksalmun. It is the result of a comprehensive survey of various spearmanships.",
+  "icon": "sro_mastery_heuksal",
+  "race": "chinese"
+ },
+ {
+  "id": "pacheon",
+  "name": "Pacheon",
+  "description": "The Secret Archery is so powerful it breaks even the sky. The skill is very graceful and militant.",
+  "icon": "sro_mastery_pacheon",
+  "race": "chinese"
+ },
+ {
+  "id": "cold",
+  "name": "Cold",
+  "description": "Hanbingmyeongong is a Force skill which uses the energy of ice. So you can freeze the enemy instantaneously and effectively.",
+  "icon": "sro_mastery_cold",
+  "race": "chinese"
+ },
+ {
+  "id": "lightning",
+  "name": "Lightning",
+  "description": "Pungroibigong is a Force skill which uses the energy of lightning. so you can give electric pain to the enemy.",
+  "icon": "sro_mastery_lightning",
+  "race": "chinese"
+ },
+ {
+  "id": "fire",
+  "name": "Fire",
+  "description": "Hwaryeongsingong is a Force skill which uses the energy of fire. So you can burn the enemy.",
+  "icon": "sro_mastery_fire",
+  "race": "chinese"
+ },
+ {
+  "id": "force",
+  "name": "Force",
+  "description": "Gihyeoldaebeop is not a killing skill to harm people. But a healing skill to save lives.",
+  "icon": "sro_mastery_force",
+  "race": "chinese"
+ },
+ {
+  "id": "warrior",
+  "name": "Warrior",
+  "description": "The Warrior class is strong and effective for short-distance attacks based on their physical strength and power.It also wears heavy armor without any discomfort which enables them to demonstrate the stronger ability in physical attacks and defenses than any other classes do.",
+  "icon": "sro_mastery_warrior",
+  "race": "european"
+ },
+ {
+  "id": "wizard",
+  "name": "Wizard",
+  "description": "Wizards understand the four basic elements of the world that are hidden in the nature: Earth, Water, Fire, and Air. They uses their knowledge to mix this power of the four elements to create strong magical attacks when they subdue the enemy.",
+  "icon": "sro_mastery_wizard",
+  "race": "european"
+ },
+ {
+  "id": "rogue",
+  "name": "Rogue",
+  "description": "They balance the world by quietly terminating their opponents. They are experts at making surprise attacks from a long distance hiding itself in the dark and using dagger's dripped in poison to give the final blow.",
+  "icon": "sro_mastery_rogue",
+  "race": "european"
+ },
+ {
+  "id": "warlock",
+  "name": "Warlock",
+  "description": "Warlocks are a dark class. They are known for placing curses on their enemies which literally tortures opponents till the end. These curses also gradually reduce the power of their enemies, eventually paralyze them and confuse them. They can use similar powers of the Wizard's to directly attack the enemies.",
+  "icon": "sro_mastery_warlock",
+  "race": "european"
+ },
+ {
+  "id": "bard",
+  "name": "Bard",
+  "description": "Bards assist party members and allies with music which produces various effects. The music that Bards play not only gives allies the self confidence that they can win against any enemies but also provides better abilities and strength. They have further deveolped these skills to confuse their enemies and hurt them. Through a musical performance an ensemble of Bards will give a group the power to defeat their enemies.",
+  "icon": "sro_mastery_bard",
+  "race": "european"
+ },
+ {
+  "id": "cleric",
+  "name": "Cleric",
+  "description": "Clerics borrow God's ability to cure others, free them from pain, and bless them with power so that they will have easier time defeating the enemies. The will to protect themselves from evil and resurrect allies is found within the Cleric.",
+  "icon": "sro_mastery_cleric",
+  "race": "european"
+ }
+]

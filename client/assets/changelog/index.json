@@ -1,0 +1,395 @@
+{
+  "v": 1,
+  "entries": [
+    {
+      "id": 26,
+      "slug": "imbue-damage-checked-against-the-origina",
+      "date": "2026-09-03",
+      "title": {
+        "en": "Imbue damage checked against the original game",
+        "tr": "Imbue hasarı orijinal oyunla karşılaştırıldı",
+        "de": "Imbue-Schaden mit dem Originalspiel abgeglichen"
+      },
+      "files": {
+        "en": "0026-imbue-damage-checked-against-the-origina.en.md",
+        "tr": "0026-imbue-damage-checked-against-the-origina.tr.md",
+        "de": "0026-imbue-damage-checked-against-the-origina.de.md"
+      }
+    },
+    {
+      "id": 25,
+      "slug": "smoother-skills-fairer-imbues-friendlier",
+      "date": "2026-09-02",
+      "title": {
+        "en": "Smoother skills, fairer imbues, friendlier parties",
+        "tr": "Daha akıcı skiller, daha adil imbue'lar, daha rahat partiler",
+        "de": "Flüssigere Skills, fairere Imbues, entspanntere Gruppen"
+      },
+      "files": {
+        "en": "0025-smoother-skills-fairer-imbues-friendlier.en.md",
+        "tr": "0025-smoother-skills-fairer-imbues-friendlier.tr.md",
+        "de": "0025-smoother-skills-fairer-imbues-friendlier.de.md"
+      }
+    },
+    {
+      "id": 24,
+      "slug": "feature-requests-join-the-bug-reporter",
+      "date": "2026-08-29",
+      "title": {
+        "en": "Feature requests join the bug reporter",
+        "tr": "Özellik istekleri hata bildirimine katıldı",
+        "de": "Feature-Wünsche ziehen in die Fehlermeldung ein"
+      },
+      "files": {
+        "en": "0024-feature-requests-join-the-bug-reporter.en.md",
+        "tr": "0024-feature-requests-join-the-bug-reporter.tr.md",
+        "de": "0024-feature-requests-join-the-bug-reporter.de.md"
+      }
+    },
+    {
+      "id": 23,
+      "slug": "combos-land-every-hit-unique-bosses-drop",
+      "date": "2026-08-29",
+      "title": {
+        "en": "Combos land every hit, unique bosses drop real loot",
+        "tr": "Kombolar her vuruşu vuruyor, unique boslar gerçek ganimet düşürüyor",
+        "de": "Kombos treffen jeden Schlag, Unique-Bosse lassen echte Beute fallen"
+      },
+      "files": {
+        "en": "0023-combos-land-every-hit-unique-bosses-drop.en.md",
+        "tr": "0023-combos-land-every-hit-unique-bosses-drop.tr.md",
+        "de": "0023-combos-land-every-hit-unique-bosses-drop.de.md"
+      }
+    },
+    {
+      "id": 22,
+      "slug": "combos-feel-right-again-safer-ferry-land",
+      "date": "2026-08-28",
+      "title": {
+        "en": "Combos feel right again, safer ferry landings & clearer storage",
+        "tr": "Kombolar yeniden doğru hissettiriyor, güvenli feribot inişleri ve daha net depo",
+        "de": "Kombos fühlen sich wieder richtig an, sichere Fährlandungen & klareres Lager"
+      },
+      "files": {
+        "en": "0022-combos-feel-right-again-safer-ferry-land.en.md",
+        "tr": "0022-combos-feel-right-again-safer-ferry-land.tr.md",
+        "de": "0022-combos-feel-right-again-safer-ferry-land.de.md"
+      }
+    },
+    {
+      "id": 21,
+      "slug": "combos-keep-their-damage-party-loot-real",
+      "date": "2026-08-27",
+      "title": {
+        "en": "Combos keep their damage, party loot really shares, and a fix for the blank screen",
+        "tr": "Kombolar hasarını koruyor, parti eşya paylaşımı gerçekten çalışıyor ve boş ekrana çözüm",
+        "de": "Kombos behalten ihren Schaden, Gruppenbeute wird wirklich geteilt, und ein Fix für den leeren Bildschirm"
+      },
+      "files": {
+        "en": "0021-combos-keep-their-damage-party-loot-real.en.md",
+        "tr": "0021-combos-keep-their-damage-party-loot-real.tr.md",
+        "de": "0021-combos-keep-their-damage-party-loot-real.de.md"
+      }
+    },
+    {
+      "id": 20,
+      "slug": "combo-damage-auto-hunt-fixes-and-monster",
+      "date": "2026-08-23",
+      "title": {
+        "en": "Combo damage, auto-hunt fixes and monsters back behind Jangan",
+        "tr": "Kombo hasarı, makro düzeltmeleri ve Jangan'ın arkasına dönen canavarlar",
+        "de": "Kombo-Schaden, Makro-Korrekturen und Monster zurück hinter Jangan"
+      },
+      "files": {
+        "en": "0020-combo-damage-auto-hunt-fixes-and-monster.en.md",
+        "tr": "0020-combo-damage-auto-hunt-fixes-and-monster.tr.md",
+        "de": "0020-combo-damage-auto-hunt-fixes-and-monster.de.md"
+      }
+    },
+    {
+      "id": 19,
+      "slug": "knockbacks-hit-timing-and-hawk-fixes",
+      "date": "2026-08-18",
+      "title": {
+        "en": "Knockbacks, hit timing and hawk fixes",
+        "tr": "Geri savurma, vuruş zamanlaması ve şahin düzeltmeleri",
+        "de": "Rückstoß, Trefferzeitpunkt und Falken-Korrekturen"
+      },
+      "files": {
+        "en": "0019-knockbacks-hit-timing-and-hawk-fixes.en.md",
+        "tr": "0019-knockbacks-hit-timing-and-hawk-fixes.tr.md",
+        "de": "0019-knockbacks-hit-timing-and-hawk-fixes.de.md"
+      }
+    },
+    {
+      "id": 18,
+      "slug": "chinese-skills-sharpened-to-the-original",
+      "date": "2026-08-17",
+      "title": {
+        "en": "Chinese skills sharpened to the original",
+        "tr": "Çin becerileri orijinaline göre keskinleştirildi",
+        "de": "Chinesische Fertigkeiten dem Original nachgeschärft"
+      },
+      "files": {
+        "en": "0018-chinese-skills-sharpened-to-the-original.en.md",
+        "tr": "0018-chinese-skills-sharpened-to-the-original.tr.md",
+        "de": "0018-chinese-skills-sharpened-to-the-original.de.md"
+      }
+    },
+    {
+      "id": 17,
+      "slug": "new-mining-grounds-and-deposits-that-com",
+      "date": "2026-08-16",
+      "title": {
+        "en": "New mining grounds, and deposits that come back faster",
+        "tr": "Yeni madencilik alanları ve daha çabuk dolan yataklar",
+        "de": "Neue Abbaugebiete und Vorkommen, die schneller nachwachsen"
+      },
+      "files": {
+        "en": "0017-new-mining-grounds-and-deposits-that-com.en.md",
+        "tr": "0017-new-mining-grounds-and-deposits-that-com.tr.md",
+        "de": "0017-new-mining-grounds-and-deposits-that-com.de.md"
+      }
+    },
+    {
+      "id": 16,
+      "slug": "rivers-can-be-crossed-again",
+      "date": "2026-08-16",
+      "title": {
+        "en": "Rivers can be crossed again",
+        "tr": "Nehirler yeniden geçilebiliyor",
+        "de": "Flüsse lassen sich wieder durchqueren"
+      },
+      "files": {
+        "en": "0016-rivers-can-be-crossed-again.en.md",
+        "tr": "0016-rivers-can-be-crossed-again.tr.md",
+        "de": "0016-rivers-can-be-crossed-again.de.md"
+      }
+    },
+    {
+      "id": 15,
+      "slug": "traded-pets-keep-their-level",
+      "date": "2026-08-16",
+      "title": {
+        "en": "Traded pets keep their level",
+        "tr": "Takas edilen evcil hayvanlar seviyesini koruyor",
+        "de": "Gehandelte Gefährten behalten ihre Stufe"
+      },
+      "files": {
+        "en": "0015-traded-pets-keep-their-level.en.md",
+        "tr": "0015-traded-pets-keep-their-level.tr.md",
+        "de": "0015-traded-pets-keep-their-level.de.md"
+      }
+    },
+    {
+      "id": 14,
+      "slug": "rogue-skills-sharpened-to-the-original",
+      "date": "2026-08-14",
+      "title": {
+        "en": "Rogue skills sharpened to the original",
+        "tr": "Rogue becerileri orijinaline göre keskinleştirildi",
+        "de": "Rogue-Fertigkeiten dem Original nachgeschärft"
+      },
+      "files": {
+        "en": "0014-rogue-skills-sharpened-to-the-original.en.md",
+        "tr": "0014-rogue-skills-sharpened-to-the-original.tr.md",
+        "de": "0014-rogue-skills-sharpened-to-the-original.de.md"
+      }
+    },
+    {
+      "id": 13,
+      "slug": "warlock-skills-sharpened-to-the-original",
+      "date": "2026-08-14",
+      "title": {
+        "en": "Warlock skills sharpened to the original",
+        "tr": "Warlock becerileri orijinaline göre keskinleştirildi",
+        "de": "Warlock-Fertigkeiten dem Original nachgeschärft"
+      },
+      "files": {
+        "en": "0013-warlock-skills-sharpened-to-the-original.en.md",
+        "tr": "0013-warlock-skills-sharpened-to-the-original.tr.md",
+        "de": "0013-warlock-skills-sharpened-to-the-original.de.md"
+      }
+    },
+    {
+      "id": 12,
+      "slug": "physical-attacks-match-the-original",
+      "date": "2026-08-13",
+      "title": {
+        "en": "Physical attacks now match the original exactly",
+        "tr": "Fiziksel saldırılar artık orijinalle birebir",
+        "de": "Physische Angriffe entsprechen jetzt exakt dem Original"
+      },
+      "files": {
+        "en": "0012-physical-attacks-match-the-original.en.md",
+        "tr": "0012-physical-attacks-match-the-original.tr.md",
+        "de": "0012-physical-attacks-match-the-original.de.md"
+      }
+    },
+    {
+      "id": 11,
+      "slug": "european-skills-follow-the-original-mast",
+      "date": "2026-08-12",
+      "title": {
+        "en": "European skills follow the original mastery rule",
+        "tr": "Avrupa yetenekleri orijinalin ustalık kuralına uyuyor",
+        "de": "Europäische Skills folgen der Meisterschaftsregel des Originals"
+      },
+      "files": {
+        "en": "0011-european-skills-follow-the-original-mast.en.md",
+        "tr": "0011-european-skills-follow-the-original-mast.tr.md",
+        "de": "0011-european-skills-follow-the-original-mast.de.md"
+      }
+    },
+    {
+      "id": 10,
+      "slug": "warrior-skills-sharpened-to-the-original",
+      "date": "2026-08-12",
+      "title": {
+        "en": "Warrior skills sharpened to the original",
+        "tr": "Savaşçı becerileri orijinaline göre keskinleştirildi",
+        "de": "Krieger-Fertigkeiten dem Original nachgeschärft"
+      },
+      "files": {
+        "en": "0010-warrior-skills-sharpened-to-the-original.en.md",
+        "tr": "0010-warrior-skills-sharpened-to-the-original.tr.md",
+        "de": "0010-warrior-skills-sharpened-to-the-original.de.md"
+      }
+    },
+    {
+      "id": 9,
+      "slug": "spirit-passives-now-empower-the-whole-sp",
+      "date": "2026-08-11",
+      "title": {
+        "en": "Spirit passives now empower the whole spell",
+        "tr": "Spirit pasifleri artık büyünün tamamını güçlendiriyor",
+        "de": "Spirit-Passive stärken jetzt den ganzen Zauber"
+      },
+      "files": {
+        "en": "0009-spirit-passives-now-empower-the-whole-sp.en.md",
+        "tr": "0009-spirit-passives-now-empower-the-whole-sp.tr.md",
+        "de": "0009-spirit-passives-now-empower-the-whole-sp.de.md"
+      }
+    },
+    {
+      "id": 8,
+      "slug": "email-verification-that-just-works",
+      "date": "2026-08-10",
+      "title": {
+        "en": "Wizard skills matched to the original, pets that stay out & stackable stones",
+        "tr": "Büyücü yetenekleri orijinaliyle birebir, açık kalan petler ve istiflenebilir taşlar",
+        "de": "Magier-Skills wie im Original, Haustiere bleiben draußen & stapelbare Steine"
+      },
+      "files": {
+        "en": "0008-email-verification-that-just-works.en.md",
+        "tr": "0008-email-verification-that-just-works.tr.md",
+        "de": "0008-email-verification-that-just-works.de.md"
+      }
+    },
+    {
+      "id": 7,
+      "slug": "footsteps-you-can-hear",
+      "date": "2026-08-07",
+      "title": {
+        "en": "Faithful combat, footsteps you can hear & safer arrivals",
+        "tr": "Aslına sadık savaş, duyulan ayak sesleri ve güvenli varış",
+        "de": "Originalgetreuer Kampf, hörbare Schritte & sichere Ankunft"
+      },
+      "files": {
+        "en": "0007-footsteps-you-can-hear.en.md",
+        "tr": "0007-footsteps-you-can-hear.tr.md",
+        "de": "0007-footsteps-you-can-hear.de.md"
+      }
+    },
+    {
+      "id": 6,
+      "slug": "quick-fix-no-more-t-pose-on-arrival",
+      "date": "2026-08-07",
+      "title": {
+        "en": "Quick fix — no more T-pose on arrival",
+        "tr": "Hızlı düzeltme — varışta T-duruşu yok artık",
+        "de": "Schnelle Korrektur — keine T-Pose mehr bei der Ankunft"
+      },
+      "files": {
+        "en": "0006-quick-fix-no-more-t-pose-on-arrival.en.md",
+        "tr": "0006-quick-fix-no-more-t-pose-on-arrival.tr.md",
+        "de": "0006-quick-fix-no-more-t-pose-on-arrival.de.md"
+      }
+    },
+    {
+      "id": 5,
+      "slug": "faster-city-loading-smoother-long-sessio",
+      "date": "2026-08-07",
+      "title": {
+        "en": "Faster city loading & smoother long sessions",
+        "tr": "Şehirler çok daha hızlı yükleniyor, uzun oturumlar akıcı kalıyor",
+        "de": "Städte laden deutlich schneller, lange Sitzungen bleiben flüssig"
+      },
+      "files": {
+        "en": "0005-faster-city-loading-smoother-long-sessio.en.md",
+        "tr": "0005-faster-city-loading-smoother-long-sessio.tr.md",
+        "de": "0005-faster-city-loading-smoother-long-sessio.de.md"
+      }
+    },
+    {
+      "id": 4,
+      "slug": "smoother-connections-no-more-endless-ent",
+      "date": "2026-08-07",
+      "title": {
+        "en": "Smoother connections, no more endless 'Entered town' loops",
+        "tr": "Daha stabil bağlantı, bitmeyen \"Hotan'a girildi\" döngüsüne son",
+        "de": "Stabilere Verbindung, Schluss mit der endlosen „Hotan betreten\"-Schleife"
+      },
+      "files": {
+        "en": "0004-smoother-connections-no-more-endless-ent.en.md",
+        "tr": "0004-smoother-connections-no-more-endless-ent.tr.md",
+        "de": "0004-smoother-connections-no-more-endless-ent.de.md"
+      }
+    },
+    {
+      "id": 3,
+      "slug": "growth-pets",
+      "date": "2026-08-06",
+      "title": {
+        "en": "Growth pets — raise a wolf that fights beside you",
+        "tr": "Gelişim petleri — yanında savaşan bir kurt büyüt",
+        "de": "Wachstumsbegleiter — zieh einen Wolf groß, der an deiner Seite kämpft"
+      },
+      "files": {
+        "en": "0003-growth-pets.en.md",
+        "tr": "0003-growth-pets.tr.md",
+        "de": "0003-growth-pets.de.md"
+      }
+    },
+    {
+      "id": 2,
+      "slug": "durability-and-repair",
+      "date": "2026-08-05",
+      "title": {
+        "en": "Slower equipment wear & authentic repair prices",
+        "tr": "Daha yavaş ekipman aşınması & orijinal tamir fiyatları",
+        "de": "Langsamerer Verschleiß & originale Reparaturpreise"
+      },
+      "files": {
+        "en": "0002-durability-and-repair.en.md",
+        "tr": "0002-durability-and-repair.tr.md",
+        "de": "0002-durability-and-repair.de.md"
+      }
+    },
+    {
+      "id": 1,
+      "slug": "changelog-introduced",
+      "date": "2026-08-04",
+      "title": {
+        "en": "Elixir stacking, storage page tabs & the in-game changelog",
+        "tr": "Elixir yığınları, depo sayfa sekmeleri ve oyun içi değişiklik günlüğü",
+        "de": "Elixier-Stapel, Seitenreiter im Lager & das Änderungsprotokoll im Spiel"
+      },
+      "files": {
+        "en": "0001-changelog-introduced.en.md",
+        "tr": "0001-changelog-introduced.tr.md",
+        "de": "0001-changelog-introduced.de.md"
+      }
+    }
+  ]
+}

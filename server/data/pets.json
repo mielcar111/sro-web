@@ -1,0 +1,30 @@
+[
+ {
+  "id": "pet_rabbit",
+  "name": "Rabbit",
+  "modelKey": "pet_rabbit",
+  "walkSpeedU": 7.5,
+  "runSpeedU": 18
+ },
+ {
+  "id": "pet_monkey",
+  "name": "Monkey",
+  "modelKey": "pet_monkey",
+  "walkSpeedU": 7.5,
+  "runSpeedU": 18
+ },
+ {
+  "id": "pet_cat",
+  "name": "Cat",
+  "modelKey": "pet_cat",
+  "walkSpeedU": 7.5,
+  "runSpeedU": 18
+ },
+ {
+  "id": "pet_goldpig",
+  "name": "Gold Pig",
+  "modelKey": "pet_goldpig",
+  "walkSpeedU": 7.5,
+  "runSpeedU": 18
+ }
+]

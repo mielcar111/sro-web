@@ -1,0 +1,277 @@
+{
+  "combatConfig": {
+    "$comment": "HAND-OWNED — survives pnpm gen:sro; tune freely, then pnpm validate:data + /gm reloadcombat. Silkroad-exact combat constants (oracle rework 2026-07-18). Shapes live in @mmo/rules; every number lives here. PROVENANCE tags: measured-exact (reproduces every oracle datapoint, Oracle/EXPERIMENTS.md) | measured-fit (fits with small residual/sample) | db-exact (read from SRO_VT_SHARD) | community-corroborated (community formula consistent with our data) | interim-invented (our own conservative design, recalibration seam) | custom-kept (deliberate non-retail).",
+    "hpMp": {
+      "$comment": "measured-exact: HP/MP = floor(STAT*10*1.02^(L-1)) — exact on 200/239/1277/1710/2143/3008/3874 (EXP-01/05/16)",
+      "perStat": 10,
+      "growthPerLevel": 1.02
+    },
+    "balance": {
+      "$comment": "measured-exact 12/12: M=mBase+mPerLevel·L; phys 100(1+physStrWeight·STR/M)/physDivisor ≡ 100−(200/3)(M−STR)/M at defaults; mag 100·INT/M. capPct community-corroborated (~120 region; our max observed 95). physStrWeight/physDivisor are the structural literals of the phys formula — raising physStrWeight (or lowering physDivisor) makes STR push phys balance toward the cap faster.",
+      "mBase": 28,
+      "mPerLevel": 4,
+      "capPct": 120,
+      "physStrWeight": 2,
+      "physDivisor": 3
+    },
+    "mastery": {
+      "$comment": "ONE native MAAT rate, exactly 1%/level — decompilation-proven (SR_GameServer FUN_0059E770 returns the live mastery byte q; the stat-page builder 0x004EBE30 scales the displayed PHYSICAL page by 1+q/100 of the equipped BASE-ATTACK row iff that row carries getv(MAAT); the combat endpoint builders 0x0040DB50/0x0040DC10 apply the SELECTED row's 1+q/100 to clamp(rawAttack+flat, 0, 999999) for BOTH schools). Schema-pinned to 1 (z.literal) — not a tuning knob; changing it is an explicit parity deviation requiring a schema change. SUPERSEDES the old two-rate block: pctPerLevel 0.95 was a measured FIT over rounded page observations taken while the raw/page projections were conflated (the EXP-16/17 cells that excluded 1.0 — STR79 min 42 vs obs 41, STR139 max 68 vs obs 67 — are rounding/raw-construction residuals, see .reports/skill/maat-physical-endpoint-correction-2026-08-13.md); damageTimePctPerLevel 1.0 (measured-exact EXP-W5 Leg 5: Arrow-1 @80 vs 30 obs 3550/1721) is this same rate and is unchanged.",
+      "maatPctPerLevel": 1
+    },
+    "nakedAttack": {
+      "$comment": "phys measured-fit (staff has PAttack 0 db-exact → pure readings: STR20→'6', STR29→'9–10'): min slope ∈ [0.3103,0.3448), max ∈ [0.3448,0.35). mag interim-invented mirror (no naked-mag reading exists).",
+      "physMinPerStr": 0.32,
+      "physMaxPerStr": 0.348,
+      "magMinPerInt": 0.32,
+      "magMaxPerInt": 0.348
+    },
+    "nakedDefense": {
+      "$comment": "measured-fit, exact 6/6 + 7/7 (EXP-02..04/12/16): PD=STR·0.19 (slope ∈ [0.1899,0.1919)), MD=INT·0.304 (∈ [0.3038,0.3051)); level-independent (PD 3 at lvl1 AND lvl10, STR20).",
+      "physPerStr": 0.19,
+      "magPerInt": 0.304
+    },
+    "hitRate": {
+      "$comment": "measured-exact 35/39/44/54/74 = 34+L; the weapon's HR column does NOT feed the displayed stat (sword HR 24–30 present, display unchanged) — where weapon HR really goes is open.",
+      "base": 34,
+      "perLevel": 1
+    },
+    "parry": {
+      "$comment": "measured-exact 11/15/20/30/50 = 10+L; gear ER adds flat (light set Σ ER_L=23 → 73; ERInc=0 db-exact, so +opt never moves parry — observed).",
+      "base": 10,
+      "perLevel": 1
+    },
+    "mult": {
+      "$comment": "MEASURED level CURVES (EXP-36..40, 2026-07-18): piecewise-linear [level, ratio] anchors, clamped outside — ALL FIVE phys knots measured on the clean Water-Ghost ladder (lvl 5: obs 2s/crit 5 → 1.01; lvl 10: twelve 3s → 1.16; lvl 20: all 5s → interp; lvl 30: fourteen 6s/crit 13 → 1.287; lvl 40: 7s/8s + spear+5 25–28 → 1.35). Community constants falsified (1.277 EXCLUDED at 40; mag 1.287 excluded by firebolt [0.932,1.036] → mag = 1.0 flat). Mastery does NOT interact (EXP-40C: mastery 40 damage = page-attack scaling alone). Graveyard 'anomaly' closed by EXP-39 (historic target was TOMBSTONE_CLON PD15). Every collected dealt datapoint fits with zero residual.",
+      "physAnchors": [
+        [
+          1,
+          1.01
+        ],
+        [
+          5,
+          1.01
+        ],
+        [
+          10,
+          1.16
+        ],
+        [
+          30,
+          1.287
+        ],
+        [
+          40,
+          1.35
+        ]
+      ],
+      "magAnchors": [
+        [
+          1,
+          1
+        ]
+      ]
+    },
+    "crit": {
+      "$comment": "physMult 2 on the PHYS component only, applied POST-defense PRE-floor = measured-exact (EXP-18 crit 11 = floor(5.79·2); EXP-19 mitigated crits deal 1). chance = CHR·pctPerRating capped = interim-invented (crit-rate source open; weapon CHR is the presumed rating).",
+      "pctPerRating": 1,
+      "capPct": 50,
+      "physMult": 2
+    },
+    "rollShape": {
+      "$comment": "interim-invented family t=u^((s+ER)/(s+HR)) — biases WHERE the roll lands; EXP-22 mid-centered full-range rolls are consistent with ~neutral k. softness = the one calibration knob.",
+      "softness": 100
+    },
+    "miss": {
+      "$comment": "DISABLED per user 2026-07-22 (chancePerPointPct 0): retail has NO ordinary HR/ER dodge — the oracle never observed a clean miss, HR vs ER only biases WHERE the damage roll lands (rollShape). The invented miss was asymmetric against the player (mob ER outpaces player HR, so you whiffed mobs ~12.5% from ~lvl30 up while mobs never whiffed you) AND double-penalized (same ER>HR also pushed your rolls to min). Formula retained as a zeroable seam: chance% = min(capPct, chancePerPointPct·max(0, ER−HR−erExcessThreshold)); set chancePerPointPct back to 0.5 to restore the 12.5%-cap playtest model.",
+      "erExcessThreshold": 0,
+      "chancePerPointPct": 0,
+      "capPct": 12.5
+    },
+    "block": {
+      "$comment": "zero-damage block + both-schools community-corroborated; BR/100 chance + cap interim-invented (no shield oracle run yet).",
+      "schools": "both",
+      "capPct": 60
+    },
+    "monster": {
+      "$comment": "physMult/magMult 1.0 measured-exact — the blind-validated received formula (EXP-25, 20/20) has NO ×1.28 constant. balanceFPct interim-invented (mob-side roll skewed high in band — distribution open).",
+      "balanceFPct": 100,
+      "physMult": 1,
+      "magMult": 1
+    },
+    "minDamage": 1,
+    "autoAttack": {
+      "$comment": "school/rate/hits/cadence come from the weapon's base-attack SKILL (base-attacks.json, db-exact). rangeU = bare-hands reach (client cast-input reads it too); baseIntervalMs = legacy fallback only. hitGapMs REMOVED 2026-08-09: the native result builder loops every packet of a swing synchronously and commits the aggregate through ONE EngageSkill, so there is no authored inter-packet gap — per-packet pacing is client presentation only.",
+      "baseIntervalMs": 1600,
+      "rangeU": 2.5
+    },
+    "chain": {
+      "$comment": "interim-invented (BR-0167 seam, 2026-08-28). The per-row Action_ActionDuration and the head-only Action_ActionReuseDelay are MEASURED and live in the skill rows, NOT here. What IS invented: whether pressing a different skill mid-combo abandons the rest of the chain. The GameServer never walks Basic_ChainCode forward (RefSkill+0x5a4 written at load, never read), so continuations are client-selected and retail's abort policy is unrecovered. preemptOnCast true = a DIFFERENT skill's press abandons the combo and the actor frees at the CURRENT row's own Action_ActionDuration (measured in-game 2026-08-28: next skill starts at ~1240ms on Chain Spear - Dragon, whose head row is 1152ms). false = the server keeps the 038ca5af hold to selectDeadlineAt instead (~1613ms measured) and stops refusing late selections; it is NOT a full revert to 038ca5af's multi-second hold, because the client-side cancel ships unconditionally and a client build would be needed for that. An already-selected row commits either way, so BR-0148 stays fixed in both positions. BR-0175/BR-0177 (2026-08-29): re-pressing the chain's OWN key is spam, never abandonment — deduped server+client regardless of this flag — and a queued head press no longer preempts its own chain at dequeue. Flip with /gm reloadcombat.",
+      "preemptOnCast": true,
+      "lockToleranceMs": 300,
+      "selectGraceMs": 2000
+    },
+    "skillQueue": {
+      "$comment": "package-attributed (index-DzRqDn3Z.js @18752281): the client's OWN skill.cast spacing is N_t = 200 ms — I_t() holds a pressed cast until q$ + N_t (q$ = time of the previous send) and sends it exactly ONCE; there is no client-side retry loop. actionWindowHoldMs is the server-side mirror of that spacing: a cast pressed while the actor is still inside its action window (castMs + actionMs) is buffered for at most this long, then dropped with cast.queued{state:'dropped', reason:'expired'} + err ERR_BUSY. The old value was a HARD-CODED 15000 ms borrowed from the RANGE queue (sistem_beceri.js KUYRUK_ZAMAN_ASIMI_MS), which made the server auto-fire a skill pressed seconds early exactly on the window boundary — the machine-precision 'macro feel' measured on 2026-09-04 (4-skill rotation: every press landed 41-62 ms after the previous window closed, zero human gap). 200 = the last 200 ms of the window act as a natural pre-input buffer; an earlier press is refused and the player presses again. The RANGE queue's 15000 ms is UNCHANGED — that one is corroborated by the package's own err.skill.queue_timeout text. 0 = refuse instantly.",
+      "actionWindowHoldMs": 200
+    },
+    "startingStats": {
+      "$comment": "measured-exact: level 1 = STR 20 / INT 20 (SRO's only two primary stats)",
+      "str": 20,
+      "int": 20
+    },
+    "statPointsPerLevel": 3,
+    "regen": {
+      "hpPctPerSec": 0.005,
+      "mpPctPerSec": 0.01,
+      "outOfCombatMs": 5000
+    },
+    "knockdown": {
+      "downMs": 2500
+    },
+    "levelGap": {
+      "$comment": "measured-exact (EXP-W7): dealt damage ×(1 + clamp(slope·(attackerLvl−targetLvl), floor, cap)). slope/cap are the EXACT recovered floats (shorthand 0.03/0.30) — NEVER round them, identity vs the decompiled kernel is test-pinned. floor 0 = attacking a higher-level target is never penalized; set negative (e.g. -0.5) to make under-leveled attackers deal less.",
+      "slope": 0.029999999329447746,
+      "cap": 0.30000001192092896,
+      "floor": 0
+    },
+    "mpShield": {
+      "$comment": "NATIVE dgmp (Chinese exactness 2026-08-17): cut = trunc(damage * pct / 100), then mpRequest = trunc(cut * 1.5). Snow Shield burns burnRatio MP per point of damage absorbed; when MP runs short the shield absorbs only what remaining MP can pay for (that shortage add-back is still unproved). Lower = MP shields last longer.",
+      "burnRatio": 1.5
+    },
+    "caps": {
+      "$comment": "custom-kept post-kernel mitigation caps. absorbShellPct: max summed EU odar shell %-reduction per hit. painQuotaDispersePct: max summed Pain Quota party-disperse %. healWeaponBalancePct: cap on mag balance inside the weapon-line HEAL term only (separate from balance.capPct).",
+      "absorbShellPct": 90,
+      "painQuotaDispersePct": 100,
+      "healWeaponBalancePct": 120
+    },
+    "pets": {
+      "$comment": "Pet/summon offense (growth-pets.json is generator-owned, so the tunables live here). growthAttackRateH: growth-pet default-skill weapon coefficient (H stage, custom-kept). lowHgpFactor: multiplier on a hungry growth pet's hit ratio and defenses. hawkRateH: attack-hawk strike H rate.",
+      "growthAttackRateH": 1.04,
+      "lowHgpFactor": 0.5,
+      "hawkRateH": 1
+    },
+    "statusLevelGap": {
+      "$comment": "decoded-high-confidence: bl/sl status install decay vs target level. gap = max(0, targetLvl − thresholdPerOpLevel·(statusOpLevel + chanceAdd bump)); duration ×max(1−durationSlope·gap, durationFloor); chance ×max(1−chanceSlope·gap, chanceFloor). Raise the floors to keep low-level statuses meaningful against high-level targets.",
+      "durationSlope": 0.025,
+      "chanceSlope": 0.05,
+      "durationFloor": 0.5,
+      "chanceFloor": 0.1,
+      "thresholdPerOpLevel": 10
+    },
+    "statusDuration": {
+      "$comment": "decoded-high-confidence: burn/poison duration = install margin × ms-per-margin.",
+      "burnMsPerMargin": 750,
+      "poisonMsPerMargin": 1000
+    },
+    "damageScale": {
+      "$comment": "HAND-OWNED custom-kept tuning seam — the global outcome matrix, in percent (100 = identity and a provable no-op). Applied once in applyDamage to every rolled hit's components; the base/imbue display split always sums to the applied total. Source kinds: player | monster | pet (growth pets AND hawk strikes count as pet). Does NOT touch burn/poison/blooding ticks, true damage (reflect, drains, Pain Quota slices), or heals. playerVsPet/monsterVsMonster/petVsPet are currently unreachable — kept for uniformity.",
+      "playerVsPlayer": 100,
+      "playerVsMonster": 100,
+      "playerVsPet": 100,
+      "monsterVsPlayer": 80,
+      "monsterVsMonster": 100,
+      "monsterVsPet": 100,
+      "petVsPlayer": 100,
+      "petVsMonster": 100,
+      "petVsPet": 100
+    },
+    "masteryBalance": {
+      "$comment": "HAND-OWNED custom-kept per-mastery balance, percent (100 = identity, enabled:false = exact bypass) — separate from the MAAT parity factor. ATTACK: physAtkPct/magAtkPct multiply the matching-school outgoing component of everything belonging to the mastery — learned skills by skill.mastery, autos by the equipped weapon's line, the imbue rider by the imbue's own line — per component, after all native math; NOT MAAT-gated. DEFENSE: a PLAYER whose equipped weapon belongs to the line takes phys ×(100/physDefPct), mag ×(100/magDefPct) from ANY source (110 = tankier); bare hands / disabled line = untouched; cold/lightning/fire/force def knobs are unreachable (no weapon maps to them — kept for uniformity). Does NOT touch burn/poison/blooding ticks, true damage, or heals; DoT channel pulses DO follow.",
+      "bicheon": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "heuksal": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "pacheon": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "cold": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "lightning": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "fire": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "force": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "warrior": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "wizard": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "rogue": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "warlock": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "bard": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      },
+      "cleric": {
+        "enabled": false,
+        "physAtkPct": 100,
+        "magAtkPct": 100,
+        "physDefPct": 100,
+        "magDefPct": 100
+      }
+    },
+    "imbue": {
+      "$comment": "HAND-OWNED custom-kept product dial for the Chinese imbue rider (fire/cold/lightning force). The kernel's accounting is the ORIGINAL game's, verified 2026-09-02 against the GameServer binary (FUN_0058E5F0: the stored P/M lanes gain the imbue pair, the HP total gains ONLY trunc(pct2 × (P2+M2) / 100) through the skill's fifth att operand) and against the live oracle (EXP-W5 Leg 4: Soul Fire on sword autos = 0.6 × rider, observed 990–1320). riderBonusPct adds that many percent of the rider's result ON TOP of the native term on every imbued hit — 0 = the original game (bit-exact); 100 = the pre-2026-09-02 numbers (rider counted in full and again through the operand: 5 Arrow Combo ×1.54 instead of ×0.54 per arrow, sword autos ×1.6 instead of ×0.6). Display, threat, walls and reflect all follow. Hot-reload with /gm reloadcombat. LIVE VALUE 50 = user balance decision 2026-09-03 (BR-0209): roughly two thirds of the way back to the pre-2026-09-02 numbers on autos and multi-arrow combos (sword auto rider 1.1× instead of 0.6×, 5 Arrow Combo 1.04× per arrow, Devil Arrow 4.0×); the schema default stays 0 = the original game.",
+      "riderBonusPct": 50
+    }
+  }
+}

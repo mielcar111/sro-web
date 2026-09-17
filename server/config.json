@@ -1,0 +1,33 @@
+{
+  "http": {
+    "port": 3000,
+    "host": "::",
+    "$hostNot": "S2 madde 4: ':: ' cift yigin (::1 + 127.0.0.1); IPv6 yigini kapali makinede server.js EADDRNOTAVAIL yakalayip 0.0.0.0 yedegine duser."
+  },
+  "world": {
+    "id": "world1",
+    "proto": 10,
+    "tickMs": 100,
+    "startZone": "jangan_province",
+    "startX": 10548,
+    "startZ": 550,
+    "startY": 0,
+    "$tickNot": "gameConfig.tickHz = 10 -> 100 ms. Onceden 200 idi (uydurma)."
+  },
+  "sql": {
+    "enabled": true,
+    "server": "localhost",
+    "user": "admin",
+    "password": "060391",
+    "options": {
+      "encrypt": false,
+      "trustServerCertificate": true
+    },
+    "databases": {
+      "shard": "SRO_VT_SHARD",
+      "account": "SRO_VT_ACCOUNT",
+      "log": "SRO_VT_LOG",
+      "web": "SRO_WEB_GAME"
+    }
+  }
+}

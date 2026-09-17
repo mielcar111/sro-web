@@ -1,0 +1,38 @@
+<!doctype html>
+<!--
+  Load-bearing by its mere PRESENCE: a root 404.html switches Cloudflare Pages
+  out of SPA-fallback mode, so missing paths return a real 404 instead of
+  index.html with HTTP 200. Without it, a missing /app/*.js chunk (deploy
+  propagation gap) returned HTML under /app/*'s immutable Cache-Control header,
+  poisoning browser HTTP caches with text/html at a .js URL for a year — the
+  2026-07-16 "refresh doesn't fix it" incident. The game client has no deep
+  routes (only /), so nothing legitimate relies on the fallback; humans who
+  land on a bad URL get bounced to the game below. Pairs with
+  src/patcher/chunkHeal.ts, which repairs already-poisoned caches.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="refresh" content="0;url=/" />
+    <title>Silkroad Online — Traders &amp; Thieves</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        height: 100%;
+        background: #0b0e13;
+        color: #e8e2d0;
+        font-family: system-ui, sans-serif;
+        display: grid;
+        place-items: center;
+      }
+      a {
+        color: #b9a25c;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/">the game</a>…</p>
+</body>
+</html>

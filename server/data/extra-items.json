@@ -1,0 +1,450 @@
+[
+ {
+  "id": "auctioneer",
+  "name": "Auctioneer",
+  "type": "auctioneer",
+  "icon": "sro_item_auctioneer_scroll",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 50
+ },
+ {
+  "id": "stat_reset_scroll",
+  "name": "Stat Reset Scroll",
+  "type": "statReset",
+  "icon": "sro_item_stat_reset_scroll",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 50
+ },
+ {
+  "id": "repair_hammer",
+  "name": "Repair Hammer",
+  "type": "repairHammer",
+  "icon": "sro_item_repair_hammer",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 50
+ },
+ {
+  "id": "mastery_reset_scroll",
+  "name": "Mastery Reset Scroll",
+  "type": "masteryReset",
+  "icon": "sro_item_mastery_reset_scroll",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 50
+ },
+ {
+  "id": "inventory_expansion",
+  "name": "Inventory Expansion",
+  "type": "bagExpand",
+  "icon": "sro_item_mall_inventory_addition",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 5
+ },
+ {
+  "id": "storage_expansion",
+  "name": "Storage Expansion",
+  "type": "storageExpand",
+  "icon": "sro_item_mall_warehouse_addition",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 10
+ },
+ {
+  "id": "carrier_expansion",
+  "name": "Carrier Expansion",
+  "type": "carrierExpand",
+  "icon": "sro_item_mall_carrier_addition",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 5
+ },
+ {
+  "id": "sp_saver",
+  "name": "Skill Point Saver",
+  "type": "spSaver",
+  "icon": "sro_item_sp_saver",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": 50000,
+  "sellPrice": 0,
+  "stackMax": 50
+ },
+ {
+  "id": "sp_scroll_01",
+  "name": "Skill Point Scroll (20,000)",
+  "type": "spScroll",
+  "icon": "sro_item_sp_scroll_01",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 50,
+  "sp": 20000
+ },
+ {
+  "id": "sp_scroll_02",
+  "name": "Skill Point Scroll (200,000)",
+  "type": "spScroll",
+  "icon": "sro_item_sp_scroll_02",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 50,
+  "sp": 200000
+ },
+ {
+  "id": "sp_scroll_03",
+  "name": "Skill Point Scroll (2,000,000)",
+  "type": "spScroll",
+  "icon": "sro_item_sp_scroll_03",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 50,
+  "sp": 2000000
+ },
+ {
+  "id": "wood_01",
+  "name": "Wood",
+  "type": "material",
+  "resource": "wood",
+  "tier": 1,
+  "icon": "wood_01",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 1000
+ },
+ {
+  "id": "wood_02",
+  "name": "Ironbark",
+  "type": "material",
+  "resource": "wood",
+  "tier": 2,
+  "icon": "wood_02",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 1000
+ },
+ {
+  "id": "wood_03",
+  "name": "Silverbranch",
+  "type": "material",
+  "resource": "wood",
+  "tier": 3,
+  "icon": "wood_03",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 1000
+ },
+ {
+  "id": "wood_04",
+  "name": "Ancientroot",
+  "type": "material",
+  "resource": "wood",
+  "tier": 4,
+  "icon": "wood_04",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 1000
+ },
+ {
+  "id": "wood_05",
+  "name": "World Tree Essence",
+  "type": "material",
+  "resource": "wood",
+  "tier": 5,
+  "icon": "wood_05",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 1000
+ },
+ {
+  "id": "stone_01",
+  "name": "Stone",
+  "type": "material",
+  "resource": "stone",
+  "tier": 1,
+  "icon": "stone_01",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 1000
+ },
+ {
+  "id": "stone_02",
+  "name": "Emerald",
+  "type": "material",
+  "resource": "stone",
+  "tier": 2,
+  "icon": "stone_02",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 1000
+ },
+ {
+  "id": "stone_03",
+  "name": "Moonstone",
+  "type": "material",
+  "resource": "stone",
+  "tier": 3,
+  "icon": "stone_03",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 1000
+ },
+ {
+  "id": "stone_04",
+  "name": "Dragonstone",
+  "type": "material",
+  "resource": "stone",
+  "tier": 4,
+  "icon": "stone_04",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 1000
+ },
+ {
+  "id": "stone_05",
+  "name": "Starstone",
+  "type": "material",
+  "resource": "stone",
+  "tier": 5,
+  "icon": "stone_05",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 1000
+ },
+ {
+  "id": "profession_axe",
+  "name": "Lumberjack's Axe",
+  "type": "weapon",
+  "slot": "weapon",
+  "weaponType": "profession_axe",
+  "attackDistanceU": 2,
+  "modelKey": "drop_equip_bundle",
+  "reqLevel": 1,
+  "buyPrice": 5000,
+  "sellPrice": 100,
+  "costRepair": 198,
+  "costRevive": 297,
+  "stackMax": 1,
+  "degree": 1,
+  "race": null,
+  "kind": "attachment",
+  "attachBone": "Bip01 R HandMid",
+  "visuals": {
+   "male": {
+    "model": "items/weapons/profession_axe.glb",
+    "icon": "profession_axe",
+    "hides": []
+   },
+   "female": {
+    "model": "items/weapons/profession_axe.glb",
+    "icon": "profession_axe",
+    "hides": []
+   }
+  },
+  "rollRanges": {
+   "durability": [
+    40,
+    40
+   ],
+   "physAtkMin": [
+    0,
+    0
+   ],
+   "physAtkMax": [
+    0,
+    0
+   ],
+   "magAtkMin": [
+    0,
+    0
+   ],
+   "magAtkMax": [
+    0,
+    0
+   ],
+   "attackRate": [
+    40,
+    40
+   ],
+   "critRating": [
+    0,
+    0
+   ],
+   "physReinforceMinPct": [
+    0,
+    0
+   ],
+   "physReinforceMaxPct": [
+    0,
+    0
+   ],
+   "magReinforceMinPct": [
+    0,
+    0
+   ],
+   "magReinforceMaxPct": [
+    0,
+    0
+   ]
+  },
+  "perPlus": {},
+  "attachAdjust": {
+   "rotateDeg": [
+    -88.41,
+    93.77,
+    177.33
+   ]
+  }
+ },
+ {
+  "id": "profession_pickaxe",
+  "name": "Miner's Pickaxe",
+  "type": "weapon",
+  "slot": "weapon",
+  "weaponType": "profession_pickaxe",
+  "attackDistanceU": 2,
+  "modelKey": "drop_equip_bundle",
+  "reqLevel": 1,
+  "buyPrice": 5000,
+  "sellPrice": 100,
+  "costRepair": 198,
+  "costRevive": 297,
+  "stackMax": 1,
+  "degree": 1,
+  "race": null,
+  "kind": "attachment",
+  "attachBone": "Bip01 R HandMid",
+  "visuals": {
+   "male": {
+    "model": "items/weapons/profession_pickaxe.glb",
+    "icon": "profession_pickaxe",
+    "hides": []
+   },
+   "female": {
+    "model": "items/weapons/profession_pickaxe.glb",
+    "icon": "profession_pickaxe",
+    "hides": []
+   }
+  },
+  "rollRanges": {
+   "durability": [
+    40,
+    40
+   ],
+   "physAtkMin": [
+    0,
+    0
+   ],
+   "physAtkMax": [
+    0,
+    0
+   ],
+   "magAtkMin": [
+    0,
+    0
+   ],
+   "magAtkMax": [
+    0,
+    0
+   ],
+   "attackRate": [
+    40,
+    40
+   ],
+   "critRating": [
+    0,
+    0
+   ],
+   "physReinforceMinPct": [
+    0,
+    0
+   ],
+   "physReinforceMaxPct": [
+    0,
+    0
+   ],
+   "magReinforceMinPct": [
+    0,
+    0
+   ],
+   "magReinforceMaxPct": [
+    0,
+    0
+   ]
+  },
+  "perPlus": {},
+  "attachAdjust": {
+   "rotateDeg": [
+    -88.41,
+    93.77,
+    177.33
+   ]
+  }
+ },
+ {
+  "id": "profession_scroll_enchanter",
+  "name": "Enchanter Learning Scroll",
+  "type": "professionScroll",
+  "professionId": "enchanter",
+  "icon": "profession_scroll_enchanter",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 10
+ },
+ {
+  "id": "profession_scroll_handyman",
+  "name": "Handyman Learning Scroll",
+  "type": "professionScroll",
+  "professionId": "handyman",
+  "icon": "profession_scroll_handyman",
+  "modelKey": "drop_item_bag",
+  "reqLevel": 1,
+  "buyPrice": null,
+  "sellPrice": 0,
+  "stackMax": 10
+ }
+]

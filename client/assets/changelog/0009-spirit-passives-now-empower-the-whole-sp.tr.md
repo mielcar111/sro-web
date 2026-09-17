@@ -1,0 +1,3 @@
+## Değiştirildi
+
+- **Earth, Cold, Fire ve Lightning Spirit büyünün tamamını güçlendiriyor** — Spirit yüzdesi artık büyünün kendi hasarı dahil tüm gücünü çarpıyor; orijinal oyun tam olarak böyle hesaplıyor. Önceki güncellemede bonus yalnızca büyüsel saldırı gücüne uygulanıyordu ve güçlendirilen her büyü bir adım eksik kalıyordu. Ground Charge, Earth Shock, Ground Rave, Earth Quake, Ice Bolt, Snow Wind, Frozen Spear, Blizzard, Fire Bolt, Fire Blow, Meteor, Salamander Blow, Lightning Bolt, Charged Wind, Chain Lightning ve Charged Squall yeniden gözle görülür şekilde daha sert vuruyor — yüksek Spirit kademelerinde yaklaşık çeyrek daha fazla.

@@ -1,0 +1,234 @@
+{
+  "jangan_province": {
+    "id": "jangan_province",
+    "name": "Jangan",
+    "kind": "field",
+    "bounds": [
+      5760,
+      11520,
+      -864,
+      3168
+    ],
+    "bin": true,
+    "slopeLimitUpPerU": 1000,
+    "slopeLimitDownPerU": 1000,
+    "boundsU": {
+      "minX": 5760,
+      "maxX": 11520,
+      "minZ": -864,
+      "maxZ": 3168
+    },
+    "playerSpawn": {
+      "x": 9649.35,
+      "z": 1645.35
+    },
+    "respawnPoint": {
+      "x": 9649.35,
+      "z": 1645.35
+    }
+  },
+  "donwhang_province": {
+    "id": "donwhang_province",
+    "name": "Donwhang",
+    "kind": "field",
+    "bounds": [
+      2016,
+      7776,
+      -1152,
+      4320
+    ],
+    "bin": true,
+    "slopeLimitUpPerU": 1000,
+    "slopeLimitDownPerU": 1000,
+    "boundsU": {
+      "minX": 2016,
+      "maxX": 7776,
+      "minZ": -1152,
+      "maxZ": 4320
+    },
+    "playerSpawn": {
+      "x": 5327.55,
+      "z": 3106.2,
+      "y": -12
+    },
+    "respawnPoint": {
+      "x": 5327.55,
+      "z": 3106.2,
+      "y": -12
+    }
+  },
+  "europe_province": {
+    "id": "europe_province",
+    "name": "Constantinople",
+    "kind": "field",
+    "bounds": [
+      -19296,
+      -15264,
+      864,
+      5472
+    ],
+    "bin": true,
+    "slopeLimitUpPerU": 1000,
+    "slopeLimitDownPerU": 1000,
+    "boundsU": {
+      "minX": -19296,
+      "maxX": -15264,
+      "minZ": 864,
+      "maxZ": 5472
+    },
+    "slopeOverrides": [
+      {
+        "x0": -18790,
+        "z0": 1520,
+        "x1": -18270,
+        "z1": 1930,
+        "upPerU": 1.75,
+        "downPerU": 1.75
+      },
+      {
+        "x0": -16680,
+        "z0": 3280,
+        "x1": -15360,
+        "z1": 4990,
+        "upPerU": 1.75,
+        "downPerU": 1.75
+      }
+    ],
+    "playerSpawn": {
+      "x": -15985.5,
+      "z": 3904.5,
+      "y": 12.6
+    },
+    "respawnPoint": {
+      "x": -15985.5,
+      "z": 3904.5,
+      "y": 12.6
+    }
+  },
+  "hotan_province": {
+    "id": "hotan_province",
+    "name": "Hotan",
+    "kind": "field",
+    "bounds": [
+      -4320,
+      2304,
+      -2304,
+      4032
+    ],
+    "bin": true,
+    "slopeLimitUpPerU": 1000,
+    "slopeLimitDownPerU": 1000,
+    "boundsU": {
+      "minX": -4320,
+      "maxX": 2304,
+      "minZ": -2304,
+      "maxZ": 4032
+    },
+    "slopeOverrides": [
+      {
+        "x0": -140,
+        "z0": -390,
+        "x1": 640,
+        "z1": 470,
+        "upPerU": 1.75,
+        "downPerU": 1.75
+      }
+    ],
+    "playerSpawn": {
+      "x": 170.7,
+      "z": 22.95,
+      "y": 37.5
+    },
+    "respawnPoint": {
+      "x": 170.7,
+      "z": 22.95,
+      "y": 37.5
+    }
+  },
+  "samarkand_province": {
+    "id": "samarkand_province",
+    "name": "Samarkand",
+    "kind": "field",
+    "bounds": [
+      -13536,
+      -4032,
+      1152,
+      4896
+    ],
+    "bin": true,
+    "slopeLimitUpPerU": 1000,
+    "slopeLimitDownPerU": 1000,
+    "boundsU": {
+      "minX": -13536,
+      "maxX": -4032,
+      "minZ": 1152,
+      "maxZ": 4896
+    },
+    "playerSpawn": {
+      "x": -7735.5,
+      "z": 4245.15,
+      "y": 27
+    },
+    "respawnPoint": {
+      "x": -7735.5,
+      "z": 4245.15,
+      "y": 27
+    }
+  },
+  "jangan_world_deprecated": {
+    "id": "jangan_world_deprecated",
+    "name": "Jangan",
+    "kind": "field",
+    "bounds": [
+      -2736,
+      2736,
+      -1728,
+      1728
+    ],
+    "bin": true,
+    "slopeLimitUpPerU": 1000,
+    "slopeLimitDownPerU": 1000,
+    "boundsU": {
+      "minX": -2736,
+      "maxX": 2736,
+      "minZ": -1728,
+      "maxZ": 1728
+    },
+    "playerSpawn": {
+      "x": 780,
+      "z": 208
+    },
+    "respawnPoint": {
+      "x": 780,
+      "z": 208
+    }
+  },
+  "donwhang_deprecated": {
+    "id": "donwhang_deprecated",
+    "name": "Donwhang",
+    "kind": "field",
+    "bounds": [
+      -2016,
+      2016,
+      -1584,
+      1584
+    ],
+    "bin": true,
+    "slopeLimitUpPerU": 1000,
+    "slopeLimitDownPerU": 1000,
+    "boundsU": {
+      "minX": -2016,
+      "maxX": 2016,
+      "minZ": -1584,
+      "maxZ": 1584
+    },
+    "playerSpawn": {
+      "x": -406,
+      "z": 320
+    },
+    "respawnPoint": {
+      "x": -406,
+      "z": 320
+    }
+  }
+}

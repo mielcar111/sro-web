@@ -1,0 +1,200 @@
+{
+ "$comment": "YASAYAN DUNYA - NPC yasam dongusu ayarlari (sistem_npc-yasam.js). Bu dosya referans oyunun orijinal veri kumesinde YOKTUR; eklentimizdir. Her sayinin kaynagi $kaynak alanlarinda yazilidir. KAYNAK YOK yazan degerler olculemedi - istemci paketinde, game-config'de, canli yakalamada ve vSRO referans tablolarinda karsiligi bulunamadi (bkz. gezinme.js basligindaki ayni durus).",
+
+ "acik": true,
+ "$acik": "Sistem acik/kapali. GM panelinden gecici olarak ezilebilir: GCFG.npcYasamAcik sayisi tanimliysa (0 = kapali, 1 = acik) O kazanir, yoksa buradaki deger gecerlidir.",
+ "adminAnahtari": "npcYasamAcik",
+
+ "tikMs": null,
+ "$tikMs": "null = 1000 / game-config.tickHz. Olculen: tickHz 10 -> 100 ms (server/config.json tickMs 100, '$tickNot: gameConfig.tickHz = 10 -> 100 ms'). Dunya tikiyle ayni ritim, canavar gezinmesiyle ayni puruzsuzluk.",
+
+ "ilgiMesafesiU": 120,
+ "birakmaMesafesiU": 150,
+ "$ilgi": "world.js GORUS_MESAFESI = 120 / GORUS_BIRAKMA = 150 (satir 23-24). Bu mesafenin disindaki NPC hic tiklenmez: bos bolgede sifir CPU, sifir bayt.",
+
+ "gezinme": {
+  "acik": true,
+
+  "hizU": 2.25,
+  "$hizU": "NPC HIZ VERISI YOKTUR: canli vSRO _RefObjCommon'da NPC (TypeID2=2,TypeID3=2) 313 kaydin HEPSINDE Speed1=0 ve Speed2=0; istemci de NPC gorunumlerini runSpeedU:0 ile kaydediyor. Olculebilir en yakin referans data/mobs.json walkSpeedU dagilimidir: 152 turde medyan 2.7, TEPE DEGER (mode) 2.25 (27 tur). Tepe deger secildi.",
+
+  "yaricapU": 7.5,
+  "$yaricapU": "SERT TAVANDAN TURETILDI, uydurma degil: data/npcshops.json'daki 38 islevli NPC'nin interactRangeU'sunun EN KUCUGU 15 birim. Bir NPC evinden en fazla 15 birim uzaklasabilse bile menzil kapisi kirilmaz; yarisi (7.5) alindi ki oyuncunun NPC'ye yaklasma payi da 7.5 birim kalsin. (Beyaz listede zaten islevli NPC yok - bu kemer+askidir.)",
+
+  "bulusmaYaricapU": 10,
+  "$bulusmaYaricapU": "sohbet.eslesmeMesafesiU (20) / 2 = 10. Iki komsu NPC tam ortada bulusur; en uzak izinli cift 20 birim oldugundan her biri evinden en fazla 10 birim ayrilir. 15'lik sert tavanin ALTINDA kalir.",
+
+  "evdenMaxU": 15,
+  "$evdenMaxU": "SERT TAVAN: npcshops.json min(interactRangeU) = 15. Hicbir NPC, hicbir davranista evinden bu kadar cok uzaklasamaz; kod bunu her bacakta kirpar.",
+
+  "adimMinU": 2,
+  "yenidenDeneMs": 3000,
+  "deneme": 4,
+  "$gezinmeJs": "adimMinU / yenidenDeneMs / deneme: gezinme.js ADIM_MIN_U=2, YENIDEN_DENE_MS=3000, DENEME=4 ile BIREBIR ayni (uretimde calisan canavar gezinmesi).",
+
+  "bacakMinMs": 3000,
+  "bacakMaxMs": 9000,
+  "bekleMinMs": 2000,
+  "bekleMaxMs": 7000,
+  "$ritim": "KAYNAK YOK. gezinme.js'teki BACAK_MIN_MS/BACAK_MAX_MS/BEKLE_MIN_MS/BEKLE_MAX_MS degerlerinin AYNISI kullanildi ki canavar ile NPC ayni ritimde yurusun (kendi basina uydurulmus ikinci bir ritim olmasin).",
+
+  "gezintiBacakMin": 1,
+  "gezintiBacakMax": 3,
+  "evdeDinlenMinMs": 8000,
+  "evdeDinlenMaxMs": 25000,
+  "$gezinti": "KAYNAK YOK. Bir gezinti 1-3 bacaktan olusur, sonra NPC MUTLAKA evine doner ve burada yazan sure kadar dinlenir. 'Sonra yerlerine gecsinler tekrar' istegi bu iki alanla saglanir.",
+
+  "yonDuzeltmeU": 0.05,
+  "$yonDuzeltmeU": "Eve varinca AUTHORED rotY'yi geri yuklemek icin gonderilen minik itis. Istemci rotY'yi yalniz hareket vektorunden hesapliyor (Vgt: rotY = atan2(tx-fx, tz-fz)); entity.stop ve entity.teleport rotY'ye DOKUNMAZ. 0.05 birim, karakter boyunun (~2.6 birim) %2'si - gozle gorulmez ama ilk karede yonu duzeltir ve ayni karede path biter."
+ },
+
+ "sohbet": {
+  "acik": true,
+  "eslesmeMesafesiU": 20,
+  "$eslesmeMesafesiU": "OLCULDU (world.json dekoratif NPC ciftleri): en yakin komsu mesafeleri 3.6 / 13.3 / 14.6 / 14.9 / 15.2 / 15.4 / 16.1 birimde kumeleniyor, SONRAKI deger 36.8 birim. 20 birim tam bu bosluga dusuyor - yani yalnizca gercekten yan yana duran (kapi nobetcisi ciftleri, kisaeng3/4) NPC'ler bulusur, kasaba capinda yolculuk olmaz.",
+  "sureMinMs": 6000,
+  "sureMaxMs": 15000,
+  "olasilik": 0.35,
+  "$sohbet": "KAYNAK YOK. Iki NPC ortada bulusup BIRBIRINE DONEREK bu sure kadar durur, sonra ikisi de evine doner. olasilik = bir gezintinin bulusma olma sansi."
+ },
+
+ "koruma": {
+  "islevliNpcHicHareketEtmez": true,
+  "$islevli": "DEMIR KURAL. Sunucunun NPC menzil kapisi NPC'nin DONMUS ev konumunu kullaniyor (sistem_dukkan.js KONUMLAR/dist kontrolu, sistem_banka-depo, sistem_borsa, sistem_meslek, sistem_donus-isinlanma), istemci ise CANLI konuma yuruyor. Gezen bir dukkanci NPC'nin yaninda duran oyuncu ERR_RANGE alirdi. Bu yuzden yalniz BEYAZ LISTEDEKI dekoratif NPC'ler hareket eder ve modul acilista listeyi npcshops.json + professions.json + teleporters + tum sistem_*.js kaynaklariyla KESISTIRIP ihlalleri atar.",
+
+  "oyuncuYakinlikModu": "yalnizIslevli",
+  "$oyuncuYakinlikModu": "'yalnizIslevli' (varsayilan): oyuncu etkilesim menzilindeyken YALNIZ islevli NPC dondurulur - dekoratif NPC'ler oyuncunun gozu onunde gezmeye devam eder (yoksa ozellik hic gorunmezdi). 'hepsi': oyuncu menzile girer girmez HER NPC evine doner ve orada bekler.",
+
+  "oyuncuYakinlikU": null,
+  "$oyuncuYakinlikU": "null = game-config.npcInteractRangeU (bugun 25) CANLI okunur.",
+
+  "diyalogKilidiMs": 30000,
+  "$diyalogKilidiMs": "KAYNAK YOK. Bir oyuncunun mesaji bir NPC'yi isaret ettigi anda (d.npcId ya da NPC bandindaki d.id) o NPC bu sure boyunca EVINE DONER ve yerinden kipirdamaz. 'NPC ile diyalog acikken NPC yerinde kalir' istegi budur."
+ },
+
+ "senlik": {
+  "acik": true,
+  "$senlik": "HALAY. Gemideki 143 NPC modelinde 0 dans/emote klibi var ve NPC gorunumune (W3) ad ile klip calduran hicbir s2c karesi yok - GERCEK NPC'lerle halay istemci yamasi olmadan IMKANSIZ. Cozum: kasaba meydanina KARAKTER GORUNUMLU (preset) ambient koyluler dogurmak. Istemci gorunum fabrikasi kind'a DEGIL modelKey'e bakiyor ('me' @19663400: nkt(t.modelKey)) ve her karakter preseti J3(preset.id, qOt(preset.id)) ile kayitli (@19462409) - yani modelKey'i preset id'si olan bir 'npc' varligi TAM karakter gorunumu alir: walk/run/idle klipleri VE playSkillFinisher.",
+
+  "kisiSayisi": 6,
+  "$kisiSayisi": "KAYNAK YOK - maliyet siniri. Her ambient koylu tam iskeletli karakter gorunumudur (istemcide kabaca bir OYUNCU kadar: ~40 animationGroup + skeleton + preset base.glb isitma, @19660421 charWarm dongusu kind'a bakmiyor). Kasaba basi 6 ile sinirli tutuldu.",
+
+  "halkaYaricapU": 6,
+  "$halkaYaricapU": "OLCULDU: 6 birimlik halka playerSpawn merkezinde jangan %100, europe %100, samarkand %100, donwhang %90.8, hotan %78.9 engelsiz (nav.bin). 12 birimde donwhang %4.5 / hotan %3.0'a dusuyordu.",
+
+  "dagilmaYaricapU": 12,
+  "$dagilmaYaricapU": "Dagilma evresinde koylulerin meydan merkezinden en fazla uzakligi. Her hedef nav.bin'e sorulur; kapali yon sessizce atlanir.",
+
+  "toplanmaSuresiMs": 12000,
+  "halaySuresiMs": 30000,
+  "dagilmaSuresiMs": 20000,
+  "$evreler": "KAYNAK YOK. Dongu: TOPLAN (halkaya yuru) -> HALAY (dans) -> DAGIL (meydan cevresinde gezin) -> TOPLAN ...",
+
+  "dansKlipMs": 3000,
+  "$dansKlipMs": "OLCULDU - uydurma degil: skill-fx.json bard_dancea_* kayitlarinin hepsinde anim.groups[0] = { name:'shot', durationMs:3000, loop:false }. Dans bu araliklarla tekrar atesleniyor ki halay kesintisiz gorunsun.",
+
+  "danslar": [
+   "bard_dancea_warrior_a_1",
+   "bard_dancea_caster_a_1",
+   "bard_dancea_cleric_a_1",
+   "bard_dancea_rog_a_1",
+   "bard_dancea_warrior_b_1",
+   "bard_dancea_caster_b_1"
+  ],
+  "$danslar": "6 farkli dans - halkadaki her koylu baska bir figur oynar. Hepsi hem sunucunun data/skills.json'inda hem istemcinin kendi katalogunda (skills/bard.json) MEVCUT; groupId'leri skill-fx.json'da 3000 ms'lik 'shot' klibine ve skills/bard_dancea_*_{m,w}.glb dosyalarina baglaniyor (12 dosyanin hepsi client/assets/skills altinda VAR). Sunucu bunlari sistem_beceri.js'ten GECIRMEZ - kareyi dogrudan uretir; aksi halde reqWeapons: eu_harp dogrulamasi (o esya items.json'da yok) dansi reddederdi.",
+
+  "kusamSetleri": {
+   "chinese": {
+    "shoulder": "clothes01_shoulder",
+    "chest": "clothes01_chest",
+    "pants": "clothes01_pants",
+    "gloves": "clothes01_gloves",
+    "boots": "clothes01_boots"
+   },
+   "european": {
+    "shoulder": "eu_clothes01_shoulder",
+    "chest": "eu_clothes01_chest",
+    "pants": "eu_clothes01_pants",
+    "gloves": "eu_clothes01_gloves",
+    "boots": "eu_clothes01_boots"
+   }
+  },
+  "$kusam": "appearance.equip GONDERILMEZSE koylu CIPLAK GOVDE cikar (istemci: t.appearance && n.applyAppearance(t.appearance.equip)). 10 esya kimliginin hepsi data/items.json'da dogrulandi; clothes01_* race 'chinese', eu_clothes01_* race 'european'.",
+
+  "presetAdlari": {
+   "chinaman_bogy": "Bogy",
+   "chinaman_fighter": "Fighter",
+   "chinaman_warrior": "Warrior",
+   "chinaman_adventurer": "Adventurer",
+   "chinawoman_fighter": "Fighter",
+   "chinawoman_warrior": "Warrior",
+   "chinawoman_adventurer": "Adventurer",
+   "chinawoman_kisaeng": "Kisaeng",
+   "europeman_knight": "Knight",
+   "europeman_warrior": "Warrior",
+   "europeman_gladiator": "Gladiator",
+   "europeman_adventurer": "Adventurer",
+   "europewoman_knight": "Knight",
+   "europewoman_amazoness": "Amazoness",
+   "europewoman_gladiator": "Gladiator",
+   "europewoman_adventurer": "Adventurer"
+  },
+  "$presetAdlari": "Isim etiketleri UYDURULMADI: paket_veri_d640b73/characters.json'daki 16 karakter presetinin kendi `label` alanlari.",
+
+  "bolgeler": {
+   "jangan_province": {
+    "acik": true,
+    "kusam": "chinese",
+    "presetler": ["chinaman_bogy", "chinawoman_kisaeng", "chinaman_warrior", "chinawoman_adventurer", "chinaman_adventurer", "chinawoman_fighter"]
+   },
+   "donwhang_province": {
+    "acik": true,
+    "kusam": "chinese",
+    "presetler": ["chinaman_fighter", "chinawoman_warrior", "chinaman_warrior", "chinawoman_kisaeng", "chinaman_adventurer", "chinawoman_adventurer"]
+   },
+   "hotan_province": {
+    "acik": true,
+    "kusam": "chinese",
+    "presetler": ["chinaman_warrior", "chinawoman_adventurer", "chinaman_bogy", "chinawoman_fighter", "chinaman_fighter", "chinawoman_warrior"]
+   },
+   "europe_province": {
+    "acik": true,
+    "kusam": "european",
+    "presetler": ["europeman_knight", "europewoman_amazoness", "europeman_warrior", "europewoman_knight", "europeman_adventurer", "europewoman_adventurer"]
+   },
+   "samarkand_province": {
+    "acik": true,
+    "kusam": "european",
+    "presetler": ["europeman_gladiator", "europewoman_gladiator", "europeman_warrior", "europewoman_amazoness", "europeman_adventurer", "europewoman_knight"]
+   }
+  },
+  "$bolgeler": "Preset secimi (irk) bolgenin kendi NPC'lerinin irkiyla eslesiyor: jangan/donwhang/hotan Cin, europe/samarkand Avrupa kusami. Meydan merkezi BURADA YAZILI DEGIL - modul acilista world.json'daki playerSpawn / respawnPoint / NPC agirlik merkezi adaylarini nav.bin'e karsi puanlar ve en engelsizini secer (olculen puanlar: jangan playerSpawn %100, europe %100, samarkand %100, donwhang %90.8, hotan playerSpawn %78.9 - hotan'da npcCentroid %100 ile kazaniyor)."
+ },
+
+ "beyazListe": {
+  "$kaynak": "OLCULDU: world.json zones[].npcs kayitlarindan modelKey'i /etc/i kalibina uyanlar = TAM 30 NPC. Bu 30'un hicbiri data/npcshops.json shops (38 islevli NPC), data/professions.json, world.json teleporters ve hicbir sistem_*.js kaynagi tarafindan REFERANS EDILMIYOR - yani hicbir dukkan/depo/egitmen/isinlanma menzil kapisina girmiyorlar. Istemci tarafi da ayni: paket_veri npcs.json katalogundaki 30 etkilesimli NPC'nin HICBIRI 'etc' modelli degil, dolayisiyla bunlara tiklandiginda k_t() null donuyor (etkilesim yok). europe_province ve samarkand_province'te 'etc' modelli NPC YOK - o bolgelerde gezinme olmaz, yalnizca senlik calisir.",
+  "jangan_province": [
+   "npc_ch_islam", "npc_ch_europe", "npc_ch_india",
+   "npc_ch_soldier_em2", "npc_ch_soldier_ea1", "npc_ch_soldier_we2", "npc_ch_soldier_so2",
+   "npc_ch_beggarboy", "npc_ch_bigman",
+   "npc_ch_kisaeng1", "npc_ch_kisaeng2", "npc_ch_kisaeng3",
+   "npc_ch_kisaeng4", "npc_ch_kisaeng5", "npc_ch_kisaeng6",
+   "npc_ch_moonshadow"
+  ],
+  "donwhang_province": [
+   "npc_wc_soldier_ea1", "npc_wc_soldier_ea2",
+   "npc_wc_soldier_we1", "npc_wc_soldier_we2",
+   "npc_wc_soldier_so", "npc_wc_priest3"
+  ],
+  "hotan_province": [
+   "npc_kt_soldier_em1", "npc_kt_soldier_em2",
+   "npc_kt_soldier_ea1", "npc_kt_soldier_ea2",
+   "npc_kt_soldier_so1", "npc_kt_soldier_so2",
+   "npc_kt_soldier_we1", "npc_kt_soldier_we2"
+  ],
+  "europe_province": [],
+  "samarkand_province": []
+ },
+
+ "$gorselUyari": "KAYAN NPC: olculdu - 143 NPC modelinin 142'sinde walk/run animasyonu YOK (yalniz basic/time/stand varyantlari) ve istemci NPC gorunumlerini runSpeedU:0 ile kaydediyor. Gezen dekoratif NPC bu yuzden idle klibiyle KAYARAK ilerler. Bu bir kod hatasi degil VARLIK sinirlamasidir; duzeltmesi istemci yamasi ister. Ambient senlik koyluleri (karakter presetleri) GERCEK walk klibine sahiptir - onlar kaymaz."
+}

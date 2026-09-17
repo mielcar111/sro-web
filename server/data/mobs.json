@@ -1,0 +1,8959 @@
+{
+  "mobs": [
+    {
+      "id": "mob_mangyang",
+      "name": "Mangyang",
+      "level": 1,
+      "modelKey": "mob_mangyang",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 54,
+      "physAtk": [
+        17,
+        19
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 7,
+      "magDef": 10,
+      "attackRangeU": 2.5,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 1.2,
+      "runSpeedU": 3.3,
+      "aggroRangeU": 0,
+      "leashRangeU": 30,
+      "xp": 24,
+      "dropTableId": "dt_mangyang",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 1,
+          "mar": 1,
+          "er": 27,
+          "br": 0,
+          "hr": 27,
+          "chr": 2
+        },
+        "resists": {},
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 2,
+        "championTacticsId": 1,
+        "skills": [
+          "msk_160",
+          "msk_161"
+        ]
+      }
+    },
+    {
+      "id": "mob_bigeyeghost",
+      "name": "Big-eyed Ghost",
+      "level": 3,
+      "modelKey": "mob_bigeyeghost",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 85,
+      "physAtk": [
+        25,
+        29
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 9,
+      "magDef": 15,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.1,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 32,
+      "xp": 71,
+      "dropTableId": "dt_bigeyeghost",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 3,
+          "mar": 3,
+          "er": 31,
+          "br": 0,
+          "hr": 31,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 6,
+          "ResistFrostbite": 6,
+          "ResistBurn": 6,
+          "ResistEShock": 6,
+          "ResistPoison": 6,
+          "ResistZombie": 6
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 5,
+        "championTacticsId": 3,
+        "skills": [
+          "msk_163"
+        ]
+      }
+    },
+    {
+      "id": "mob_gyo",
+      "name": "Weasel",
+      "level": 5,
+      "modelKey": "mob_gyo",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 119,
+      "physAtk": [
+        35,
+        40
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 12,
+      "magDef": 19,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 32,
+      "xp": 118,
+      "dropTableId": "dt_gyo",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 5,
+          "mar": 5,
+          "er": 35,
+          "br": 0,
+          "hr": 35,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 10,
+          "ResistFrostbite": 10,
+          "ResistBurn": 10,
+          "ResistEShock": 10,
+          "ResistPoison": 10,
+          "ResistZombie": 10
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 8,
+        "championTacticsId": 6,
+        "skills": [
+          "msk_165"
+        ]
+      }
+    },
+    {
+      "id": "mob_waterghost",
+      "name": "Water Ghost",
+      "level": 7,
+      "modelKey": "mob_waterghost",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 156,
+      "physAtk": [
+        47,
+        54
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 15,
+      "magDef": 29,
+      "attackRangeU": 3.4,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 35,
+      "xp": 165,
+      "dropTableId": "dt_waterghost",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 7,
+          "mar": 7,
+          "er": 39,
+          "br": 0,
+          "hr": 39,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 14,
+          "ResistFrostbite": 14,
+          "ResistBurn": 14,
+          "ResistEShock": 14,
+          "ResistPoison": 14,
+          "ResistZombie": 14
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 11,
+        "championTacticsId": 9,
+        "skills": [
+          "msk_168",
+          "msk_169"
+        ]
+      }
+    },
+    {
+      "id": "mob_stoneghost",
+      "name": "Stone Ghost",
+      "level": 9,
+      "modelKey": "mob_stoneghost",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 194,
+      "physAtk": [
+        60,
+        70
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 22,
+      "magDef": 35,
+      "attackRangeU": 2.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.1,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 10,
+      "leashRangeU": 38,
+      "xp": 212,
+      "dropTableId": "dt_stoneghost",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 9,
+          "mar": 9,
+          "er": 43,
+          "br": 0,
+          "hr": 43,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 18,
+          "ResistFrostbite": 18,
+          "ResistBurn": 18,
+          "ResistEShock": 18,
+          "ResistPoison": 18,
+          "ResistZombie": 18
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 12,
+        "skills": [
+          "msk_172"
+        ]
+      }
+    },
+    {
+      "id": "mob_tombstone",
+      "name": "Tomb Stone",
+      "level": 9,
+      "modelKey": "mob_tombstone",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 194,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        84,
+        94
+      ],
+      "physDef": 22,
+      "magDef": 29,
+      "attackRangeU": 16,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 10,
+      "leashRangeU": 35,
+      "xp": 212,
+      "dropTableId": "dt_tombstone",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 9,
+          "mar": 9,
+          "er": 43,
+          "br": 0,
+          "hr": 43,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 18,
+          "ResistFrostbite": 18,
+          "ResistBurn": 18,
+          "ResistEShock": 18,
+          "ResistPoison": 18,
+          "ResistZombie": 18
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 27,
+        "skills": [
+          "msk_173"
+        ]
+      }
+    },
+    {
+      "id": "mob_yeoha",
+      "name": "Yeoha",
+      "level": 10,
+      "modelKey": "mob_yeoha",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 249,
+      "physAtk": [
+        67,
+        79
+      ],
+      "magAtk": [
+        94,
+        105
+      ],
+      "physDef": 22,
+      "magDef": 41,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.35,
+      "runSpeedU": 3,
+      "aggroRangeU": 10,
+      "leashRangeU": 36,
+      "xp": 235,
+      "dropTableId": "dt_yeoha",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 10,
+          "mar": 10,
+          "er": 45,
+          "br": 0,
+          "hr": 45,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 20,
+          "ResistFrostbite": 20,
+          "ResistBurn": 20,
+          "ResistEShock": 20,
+          "ResistPoison": 20,
+          "ResistZombie": 20
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 15,
+        "skills": [
+          "msk_176",
+          "msk_177"
+        ]
+      }
+    },
+    {
+      "id": "mob_banditarcher",
+      "name": "Bandit Archer",
+      "level": 12,
+      "modelKey": "mob_banditarcher",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 324,
+      "physAtk": [
+        77,
+        92
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 29,
+      "magDef": 46,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 38,
+      "xp": 282,
+      "dropTableId": "dt_banditarcher",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 12,
+          "mar": 12,
+          "er": 49,
+          "br": 0,
+          "hr": 49,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 24,
+          "ResistFrostbite": 24,
+          "ResistBurn": 24,
+          "ResistEShock": 24,
+          "ResistPoison": 24,
+          "ResistZombie": 24
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 18,
+        "skills": [
+          "msk_180"
+        ]
+      }
+    },
+    {
+      "id": "mob_tiger",
+      "name": "Tiger",
+      "level": 14,
+      "modelKey": "mob_tiger",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 509,
+      "physAtk": [
+        87,
+        104
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 35,
+      "magDef": 56,
+      "attackRangeU": 2.3,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.4,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 12,
+      "leashRangeU": 38,
+      "xp": 329,
+      "dropTableId": "dt_tiger",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 14,
+          "mar": 14,
+          "er": 53,
+          "br": 0,
+          "hr": 53,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 28,
+          "ResistFrostbite": 28,
+          "ResistBurn": 28,
+          "ResistEShock": 28,
+          "ResistPoison": 28,
+          "ResistZombie": 28
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 21,
+        "skills": [
+          "msk_182",
+          "msk_183"
+        ]
+      }
+    },
+    {
+      "id": "mob_bandit",
+      "name": "Bandit",
+      "level": 16,
+      "modelKey": "mob_bandit",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 755,
+      "physAtk": [
+        102,
+        123
+      ],
+      "magAtk": [
+        139,
+        160
+      ],
+      "physDef": 51,
+      "magDef": 70,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 12,
+      "leashRangeU": 40,
+      "xp": 376,
+      "dropTableId": "dt_bandit",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 16,
+          "mar": 16,
+          "er": 57,
+          "br": 0,
+          "hr": 57,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 32,
+          "ResistFrostbite": 32,
+          "ResistBurn": 32,
+          "ResistEShock": 32,
+          "ResistPoison": 32,
+          "ResistZombie": 32
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 24,
+        "skills": [
+          "msk_186",
+          "msk_187"
+        ]
+      }
+    },
+    {
+      "id": "mob_movoi_clon",
+      "name": "Movia",
+      "level": 1,
+      "modelKey": "mob_movoi_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 54,
+      "physAtk": [
+        17,
+        19
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 9,
+      "magDef": 8,
+      "attackRangeU": 2.7,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 6.75,
+      "aggroRangeU": 0,
+      "leashRangeU": 31,
+      "xp": 24,
+      "dropTableId": "dt_movoi_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 1,
+          "mar": 1,
+          "er": 27,
+          "br": 0,
+          "hr": 27,
+          "chr": 2
+        },
+        "resists": {},
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 188,
+        "championTacticsId": 187,
+        "skills": [
+          "msk_3598",
+          "msk_3599"
+        ]
+      }
+    },
+    {
+      "id": "mob_bigeyeghost_clon",
+      "name": "Small-eyed Ghost",
+      "level": 2,
+      "modelKey": "mob_bigeyeghost_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 55,
+      "physAtk": [
+        21,
+        23
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 9,
+      "magDef": 14,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 2.1,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 31,
+      "xp": 47,
+      "dropTableId": "dt_bigeyeghost_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 2,
+          "mar": 2,
+          "er": 29,
+          "br": 0,
+          "hr": 29,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 4,
+          "ResistFrostbite": 4,
+          "ResistBurn": 4,
+          "ResistEShock": 4,
+          "ResistPoison": 4,
+          "ResistZombie": 4
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 4,
+        "skills": [
+          "msk_162"
+        ]
+      }
+    },
+    {
+      "id": "mob_movoi",
+      "name": "Movoi",
+      "level": 2,
+      "modelKey": "mob_movoi",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 55,
+      "physAtk": [
+        21,
+        23
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 9,
+      "magDef": 10,
+      "attackRangeU": 2.7,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 6.75,
+      "aggroRangeU": 0,
+      "leashRangeU": 31,
+      "xp": 47,
+      "dropTableId": "dt_movoi",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 2,
+          "mar": 2,
+          "er": 29,
+          "br": 0,
+          "hr": 29,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 4,
+          "ResistFrostbite": 4,
+          "ResistBurn": 4,
+          "ResistEShock": 4,
+          "ResistPoison": 4,
+          "ResistZombie": 4
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 190,
+        "championTacticsId": 189,
+        "skills": [
+          "msk_3600",
+          "msk_3601"
+        ]
+      }
+    },
+    {
+      "id": "mob_edenp_clon",
+      "name": "Graesp",
+      "level": 3,
+      "modelKey": "mob_edenp_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 85,
+      "physAtk": [
+        25,
+        29
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 9,
+      "magDef": 18,
+      "attackRangeU": 2.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 6,
+      "aggroRangeU": 0,
+      "leashRangeU": 32,
+      "xp": 71,
+      "dropTableId": "dt_edenp_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 3,
+          "mar": 3,
+          "er": 31,
+          "br": 0,
+          "hr": 31,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 6,
+          "ResistFrostbite": 6,
+          "ResistBurn": 6,
+          "ResistEShock": 6,
+          "ResistPoison": 6,
+          "ResistZombie": 6
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 192,
+        "championTacticsId": 191,
+        "skills": [
+          "msk_3602",
+          "msk_3603"
+        ]
+      }
+    },
+    {
+      "id": "mob_edenp",
+      "name": "Edenp",
+      "level": 4,
+      "modelKey": "mob_edenp",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 83,
+      "physAtk": [
+        30,
+        34
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 9,
+      "magDef": 19,
+      "attackRangeU": 2.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 6,
+      "aggroRangeU": 0,
+      "leashRangeU": 32,
+      "xp": 94,
+      "dropTableId": "dt_edenp",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 4,
+          "mar": 4,
+          "er": 33,
+          "br": 0,
+          "hr": 33,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 8,
+          "ResistFrostbite": 8,
+          "ResistBurn": 8,
+          "ResistEShock": 8,
+          "ResistPoison": 8,
+          "ResistZombie": 8
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 194,
+        "championTacticsId": 193,
+        "skills": [
+          "msk_3604",
+          "msk_3605"
+        ]
+      }
+    },
+    {
+      "id": "mob_gyo_clon",
+      "name": "Old Weasel",
+      "level": 4,
+      "modelKey": "mob_gyo_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 83,
+      "physAtk": [
+        30,
+        34
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 12,
+      "magDef": 18,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 32,
+      "xp": 94,
+      "dropTableId": "dt_gyo_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 4,
+          "mar": 4,
+          "er": 33,
+          "br": 0,
+          "hr": 33,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 8,
+          "ResistFrostbite": 8,
+          "ResistBurn": 8,
+          "ResistEShock": 8,
+          "ResistPoison": 8,
+          "ResistZombie": 8
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 7,
+        "skills": [
+          "msk_164"
+        ]
+      }
+    },
+    {
+      "id": "mob_baruswolf_clon",
+      "name": "Baroi Wolf",
+      "level": 5,
+      "modelKey": "mob_wolf_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 119,
+      "physAtk": [
+        35,
+        40
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 15,
+      "magDef": 18,
+      "attackRangeU": 5.2,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 1.65,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 33,
+      "xp": 118,
+      "dropTableId": "dt_baruswolf_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 5,
+          "mar": 5,
+          "er": 35,
+          "br": 0,
+          "hr": 35,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 10,
+          "ResistFrostbite": 10,
+          "ResistBurn": 10,
+          "ResistEShock": 10,
+          "ResistPoison": 10,
+          "ResistZombie": 10
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 196,
+        "championTacticsId": 195,
+        "skills": [
+          "msk_3606",
+          "msk_3607"
+        ]
+      }
+    },
+    {
+      "id": "mob_baruswolf",
+      "name": "Barus Wolf",
+      "level": 6,
+      "modelKey": "mob_wolf",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 114,
+      "physAtk": [
+        41,
+        47
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 15,
+      "magDef": 19,
+      "attackRangeU": 5.2,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 1.65,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 33,
+      "xp": 141,
+      "dropTableId": "dt_baruswolf",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 6,
+          "mar": 6,
+          "er": 37,
+          "br": 0,
+          "hr": 37,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 12,
+          "ResistFrostbite": 12,
+          "ResistBurn": 12,
+          "ResistEShock": 12,
+          "ResistPoison": 12,
+          "ResistZombie": 12
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 198,
+        "championTacticsId": 197,
+        "skills": [
+          "msk_3608",
+          "msk_3609"
+        ]
+      }
+    },
+    {
+      "id": "mob_waterghost_clon",
+      "name": "Water Ghost slave",
+      "level": 6,
+      "modelKey": "mob_waterghost_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 114,
+      "physAtk": [
+        41,
+        47
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 15,
+      "magDef": 19,
+      "attackRangeU": 3.4,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 33,
+      "xp": 141,
+      "dropTableId": "dt_waterghost_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 6,
+          "mar": 6,
+          "er": 37,
+          "br": 0,
+          "hr": 37,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 12,
+          "ResistFrostbite": 12,
+          "ResistBurn": 12,
+          "ResistEShock": 12,
+          "ResistPoison": 12,
+          "ResistZombie": 12
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 10,
+        "skills": [
+          "msk_166",
+          "msk_167"
+        ]
+      }
+    },
+    {
+      "id": "mob_baroi_clon",
+      "name": "Logos Baroi",
+      "level": 7,
+      "modelKey": "mob_baroi_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 158,
+      "physAtk": [
+        47,
+        54
+      ],
+      "magAtk": [
+        66,
+        73
+      ],
+      "physDef": 15,
+      "magDef": 29,
+      "attackRangeU": 23.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.55,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 34,
+      "xp": 165,
+      "dropTableId": "dt_baroi_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 7,
+          "mar": 7,
+          "er": 39,
+          "br": 0,
+          "hr": 39,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 14,
+          "ResistFrostbite": 14,
+          "ResistBurn": 14,
+          "ResistEShock": 14,
+          "ResistPoison": 14,
+          "ResistZombie": 14
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 200,
+        "championTacticsId": 199,
+        "skills": [
+          "msk_3610",
+          "msk_3611"
+        ]
+      }
+    },
+    {
+      "id": "mob_barpolle_clon",
+      "name": "Bartis",
+      "level": 8,
+      "modelKey": "mob_bartis_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 204,
+      "physAtk": [
+        53,
+        62
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 22,
+      "magDef": 24,
+      "attackRangeU": 3.9,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 4.05,
+      "aggroRangeU": 0,
+      "leashRangeU": 34,
+      "xp": 188,
+      "dropTableId": "dt_barpolle_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 8,
+          "mar": 8,
+          "er": 41,
+          "br": 0,
+          "hr": 41,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 16,
+          "ResistFrostbite": 16,
+          "ResistBurn": 16,
+          "ResistEShock": 16,
+          "ResistPoison": 16,
+          "ResistZombie": 16
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 202,
+        "championTacticsId": 201,
+        "skills": [
+          "msk_3612",
+          "msk_3613"
+        ]
+      }
+    },
+    {
+      "id": "mob_stoneghost_clon",
+      "name": "Broken Stone Ghost",
+      "level": 8,
+      "modelKey": "mob_stoneghost_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 204,
+      "physAtk": [
+        53,
+        62
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 22,
+      "magDef": 24,
+      "attackRangeU": 2.5,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.1,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 34,
+      "xp": 188,
+      "dropTableId": "dt_stoneghost_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 8,
+          "mar": 8,
+          "er": 41,
+          "br": 0,
+          "hr": 41,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 16,
+          "ResistFrostbite": 16,
+          "ResistBurn": 16,
+          "ResistEShock": 16,
+          "ResistPoison": 16,
+          "ResistZombie": 16
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 13,
+        "skills": [
+          "msk_170"
+        ]
+      }
+    },
+    {
+      "id": "mob_tombstone_clon",
+      "name": "Tomb Stone Ghost",
+      "level": 8,
+      "modelKey": "mob_tombstone_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 204,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        74,
+        83
+      ],
+      "physDef": 15,
+      "magDef": 35,
+      "attackRangeU": 16,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 34,
+      "xp": 188,
+      "dropTableId": "dt_tombstone_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 8,
+          "mar": 8,
+          "er": 41,
+          "br": 0,
+          "hr": 41,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 16,
+          "ResistFrostbite": 16,
+          "ResistBurn": 16,
+          "ResistEShock": 16,
+          "ResistPoison": 16,
+          "ResistZombie": 16
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 28,
+        "skills": [
+          "msk_171"
+        ]
+      }
+    },
+    {
+      "id": "mob_baroi",
+      "name": "Misos Baroi",
+      "level": 9,
+      "modelKey": "mob_baroi",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 192,
+      "physAtk": [
+        60,
+        70
+      ],
+      "magAtk": [
+        84,
+        94
+      ],
+      "physDef": 18,
+      "magDef": 34,
+      "attackRangeU": 23.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.55,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 35,
+      "xp": 212,
+      "dropTableId": "dt_baroi",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 9,
+          "mar": 9,
+          "er": 43,
+          "br": 0,
+          "hr": 43,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 18,
+          "ResistFrostbite": 18,
+          "ResistBurn": 18,
+          "ResistEShock": 18,
+          "ResistPoison": 18,
+          "ResistZombie": 18
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 204,
+        "championTacticsId": 203,
+        "skills": [
+          "msk_3614",
+          "msk_3615"
+        ]
+      }
+    },
+    {
+      "id": "mob_barpolle",
+      "name": "Barpolle",
+      "level": 10,
+      "modelKey": "mob_bartis",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 249,
+      "physAtk": [
+        67,
+        79
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 26,
+      "magDef": 35,
+      "attackRangeU": 3.9,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 4.05,
+      "aggroRangeU": 11,
+      "leashRangeU": 35,
+      "xp": 235,
+      "dropTableId": "dt_barpolle",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 10,
+          "mar": 10,
+          "er": 45,
+          "br": 0,
+          "hr": 45,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 20,
+          "ResistFrostbite": 20,
+          "ResistBurn": 20,
+          "ResistEShock": 20,
+          "ResistPoison": 20,
+          "ResistZombie": 20
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 205,
+        "skills": [
+          "msk_3616",
+          "msk_3617"
+        ]
+      }
+    },
+    {
+      "id": "mob_yeoha_clon",
+      "name": "Decayed Yeoha",
+      "level": 10,
+      "modelKey": "mob_yeoha_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 249,
+      "physAtk": [
+        67,
+        79
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 26,
+      "magDef": 35,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.35,
+      "runSpeedU": 3,
+      "aggroRangeU": 0,
+      "leashRangeU": 35,
+      "xp": 235,
+      "dropTableId": "dt_yeoha_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 10,
+          "mar": 10,
+          "er": 45,
+          "br": 0,
+          "hr": 45,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 20,
+          "ResistFrostbite": 20,
+          "ResistBurn": 20,
+          "ResistEShock": 20,
+          "ResistPoison": 20,
+          "ResistZombie": 20
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 16,
+        "skills": [
+          "msk_174",
+          "msk_175"
+        ]
+      }
+    },
+    {
+      "id": "mob_bandit_clon",
+      "name": "Bandit surbodinate",
+      "level": 11,
+      "modelKey": "mob_bandit_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 310,
+      "physAtk": [
+        71,
+        84
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 29,
+      "magDef": 34,
+      "attackRangeU": 2.7,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 36,
+      "xp": 259,
+      "dropTableId": "dt_bandit_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 11,
+          "mar": 11,
+          "er": 47,
+          "br": 0,
+          "hr": 47,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 22,
+          "ResistFrostbite": 22,
+          "ResistBurn": 22,
+          "ResistEShock": 22,
+          "ResistPoison": 22,
+          "ResistZombie": 22
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 25,
+        "skills": [
+          "msk_178",
+          "msk_179"
+        ]
+      }
+    },
+    {
+      "id": "mob_dowb_clon",
+      "name": "Dow Genetos",
+      "level": 11,
+      "modelKey": "mob_dowb_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 310,
+      "physAtk": [
+        71,
+        84
+      ],
+      "magAtk": [
+        97,
+        110
+      ],
+      "physDef": 29,
+      "magDef": 34,
+      "attackRangeU": 3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 36,
+      "xp": 259,
+      "dropTableId": "dt_dowb_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 11,
+          "mar": 11,
+          "er": 47,
+          "br": 0,
+          "hr": 47,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 22,
+          "ResistFrostbite": 22,
+          "ResistBurn": 22,
+          "ResistEShock": 22,
+          "ResistPoison": 22,
+          "ResistZombie": 22
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 208,
+        "championTacticsId": 207,
+        "skills": [
+          "msk_3618",
+          "msk_3619"
+        ]
+      }
+    },
+    {
+      "id": "mob_dowb",
+      "name": "Dow Genema",
+      "level": 12,
+      "modelKey": "mob_dowb",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 359,
+      "physAtk": [
+        77,
+        92
+      ],
+      "magAtk": [
+        106,
+        121
+      ],
+      "physDef": 32,
+      "magDef": 41,
+      "attackRangeU": 3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 36,
+      "xp": 282,
+      "dropTableId": "dt_dowb",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 12,
+          "mar": 12,
+          "er": 49,
+          "br": 0,
+          "hr": 49,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 24,
+          "ResistFrostbite": 24,
+          "ResistBurn": 24,
+          "ResistEShock": 24,
+          "ResistPoison": 24,
+          "ResistZombie": 24
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 211,
+        "skills": [
+          "msk_3622",
+          "msk_3623"
+        ]
+      }
+    },
+    {
+      "id": "mob_kyklopes_clon2",
+      "name": "Kiklopes",
+      "level": 12,
+      "modelKey": "mob_kyklopess_clon2",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 359,
+      "physAtk": [
+        77,
+        92
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 32,
+      "magDef": 41,
+      "attackRangeU": 8.2,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 6,
+      "aggroRangeU": 0,
+      "leashRangeU": 36,
+      "xp": 282,
+      "dropTableId": "dt_kyklopes_clon2",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 12,
+          "mar": 12,
+          "er": 49,
+          "br": 0,
+          "hr": 49,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 24,
+          "ResistFrostbite": 24,
+          "ResistBurn": 24,
+          "ResistEShock": 24,
+          "ResistPoison": 24,
+          "ResistZombie": 24
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 210,
+        "championTacticsId": 209,
+        "skills": [
+          "msk_3620",
+          "msk_3621"
+        ]
+      }
+    },
+    {
+      "id": "mob_kyklopes_clon",
+      "name": "Brontes",
+      "level": 13,
+      "modelKey": "mob_kyklopess_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 411,
+      "physAtk": [
+        85,
+        101
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 35,
+      "magDef": 46,
+      "attackRangeU": 8.2,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 6,
+      "aggroRangeU": 0,
+      "leashRangeU": 37,
+      "xp": 306,
+      "dropTableId": "dt_kyklopes_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 13,
+          "mar": 13,
+          "er": 51,
+          "br": 0,
+          "hr": 51,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 26,
+          "ResistFrostbite": 26,
+          "ResistBurn": 26,
+          "ResistEShock": 26,
+          "ResistPoison": 26,
+          "ResistZombie": 26
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 214,
+        "championTacticsId": 213,
+        "skills": [
+          "msk_3624",
+          "msk_3625"
+        ]
+      }
+    },
+    {
+      "id": "mob_tiger_clon",
+      "name": "Young Tiger",
+      "level": 13,
+      "modelKey": "mob_tiger_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 387,
+      "physAtk": [
+        85,
+        101
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 29,
+      "magDef": 56,
+      "attackRangeU": 2.3,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.4,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 37,
+      "xp": 306,
+      "dropTableId": "dt_tiger_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 13,
+          "mar": 13,
+          "er": 51,
+          "br": 0,
+          "hr": 51,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 26,
+          "ResistFrostbite": 26,
+          "ResistBurn": 26,
+          "ResistEShock": 26,
+          "ResistPoison": 26,
+          "ResistZombie": 26
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 22,
+        "skills": [
+          "msk_181"
+        ]
+      }
+    },
+    {
+      "id": "mob_ladon_clon",
+      "name": "Aduna Ladon",
+      "level": 14,
+      "modelKey": "mob_ladon_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 470,
+      "physAtk": [
+        87,
+        104
+      ],
+      "magAtk": [
+        118,
+        135
+      ],
+      "physDef": 32,
+      "magDef": 70,
+      "attackRangeU": 4.6,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 37,
+      "xp": 329,
+      "dropTableId": "dt_ladon_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 14,
+          "mar": 14,
+          "er": 53,
+          "br": 0,
+          "hr": 53,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 28,
+          "ResistFrostbite": 28,
+          "ResistBurn": 28,
+          "ResistEShock": 28,
+          "ResistPoison": 28,
+          "ResistZombie": 28
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 216,
+        "championTacticsId": 215,
+        "skills": [
+          "msk_3626",
+          "msk_3627"
+        ]
+      }
+    },
+    {
+      "id": "mob_banditarcher_clon",
+      "name": "Bandit bowman",
+      "level": 15,
+      "modelKey": "mob_banditarcher_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 514,
+      "physAtk": [
+        94,
+        113
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 44,
+      "magDef": 70,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 38,
+      "xp": 353,
+      "dropTableId": "dt_banditarcher_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 15,
+          "mar": 15,
+          "er": 55,
+          "br": 0,
+          "hr": 55,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 30,
+          "ResistFrostbite": 30,
+          "ResistBurn": 30,
+          "ResistEShock": 30,
+          "ResistPoison": 30,
+          "ResistZombie": 30
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 19,
+        "skills": [
+          "msk_184",
+          "msk_185"
+        ]
+      }
+    },
+    {
+      "id": "mob_kyklopes",
+      "name": "Polipemos",
+      "level": 15,
+      "modelKey": "mob_kyklopess",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 607,
+      "physAtk": [
+        94,
+        113
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 42,
+      "magDef": 56,
+      "attackRangeU": 8.2,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 6,
+      "aggroRangeU": 11,
+      "leashRangeU": 38,
+      "xp": 353,
+      "dropTableId": "dt_kyklopes",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 15,
+          "mar": 15,
+          "er": 55,
+          "br": 0,
+          "hr": 55,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 30,
+          "ResistFrostbite": 30,
+          "ResistBurn": 30,
+          "ResistEShock": 30,
+          "ResistPoison": 30,
+          "ResistZombie": 30
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 217,
+        "skills": [
+          "msk_3628",
+          "msk_3629"
+        ]
+      }
+    },
+    {
+      "id": "mob_ladon",
+      "name": "Simos Ladon",
+      "level": 16,
+      "modelKey": "mob_ladon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 628,
+      "physAtk": [
+        102,
+        123
+      ],
+      "magAtk": [
+        139,
+        160
+      ],
+      "physDef": 44,
+      "magDef": 82,
+      "attackRangeU": 9.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 38,
+      "xp": 376,
+      "dropTableId": "dt_ladon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 16,
+          "mar": 16,
+          "er": 57,
+          "br": 0,
+          "hr": 57,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 32,
+          "ResistFrostbite": 32,
+          "ResistBurn": 32,
+          "ResistEShock": 32,
+          "ResistPoison": 32,
+          "ResistZombie": 32
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 219,
+        "skills": [
+          "msk_3630",
+          "msk_3631"
+        ]
+      }
+    },
+    {
+      "id": "mob_lion_clon",
+      "name": "Nemea's Lion",
+      "level": 17,
+      "modelKey": "mob_lion_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 749,
+      "physAtk": [
+        111,
+        133
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 55,
+      "magDef": 67,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.5,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 39,
+      "xp": 400,
+      "dropTableId": "dt_lion_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 17,
+          "mar": 17,
+          "er": 59,
+          "br": 0,
+          "hr": 59,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 34,
+          "ResistFrostbite": 34,
+          "ResistBurn": 34,
+          "ResistEShock": 34,
+          "ResistPoison": 34,
+          "ResistZombie": 34
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 222,
+        "championTacticsId": 221,
+        "skills": [
+          "msk_3632",
+          "msk_3633"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_whitetiger_clon",
+      "name": "Strong Black Tiger",
+      "level": 17,
+      "modelKey": "mob_whitetiger_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 22478,
+      "physAtk": [
+        111,
+        133
+      ],
+      "magAtk": [
+        151,
+        173
+      ],
+      "physDef": 42,
+      "magDef": 89,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 39,
+      "xp": 8390,
+      "dropTableId": "dt_strong_whitetiger_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 17,
+          "mar": 17,
+          "er": 59,
+          "br": 0,
+          "hr": 59,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 34,
+          "ResistFrostbite": 34,
+          "ResistBurn": 34,
+          "ResistEShock": 34,
+          "ResistPoison": 34,
+          "ResistZombie": 34
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3583",
+          "msk_3584"
+        ]
+      }
+    },
+    {
+      "id": "mob_whitetiger_clon",
+      "name": "Black Tiger",
+      "level": 17,
+      "modelKey": "mob_whitetiger_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 749,
+      "physAtk": [
+        111,
+        133
+      ],
+      "magAtk": [
+        151,
+        173
+      ],
+      "physDef": 42,
+      "magDef": 89,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.4,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 39,
+      "xp": 400,
+      "dropTableId": "dt_whitetiger_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 17,
+          "mar": 17,
+          "er": 59,
+          "br": 0,
+          "hr": 59,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 34,
+          "ResistFrostbite": 34,
+          "ResistBurn": 34,
+          "ResistEShock": 34,
+          "ResistPoison": 34,
+          "ResistZombie": 34
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 31,
+        "skills": [
+          "msk_188",
+          "msk_189"
+        ]
+      }
+    },
+    {
+      "id": "mob_siren_clon",
+      "name": "Seirenes",
+      "level": 18,
+      "modelKey": "mob_siren_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 730,
+      "physAtk": [
+        120,
+        143
+      ],
+      "magAtk": [
+        163,
+        187
+      ],
+      "physDef": 51,
+      "magDef": 95,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 39,
+      "xp": 423,
+      "dropTableId": "dt_siren_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 18,
+          "mar": 18,
+          "er": 61,
+          "br": 0,
+          "hr": 61,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 36,
+          "ResistFrostbite": 36,
+          "ResistBurn": 36,
+          "ResistEShock": 36,
+          "ResistPoison": 36,
+          "ResistZombie": 36
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 224,
+        "championTacticsId": 223,
+        "skills": [
+          "msk_3634",
+          "msk_3635"
+        ]
+      }
+    },
+    {
+      "id": "mob_whitetiger",
+      "name": "White Tiger",
+      "level": 18,
+      "modelKey": "mob_whitetiger",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 809,
+      "physAtk": [
+        120,
+        143
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 55,
+      "magDef": 89,
+      "attackRangeU": 2.3,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.4,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 39,
+      "xp": 423,
+      "dropTableId": "dt_whitetiger",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 18,
+          "mar": 18,
+          "er": 61,
+          "br": 0,
+          "hr": 61,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 36,
+          "ResistFrostbite": 36,
+          "ResistBurn": 36,
+          "ResistEShock": 36,
+          "ResistPoison": 36,
+          "ResistZombie": 36
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 30,
+        "skills": [
+          "msk_190",
+          "msk_191"
+        ]
+      }
+    },
+    {
+      "id": "mob_chakji_clon",
+      "name": "Chakji Worker",
+      "level": 19,
+      "modelKey": "mob_chakji_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 958,
+      "physAtk": [
+        129,
+        154
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 59,
+      "magDef": 95,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 40,
+      "xp": 447,
+      "dropTableId": "dt_chakji_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 19,
+          "mar": 19,
+          "er": 63,
+          "br": 0,
+          "hr": 63,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 38,
+          "ResistFrostbite": 38,
+          "ResistBurn": 38,
+          "ResistEShock": 38,
+          "ResistPoison": 38,
+          "ResistZombie": 38
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 35,
+        "skills": [
+          "msk_192",
+          "msk_193"
+        ]
+      }
+    },
+    {
+      "id": "mob_lion",
+      "name": "Selene's Lion",
+      "level": 19,
+      "modelKey": "mob_lion",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 871,
+      "physAtk": [
+        129,
+        154
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 64,
+      "magDef": 89,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.5,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 40,
+      "xp": 447,
+      "dropTableId": "dt_lion",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 19,
+          "mar": 19,
+          "er": 63,
+          "br": 0,
+          "hr": 63,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 38,
+          "ResistFrostbite": 38,
+          "ResistBurn": 38,
+          "ResistEShock": 38,
+          "ResistPoison": 38,
+          "ResistZombie": 38
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 225,
+        "skills": [
+          "msk_3636",
+          "msk_3637"
+        ]
+      }
+    },
+    {
+      "id": "mob_chakji",
+      "name": "Chakji",
+      "level": 20,
+      "modelKey": "mob_chakji",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1031,
+      "physAtk": [
+        138,
+        166
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 64,
+      "magDef": 102,
+      "attackRangeU": 4.6,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 40,
+      "xp": 470,
+      "dropTableId": "dt_chakji",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 20,
+          "mar": 20,
+          "er": 65,
+          "br": 0,
+          "hr": 65,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 40,
+          "ResistFrostbite": 40,
+          "ResistBurn": 40,
+          "ResistEShock": 40,
+          "ResistPoison": 40,
+          "ResistZombie": 40
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 34,
+        "skills": [
+          "msk_194",
+          "msk_195"
+        ]
+      }
+    },
+    {
+      "id": "mob_siren",
+      "name": "Seiren",
+      "level": 20,
+      "modelKey": "mob_siren",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 840,
+      "physAtk": [
+        138,
+        166
+      ],
+      "magAtk": [
+        189,
+        216
+      ],
+      "physDef": 59,
+      "magDef": 109,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 40,
+      "xp": 470,
+      "dropTableId": "dt_siren",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 20,
+          "mar": 20,
+          "er": 65,
+          "br": 0,
+          "hr": 65,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 40,
+          "ResistFrostbite": 40,
+          "ResistBurn": 40,
+          "ResistEShock": 40,
+          "ResistPoison": 40,
+          "ResistZombie": 40
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 227,
+        "skills": [
+          "msk_3638",
+          "msk_3639"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_chakji",
+      "name": "Strong Chakji",
+      "level": 20,
+      "modelKey": "mob_chakji",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 30929,
+      "physAtk": [
+        138,
+        166
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 64,
+      "magDef": 102,
+      "attackRangeU": 4.6,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 40,
+      "xp": 9870,
+      "dropTableId": "dt_strong_chakji",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 20,
+          "mar": 20,
+          "er": 65,
+          "br": 0,
+          "hr": 65,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 40,
+          "ResistFrostbite": 40,
+          "ResistBurn": 40,
+          "ResistEShock": 40,
+          "ResistPoison": 40,
+          "ResistZombie": 40
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3530",
+          "msk_3531"
+        ]
+      }
+    },
+    {
+      "id": "mob_tigerwoman",
+      "name": "Tiger Girl",
+      "level": 20,
+      "modelKey": "mob_tigerwoman",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "unique": true,
+      "hp": 598720,
+      "physAtk": [
+        181,
+        217
+      ],
+      "magAtk": [
+        281,
+        321
+      ],
+      "physDef": 42,
+      "magDef": 51,
+      "attackRangeU": 5.2,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 3,
+      "runSpeedU": 13.5,
+      "aggroRangeU": 11,
+      "leashRangeU": 40,
+      "xp": 451200,
+      "dropTableId": "dt_tigerwoman",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 20,
+          "mar": 20,
+          "er": 65,
+          "br": 0,
+          "hr": 65,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 80,
+          "ResistFrostbite": 80,
+          "ResistBurn": 80,
+          "ResistEShock": 80,
+          "ResistPoison": 80,
+          "ResistZombie": 80,
+          "ResistSleep": 50,
+          "ResistRoot": 50,
+          "ResistSlow": 50,
+          "ResistFear": 100,
+          "ResistMyopia": 100,
+          "ResistBlood": 50,
+          "ResistStone": 100,
+          "ResistDark": 50,
+          "ResistStun": 100,
+          "ResistChaos": 100,
+          "ResistCsePD": 50,
+          "ResistCseMD": 50,
+          "ResistCseSTR": 50,
+          "ResistCseINT": 50,
+          "ResistCseHP": 50,
+          "ResistCseMP": 50
+        },
+        "koClass": 0,
+        "koRecoverMs": 0,
+        "skills": [
+          "msk_196",
+          "msk_197",
+          "msk_198",
+          "msk_3049",
+          "msk_3050",
+          "msk_3051",
+          "msk_3052"
+        ]
+      }
+    },
+    {
+      "id": "mob_crab_clon",
+      "name": "Megalopa",
+      "level": 21,
+      "modelKey": "mob_crab_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1106,
+      "physAtk": [
+        148,
+        178
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 77,
+      "magDef": 95,
+      "attackRangeU": 3.3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 41,
+      "xp": 498,
+      "dropTableId": "dt_crab_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 21,
+          "mar": 21,
+          "er": 67,
+          "br": 0,
+          "hr": 67,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 42,
+          "ResistFrostbite": 42,
+          "ResistBurn": 42,
+          "ResistEShock": 42,
+          "ResistPoison": 42,
+          "ResistZombie": 42
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 24300,
+        "championTacticsId": 24200,
+        "skills": [
+          "msk_12050",
+          "msk_12051"
+        ]
+      }
+    },
+    {
+      "id": "mob_ghostbug",
+      "name": "Ghost Bug",
+      "level": 21,
+      "modelKey": "mob_ghostbug",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1106,
+      "physAtk": [
+        148,
+        178
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 73,
+      "magDef": 102,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 3,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 41,
+      "xp": 498,
+      "dropTableId": "dt_ghostbug",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 21,
+          "mar": 21,
+          "er": 67,
+          "br": 0,
+          "hr": 67,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 42,
+          "ResistFrostbite": 42,
+          "ResistBurn": 42,
+          "ResistEShock": 42,
+          "ResistPoison": 42,
+          "ResistZombie": 42
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 37,
+        "skills": [
+          "msk_199"
+        ]
+      }
+    },
+    {
+      "id": "mob_devilbug",
+      "name": "Devil Bug",
+      "level": 22,
+      "modelKey": "mob_devilbug",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1184,
+      "physAtk": [
+        159,
+        190
+      ],
+      "magAtk": [
+        217,
+        248
+      ],
+      "physDef": 68,
+      "magDef": 124,
+      "attackRangeU": 1.8,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 3,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 41,
+      "xp": 528,
+      "dropTableId": "dt_devilbug",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 22,
+          "mar": 22,
+          "er": 69,
+          "br": 0,
+          "hr": 69,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 44,
+          "ResistFrostbite": 44,
+          "ResistBurn": 44,
+          "ResistEShock": 44,
+          "ResistPoison": 44,
+          "ResistZombie": 44
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 38,
+        "skills": [
+          "msk_200",
+          "msk_201"
+        ]
+      }
+    },
+    {
+      "id": "mob_rogue_clon",
+      "name": "pilot log",
+      "level": 22,
+      "modelKey": "mob_rogue_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1184,
+      "physAtk": [
+        159,
+        190
+      ],
+      "magAtk": [
+        217,
+        248
+      ],
+      "physDef": 73,
+      "magDef": 116,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 41,
+      "xp": 528,
+      "dropTableId": "dt_rogue_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 22,
+          "mar": 22,
+          "er": 69,
+          "br": 0,
+          "hr": 69,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 44,
+          "ResistFrostbite": 44,
+          "ResistBurn": 44,
+          "ResistEShock": 44,
+          "ResistPoison": 44,
+          "ResistZombie": 44
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 24400,
+        "skills": [
+          "msk_12052",
+          "msk_12053"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_devilbug",
+      "name": "Strong Devilbug",
+      "level": 22,
+      "modelKey": "mob_devilbug",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 35516,
+      "physAtk": [
+        159,
+        190
+      ],
+      "magAtk": [
+        217,
+        248
+      ],
+      "physDef": 68,
+      "magDef": 124,
+      "attackRangeU": 1.8,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 3,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 41,
+      "xp": 11090,
+      "dropTableId": "dt_strong_devilbug",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 22,
+          "mar": 22,
+          "er": 69,
+          "br": 0,
+          "hr": 69,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 44,
+          "ResistFrostbite": 44,
+          "ResistBurn": 44,
+          "ResistEShock": 44,
+          "ResistPoison": 44,
+          "ResistZombie": 44
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3585",
+          "msk_3586"
+        ]
+      }
+    },
+    {
+      "id": "mob_crab",
+      "name": "Crab",
+      "level": 23,
+      "modelKey": "mob_crab",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1264,
+      "physAtk": [
+        170,
+        203
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 87,
+      "magDef": 109,
+      "attackRangeU": 3.3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 42,
+      "xp": 560,
+      "dropTableId": "dt_crab",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 23,
+          "mar": 23,
+          "er": 71,
+          "br": 0,
+          "hr": 71,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 46,
+          "ResistFrostbite": 46,
+          "ResistBurn": 46,
+          "ResistEShock": 46,
+          "ResistPoison": 46,
+          "ResistZombie": 46
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 24700,
+        "championTacticsId": 24600,
+        "skills": [
+          "msk_12054",
+          "msk_12055"
+        ]
+      }
+    },
+    {
+      "id": "mob_hyungno",
+      "name": "Hyungno Ghost soldier",
+      "level": 23,
+      "modelKey": "mob_hyungno",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1264,
+      "physAtk": [
+        170,
+        203
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 77,
+      "magDef": 124,
+      "attackRangeU": 3.7,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 1.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 42,
+      "xp": 560,
+      "dropTableId": "dt_hyungno",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 23,
+          "mar": 23,
+          "er": 71,
+          "br": 0,
+          "hr": 71,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 46,
+          "ResistFrostbite": 46,
+          "ResistBurn": 46,
+          "ResistEShock": 46,
+          "ResistPoison": 46,
+          "ResistZombie": 46
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 78,
+        "skills": [
+          "msk_202",
+          "msk_203"
+        ]
+      }
+    },
+    {
+      "id": "mob_rogue",
+      "name": "Pirate Brigand",
+      "level": 23,
+      "modelKey": "mob_rogue",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1264,
+      "physAtk": [
+        170,
+        203
+      ],
+      "magAtk": [
+        232,
+        265
+      ],
+      "physDef": 77,
+      "magDef": 124,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 42,
+      "xp": 560,
+      "dropTableId": "dt_rogue",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 23,
+          "mar": 23,
+          "er": 71,
+          "br": 0,
+          "hr": 71,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 46,
+          "ResistFrostbite": 46,
+          "ResistBurn": 46,
+          "ResistEShock": 46,
+          "ResistPoison": 46,
+          "ResistZombie": 46
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 24800,
+        "skills": [
+          "msk_12056",
+          "msk_12057"
+        ]
+      }
+    },
+    {
+      "id": "mob_hyungno_clon",
+      "name": "Hyungno Ghost",
+      "level": 24,
+      "modelKey": "mob_hyungno_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1347,
+      "physAtk": [
+        181,
+        217
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 77,
+      "magDef": 140,
+      "attackRangeU": 3.7,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 1.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 42,
+      "xp": 593,
+      "dropTableId": "dt_hyungno_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 24,
+          "mar": 24,
+          "er": 73,
+          "br": 0,
+          "hr": 73,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 48,
+          "ResistFrostbite": 48,
+          "ResistBurn": 48,
+          "ResistEShock": 48,
+          "ResistPoison": 48,
+          "ResistZombie": 48
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 80,
+        "skills": [
+          "msk_204",
+          "msk_205"
+        ]
+      }
+    },
+    {
+      "id": "mob_kerberos",
+      "name": "Cerberus",
+      "level": 24,
+      "modelKey": "mob_kerberos",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "unique": true,
+      "hp": 693072,
+      "physAtk": [
+        261,
+        312
+      ],
+      "magAtk": [
+        357,
+        408
+      ],
+      "physDef": 52,
+      "magDef": 70,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 14.4,
+      "aggroRangeU": 11,
+      "leashRangeU": 42,
+      "xp": 569630,
+      "dropTableId": "dt_kerberos",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 24,
+          "mar": 24,
+          "er": 73,
+          "br": 0,
+          "hr": 73,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 80,
+          "ResistFrostbite": 80,
+          "ResistBurn": 80,
+          "ResistEShock": 80,
+          "ResistPoison": 80,
+          "ResistZombie": 80,
+          "ResistSleep": 50,
+          "ResistRoot": 50,
+          "ResistSlow": 50,
+          "ResistFear": 100,
+          "ResistMyopia": 100,
+          "ResistBlood": 50,
+          "ResistStone": 100,
+          "ResistDark": 50,
+          "ResistStun": 100,
+          "ResistChaos": 100,
+          "ResistCsePD": 50,
+          "ResistCseMD": 50,
+          "ResistCseSTR": 50,
+          "ResistCseINT": 50,
+          "ResistCseHP": 50,
+          "ResistCseMP": 50
+        },
+        "koClass": 0,
+        "koRecoverMs": 0,
+        "skills": [
+          "msk_3640",
+          "msk_3641",
+          "msk_3642",
+          "msk_3666",
+          "msk_3667",
+          "msk_3668",
+          "msk_3669",
+          "msk_3670",
+          "msk_3671"
+        ]
+      }
+    },
+    {
+      "id": "mob_wolf_clon",
+      "name": "Dark Wolf",
+      "level": 24,
+      "modelKey": "mob_wolf_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1347,
+      "physAtk": [
+        181,
+        217
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 87,
+      "magDef": 124,
+      "attackRangeU": 5.2,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 1.65,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 42,
+      "xp": 593,
+      "dropTableId": "dt_wolf_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 24,
+          "mar": 24,
+          "er": 73,
+          "br": 0,
+          "hr": 73,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 48,
+          "ResistFrostbite": 48,
+          "ResistBurn": 48,
+          "ResistEShock": 48,
+          "ResistPoison": 48,
+          "ResistZombie": 48
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 25100,
+        "championTacticsId": 25000,
+        "skills": [
+          "msk_12058",
+          "msk_12059",
+          "msk_12060"
+        ]
+      }
+    },
+    {
+      "id": "mob_demonhorse",
+      "name": "Demon Horse",
+      "level": 25,
+      "modelKey": "mob_demonhorse",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1291,
+      "physAtk": [
+        193,
+        231
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 87,
+      "magDef": 140,
+      "attackRangeU": 2.3,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 43,
+      "xp": 629,
+      "dropTableId": "dt_demonhorse",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 25,
+          "mar": 25,
+          "er": 75,
+          "br": 0,
+          "hr": 75,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 50,
+          "ResistFrostbite": 50,
+          "ResistBurn": 50,
+          "ResistEShock": 50,
+          "ResistPoison": 50,
+          "ResistZombie": 50
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 47,
+        "skills": [
+          "msk_206"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_demonhorse",
+      "name": "Strong Demon Hose",
+      "level": 25,
+      "modelKey": "mob_demonhorse",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 38734,
+      "physAtk": [
+        193,
+        231
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 87,
+      "magDef": 140,
+      "attackRangeU": 2.3,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 43,
+      "xp": 13208,
+      "dropTableId": "dt_strong_demonhorse",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 25,
+          "mar": 25,
+          "er": 75,
+          "br": 0,
+          "hr": 75,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 50,
+          "ResistFrostbite": 50,
+          "ResistBurn": 50,
+          "ResistEShock": 50,
+          "ResistPoison": 50,
+          "ResistZombie": 50
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3532"
+        ]
+      }
+    },
+    {
+      "id": "mob_wolf",
+      "name": "Evil Wolf",
+      "level": 25,
+      "modelKey": "mob_wolf",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1433,
+      "physAtk": [
+        193,
+        231
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 92,
+      "magDef": 132,
+      "attackRangeU": 5.2,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 1.65,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 43,
+      "xp": 629,
+      "dropTableId": "dt_wolf",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 25,
+          "mar": 25,
+          "er": 75,
+          "br": 0,
+          "hr": 75,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 50,
+          "ResistFrostbite": 50,
+          "ResistBurn": 50,
+          "ResistEShock": 50,
+          "ResistPoison": 50,
+          "ResistZombie": 50
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 25200,
+        "skills": [
+          "msk_12061",
+          "msk_12062",
+          "msk_12063"
+        ]
+      }
+    },
+    {
+      "id": "mob_archer_clon",
+      "name": "Evil Order Archer",
+      "level": 26,
+      "modelKey": "mob_archer_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1217,
+      "physAtk": [
+        206,
+        246
+      ],
+      "magAtk": [
+        281,
+        321
+      ],
+      "physDef": 87,
+      "magDef": 157,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 43,
+      "xp": 667,
+      "dropTableId": "dt_archer_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 26,
+          "mar": 26,
+          "er": 77,
+          "br": 0,
+          "hr": 77,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 52,
+          "ResistFrostbite": 52,
+          "ResistBurn": 52,
+          "ResistEShock": 52,
+          "ResistPoison": 52,
+          "ResistZombie": 52
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 25400,
+        "skills": [
+          "msk_12064",
+          "msk_12065",
+          "msk_12066"
+        ]
+      }
+    },
+    {
+      "id": "mob_demonhorse_clon",
+      "name": "Devil Horse",
+      "level": 26,
+      "modelKey": "mob_demonhorse_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1370,
+      "physAtk": [
+        206,
+        246
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 92,
+      "magDef": 148,
+      "attackRangeU": 2.3,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 43,
+      "xp": 667,
+      "dropTableId": "dt_demonhorse_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 26,
+          "mar": 26,
+          "er": 77,
+          "br": 0,
+          "hr": 77,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 52,
+          "ResistFrostbite": 52,
+          "ResistBurn": 52,
+          "ResistEShock": 52,
+          "ResistPoison": 52,
+          "ResistZombie": 52
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 48,
+        "skills": [
+          "msk_207"
+        ]
+      }
+    },
+    {
+      "id": "mob_archer",
+      "name": "Evil Order Hunter",
+      "level": 27,
+      "modelKey": "mob_archer",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1287,
+      "physAtk": [
+        219,
+        261
+      ],
+      "magAtk": [
+        299,
+        342
+      ],
+      "physDef": 92,
+      "magDef": 165,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 44,
+      "xp": 707,
+      "dropTableId": "dt_archer",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 27,
+          "mar": 27,
+          "er": 79,
+          "br": 0,
+          "hr": 79,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 54,
+          "ResistFrostbite": 54,
+          "ResistBurn": 54,
+          "ResistEShock": 54,
+          "ResistPoison": 54,
+          "ResistZombie": 54
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 25600,
+        "skills": [
+          "msk_12067",
+          "msk_12068",
+          "msk_12069"
+        ]
+      }
+    },
+    {
+      "id": "mob_earthghost",
+      "name": "Earth Ghost",
+      "level": 27,
+      "modelKey": "mob_earthghost",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1451,
+      "physAtk": [
+        219,
+        261
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 103,
+      "magDef": 148,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 1.65,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 44,
+      "xp": 707,
+      "dropTableId": "dt_earthghost",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 27,
+          "mar": 27,
+          "er": 79,
+          "br": 0,
+          "hr": 79,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 54,
+          "ResistFrostbite": 54,
+          "ResistBurn": 54,
+          "ResistEShock": 54,
+          "ResistPoison": 54,
+          "ResistZombie": 54
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 40,
+        "skills": [
+          "msk_210"
+        ]
+      }
+    },
+    {
+      "id": "mob_gunpowderghost_clon",
+      "name": "Meek Gun Powder",
+      "level": 27,
+      "modelKey": "mob_gunpowderghost_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1451,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        299,
+        342
+      ],
+      "physDef": 92,
+      "magDef": 165,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 3500,
+      "walkSpeedU": 1.65,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 44,
+      "xp": 707,
+      "dropTableId": "dt_gunpowderghost_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 27,
+          "mar": 27,
+          "er": 79,
+          "br": 0,
+          "hr": 79,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 54,
+          "ResistFrostbite": 54,
+          "ResistBurn": 54,
+          "ResistEShock": 54,
+          "ResistPoison": 54,
+          "ResistZombie": 54
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 44,
+        "skills": [
+          "msk_208",
+          "msk_209"
+        ]
+      }
+    },
+    {
+      "id": "mob_soldier_clon",
+      "name": "Evil Order Warrior",
+      "level": 27,
+      "modelKey": "mob_soldier_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1614,
+      "physAtk": [
+        219,
+        261
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 103,
+      "magDef": 148,
+      "attackRangeU": 3.9,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 4.05,
+      "aggroRangeU": 11,
+      "leashRangeU": 44,
+      "xp": 707,
+      "dropTableId": "dt_soldier_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 27,
+          "mar": 27,
+          "er": 79,
+          "br": 0,
+          "hr": 79,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 54,
+          "ResistFrostbite": 54,
+          "ResistBurn": 54,
+          "ResistEShock": 54,
+          "ResistPoison": 54,
+          "ResistZombie": 54
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 25800,
+        "skills": [
+          "msk_12070",
+          "msk_12071",
+          "msk_12072"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_earthghost",
+      "name": "Strong Earthghost",
+      "level": 27,
+      "modelKey": "mob_earthghost",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 43524,
+      "physAtk": [
+        219,
+        261
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 103,
+      "magDef": 148,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 1.65,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 44,
+      "xp": 14841,
+      "dropTableId": "dt_strong_earthghost",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 27,
+          "mar": 27,
+          "er": 79,
+          "br": 0,
+          "hr": 79,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 54,
+          "ResistFrostbite": 54,
+          "ResistBurn": 54,
+          "ResistEShock": 54,
+          "ResistPoison": 54,
+          "ResistZombie": 54
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3587"
+        ]
+      }
+    },
+    {
+      "id": "mob_earthghost_clon",
+      "name": "Meek Earth Ghost",
+      "level": 28,
+      "modelKey": "mob_earthghost_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1535,
+      "physAtk": [
+        232,
+        277
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 109,
+      "magDef": 157,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 1.65,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 44,
+      "xp": 749,
+      "dropTableId": "dt_earthghost_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 28,
+          "mar": 28,
+          "er": 81,
+          "br": 0,
+          "hr": 81,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 56,
+          "ResistFrostbite": 56,
+          "ResistBurn": 56,
+          "ResistEShock": 56,
+          "ResistPoison": 56,
+          "ResistZombie": 56
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 41,
+        "skills": [
+          "msk_211"
+        ]
+      }
+    },
+    {
+      "id": "mob_gunpowderghost",
+      "name": "Gun Powder",
+      "level": 28,
+      "modelKey": "mob_gunpowderghost",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1535,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        318,
+        363
+      ],
+      "physDef": 98,
+      "magDef": 175,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 1.65,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 44,
+      "xp": 749,
+      "dropTableId": "dt_gunpowderghost",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 28,
+          "mar": 28,
+          "er": 81,
+          "br": 0,
+          "hr": 81,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 56,
+          "ResistFrostbite": 56,
+          "ResistBurn": 56,
+          "ResistEShock": 56,
+          "ResistPoison": 56,
+          "ResistZombie": 56
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 43,
+        "skills": [
+          "msk_212",
+          "msk_213"
+        ]
+      }
+    },
+    {
+      "id": "mob_soldier",
+      "name": "Evil Order Soldier",
+      "level": 28,
+      "modelKey": "mob_soldier",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1709,
+      "physAtk": [
+        232,
+        277
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 109,
+      "magDef": 157,
+      "attackRangeU": 3.9,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 4.05,
+      "aggroRangeU": 11,
+      "leashRangeU": 44,
+      "xp": 749,
+      "dropTableId": "dt_soldier",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 28,
+          "mar": 28,
+          "er": 81,
+          "br": 0,
+          "hr": 81,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 56,
+          "ResistFrostbite": 56,
+          "ResistBurn": 56,
+          "ResistEShock": 56,
+          "ResistPoison": 56,
+          "ResistZombie": 56
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 26000,
+        "skills": [
+          "msk_12073",
+          "msk_12074",
+          "msk_12075"
+        ]
+      }
+    },
+    {
+      "id": "mob_hyeongcheon_clon",
+      "name": "Hyeongcheon guard",
+      "level": 29,
+      "modelKey": "mob_hyeongcheon_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1807,
+      "physAtk": [
+        247,
+        294
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 115,
+      "magDef": 165,
+      "attackRangeU": 3.1,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 5.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 794,
+      "dropTableId": "dt_hyeongcheon_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 29,
+          "mar": 29,
+          "er": 83,
+          "br": 0,
+          "hr": 83,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 58,
+          "ResistFrostbite": 58,
+          "ResistBurn": 58,
+          "ResistEShock": 58,
+          "ResistPoison": 58,
+          "ResistZombie": 58
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 51,
+        "skills": [
+          "msk_214"
+        ]
+      }
+    },
+    {
+      "id": "mob_punisher_clon",
+      "name": "Closier",
+      "level": 29,
+      "modelKey": "mob_punisher_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1807,
+      "physAtk": [
+        247,
+        294
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 109,
+      "magDef": 175,
+      "attackRangeU": 7.3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.15,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 794,
+      "dropTableId": "dt_punisher_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 29,
+          "mar": 29,
+          "er": 83,
+          "br": 0,
+          "hr": 83,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 58,
+          "ResistFrostbite": 58,
+          "ResistBurn": 58,
+          "ResistEShock": 58,
+          "ResistPoison": 58,
+          "ResistZombie": 58
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 26200,
+        "skills": [
+          "msk_12076",
+          "msk_12077"
+        ]
+      }
+    },
+    {
+      "id": "mob_earthking",
+      "name": "Earth Taoist",
+      "level": 30,
+      "modelKey": "mob_earthking",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1513,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        357,
+        408
+      ],
+      "physDef": 109,
+      "magDef": 194,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 842,
+      "dropTableId": "dt_earthking",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 30,
+          "mar": 30,
+          "er": 85,
+          "br": 0,
+          "hr": 85,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 60,
+          "ResistFrostbite": 60,
+          "ResistBurn": 60,
+          "ResistEShock": 60,
+          "ResistPoison": 60,
+          "ResistZombie": 60
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 46,
+        "skills": [
+          "msk_215",
+          "msk_216"
+        ]
+      }
+    },
+    {
+      "id": "mob_earthking_clon",
+      "name": "Earth Magician",
+      "level": 30,
+      "modelKey": "mob_earthking_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1513,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        357,
+        408
+      ],
+      "physDef": 109,
+      "magDef": 194,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 842,
+      "dropTableId": "dt_earthking_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 30,
+          "mar": 30,
+          "er": 85,
+          "br": 0,
+          "hr": 85,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 60,
+          "ResistFrostbite": 60,
+          "ResistBurn": 60,
+          "ResistEShock": 60,
+          "ResistPoison": 60,
+          "ResistZombie": 60
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 81,
+        "skills": [
+          "msk_217",
+          "msk_218"
+        ]
+      }
+    },
+    {
+      "id": "mob_hyeongcheon",
+      "name": "Hyeongcheon",
+      "level": 30,
+      "modelKey": "mob_hyeongcheon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1909,
+      "physAtk": [
+        261,
+        312
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 121,
+      "magDef": 175,
+      "attackRangeU": 3.1,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 5.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 842,
+      "dropTableId": "dt_hyeongcheon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 30,
+          "mar": 30,
+          "er": 85,
+          "br": 0,
+          "hr": 85,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 60,
+          "ResistFrostbite": 60,
+          "ResistBurn": 60,
+          "ResistEShock": 60,
+          "ResistPoison": 60,
+          "ResistZombie": 60
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 50,
+        "skills": [
+          "msk_219",
+          "msk_220"
+        ]
+      }
+    },
+    {
+      "id": "mob_ivy",
+      "name": "Captain Ivy",
+      "level": 30,
+      "modelKey": "mob_ivy",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "unique": true,
+      "hp": 1094835,
+      "physAtk": [
+        363,
+        433
+      ],
+      "magAtk": [
+        498,
+        567
+      ],
+      "physDef": 115,
+      "magDef": 184,
+      "attackRangeU": 31,
+      "attackIntervalMs": 2333,
+      "walkSpeedU": 3,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 808031,
+      "dropTableId": "dt_ivy",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 30,
+          "mar": 30,
+          "er": 85,
+          "br": 0,
+          "hr": 85,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 60,
+          "ResistFrostbite": 60,
+          "ResistBurn": 60,
+          "ResistEShock": 60,
+          "ResistPoison": 60,
+          "ResistZombie": 60,
+          "ResistSleep": 50,
+          "ResistRoot": 50,
+          "ResistSlow": 50,
+          "ResistFear": 100,
+          "ResistMyopia": 100,
+          "ResistBlood": 50,
+          "ResistStone": 100,
+          "ResistDark": 50,
+          "ResistStun": 100,
+          "ResistChaos": 100,
+          "ResistCsePD": 50,
+          "ResistCseMD": 50,
+          "ResistCseSTR": 50,
+          "ResistCseINT": 50,
+          "ResistCseHP": 50,
+          "ResistCseMP": 50
+        },
+        "koClass": 0,
+        "koRecoverMs": 0,
+        "skills": [
+          "msk_12080",
+          "msk_12082",
+          "msk_12085",
+          "msk_12086",
+          "msk_12087",
+          "msk_12089",
+          "msk_12090",
+          "msk_12091",
+          "msk_12092"
+        ]
+      }
+    },
+    {
+      "id": "mob_punisher",
+      "name": "Punisher",
+      "level": 30,
+      "modelKey": "mob_punisher",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1909,
+      "physAtk": [
+        261,
+        312
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 115,
+      "magDef": 184,
+      "attackRangeU": 7.3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.15,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 842,
+      "dropTableId": "dt_punisher",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 30,
+          "mar": 30,
+          "er": 85,
+          "br": 0,
+          "hr": 85,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 60,
+          "ResistFrostbite": 60,
+          "ResistBurn": 60,
+          "ResistEShock": 60,
+          "ResistPoison": 60,
+          "ResistZombie": 60
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 26400,
+        "skills": [
+          "msk_12078",
+          "msk_12079"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_hyeongcheon",
+      "name": "Strong Hyeongcheon",
+      "level": 30,
+      "modelKey": "mob_hyeongcheon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 57255,
+      "physAtk": [
+        261,
+        312
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 121,
+      "magDef": 175,
+      "attackRangeU": 3.1,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 5.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 17676,
+      "dropTableId": "dt_strong_hyeongcheon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 30,
+          "mar": 30,
+          "er": 85,
+          "br": 0,
+          "hr": 85,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 60,
+          "ResistFrostbite": 60,
+          "ResistBurn": 60,
+          "ResistEShock": 60,
+          "ResistPoison": 60,
+          "ResistZombie": 60
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3533",
+          "msk_3534"
+        ]
+      }
+    },
+    {
+      "id": "mob_peryton_clon",
+      "name": "Kokoru",
+      "level": 31,
+      "modelKey": "mob_peryton_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1593,
+      "physAtk": [
+        277,
+        330
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 115,
+      "magDef": 204,
+      "attackRangeU": 3.3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.15,
+      "runSpeedU": 19.5,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 884,
+      "dropTableId": "dt_peryton_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 31,
+          "mar": 31,
+          "er": 87,
+          "br": 0,
+          "hr": 87,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 62,
+          "ResistFrostbite": 62,
+          "ResistBurn": 62,
+          "ResistEShock": 62,
+          "ResistPoison": 62,
+          "ResistZombie": 62
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 26700,
+        "skills": [
+          "msk_12094"
+        ]
+      }
+    },
+    {
+      "id": "mob_scorpion_clon",
+      "name": "Black scorpion",
+      "level": 31,
+      "modelKey": "mob_scorpion_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2013,
+      "physAtk": [
+        277,
+        330
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 121,
+      "magDef": 194,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 884,
+      "dropTableId": "dt_scorpion_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 31,
+          "mar": 31,
+          "er": 87,
+          "br": 0,
+          "hr": 87,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 62,
+          "ResistFrostbite": 62,
+          "ResistBurn": 62,
+          "ResistEShock": 62,
+          "ResistPoison": 62,
+          "ResistZombie": 62
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 83,
+        "skills": [
+          "msk_221",
+          "msk_222"
+        ]
+      }
+    },
+    {
+      "id": "mob_peryton",
+      "name": "Periton",
+      "level": 32,
+      "modelKey": "mob_peryton",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1676,
+      "physAtk": [
+        293,
+        349
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 121,
+      "magDef": 214,
+      "attackRangeU": 3.3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.15,
+      "runSpeedU": 19.5,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 928,
+      "dropTableId": "dt_peryton",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 32,
+          "mar": 32,
+          "er": 89,
+          "br": 0,
+          "hr": 89,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 64,
+          "ResistFrostbite": 64,
+          "ResistBurn": 64,
+          "ResistEShock": 64,
+          "ResistPoison": 64,
+          "ResistZombie": 64
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 26900,
+        "skills": [
+          "msk_12097",
+          "msk_12098"
+        ]
+      }
+    },
+    {
+      "id": "mob_scorpion",
+      "name": "Scorpion",
+      "level": 32,
+      "modelKey": "mob_scorpion",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2121,
+      "physAtk": [
+        293,
+        349
+      ],
+      "magAtk": [
+        400,
+        457
+      ],
+      "physDef": 127,
+      "magDef": 204,
+      "attackRangeU": 2.1,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 928,
+      "dropTableId": "dt_scorpion",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 32,
+          "mar": 32,
+          "er": 89,
+          "br": 0,
+          "hr": 89,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 64,
+          "ResistFrostbite": 64,
+          "ResistBurn": 64,
+          "ResistEShock": 64,
+          "ResistPoison": 64,
+          "ResistZombie": 64
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 53,
+        "skills": [
+          "msk_223",
+          "msk_224"
+        ]
+      }
+    },
+    {
+      "id": "mob_ca_ong_clon",
+      "name": "Blood Ong",
+      "level": 33,
+      "modelKey": "mob_ong_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1997,
+      "physAtk": [
+        309,
+        369
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 134,
+      "magDef": 214,
+      "attackRangeU": 3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 974,
+      "dropTableId": "dt_ca_ong_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 33,
+          "mar": 33,
+          "er": 91,
+          "br": 0,
+          "hr": 91,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 66,
+          "ResistFrostbite": 66,
+          "ResistBurn": 66,
+          "ResistEShock": 66,
+          "ResistPoison": 66,
+          "ResistZombie": 66
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 27200,
+        "championTacticsId": 27100,
+        "skills": [
+          "msk_12099"
+        ]
+      }
+    },
+    {
+      "id": "mob_deserttrunkz_clon2",
+      "name": "Blood Devil  Flower",
+      "level": 33,
+      "modelKey": "mob_deserttrunkz_clon2",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1761,
+      "physAtk": [
+        309,
+        369
+      ],
+      "magAtk": [
+        423,
+        483
+      ],
+      "physDef": 127,
+      "magDef": 225,
+      "attackRangeU": 46,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 974,
+      "dropTableId": "dt_deserttrunkz_clon2",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 33,
+          "mar": 33,
+          "er": 91,
+          "br": 0,
+          "hr": 91,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 66,
+          "ResistFrostbite": 66,
+          "ResistBurn": 66,
+          "ResistEShock": 66,
+          "ResistPoison": 66,
+          "ResistZombie": 66
+        },
+        "koClass": 1,
+        "koRecoverMs": 3000,
+        "tacticsId": 84,
+        "skills": [
+          "msk_225",
+          "msk_226"
+        ]
+      }
+    },
+    {
+      "id": "mob_ong_clon",
+      "name": "Blood Ong",
+      "level": 33,
+      "modelKey": "mob_ong_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1997,
+      "physAtk": [
+        309,
+        369
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 134,
+      "magDef": 214,
+      "attackRangeU": 3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 974,
+      "dropTableId": "dt_ong_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 33,
+          "mar": 33,
+          "er": 91,
+          "br": 0,
+          "hr": 91,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 66,
+          "ResistFrostbite": 66,
+          "ResistBurn": 66,
+          "ResistEShock": 66,
+          "ResistPoison": 66,
+          "ResistZombie": 66
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 85,
+        "skills": [
+          "msk_228"
+        ]
+      }
+    },
+    {
+      "id": "mob_ca_ong",
+      "name": "Ong",
+      "level": 34,
+      "modelKey": "mob_ong",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2099,
+      "physAtk": [
+        327,
+        389
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 141,
+      "magDef": 225,
+      "attackRangeU": 3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1023,
+      "dropTableId": "dt_ca_ong",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 34,
+          "mar": 34,
+          "er": 93,
+          "br": 0,
+          "hr": 93,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 68,
+          "ResistFrostbite": 68,
+          "ResistBurn": 68,
+          "ResistEShock": 68,
+          "ResistPoison": 68,
+          "ResistZombie": 68
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 27300,
+        "skills": [
+          "msk_12104"
+        ]
+      }
+    },
+    {
+      "id": "mob_deserttrunkz",
+      "name": "Blood Death Flower",
+      "level": 34,
+      "modelKey": "mob_deserttrunkz",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1849,
+      "physAtk": [
+        327,
+        389
+      ],
+      "magAtk": [
+        447,
+        510
+      ],
+      "physDef": 134,
+      "magDef": 236,
+      "attackRangeU": 46,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1023,
+      "dropTableId": "dt_deserttrunkz",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 34,
+          "mar": 34,
+          "er": 93,
+          "br": 0,
+          "hr": 93,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 68,
+          "ResistFrostbite": 68,
+          "ResistBurn": 68,
+          "ResistEShock": 68,
+          "ResistPoison": 68,
+          "ResistZombie": 68
+        },
+        "koClass": 1,
+        "koRecoverMs": 3000,
+        "tacticsId": 57,
+        "skills": [
+          "msk_229",
+          "msk_230"
+        ]
+      }
+    },
+    {
+      "id": "mob_ong",
+      "name": "Ong",
+      "level": 34,
+      "modelKey": "mob_ong",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2099,
+      "physAtk": [
+        327,
+        389
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 141,
+      "magDef": 225,
+      "attackRangeU": 3,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1023,
+      "dropTableId": "dt_ong",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 34,
+          "mar": 34,
+          "er": 93,
+          "br": 0,
+          "hr": 93,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 68,
+          "ResistFrostbite": 68,
+          "ResistBurn": 68,
+          "ResistEShock": 68,
+          "ResistPoison": 68,
+          "ResistZombie": 68
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 55,
+        "skills": [
+          "msk_227"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_ong",
+      "name": "Strong Ong",
+      "level": 34,
+      "modelKey": "mob_ong",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 62959,
+      "physAtk": [
+        327,
+        389
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 141,
+      "magDef": 225,
+      "attackRangeU": 3,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 21485,
+      "dropTableId": "dt_strong_ong",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 34,
+          "mar": 34,
+          "er": 93,
+          "br": 0,
+          "hr": 93,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 68,
+          "ResistFrostbite": 68,
+          "ResistBurn": 68,
+          "ResistEShock": 68,
+          "ResistPoison": 68,
+          "ResistZombie": 68
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3535"
+        ]
+      }
+    },
+    {
+      "id": "mob_blackrobber_clon",
+      "name": "Black Robber Follower",
+      "level": 35,
+      "modelKey": "mob_blackrobber_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2204,
+      "physAtk": [
+        345,
+        411
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 155,
+      "magDef": 225,
+      "attackRangeU": 4.6,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 3,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 1074,
+      "dropTableId": "dt_blackrobber_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 35,
+          "mar": 35,
+          "er": 95,
+          "br": 0,
+          "hr": 95,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 70,
+          "ResistFrostbite": 70,
+          "ResistBurn": 70,
+          "ResistEShock": 70,
+          "ResistPoison": 70,
+          "ResistZombie": 70
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 86,
+        "skills": [
+          "msk_231"
+        ]
+      }
+    },
+    {
+      "id": "mob_hunarcher_clon",
+      "name": "Hun Archer",
+      "level": 35,
+      "modelKey": "mob_hunarcher_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 1940,
+      "physAtk": [
+        345,
+        411
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 148,
+      "magDef": 236,
+      "attackRangeU": 23.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1074,
+      "dropTableId": "dt_hunarcher_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 35,
+          "mar": 35,
+          "er": 95,
+          "br": 0,
+          "hr": 95,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 70,
+          "ResistFrostbite": 70,
+          "ResistBurn": 70,
+          "ResistEShock": 70,
+          "ResistPoison": 70,
+          "ResistZombie": 70
+        },
+        "koClass": 2,
+        "koRecoverMs": 3000,
+        "tacticsId": 27500,
+        "skills": [
+          "msk_12109"
+        ]
+      }
+    },
+    {
+      "id": "mob_yeowa_clon",
+      "name": "Black Yeowa",
+      "level": 35,
+      "modelKey": "mob_yeowa_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2467,
+      "physAtk": [
+        345,
+        411
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 148,
+      "magDef": 236,
+      "attackRangeU": 2.3,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 1074,
+      "dropTableId": "dt_yeowa_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 35,
+          "mar": 35,
+          "er": 95,
+          "br": 0,
+          "hr": 95,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 70,
+          "ResistFrostbite": 70,
+          "ResistBurn": 70,
+          "ResistEShock": 70,
+          "ResistPoison": 70,
+          "ResistZombie": 70
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 87,
+        "skills": [
+          "msk_232",
+          "msk_233"
+        ]
+      }
+    },
+    {
+      "id": "mob_blackrobberarcher",
+      "name": "Black Robber Archer",
+      "level": 36,
+      "modelKey": "mob_blackrobberarcher",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2034,
+      "physAtk": [
+        363,
+        433
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 148,
+      "magDef": 259,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 3500,
+      "walkSpeedU": 3,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1128,
+      "dropTableId": "dt_blackrobberarcher",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 36,
+          "mar": 36,
+          "er": 97,
+          "br": 0,
+          "hr": 97,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 72,
+          "ResistFrostbite": 72,
+          "ResistBurn": 72,
+          "ResistEShock": 72,
+          "ResistPoison": 72,
+          "ResistZombie": 72
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 61,
+        "skills": [
+          "msk_234",
+          "msk_235"
+        ]
+      }
+    },
+    {
+      "id": "mob_hunarcher",
+      "name": "Hun Shooter",
+      "level": 36,
+      "modelKey": "mob_hunarcher",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2034,
+      "physAtk": [
+        363,
+        433
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 162,
+      "magDef": 236,
+      "attackRangeU": 23.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1128,
+      "dropTableId": "dt_hunarcher",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 36,
+          "mar": 36,
+          "er": 97,
+          "br": 0,
+          "hr": 97,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 72,
+          "ResistFrostbite": 72,
+          "ResistBurn": 72,
+          "ResistEShock": 72,
+          "ResistPoison": 72,
+          "ResistZombie": 72
+        },
+        "koClass": 2,
+        "koRecoverMs": 3000,
+        "tacticsId": 27900,
+        "skills": [
+          "msk_12115",
+          "msk_12116"
+        ]
+      }
+    },
+    {
+      "id": "mob_hunlancer_clon",
+      "name": "Hun Defense Lancer",
+      "level": 36,
+      "modelKey": "mob_hunlancer_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2312,
+      "physAtk": [
+        363,
+        433
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 162,
+      "magDef": 236,
+      "attackRangeU": 4.9,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 1128,
+      "dropTableId": "dt_hunlancer_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 36,
+          "mar": 36,
+          "er": 97,
+          "br": 0,
+          "hr": 97,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 72,
+          "ResistFrostbite": 72,
+          "ResistBurn": 72,
+          "ResistEShock": 72,
+          "ResistPoison": 72,
+          "ResistZombie": 72
+        },
+        "koClass": 2,
+        "koRecoverMs": 3000,
+        "tacticsId": 27800,
+        "championTacticsId": 27700,
+        "skills": [
+          "msk_12112",
+          "msk_12113",
+          "msk_12114"
+        ]
+      }
+    },
+    {
+      "id": "mob_yeowa",
+      "name": "Red Yeowa",
+      "level": 36,
+      "modelKey": "mob_yeowa",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2590,
+      "physAtk": [
+        363,
+        433
+      ],
+      "magAtk": [
+        498,
+        567
+      ],
+      "physDef": 155,
+      "magDef": 248,
+      "attackRangeU": 2.3,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1128,
+      "dropTableId": "dt_yeowa",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 36,
+          "mar": 36,
+          "er": 97,
+          "br": 0,
+          "hr": 97,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 72,
+          "ResistFrostbite": 72,
+          "ResistBurn": 72,
+          "ResistEShock": 72,
+          "ResistPoison": 72,
+          "ResistZombie": 72
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 88,
+        "skills": [
+          "msk_236",
+          "msk_237"
+        ]
+      }
+    },
+    {
+      "id": "mob_blackrobberarcher_clon",
+      "name": "Black Robber Bowman",
+      "level": 37,
+      "modelKey": "mob_blackrobberarcher_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2131,
+      "physAtk": [
+        383,
+        456
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 162,
+      "magDef": 259,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 3500,
+      "walkSpeedU": 3,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1184,
+      "dropTableId": "dt_blackrobberarcher_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 37,
+          "mar": 37,
+          "er": 99,
+          "br": 0,
+          "hr": 99,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 74,
+          "ResistFrostbite": 74,
+          "ResistBurn": 74,
+          "ResistEShock": 74,
+          "ResistPoison": 74,
+          "ResistZombie": 74
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 90,
+        "skills": [
+          "msk_238",
+          "msk_239"
+        ]
+      }
+    },
+    {
+      "id": "mob_hunlancer",
+      "name": "Hun Assault Lancer",
+      "level": 37,
+      "modelKey": "mob_hunlancer",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2424,
+      "physAtk": [
+        383,
+        456
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 170,
+      "magDef": 248,
+      "attackRangeU": 4.9,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 1.8,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 1184,
+      "dropTableId": "dt_hunlancer",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 37,
+          "mar": 37,
+          "er": 99,
+          "br": 0,
+          "hr": 99,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 74,
+          "ResistFrostbite": 74,
+          "ResistBurn": 74,
+          "ResistEShock": 74,
+          "ResistPoison": 74,
+          "ResistZombie": 74
+        },
+        "koClass": 2,
+        "koRecoverMs": 3000,
+        "tacticsId": 28200,
+        "championTacticsId": 28100,
+        "skills": [
+          "msk_12117",
+          "msk_12120"
+        ]
+      }
+    },
+    {
+      "id": "mob_monkey_clon",
+      "name": "Sosungsung",
+      "level": 37,
+      "modelKey": "mob_monkey_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2424,
+      "physAtk": [
+        383,
+        456
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 162,
+      "magDef": 259,
+      "attackRangeU": 3.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 1184,
+      "dropTableId": "dt_monkey_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 37,
+          "mar": 37,
+          "er": 99,
+          "br": 0,
+          "hr": 99,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 74,
+          "ResistFrostbite": 74,
+          "ResistBurn": 74,
+          "ResistEShock": 74,
+          "ResistPoison": 74,
+          "ResistZombie": 74
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 28400,
+        "championTacticsId": 28300,
+        "skills": [
+          "msk_12121",
+          "msk_12122",
+          "msk_12123"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_blackrobberarcher_clon",
+      "name": "Strong Black Archer",
+      "level": 37,
+      "modelKey": "mob_blackrobberarcher_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 63926,
+      "physAtk": [
+        383,
+        456
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 162,
+      "magDef": 259,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 3500,
+      "walkSpeedU": 3,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 24871,
+      "dropTableId": "dt_strong_blackrobberarcher_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 37,
+          "mar": 37,
+          "er": 99,
+          "br": 0,
+          "hr": 99,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 74,
+          "ResistFrostbite": 74,
+          "ResistBurn": 74,
+          "ResistEShock": 74,
+          "ResistPoison": 74,
+          "ResistZombie": 74
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3588",
+          "msk_3589"
+        ]
+      }
+    },
+    {
+      "id": "mob_blackrobber",
+      "name": "Black Robber",
+      "level": 38,
+      "modelKey": "mob_blackrobber",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2539,
+      "physAtk": [
+        403,
+        480
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 178,
+      "magDef": 259,
+      "attackRangeU": 4.6,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 3,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1244,
+      "dropTableId": "dt_blackrobber",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 38,
+          "mar": 38,
+          "er": 101,
+          "br": 0,
+          "hr": 101,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 76,
+          "ResistFrostbite": 76,
+          "ResistBurn": 76,
+          "ResistEShock": 76,
+          "ResistPoison": 76,
+          "ResistZombie": 76
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 59,
+        "skills": [
+          "msk_240",
+          "msk_241"
+        ]
+      }
+    },
+    {
+      "id": "mob_monkey",
+      "name": "Sungsung",
+      "level": 38,
+      "modelKey": "mob_monkey",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2539,
+      "physAtk": [
+        403,
+        480
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 178,
+      "magDef": 259,
+      "attackRangeU": 3.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1244,
+      "dropTableId": "dt_monkey",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 38,
+          "mar": 38,
+          "er": 101,
+          "br": 0,
+          "hr": 101,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 76,
+          "ResistFrostbite": 76,
+          "ResistBurn": 76,
+          "ResistEShock": 76,
+          "ResistPoison": 76,
+          "ResistZombie": 76
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 28500,
+        "skills": [
+          "msk_12124",
+          "msk_12125",
+          "msk_12126"
+        ]
+      }
+    },
+    {
+      "id": "mob_golem_clon",
+      "name": "Stone Golem",
+      "level": 39,
+      "modelKey": "mob_golem_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2982,
+      "physAtk": [
+        424,
+        505
+      ],
+      "magAtk": [
+        581,
+        662
+      ],
+      "physDef": 186,
+      "magDef": 271,
+      "attackRangeU": 7,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 5.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1306,
+      "dropTableId": "dt_golem_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 39,
+          "mar": 39,
+          "er": 103,
+          "br": 0,
+          "hr": 103,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 78,
+          "ResistFrostbite": 78,
+          "ResistBurn": 78,
+          "ResistEShock": 78,
+          "ResistPoison": 78,
+          "ResistZombie": 78
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 28700,
+        "skills": [
+          "msk_12127",
+          "msk_12128"
+        ]
+      }
+    },
+    {
+      "id": "mob_redscorpion_clon",
+      "name": "Small Red Scorpion",
+      "level": 39,
+      "modelKey": "mob_redscorpion_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2982,
+      "physAtk": [
+        424,
+        505
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 178,
+      "magDef": 284,
+      "attackRangeU": 2.2,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 6,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1306,
+      "dropTableId": "dt_redscorpion_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 39,
+          "mar": 39,
+          "er": 103,
+          "br": 0,
+          "hr": 103,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 78,
+          "ResistFrostbite": 78,
+          "ResistBurn": 78,
+          "ResistEShock": 78,
+          "ResistPoison": 78,
+          "ResistZombie": 78
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 91,
+        "skills": [
+          "msk_242",
+          "msk_243"
+        ]
+      }
+    },
+    {
+      "id": "mob_golem",
+      "name": "Rock Golem",
+      "level": 40,
+      "modelKey": "mob_golem",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 3121,
+      "physAtk": [
+        446,
+        531
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 194,
+      "magDef": 284,
+      "attackRangeU": 7,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 5.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 1371,
+      "dropTableId": "dt_golem",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 40,
+          "mar": 40,
+          "er": 105,
+          "br": 0,
+          "hr": 105,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 78,
+          "ResistFrostbite": 78,
+          "ResistBurn": 78,
+          "ResistEShock": 78,
+          "ResistPoison": 78,
+          "ResistZombie": 78
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 29000,
+        "championTacticsId": 28900,
+        "skills": [
+          "msk_12129",
+          "msk_12130"
+        ]
+      }
+    },
+    {
+      "id": "mob_redscorpion",
+      "name": "Red Scorpion",
+      "level": 40,
+      "modelKey": "mob_redscorpion",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 3121,
+      "physAtk": [
+        446,
+        531
+      ],
+      "magAtk": [
+        611,
+        697
+      ],
+      "physDef": 186,
+      "magDef": 297,
+      "attackRangeU": 2.2,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 6,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1371,
+      "dropTableId": "dt_redscorpion",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 40,
+          "mar": 40,
+          "er": 105,
+          "br": 0,
+          "hr": 105,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 78,
+          "ResistFrostbite": 78,
+          "ResistBurn": 78,
+          "ResistEShock": 78,
+          "ResistPoison": 78,
+          "ResistZombie": 78
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 66,
+        "skills": [
+          "msk_244",
+          "msk_245"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_redscorpion",
+      "name": "Strong Red Scorpion",
+      "level": 40,
+      "modelKey": "mob_redscorpion",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 93629,
+      "physAtk": [
+        446,
+        531
+      ],
+      "magAtk": [
+        611,
+        697
+      ],
+      "physDef": 186,
+      "magDef": 297,
+      "attackRangeU": 2.2,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 6,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 28792,
+      "dropTableId": "dt_strong_redscorpion",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 40,
+          "mar": 40,
+          "er": 105,
+          "br": 0,
+          "hr": 105,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 78,
+          "ResistFrostbite": 78,
+          "ResistBurn": 78,
+          "ResistEShock": 78,
+          "ResistPoison": 78,
+          "ResistZombie": 78
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3536",
+          "msk_3537"
+        ]
+      }
+    },
+    {
+      "id": "mob_uruchi",
+      "name": "Uruchi",
+      "level": 40,
+      "modelKey": "mob_uruchi",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "unique": true,
+      "hp": 1779528,
+      "physAtk": [
+        543,
+        646
+      ],
+      "magAtk": [
+        818,
+        932
+      ],
+      "physDef": 124,
+      "magDef": 149,
+      "attackRangeU": 11.2,
+      "attackIntervalMs": 5000,
+      "walkSpeedU": 4.2,
+      "runSpeedU": 12,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1316197,
+      "dropTableId": "dt_uruchi",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 40,
+          "mar": 40,
+          "er": 105,
+          "br": 0,
+          "hr": 105,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 90,
+          "ResistFrostbite": 90,
+          "ResistBurn": 90,
+          "ResistEShock": 90,
+          "ResistPoison": 90,
+          "ResistZombie": 90,
+          "ResistSleep": 50,
+          "ResistRoot": 50,
+          "ResistSlow": 50,
+          "ResistFear": 100,
+          "ResistMyopia": 100,
+          "ResistBlood": 50,
+          "ResistStone": 100,
+          "ResistDark": 50,
+          "ResistStun": 100,
+          "ResistChaos": 100,
+          "ResistCsePD": 50,
+          "ResistCseMD": 50,
+          "ResistCseSTR": 50,
+          "ResistCseINT": 50,
+          "ResistCseHP": 50,
+          "ResistCseMP": 50
+        },
+        "koClass": 0,
+        "koRecoverMs": 0,
+        "skills": [
+          "msk_250",
+          "msk_251",
+          "msk_252",
+          "msk_3053",
+          "msk_3054",
+          "msk_3055",
+          "msk_3056"
+        ]
+      }
+    },
+    {
+      "id": "mob_redeyeghost",
+      "name": "Red-eye Ghost",
+      "level": 41,
+      "modelKey": "mob_redeyeghost",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 2907,
+      "physAtk": [
+        469,
+        558
+      ],
+      "magAtk": [
+        643,
+        732
+      ],
+      "physDef": 186,
+      "magDef": 324,
+      "attackRangeU": 1.8,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 3,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1426,
+      "dropTableId": "dt_redeyeghost",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 41,
+          "mar": 41,
+          "er": 107,
+          "br": 0,
+          "hr": 107,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 78,
+          "ResistFrostbite": 78,
+          "ResistBurn": 78,
+          "ResistEShock": 78,
+          "ResistPoison": 78,
+          "ResistZombie": 78
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 64,
+        "skills": [
+          "msk_246",
+          "msk_247"
+        ]
+      }
+    },
+    {
+      "id": "mob_redeyeghost_clon",
+      "name": "Dark-eye Ghost",
+      "level": 42,
+      "modelKey": "mob_redeyeghost_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 3038,
+      "physAtk": [
+        492,
+        586
+      ],
+      "magAtk": [
+        675,
+        769
+      ],
+      "physDef": 194,
+      "magDef": 338,
+      "attackRangeU": 1.8,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 3,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1483,
+      "dropTableId": "dt_redeyeghost_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 42,
+          "mar": 42,
+          "er": 109,
+          "br": 0,
+          "hr": 109,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 79,
+          "ResistFrostbite": 79,
+          "ResistBurn": 79,
+          "ResistEShock": 79,
+          "ResistPoison": 79,
+          "ResistZombie": 79
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 92,
+        "skills": [
+          "msk_248",
+          "msk_249"
+        ]
+      }
+    },
+    {
+      "id": "mob_ong_clon2",
+      "name": "Maong",
+      "level": 43,
+      "modelKey": "mob_ong_clon2",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 3172,
+      "physAtk": [
+        517,
+        616
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 211,
+      "magDef": 338,
+      "attackRangeU": 3,
+      "attackIntervalMs": 1500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1542,
+      "dropTableId": "dt_ong_clon2",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 43,
+          "mar": 43,
+          "er": 111,
+          "br": 0,
+          "hr": 111,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 79,
+          "ResistFrostbite": 79,
+          "ResistBurn": 79,
+          "ResistEShock": 79,
+          "ResistPoison": 79,
+          "ResistZombie": 79
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 68,
+        "skills": [
+          "msk_253",
+          "msk_254"
+        ]
+      }
+    },
+    {
+      "id": "mob_bunwang_clon",
+      "name": "Small Bunwang",
+      "level": 44,
+      "modelKey": "mob_bunwang_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 3311,
+      "physAtk": [
+        543,
+        646
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 221,
+      "magDef": 353,
+      "attackRangeU": 3.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 1604,
+      "dropTableId": "dt_bunwang_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 44,
+          "mar": 44,
+          "er": 113,
+          "br": 0,
+          "hr": 113,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 80,
+          "ResistFrostbite": 80,
+          "ResistBurn": 80,
+          "ResistEShock": 80,
+          "ResistPoison": 80,
+          "ResistZombie": 80
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 73,
+        "skills": [
+          "msk_255"
+        ]
+      }
+    },
+    {
+      "id": "mob_bunwang",
+      "name": "Bunwang",
+      "level": 45,
+      "modelKey": "mob_bunwang",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 3454,
+      "physAtk": [
+        569,
+        677
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 221,
+      "magDef": 384,
+      "attackRangeU": 3.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1668,
+      "dropTableId": "dt_bunwang",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 45,
+          "mar": 45,
+          "er": 115,
+          "br": 0,
+          "hr": 115,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 80,
+          "ResistFrostbite": 80,
+          "ResistBurn": 80,
+          "ResistEShock": 80,
+          "ResistPoison": 80,
+          "ResistZombie": 80
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 74,
+        "skills": [
+          "msk_256",
+          "msk_257"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_bunwang",
+      "name": "Strong Bunwang",
+      "level": 45,
+      "modelKey": "mob_bunwang",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 103611,
+      "physAtk": [
+        569,
+        677
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 221,
+      "magDef": 384,
+      "attackRangeU": 3.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 35030,
+      "dropTableId": "dt_strong_bunwang",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 45,
+          "mar": 45,
+          "er": 115,
+          "br": 0,
+          "hr": 115,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 80,
+          "ResistFrostbite": 80,
+          "ResistBurn": 80,
+          "ResistEShock": 80,
+          "ResistPoison": 80,
+          "ResistZombie": 80
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3538",
+          "msk_3539"
+        ]
+      }
+    },
+    {
+      "id": "mob_deserttrunkz_clon",
+      "name": "Ultra Blood Devil",
+      "level": 46,
+      "modelKey": "mob_deserttrunkz_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 4052,
+      "physAtk": [
+        596,
+        710
+      ],
+      "magAtk": [
+        818,
+        932
+      ],
+      "physDef": 230,
+      "magDef": 400,
+      "attackRangeU": 46,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1735,
+      "dropTableId": "dt_deserttrunkz_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 46,
+          "mar": 46,
+          "er": 117,
+          "br": 0,
+          "hr": 117,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 80,
+          "ResistFrostbite": 80,
+          "ResistBurn": 80,
+          "ResistEShock": 80,
+          "ResistPoison": 80,
+          "ResistZombie": 80
+        },
+        "koClass": 1,
+        "koRecoverMs": 3000,
+        "tacticsId": 69,
+        "skills": [
+          "msk_258",
+          "msk_259"
+        ]
+      }
+    },
+    {
+      "id": "mob_whitespider_clon",
+      "name": "Golden Spider",
+      "level": 47,
+      "modelKey": "mob_whitespider_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 3753,
+      "physAtk": [
+        625,
+        744
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 250,
+      "magDef": 400,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1804,
+      "dropTableId": "dt_whitespider_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 47,
+          "mar": 47,
+          "er": 119,
+          "br": 0,
+          "hr": 119,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 81,
+          "ResistFrostbite": 81,
+          "ResistBurn": 81,
+          "ResistEShock": 81,
+          "ResistPoison": 81,
+          "ResistZombie": 81
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 93,
+        "skills": [
+          "msk_260"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_whitespider",
+      "name": "Strong White Spider",
+      "level": 48,
+      "modelKey": "mob_whitespider",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 117283,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        898,
+        1022
+      ],
+      "physDef": 250,
+      "magDef": 433,
+      "attackRangeU": 13,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 5.55,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 39404,
+      "dropTableId": "dt_strong_whitespider",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 48,
+          "mar": 48,
+          "er": 121,
+          "br": 0,
+          "hr": 121,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 81,
+          "ResistFrostbite": 81,
+          "ResistBurn": 81,
+          "ResistEShock": 81,
+          "ResistPoison": 81,
+          "ResistZombie": 81
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3540"
+        ]
+      }
+    },
+    {
+      "id": "mob_whitespider",
+      "name": "White Spider",
+      "level": 48,
+      "modelKey": "mob_whitespider",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 3909,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        898,
+        1022
+      ],
+      "physDef": 250,
+      "magDef": 433,
+      "attackRangeU": 13,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 5.55,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1876,
+      "dropTableId": "dt_whitespider",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 48,
+          "mar": 48,
+          "er": 121,
+          "br": 0,
+          "hr": 121,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 81,
+          "ResistFrostbite": 81,
+          "ResistBurn": 81,
+          "ResistEShock": 81,
+          "ResistPoison": 81,
+          "ResistZombie": 81
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 71,
+        "skills": [
+          "msk_261"
+        ]
+      }
+    },
+    {
+      "id": "mob_mujigi",
+      "name": "Mujigi",
+      "level": 49,
+      "modelKey": "mob_mujigi",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 3557,
+      "physAtk": [
+        685,
+        815
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 282,
+      "magDef": 416,
+      "attackRangeU": 2.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 14.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 1951,
+      "dropTableId": "dt_mujigi",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 49,
+          "mar": 49,
+          "er": 123,
+          "br": 0,
+          "hr": 123,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 81,
+          "ResistFrostbite": 81,
+          "ResistBurn": 81,
+          "ResistEShock": 81,
+          "ResistPoison": 81,
+          "ResistZombie": 81
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 76,
+        "skills": [
+          "msk_262",
+          "msk_263"
+        ]
+      }
+    },
+    {
+      "id": "mob_mujigi_clon",
+      "name": "Ujigi",
+      "level": 50,
+      "modelKey": "mob_mujigi_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 3701,
+      "physAtk": [
+        717,
+        853
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 282,
+      "magDef": 451,
+      "attackRangeU": 2.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 14.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 2029,
+      "dropTableId": "dt_mujigi_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 50,
+          "mar": 50,
+          "er": 125,
+          "br": 0,
+          "hr": 125,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 82,
+          "ResistFrostbite": 82,
+          "ResistBurn": 82,
+          "ResistEShock": 82,
+          "ResistPoison": 82,
+          "ResistZombie": 82
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 94,
+        "skills": [
+          "msk_264",
+          "msk_265"
+        ]
+      }
+    },
+    {
+      "id": "mob_ishade",
+      "name": "Ishade",
+      "level": 51,
+      "modelKey": "mob_ishade",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 3849,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        1030,
+        1172
+      ],
+      "physDef": 282,
+      "magDef": 487,
+      "attackRangeU": 46,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 2101,
+      "dropTableId": "dt_ishade",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 51,
+          "mar": 51,
+          "er": 127,
+          "br": 0,
+          "hr": 127,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 82,
+          "ResistFrostbite": 82,
+          "ResistBurn": 82,
+          "ResistEShock": 82,
+          "ResistPoison": 82,
+          "ResistZombie": 82
+        },
+        "koClass": 1,
+        "koRecoverMs": 3000,
+        "tacticsId": 95,
+        "skills": [
+          "msk_266",
+          "msk_267"
+        ]
+      }
+    },
+    {
+      "id": "mob_ishade_clon",
+      "name": "Hashade",
+      "level": 52,
+      "modelKey": "mob_ishade_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 4001,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        1077,
+        1225
+      ],
+      "physDef": 293,
+      "magDef": 507,
+      "attackRangeU": 46,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 2174,
+      "dropTableId": "dt_ishade_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 52,
+          "mar": 52,
+          "er": 129,
+          "br": 0,
+          "hr": 129,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 82,
+          "ResistFrostbite": 82,
+          "ResistBurn": 82,
+          "ResistEShock": 82,
+          "ResistPoison": 82,
+          "ResistZombie": 82
+        },
+        "koClass": 1,
+        "koRecoverMs": 3000,
+        "tacticsId": 97,
+        "skills": [
+          "msk_268",
+          "msk_269"
+        ]
+      }
+    },
+    {
+      "id": "mob_spider_clon",
+      "name": "Blue-face Spider",
+      "level": 52,
+      "modelKey": "mob_spider_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 4584,
+      "physAtk": [
+        784,
+        933
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 305,
+      "magDef": 487,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 5.55,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 2174,
+      "dropTableId": "dt_spider_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 52,
+          "mar": 52,
+          "er": 129,
+          "br": 0,
+          "hr": 129,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 82,
+          "ResistFrostbite": 82,
+          "ResistBurn": 82,
+          "ResistEShock": 82,
+          "ResistPoison": 82,
+          "ResistZombie": 82
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 98,
+        "skills": [
+          "msk_270"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_ishade_clon",
+      "name": "Strong Ishade",
+      "level": 52,
+      "modelKey": "mob_ishade_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 120044,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        1077,
+        1225
+      ],
+      "physDef": 293,
+      "magDef": 507,
+      "attackRangeU": 46,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 0,
+      "runSpeedU": 0,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 45654,
+      "dropTableId": "dt_strong_ishade_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 52,
+          "mar": 52,
+          "er": 129,
+          "br": 0,
+          "hr": 129,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 82,
+          "ResistFrostbite": 82,
+          "ResistBurn": 82,
+          "ResistEShock": 82,
+          "ResistPoison": 82,
+          "ResistZombie": 82
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3590",
+          "msk_3591"
+        ]
+      }
+    },
+    {
+      "id": "mob_spider",
+      "name": "White-face spider",
+      "level": 53,
+      "modelKey": "mob_spider",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 4766,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        1126,
+        1281
+      ],
+      "physDef": 317,
+      "magDef": 507,
+      "attackRangeU": 2.5,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 5.55,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 2250,
+      "dropTableId": "dt_spider",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 53,
+          "mar": 53,
+          "er": 130,
+          "br": 0,
+          "hr": 130,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 83,
+          "ResistFrostbite": 83,
+          "ResistBurn": 83,
+          "ResistEShock": 83,
+          "ResistPoison": 83,
+          "ResistZombie": 83
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 99,
+        "skills": [
+          "msk_271"
+        ]
+      }
+    },
+    {
+      "id": "mob_penon_f",
+      "name": "Penon Fighter",
+      "level": 54,
+      "modelKey": "mob_penon_f",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 5586,
+      "physAtk": [
+        857,
+        1019
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 342,
+      "magDef": 507,
+      "attackRangeU": 2.3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 2329,
+      "dropTableId": "dt_penon_f",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 54,
+          "mar": 54,
+          "er": 131,
+          "br": 0,
+          "hr": 131,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 83,
+          "ResistFrostbite": 83,
+          "ResistBurn": 83,
+          "ResistEShock": 83,
+          "ResistPoison": 83,
+          "ResistZombie": 83
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 102,
+        "championTacticsId": 101,
+        "skills": [
+          "msk_272",
+          "msk_273"
+        ]
+      }
+    },
+    {
+      "id": "mob_penon_w",
+      "name": "Penon Warrior",
+      "level": 55,
+      "modelKey": "mob_penon_w",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": false,
+        "giant": true
+      },
+      "hp": 6084,
+      "physAtk": [
+        895,
+        1064
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 355,
+      "magDef": 526,
+      "attackRangeU": 2.3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 2410,
+      "dropTableId": "dt_penon_w",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 55,
+          "mar": 55,
+          "er": 132,
+          "br": 0,
+          "hr": 132,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 83,
+          "ResistFrostbite": 83,
+          "ResistBurn": 83,
+          "ResistEShock": 83,
+          "ResistPoison": 83,
+          "ResistZombie": 83
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 103,
+        "skills": [
+          "msk_289",
+          "msk_290"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_penon_w",
+      "name": "Strong Penon Warrior",
+      "level": 55,
+      "modelKey": "mob_penon_w",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": false,
+        "giant": true
+      },
+      "hp": 182517,
+      "physAtk": [
+        895,
+        1064
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 355,
+      "magDef": 526,
+      "attackRangeU": 2.3,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.25,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 50618,
+      "dropTableId": "dt_strong_penon_w",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 55,
+          "mar": 55,
+          "er": 132,
+          "br": 0,
+          "hr": 132,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 83,
+          "ResistFrostbite": 83,
+          "ResistBurn": 83,
+          "ResistEShock": 83,
+          "ResistPoison": 83,
+          "ResistZombie": 83
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3541",
+          "msk_3542"
+        ]
+      }
+    },
+    {
+      "id": "mob_planar",
+      "name": "Planar",
+      "level": 56,
+      "modelKey": "mob_planar",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 6317,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        1283,
+        1460
+      ],
+      "physDef": 342,
+      "magDef": 589,
+      "attackRangeU": 23.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 2495,
+      "dropTableId": "dt_planar",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 56,
+          "mar": 56,
+          "er": 133,
+          "br": 0,
+          "hr": 133,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 83,
+          "ResistFrostbite": 83,
+          "ResistBurn": 83,
+          "ResistEShock": 83,
+          "ResistPoison": 83,
+          "ResistZombie": 83
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 104,
+        "skills": [
+          "msk_276",
+          "msk_277"
+        ]
+      }
+    },
+    {
+      "id": "mob_gwhitespider_clon",
+      "name": "Big Blue Spider",
+      "level": 57,
+      "modelKey": "mob_gwhitespider_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 5809,
+      "physAtk": [
+        976,
+        1160
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 382,
+      "magDef": 567,
+      "attackRangeU": 1.6,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 5.55,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 2582,
+      "dropTableId": "dt_gwhitespider_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 57,
+          "mar": 57,
+          "er": 134,
+          "br": 0,
+          "hr": 134,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 84,
+          "ResistFrostbite": 84,
+          "ResistBurn": 84,
+          "ResistEShock": 84,
+          "ResistPoison": 84,
+          "ResistZombie": 84
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 106,
+        "skills": [
+          "msk_278"
+        ]
+      }
+    },
+    {
+      "id": "mob_planar_clon",
+      "name": "Sona",
+      "level": 57,
+      "modelKey": "mob_planar_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 6557,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        1340,
+        1524
+      ],
+      "physDef": 355,
+      "magDef": 611,
+      "attackRangeU": 23.5,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 2582,
+      "dropTableId": "dt_planar_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 57,
+          "mar": 57,
+          "er": 134,
+          "br": 0,
+          "hr": 134,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 84,
+          "ResistFrostbite": 84,
+          "ResistBurn": 84,
+          "ResistEShock": 84,
+          "ResistPoison": 84,
+          "ResistZombie": 84
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 107,
+        "skills": [
+          "msk_279",
+          "msk_280"
+        ]
+      }
+    },
+    {
+      "id": "mob_gwhitespider",
+      "name": "Big White Spider",
+      "level": 58,
+      "modelKey": "mob_gwhitespider",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 6027,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        1444,
+        1637
+      ],
+      "physDef": 396,
+      "magDef": 589,
+      "attackRangeU": 13,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 5.55,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 2672,
+      "dropTableId": "dt_gwhitespider",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 58,
+          "mar": 58,
+          "er": 135,
+          "br": 0,
+          "hr": 135,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 84,
+          "ResistFrostbite": 84,
+          "ResistBurn": 84,
+          "ResistEShock": 84,
+          "ResistPoison": 84,
+          "ResistZombie": 84
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 108,
+        "skills": [
+          "msk_281"
+        ]
+      }
+    },
+    {
+      "id": "mob_yeti",
+      "name": "Yeti",
+      "level": 59,
+      "modelKey": "mob_yeti",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 7059,
+      "physAtk": [
+        1062,
+        1263
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 411,
+      "magDef": 611,
+      "attackRangeU": 3.7,
+      "attackIntervalMs": 3500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 2766,
+      "dropTableId": "dt_yeti",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 59,
+          "mar": 59,
+          "er": 136,
+          "br": 0,
+          "hr": 136,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 84,
+          "ResistFrostbite": 84,
+          "ResistBurn": 84,
+          "ResistEShock": 84,
+          "ResistPoison": 84,
+          "ResistZombie": 84
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 111,
+        "championTacticsId": 110,
+        "skills": [
+          "msk_282",
+          "msk_283"
+        ]
+      }
+    },
+    {
+      "id": "mob_isyutaru",
+      "name": "Isyutaru",
+      "level": 60,
+      "modelKey": "mob_isyutaru",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "unique": true,
+      "hp": 4324612,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        2066,
+        2333
+      ],
+      "physDef": 274,
+      "magDef": 329,
+      "attackRangeU": 23.5,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 5.25,
+      "runSpeedU": 10.5,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 2748260,
+      "dropTableId": "dt_isyutaru",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 60,
+          "mar": 60,
+          "er": 137,
+          "br": 0,
+          "hr": 137,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 95,
+          "ResistFrostbite": 95,
+          "ResistBurn": 95,
+          "ResistEShock": 95,
+          "ResistPoison": 95,
+          "ResistZombie": 95,
+          "ResistSleep": 50,
+          "ResistRoot": 50,
+          "ResistSlow": 50,
+          "ResistFear": 100,
+          "ResistMyopia": 100,
+          "ResistBlood": 50,
+          "ResistStone": 100,
+          "ResistDark": 50,
+          "ResistStun": 100,
+          "ResistChaos": 100,
+          "ResistCsePD": 50,
+          "ResistCseMD": 50,
+          "ResistCseSTR": 50,
+          "ResistCseINT": 50,
+          "ResistCseHP": 50,
+          "ResistCseMP": 50
+        },
+        "koClass": 0,
+        "koRecoverMs": 0,
+        "skills": [
+          "msk_286",
+          "msk_287",
+          "msk_288",
+          "msk_3057",
+          "msk_3058",
+          "msk_3059",
+          "msk_3060",
+          "msk_3061",
+          "msk_3062",
+          "msk_3063"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_yeti_clon",
+      "name": "Strong Evil-Yeti",
+      "level": 60,
+      "modelKey": "mob_yeti_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 229030,
+      "physAtk": [
+        1108,
+        1317
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 411,
+      "magDef": 657,
+      "attackRangeU": 3.7,
+      "attackIntervalMs": 3500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 60118,
+      "dropTableId": "dt_strong_yeti_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 60,
+          "mar": 60,
+          "er": 137,
+          "br": 0,
+          "hr": 137,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 84,
+          "ResistFrostbite": 84,
+          "ResistBurn": 84,
+          "ResistEShock": 84,
+          "ResistPoison": 84,
+          "ResistZombie": 84
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3543",
+          "msk_3544"
+        ]
+      }
+    },
+    {
+      "id": "mob_yeti_clon",
+      "name": "Evil-Yeti",
+      "level": 60,
+      "modelKey": "mob_yeti_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 7634,
+      "physAtk": [
+        1108,
+        1317
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 411,
+      "magDef": 657,
+      "attackRangeU": 3.7,
+      "attackIntervalMs": 3500,
+      "walkSpeedU": 3.75,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 2863,
+      "dropTableId": "dt_yeti_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 60,
+          "mar": 60,
+          "er": 137,
+          "br": 0,
+          "hr": 137,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 84,
+          "ResistFrostbite": 84,
+          "ResistBurn": 84,
+          "ResistEShock": 84,
+          "ResistPoison": 84,
+          "ResistZombie": 84
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 112,
+        "skills": [
+          "msk_284",
+          "msk_285"
+        ]
+      }
+    },
+    {
+      "id": "mob_edimmu_clon",
+      "name": "Shakram",
+      "level": 61,
+      "modelKey": "mob_edimmu_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 7003,
+      "physAtk": [
+        1155,
+        1373
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 442,
+      "magDef": 657,
+      "attackRangeU": 8.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 6,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 2949,
+      "dropTableId": "dt_edimmu_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 61,
+          "mar": 61,
+          "er": 138,
+          "br": 0,
+          "hr": 138,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 85,
+          "ResistFrostbite": 85,
+          "ResistBurn": 85,
+          "ResistEShock": 85,
+          "ResistPoison": 85,
+          "ResistZombie": 85
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 134,
+        "skills": [
+          "msk_3474",
+          "msk_3475"
+        ]
+      }
+    },
+    {
+      "id": "mob_edimmu",
+      "name": "Edimmu",
+      "level": 63,
+      "modelKey": "mob_edimmu",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 7515,
+      "physAtk": [
+        1288,
+        1525
+      ],
+      "magAtk": [
+        1831,
+        2068
+      ],
+      "physDef": 442,
+      "magDef": 758,
+      "attackRangeU": 8.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 6,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 3128,
+      "dropTableId": "dt_edimmu",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 63,
+          "mar": 63,
+          "er": 140,
+          "br": 0,
+          "hr": 140,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 85,
+          "ResistFrostbite": 85,
+          "ResistBurn": 85,
+          "ResistEShock": 85,
+          "ResistPoison": 85,
+          "ResistZombie": 85
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 133,
+        "skills": [
+          "msk_3478",
+          "msk_3479"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_edimmu",
+      "name": "Strong Edimmu",
+      "level": 63,
+      "modelKey": "mob_edimmu",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 225442,
+      "physAtk": [
+        1288,
+        1525
+      ],
+      "magAtk": [
+        1831,
+        2068
+      ],
+      "physDef": 442,
+      "magDef": 758,
+      "attackRangeU": 8.1,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 6,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 65693,
+      "dropTableId": "dt_strong_edimmu",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 63,
+          "mar": 63,
+          "er": 140,
+          "br": 0,
+          "hr": 140,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 85,
+          "ResistFrostbite": 85,
+          "ResistBurn": 85,
+          "ResistEShock": 85,
+          "ResistPoison": 85,
+          "ResistZombie": 85
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3592",
+          "msk_3593"
+        ]
+      }
+    },
+    {
+      "id": "mob_deathkara_clon",
+      "name": "Dark Karra",
+      "level": 65,
+      "modelKey": "mob_deathkara_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 7270,
+      "physAtk": [
+        1397,
+        1654
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 491,
+      "magDef": 786,
+      "attackRangeU": 3.7,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 3319,
+      "dropTableId": "dt_deathkara_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 65,
+          "mar": 65,
+          "er": 142,
+          "br": 0,
+          "hr": 142,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 85,
+          "ResistFrostbite": 85,
+          "ResistBurn": 85,
+          "ResistEShock": 85,
+          "ResistPoison": 85,
+          "ResistZombie": 85
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 137,
+        "skills": [
+          "msk_3476",
+          "msk_3477"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_deathkara_clon",
+      "name": "SN_MOB_TK_STRONG_DEATHKARA_CLON",
+      "level": 65,
+      "modelKey": "mob_deathkara_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 283835,
+      "physAtk": [
+        1397,
+        1654
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 491,
+      "magDef": 786,
+      "attackRangeU": 3.7,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 69693,
+      "dropTableId": "dt_strong_deathkara_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 65,
+          "mar": 65,
+          "er": 142,
+          "br": 0,
+          "hr": 142,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 85,
+          "ResistFrostbite": 85,
+          "ResistBurn": 85,
+          "ResistEShock": 85,
+          "ResistPoison": 85,
+          "ResistZombie": 85
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3545",
+          "msk_3546"
+        ]
+      }
+    },
+    {
+      "id": "mob_deathkara",
+      "name": "Death Karra",
+      "level": 67,
+      "modelKey": "mob_deathkara",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 10133,
+      "physAtk": [
+        1514,
+        1792
+      ],
+      "magAtk": [
+        2150,
+        2428
+      ],
+      "physDef": 526,
+      "magDef": 842,
+      "attackRangeU": 3.7,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 3521,
+      "dropTableId": "dt_deathkara",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 67,
+          "mar": 67,
+          "er": 144,
+          "br": 0,
+          "hr": 144,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 86,
+          "ResistFrostbite": 86,
+          "ResistBurn": 86,
+          "ResistEShock": 86,
+          "ResistPoison": 86,
+          "ResistZombie": 86
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 136,
+        "skills": [
+          "msk_3480",
+          "msk_3481"
+        ]
+      }
+    },
+    {
+      "id": "mob_devileye_clon",
+      "name": "Demon Eye",
+      "level": 68,
+      "modelKey": "mob_devileye_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 9265,
+      "physAtk": [
+        1615,
+        1904
+      ],
+      "magAtk": [
+        2299,
+        2588
+      ],
+      "physDef": 526,
+      "magDef": 902,
+      "attackRangeU": 1.8,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 3,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 3626,
+      "dropTableId": "dt_devileye_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 68,
+          "mar": 68,
+          "er": 145,
+          "br": 0,
+          "hr": 145,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 86,
+          "ResistFrostbite": 86,
+          "ResistBurn": 86,
+          "ResistEShock": 86,
+          "ResistPoison": 86,
+          "ResistZombie": 86
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 140,
+        "skills": [
+          "msk_3522",
+          "msk_3523"
+        ]
+      }
+    },
+    {
+      "id": "mob_devileye",
+      "name": "Devil Eye",
+      "level": 70,
+      "modelKey": "mob_devileye",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 9909,
+      "physAtk": [
+        1747,
+        2059
+      ],
+      "magAtk": [
+        2486,
+        2798
+      ],
+      "physDef": 603,
+      "magDef": 902,
+      "attackRangeU": 1.8,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 3,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 3847,
+      "dropTableId": "dt_devileye",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 70,
+          "mar": 70,
+          "er": 147,
+          "br": 0,
+          "hr": 147,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 86,
+          "ResistFrostbite": 86,
+          "ResistBurn": 86,
+          "ResistEShock": 86,
+          "ResistPoison": 86,
+          "ResistZombie": 86
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 139,
+        "skills": [
+          "msk_3524",
+          "msk_3525"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_devileye",
+      "name": "Strong Devil Eye",
+      "level": 70,
+      "modelKey": "mob_devileye",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 297261,
+      "physAtk": [
+        1747,
+        2059
+      ],
+      "magAtk": [
+        2486,
+        2798
+      ],
+      "physDef": 603,
+      "magDef": 902,
+      "attackRangeU": 1.8,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 3,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 80794,
+      "dropTableId": "dt_strong_devileye",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 70,
+          "mar": 70,
+          "er": 147,
+          "br": 0,
+          "hr": 147,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 86,
+          "ResistFrostbite": 86,
+          "ResistBurn": 86,
+          "ResistEShock": 86,
+          "ResistPoison": 86,
+          "ResistZombie": 86
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3547",
+          "msk_3548"
+        ]
+      }
+    },
+    {
+      "id": "mob_bonesoldier_clon",
+      "name": "Niya Soldier",
+      "level": 71,
+      "modelKey": "mob_bonesoldier_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 11596,
+      "physAtk": [
+        1816,
+        2141
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 624,
+      "magDef": 933,
+      "attackRangeU": 5.8,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.7,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 3963,
+      "dropTableId": "dt_bonesoldier_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 71,
+          "mar": 71,
+          "er": 148,
+          "br": 0,
+          "hr": 148,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 86,
+          "ResistFrostbite": 86,
+          "ResistBurn": 86,
+          "ResistEShock": 86,
+          "ResistPoison": 86,
+          "ResistZombie": 86
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 143,
+        "skills": [
+          "msk_3486",
+          "msk_3487"
+        ]
+      }
+    },
+    {
+      "id": "mob_bonesoldier",
+      "name": "Niya Guard",
+      "level": 73,
+      "modelKey": "mob_bonesoldier",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 12816,
+      "physAtk": [
+        1962,
+        2313
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 667,
+      "magDef": 998,
+      "attackRangeU": 5.8,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.7,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 4204,
+      "dropTableId": "dt_bonesoldier",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 73,
+          "mar": 73,
+          "er": 150,
+          "br": 0,
+          "hr": 150,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 87,
+          "ResistFrostbite": 87,
+          "ResistBurn": 87,
+          "ResistEShock": 87,
+          "ResistPoison": 87,
+          "ResistZombie": 87
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 144,
+        "championTacticsId": 142,
+        "skills": [
+          "msk_3490",
+          "msk_3491"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_bonesoldier",
+      "name": "Strong Niya Guard",
+      "level": 73,
+      "modelKey": "mob_bonesoldier",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 384489,
+      "physAtk": [
+        1962,
+        2313
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 667,
+      "magDef": 998,
+      "attackRangeU": 5.8,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 2.7,
+      "runSpeedU": 8.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 88286,
+      "dropTableId": "dt_strong_bonesoldier",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 73,
+          "mar": 73,
+          "er": 150,
+          "br": 0,
+          "hr": 150,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 87,
+          "ResistFrostbite": 87,
+          "ResistBurn": 87,
+          "ResistEShock": 87,
+          "ResistPoison": 87,
+          "ResistZombie": 87
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3596",
+          "msk_3597"
+        ]
+      }
+    },
+    {
+      "id": "mob_bonehunter_clon",
+      "name": "Niya Sniper",
+      "level": 74,
+      "modelKey": "mob_bonehunter_clon",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 10144,
+      "physAtk": [
+        2039,
+        2403
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 667,
+      "magDef": 1067,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 2.7,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 4330,
+      "dropTableId": "dt_bonehunter_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 74,
+          "mar": 74,
+          "er": 151,
+          "br": 0,
+          "hr": 151,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 87,
+          "ResistFrostbite": 87,
+          "ResistBurn": 87,
+          "ResistEShock": 87,
+          "ResistPoison": 87,
+          "ResistZombie": 87
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 146,
+        "skills": [
+          "msk_3510",
+          "msk_3511"
+        ]
+      }
+    },
+    {
+      "id": "mob_bonehunter",
+      "name": "Niya Hunter",
+      "level": 76,
+      "modelKey": "mob_bonehunter",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 10819,
+      "physAtk": [
+        2250,
+        2643
+      ],
+      "magAtk": [
+        3206,
+        3599
+      ],
+      "physDef": 689,
+      "magDef": 1178,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 2.7,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 4594,
+      "dropTableId": "dt_bonehunter",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 76,
+          "mar": 76,
+          "er": 153,
+          "br": 0,
+          "hr": 153,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 87,
+          "ResistFrostbite": 87,
+          "ResistBurn": 87,
+          "ResistEShock": 87,
+          "ResistPoison": 87,
+          "ResistZombie": 87
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 145,
+        "skills": [
+          "msk_3488",
+          "msk_3489"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_bonehunter",
+      "name": "Strong Niya Hunter",
+      "level": 76,
+      "modelKey": "mob_bonehunter",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 324564,
+      "physAtk": [
+        2250,
+        2643
+      ],
+      "magAtk": [
+        3206,
+        3599
+      ],
+      "physDef": 689,
+      "magDef": 1178,
+      "attackRangeU": 20.5,
+      "attackIntervalMs": 2000,
+      "walkSpeedU": 2.7,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 96472,
+      "dropTableId": "dt_strong_bonehunter",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 76,
+          "mar": 76,
+          "er": 153,
+          "br": 0,
+          "hr": 153,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 87,
+          "ResistFrostbite": 87,
+          "ResistBurn": 87,
+          "ResistEShock": 87,
+          "ResistPoison": 87,
+          "ResistZombie": 87
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3549",
+          "msk_3550"
+        ]
+      }
+    },
+    {
+      "id": "mob_bonemage_clon",
+      "name": "Niya Mage",
+      "level": 77,
+      "modelKey": "mob_bonemage_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 11170,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        3328,
+        3737
+      ],
+      "physDef": 712,
+      "magDef": 1217,
+      "attackRangeU": 16,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 7.5,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 4732,
+      "dropTableId": "dt_bonemage_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 77,
+          "mar": 77,
+          "er": 154,
+          "br": 0,
+          "hr": 154,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 87,
+          "ResistFrostbite": 87,
+          "ResistBurn": 87,
+          "ResistEShock": 87,
+          "ResistPoison": 87,
+          "ResistZombie": 87
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 149,
+        "skills": [
+          "msk_3493",
+          "msk_3494"
+        ]
+      }
+    },
+    {
+      "id": "mob_bonemage",
+      "name": "Niya Shaman",
+      "level": 78,
+      "modelKey": "mob_bonemage",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 11532,
+      "physAtk": [
+        0,
+        0
+      ],
+      "magAtk": [
+        3455,
+        3879
+      ],
+      "physDef": 736,
+      "magDef": 1257,
+      "attackRangeU": 16,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 7.5,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 4874,
+      "dropTableId": "dt_bonemage",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 78,
+          "mar": 78,
+          "er": 155,
+          "br": 0,
+          "hr": 155,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 88,
+          "ResistFrostbite": 88,
+          "ResistBurn": 88,
+          "ResistEShock": 88,
+          "ResistPoison": 88,
+          "ResistZombie": 88
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 148,
+        "skills": [
+          "msk_3497",
+          "msk_3498"
+        ]
+      }
+    },
+    {
+      "id": "mob_bonegeneral_clon",
+      "name": "Niya Royal Guard",
+      "level": 79,
+      "modelKey": "mob_bonegeneral_clon",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 11903,
+      "physAtk": [
+        2518,
+        2958
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 811,
+      "magDef": 1217,
+      "attackRangeU": 7,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.45,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 6024,
+      "dropTableId": "dt_bonegeneral_clon",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 79,
+          "mar": 79,
+          "er": 156,
+          "br": 20,
+          "hr": 156,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 88,
+          "ResistFrostbite": 88,
+          "ResistBurn": 88,
+          "ResistEShock": 88,
+          "ResistPoison": 88,
+          "ResistZombie": 88
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 152,
+        "skills": [
+          "msk_3495",
+          "msk_3496"
+        ]
+      }
+    },
+    {
+      "id": "mob_bonegeneral",
+      "name": "Niya General",
+      "level": 80,
+      "modelKey": "mob_bonegeneral",
+      "aggro": "passive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 14614,
+      "physAtk": [
+        2613,
+        3070
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 838,
+      "magDef": 1257,
+      "attackRangeU": 7,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.45,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 0,
+      "leashRangeU": 45,
+      "xp": 6205,
+      "dropTableId": "dt_bonegeneral",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 80,
+          "mar": 80,
+          "er": 157,
+          "br": 20,
+          "hr": 157,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 88,
+          "ResistFrostbite": 88,
+          "ResistBurn": 88,
+          "ResistEShock": 88,
+          "ResistPoison": 88,
+          "ResistZombie": 88
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "tacticsId": 153,
+        "championTacticsId": 151,
+        "skills": [
+          "msk_3499",
+          "msk_3500"
+        ]
+      }
+    },
+    {
+      "id": "mob_bonelord",
+      "name": "Lord Yarkan",
+      "level": 80,
+      "modelKey": "mob_bonelord",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": false,
+        "giant": false
+      },
+      "unique": true,
+      "hp": 9353045,
+      "physAtk": [
+        3747,
+        4316
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 559,
+      "magDef": 1047,
+      "attackRangeU": 9.3,
+      "attackIntervalMs": 3000,
+      "walkSpeedU": 4.5,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 4963664,
+      "dropTableId": "dt_bonelord",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 80,
+          "mar": 80,
+          "er": 157,
+          "br": 0,
+          "hr": 157,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 100,
+          "ResistFrostbite": 98,
+          "ResistBurn": 98,
+          "ResistEShock": 98,
+          "ResistPoison": 98,
+          "ResistZombie": 98,
+          "ResistSleep": 50,
+          "ResistRoot": 50,
+          "ResistSlow": 50,
+          "ResistFear": 100,
+          "ResistMyopia": 100,
+          "ResistBlood": 50,
+          "ResistStone": 100,
+          "ResistDark": 50,
+          "ResistStun": 100,
+          "ResistChaos": 100,
+          "ResistCsePD": 50,
+          "ResistCseMD": 50,
+          "ResistCseSTR": 50,
+          "ResistCseINT": 50,
+          "ResistCseHP": 50,
+          "ResistCseMP": 50
+        },
+        "koClass": 0,
+        "koRecoverMs": 0,
+        "skills": [
+          "msk_3501",
+          "msk_3502",
+          "msk_3503",
+          "msk_3504",
+          "msk_3505",
+          "msk_3506",
+          "msk_3507",
+          "msk_3508",
+          "msk_3509"
+        ]
+      }
+    },
+    {
+      "id": "mob_strong_bonegeneral",
+      "name": "Strong Niya General",
+      "level": 80,
+      "modelKey": "mob_bonegeneral",
+      "aggro": "aggressive",
+      "variants": {
+        "champion": true,
+        "giant": true
+      },
+      "hp": 438424,
+      "physAtk": [
+        2613,
+        3070
+      ],
+      "magAtk": [
+        0,
+        0
+      ],
+      "physDef": 838,
+      "magDef": 1257,
+      "attackRangeU": 7,
+      "attackIntervalMs": 2500,
+      "walkSpeedU": 3.45,
+      "runSpeedU": 11.25,
+      "aggroRangeU": 11,
+      "leashRangeU": 45,
+      "xp": 108580,
+      "dropTableId": "dt_strong_bonegeneral",
+      "combat": {
+        "mp": 0,
+        "ratings": {
+          "par": 80,
+          "mar": 80,
+          "er": 157,
+          "br": 20,
+          "hr": 157,
+          "chr": 2
+        },
+        "resists": {
+          "ResistFrozen": 88,
+          "ResistFrostbite": 88,
+          "ResistBurn": 88,
+          "ResistEShock": 88,
+          "ResistPoison": 88,
+          "ResistZombie": 88
+        },
+        "koClass": 3,
+        "koRecoverMs": 3000,
+        "skills": [
+          "msk_3551",
+          "msk_3552"
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,2218 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SON — GM Paneli</title>
+<style>
+  :root{--bg:#0d0b07;--panel:#17130c;--panel2:#0f0c07;--kenar:#3a2f1a;--altin:#d8b45a;
+        --metin:#e8dcc0;--soluk:#9b8b6a;--iyi:#5fbf6a;--kotu:#c9564f}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--metin);
+       font:14px/1.5 "Segoe UI",system-ui,sans-serif;padding:18px}
+  h1{font-size:20px;letter-spacing:.22em;text-align:center;color:var(--altin);font-weight:600;margin:0 0 4px}
+  h3{font-size:12px;color:var(--soluk);text-transform:uppercase;letter-spacing:.08em;margin:20px 0 8px;font-weight:600}
+  .alt{text-align:center;color:var(--soluk);font-size:12px;margin-bottom:16px}
+  .sar{max-width:1180px;margin:0 auto}
+  .sekmeler{display:flex;gap:6px;margin-bottom:12px;flex-wrap:wrap}
+  .sekme{padding:8px 16px;border:1px solid var(--kenar);border-radius:5px;background:#17130c;
+         color:var(--soluk);cursor:pointer;font-size:13px;user-select:none}
+  .sekme.aktif{background:var(--altin);color:#1a1408;border-color:var(--altin);font-weight:600}
+  .kutu{background:var(--panel);border:1px solid var(--kenar);border-radius:8px;padding:18px}
+  .sayfa{display:none} .sayfa.aktif{display:block}
+  .satir{display:grid;grid-template-columns:1fr 130px 92px;gap:10px;align-items:center;
+         padding:8px 0;border-bottom:1px solid #241d12}
+  .satir:last-of-type{border-bottom:0}
+  .ad{font-size:13px}
+  .anahtar{color:var(--soluk);font-size:11px;font-family:ui-monospace,monospace}
+  input,textarea,select{background:#0a0805;border:1px solid var(--kenar);color:var(--metin);
+        border-radius:4px;padding:7px 9px;font-size:13px;font-family:inherit;max-width:100%}
+  input[type=number]{width:100%}
+  input:focus,textarea:focus,select:focus{outline:none;border-color:var(--altin)}
+  .vars{font-size:11px;color:var(--soluk);text-align:right}
+  .rozet{display:inline-block;font-size:10px;padding:1px 6px;border-radius:3px;background:#3a2f1a;color:var(--altin);margin-left:6px}
+  .rozet.gm{background:#4a3a12;color:#ffd97a}
+  .rozet.on{background:#1c3a20;color:var(--iyi)}
+  .rozet.off{background:#2a2118;color:var(--soluk)}
+  .dugmeler{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}
+  button{padding:9px 14px;border-radius:5px;border:1px solid var(--kenar);background:#241d12;
+         color:var(--metin);font-size:13px;cursor:pointer;font-family:inherit}
+  button:hover{border-color:var(--altin)}
+  button.ana{background:var(--altin);color:#1a1408;border-color:var(--altin);font-weight:600}
+  button.kk{padding:4px 10px;font-size:12px}
+  table{width:100%;border-collapse:collapse;font-size:13px}
+  th{text-align:left;color:var(--soluk);font-weight:500;font-size:11px;text-transform:uppercase;
+     letter-spacing:.06em;padding:6px 8px;border-bottom:1px solid var(--kenar)}
+  td{padding:7px 8px;border-bottom:1px solid #241d12}
+  tr.tikla{cursor:pointer}
+  tr.tikla:hover td{background:#1e1810}
+  .link{color:var(--altin);text-decoration:underline dotted;cursor:pointer}
+  .ara{display:flex;gap:8px;margin-bottom:12px}
+  .ara input{flex:1}
+  .kart{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:10px;margin-bottom:14px}
+  .k{background:var(--panel2);border:1px solid var(--kenar);border-radius:6px;padding:12px;text-align:center}
+  .k .n{font-size:21px;color:var(--altin);font-weight:600}
+  .k .e{font-size:11px;color:var(--soluk);text-transform:uppercase;letter-spacing:.05em}
+  .yaz{margin-top:12px;text-align:center;font-size:13px;min-height:18px}
+  .iyi{color:var(--iyi)} .kotu{color:var(--kotu)}
+  .giris{max-width:340px;margin:60px auto}
+  .giris input{width:100%;margin-bottom:10px}
+  .giris button{width:100%}
+  .not{font-size:12px;color:var(--soluk);margin-top:14px;line-height:1.6}
+
+  /* ---- karakter editoru ---- */
+  .kbaslik{display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+           border-bottom:1px solid var(--kenar);padding-bottom:12px;margin-bottom:14px}
+  .kbaslik .isim{font-size:19px;color:var(--altin);font-weight:600}
+  .kbaslik .meta{font-size:12px;color:var(--soluk)}
+  .sayisal{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+  .sayisal label{display:block;font-size:11px;color:var(--soluk);margin-bottom:3px}
+  .turet{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:6px;font-size:12px;color:var(--soluk)}
+  .turet div{background:var(--panel2);border:1px solid #241d12;border-radius:4px;padding:5px 8px}
+  .turet b{color:var(--metin);font-weight:600;float:right}
+  .izgara{display:grid;grid-template-columns:repeat(auto-fill,minmax(58px,1fr));gap:6px}
+  .yv{position:relative;aspect-ratio:1;background:var(--panel2);border:1px solid var(--kenar);
+      border-radius:5px;cursor:pointer;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .yv:hover{border-color:var(--altin)}
+  .yv img{width:100%;height:100%;object-fit:contain}
+  .yv .no{position:absolute;bottom:1px;right:3px;font-size:10px;color:#fff;
+          text-shadow:0 0 3px #000,0 0 3px #000;font-weight:700}
+  .yv .pl{position:absolute;top:1px;left:3px;font-size:10px;color:#ffd97a;
+          text-shadow:0 0 3px #000,0 0 3px #000;font-weight:700}
+  .yv .ix{position:absolute;top:1px;right:3px;font-size:9px;color:var(--soluk)}
+  .yv.bilinmez{border-color:#6b5a2a;background:#1a1509}
+  .yv .soru{font-size:22px;color:#c9a94f;font-weight:700}
+  .yv.bos{opacity:.55}
+  .yv.bos::after{content:attr(data-ad);font-size:9px;color:var(--soluk);text-align:center;padding:2px;line-height:1.15}
+  /* Oyunun envanter penceresiyle AYNI yerlesim (istemci paneli @27436004:
+     slot gorselleri /assets/ui/equip/slot_*.png, avatar sekmeleri Yat dizisi). */
+  .doll{display:grid;grid-template-columns:repeat(4,66px);grid-template-rows:repeat(4,66px);
+        gap:8px;justify-content:center;padding:14px;background:#120e08;
+        border:1px solid var(--kenar);border-radius:8px;width:max-content;margin:0 auto}
+  .doll .yv{aspect-ratio:auto;width:66px;height:66px}
+  .onizleme{grid-column:2 / span 2;grid-row:2;display:flex;align-items:center;justify-content:center;
+            color:var(--soluk);font-size:11px;text-align:center;background:var(--panel2);
+            border:1px solid #241d12;border-radius:5px;padding:4px;line-height:1.3}
+  .avsek{display:flex;gap:0;margin:12px auto 0;width:max-content;
+         border:1px solid var(--kenar);border-radius:6px;overflow:hidden}
+  .avsek div{padding:8px 18px;font-size:12px;color:var(--soluk);cursor:pointer;
+             border-right:1px solid var(--kenar);background:#120e08;user-select:none}
+  .avsek div:last-child{border-right:0}
+  .avsek div.aktif{background:#2b2416;color:var(--altin);font-weight:600}
+  .avyuva{display:flex;justify-content:center;margin-top:10px}
+  .avyuva .yv{width:66px;height:66px;aspect-ratio:auto}
+  .altin-satir{text-align:center;font-size:15px;color:var(--altin);font-weight:600;margin-bottom:10px}
+
+  /* ---- esya secici ---- */
+  .ort{position:fixed;inset:0;background:#000a;display:none;align-items:center;justify-content:center;z-index:50;padding:20px}
+  .ort.acik{display:flex}
+  .kip{background:var(--panel);border:1px solid var(--altin);border-radius:8px;padding:18px;
+       width:min(780px,100%);max-height:88vh;overflow:auto}
+  .kip h2{margin:0 0 4px;font-size:16px;color:var(--altin)}
+  .kip .konu{font-size:12px;color:var(--soluk);margin-bottom:12px}
+  .liste{display:grid;grid-template-columns:repeat(auto-fill,minmax(210px,1fr));gap:6px;max-height:380px;overflow:auto;margin-top:10px}
+  .es{display:flex;align-items:center;gap:8px;padding:5px 7px;border:1px solid #241d12;
+      border-radius:5px;cursor:pointer;background:var(--panel2)}
+  .es:hover{border-color:var(--altin)}
+  .es img{width:38px;height:38px;object-fit:contain;flex:none}
+  .es .n{font-size:12px;line-height:1.2;overflow:hidden}
+  .es .n small{color:var(--soluk);font-size:10px;font-family:ui-monospace,monospace}
+  .secili{border-color:var(--altin)!important;background:#241d12}
+
+  /* ---- v2: yukleniyor / hata / toast / vurgu / siralama ---- */
+  .aciklama{font-size:11px;color:var(--soluk);margin-top:2px;line-height:1.4;max-width:560px}
+  input.hatali{border-color:var(--kotu)!important;background:#1d0f0d}
+  .yukleniyor{color:var(--soluk);display:flex;align-items:center;gap:8px;padding:14px 0;font-size:13px}
+  .yukleniyor::before{content:'';width:14px;height:14px;border:2px solid var(--kenar);
+    border-top-color:var(--altin);border-radius:50%;animation:don .8s linear infinite;flex:none}
+  @keyframes don{to{transform:rotate(360deg)}}
+  #toastlar{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:8px;z-index:99}
+  .toast{background:var(--panel);border:1px solid var(--kenar);border-left:3px solid var(--altin);
+    border-radius:6px;padding:10px 14px;font-size:13px;max-width:340px;box-shadow:0 4px 14px #000a;
+    animation:tgel .18s ease-out}
+  .toast.iyi{border-left-color:var(--iyi)} .toast.kotu{border-left-color:var(--kotu)}
+  @keyframes tgel{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  th.sirala{cursor:pointer;user-select:none} th.sirala:hover{color:var(--altin)}
+  th.sirala .ok{font-size:9px;margin-left:3px}
+  tr.degisti td{background:#241d0d}
+  tr.degisti td:first-child{box-shadow:inset 3px 0 0 var(--altin)}
+  .mikon{width:42px;height:42px;background:var(--panel2);border:1px solid var(--kenar);
+    border-radius:5px;display:flex;align-items:center;justify-content:center;overflow:hidden}
+  .mikon img{width:38px;height:38px;object-fit:contain}
+  .avsek div small{color:inherit;opacity:.7;font-size:10px;margin-left:5px}
+
+  /* ---- v3: sekme seridi KATEGORILERE gruplandi (Oyun / Oyuncular / Icerik / Destek).
+     .sekme sinifi ve data-s degerleri AYNEN korundu - sekme gezinme kodu degismedi. */
+  .grup{display:flex;flex-direction:column;gap:5px}
+  .grup+.grup{padding-left:14px;border-left:1px solid #241d12}
+  .grup .gad{font-size:10px;color:var(--soluk);text-transform:uppercase;
+             letter-spacing:.14em;padding-left:3px;white-space:nowrap}
+  .grup .sek{display:flex;gap:6px;flex-wrap:wrap}
+  .sekme .rozet{margin-left:7px}
+  .sekme.aktif .rozet{background:#1a1408;color:var(--altin)}
+  .rozet.uyari{background:#4a2412;color:#ffb37a}
+
+  /* ---- v3: BILDIRIMLER (hata bildirimleri + ozellik istekleri) ---- */
+  .bduzen{display:grid;grid-template-columns:216px 1fr;gap:16px;align-items:start;margin-top:14px}
+  .bsuz{background:var(--panel2);border:1px solid var(--kenar);border-radius:7px;
+        padding:12px;position:sticky;top:12px}
+  .bsuz h4{margin:14px 0 6px;font-size:11px;color:var(--soluk);text-transform:uppercase;
+           letter-spacing:.08em;font-weight:600}
+  .bsuz h4:first-child{margin-top:0}
+  .bsuz select,.bsuz input[type=text],.bsuz input[type=date]{width:100%}
+  .bsuz .kt{display:flex;flex-direction:column;gap:2px}
+  .bsuz .kt label{display:flex;align-items:center;gap:7px;font-size:12px;cursor:pointer;
+                  padding:3px 4px;border-radius:3px;user-select:none}
+  .bsuz .kt label:hover{background:#1e1810}
+  .bsuz .kt input{width:auto;flex:none;margin:0}
+  .bsuz .kt .n{margin-left:auto;color:var(--soluk);font-size:11px;font-family:ui-monospace,monospace}
+  .btar{display:grid;gap:6px}
+  .bcubuk{display:flex;flex-direction:column;gap:5px;margin:2px 0 6px}
+  .bcubuk .c{display:grid;grid-template-columns:132px 1fr 34px;gap:9px;align-items:center;font-size:12px}
+  .bcubuk .cb{height:9px;background:#241d12;border-radius:5px;overflow:hidden}
+  .bcubuk .cb i{display:block;height:100%;border-radius:5px;
+                background:linear-gradient(90deg,#7d611f,var(--altin))}
+  .bcubuk .cs{text-align:right;color:var(--soluk);font-size:11px;font-family:ui-monospace,monospace}
+  .drm{display:inline-block;font-size:10px;padding:1px 7px;border-radius:3px;white-space:nowrap}
+  .drm.acik{background:#4a3a12;color:#ffd97a}
+  .drm.inceleniyor{background:#1c2f4a;color:#8ec2ff}
+  .drm.cozuldu{background:#1c3a20;color:var(--iyi)}
+  .drm.yoksayildi{background:#2a2118;color:var(--soluk)}
+  .onm.blocker{color:var(--kotu);font-weight:600}
+  .onm.major{color:#e0a44e}
+  .onm.minor{color:var(--soluk)}
+  .kucuk{font-size:11px;color:var(--soluk);line-height:1.35}
+  tr.secilisatir td{background:#241d0d}
+  tr.secilisatir td:first-child{box-shadow:inset 3px 0 0 var(--altin)}
+  .bdetay{margin-top:16px;border:1px solid var(--altin);border-radius:8px;
+          padding:16px;background:var(--panel2)}
+  .bdetay h2{margin:0 0 2px;font-size:16px;color:var(--altin);line-height:1.3}
+  .bdetay .ust{display:flex;gap:12px;align-items:flex-start;flex-wrap:wrap;
+               border-bottom:1px solid var(--kenar);padding-bottom:11px;margin-bottom:13px}
+  .bmeta{display:grid;grid-template-columns:repeat(auto-fit,minmax(168px,1fr));gap:6px;
+         font-size:12px;color:var(--soluk);margin-bottom:12px}
+  .bmeta div{background:#120e08;border:1px solid #241d12;border-radius:4px;padding:5px 8px;
+             display:flex;gap:8px;align-items:baseline}
+  .bmeta b{color:var(--metin);font-weight:600;margin-left:auto;max-width:64%;
+           overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .bmetin{white-space:pre-wrap;word-break:break-word;background:#120e08;border:1px solid #241d12;
+          border-radius:5px;padding:10px 12px;font-size:13px;line-height:1.55}
+  .bshot{margin-top:4px;border:1px solid var(--kenar);border-radius:6px;background:#0a0805;
+         padding:8px;text-align:center}
+  .bshot img{max-width:100%;max-height:360px;border-radius:4px;cursor:zoom-in;display:block;margin:0 auto}
+  .bsohbet{max-height:230px;overflow:auto;background:#120e08;border:1px solid #241d12;
+           border-radius:5px;padding:8px 10px;font-size:12px;line-height:1.5}
+  .bsohbet div{padding:2px 0;border-bottom:1px solid #1a1509}
+  .bsohbet div:last-child{border-bottom:0}
+  .bsohbet .kn{color:var(--altin)}
+  details.bham{margin-top:12px}
+  details.bham summary{cursor:pointer;color:var(--soluk);font-size:12px;user-select:none}
+  details.bham summary:hover{color:var(--altin)}
+  details.bham pre{background:#0a0805;border:1px solid #241d12;border-radius:5px;padding:10px;
+    font-size:11px;line-height:1.45;max-height:340px;overflow:auto;
+    white-space:pre-wrap;word-break:break-word;margin:8px 0 0}
+  #gort .kip{width:min(1320px,100%);text-align:center}
+  #gort img{max-width:100%;max-height:76vh;border-radius:4px}
+  @media (max-width:900px){
+    .bduzen{grid-template-columns:1fr}
+    .bsuz{position:static}
+  }
+  @media (max-width:700px){
+    body{padding:10px}
+    .satir{grid-template-columns:1fr 110px}
+    .satir .vars{display:none}
+    .doll{grid-template-columns:repeat(4,52px);grid-template-rows:repeat(4,52px)}
+    .doll .yv{width:52px;height:52px}
+  }
+</style>
+</head>
+<body>
+
+<div id="girisEkrani" class="giris" style="display:none">
+  <h1>GM Paneli</h1>
+  <p class="alt">Yalnızca GM yetkisi olan hesaplar</p>
+  <div class="kutu">
+    <input id="kad" type="text" placeholder="kullanıcı adı" autocomplete="username">
+    <input id="sif" type="password" placeholder="şifre" autocomplete="current-password">
+    <button class="ana" id="girBtn">Giriş</button>
+    <div id="girisDurum" class="yaz"></div>
+  </div>
+</div>
+
+<div id="panel" class="sar" style="display:none">
+  <h1>GM Paneli</h1>
+  <p class="alt">Değişiklikler <b>anında</b> uygulanır — sunucuyu yeniden başlatmaya gerek yok</p>
+
+  <!-- Sekmeler KATEGORILERE gruplandi. Sinif adlari (.sekme / data-s) ve sekme
+       gezinme kodu degismedi - yalnizca dizilim ve grup basliklari eklendi. -->
+  <div class="sekmeler">
+    <div class="grup"><span class="gad">Oyun</span><div class="sek">
+      <div class="sekme aktif" data-s="ayarlar">Ayarlar</div>
+      <div class="sekme" data-s="durum">Canlı Durum</div>
+    </div></div>
+    <div class="grup"><span class="gad">Oyuncular</span><div class="sek">
+      <div class="sekme" data-s="hesaplar">Hesaplar</div>
+      <div class="sekme" data-s="karakterler">Karakterler</div>
+    </div></div>
+    <div class="grup"><span class="gad">İçerik</span><div class="sek">
+      <div class="sekme" data-s="duyuru">Duyuru</div>
+      <div class="sekme" data-s="mall">Item Mall</div>
+    </div></div>
+    <div class="grup"><span class="gad">Destek</span><div class="sek">
+      <div class="sekme" data-s="bildirimler">Bildirimler<span class="rozet uyari"
+           id="bildRozet" style="display:none" title="açık hata bildirimi">0</span></div>
+    </div></div>
+    <div class="grup" style="margin-left:auto;border-left:0"><span class="gad">Oturum</span><div class="sek">
+      <div class="sekme" data-s="cikis">Çıkış</div>
+    </div></div>
+  </div>
+
+  <div id="s-ayarlar" class="sayfa aktif kutu">
+    <div id="liste"></div>
+    <div class="dugmeler">
+      <button class="ana" id="kaydet" style="flex:1">Kaydet ve Uygula</button>
+      <button id="sifirla" style="flex:1">Silkroad Varsayılanına Dön</button>
+    </div>
+    <div id="durum" class="yaz"></div>
+    <p class="not"><b>Varsayılan</b> sütunu Silkroad Online'ın kendi <code>config/game-config.json</code>
+    değeridir. Değişiklikler ayrı dosyada (<code>data/sunucu-ayarlari.json</code>) tutulur;
+    orijinale asla yazılmaz. Kaydedince 17 sistem modülü yeniden kurulur, bağlı oyuncular düşmez.</p>
+  </div>
+
+  <div id="s-durum" class="sayfa kutu">
+    <div class="kart" id="kartlar"></div>
+    <h3>Bölgeler</h3>
+    <table><thead><tr>
+      <th class="sirala" data-st="bolgeler" data-sk="bolge">Bölge<span class="ok"></span></th>
+      <th class="sirala" data-st="bolgeler" data-sk="oyuncu">Oyuncu<span class="ok"></span></th>
+      <th class="sirala" data-st="bolgeler" data-sk="canavar">Canavar<span class="ok"></span></th>
+      <th class="sirala" data-st="bolgeler" data-sk="olu">Ölü<span class="ok"></span></th>
+      <th class="sirala" data-st="bolgeler" data-sk="ganimet">Ganimet<span class="ok"></span></th></tr></thead>
+      <tbody id="bolgeler"></tbody></table>
+    <h3>Çevrimiçi oyuncular</h3>
+    <table><thead><tr>
+      <th class="sirala" data-st="cevrimici" data-sk="ad">Karakter<span class="ok"></span></th>
+      <th class="sirala" data-st="cevrimici" data-sk="seviye">Sv<span class="ok"></span></th>
+      <th class="sirala" data-st="cevrimici" data-sk="bolge">Bölge<span class="ok"></span></th>
+      <th>Konum</th>
+      <th class="sirala" data-st="cevrimici" data-sk="hp">HP<span class="ok"></span></th></tr></thead>
+      <tbody id="cevrimici"></tbody></table>
+    <div class="dugmeler">
+      <button id="durumYenile">Yenile</button>
+      <select id="durumOto" title="Otomatik tazeleme aralığı">
+        <option value="0">otomatik tazeleme: kapalı</option>
+        <option value="5">otomatik: 5 sn</option>
+        <option value="10">otomatik: 10 sn</option>
+        <option value="30">otomatik: 30 sn</option>
+      </select>
+      <span id="durumSon" style="font-size:11px;color:var(--soluk);align-self:center"></span>
+    </div>
+    <div id="durumYaz" class="yaz"></div>
+  </div>
+
+  <div id="s-hesaplar" class="sayfa kutu">
+    <div class="ara">
+      <input id="hesapQ" type="text" placeholder="kullanıcı adı veya JID ara… (boş = ilk 50)">
+      <button id="hesapAra">Ara</button>
+    </div>
+    <table><thead><tr><th>JID</th><th>Kullanıcı</th><th>Karakter</th><th>GM</th><th></th></tr></thead>
+      <tbody id="hesaplar"></tbody></table>
+    <div id="hesapYaz" class="yaz"></div>
+    <p class="not">GM yetkisi <b>anında</b> geçerli olur — oyuncunun çıkıp girmesi gerekmez
+    (yetki her istekte veritabanından, 5 saniyelik önbellekle okunur).</p>
+  </div>
+
+  <div id="s-karakterler" class="sayfa kutu">
+    <div id="karListe">
+      <div class="ara">
+        <input id="karQ" type="text" placeholder="karakter adı veya CharID ara…">
+        <button id="karAra">Ara</button>
+      </div>
+      <table><thead><tr><th>ID</th><th>Ad</th><th>Sv</th><th>Altın</th><th>Bölge</th><th>Hesap</th><th>Durum</th></tr></thead>
+        <tbody id="karakterler"></tbody></table>
+      <div id="karYaz" class="yaz"></div>
+      <p class="not">Karakter adına tıkla — kuşamı, çantası, deposu, peti ve tüm değerleri açılır.</p>
+    </div>
+    <div id="karDetay" style="display:none"></div>
+  </div>
+
+  <div id="s-duyuru" class="sayfa kutu">
+    <div class="sayisal" style="grid-template-columns:1fr 1fr">
+      <div>
+        <label>Duyuru türü</label>
+        <select id="duyuruTur" style="width:100%"></select>
+        <div id="duyuruAciklama" class="not" style="margin-top:6px"></div>
+      </div>
+      <div id="bicimKutu">
+        <label>Biçim</label>
+        <select id="duyuruBicim" style="width:100%">
+          <option value="line">Satır — sohbet kutusuna düşer</option>
+          <option value="banner">Ekran bandı — büyük bant + sohbet satırı</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="metinKutu" style="margin-top:12px">
+      <label style="font-size:11px;color:var(--soluk)">Mesaj (en fazla 200 karakter)</label>
+      <textarea id="duyuruMetin" rows="3" style="width:100%"></textarea>
+      <div style="margin-top:8px" id="gonderenKutu">
+        <label style="font-size:11px;color:var(--soluk)">Gönderen adı</label>
+        <input id="duyuruFrom" type="text" value="Sistem" maxlength="16">
+      </div>
+    </div>
+
+    <div id="olayKutu" style="display:none;margin-top:12px">
+      <label style="font-size:11px;color:var(--soluk)">Hazır bildirim</label>
+      <select id="duyuruKey" style="width:100%"></select>
+      <div id="duyuruOnizleme" class="not"></div>
+      <div id="duyuruParams" class="sayisal" style="margin-top:8px"></div>
+    </div>
+
+    <div class="dugmeler"><button class="ana" id="duyuruGonder">Tüm Sunucuya Gönder</button></div>
+    <div id="duyuruYaz" class="yaz"></div>
+  </div>
+
+  <div id="s-mall" class="sayfa kutu">
+    <div class="avsek" id="mallSekmeler" style="margin:0 0 8px"></div>
+    <!-- Oyun içi Avatarlar sekmesinin alt sekmeleri (Kostümler/Şapkalar/Aksesuarlar)
+         burada da aynen çizilir; görünümü item slot alanına göre süzer. -->
+    <div class="avsek" id="mallAltSekmeler" style="display:none;margin:0 0 12px"></div>
+
+    <div id="mallDuzen">
+      <table><thead><tr><th style="width:46px"></th><th>Eşya</th><th>Tür</th>
+        <th style="width:130px">Silk fiyatı</th><th style="width:92px">Adet</th>
+        <th style="width:118px">Taşı</th><th style="width:64px"></th></tr></thead>
+        <tbody id="mallKalemler"></tbody></table>
+    </div>
+    <div id="mallPremium" style="display:none"></div>
+
+    <div id="mallEkleKutu">
+      <h3>Kalem ekle — katalogdan ara</h3>
+      <div class="ara">
+        <input id="mallQ" type="text" placeholder="yazmaya başla — canlı arar (ekipman/gear eklenemez)" autocomplete="off">
+        <select id="mallHedef" title="Eklenen kalemin gideceği sekme"></select>
+      </div>
+      <div class="liste" id="mallEsyaListe"><span style="color:var(--soluk)">aramak için yaz…</span></div>
+    </div>
+
+    <div id="mallUyari" class="not" style="display:none;color:var(--kotu)"></div>
+    <div class="dugmeler">
+      <button class="ana" id="mallKaydet" style="flex:1">Kaydet ve Uygula</button>
+      <button id="mallGeri" style="flex:1">Değişiklikleri Geri Al</button>
+    </div>
+    <div id="mallYaz" class="yaz"></div>
+    <p class="not">Katalog HEM sunucu dosyasında (<code>data/items.json</code> → <code>itemMall</code>)
+    HEM istemci paketindeki gömülü kopyada yaşar; <b>Kaydet</b> ikisini aynı istekte atomik yazar ve
+    sistemler yeniden kurulur — sunucu yeniden başlatılmaz. <b>Premiums</b> sekmesi istemcide adıyla
+    özel-durumdur (salt-okunur). Ekipman (weapon / shield / armor / accessory) Item Mall'a eklenemez —
+    mall teslimatı eşya üzerinde stat üretmez. Avatarlar'ın alt sekmeleri (Kostümler / Şapkalar /
+    Aksesuarlar) oyun içi görünümün aynasıdır: yalnızca görünümü item slotuna göre süzer, veri
+    modelinde tek Avatars listesi vardır.</p>
+  </div>
+
+  <!-- ======================================================== BILDIRIMLER ==
+       Istemcinin "Hata Bildir" penceresi iki uca POST atar (ikisi de BU
+       sunucu - Silkroad Online ile hicbir baglantisi yok):
+         POST /api/v1/bug-reports       {category,subject,severity,frequency,
+                                         title,description,characterId,subjectRef,
+                                         context{...},clientVersion,zoneId,pos,screenshot}
+         POST /api/v1/feature-requests  {title,description,clientVersion}
+       Panel bunlari okumak icin admin uclarini kullanir (Serit 1). -->
+  <div id="s-bildirimler" class="sayfa kutu">
+    <div class="avsek" id="bildSekmeler" style="margin:0 0 12px">
+      <div data-bt="hata" class="aktif">Hata Bildirimleri<small id="bildSayHata">…</small></div>
+      <div data-bt="ozellik">Özellik İstekleri<small id="bildSayOzellik">…</small></div>
+    </div>
+
+    <div class="kart" id="bildOzetKart"></div>
+    <div id="bildDagilimKutu" style="display:none">
+      <h3 style="margin-top:6px">Kategoriye göre dağılım</h3>
+      <div class="bcubuk" id="bildDagilim"></div>
+    </div>
+
+    <div class="bduzen">
+      <aside class="bsuz">
+        <h4>Metin arama</h4>
+        <input id="bQ" type="text" placeholder="başlık, açıklama, karakter…" autocomplete="off">
+
+        <div id="bKatKutu">
+          <h4>Kategori</h4>
+          <div class="kt" id="bKat"></div>
+        </div>
+
+        <h4>Durum</h4>
+        <select id="bDurum"></select>
+
+        <div id="bOnemKutu">
+          <h4>Önem</h4>
+          <select id="bOnem"></select>
+        </div>
+
+        <h4>Tarih aralığı</h4>
+        <div class="btar">
+          <input id="bBas" type="date" title="başlangıç (dahil)">
+          <input id="bBit" type="date" title="bitiş (dahil)">
+        </div>
+
+        <h4>Kayıt sayısı</h4>
+        <select id="bLimit">
+          <option value="100">son 100 kayıt</option>
+          <option value="300" selected>son 300 kayıt</option>
+          <option value="1000">son 1000 kayıt</option>
+        </select>
+
+        <div class="dugmeler" style="margin-top:14px">
+          <button id="bYenile" style="flex:1">Yenile</button>
+          <button id="bTemizle" style="flex:1">Süzgeci sıfırla</button>
+        </div>
+        <p class="kucuk" style="margin-top:10px">Süzgeç sunucuya da gönderilir; dönen kayıtlar
+        panelde ayrıca süzülür — bu yüzden sunucu bir süzgeci yok sayarsa da liste doğru kalır.</p>
+      </aside>
+
+      <div>
+        <table id="bildTablo">
+          <thead><tr id="bildBaslik"></tr></thead>
+          <tbody id="bildSatirlar"></tbody>
+        </table>
+        <div id="bildYaz" class="yaz"></div>
+        <div id="bildDetay"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="toastlar"></div>
+
+<!-- ekran goruntusu buyutec penceresi (esya secicisinden ayri overlay) -->
+<div class="ort" id="gort">
+  <div class="kip">
+    <h2 id="gortBaslik">Ekran görüntüsü</h2>
+    <div class="konu" id="gortKonu"></div>
+    <img id="gortResim" alt="hata bildirimi ekran görüntüsü">
+    <div class="dugmeler"><button id="gortKapat" style="margin-left:auto">Kapat (Esc)</button></div>
+  </div>
+</div>
+
+<div class="ort" id="ort">
+  <div class="kip">
+    <h2>Yuva düzenle</h2>
+    <div class="konu" id="kipKonu"></div>
+    <div class="ara">
+      <input id="esyaQ" type="text" placeholder="yazmaya başla — canlı arar (örn: gold blade, hp potion, avatar)" autocomplete="off">
+    </div>
+    <div class="ara" style="gap:6px">
+      <select id="fTur" style="flex:1"><option value="">tüm türler</option></select>
+      <select id="fIrk" style="flex:1"><option value="">tüm ırklar</option></select>
+      <select id="fDerece" style="flex:1"><option value="">tüm dereceler</option></select>
+      <button id="fTemizle">Süzgeci sıfırla</button>
+    </div>
+    <div class="liste" id="esyaListe"></div>
+    <div class="sayisal" style="margin-top:12px;grid-template-columns:repeat(auto-fit,minmax(120px,1fr))">
+      <div><label>Adet</label><input id="kipQty" type="number" value="1" min="1"></div>
+      <div><label>Plus (+)</label><input id="kipPlus" type="number" value="0" min="0" max="22"></div>
+      <div><label>Seçilen</label><input id="kipSecili" type="text" readonly></div>
+    </div>
+    <div class="dugmeler">
+      <button class="ana" id="kipUygula">Yuvaya Koy</button>
+      <button id="kipBosalt">Yuvayı Boşalt</button>
+      <button id="kipKapat" style="margin-left:auto">Vazgeç</button>
+    </div>
+    <div id="kipYaz" class="yaz"></div>
+  </div>
+</div>
+
+<script>
+const S = { token: sessionStorage.getItem('son.admin.token') || null,
+            detay: null, kip: null, secili: null, duyuruSec: null,
+            mall: null, mallAktif: 0, mallIlk: {}, mallKir: false, mallSonuc: [],
+            mallYuva: null, mallAlt: null, alanlar: null,
+            durumVeri: null, durumSirala: null, durumZaman: null, durumMesgul: false,
+            /* bildirimler: her alt sekme (hata / ozellik) kendi listesini ve
+               siralamasini tutar; bildYol calisan uc yolunu hatirlar. */
+            bildTur: 'hata', bildKur: false, bildOzet: null, gorselUrl: null,
+            bildYol: { hata: null, ozellik: null },
+            bild: { hata:    { satirlar: [], sec: null, sirala: { k:'tarih', yon:-1 },
+                               toplam: null, mesgul: false },
+                    ozellik: { satirlar: [], sec: null, sirala: { k:'tarih', yon:-1 },
+                               toplam: null, mesgul: false } } };
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? '').replace(/[<>&"]/g, c => ({'<':'&lt;','>':'&gt;','&':'&amp;','"':'&quot;'}[c]));
+const say = (n) => Number(n ?? 0).toLocaleString('tr');
+const ikonYolu = (i) => i ? '/assets/icons/' + encodeURIComponent(i) + '.png' : null;
+
+async function api(yol, secenek = {}) {
+  try {
+    const r = await fetch(yol, { ...secenek,
+      headers: { 'content-type': 'application/json',
+        ...(S.token ? { authorization: 'Bearer ' + S.token } : {}), ...(secenek.headers || {}) } });
+    return { ok: r.ok, durum: r.status, govde: await r.json().catch(() => ({})) };
+  } catch {
+    /* Ağ hatası (sunucu kapalı / bağlantı koptu): ham exception kullanıcıya sızmaz. */
+    return { ok: false, durum: 0, govde: {} };
+  }
+}
+const yaz = (el, m, iyi) => { const d = $(el); if (!d) return;
+  d.textContent = m; d.className = 'yaz ' + (iyi ? 'iyi' : (m ? 'kotu' : '')); };
+
+/* Ham sunucu kodu ('not_found' gibi) kullanıcıya ASLA gösterilmez — Türkçe karşılık. */
+function hataMetni(r, varsayilan) {
+  if (r && r.durum === 0) return 'Sunucuya ulaşılamadı — bağlantıyı ve sunucuyu kontrol et';
+  const e = r && r.govde && (r.govde.error || r.govde.hata);
+  const SOZLUK = {
+    unauthorized: 'Oturum geçersiz ya da süresi doldu — yeniden giriş yap',
+    not_found: 'Uç bulunamadı — sunucu bu panel sürümünü tanımıyor olabilir',
+    forbidden: 'Bu işleme yetkin yok',
+  };
+  if (e && SOZLUK[e]) return SOZLUK[e];
+  /* İngilizce snake_case kod sızarsa Türkçe zarfla — kod yine parantezde kalır ki iz sürülebilsin. */
+  if (e && /^[a-z0-9_.-]+$/.test(e) && e.includes('_'))
+    return 'İşlem başarısız (sunucu kodu: ' + e + ')';
+  return e || varsayilan || 'İşlem başarısız';
+}
+
+function toast(m, iyi) {
+  const t = document.createElement('div');
+  t.className = 'toast ' + (iyi ? 'iyi' : 'kotu');
+  t.textContent = m;
+  $('toastlar').appendChild(t);
+  setTimeout(() => t.remove(), 4200);
+}
+
+/* Hata mesajı + "Yeniden dene" düğmesi birlikte (yaz() düz metin içindi). */
+function hataYaz(el, mesaj, tekrar) {
+  const d = $(el); if (!d) return;
+  d.className = 'yaz kotu'; d.textContent = '';
+  d.append(mesaj + ' ');
+  if (tekrar) {
+    const b = document.createElement('button');
+    b.className = 'kk'; b.textContent = 'Yeniden dene'; b.onclick = tekrar;
+    d.appendChild(b);
+  }
+}
+const yukleniyor = (el, m) => { const d = $(el); if (d) d.innerHTML =
+  '<div class="yukleniyor">' + esc(m || 'yükleniyor…') + '</div>'; };
+
+function ekranGiris(){ $('girisEkrani').style.display='block'; $('panel').style.display='none'; }
+function ekranPanel(){ $('girisEkrani').style.display='none'; $('panel').style.display='block'; }
+
+document.querySelectorAll('.sekme').forEach(t => t.onclick = () => {
+  if (t.dataset.s === 'cikis') { S.token = null; sessionStorage.removeItem('son.admin.token'); return ekranGiris(); }
+  document.querySelectorAll('.sekme').forEach(x => x.classList.toggle('aktif', x === t));
+  document.querySelectorAll('.sayfa').forEach(p => p.classList.remove('aktif'));
+  $('s-' + t.dataset.s).classList.add('aktif');
+  if (t.dataset.s === 'durum') durumYukle();
+  if (t.dataset.s === 'hesaplar') hesapYukle();
+  if (t.dataset.s === 'karakterler') { karListeGoster(); karYukle(); }
+  if (t.dataset.s === 'duyuru') duyuruKur();
+  /* Mall bir kez yüklenir (duyuruKur emsali) — sekme gezinmesi kaydedilmemiş
+     düzenlemeleri SİLMESİN; taze okuma için "Değişiklikleri Geri Al". */
+  if (t.dataset.s === 'mall' && !S.mall) mallYukle();
+  if (t.dataset.s === 'bildirimler') bildirimKur();
+});
+
+$('girBtn').onclick = async () => {
+  yaz('girisDurum', 'kontrol ediliyor…');
+  const r = await api('/api/v1/auth/login', { method:'POST',
+    body: JSON.stringify({ userId: $('kad').value, password: $('sif').value, remember: false }) });
+  if (!r.ok) return yaz('girisDurum', hataMetni(r, 'giriş başarısız — kullanıcı adı/şifreyi kontrol et'));
+  if (!r.govde.account?.isGm) return yaz('girisDurum', 'bu hesabın GM yetkisi yok');
+  S.token = r.govde.token; sessionStorage.setItem('son.admin.token', S.token);
+  ekranPanel(); ayarYukle(); bildOzetGetir();
+};
+$('sif').onkeydown = (e) => { if (e.key === 'Enter') $('girBtn').onclick(); };
+
+/* --------------------------------------------------------------- AYARLAR */
+function ayarCiz(alanlar){
+  S.alanlar = alanlar;   // panel tarafı doğrulama min/max/tip'i buradan okur
+  $('liste').innerHTML = alanlar.map(a => '<div class="satir">'
+    + '<div><div class="ad">' + esc(a.ad) + (a.degistirilmis?'<span class="rozet">değiştirildi</span>':'')
+    + '</div><div class="anahtar">' + esc(a.k) + '</div>'
+    + (a.aciklama ? '<div class="aciklama">' + esc(a.aciklama) + '</div>' : '')
+    + '</div>'
+    + '<input type="number" step="any" data-k="' + esc(a.k) + '" value="' + a.deger
+    + '" min="' + a.min + '" max="' + a.max + '" title="' + a.min + ' – ' + a.max
+    + (a.tip === 'tamsayi' ? ' (tam sayı)' : '') + '">'
+    + '<div class="vars">varsayılan<br>' + (a.orijinal ?? '—') + '</div></div>').join('');
+  document.querySelectorAll('#liste input[data-k]').forEach(i =>
+    i.oninput = () => i.classList.remove('hatali'));
+}
+async function ayarYukle(){
+  yukleniyor('liste', 'ayarlar yükleniyor…');
+  const r = await api('/api/v1/admin/ayarlar');
+  if (r.durum === 401 || r.durum === 403) return ekranGiris();
+  if (r.ok) { ayarCiz(r.govde.alanlar); yaz('durum', ''); }
+  else { $('liste').innerHTML = ''; hataYaz('durum', hataMetni(r, 'ayarlar yüklenemedi'), ayarYukle); }
+}
+$('kaydet').onclick = async () => {
+  /* Önce panel tarafında doğrulama: hatalı alan vurgulanır, istek hiç gitmez.
+     Sınırlar sunucuyla aynı kaynaktan (GET alanlar: min/max/tip). */
+  const g = {}, hatalar = [];
+  document.querySelectorAll('#liste input[data-k]').forEach(i => {
+    i.classList.remove('hatali');
+    const a = (S.alanlar || []).find(x => x.k === i.dataset.k);
+    if (i.value === '') return;               // boş = dokunma (sunucudaki boş-değer korumasıyla aynı)
+    const n = Number(i.value);
+    let neden = null;
+    if (!Number.isFinite(n)) neden = 'sayı olmalı';
+    else if (a && a.tip === 'tamsayi' && !Number.isInteger(n)) neden = 'tam sayı olmalı';
+    else if (a && (n < a.min || n > a.max)) neden = a.min + ' ile ' + a.max + ' arasında olmalı';
+    if (neden) { i.classList.add('hatali'); hatalar.push((a ? a.ad : i.dataset.k) + ': ' + neden); return; }
+    g[i.dataset.k] = i.value;
+  });
+  if (hatalar.length) { yaz('durum', hatalar[0]); toast(hatalar[0], false); return; }
+  yaz('durum', 'kaydediliyor…');
+  const r = await api('/api/v1/admin/ayarlar', { method:'POST', body: JSON.stringify(g) });
+  if (!r.ok) { const m = hataMetni(r, 'kaydedilemedi'); hataYaz('durum', m); toast(m, false); return; }
+  ayarCiz(r.govde.ayarlar.alanlar); yaz('durum', 'kaydedildi ve anında uygulandı ✓', true);
+  toast('Ayarlar kaydedildi — anında uygulandı', true);
+};
+$('sifirla').onclick = async () => {
+  if (!confirm('TÜM ayarlar Silkroad varsayılanına dönecek. Emin misin?')) return;
+  yaz('durum', 'sıfırlanıyor…');
+  const r = await api('/api/v1/admin/sifirla', { method:'POST' });
+  if (!r.ok) { const m = hataMetni(r, 'sıfırlanamadı'); hataYaz('durum', m); toast(m, false); return; }
+  ayarCiz(r.govde.ayarlar.alanlar); yaz('durum', 'Silkroad varsayılanlarına dönüldü ✓', true);
+  toast('Silkroad varsayılanlarına dönüldü', true);
+};
+
+/* ----------------------------------------------------------- CANLI DURUM */
+function sure(s){ const d=Math.floor(s/86400),h=Math.floor(s%86400/3600),m=Math.floor(s%3600/60);
+  return (d?d+'g ':'')+(h?h+'s ':'')+m+'d'; }
+/* Sıralama durumu S.durumSirala = {tablo, k, yon}; veri S.durumVeri'de tutulur ki
+   başlığa tıklayınca yeni istek atmadan yeniden çizilebilsin. */
+function durumTabloCiz(){
+  const d = S.durumVeri; if (!d) return;
+  const sir = S.durumSirala;
+  const sirala = (dizi, tablo) => {
+    if (!sir || sir.tablo !== tablo) return dizi || [];
+    return [...(dizi || [])].sort((a, b) => {
+      const x = a[sir.k], y = b[sir.k];
+      const c = (typeof x === 'number' && typeof y === 'number')
+        ? x - y : String(x ?? '').localeCompare(String(y ?? ''), 'tr');
+      return sir.yon * c;
+    });
+  };
+  $('bolgeler').innerHTML = sirala(d.bolgeler, 'bolgeler').map(b => '<tr><td>' + esc(b.bolge)
+    + '</td><td>' + b.oyuncu + '</td><td>' + b.canavar + '</td><td>' + b.olu + '</td><td>'
+    + b.ganimet + '</td></tr>').join('')
+    || '<tr><td colspan="5" style="color:var(--soluk)">aktif bölge yok</td></tr>';
+  $('cevrimici').innerHTML = sirala(d.cevrimici, 'cevrimici').map(c => '<tr><td>' + esc(c.ad)
+    + (c.gm?'<span class="rozet gm">GM</span>':'') + '</td><td>' + c.seviye + '</td><td>'
+    + esc(c.bolge) + '</td><td>' + c.x + ', ' + c.z + '</td><td>' + c.hp + '/' + c.maxHp
+    + '</td></tr>').join('') || '<tr><td colspan="5" style="color:var(--soluk)">çevrimiçi oyuncu yok</td></tr>';
+  document.querySelectorAll('#s-durum th.sirala .ok').forEach(sp => {
+    const th = sp.parentElement;
+    const aktif = sir && sir.tablo === th.dataset.st && sir.k === th.dataset.sk;
+    sp.textContent = aktif ? (sir.yon > 0 ? '▲' : '▼') : '';
+  });
+}
+async function durumYukle(){
+  if (S.durumMesgul) return;               // otomatik tazeleme üst üste binmesin
+  S.durumMesgul = true;
+  if (!S.durumVeri) $('kartlar').innerHTML = '<div class="yukleniyor">canlı durum yükleniyor…</div>';
+  const r = await api('/api/v1/admin/durum');
+  S.durumMesgul = false;
+  if (!r.ok) {
+    if (!S.durumVeri) $('kartlar').innerHTML = '';
+    return hataYaz('durumYaz', hataMetni(r, 'canlı durum yüklenemedi'), durumYukle);
+  }
+  const d = r.govde;
+  S.durumVeri = d;
+  $('kartlar').innerHTML = [
+    ['Çevrimiçi', d.oyuncu], ['Canavar', d.canavar], ['Ölü', d.oluCanavar],
+    ['Yerde eşya', d.ganimet], ['Bellek', d.bellekMB+' MB'], ['Çalışma', sure(d.calismaSuresiSn)],
+  ].map(x => '<div class="k"><div class="n">' + x[1] + '</div><div class="e">' + x[0] + '</div></div>').join('');
+  durumTabloCiz();
+  yaz('durumYaz', '');
+  $('durumSon').textContent = 'son: ' + new Date().toLocaleTimeString('tr');
+}
+$('durumYenile').onclick = durumYukle;
+$('durumOto').onchange = () => {
+  clearInterval(S.durumZaman); S.durumZaman = null;
+  const sn = Number($('durumOto').value);
+  if (sn > 0) S.durumZaman = setInterval(() => {
+    /* yalnız sekme açıkken tazele — arka planda boşuna istek atma */
+    if ($('s-durum').classList.contains('aktif')) durumYukle();
+  }, sn * 1000);
+};
+document.querySelectorAll('#s-durum th.sirala').forEach(th => th.onclick = () => {
+  const sir = S.durumSirala;
+  S.durumSirala = (sir && sir.tablo === th.dataset.st && sir.k === th.dataset.sk)
+    ? { tablo: sir.tablo, k: sir.k, yon: -sir.yon }
+    : { tablo: th.dataset.st, k: th.dataset.sk, yon: 1 };
+  durumTabloCiz();
+});
+
+/* -------------------------------------------------------------- HESAPLAR */
+async function hesapYukle(){
+  $('hesaplar').innerHTML = '<tr><td colspan="5"><div class="yukleniyor">hesaplar yükleniyor…</div></td></tr>';
+  const r = await api('/api/v1/admin/hesaplar?q=' + encodeURIComponent($('hesapQ').value));
+  if (!r.ok || r.govde.hata) {
+    $('hesaplar').innerHTML = '';
+    return hataYaz('hesapYaz', hataMetni(r, 'hesaplar yüklenemedi'), hesapYukle);
+  }
+  $('hesaplar').innerHTML = (r.govde.satirlar||[]).map(h => '<tr><td>' + h.JID + '</td><td>'
+    + esc(h.kullanici) + '</td><td>' + h.karakter + '</td><td>'
+    + (h.gm?'<span class="rozet gm">GM</span>':'—') + '</td><td>'
+    + '<button class="kk" data-jid="' + h.JID + '" data-gm="' + (h.gm?0:1) + '">'
+    + (h.gm?'GM yetkisini al':'GM yap') + '</button></td></tr>').join('')
+    || '<tr><td colspan="5" style="color:var(--soluk)">kayıt yok</td></tr>';
+  yaz('hesapYaz', '');
+  document.querySelectorAll('#hesaplar button[data-jid]').forEach(b => b.onclick = async () => {
+    yaz('hesapYaz', 'uygulanıyor…');
+    const r2 = await api('/api/v1/admin/hesap', { method:'POST',
+      body: JSON.stringify({ JID: Number(b.dataset.jid), gm: b.dataset.gm === '1' }) });
+    if (!r2.ok || r2.govde.error) {
+      const m = hataMetni(r2, 'GM yetkisi güncellenemedi');
+      yaz('hesapYaz', m); toast(m, false); return;
+    }
+    yaz('hesapYaz', 'GM yetkisi güncellendi — anında geçerli ✓', true);
+    toast('GM yetkisi güncellendi — anında geçerli', true); hesapYukle();
+  });
+}
+$('hesapAra').onclick = hesapYukle;
+$('hesapQ').onkeydown = (e) => { if (e.key === 'Enter') hesapYukle(); };
+
+/* ----------------------------------------------------------- KARAKTERLER */
+function karListeGoster(){ $('karListe').style.display=''; $('karDetay').style.display='none'; }
+function karDetayGoster(){ $('karListe').style.display='none'; $('karDetay').style.display=''; }
+
+async function karYukle(){
+  $('karakterler').innerHTML = '<tr><td colspan="7"><div class="yukleniyor">karakterler yükleniyor…</div></td></tr>';
+  const r = await api('/api/v1/admin/karakterler?q=' + encodeURIComponent($('karQ').value));
+  if (!r.ok || r.govde.hata) {
+    $('karakterler').innerHTML = '';
+    return hataYaz('karYaz', hataMetni(r, 'karakterler yüklenemedi'), karYukle);
+  }
+  $('karakterler').innerHTML = (r.govde.satirlar||[]).map(c =>
+    '<tr class="tikla" data-id="' + c.CharID + '"><td>' + c.CharID + '</td>'
+    + '<td><span class="link">' + esc(c.ad) + '</span></td><td>' + c.seviye + '</td><td>'
+    + say(c.altin) + '</td><td>' + c.bolge + '</td><td>' + (c.JID ?? '—') + '</td><td>'
+    + (c.silinmis?'<span class="rozet">silinmiş</span>':'aktif') + '</td></tr>').join('')
+    || '<tr><td colspan="7" style="color:var(--soluk)">kayıt yok</td></tr>';
+  document.querySelectorAll('#karakterler tr[data-id]').forEach(tr =>
+    tr.onclick = () => karakterAc(Number(tr.dataset.id)));
+  yaz('karYaz', '');
+}
+$('karAra').onclick = karYukle;
+$('karQ').onkeydown = (e) => { if (e.key === 'Enter') karYukle(); };
+
+async function karakterAc(id){
+  karDetayGoster();
+  $('karDetay').innerHTML = '<div class="yukleniyor">karakter yükleniyor…</div>';
+  const r = await api('/api/v1/admin/karakter?id=' + id);
+  if (!r.ok || r.govde.hata) {
+    $('karDetay').innerHTML = '<p class="kotu">' + esc(hataMetni(r, 'karakter yüklenemedi')) + '</p>'
+      + '<div class="dugmeler"><button onclick="geriListe()">← Listeye dön</button>'
+      + '<button onclick="karakterAc(' + Number(id) + ')">Yeniden dene</button></div>';
+    return;
+  }
+  S.detay = r.govde; S.detay.charId = id;
+  detayCiz();
+}
+window.geriListe = () => { karListeGoster(); karYukle(); };
+window.karakterAc = karakterAc;
+
+/* Bos kusam yuvalarinin yer tutucu gorselleri - oyunun KENDI dosyalari
+   (istemci paneli @27436004: xIt tablosu). */
+const YER_TUTUCU = { weapon:'slot_weapon', shield:'slot_shield', head:'slot_head',
+  shoulder:'slot_shoulder', chest:'slot_chest', gloves:'slot_gloves', pants:'slot_pants',
+  boots:'slot_boots', earring:'slot_earring', necklace:'slot_necklace',
+  ringL:'slot_ring_l', ringR:'slot_ring_r' };
+
+function yuvaHtml(y, ix){
+  const kt = y.katalog, ikon = ikonYolu(kt && kt.ikon);
+  /* COZULEMEYEN ESYA: yuvada gercekten bir sey var ama Silkroad katalogunda
+     karsiligi yok (ornek vSRO baslangic tomarlari ITEM_ETC_..._HELP).
+     Bunu BOS gostermek yalan olur - ham vSRO koduyla, sari "?" ile gosteriyoruz. */
+  if (!y.bos && !y.itemId && y.vsroKod) {
+    return '<div class="yv bilinmez" data-kap="' + esc(y.kap) + '" data-slot="' + y.slot
+      + '" title="' + esc('Silkroad katalogunda karşılığı yok — ' + y.vsroKod) + '">'
+      + '<span class="soru">?</span><span class="ix">' + (ix ?? '') + '</span></div>';
+  }
+  if (y.bos || !y.itemId) {
+    const yt = YER_TUTUCU[y.kap];
+    return '<div class="yv bos" data-kap="' + esc(y.kap) + '" data-slot="' + y.slot
+      + '" data-ad="' + (yt ? '' : esc(y.ad || '')) + '" title="' + esc(y.ad || 'boş') + '">'
+      + (yt ? '<img src="/assets/ui/equip/' + yt + '.png" alt="" style="opacity:.45" onerror="this.remove()">' : '')
+      + '<span class="ix">' + (ix ?? '') + '</span></div>';
+  }
+  const ipucu = (kt && kt.ad || y.itemId) + '\n' + y.itemId
+    + (y.plus ? '\n+' + y.plus : '') + (y.qty > 1 ? '\nx' + y.qty : '')
+    + (y.vsroKod ? '\n' + y.vsroKod : '');
+  return '<div class="yv" data-kap="' + esc(y.kap) + '" data-slot="' + y.slot
+    + '" title="' + esc(ipucu) + '">'
+    + (ikon ? '<img src="' + ikon + '" alt="" onerror="this.style.display=\'none\'">'
+            : '<span style="font-size:9px;color:var(--soluk);padding:2px;text-align:center">' + esc(y.itemId) + '</span>')
+    + (y.plus ? '<span class="pl">+' + y.plus + '</span>' : '')
+    + (y.qty > 1 ? '<span class="no">' + y.qty + '</span>' : '')
+    + '</div>';
+}
+
+const ALAN_AD = { level:'Seviye', xp:'Deneyim', sp:'Beceri puanı', spExp:'SP deneyimi',
+  statPoints:'Stat puanı', str:'Güç (STR)', int:'Zekâ (INT)', gold:'Altın', hp:'HP', mp:'MP' };
+
+function detayCiz(){
+  const d = S.detay, b = d.bilgi || {}, s = d.sayisal || {}, t = d.turetilmis, p = d.pet || {};
+
+  /* KAGIT BEBEK - oyunun envanter penceresiyle AYNI yerlesim:
+       satir1: baslik  omuzluk  eldiven  kolye
+       satir2: zirh    [ onizleme (2 sutun) ]  kupe
+       satir3: pantolon yuzukL  yuzukR   bot
+       satir4:  -      silah    kalkan    -
+     Avatar yuvalari (avatarDress/Hat/Attach = paketteki Yat dizisi) oyunda
+     oldugu gibi ALTTAKI SEKMELERDE. */
+  const yuvaOf = (ad) => (d.kusam || []).find(y => y.kap === ad)
+    || { kap: ad, slot: (d.kusam||[]).length, bos: true, ad };
+  const DIZILIM = [
+    ['head','shoulder','gloves','necklace'],
+    ['chest', null, null, 'earring'],
+    ['pants','ringL','ringR','boots'],
+    [null,'weapon','shield',null],
+  ];
+  let doll = '';
+  DIZILIM.forEach((satir, r) => satir.forEach((ad, c) => {
+    if (ad === null) {
+      if (r === 1 && c === 1) doll += '<div class="onizleme">' + esc(d.bilgi.ad || '') + '<br>'
+        + esc(String(d.bilgi.irk || '')) + ' · ' + esc(String(d.bilgi.cinsiyet || '')) + '</div>';
+      else if (!(r === 1 && c === 2)) doll += '<div></div>';
+      return;
+    }
+    doll += yuvaHtml(yuvaOf(ad));
+  }));
+  const AVATAR_SEK = [['avatarDress','Kostüm'],['avatarHat','Şapka'],['avatarAttach','Eklenti']];
+  const avSek = '<div class="avsek">' + AVATAR_SEK.map((a, i) =>
+    '<div data-av="' + a[0] + '"' + (i === 0 ? ' class="aktif"' : '') + '>' + a[1] + '</div>').join('') + '</div>'
+    + '<div class="avyuva" id="avYuva">' + yuvaHtml(yuvaOf('avatarDress')) + '</div>';
+  const kusam = '<div class="doll">' + doll + '</div>' + avSek;
+  const canta = (d.canta || []).map((y,i) => yuvaHtml(y, i)).join('');
+  const banka = (d.banka && d.banka.yuvalar) ? d.banka.yuvalar.map((y,i) => yuvaHtml(y, i)).join('') : '';
+  const turet = t ? Object.keys(t).map(k => {
+    const v = t[k];
+    return '<div>' + esc(k) + ' <b>' + (typeof v === 'number'
+      ? (Number.isInteger(v) ? v : v.toFixed(2)) : esc(v)) + '</b></div>';
+  }).join('') : '';
+
+  const petHtml = p.buyuyenPet
+    ? '<table><tr><th>Pet</th><th>Sv</th><th>XP</th><th>HP</th><th>HGP</th><th>Durum</th><th>Mod</th><th>Çanta yuvası</th></tr>'
+      + '<tr><td>' + esc(p.buyuyenPet.petId) + '</td><td>' + p.buyuyenPet.seviye + '</td><td>'
+      + say(p.buyuyenPet.xp) + '</td><td>' + say(p.buyuyenPet.hp) + '</td><td>'
+      + say(p.buyuyenPet.hgp) + '/' + say(p.buyuyenPet.hgpMax) + '</td><td>'
+      + (p.buyuyenPet.olu ? '<span class="rozet off">ölü</span>' : '<span class="rozet on">canlı</span>')
+      + '</td><td>' + esc(p.buyuyenPet.mod||'—') + '</td><td>' + (p.buyuyenPet.cantaYuvasi ?? '—')
+      + '</td></tr></table>'
+    : '<p style="color:var(--soluk)">Aktif büyüyen pet yok.</p>';
+  const binekHtml = p.binek
+    ? '<p style="color:var(--soluk)">Binek: <b>' + esc(p.binek.petId) + '</b> — HP ' + say(p.binek.hp)
+      + ', çanta yuvası ' + (p.binek.cantaYuvasi ?? '—') + '</p>'
+    : '<p style="color:var(--soluk)">Aktif binek yok.</p>';
+
+  $('karDetay').innerHTML =
+    '<div class="kbaslik"><button onclick="geriListe()">← Liste</button><div>'
+    + '<div class="isim">' + esc(b.ad || '?')
+    + (d.cevrimici ? '<span class="rozet on">çevrimiçi</span>' : '<span class="rozet off">çevrimdışı</span>')
+    + (b.silinmis ? '<span class="rozet">silinmiş</span>' : '') + '</div>'
+    + '<div class="meta">CharID ' + b.charId + ' · JID ' + (b.JID ?? '—') + ' · bölge '
+    + esc(String(b.bolge ?? '—')) + ' · konum ' + (b.x ?? '—') + ', ' + (b.z ?? '—')
+    + ' · kaynak: ' + esc(d.kaynak) + '</div></div>'
+    + '<button style="margin-left:auto" onclick="karakterAc(' + d.charId + ')">Yenile</button></div>'
+    + (d.uyari ? '<p class="not" style="color:var(--kotu)">' + esc(d.uyari) + '</p>' : '')
+    + '<h3>Değerler</h3><div class="sayisal">'
+    + Object.keys(ALAN_AD).map(k => '<div><label>' + ALAN_AD[k] + '</label>'
+        + '<input type="number" data-sy="' + k + '" value="' + (s[k] ?? 0) + '"></div>').join('')
+    + '</div><div class="dugmeler"><button class="ana" id="syKaydet">Değerleri Kaydet</button></div>'
+    + '<div id="syYaz" class="yaz"></div>'
+    + (d.canliEk ? '<h3>Canlı durum</h3><div class="turet">'
+        + [['Savaşta', d.canliEk.savasta ? 'evet' : 'hayır'],
+           ['Ölü', d.canliEk.olu ? 'EVET' : 'hayır'],
+           ['Doğuş koruması', d.canliEk.korumaKaldiSn ? d.canliEk.korumaKaldiSn + ' sn' : 'yok'],
+           ['Premium', d.canliEk.premiumTier || '—'],
+           ['Lonca', d.canliEk.lonca ? (d.canliEk.lonca.name || 'var') : '—'],
+           ['Ustalık', d.canliEk.ustalik], ['Öğrenilen beceri', d.canliEk.ogrenilenBeceri],
+           ['Meslek', d.canliEk.meslek], ['Buff', d.canliEk.buff],
+           ['Durum efekti', d.canliEk.durum], ['Bekleme', d.canliEk.bekleme],
+           ['İksir beklemesi', d.canliEk.iksirBeklemesi],
+           ['Hotbar', d.canliEk.hotbarVar ? 'var' : 'YOK'],
+           ['Oto iksir', d.canliEk.otoIksirVar ? 'var' : 'YOK'],
+           ['Makro', d.canliEk.makroVar ? 'var' : 'YOK']]
+          .map(x => '<div>' + esc(x[0]) + ' <b>' + esc(String(x[1])) + '</b></div>').join('')
+        + '</div>' : '')
+    + (d.cevrimici ? '<h3>GM işlemleri</h3><div class="dugmeler">'
+        + '<input id="ispX" type="number" placeholder="X" style="width:110px">'
+        + '<input id="ispZ" type="number" placeholder="Z" style="width:110px">'
+        + '<button id="opIsinla">Işınla</button>'
+        + '<button id="opIyilestir">Canı doldur</button>'
+        /* Ölü karakterde "Canı doldur" yetmez: istemci perdesini yalnız revive.result
+           kapatır — "dirilt" işlemi sunucuda gm revive yolunu aynalar. Ölüyse düğme
+           kırmızı çerçeveyle etiketlenir (d.canliEk.olu). */
+        + '<button id="opDirilt"' + (d.canliEk && d.canliEk.olu
+            ? ' style="border-color:var(--kotu);color:#ffb3ad" title="Karakter ÖLÜ — olduğu yerde diriltir (%100)"'
+            : ' title="Yalnız ölü karakterde işler"')
+        + '>Dirilt' + (d.canliEk && d.canliEk.olu ? ' (ÖLÜ)' : '') + '</button>'
+        + '<button id="opCanta">Çantayı boşalt</button>'
+        + '<button id="opKov" style="margin-left:auto">Oyundan düşür</button>'
+        + '</div><div id="opYaz" class="yaz"></div>' : '')
+    + (turet ? '<h3>Türetilmiş istatistikler</h3><div class="turet">' + turet + '</div>' : '')
+    + '<h3>Envanter</h3>'
+    + '<div class="altin-satir">' + say(s.gold) + 'g</div>'
+    + kusam
+    + '<h3>Çanta (' + (d.canta||[]).length + ' yuva)</h3><div class="izgara">'
+    + (canta || '<span style="color:var(--soluk)">boş</span>') + '</div>'
+    + '<h3>Depo / Banka' + (d.banka && d.banka.kapasite ? ' (' + d.banka.kapasite + ' yuva)' : '') + '</h3>'
+    + ((d.banka && d.banka.yok) ? '<p style="color:var(--soluk)">' + esc(d.banka.yok) + '</p>'
+        : '<div class="izgara">' + (banka || '<span style="color:var(--soluk)">boş</span>') + '</div>')
+    + '<h3>Pet / Binek</h3>' + petHtml + binekHtml
+    + '<p class="not">' + esc(p.not || '') + '</p>';
+
+  $('syKaydet').onclick = async () => {
+    const sy = {};
+    document.querySelectorAll('#karDetay input[data-sy]').forEach(i => sy[i.dataset.sy] = i.value);
+    yaz('syYaz', 'kaydediliyor…');
+    const r = await api('/api/v1/admin/karakter', { method:'POST',
+      body: JSON.stringify({ charId: S.detay.charId, sayisal: sy }) });
+    if (!r.ok) { const m = hataMetni(r, 'kaydedilemedi'); yaz('syYaz', m); toast(m, false); return; }
+    const mesaj = (r.govde.yapilan || []).join(' | ') + ' ✓';
+    if (r.govde.detay) { const cid = S.detay.charId; S.detay = r.govde.detay; S.detay.charId = cid; detayCiz(); }
+    yaz('syYaz', mesaj, true); toast('Değerler kaydedildi', true);
+  };
+
+  /* Avatar sekmeleri: secilen yuvayi goster (oyundaki AVATAR/KOSTUM/SAPKA/EKLENTI). */
+  /* GM işlemleri — yeni REST ucu yok, aynı POST /karakter gövdesinde `islem`. */
+  const islem = async (govde, yazAlan) => {
+    yaz(yazAlan, 'uygulanıyor…');
+    const r = await api('/api/v1/admin/karakter', { method: 'POST',
+      body: JSON.stringify({ charId: S.detay.charId, ...govde }) });
+    if (!r.ok) { const m = hataMetni(r, 'başarısız'); yaz(yazAlan, m); toast(m, false); return; }
+    const mesaj = (r.govde.yapilan || []).join(' | ') + ' ✓';
+    if (r.govde.detay) { const cid = S.detay.charId; S.detay = r.govde.detay; S.detay.charId = cid; detayCiz(); }
+    yaz(yazAlan, mesaj, true); toast(mesaj, true);
+  };
+  if ($('opIsinla')) $('opIsinla').onclick = () => {
+    const x = $('ispX').value, z = $('ispZ').value;
+    if (x === '' || z === '') return yaz('opYaz', 'X ve Z gir');
+    islem({ islem: 'isinla', x: Number(x), z: Number(z) }, 'opYaz');
+  };
+  if ($('opIyilestir')) $('opIyilestir').onclick = () => islem({ islem: 'iyilestir' }, 'opYaz');
+  if ($('opDirilt')) $('opDirilt').onclick = () => islem({ islem: 'dirilt' }, 'opYaz');
+  if ($('opCanta')) $('opCanta').onclick = () => {
+    if (!confirm('Çantadaki TÜM eşyalar silinecek. Emin misin?')) return;
+    islem({ islem: 'cantaTemizle' }, 'opYaz');
+  };
+  if ($('opKov')) $('opKov').onclick = () => {
+    if (!confirm(S.detay.bilgi.ad + ' oyundan düşürülecek. Emin misin?')) return;
+    islem({ islem: 'kov' }, 'opYaz');
+  };
+
+  document.querySelectorAll('#karDetay .avsek div').forEach(t => t.onclick = () => {
+    document.querySelectorAll('#karDetay .avsek div').forEach(x => x.classList.toggle('aktif', x === t));
+    $('avYuva').innerHTML = yuvaHtml(yuvaOf(t.dataset.av));
+    yuvaTiklamaBagla();
+  });
+
+  yuvaTiklamaBagla();
+}
+
+function yuvaTiklamaBagla(){
+  document.querySelectorAll('#karDetay .yv').forEach(el => el.onclick = () => {
+    /* Banka hesap geneli ve DB'de duruyor -> karakter çevrimdışıyken de
+       düzenlenebilir. Çanta/kuşam ise bellekte, o yüzden çevrimiçi şartı var. */
+    if (!S.detay.duzenlenebilir && el.dataset.kap !== 'bank')
+      return alert('Çanta ve kuşam düzenlemek için karakterin oyunda olması gerekiyor. Banka çevrimdışı da düzenlenebilir.');
+    kipAc(el.dataset.kap, Number(el.dataset.slot));
+  });
+}
+window.yuvaTiklamaBagla = yuvaTiklamaBagla;
+
+/* ---------------------------------------------------------- ESYA SECICI */
+function kipAc(kap, slot){
+  S.kip = { kap, slot }; S.secili = null;
+  $('kipKonu').textContent = S.detay.bilgi.ad + ' — '
+    + (kap === 'bag' ? 'çanta yuvası ' + slot
+       : kap === 'bank' ? 'banka yuvası ' + slot + ' (hesap geneli)'
+       : 'kuşam: ' + kap)
+    + (S.detay.cevrimici ? '  ·  değişiklik OYUNA ANINDA yansır' : '  ·  karakter çevrimdışı');
+  $('kipSecili').value = ''; $('kipQty').value = 1; $('kipPlus').value = 0;
+  yaz('kipYaz', ''); $('ort').classList.add('acik'); esyaAra();
+  setTimeout(() => $('esyaQ').focus(), 30);
+}
+$('kipKapat').onclick = () => $('ort').classList.remove('acik');
+$('ort').onclick = (e) => { if (e.target === $('ort')) $('ort').classList.remove('acik'); };
+$('esyaQ').oninput = esyaAraGecikmeli;
+$('fTur').onchange = esyaAra;
+$('fIrk').onchange = esyaAra;
+$('fDerece').onchange = esyaAra;
+$('fTemizle').onclick = () => {
+  $('fTur').value = ''; $('fIrk').value = ''; $('fDerece').value = '';
+  $('esyaQ').value = ''; esyaAra();
+};
+
+let esyaZaman = null;
+/* Canlı arama: her tuşta istek atmamak için 180 ms geciktirilir. */
+function esyaAraGecikmeli(){ clearTimeout(esyaZaman); esyaZaman = setTimeout(esyaAra, 180); }
+
+async function esyaAra(){
+  const p = new URLSearchParams({ q: $('esyaQ').value, limit: '200' });
+  if ($('fTur').value) p.set('tur', $('fTur').value);
+  if ($('fIrk').value) p.set('irk', $('fIrk').value);
+  if ($('fDerece').value) p.set('derece', $('fDerece').value);
+  const r = await api('/api/v1/admin/esya?' + p.toString());
+  if (!r.ok) return yaz('kipYaz', hataMetni(r, 'arama başarısız'));
+
+  /* Süzgeç kutularını bir kez katalogdan doldur — liste uydurulmuyor. */
+  if (!S.suzgecDolu && r.govde.turler) {
+    S.suzgecDolu = true;
+    $('fTur').innerHTML = '<option value="">tüm türler</option>'
+      + r.govde.turler.map(t => '<option value="' + esc(t) + '">' + esc(t) + '</option>').join('');
+    $('fIrk').innerHTML = '<option value="">tüm ırklar</option>'
+      + (r.govde.irklar||[]).map(t => '<option value="' + esc(t) + '">' + esc(t) + '</option>').join('');
+    $('fDerece').innerHTML = '<option value="">tüm dereceler</option>'
+      + (r.govde.dereceler||[]).map(t => '<option value="' + t + '">derece ' + t + '</option>').join('');
+  }
+
+  $('esyaListe').innerHTML = (r.govde.satirlar||[]).map(it => {
+    const ik = ikonYolu(it.ikon);
+    const ipucu = [it.tur, it.yuva, it.irk, it.derece ? 'derece ' + it.derece : null,
+                   it.seviye ? 'sv ' + it.seviye : null,
+                   it.yiginMax > 1 ? 'yığın ' + it.yiginMax : null].filter(Boolean).join(' · ');
+    return '<div class="es" data-id="' + esc(it.id) + '" data-stack="' + (it.yiginMax||1)
+      + '" title="' + esc(it.ad + ' — ' + it.id + ' — ' + ipucu) + '">'
+      + (ik ? '<img src="' + ik + '" alt="" onerror="this.remove()">' : '')
+      + '<div class="n">' + esc(it.ad) + '<br><small>' + esc(it.id)
+      + (it.yiginMax > 1 ? ' x' + it.yiginMax : '') + '</small></div></div>';
+  }).join('') || '<span style="color:var(--soluk)">eşleşen eşya yok</span>';
+
+  document.querySelectorAll('#esyaListe .es').forEach(el => el.onclick = () => {
+    document.querySelectorAll('#esyaListe .es').forEach(x => x.classList.remove('secili'));
+    el.classList.add('secili');
+    S.secili = { id: el.dataset.id, stack: Number(el.dataset.stack) || 1 };
+    $('kipSecili').value = el.dataset.id;
+    $('kipQty').max = S.secili.stack;
+    /* Yığınlanabilir eşyada varsayılan olarak TAM yığın ver. */
+    $('kipQty').value = S.secili.stack;
+  });
+
+  const n = (r.govde.satirlar||[]).length;
+  yaz('kipYaz', r.govde.kesildi
+    ? n + ' / ' + r.govde.eslesen + ' sonuç gösteriliyor (katalog ' + r.govde.toplam + ') — daralt'
+    : n + ' sonuç (katalog ' + r.govde.toplam + ')', !r.govde.kesildi);
+}
+
+async function yuvaGonder(govde){
+  yaz('kipYaz', 'uygulanıyor…');
+  const r = await api('/api/v1/admin/karakter', { method:'POST', body: JSON.stringify(govde) });
+  if (!r.ok) return yaz('kipYaz', hataMetni(r, 'uygulanamadı'));
+  $('ort').classList.remove('acik');
+  const mesaj = (r.govde.yapilan || []).join(' | ') + ' ✓';
+  if (r.govde.detay) { S.detay = r.govde.detay; S.detay.charId = govde.charId; detayCiz(); }
+  yaz('syYaz', mesaj, true); toast(mesaj, true);
+}
+$('kipUygula').onclick = () => {
+  if (!S.secili) return yaz('kipYaz', 'önce listeden bir eşya seç');
+  yuvaGonder({ charId: S.detay.charId, yuva: { kap: S.kip.kap, slot: S.kip.slot,
+    itemId: S.secili.id, qty: Number($('kipQty').value) || 1, plus: Number($('kipPlus').value) || 0 } });
+};
+$('kipBosalt').onclick = () =>
+  yuvaGonder({ charId: S.detay.charId, yuva: { kap: S.kip.kap, slot: S.kip.slot, itemId: null } });
+
+/* ---------------------------------------------------------------- DUYURU */
+async function duyuruKur(){
+  if (S.duyuruSec) return;
+  yaz('duyuruYaz', 'seçenekler yükleniyor…');
+  const r = await api('/api/v1/admin/duyuru-secenekleri');
+  if (!r.ok) return hataYaz('duyuruYaz', hataMetni(r, 'duyuru seçenekleri yüklenemedi'), duyuruKur);
+  yaz('duyuruYaz', '');
+  S.duyuruSec = r.govde;
+  $('duyuruTur').innerHTML = r.govde.turler.map(t =>
+    '<option value="' + t.k + '">' + esc(t.ad) + '</option>').join('');
+  $('duyuruKey').innerHTML = r.govde.olayAnahtarlari.map(o =>
+    '<option value="' + esc(o.k) + '">' + esc(o.k) + '</option>').join('');
+  $('duyuruTur').onchange = duyuruTurDegisti;
+  $('duyuruKey').onchange = duyuruKeyDegisti;
+  duyuruTurDegisti();
+}
+function duyuruTurDegisti(){
+  const t = $('duyuruTur').value;
+  const bilgi = S.duyuruSec.turler.find(x => x.k === t);
+  $('duyuruAciklama').textContent = (bilgi && bilgi.aciklama) || '';
+  const olay = t === 'olay';
+  $('olayKutu').style.display = olay ? '' : 'none';
+  $('metinKutu').style.display = olay ? 'none' : '';
+  $('gonderenKutu').style.display = (t === 'sistem' || t === 'genel') ? '' : 'none';
+  /* Biçim yalnız sys.notice yollarında anlamlı: chat.recv şemasında display alanı yok. */
+  $('bicimKutu').style.display = (t === 'bildirim' || t === 'bant' || t === 'olay') ? '' : 'none';
+  if (t === 'bant') $('duyuruBicim').value = 'banner';
+  if (t === 'bildirim') $('duyuruBicim').value = 'line';
+  if (olay) duyuruKeyDegisti();
+}
+function duyuruKeyDegisti(){
+  const o = S.duyuruSec.olayAnahtarlari.find(x => x.k === $('duyuruKey').value);
+  $('duyuruOnizleme').textContent = o ? '“' + o.metin + '”' : '';
+  $('duyuruParams').innerHTML = ((o && o.params) || []).map(p =>
+    '<div><label>' + esc(p) + '</label><input type="text" data-p="' + esc(p)
+    + '" placeholder="' + esc(p) + '"></div>').join('');
+}
+$('duyuruGonder').onclick = async () => {
+  const t = $('duyuruTur').value;
+  const g = { tur: t, display: $('duyuruBicim').value };
+  if (t === 'olay') {
+    g.key = $('duyuruKey').value;
+    const params = {};
+    document.querySelectorAll('#duyuruParams input[data-p]').forEach(i => { if (i.value) params[i.dataset.p] = i.value; });
+    if (Object.keys(params).length) g.params = params;
+  } else {
+    g.metin = $('duyuruMetin').value; g.from = $('duyuruFrom').value;
+    /* Boş mesaj sunucuda 400 alır — panelde vurgulayıp hiç göndermeyelim. */
+    $('duyuruMetin').classList.remove('hatali');
+    if (!g.metin.trim()) {
+      $('duyuruMetin').classList.add('hatali'); $('duyuruMetin').focus();
+      return yaz('duyuruYaz', 'mesaj boş — önce bir şeyler yaz');
+    }
+  }
+  yaz('duyuruYaz', 'gönderiliyor…');
+  const r = await api('/api/v1/admin/duyuru', { method:'POST', body: JSON.stringify(g) });
+  if (!r.ok) { const m = hataMetni(r, 'duyuru gönderilemedi'); yaz('duyuruYaz', m); toast(m, false); return; }
+  yaz('duyuruYaz', 'gönderildi ✓', true); toast('Duyuru tüm sunucuya gönderildi', true);
+  if (t !== 'olay') $('duyuruMetin').value = '';
+};
+
+/* -------------------------------------------------------------- ITEM MALL */
+/* Katalog HEM data/items.json.itemMall HEM istemci paketindeki gömülü kopyada
+   yaşar; POST /api/v1/admin/mall ikisini birlikte yazar (sunucu tarafı).
+   Panel yalnız {itemId, jade, qty?} gönderir — ad/ikon/type süslemeleri GET'in
+   zenginleştirmesidir, geri yollanmaz. */
+const GEAR_TIPLERI = ['weapon', 'shield', 'armor', 'accessory']; /* mall'a giremez */
+/* Oyun içi Mall üst sekmelerinin Türkçe karşılıkları (ekran görüntüsü kanıtı:
+   Avatarlar / Petler / Premium / Karakter / Ekonomi). Veri anahtarı (vct name)
+   İngilizce kalır — yalnızca GÖRÜNÜM Türkçeleşir, kaydedilen ada dokunulmaz. */
+const MALL_TR = { Avatars: 'Avatarlar', Pets: 'Petler', Premiums: 'Premium',
+                  Character: 'Karakter', Economic: 'Ekonomi' };
+/* Avatarlar sekmesinin oyun içi ALT sekmeleri — eşyanın `slot` alanına göre
+   (items.json: avatarDress / avatarHat / avatarAttach). */
+const MALL_ALT = { Avatars: [['avatarDress', 'Kostümler'], ['avatarHat', 'Şapkalar'],
+                             ['avatarAttach', 'Aksesuarlar']] };
+const mallTabAd = (name) => MALL_TR[name] || name;
+let mallZaman = null;
+
+/* itemId -> avatar yuvası haritası (alt sekme süzgeci için). /esya ucundan bir
+   kez çekilir; çekilemezse alt sekmeler çizilmez — panel yine tam çalışır. */
+async function mallYuvaYukle(){
+  if (S.mallYuva) return;
+  const r = await api('/api/v1/admin/esya?' + new URLSearchParams({ q: '', tur: 'avatar', limit: '600' }));
+  if (!r.ok) return;
+  S.mallYuva = {};
+  for (const it of (r.govde.satirlar || [])) if (it.id) S.mallYuva[it.id] = it.yuva || null;
+}
+
+async function mallYukle(){
+  $('mallKalemler').innerHTML =
+    '<tr><td colspan="7"><div class="yukleniyor">Item Mall kataloğu yükleniyor…</div></td></tr>';
+  yaz('mallYaz', '');
+  const r = await api('/api/v1/admin/mall');
+  if (r.durum === 401 || r.durum === 403) return ekranGiris();
+  if (!r.ok) {
+    $('mallKalemler').innerHTML = '';
+    return hataYaz('mallYaz', hataMetni(r, 'Item Mall kataloğu yüklenemedi'), mallYukle);
+  }
+  await mallYuvaYukle();
+  const tabs = r.govde.tabs || (r.govde.itemMall && r.govde.itemMall.tabs) || [];
+  S.mall = { tabs: tabs.map(t => ({ name: t.name, items: (t.items || []).map(k => ({ ...k })) })) };
+  if (!(S.mallAktif >= 0 && S.mallAktif < S.mall.tabs.length)) S.mallAktif = 0;
+  /* Fiyat-ARTIŞI uyarısı + değişen-satır vurgusu için ilk hâlin anlık görüntüsü:
+     açık oturumdaki oyuncu F5'e kadar gömülü ESKİ fiyatı görür ama sunucu YENİ
+     fiyatı keser. qty null = kayıtta yok (1 demek). */
+  S.mallIlk = {};
+  for (const t of S.mall.tabs) for (const k of (t.items || []))
+    S.mallIlk[k.itemId] = { jade: Number(k.jade), qty: k.qty != null ? Number(k.qty) : null };
+  S.mallKir = false;
+  yaz('mallYaz', '');
+  mallHedefDoldur();
+  mallCiz();
+}
+
+function mallArtisKontrol(){
+  const art = [];
+  if (S.mall) for (const t of S.mall.tabs) for (const k of (t.items || [])) {
+    const eski = S.mallIlk[k.itemId];
+    if (eski && Number(k.jade) > eski.jade)
+      art.push(k.itemId + ': ' + eski.jade + ' → ' + Number(k.jade));
+  }
+  const u = $('mallUyari');
+  if (!art.length) { u.style.display = 'none'; u.innerHTML = ''; return art; }
+  u.style.display = '';
+  u.innerHTML = '<b>Fiyat ARTIŞI algılandı:</b> ' + esc(art.join(', '))
+    + '<br>Açık oturumdaki oyuncular F5 yapana kadar ekranlarında ESKİ fiyatı görür ama sunucu '
+    + 'YENİ fiyatı keser — oyuncu gördüğünden fazlasını ödeyebilir. Kaydetmeden ÖNCE Duyuru '
+    + 'sekmesinden bant duyurusu yapmanız önerilir.';
+  return art;
+}
+
+/* İlk hâle göre satır durumu: 'yeni' (kayıtta yoktu) | 'degisti' | null.
+   qty tarafında null ile 1 aynı anlamdadır (sunucu qty=1'i hiç yazmaz). */
+function mallDegistiMi(k){
+  const ilk = S.mallIlk[k.itemId];
+  if (!ilk) return 'yeni';
+  const norm = (v) => (v == null || v === '' || Number(v) === 1) ? null : Number(v);
+  if (Number(k.jade) !== ilk.jade || norm(k.qty) !== norm(ilk.qty)) return 'degisti';
+  return null;
+}
+
+/* Aramadan eklenen kalemin gideceği sekme (Premiums hariç). */
+function mallHedefDoldur(){
+  const sec = $('mallHedef'); if (!sec || !S.mall) return;
+  const eski = sec.value;
+  sec.innerHTML = S.mall.tabs.map((t, i) => t.name === 'Premiums' ? ''
+    : '<option value="' + i + '">hedef: ' + esc(mallTabAd(t.name)) + '</option>').join('');
+  const varMi = (v) => [...sec.options].some(o => o.value === v);
+  if (eski !== '' && varMi(eski)) sec.value = eski;
+  else if (varMi(String(S.mallAktif))) sec.value = String(S.mallAktif);
+}
+
+function mallCiz(){
+  if (!S.mall) return;
+  const tabs = S.mall.tabs;
+  $('mallSekmeler').innerHTML = tabs.map((t, i) =>
+    '<div data-mt="' + i + '"' + (i === S.mallAktif ? ' class="aktif"' : '')
+    + ' title="' + esc(t.name) + '">' + esc(mallTabAd(t.name))
+    + (t.name === 'Premiums' ? '<span class="rozet">salt-okunur</span>'
+                             : '<span class="rozet">' + (t.items || []).length + '</span>')
+    + '</div>').join('');
+  document.querySelectorAll('#mallSekmeler div[data-mt]').forEach(el =>
+    el.onclick = () => {
+      S.mallAktif = Number(el.dataset.mt); S.mallAlt = null;
+      const t = S.mall.tabs[S.mallAktif];
+      /* Arama hedefi açık sekmeyi izler (Premiums hariç). */
+      if (t && t.name !== 'Premiums' && $('mallHedef')) $('mallHedef').value = String(S.mallAktif);
+      mallCiz();
+    });
+
+  const tab = tabs[S.mallAktif] || { name: '', items: [] };
+  /* 'Premiums' istemcide ADIYLA özel-durum: items yok sayılır, oyun premium
+     paket arayüzünü kendisi çizer — panelde salt-okunur rozet. */
+  const premium = tab.name === 'Premiums';
+  $('mallDuzen').style.display = premium ? 'none' : '';
+  $('mallEkleKutu').style.display = premium ? 'none' : '';
+  $('mallPremium').style.display = premium ? '' : 'none';
+
+  /* Alt sekmeler: oyun içi Avatarlar görünümünün aynası. Yalnız tanımlı sekmede
+     ve yuva haritası çekilebildiyse çizilir; süzgeç yalnız GÖRÜNÜMÜ daraltır. */
+  const altlar = premium ? null : MALL_ALT[tab.name];
+  const altBar = $('mallAltSekmeler');
+  if (altlar && S.mallYuva) {
+    const sayi = (slot) => (tab.items || []).filter(k => S.mallYuva[k.itemId] === slot).length;
+    altBar.style.display = '';
+    altBar.innerHTML = '<div data-alt=""' + (!S.mallAlt ? ' class="aktif"' : '') + '>Tümü<small>'
+      + (tab.items || []).length + '</small></div>'
+      + altlar.map(a => '<div data-alt="' + a[0] + '"' + (S.mallAlt === a[0] ? ' class="aktif"' : '')
+        + '>' + a[1] + '<small>' + sayi(a[0]) + '</small></div>').join('');
+    altBar.querySelectorAll('div[data-alt]').forEach(el =>
+      el.onclick = () => { S.mallAlt = el.dataset.alt || null; mallCiz(); });
+  } else { altBar.style.display = 'none'; altBar.innerHTML = ''; S.mallAlt = null; }
+
+  if (premium) {
+    $('mallPremium').innerHTML = '<p class="not"><span class="rozet gm">salt-okunur</span> '
+      + 'Bu sekme istemcide adıyla özel-durumdur: kalem listesi yok sayılır, premium paket '
+      + 'arayüzünü oyun kendisi çizer. Kalem ekleme / silme / yeniden adlandırma kapalıdır.</p>';
+    mallArtisKontrol();
+    return;
+  }
+
+  /* SEKME BAZINDA liste; alt sekme seçiliyse yuvaya göre süzülür.
+     data-* indeksleri HER ZAMAN tab.items'in gerçek indeksidir. */
+  const satirlar = (tab.items || []).map((k, i) => [k, i])
+    .filter(([k]) => !S.mallAlt || (S.mallYuva && S.mallYuva[k.itemId] === S.mallAlt));
+  const digerler = tabs.map((t, i) => [t, i])
+    .filter(([t, i]) => i !== S.mallAktif && t.name !== 'Premiums');
+
+  $('mallKalemler').innerHTML = satirlar.map(([k, i]) => {
+    const ik = ikonYolu(k.ikon);
+    const yigin = Number(k.yiginMax ?? k.stackMax ?? 0);
+    /* qty yalnız yığınlanabilir tüketilebilirlerde anlamlı (sunucu da doğrular). */
+    const qtyVar = k.qty != null || yigin > 1;
+    const drm = mallDegistiMi(k);
+    return '<tr' + (drm ? ' class="degisti"' : '') + '>'
+      + '<td><div class="mikon" title="' + esc(k.ad || k.itemId) + '">'
+      + (ik ? '<img src="' + ik + '" alt="" onerror="this.remove()">' : '') + '</div></td>'
+      + '<td><div class="ad">' + esc(k.ad || k.itemId)
+      + (drm === 'yeni' ? '<span class="rozet on">yeni</span>'
+         : drm ? '<span class="rozet">değişti</span>' : '') + '</div>'
+      + '<div class="anahtar">' + esc(k.itemId) + '</div></td>'
+      + '<td>' + esc(k.type || k.tur || '—') + '</td>'
+      + '<td><input type="number" data-mj="' + i + '" value="' + esc(k.jade ?? '') + '" min="1" max="10000000" step="1"></td>'
+      + '<td>' + (qtyVar
+          ? '<input type="number" data-mq="' + i + '" value="' + esc(k.qty ?? 1) + '" min="1"'
+            + (yigin > 1 ? ' max="' + yigin + '"' : '') + ' step="1">'
+          : '<span class="anahtar" title="yalnız yığınlanabilir eşyada">—</span>') + '</td>'
+      + '<td>' + (digerler.length
+          ? '<select data-mtasi="' + i + '" style="width:100%" title="Kalemi başka sekmeye taşı">'
+            + '<option value="">Taşı…</option>'
+            + digerler.map(([t, ti]) => '<option value="' + ti + '">' + esc(mallTabAd(t.name)) + '</option>').join('')
+            + '</select>' : '') + '</td>'
+      + '<td><button class="kk" data-msil="' + i + '">Sil</button></td></tr>';
+  }).join('') || '<tr><td colspan="7" style="color:var(--soluk)">'
+    + (S.mallAlt ? 'bu alt sekmede kalem yok' : 'bu sekmede kalem yok — aşağıdan arayıp ekle') + '</td></tr>';
+
+  const vurgula = (inp, i) => {
+    const tr = inp.closest('tr');
+    if (tr) tr.classList.toggle('degisti', !!mallDegistiMi(tab.items[i]));
+  };
+  document.querySelectorAll('#mallKalemler input[data-mj]').forEach(inp => inp.oninput = () => {
+    const i = Number(inp.dataset.mj);
+    tab.items[i].jade = inp.value; S.mallKir = true;
+    inp.classList.remove('hatali'); vurgula(inp, i); mallArtisKontrol();
+  });
+  document.querySelectorAll('#mallKalemler input[data-mq]').forEach(inp => inp.oninput = () => {
+    const i = Number(inp.dataset.mq);
+    tab.items[i].qty = inp.value; S.mallKir = true; vurgula(inp, i);
+  });
+  document.querySelectorAll('#mallKalemler button[data-msil]').forEach(b => b.onclick = () => {
+    const i = Number(b.dataset.msil), k = tab.items[i];
+    if (!confirm((k.ad || k.itemId) + ' katalogdan çıkarılacak (kaydedince kesinleşir). Emin misin?')) return;
+    tab.items.splice(i, 1); S.mallKir = true; mallCiz();
+  });
+  document.querySelectorAll('#mallKalemler select[data-mtasi]').forEach(sel => sel.onchange = () => {
+    if (sel.value === '') return;
+    const i = Number(sel.dataset.mtasi), hedefIx = Number(sel.value);
+    const [k] = tab.items.splice(i, 1);
+    tabs[hedefIx].items.push(k);
+    S.mallKir = true;
+    toast(k.itemId + ' → ' + mallTabAd(tabs[hedefIx].name) + ' sekmesine taşındı (kaydedince kesinleşir)', true);
+    mallCiz();
+  });
+  mallArtisKontrol();
+}
+
+function mallAraGecikmeli(){ clearTimeout(mallZaman); mallZaman = setTimeout(mallAra, 180); }
+async function mallAra(){
+  const q = $('mallQ').value.trim();
+  if (!q) { S.mallSonuc = [];
+    $('mallEsyaListe').innerHTML = '<span style="color:var(--soluk)">aramak için yaz…</span>'; return; }
+  $('mallEsyaListe').innerHTML = '<div class="yukleniyor">aranıyor…</div>';
+  const r = await api('/api/v1/admin/esya?' + new URLSearchParams({ q, limit: '60' }).toString());
+  if (!r.ok) {
+    $('mallEsyaListe').innerHTML = '';
+    return yaz('mallYaz', hataMetni(r, 'arama başarısız'));
+  }
+  S.mallSonuc = r.govde.satirlar || [];
+  const mevcut = new Set();
+  if (S.mall) for (const t of S.mall.tabs) for (const k of (t.items || [])) mevcut.add(k.itemId);
+  $('mallEsyaListe').innerHTML = S.mallSonuc.map((it, i) => {
+    const gear = GEAR_TIPLERI.includes(it.tur);
+    const ekli = mevcut.has(it.id);
+    const ik = ikonYolu(it.ikon);
+    const kapali = gear || ekli;
+    return '<div class="es" data-mix="' + i + '"'
+      + (kapali ? ' style="opacity:.45;cursor:not-allowed"' : '')
+      + ' title="' + esc(gear ? 'ekipman (gear) — Item Mall\'a eklenemez'
+                       : ekli ? 'zaten katalogda — fiyatı yukarıdaki tablodan düzenle'
+                       : it.ad + ' — ' + it.id) + '">'
+      + (ik ? '<img src="' + ik + '" alt="" onerror="this.remove()">' : '')
+      + '<div class="n">' + esc(it.ad)
+      + (gear ? '<span class="rozet">gear</span>' : ekli ? '<span class="rozet on">ekli</span>' : '')
+      + '<br><small>' + esc(it.id) + (it.yiginMax > 1 ? ' x' + it.yiginMax : '') + '</small></div></div>';
+  }).join('') || '<span style="color:var(--soluk)">eşleşen eşya yok</span>';
+
+  document.querySelectorAll('#mallEsyaListe .es[data-mix]').forEach(el => el.onclick = () => {
+    const it = S.mallSonuc[Number(el.dataset.mix)];
+    if (!it || !S.mall) return;
+    if (GEAR_TIPLERI.includes(it.tur)) return yaz('mallYaz', 'ekipman (gear) Item Mall\'a eklenemez');
+    /* Hedef sekme seçiciden okunur (varsayılan: açık sekme). */
+    const hedefIx = Number($('mallHedef') && $('mallHedef').value);
+    const tab = Number.isInteger(hedefIx) ? S.mall.tabs[hedefIx] : null;
+    if (!tab || tab.name === 'Premiums') return yaz('mallYaz', 'geçerli bir hedef sekme seç (Premiums salt-okunur)');
+    for (const t of S.mall.tabs) if ((t.items || []).some(k => k.itemId === it.id))
+      return yaz('mallYaz', it.id + ' zaten katalogda (tekil olmalı) — mevcut satırı düzenle');
+    /* Fiyat UYDURULMAZ: boş bırakılır, kaydetmeden önce girilmesi zorunlu. */
+    tab.items.push({ itemId: it.id, jade: '', ad: it.ad, ikon: it.ikon, type: it.tur, yiginMax: it.yiginMax });
+    S.mallKir = true;
+    yaz('mallYaz', '');
+    /* Yeni satır görünür kalsın: hedef sekmeye geç, gizleyecek alt süzgeci bırak. */
+    S.mallAktif = hedefIx;
+    if (S.mallAlt && (!S.mallYuva || S.mallYuva[it.id] !== S.mallAlt)) S.mallAlt = null;
+    mallCiz();
+    toast((it.ad || it.id) + ' eklendi — Silk fiyatını gir', true);
+    const inp = document.querySelector('#mallKalemler input[data-mj="' + (tab.items.length - 1) + '"]');
+    if (inp) inp.focus();
+  });
+}
+$('mallQ').oninput = mallAraGecikmeli;
+
+$('mallGeri').onclick = () => {
+  if (S.mallKir && !confirm('Kaydedilmemiş değişiklikler atılacak. Emin misin?')) return;
+  mallYukle();
+};
+
+$('mallKaydet').onclick = async () => {
+  if (!S.mall) return;
+  /* Panel ön-kontrolü — sunucu doğrulamasıyla aynı sınırlar (jade 1..10.000.000 tam
+     sayı). Hatalı kalem hangi sekmedeyse oraya geçilir ve alan vurgulanır. */
+  for (let ti = 0; ti < S.mall.tabs.length; ti++) {
+    const t = S.mall.tabs[ti];
+    if (t.name === 'Premiums') continue;
+    for (let i = 0; i < (t.items || []).length; i++) {
+      const k = t.items[i], j = Number(k.jade);
+      if (!Number.isSafeInteger(j) || j < 1 || j > 10000000) {
+        const m = (k.ad || k.itemId) + ': fiyat 1 – 10.000.000 Silk aralığında tam sayı olmalı';
+        S.mallAktif = ti; S.mallAlt = null; mallCiz();
+        const inp = document.querySelector('#mallKalemler input[data-mj="' + i + '"]');
+        if (inp) { inp.classList.add('hatali'); inp.focus(); }
+        yaz('mallYaz', m); toast(m, false);
+        return;
+      }
+    }
+  }
+  const art = mallArtisKontrol();
+  if (art.length && !confirm('Fiyat ARTIŞI var:\n' + art.join('\n')
+    + '\n\nAçık oturumdaki oyuncular F5 yapana kadar eski fiyatı görür ama YENİ fiyat kesilir.'
+    + '\nÖnce oyun içi duyuru yapmanız önerilir. Yine de kaydedilsin mi?')) return;
+  /* Süslemeler soyulur; Premiums olduğu gibi geçer (panel ona dokunmaz). */
+  const tabs = S.mall.tabs.map(t => ({ name: t.name,
+    items: (t.items || []).map(k => t.name === 'Premiums'
+      ? { itemId: k.itemId, ...(k.jade != null ? { jade: Number(k.jade) } : {}),
+          ...(k.qty != null ? { qty: Number(k.qty) } : {}) }
+      : { itemId: k.itemId, jade: Number(k.jade),
+          ...(k.qty != null && Number(k.qty) > 1 ? { qty: Number(k.qty) } : {}) }) }));
+  yaz('mallYaz', 'kaydediliyor… (items.json + istemci paketi birlikte yazılır)');
+  const r = await api('/api/v1/admin/mall', { method: 'POST', body: JSON.stringify({ tabs }) });
+  if (!r.ok) {
+    const m = r.durum === 409
+      ? 'başka bir kaydetme sürüyor — birazdan tekrar dene'
+      : hataMetni(r, 'kaydedilemedi');
+    yaz('mallYaz', m); toast(m, false); return;
+  }
+  yaz('mallYaz', 'tahsilat anında değişti — oyuncular yeni fiyatı F5 sonrası görür ✓', true);
+  toast('Item Mall kaydedildi — sunucu tarafı anında, oyuncu ekranı F5 sonrası', true);
+  mallYukle(); /* GET yeniden okunur — kaydedilen içerik ekranda doğrulanır */
+};
+
+/* ==================================================================== BILDIRIMLER
+   Oyun icindeki "Hata Bildir" penceresi iki uca POST atar ve IKISI DE BU
+   SUNUCUDUR (istemci paketinden olculdu; Silkroad Online'a giden hicbir istek yok):
+     POST /api/v1/bug-reports      — {category, subject, severity, frequency,
+        title, description, characterId, subjectRef, context{...}, clientVersion,
+        zoneId, pos, screenshot(data URL)}
+     POST /api/v1/feature-requests — {title, description, clientVersion}
+   Panel okuma/yazma icin admin uclarini kullanir:
+     GET    /api/v1/admin/bildirimler?tur=hata|ozellik&...   liste
+     GET    /api/v1/admin/bildirimler/:ref                   tek kayit (tam govde)
+     GET    /api/v1/admin/bildirimler/:ref/gorsel            ekran goruntusu
+     POST   /api/v1/admin/bildirimler/:ref  {durum?, gmNotu?}
+     DELETE /api/v1/admin/bildirimler/:ref
+     GET    /api/v1/admin/bildirim-ozet                      sayac ozeti (istege bagli)
+   Uc adlari sunucu tarafiyla es zamanli yazildigi icin panel TOLERANSLIDIR:
+   404 alirsa yedek yola duser, alan adlarini hem Turkce hem Ingilizce okur,
+   olmayan ozet ucunu sessizce atlar. */
+
+/* Kategori/konu/onem/siklik ANAHTARLARI istemci paketinden olculdu
+   (ui.bug.cat.* -> visual skill quest item monster world ui other) ve kayitlarda
+   ham halleriyle durur ("world", "monster", "leash"). Turkce karsiliklar oyunun
+   KENDI dil dosyasindan (/assets/locales/tr.json) okunur — panelde ikinci bir
+   sozluk UYDURULMAZ. Dosya cekilemezse asagidaki yedek (ayni dosyadan alinmis)
+   kullanilir; bilinmeyen anahtar ham haliyle gosterilir. */
+const BILD_KAT    = ['visual','skill','quest','item','monster','world','ui','other'];
+const BILD_ONEM   = ['blocker','major','minor'];
+const BILD_SIKLIK = ['always','sometimes','once'];
+const BILD_DURUM  = [['acik','Açık'],['inceleniyor','İnceleniyor'],
+                     ['cozuldu','Çözüldü'],['yoksayildi','Yoksayıldı']];
+const ETIKET = {
+  'ui.bug.cat.visual':'Görsel', 'ui.bug.cat.skill':'Yetenek', 'ui.bug.cat.quest':'Görev',
+  'ui.bug.cat.item':'Eşya', 'ui.bug.cat.monster':'Yaratık', 'ui.bug.cat.world':'Harita / Hareket',
+  'ui.bug.cat.ui':'Arayüz', 'ui.bug.cat.other':'Ses / Diğer',
+  'ui.bug.sev.blocker':'Oynayamıyorum', 'ui.bug.sev.major':'Rahatsız edici',
+  'ui.bug.sev.minor':'Görüntüsel',
+  'ui.bug.freq.always':'Her seferinde', 'ui.bug.freq.sometimes':'Bazen',
+  'ui.bug.freq.once':'Bir kez oldu',
+};
+async function etiketYukle(){
+  if (S.etiketDenendi) return;
+  S.etiketDenendi = true;
+  try {
+    const r = await fetch('/assets/locales/tr.json', { headers: { accept: 'application/json' } });
+    if (!r.ok) return;
+    const j = await r.json();
+    for (const k of Object.keys(j))
+      if (k.indexOf('ui.bug.') === 0 || k.indexOf('ui.feat.') === 0) ETIKET[k] = j[k];
+  } catch { /* dil dosyasi yoksa yedek etiketler gecerli kalir */ }
+}
+/* Kategorisi olmayan kayit "Ses / Diger"e YAZILMAZ - ayri, durust bir kova. */
+const KAT_YOK = '(belirtilmemiş)';
+const etKat   = (k) => k ? (ETIKET['ui.bug.cat.'  + k] || k) : '—';
+const katAd   = (k) => k ? etKat(k) : KAT_YOK;
+const etKonu  = (k) => k ? (ETIKET['ui.bug.subj.' + k] || k) : '—';
+const etOnem  = (k) => k ? (ETIKET['ui.bug.sev.'  + k] || k) : '—';
+const etSik   = (k) => k ? (ETIKET['ui.bug.freq.' + k] || k) : '—';
+const durumAd = (d) => (BILD_DURUM.find(x => x[0] === d) || [d, d || '—'])[1];
+
+function zamanMs(v){
+  if (v == null || v === '') return null;
+  if (typeof v === 'number') return v;
+  const t = Date.parse(v);
+  return Number.isFinite(t) ? t : null;
+}
+function tarihMetni(v){
+  const t = zamanMs(v);
+  return t == null ? '—' : new Date(t).toLocaleString('tr');
+}
+
+/* Sunucu alan adlari es zamanli yazildigi icin hem Turkce hem Ingilizce (ve
+   ham istemci govdesindeki) adlar okunur. Hicbir deger uydurulmaz: bulunamayan
+   alan null kalir ve ekranda "—" gorunur. */
+function bildNorm(r){
+  const c = (r.context && typeof r.context === 'object') ? r.context
+          : (r.baglam && typeof r.baglam === 'object') ? r.baglam : null;
+  const ham = (typeof r.context === 'string') ? r.context
+            : (typeof r.baglam === 'string') ? r.baglam : null;
+  let cx = c;
+  if (!cx && ham) { try { cx = JSON.parse(ham); } catch { cx = null; } }
+  return {
+    ref:      r.ref ?? null,
+    id:       r.id ?? null,
+    tarih:    r.tarih ?? r.createdAt ?? r.at ?? null,
+    kategori: r.kategori ?? r.category ?? null,
+    konu:     r.konu ?? r.subject ?? null,
+    onem:     r.onem ?? r.severity ?? null,
+    siklik:   r.siklik ?? r.frequency ?? null,
+    baslik:   r.baslik ?? r.title ?? '',
+    aciklama: r.aciklama ?? r.description ?? '',
+    karakter: r.karakter ?? r.charAd ?? (cx && cx.char && cx.char.name) ?? null,
+    charId:   r.CharID ?? r.charId ?? r.characterId ?? null,
+    JID:      r.JID ?? r.jid ?? null,
+    bolge:    r.bolge ?? r.zoneId ?? (cx && cx.zone && (cx.zone.name || cx.zone.id)) ?? null,
+    surum:    r.surum ?? r.clientVer ?? r.clientVersion ?? (cx && cx.clientVersion) ?? null,
+    durum:    r.durum ?? r.status ?? 'acik',
+    gmNotu:   r.gmNotu ?? r.gmNote ?? '',
+    pos:      r.pos ?? (cx && cx.pos) ?? null,
+    hedefRef: r.subjectRef ?? r.hedefRef ?? null,
+    gorsel:   r.screenshot ?? r.gorsel ?? null,
+    gorselVar: r.gorselVar ?? r.hasScreenshot ?? !!(r.screenshot || r.gorsel),
+    baglam:   cx,
+    ham:      r,
+  };
+}
+const bildAnahtar = (r, i) => String(r.ref ?? r.id ?? ('#' + i));
+const bildSatirlariAl = (g) => Array.isArray(g) ? g
+  : (g && (g.satirlar || g.rows || g.liste || g.items)) || [];
+
+/* Yedek yollar: uc adi Serit 1 ile es zamanli yazildigi icin birincil yol 404
+   verirse tur bazli alternatif denenir ve CALISAN yol hatirlanir. */
+function bildYollar(tur){
+  if (S.bildYol[tur]) return [S.bildYol[tur]];
+  return tur === 'hata'
+    ? ['/api/v1/admin/bildirimler', '/api/v1/admin/hata-bildirimleri']
+    : ['/api/v1/admin/bildirimler', '/api/v1/admin/ozellik-istekleri'];
+}
+const bildTaban = (tur) => S.bildYol[tur] || '/api/v1/admin/bildirimler';
+
+function bildSuzgecParam(){
+  const p = new URLSearchParams();
+  const q = $('bQ').value.trim();
+  if (q) p.set('q', q);
+  if ($('bDurum').value) p.set('durum', $('bDurum').value);
+  if ($('bOnem').value)  p.set('onem', $('bOnem').value);
+  if ($('bBas').value)   p.set('bas', $('bBas').value);
+  if ($('bBit').value)   p.set('bit', $('bBit').value);
+  /* Kategorisiz kova ('') sunucuya gonderilmez - panelde suzulur. */
+  const kats = [...document.querySelectorAll('#bKat input:checked')].map(i => i.value).filter(Boolean);
+  if (kats.length) p.set('kategori', kats.join(','));
+  p.set('limit', $('bLimit').value || '300');
+  return p;
+}
+
+async function bildListeCek(tur){
+  const p = bildSuzgecParam();
+  p.set('tur', tur);
+  let son = null;
+  for (const yol of bildYollar(tur)) {
+    const r = await api(yol + '?' + p.toString());
+    son = r;
+    if (r.ok) { S.bildYol[tur] = yol; return r; }
+    if (r.durum !== 404) return r;      // 401/403/500: yedek yol denenmez
+  }
+  return son;
+}
+
+/* --------------------------------------------------------- kurulum / yukleme */
+async function bildirimKur(){
+  if (S.bildKur) return bildYukle(S.bildTur);
+  S.bildKur = true;
+  await etiketYukle();
+
+  $('bDurum').innerHTML = '<option value="">tüm durumlar</option>'
+    + BILD_DURUM.map(d => '<option value="' + d[0] + '">' + esc(d[1]) + '</option>').join('');
+  $('bOnem').innerHTML = '<option value="">tüm önem dereceleri</option>'
+    + BILD_ONEM.map(k => '<option value="' + k + '">' + esc(etOnem(k)) + '</option>').join('');
+  bildKategoriCiz();
+
+  document.querySelectorAll('#bildSekmeler div[data-bt]').forEach(el => el.onclick = () => {
+    if (S.bildTur === el.dataset.bt) return;
+    S.bildTur = el.dataset.bt;
+    document.querySelectorAll('#bildSekmeler div[data-bt]')
+      .forEach(x => x.classList.toggle('aktif', x === el));
+    bildDetayKapat();
+    bildSuzgecGorunum();
+    if (!S.bild[S.bildTur].satirlar.length) bildYukle(S.bildTur); else bildCiz();
+  });
+
+  /* "Yenile" ozet ucunu da yeniden dener - uc sonradan yayina girerse
+     panelin yeniden yuklenmesi gerekmesin. */
+  $('bYenile').onclick  = () => { S.bildOzetDenendi = false; bildYukle(S.bildTur); };
+  $('bQ').oninput       = bildGecikmeliCiz;
+  $('bDurum').onchange  = bildCiz;
+  $('bOnem').onchange   = bildCiz;
+  $('bBas').onchange    = bildCiz;
+  $('bBit').onchange    = bildCiz;
+  $('bLimit').onchange  = () => bildYukle(S.bildTur);
+  $('bTemizle').onclick = () => {
+    $('bQ').value = ''; $('bDurum').value = ''; $('bOnem').value = '';
+    $('bBas').value = ''; $('bBit').value = '';
+    document.querySelectorAll('#bKat input').forEach(i => i.checked = false);
+    bildCiz();
+  };
+  $('gortKapat').onclick = () => $('gort').classList.remove('acik');
+  $('gort').onclick = (e) => { if (e.target === $('gort')) $('gort').classList.remove('acik'); };
+
+  bildSuzgecGorunum();
+  await bildYukle('hata');
+}
+
+function bildKategoriCiz(ekstra){
+  const sayac = {};
+  for (const r of S.bild.hata.satirlar) sayac[r.kategori || ''] = (sayac[r.kategori || ''] || 0) + 1;
+  /* Bilinen 8 anahtar (istemci paketinden olculdu) + kayitlarda gorulen her yeni
+     anahtar + kategorisiz kayit varsa onun kovasi. */
+  let anahtarlar = BILD_KAT.concat((ekstra || []).filter(k => k && !BILD_KAT.includes(k)));
+  anahtarlar = [...new Set(anahtarlar)];
+  if (sayac['']) anahtarlar.push('');
+  const secili = new Set([...document.querySelectorAll('#bKat input:checked')].map(i => i.value));
+  $('bKat').innerHTML = anahtarlar.map(k =>
+    '<label><input type="checkbox" value="' + esc(k) + '"' + (secili.has(k) ? ' checked' : '')
+    + '><span>' + esc(katAd(k)) + '</span><span class="n">' + (sayac[k] || 0) + '</span></label>').join('');
+  document.querySelectorAll('#bKat input').forEach(i => i.onchange = bildCiz);
+}
+
+function bildSuzgecGorunum(){
+  const hata = S.bildTur === 'hata';
+  $('bKatKutu').style.display  = hata ? '' : 'none';
+  $('bOnemKutu').style.display = hata ? '' : 'none';
+  $('bildDagilimKutu').style.display = hata ? '' : 'none';
+}
+
+async function bildYukle(tur){
+  const st = S.bild[tur];
+  if (st.mesgul) return;
+  st.mesgul = true;
+  $('bildSatirlar').innerHTML =
+    '<tr><td colspan="8"><div class="yukleniyor">' + (tur === 'hata'
+      ? 'hata bildirimleri yükleniyor…' : 'özellik istekleri yükleniyor…') + '</div></td></tr>';
+  const r = await bildListeCek(tur);
+  st.mesgul = false;
+  if (r.durum === 401 || r.durum === 403) return ekranGiris();
+  if (!r.ok) {
+    st.satirlar = [];
+    $('bildSatirlar').innerHTML = '';
+    const m = r.durum === 404
+      ? 'Bildirim ucu sunucuda henüz yok — sunucu tarafı bu panel sürümünü tanımıyor'
+      : hataMetni(r, tur === 'hata' ? 'hata bildirimleri yüklenemedi' : 'özellik istekleri yüklenemedi');
+    hataYaz('bildYaz', m, () => bildYukle(tur));
+    bildSayacCiz();
+    return;
+  }
+  st.satirlar = bildSatirlariAl(r.govde).map(bildNorm);
+  st.toplam = r.govde && (r.govde.toplam ?? r.govde.total ?? null);
+  st.sec = null;
+  if (tur === 'hata') bildKategoriCiz(st.satirlar.map(x => x.kategori).filter(Boolean));
+  bildDetayKapat();
+  bildOzetGetir();
+  bildCiz();
+}
+
+/* -------------------------------------------------------------- suzme / cizim */
+let bildZaman = null;
+function bildGecikmeliCiz(){ clearTimeout(bildZaman); bildZaman = setTimeout(bildCiz, 160); }
+
+function bildSuzulmus(tur){
+  const st = S.bild[tur];
+  const kats = new Set([...document.querySelectorAll('#bKat input:checked')].map(i => i.value));
+  const durum = $('bDurum').value, onem = $('bOnem').value;
+  const q = $('bQ').value.trim().toLocaleLowerCase('tr');
+  const bas = $('bBas').value ? Date.parse($('bBas').value + 'T00:00:00') : null;
+  const bit = $('bBit').value ? Date.parse($('bBit').value + 'T23:59:59.999') : null;
+  return st.satirlar.filter(r => {
+    if (tur === 'hata' && kats.size && !kats.has(r.kategori || '')) return false;
+    if (durum && (r.durum || 'acik') !== durum) return false;
+    if (tur === 'hata' && onem && (r.onem || '') !== onem) return false;
+    const t = zamanMs(r.tarih);
+    if (bas != null && t != null && t < bas) return false;
+    if (bit != null && t != null && t > bit) return false;
+    if (q) {
+      const havuz = [r.baslik, r.aciklama, r.karakter, r.bolge, r.surum, r.ref,
+                     etKat(r.kategori), etKonu(r.konu)]
+        .filter(Boolean).join(' ').toLocaleLowerCase('tr');
+      if (!havuz.includes(q)) return false;
+    }
+    return true;
+  });
+}
+
+const BILD_SUTUN = {
+  hata: [['tarih','Tarih'],['kategori','Kategori'],['konu','Konu / Başlık'],['onem','Önem'],
+         ['siklik','Sıklık'],['karakter','Karakter'],['bolge','Bölge'],['durum','Durum']],
+  ozellik: [['tarih','Tarih'],['baslik','Başlık'],['surum','Sürüm'],['durum','Durum']],
+};
+
+function bildCiz(){
+  const tur = S.bildTur, st = S.bild[tur];
+  const sutun = BILD_SUTUN[tur];
+  const sir = st.sirala;
+  let liste = bildSuzulmus(tur);
+  if (sir) liste = [...liste].sort((a, b) => {
+    let x = a[sir.k], y = b[sir.k];
+    if (sir.k === 'tarih') { x = zamanMs(x) ?? 0; y = zamanMs(y) ?? 0; }
+    if (sir.k === 'kategori') { x = etKat(x); y = etKat(y); }
+    if (sir.k === 'konu') { x = etKonu(x); y = etKonu(y); }
+    if (sir.k === 'onem') { x = BILD_ONEM.indexOf(x); y = BILD_ONEM.indexOf(y); }
+    if (sir.k === 'siklik') { x = BILD_SIKLIK.indexOf(x); y = BILD_SIKLIK.indexOf(y); }
+    const c = (typeof x === 'number' && typeof y === 'number')
+      ? x - y : String(x ?? '').localeCompare(String(y ?? ''), 'tr');
+    return sir.yon * c;
+  });
+  st.suzulmus = liste;
+
+  $('bildBaslik').innerHTML = sutun.map(s =>
+    '<th class="sirala" data-bk="' + s[0] + '">' + esc(s[1]) + '<span class="ok">'
+    + (sir && sir.k === s[0] ? (sir.yon > 0 ? '▲' : '▼') : '') + '</span></th>').join('');
+  document.querySelectorAll('#bildBaslik th.sirala').forEach(th => th.onclick = () => {
+    st.sirala = (sir && sir.k === th.dataset.bk) ? { k: sir.k, yon: -sir.yon }
+                                                 : { k: th.dataset.bk, yon: 1 };
+    bildCiz();
+  });
+
+  $('bildSatirlar').innerHTML = liste.map((r, i) => {
+    const a = bildAnahtar(r, i);
+    const secili = st.sec === a ? ' secilisatir' : '';
+    if (tur === 'ozellik')
+      return '<tr class="tikla' + secili + '" data-ba="' + esc(a) + '"><td>' + esc(tarihMetni(r.tarih))
+        + '</td><td><span class="link">' + esc(r.baslik || '(başlıksız)') + '</span>'
+        + '<div class="kucuk">' + esc((r.aciklama || '').slice(0, 90))
+        + ((r.aciklama || '').length > 90 ? '…' : '') + '</div></td>'
+        + '<td class="anahtar">' + esc(r.surum || '—') + '</td>'
+        + '<td><span class="drm ' + esc(r.durum || 'acik') + '">' + esc(durumAd(r.durum || 'acik'))
+        + '</span></td></tr>';
+    return '<tr class="tikla' + secili + '" data-ba="' + esc(a) + '">'
+      + '<td>' + esc(tarihMetni(r.tarih)) + '</td>'
+      + '<td>' + esc(etKat(r.kategori)) + '</td>'
+      + '<td><span class="link">' + esc(etKonu(r.konu)) + '</span>'
+      + (r.gorselVar ? '<span class="rozet">görsel</span>' : '')
+      + '<div class="kucuk">' + esc((r.baslik || '').slice(0, 80))
+      + ((r.baslik || '').length > 80 ? '…' : '') + '</div></td>'
+      + '<td class="onm ' + esc(r.onem || '') + '">' + esc(etOnem(r.onem)) + '</td>'
+      + '<td>' + esc(etSik(r.siklik)) + '</td>'
+      + '<td>' + esc(r.karakter || (r.charId != null ? 'CharID ' + r.charId : '—')) + '</td>'
+      + '<td>' + esc(r.bolge || '—') + '</td>'
+      + '<td><span class="drm ' + esc(r.durum || 'acik') + '">' + esc(durumAd(r.durum || 'acik'))
+      + '</span></td></tr>';
+  }).join('') || '<tr><td colspan="' + sutun.length + '" style="color:var(--soluk)">'
+    + (st.satirlar.length ? 'süzgece uyan kayıt yok' : 'kayıt yok') + '</td></tr>';
+
+  document.querySelectorAll('#bildSatirlar tr[data-ba]').forEach(tr =>
+    tr.onclick = () => bildDetayAc(tr.dataset.ba));
+
+  const ek = (st.toplam != null && st.toplam > st.satirlar.length)
+    ? ' · sunucuda toplam ' + say(st.toplam) + ' (son ' + $('bLimit').value + ' kayıt çekildi)' : '';
+  yaz('bildYaz', liste.length + ' / ' + st.satirlar.length + ' kayıt gösteriliyor' + ek, true);
+  bildSayacCiz();
+  bildOzetCiz();
+}
+
+/* ------------------------------------------------------------- ozet / sayaclar */
+async function bildOzetGetir(){
+  if (S.bildOzetDenendi) return;
+  S.bildOzetDenendi = true;
+  const r = await api('/api/v1/admin/bildirim-ozet');
+  if (r.ok && r.govde && typeof r.govde === 'object') S.bildOzet = r.govde;
+  bildSayacCiz();
+}
+
+function bildSayacCiz(){
+  const oz = S.bildOzet || {};
+  const acikSay = (tur) => S.bild[tur].satirlar.filter(r => (r.durum || 'acik') === 'acik').length;
+  const hSay = oz.hataToplam ?? S.bild.hata.toplam ?? S.bild.hata.satirlar.length;
+  const oSay = oz.ozellikToplam ?? S.bild.ozellik.toplam ?? S.bild.ozellik.satirlar.length;
+  if ($('bildSayHata'))    $('bildSayHata').textContent = hSay;
+  if ($('bildSayOzellik')) $('bildSayOzellik').textContent = oSay;
+  const acik = oz.acik ?? (S.bild.hata.satirlar.length ? acikSay('hata') : null);
+  const roz = $('bildRozet');
+  if (roz) {
+    if (acik == null || acik === 0) { roz.style.display = 'none'; }
+    else { roz.style.display = ''; roz.textContent = acik; }
+  }
+}
+
+function bildOzetCiz(){
+  const tur = S.bildTur, st = S.bild[tur];
+  const simdi = Date.now();
+  const gun = 86400000;
+  const bugun = new Date(); bugun.setHours(0, 0, 0, 0);
+  const say2 = (f) => st.satirlar.filter(f).length;
+  const kartlar = [
+    ['Açık',        say2(r => (r.durum || 'acik') === 'acik')],
+    ['İnceleniyor', say2(r => r.durum === 'inceleniyor')],
+    ['Çözüldü',     say2(r => r.durum === 'cozuldu')],
+    ['Bugün',       say2(r => { const t = zamanMs(r.tarih); return t != null && t >= bugun.getTime(); })],
+    ['Bu hafta',    say2(r => { const t = zamanMs(r.tarih); return t != null && t >= simdi - 7 * gun; })],
+    ['Yüklenen',    st.satirlar.length],
+  ];
+  $('bildOzetKart').innerHTML = kartlar.map(x =>
+    '<div class="k"><div class="n">' + x[1] + '</div><div class="e">' + esc(x[0]) + '</div></div>').join('');
+
+  if (tur !== 'hata') return;
+  const sayac = {};
+  for (const r of st.satirlar) { const k = r.kategori || ''; sayac[k] = (sayac[k] || 0) + 1; }
+  const enBuyuk = Math.max(1, ...Object.values(sayac));
+  let anahtarlar = [...new Set(BILD_KAT.concat(Object.keys(sayac).filter(Boolean)))];
+  if (sayac['']) anahtarlar.push('');
+  const sirali = anahtarlar.map(k => [k, sayac[k] || 0]).sort((a, b) => b[1] - a[1]);
+  $('bildDagilim').innerHTML = sirali.map(([k, n]) =>
+    '<div class="c"><span>' + esc(katAd(k)) + '</span>'
+    + '<span class="cb"><i style="width:' + Math.round(n / enBuyuk * 100) + '%"></i></span>'
+    + '<span class="cs">' + n + '</span></div>').join('')
+    + '<div class="kucuk" style="margin-top:4px">yüklenen ' + st.satirlar.length
+    + ' kayda göre (süzgeçten bağımsız)</div>';
+}
+
+/* ------------------------------------------------------------------- detay */
+function bildDetayKapat(){
+  const d = $('bildDetay'); if (d) d.innerHTML = '';
+  if (S.gorselUrl) { URL.revokeObjectURL(S.gorselUrl); S.gorselUrl = null; }
+}
+function bildSatirBul(anahtar){
+  const st = S.bild[S.bildTur];
+  const liste = st.suzulmus || st.satirlar;
+  return liste.find((r, i) => bildAnahtar(r, i) === anahtar) || null;
+}
+
+async function bildDetayAc(anahtar){
+  const st = S.bild[S.bildTur];
+  st.sec = anahtar;
+  const satir = bildSatirBul(anahtar);
+  if (!satir) return;
+  document.querySelectorAll('#bildSatirlar tr[data-ba]').forEach(tr =>
+    tr.classList.toggle('secilisatir', tr.dataset.ba === anahtar));
+  bildDetayCiz(satir);
+  $('bildDetay').scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+
+  /* Liste ucu ozet dondurmus olabilir (aciklama/baglam kirpik). Tam govdeyi
+     tek-kayit ucundan iste; uc yoksa listedeki kayitla devam edilir. */
+  if (!satir.ref) return;
+  const r = await api(bildTaban(S.bildTur) + '/' + encodeURIComponent(satir.ref)
+    + '?tur=' + encodeURIComponent(S.bildTur));
+  if (!r.ok || st.sec !== anahtar) return;
+  const govde = r.govde && (r.govde.satir || r.govde.kayit || r.govde.bildirim || r.govde);
+  if (!govde || typeof govde !== 'object') return;
+  const tam = bildNorm(govde);
+  /* Listeden gelen ve detayda bos donen alanlari koru (uc ozet donduruyorsa). */
+  for (const k of Object.keys(tam)) if (tam[k] == null || tam[k] === '') tam[k] = satir[k];
+  const ix = st.satirlar.indexOf(satir);
+  if (ix >= 0) st.satirlar[ix] = tam;
+  bildDetayCiz(tam);
+}
+
+function bildMetaKutu(ciftler){
+  const dolu = ciftler.filter(x => x[1] != null && x[1] !== '' && x[1] !== undefined);
+  if (!dolu.length) return '';
+  return '<div class="bmeta">' + dolu.map(x =>
+    '<div><span>' + esc(x[0]) + '</span><b title="' + esc(String(x[1])) + '">'
+    + esc(String(x[1])) + '</b></div>').join('') + '</div>';
+}
+
+function bildSohbetHtml(c){
+  const sohbet = c && (c.chat || c.sohbet);
+  if (!Array.isArray(sohbet)) return '<p class="kucuk">bu kayıtta sohbet bağlamı yok</p>';
+  if (!sohbet.length) return '<p class="kucuk">sohbet bağlamı boş (rapor anında sohbet geçmişi yoktu)</p>';
+  return '<div class="bsohbet">' + sohbet.map(m => {
+    if (typeof m === 'string') return '<div>' + esc(m) + '</div>';
+    if (m && typeof m === 'object') {
+      const kim = m.from ?? m.name ?? m.sender ?? m.who ?? null;
+      const metin = m.text ?? m.msg ?? m.message ?? m.body ?? null;
+      if (metin != null)
+        return '<div>' + (kim ? '<span class="kn">' + esc(kim) + ':</span> ' : '') + esc(metin) + '</div>';
+    }
+    return '<div>' + esc(JSON.stringify(m)) + '</div>';
+  }).join('') + '</div>';
+}
+
+function bildDetayCiz(r){
+  const c = r.baglam || {};
+  const ch = c.char || {};
+  const konum = r.pos ? [r.pos.x, r.pos.y, r.pos.z].map(v =>
+    typeof v === 'number' ? Math.round(v) : v).join(', ') : null;
+  const ozellik = S.bildTur === 'ozellik';
+
+  const oyunMeta = ozellik ? '' : bildMetaKutu([
+    ['Karakter', r.karakter], ['CharID', r.charId], ['JID', r.JID],
+    ['Seviye', ch.level], ['Irk', ch.race], ['Stil', ch.style], ['Cinsiyet', ch.gender],
+    ['HP', ch.maxHp != null ? ch.hp + ' / ' + ch.maxHp : ch.hp],
+    ['MP', ch.maxMp != null ? ch.mp + ' / ' + ch.maxMp : ch.mp],
+    ['STR / INT', (ch.str != null && ch.int != null) ? ch.str + ' / ' + ch.int : null],
+    ['Altın', ch.gold != null ? say(ch.gold) : null],
+    ['Ölü', ch.dead == null ? null : (ch.dead ? 'EVET' : 'hayır')],
+    ['Premium', ch.premiumTier],
+    ['Bölge', r.bolge], ['Konum', konum],
+    ['Hedef', c.target && (c.target.name || c.target.id || JSON.stringify(c.target))],
+    ['Parti', c.party && (c.party.name || (c.party.members && c.party.members.length + ' üye'))],
+    ['Buff', c.buffs], ['Durum efekti', Array.isArray(c.statuses) ? c.statuses.join(', ') : c.statuses],
+    ['Ustalık', Array.isArray(c.masteries) ? c.masteries.join(', ') : c.masteries],
+    ['Öğrenilen beceri', c.knownSkillCount],
+    ['Görev', Array.isArray(c.quests) ? c.quests.length : null],
+    ['Kuşam', c.equipSummary],
+    ['Bildirilen şey', r.hedefRef && (r.hedefRef.kind || JSON.stringify(r.hedefRef))],
+  ]);
+
+  /* Alt nesnelerin anahtarlari gercek kayitlardan olculdu (bug-reports.log):
+     perf{fps,gpu} · viewport{backingW,backingH,hardwareScaling,dpr,contextLost}
+     vram{totalBytes,textures,renderer,approx} · settings{preset,language,renderScale3d,fxFidelity}
+     mem{jsHeapMB,uptimeMin,meshes,materials,textures,animationGroups,liveFx}
+     net{readyState,sent,recv,recent}. Bulunamayan alan hic cizilmez. */
+  const tek  = ozellik ? {} : (c.viewport || {});
+  const bel  = (!ozellik && c.mem) || {};
+  const ag   = (!ozellik && c.net) || {};
+  const WS_DURUM = { 0: 'bağlanıyor (0)', 1: 'açık (1)', 2: 'kapanıyor (2)', 3: 'kapalı (3)' };
+  const teknikMeta = bildMetaKutu([
+    ['İstemci sürümü', r.surum],
+    ['FPS', c.perf && c.perf.fps],
+    ['GPU', (c.perf && c.perf.gpu) || (c.vram && c.vram.renderer)],
+    ['Ekran', tek.backingW != null ? tek.backingW + ' × ' + tek.backingH : null],
+    ['DPR', tek.dpr], ['Donanım ölçek', tek.hardwareScaling],
+    ['Bağlam kaybı', tek.contextLost == null ? null : (tek.contextLost ? 'EVET' : 'hayır')],
+    ['VRAM', c.vram && c.vram.totalBytes != null
+      ? (c.vram.totalBytes / 1048576).toFixed(1) + ' MB'
+        + (c.vram.approx ? ' (yaklaşık)' : '') : null],
+    ['Doku sayısı', c.vram && c.vram.textures],
+    ['JS yığını', bel.jsHeapMB != null ? bel.jsHeapMB + ' MB' : null],
+    ['Oturum süresi', bel.uptimeMin != null ? bel.uptimeMin + ' dk' : null],
+    ['Sahne', bel.meshes != null
+      ? bel.meshes + ' mesh · ' + (bel.materials ?? '?') + ' malzeme' : null],
+    ['Canlı efekt', bel.liveFx],
+    ['Bağlantı', ag.readyState != null ? (WS_DURUM[ag.readyState] || ag.readyState) : null],
+    ['Paket', ag.sent != null ? 'giden ' + ag.sent + ' · gelen ' + (ag.recv ?? '?') : null],
+    ['Ayar öngörünüm', c.settings && c.settings.preset],
+    ['Render ölçeği', c.settings && c.settings.renderScale3d],
+    ['Dil', c.settings && c.settings.language],
+    ['Tarayıcı', c.ua],
+    ['Bağlam anahtarı', c.refKey],
+  ]);
+
+  const durumDugme = BILD_DURUM.map(d =>
+    '<button class="kk' + ((r.durum || 'acik') === d[0] ? ' ana' : '') + '" data-bd="' + d[0]
+    + '"' + (r.ref ? '' : ' disabled title="bu kaydın ref alanı yok — sunucu güncellenemiyor"')
+    + '>' + esc(d[1]) + '</button>').join('');
+
+  $('bildDetay').innerHTML = '<div class="bdetay">'
+    + '<div class="ust"><div style="flex:1;min-width:240px">'
+    + '<h2>' + esc(r.baslik || '(başlıksız)') + '</h2>'
+    + '<div class="kucuk">' + esc(tarihMetni(r.tarih))
+    + (r.ref ? ' · <span class="anahtar">ref ' + esc(r.ref) + '</span>' : ' · <span class="anahtar">ref yok</span>')
+    + (ozellik ? '' : ' · ' + esc(etKat(r.kategori)) + ' → ' + esc(etKonu(r.konu))
+        + ' · ' + esc(etOnem(r.onem)) + ' · ' + esc(etSik(r.siklik)))
+    + '</div></div>'
+    + '<span class="drm ' + esc(r.durum || 'acik') + '" style="align-self:center">'
+    + esc(durumAd(r.durum || 'acik')) + '</span>'
+    + '<button class="kk" id="bKapat">Kapat</button></div>'
+
+    + '<h3 style="margin-top:0">Açıklama</h3>'
+    + '<div class="bmetin">' + (r.aciklama ? esc(r.aciklama)
+        : '<span class="kucuk">açıklama boş</span>') + '</div>'
+
+    + (ozellik ? '' : '<h3>Ekran görüntüsü</h3><div class="bshot" id="bShot">'
+        + '<span class="kucuk">yükleniyor…</span></div>')
+
+    + (ozellik ? '' : '<h3>Sohbet bağlamı</h3>' + bildSohbetHtml(c))
+
+    + (oyunMeta ? '<h3>Karakter / konum bağlamı</h3>' + oyunMeta : '')
+    + (teknikMeta ? '<h3>İstemci / teknik bilgi</h3>' + teknikMeta : '')
+
+    + '<h3>GM notu</h3>'
+    + '<textarea id="bNot" rows="3" style="width:100%" placeholder="bu bildirim hakkında not…"'
+    + (r.ref ? '' : ' disabled') + '>' + esc(r.gmNotu || '') + '</textarea>'
+
+    + '<h3>Durum</h3><div class="dugmeler" style="margin-top:0">' + durumDugme
+    + '<button class="kk" id="bNotKaydet"' + (r.ref ? '' : ' disabled') + '>Notu kaydet</button>'
+    + '<button class="kk" id="bSil" style="margin-left:auto;border-color:var(--kotu);color:#ffb3ad"'
+    + (r.ref ? '' : ' disabled') + '>Sil</button></div>'
+    + (r.ref ? '' : '<p class="kucuk" style="color:var(--kotu)">Bu kaydın <b>ref</b> alanı yok — '
+        + 'durum, not ve silme işlemleri sunucuda kaydı adresleyemez.</p>')
+    + '<div id="bIslemYaz" class="yaz"></div>'
+
+    + '<details class="bham"><summary>Ham kayıt (JSON)</summary><pre>'
+    + esc(JSON.stringify(bildHamKirp(r.ham), null, 1)) + '</pre></details>'
+    + '</div>';
+
+  $('bKapat').onclick = () => { S.bild[S.bildTur].sec = null; bildDetayKapat(); bildCiz(); };
+  document.querySelectorAll('#bildDetay button[data-bd]').forEach(b => b.onclick = () =>
+    bildDurumYaz(r, b.dataset.bd));
+  $('bNotKaydet').onclick = () => bildNotYaz(r, $('bNot').value);
+  $('bSil').onclick = () => bildSil(r);
+  if (!ozellik) gorselGetir(r);
+}
+
+/* Ham JSON'da ekran goruntusu data URL'i 130 KB civari — <pre> icine basmak
+   paneli kilitler; yalnizca boyutu yazilir. */
+function bildHamKirp(h){
+  if (!h || typeof h !== 'object') return h;
+  const k = { ...h };
+  for (const a of ['screenshot', 'gorsel'])
+    if (typeof k[a] === 'string') k[a] = '[' + k[a].length + ' karakterlik veri URL’i — yukarıda gösteriliyor]';
+  return k;
+}
+
+/* -------------------------------------------------------- ekran goruntusu */
+function gorselCiz(r, kaynak){
+  const kutu = $('bShot'); if (!kutu) return;
+  kutu.innerHTML = '<img id="bShotImg" alt="ekran görüntüsü" title="büyütmek için tıkla">'
+    + '<div class="kucuk" style="margin-top:6px">büyütmek için görüntüye tıkla</div>';
+  const im = $('bShotImg');
+  im.onerror = () => { kutu.innerHTML = '<span class="kucuk kotu">görüntü çözülemedi</span>'; };
+  im.onclick = () => {
+    $('gortKonu').textContent = (r.baslik || '') + (r.ref ? '  ·  ref ' + r.ref : '');
+    $('gortResim').src = kaynak;
+    $('gort').classList.add('acik');
+  };
+  im.src = kaynak;
+}
+
+async function gorselGetir(r){
+  const kutu = $('bShot'); if (!kutu) return;
+  if (S.gorselUrl) { URL.revokeObjectURL(S.gorselUrl); S.gorselUrl = null; }
+  /* Kayit goruntuyu zaten govdesinde tasiyorsa (data URL) ikinci istek atma. */
+  if (r.gorsel) return gorselCiz(r, r.gorsel);
+  if (!r.gorselVar) {
+    kutu.innerHTML = '<span class="kucuk">bu bildirimde ekran görüntüsü yok</span>'; return;
+  }
+  if (!r.ref) {
+    kutu.innerHTML = '<span class="kucuk">görüntü var ama kaydın ref alanı yok — '
+      + 'sunucu görsel ucu adreslenemiyor</span>'; return;
+  }
+  kutu.innerHTML = '<div class="yukleniyor">ekran görüntüsü yükleniyor…</div>';
+  /* <img src> yetki basligi tasiyamaz -> govde fetch ile cekilip nesne URL'ine
+     cevrilir. Sunucu JSON {dataUrl} dondurse de calisir. */
+  const yol = bildTaban('hata') + '/' + encodeURIComponent(r.ref) + '/gorsel';
+  try {
+    const c = await fetch(yol, { headers: S.token ? { authorization: 'Bearer ' + S.token } : {} });
+    if (!c.ok) {
+      kutu.innerHTML = '<span class="kucuk kotu">ekran görüntüsü alınamadı'
+        + (c.status === 404 ? ' — sunucuda kayıtlı görüntü yok' : ' (HTTP ' + c.status + ')') + '</span>';
+      return;
+    }
+    const tip = c.headers.get('content-type') || '';
+    let kaynak;
+    if (tip.includes('json')) {
+      const j = await c.json();
+      kaynak = j.dataUrl || j.gorsel || j.screenshot || null;
+      if (!kaynak) { kutu.innerHTML = '<span class="kucuk">sunucu görüntü döndürmedi</span>'; return; }
+    } else {
+      kaynak = URL.createObjectURL(await c.blob());
+      S.gorselUrl = kaynak;
+    }
+    gorselCiz(r, kaynak);
+  } catch {
+    kutu.innerHTML = '<span class="kucuk kotu">ekran görüntüsü alınamadı — bağlantı hatası</span>';
+  }
+}
+
+/* ------------------------------------------------------------ durum / not / sil */
+async function bildUcaYaz(r, govde){
+  const taban = bildTaban(S.bildTur);
+  let c = await api(taban + '/' + encodeURIComponent(r.ref),
+    { method: 'POST', body: JSON.stringify({ tur: S.bildTur, ...govde }) });
+  /* Sunucu alt kaynak yerine koleksiyon ucunu tercih ediyorsa ref govdeye tasinir. */
+  if (c.durum === 404 || c.durum === 405)
+    c = await api(taban, { method: 'POST',
+      body: JSON.stringify({ tur: S.bildTur, ref: r.ref, ...govde }) });
+  return c;
+}
+
+async function bildDurumYaz(r, durum){
+  if (!r.ref) return;
+  yaz('bIslemYaz', 'uygulanıyor…');
+  const c = await bildUcaYaz(r, { durum });
+  if (!c.ok) {
+    const m = c.durum === 404
+      ? 'Durum güncelleme ucu sunucuda henüz yok'
+      : hataMetni(c, 'durum güncellenemedi');
+    yaz('bIslemYaz', m); toast(m, false); return;
+  }
+  r.durum = (c.govde && (c.govde.durum || (c.govde.satir && c.govde.satir.durum))) || durum;
+  bildCiz();
+  bildDetayCiz(r);          /* once yeniden ciz - sonra mesaji yaz, yoksa silinir */
+  yaz('bIslemYaz', 'durum: ' + durumAd(r.durum) + ' ✓', true);
+  toast('Durum güncellendi: ' + durumAd(r.durum), true);
+}
+
+async function bildNotYaz(r, not){
+  if (!r.ref) return;
+  yaz('bIslemYaz', 'not kaydediliyor…');
+  const c = await bildUcaYaz(r, { gmNotu: not });
+  if (!c.ok) {
+    const m = c.durum === 404 ? 'GM notu ucu sunucuda henüz yok' : hataMetni(c, 'not kaydedilemedi');
+    yaz('bIslemYaz', m); toast(m, false); return;
+  }
+  r.gmNotu = not;
+  yaz('bIslemYaz', 'GM notu kaydedildi ✓', true);
+  toast('GM notu kaydedildi', true);
+}
+
+async function bildSil(r){
+  if (!r.ref) return;
+  if (!confirm('Bu bildirim KALICI olarak silinecek'
+    + (r.baslik ? ':\n\n' + r.baslik : '') + '\n\nEmin misin?')) return;
+  yaz('bIslemYaz', 'siliniyor…');
+  const taban = bildTaban(S.bildTur);
+  let c = await api(taban + '/' + encodeURIComponent(r.ref), { method: 'DELETE' });
+  if (c.durum === 404 || c.durum === 405) c = await bildUcaYaz(r, { sil: true });
+  if (!c.ok) {
+    const m = c.durum === 404 ? 'Silme ucu sunucuda henüz yok' : hataMetni(c, 'silinemedi');
+    yaz('bIslemYaz', m); toast(m, false); return;
+  }
+  const st = S.bild[S.bildTur];
+  const ix = st.satirlar.indexOf(r);
+  if (ix >= 0) st.satirlar.splice(ix, 1);
+  st.sec = null;
+  bildDetayKapat();
+  bildCiz();
+  toast('Bildirim silindi', true);
+}
+
+/* ------------------------------------------------------- KLAVYE KISAYOLLARI */
+/* '/' aktif sekmenin arama kutusuna odaklanır; Esc açık eşya seçiciyi kapatır. */
+document.addEventListener('keydown', (e) => {
+  if (e.key === 'Escape') {
+    /* once buyutulmus ekran goruntusu, sonra esya secici kapanir */
+    if ($('gort').classList.contains('acik')) { $('gort').classList.remove('acik'); return; }
+    $('ort').classList.remove('acik');
+    return;
+  }
+  if (e.key !== '/') return;
+  const t = e.target;
+  if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) return;
+  const hedef = $('ort').classList.contains('acik') ? $('esyaQ')
+    : $('s-hesaplar').classList.contains('aktif') ? $('hesapQ')
+    : $('s-karakterler').classList.contains('aktif') ? $('karQ')
+    : $('s-mall').classList.contains('aktif') ? $('mallQ')
+    : $('s-bildirimler').classList.contains('aktif') ? $('bQ') : null;
+  if (hedef) { e.preventDefault(); hedef.focus(); }
+});
+$('duyuruMetin').oninput = () => $('duyuruMetin').classList.remove('hatali');
+
+/* ---------------------------------------------------------------- ACILIS */
+(async () => {
+  if (!S.token) return ekranGiris();
+  yukleniyor('liste', 'panel açılıyor…');
+  ekranPanel();
+  const r = await api('/api/v1/admin/ayarlar');
+  if (r.ok) ayarCiz(r.govde.alanlar); else return ekranGiris();
+  /* Sekme rozetindeki "acik bildirim" sayisi: yalnizca UCUZ ozet ucu denenir.
+     Uc yoksa rozet gizli kalir — sekme acilinca listeden hesaplanir. */
+  bildOzetGetir();
+})();
+</script>
+</body>
+</html>

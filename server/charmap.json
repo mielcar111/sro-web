@@ -1,0 +1,66 @@
+{
+ "chinaman_bogy": {
+  "code": "CHAR_CH_MAN_BOGY",
+  "refObjId": 1908
+ },
+ "chinaman_fighter": {
+  "code": "CHAR_CH_MAN_FIGHTER",
+  "refObjId": 1909
+ },
+ "chinaman_warrior": {
+  "code": "CHAR_CH_MAN_WARRIOR",
+  "refObjId": 1919
+ },
+ "chinaman_adventurer": {
+  "code": "CHAR_CH_MAN_ADVENTURER",
+  "refObjId": 1907
+ },
+ "chinawoman_fighter": {
+  "code": "CHAR_CH_WOMAN_FIGHTER",
+  "refObjId": 1923
+ },
+ "chinawoman_warrior": {
+  "code": "CHAR_CH_WOMAN_WARRIOR",
+  "refObjId": 1932
+ },
+ "chinawoman_adventurer": {
+  "code": "CHAR_CH_WOMAN_ADVENTURER",
+  "refObjId": 1920
+ },
+ "chinawoman_kisaeng": {
+  "code": "CHAR_CH_WOMAN_KISAENG",
+  "refObjId": 1926
+ },
+ "europeman_knight": {
+  "code": "CHAR_EU_MAN_KNIGHT",
+  "refObjId": 14880
+ },
+ "europeman_warrior": {
+  "code": "CHAR_EU_MAN_WARRIOR",
+  "refObjId": 14881
+ },
+ "europeman_gladiator": {
+  "code": "CHAR_EU_MAN_GLADIATOR",
+  "refObjId": 14882
+ },
+ "europeman_adventurer": {
+  "code": "CHAR_EU_MAN_ADVENTURER",
+  "refObjId": 14884
+ },
+ "europewoman_knight": {
+  "code": "CHAR_EU_WOMAN_KNIGHT",
+  "refObjId": 14895
+ },
+ "europewoman_amazoness": {
+  "code": "CHAR_EU_WOMAN_AMAZONESS",
+  "refObjId": 14894
+ },
+ "europewoman_gladiator": {
+  "code": "CHAR_EU_WOMAN_GLADIATOR",
+  "refObjId": 14897
+ },
+ "europewoman_adventurer": {
+  "code": "CHAR_EU_WOMAN_ADVENTURER",
+  "refObjId": 14896
+ }
+}

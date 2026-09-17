@@ -1,0 +1,525 @@
+{
+ "$comment": "Unique boss placements (hand-owned; verify via tools/map-pipeline verify-unique-camps). camps = EXACT retail Tab_RefNest unique-nest positions (world-v2 global frame, retail*1.5) from the spawn-coverage ledgers; the scheduler rolls ONE camp uniformly per spawn, retail-style. respawnMinutes [180,360] = the live-DB dwDelayTimeMin/Max 10800-21600s window shared by every field unique (bonelord nest 60870 authors count 4 in retail; we keep max 1 live like all other camps). bands = INTERIM HP-fraction triggers for the db-exact ssou SUMMON ladder (retail's trigger rule is engine-coded, unmeasured — ledgered); each band fires once per life, descending. maxAdds clips waves that would exceed the live-adds cap.",
+ "uniques": [
+  {
+   "monsterId": "mob_tigerwoman",
+   "zoneId": "jangan_province",
+   "camps": [
+    {
+     "nestId": 5656,
+     "x": 7279.92,
+     "z": 140.73
+    },
+    {
+     "nestId": 5657,
+     "x": 7100.22,
+     "z": -51.2
+    },
+    {
+     "nestId": 5658,
+     "x": 7260.14,
+     "z": -184.36
+    },
+    {
+     "nestId": 5659,
+     "x": 7558.01,
+     "z": -42.47
+    },
+    {
+     "nestId": 5903,
+     "x": 6345.14,
+     "z": 302.17
+    },
+    {
+     "nestId": 5904,
+     "x": 6626.46,
+     "z": 898.73
+    },
+    {
+     "nestId": 5905,
+     "x": 7115.9,
+     "z": 621.74
+    },
+    {
+     "nestId": 5906,
+     "x": 8002.24,
+     "z": 539.96
+    },
+    {
+     "nestId": 5907,
+     "x": 8032.37,
+     "z": -335.4
+    },
+    {
+     "nestId": 5908,
+     "x": 6816.26,
+     "z": -453.84
+    },
+    {
+     "nestId": 5909,
+     "x": 6464.21,
+     "z": -227.06
+    }
+   ],
+   "respawnMinutes": [
+    180,
+    360
+   ],
+   "bands": [
+    {
+     "hpPct": 80,
+     "skillId": "msk_3049"
+    },
+    {
+     "hpPct": 55,
+     "skillId": "msk_3050"
+    },
+    {
+     "hpPct": 30,
+     "skillId": "msk_3051"
+    },
+    {
+     "hpPct": 12,
+     "skillId": "msk_3052"
+    }
+   ],
+   "maxAdds": 12
+  },
+  {
+   "monsterId": "mob_uruchi",
+   "zoneId": "donwhang_province",
+   "camps": [
+    {
+     "nestId": 5660,
+     "x": 4047.22,
+     "z": 180.37
+    },
+    {
+     "nestId": 5661,
+     "x": 4041.87,
+     "z": -169.77
+    },
+    {
+     "nestId": 5662,
+     "x": 3772.15,
+     "z": -179.65
+    },
+    {
+     "nestId": 5663,
+     "x": 3742.38,
+     "z": 155.73
+    },
+    {
+     "nestId": 5910,
+     "x": 3068.77,
+     "z": 1260.53
+    },
+    {
+     "nestId": 5911,
+     "x": 3475.88,
+     "z": 925.72
+    },
+    {
+     "nestId": 5912,
+     "x": 3869.35,
+     "z": 769.45
+    },
+    {
+     "nestId": 5913,
+     "x": 4754.61,
+     "z": -22.72
+    },
+    {
+     "nestId": 5914,
+     "x": 3882.6,
+     "z": -550.44
+    },
+    {
+     "nestId": 5915,
+     "x": 3061.4,
+     "z": 526.48
+    },
+    {
+     "nestId": 5916,
+     "x": 3926.38,
+     "z": 1120.56
+    }
+   ],
+   "respawnMinutes": [
+    180,
+    360
+   ],
+   "bands": [
+    {
+     "hpPct": 80,
+     "skillId": "msk_3053"
+    },
+    {
+     "hpPct": 55,
+     "skillId": "msk_3054"
+    },
+    {
+     "hpPct": 30,
+     "skillId": "msk_3055"
+    },
+    {
+     "hpPct": 12,
+     "skillId": "msk_3056"
+    }
+   ],
+   "maxAdds": 12
+  },
+  {
+   "monsterId": "mob_isyutaru",
+   "zoneId": "hotan_province",
+   "camps": [
+    {
+     "nestId": 5666,
+     "x": -2327.62,
+     "z": -140.59
+    },
+    {
+     "nestId": 5667,
+     "x": -1936.91,
+     "z": -199.56
+    },
+    {
+     "nestId": 5668,
+     "x": -1911.86,
+     "z": -613.15
+    },
+    {
+     "nestId": 5669,
+     "x": -2309.88,
+     "z": -535.85
+    },
+    {
+     "nestId": 5917,
+     "x": -3243.21,
+     "z": 374.06
+    },
+    {
+     "nestId": 5918,
+     "x": -3308.56,
+     "z": -1565.59
+    },
+    {
+     "nestId": 5919,
+     "x": -2755.78,
+     "z": -1696.77
+    },
+    {
+     "nestId": 5920,
+     "x": -1290.51,
+     "z": -1655.26
+    },
+    {
+     "nestId": 5921,
+     "x": -1560.91,
+     "z": 472.23
+    },
+    {
+     "nestId": 5922,
+     "x": -2111.43,
+     "z": 693.63
+    },
+    {
+     "nestId": 5923,
+     "x": -2787.62,
+     "z": -184.73
+    }
+   ],
+   "respawnMinutes": [
+    180,
+    360
+   ],
+   "bands": [
+    {
+     "hpPct": 85,
+     "skillId": "msk_3057"
+    },
+    {
+     "hpPct": 70,
+     "skillId": "msk_3058"
+    },
+    {
+     "hpPct": 55,
+     "skillId": "msk_3059"
+    },
+    {
+     "hpPct": 40,
+     "skillId": "msk_3060"
+    },
+    {
+     "hpPct": 28,
+     "skillId": "msk_3061"
+    },
+    {
+     "hpPct": 16,
+     "skillId": "msk_3062"
+    },
+    {
+     "hpPct": 8,
+     "skillId": "msk_3063"
+    }
+   ],
+   "maxAdds": 12
+  },
+  {
+   "monsterId": "mob_bonelord",
+   "zoneId": "hotan_province",
+   "camps": [
+    {
+     "nestId": 21058,
+     "x": -2339.17,
+     "z": 3825.18
+    },
+    {
+     "nestId": 21059,
+     "x": -2336.54,
+     "z": 3833.01
+    },
+    {
+     "nestId": 21060,
+     "x": -2342.53,
+     "z": 3833.13
+    },
+    {
+     "nestId": 21061,
+     "x": -2344.84,
+     "z": 3826.19
+    },
+    {
+     "nestId": 21062,
+     "x": -2338.83,
+     "z": 3823.87
+    },
+    {
+     "nestId": 21066,
+     "x": -2340.01,
+     "z": 2786.67
+    },
+    {
+     "nestId": 21067,
+     "x": -817.22,
+     "z": 3765.44
+    },
+    {
+     "nestId": 21069,
+     "x": 74.83,
+     "z": 3673.54
+    },
+    {
+     "nestId": 21289,
+     "x": -1766.99,
+     "z": 3215.6
+    },
+    {
+     "nestId": 21609,
+     "x": -24,
+     "z": 3008.32
+    }
+   ],
+   "respawnMinutes": [
+    180,
+    360
+   ],
+   "bands": [
+    {
+     "hpPct": 85,
+     "skillId": "msk_3503"
+    },
+    {
+     "hpPct": 70,
+     "skillId": "msk_3504"
+    },
+    {
+     "hpPct": 55,
+     "skillId": "msk_3505"
+    },
+    {
+     "hpPct": 40,
+     "skillId": "msk_3506"
+    },
+    {
+     "hpPct": 28,
+     "skillId": "msk_3507"
+    },
+    {
+     "hpPct": 16,
+     "skillId": "msk_3508"
+    },
+    {
+     "hpPct": 8,
+     "skillId": "msk_3509"
+    }
+   ],
+   "maxAdds": 12
+  },
+  {
+   "$comment": "Cerberus (europe_province, lvl 24, 693,072 HP): 13 retail camps (ORIGINAL-dump nest ids, delay 10800-21600s = the shared field-unique window). Band pcts come from the retail skill CODES themselves (MSKILL_EU_KERBEROS_SUMMON_R1_80/60/40/20 + R2_20 as the low second wave; R1_00 unreachable at 0 HP).",
+   "monsterId": "mob_kerberos",
+   "zoneId": "europe_province",
+   "camps": [
+    {
+     "nestId": 8557,
+     "x": -18724.41,
+     "z": 3044.21
+    },
+    {
+     "nestId": 8558,
+     "x": -17607.89,
+     "z": 3336.87
+    },
+    {
+     "nestId": 8561,
+     "x": -18532.51,
+     "z": 2301.92
+    },
+    {
+     "nestId": 8562,
+     "x": -18105.3,
+     "z": 2302.56
+    },
+    {
+     "nestId": 8563,
+     "x": -18731.39,
+     "z": 1945.17
+    },
+    {
+     "nestId": 8564,
+     "x": -17716.39,
+     "z": 1970.1
+    },
+    {
+     "nestId": 8565,
+     "x": -17778.61,
+     "z": 2649.43
+    },
+    {
+     "nestId": 8566,
+     "x": -17510.15,
+     "z": 2498.12
+    },
+    {
+     "nestId": 8567,
+     "x": -18631.97,
+     "z": 2732.51
+    },
+    {
+     "nestId": 8754,
+     "x": -17165.62,
+     "z": 3292.86
+    },
+    {
+     "nestId": 8755,
+     "x": -17410.55,
+     "z": 2979.71
+    },
+    {
+     "nestId": 8756,
+     "x": -16998.07,
+     "z": 3012.43
+    },
+    {
+     "nestId": 8757,
+     "x": -17058.47,
+     "z": 2667.13
+    }
+   ],
+   "respawnMinutes": [
+    180,
+    360
+   ],
+   "bands": [
+    {
+     "hpPct": 80,
+     "skillId": "msk_3666"
+    },
+    {
+     "hpPct": 60,
+     "skillId": "msk_3667"
+    },
+    {
+     "hpPct": 40,
+     "skillId": "msk_3668"
+    },
+    {
+     "hpPct": 20,
+     "skillId": "msk_3669"
+    },
+    {
+     "hpPct": 10,
+     "skillId": "msk_3671"
+    }
+   ],
+   "maxAdds": 12
+  },
+  {
+   "$comment": "Captain Ivy (samarkand_province — the Evil Order Fortress belt is the Asia-Minor part of the MERGED zone, 2026-07-24; lvl 30, 1,094,835 HP, rarity 3): 8 retail camps (ORIGINAL-dump nest ids 20995-21004, delay 10800-21600s = the shared field-unique window). Band pcts are SOURCE-AUTHORED via AI_AttackChance on MSKILL_AM_IVY_SUMMON01/02/03 = 80/60/40 — the same ladder Kerberos encodes in its skill names.",
+   "monsterId": "mob_ivy",
+   "zoneId": "samarkand_province",
+   "camps": [
+    {
+     "nestId": 20995,
+     "x": -9637.07,
+     "z": 4116.96
+    },
+    {
+     "nestId": 20996,
+     "x": -9624.46,
+     "z": 4059.03
+    },
+    {
+     "nestId": 20997,
+     "x": -10396.24,
+     "z": 2505.11
+    },
+    {
+     "nestId": 20998,
+     "x": -10398.89,
+     "z": 2751.24
+    },
+    {
+     "nestId": 20999,
+     "x": -10210.98,
+     "z": 1897.03
+    },
+    {
+     "nestId": 21001,
+     "x": -11379.85,
+     "z": 1843.22
+    },
+    {
+     "nestId": 21003,
+     "x": -9586.01,
+     "z": 1877.68
+    },
+    {
+     "nestId": 21004,
+     "x": -10559.03,
+     "z": 3917.76
+    }
+   ],
+   "respawnMinutes": [
+    180,
+    360
+   ],
+   "bands": [
+    {
+     "hpPct": 80,
+     "skillId": "msk_12090"
+    },
+    {
+     "hpPct": 60,
+     "skillId": "msk_12091"
+    },
+    {
+     "hpPct": 40,
+     "skillId": "msk_12092"
+    }
+   ],
+   "maxAdds": 12
+  }
+ ]
+}

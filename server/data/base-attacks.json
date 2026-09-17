@@ -1,0 +1,372 @@
+{
+ "formatVersion": 1,
+ "attacks": [
+  {
+   "id": "base_punch",
+   "code": "SKILL_PUNCH_01",
+   "sourceRowId": 1,
+   "weapons": [
+    "unarmed"
+   ],
+   "school": "phys",
+   "attKindRaw": 5,
+   "coefficientPct": 150,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 1,
+   "actionMs": 1500,
+   "reuseMs": 1500,
+   "rangeU": 0,
+   "hitOffsetsMs": [
+    208
+   ],
+   "attPct2Raw": 150
+  },
+  {
+   "id": "base_ch_sword",
+   "code": "SKILL_CH_SWORD_BASE_01",
+   "sourceRowId": 2,
+   "weapons": [
+    "sword",
+    "blade"
+   ],
+   "school": "phys",
+   "attKindRaw": 5,
+   "coefficientPct": 60,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 2,
+   "actionMs": 1200,
+   "reuseMs": 1200,
+   "rangeU": 0,
+   "hitOffsetsMs": [
+    200,
+    566
+   ],
+   "getvRaw": [
+    1296122196
+   ],
+   "varRiders": [
+    "MAAT"
+   ],
+   "attPct2Raw": 60
+  },
+  {
+   "id": "base_ch_spear",
+   "code": "SKILL_CH_SPEAR_BASE_01",
+   "sourceRowId": 40,
+   "weapons": [
+    "spear",
+    "glavie"
+   ],
+   "school": "phys",
+   "attKindRaw": 5,
+   "coefficientPct": 117,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 1,
+   "actionMs": 1166,
+   "reuseMs": 1166,
+   "rangeU": 0,
+   "hitOffsetsMs": [
+    338
+   ],
+   "getvRaw": [
+    1296122196
+   ],
+   "varRiders": [
+    "MAAT"
+   ],
+   "attPct2Raw": 117
+  },
+  {
+   "id": "base_ch_bow",
+   "code": "SKILL_CH_BOW_BASE_01",
+   "sourceRowId": 70,
+   "weapons": [
+    "bow"
+   ],
+   "school": "phys",
+   "attKindRaw": 6,
+   "coefficientPct": 84,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 1,
+   "actionMs": 840,
+   "reuseMs": 840,
+   "rangeU": 0,
+   "hitOffsetsMs": [
+    445
+   ],
+   "flySpeedRaw": 400,
+   "flySpeedU": 60,
+   "getvRaw": [
+    1296122196
+   ],
+   "varRiders": [
+    "MAAT"
+   ],
+   "attPct2Raw": 84,
+   "cnsmRaw": [
+    4,
+    1,
+    1
+   ]
+  },
+  {
+   "id": "base_eu_sword",
+   "code": "SKILL_EU_SWORD_BASE_01",
+   "sourceRowId": 8419,
+   "weapons": [
+    "eu_sword"
+   ],
+   "school": "phys",
+   "attKindRaw": 5,
+   "coefficientPct": 123,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 1,
+   "actionMs": 1333,
+   "reuseMs": 1333,
+   "rangeU": 0,
+   "hitOffsetsMs": [
+    437
+   ],
+   "getvRaw": [
+    1160860481
+   ],
+   "varRiders": [
+    "E1SA"
+   ]
+  },
+  {
+   "id": "base_eu_tsword",
+   "code": "SKILL_EU_TSWORD_BASE_01",
+   "sourceRowId": 8420,
+   "weapons": [
+    "eu_tsword"
+   ],
+   "school": "phys",
+   "attKindRaw": 5,
+   "coefficientPct": 217,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 1,
+   "actionMs": 2000,
+   "reuseMs": 2000,
+   "rangeU": 0,
+   "hitOffsetsMs": [
+    638
+   ],
+   "getvRaw": [
+    1160926017
+   ],
+   "varRiders": [
+    "E2SA"
+   ]
+  },
+  {
+   "id": "base_eu_axe",
+   "code": "SKILL_EU_AXE_BASE_01",
+   "sourceRowId": 8421,
+   "weapons": [
+    "eu_axe"
+   ],
+   "school": "phys",
+   "attKindRaw": 5,
+   "coefficientPct": 73,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 2,
+   "actionMs": 1500,
+   "reuseMs": 1500,
+   "rangeU": 0,
+   "hitOffsetsMs": [
+    290,
+    740
+   ],
+   "getvRaw": [
+    1160921409,
+    1160921416
+   ],
+   "varRiders": [
+    "E2AA",
+    "E2AH"
+   ]
+  },
+  {
+   "id": "base_eu_dagger",
+   "code": "SKILL_EU_DAGGER_BASE_01",
+   "sourceRowId": 9355,
+   "weapons": [
+    "eu_dagger"
+   ],
+   "school": "phys",
+   "attKindRaw": 5,
+   "coefficientPct": 54,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 2,
+   "actionMs": 1000,
+   "reuseMs": 1000,
+   "rangeU": 0,
+   "hitOffsetsMs": [
+    200,
+    533
+   ],
+   "getvRaw": [
+    1145520468,
+    1145522258,
+    1145520449
+   ],
+   "varRiders": [
+    "DGAT",
+    "DGHR",
+    "DGAA"
+   ],
+   "attPct2Raw": 54
+  },
+  {
+   "id": "base_eu_crossbow",
+   "code": "SKILL_EU_CROSSBOW_BASE_01",
+   "sourceRowId": 9354,
+   "weapons": [
+    "eu_crossbow"
+   ],
+   "school": "phys",
+   "attKindRaw": 6,
+   "coefficientPct": 116,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 1,
+   "actionMs": 780,
+   "reuseMs": 1333,
+   "rangeU": 0,
+   "hitOffsetsMs": [
+    1213
+   ],
+   "castMs": 553,
+   "getvRaw": [
+    1128415572,
+    1128419905
+   ],
+   "varRiders": [
+    "CBAT",
+    "CBRA"
+   ],
+   "attPct2Raw": 116,
+   "cnsmRaw": [
+    4,
+    2,
+    1
+   ]
+  },
+  {
+   "id": "base_eu_darkstaff",
+   "code": "SKILL_EU_WAND_WARLOCK_BASE_01",
+   "sourceRowId": 10625,
+   "weapons": [
+    "eu_darkstaff"
+   ],
+   "school": "mag",
+   "attKindRaw": 10,
+   "coefficientPct": 153,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 1,
+   "actionMs": 865,
+   "reuseMs": 1666,
+   "rangeU": 22.5,
+   "hitOffsetsMs": [
+    801
+   ],
+   "castMs": 801,
+   "getvRaw": [
+    1296122196
+   ],
+   "varRiders": [
+    "MAAT"
+   ]
+  },
+  {
+   "id": "base_eu_tstaff",
+   "code": "SKILL_EU_STAFF_BASE_01",
+   "sourceRowId": 9944,
+   "weapons": [
+    "eu_tstaff"
+   ],
+   "school": "mag",
+   "attKindRaw": 10,
+   "coefficientPct": 180,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 1,
+   "actionMs": 732,
+   "reuseMs": 1666,
+   "rangeU": 22.5,
+   "hitOffsetsMs": [
+    933
+   ],
+   "castMs": 934,
+   "getvRaw": [
+    1296122196
+   ],
+   "varRiders": [
+    "MAAT"
+   ]
+  },
+  {
+   "id": "base_eu_staff",
+   "code": "SKILL_EU_WAND_CLERIC_BASE_01",
+   "sourceRowId": 11526,
+   "weapons": [
+    "eu_staff"
+   ],
+   "school": "mag",
+   "attKindRaw": 10,
+   "coefficientPct": 153,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 1,
+   "actionMs": 865,
+   "reuseMs": 1666,
+   "rangeU": 22.5,
+   "hitOffsetsMs": [
+    801
+   ],
+   "castMs": 801,
+   "getvRaw": [
+    1296122196
+   ],
+   "varRiders": [
+    "MAAT"
+   ]
+  },
+  {
+   "id": "base_eu_harp",
+   "code": "SKILL_EU_HARP_BASE_01",
+   "sourceRowId": 11162,
+   "weapons": [
+    "eu_harp"
+   ],
+   "school": "mag",
+   "attKindRaw": 10,
+   "coefficientPct": 200,
+   "flatMin": 0,
+   "flatMax": 0,
+   "hits": 1,
+   "actionMs": 2000,
+   "reuseMs": 2000,
+   "rangeU": 22.5,
+   "hitOffsetsMs": [
+    493
+   ],
+   "getvRaw": [
+    1297432916
+   ],
+   "varRiders": [
+    "MUAT"
+   ]
+  }
+ ]
+}

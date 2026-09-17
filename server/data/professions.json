@@ -1,0 +1,348 @@
+{
+ "$comment": "Professions v1 (hand-owned; survives pnpm gen:sro). One collector + one crafter per character, learned at trainer NPCs, permanent. maxLevel is test-asserted === xp-table maxLevel. xpToNext(level) = round(base * (1+growthPct/100)^(level-1)). Gather: one swing = one anim cycle = one yield roll. A node's GRADE (its glow colour) is the only thing that changes its value - it multiplies profession XP. The model is regional flavour only, and WHICH material tier drops is rolled per swing from yieldByLevel against the gatherer's PROFESSION level. Node coordinates live in config/gather-node-placements.json. RETUNE 2026-08-16: respawnMs 180000 -> 90000, alongside 4 new mining fields (2 in jangan_province, 2 in europe_province). Stone is capped by hand placements ALONE - wood gets hundreds of free nodes via convertMapStatics - which is why miners felt starved. The new fields are ~12 seams each and WOULD run dry for a lone miner at 180s (a 12-seam lap is ~3.5min); the 24-seam tomb field never did, so this knob buys nothing there and everything in the new fields plus any field with more than one miner in it. The quantity knobs (yieldMin/yieldMax, nodeCharges) were deliberately left alone - they are the follow-up lever if mining still reads thin, and unlike respawn they also move save() frequency. respawnMs is global, so tree respawn halves too: harmless, wood is already abundant. NOT hot-reloadable (GAMEDATA_HOT_RELOAD watches only quests + combat-config); this file is a compile-time import, so a world restart is required.",
+ "professions": [
+  {
+   "id": "lumberjack",
+   "name": "Lumberjack",
+   "category": "collector",
+   "resource": "wood",
+   "toolWeaponType": "profession_axe",
+   "toolItemId": "profession_axe",
+   "gatherAnim": "cut"
+  },
+  {
+   "id": "miner",
+   "name": "Miner",
+   "category": "collector",
+   "resource": "stone",
+   "toolWeaponType": "profession_pickaxe",
+   "toolItemId": "profession_pickaxe",
+   "gatherAnim": "mine"
+  },
+  {
+   "id": "handyman",
+   "name": "Handyman",
+   "category": "crafter"
+  },
+  {
+   "id": "enchanter",
+   "name": "Enchanter",
+   "category": "crafter"
+  }
+ ],
+ "learnCostGold": 1000,
+ "maxLevel": 80,
+ "xpCurve": {
+  "base": 100,
+  "growthPct": 7
+ },
+ "gather": {
+  "swingMs": 2500,
+  "rangeU": 4,
+  "nodeCharges": 5,
+  "respawnMs": 90000,
+  "yieldMin": 1,
+  "yieldMax": 2,
+  "xpPerSwing": 10
+ },
+ "yieldByLevel": {
+  "$comment": "Per-swing material-tier roll at (gatherer level + node grade levelBonus). Weights are percentages across tiers 1-5 and MUST sum to 100 (boot-validated) so the table reads as the odds it actually is. BANDS, not interpolation: the highest entry with minLevel <= effective level wins. Anchors given by user 2026-08-02: Lv1 = 100% ordinary, Lv10 = 90/10. The 85/95/110 bands sit ABOVE the level cap on purpose - only a blue/red/yellow tree can reach them, which is what keeps rarity worth chasing at level 80.",
+  "bands": [
+   {
+    "minLevel": 1,
+    "weights": [
+     100,
+     0,
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "minLevel": 10,
+    "weights": [
+     90,
+     10,
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "minLevel": 20,
+    "weights": [
+     78,
+     22,
+     0,
+     0,
+     0
+    ]
+   },
+   {
+    "minLevel": 30,
+    "weights": [
+     65,
+     30,
+     5,
+     0,
+     0
+    ]
+   },
+   {
+    "minLevel": 40,
+    "weights": [
+     52,
+     36,
+     12,
+     0,
+     0
+    ]
+   },
+   {
+    "minLevel": 50,
+    "weights": [
+     40,
+     38,
+     18,
+     4,
+     0
+    ]
+   },
+   {
+    "minLevel": 60,
+    "weights": [
+     30,
+     36,
+     25,
+     9,
+     0
+    ]
+   },
+   {
+    "minLevel": 70,
+    "weights": [
+     22,
+     32,
+     30,
+     13,
+     3
+    ]
+   },
+   {
+    "minLevel": 80,
+    "weights": [
+     15,
+     27,
+     32,
+     18,
+     8
+    ]
+   },
+   {
+    "minLevel": 85,
+    "weights": [
+     12,
+     24,
+     32,
+     22,
+     10
+    ]
+   },
+   {
+    "minLevel": 95,
+    "weights": [
+     8,
+     19,
+     31,
+     27,
+     15
+    ]
+   },
+   {
+    "minLevel": 110,
+    "weights": [
+     5,
+     14,
+     28,
+     32,
+     21
+    ]
+   }
+  ]
+ },
+ "nodes": [
+  {
+   "id": "tree",
+   "name": "Tree",
+   "resource": "wood"
+  },
+  {
+   "id": "rock",
+   "name": "Stone Deposit",
+   "resource": "stone"
+  }
+ ],
+ "grades": [
+  {
+   "id": "green",
+   "namePrefix": "",
+   "xpMult": 1,
+   "glow": [
+    0.18,
+    0.95,
+    0.28
+   ],
+   "spawnWeight": 70,
+   "levelBonus": 0
+  },
+  {
+   "id": "blue",
+   "namePrefix": "Rich",
+   "xpMult": 1.1,
+   "glow": [
+    0.22,
+    0.62,
+    1
+   ],
+   "spawnWeight": 20,
+   "levelBonus": 10
+  },
+  {
+   "id": "red",
+   "namePrefix": "Prime",
+   "xpMult": 1.5,
+   "glow": [
+    0.95,
+    0.22,
+    0.16
+   ],
+   "spawnWeight": 8,
+   "levelBonus": 20
+  },
+  {
+   "id": "yellow",
+   "namePrefix": "Ancient",
+   "xpMult": 3,
+   "glow": [
+    1,
+    0.82,
+    0.15
+   ],
+   "spawnWeight": 2,
+   "levelBonus": 30
+  }
+ ],
+ "nodeModels": {
+  "wood": {
+   "$comment": "Tree models chosen by user 2026-08-02, one per province. karakoram is a named map region inside hotan_province and overrides the province default.",
+   "default": "env_tre_tree01_big",
+   "byZone": {
+    "jangan_province": "env_tre_tree01_big",
+    "donwhang_province": "env_w_cd_tree05",
+    "hotan_province": "env_oas_tree_tropical05",
+    "europe_province": "env_euro_esteuro_sadtree02_01",
+    "samarkand_province": "env_asiaminor_tree07"
+   },
+   "byRegion": {
+    "karakoram": "env_oas_kara_tree01"
+   }
+  },
+  "stone": {
+   "$comment": "One boulder everywhere (user 2026-08-03) - miner nodes need no regional art. env_rock_mt_stone04_06 is 2.1u tall x 4.1u wide at the natural map-static scale = 0.81x the 2.6u player, i.e. waist-high and clearly something you walk up to and mine. No shrink needed: the earlier 0.075 existed only because the first picks were 3.6-5.0x player height.",
+   "default": [
+    "env_rock_mt_stone04_06"
+   ],
+   "byZone": {},
+   "byRegion": {},
+   "scale": 0.15
+  }
+ },
+ "convertMapStatics": {
+  "$comment": "Map trees matching nodeModels become gatherable. The static is NEVER removed - the node is a slightly enlarged glowing shell drawn over it, so map look, collision and navmesh are untouched (verified: 0 of 842 tree statics carry a collider) and beyond the ~75u AOI you see the plain tree. Grade is a deterministic hash of (zone,x,z) weighted by grades[].spawnWeight, so the same trunk is the same colour across restarts with zero authored entries.",
+  "resources": [
+   "wood"
+  ]
+ },
+ "trainers": {
+  "npc_ch_special": {
+   "teaches": [
+    "lumberjack",
+    "miner"
+   ],
+   "sells": [
+    "profession_axe",
+    "profession_pickaxe"
+   ]
+  },
+  "npc_ch_special2": {
+   "teaches": [
+    "lumberjack",
+    "miner"
+   ],
+   "sells": [
+    "profession_axe",
+    "profession_pickaxe"
+   ]
+  },
+  "npc_wc_special": {
+   "teaches": [
+    "lumberjack",
+    "miner"
+   ],
+   "sells": [
+    "profession_axe",
+    "profession_pickaxe"
+   ]
+  },
+  "npc_wc_special2": {
+   "teaches": [
+    "lumberjack",
+    "miner"
+   ],
+   "sells": [
+    "profession_axe",
+    "profession_pickaxe"
+   ]
+  },
+  "npc_kt_special": {
+   "teaches": [
+    "lumberjack",
+    "miner"
+   ],
+   "sells": [
+    "profession_axe",
+    "profession_pickaxe"
+   ]
+  },
+  "npc_tk_special": {
+   "teaches": [
+    "lumberjack",
+    "miner"
+   ],
+   "sells": [
+    "profession_axe",
+    "profession_pickaxe"
+   ]
+  },
+  "npc_eu_special": {
+   "teaches": [
+    "lumberjack",
+    "miner"
+   ],
+   "sells": [
+    "profession_axe",
+    "profession_pickaxe"
+   ]
+  },
+  "npc_ca_special": {
+   "teaches": [
+    "lumberjack",
+    "miner"
+   ],
+   "sells": [
+    "profession_axe",
+    "profession_pickaxe"
+   ]
+  }
+ }
+}

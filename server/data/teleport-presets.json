@@ -1,0 +1,257 @@
+{
+ "presets": [
+  {
+   "id": "constantinople",
+   "sroId": 1,
+   "label": "Constantinople",
+   "zone": "europe_province",
+   "pos": {
+    "x": -15973.5,
+    "z": 3820.8,
+    "y": 12
+   }
+  },
+  {
+   "id": "forest_of_sorrow",
+   "sroId": 2,
+   "label": "Forest of Sorrow",
+   "zone": "europe_province",
+   "pos": {
+    "x": -18334.8,
+    "z": 4061.1,
+    "y": -3.212
+   }
+  },
+  {
+   "id": "garden_of_gods",
+   "sroId": 3,
+   "label": "Garden of Gods",
+   "zone": "europe_province",
+   "pos": {
+    "x": -18033.75,
+    "z": 2267.1,
+    "y": 0
+   }
+  },
+  {
+   "id": "pond_ruins",
+   "sroId": 4,
+   "label": "Pond Ruins",
+   "zone": "samarkand_province",
+   "pos": {
+    "x": -11932.35,
+    "z": 2886.9,
+    "y": 25.515
+   }
+  },
+  {
+   "id": "cleopatras_gate",
+   "sroId": 5,
+   "label": "Cleopatra's Gate",
+   "zone": "samarkand_province",
+   "pos": {
+    "x": -9791.7,
+    "z": 2865.15,
+    "y": 40.891
+   }
+  },
+  {
+   "id": "samarkand",
+   "sroId": 6,
+   "label": "Samarkand",
+   "zone": "samarkand_province",
+   "pos": {
+    "x": -7735.35,
+    "z": 4247.7,
+    "y": 27
+   }
+  },
+  {
+   "id": "ong_habitat",
+   "sroId": 7,
+   "label": "Ong Habitat",
+   "zone": "samarkand_province",
+   "pos": {
+    "x": -7781.4,
+    "z": 3165,
+    "y": 6.406
+   }
+  },
+  {
+   "id": "huns_garrison",
+   "sroId": 8,
+   "label": "Huns Garrison",
+   "zone": "samarkand_province",
+   "pos": {
+    "x": -6230.25,
+    "z": 3675.9,
+    "y": 40.967
+   }
+  },
+  {
+   "id": "niya_ruins",
+   "sroId": 14,
+   "label": "Niya Ruins",
+   "zone": "hotan_province",
+   "pos": {
+    "x": -1823.25,
+    "z": 3482.4,
+    "y": 30.97
+   }
+  },
+  {
+   "id": "downfall_desert",
+   "sroId": 15,
+   "label": "Downfall Desert",
+   "zone": "hotan_province",
+   "pos": {
+    "x": -1052.4,
+    "z": 2581.05,
+    "y": -20.216
+   }
+  },
+  {
+   "id": "temple_of_abundance",
+   "sroId": 16,
+   "label": "Temple of Abundance",
+   "zone": "hotan_province",
+   "pos": {
+    "x": 147.6,
+    "z": 3292.65,
+    "y": -70.415
+   }
+  },
+  {
+   "id": "hotan",
+   "sroId": 17,
+   "label": "Hotan",
+   "zone": "hotan_province",
+   "pos": {
+    "x": 188.25,
+    "z": 12.45,
+    "y": 36.561
+   }
+  },
+  {
+   "id": "grassland_road",
+   "sroId": 18,
+   "label": "Grassland Road",
+   "zone": "hotan_province",
+   "pos": {
+    "x": 681.75,
+    "z": 1310.55,
+    "y": -2.041
+   }
+  },
+  {
+   "id": "ishade_crossroads",
+   "sroId": 19,
+   "label": "Ishade Crossroads",
+   "zone": "hotan_province",
+   "pos": {
+    "x": -1214.4,
+    "z": -1032.9,
+    "y": 209.316
+   }
+  },
+  {
+   "id": "ancient_ruins",
+   "sroId": 20,
+   "label": "Ancient Ruins",
+   "zone": "hotan_province",
+   "pos": {
+    "x": -2363.55,
+    "z": -509.25,
+    "y": 82.125
+   }
+  },
+  {
+   "id": "spider_forest",
+   "sroId": 21,
+   "label": "Spider Forest",
+   "zone": "hotan_province",
+   "pos": {
+    "x": -3267.15,
+    "z": 301.95,
+    "y": 286.998
+   }
+  },
+  {
+   "id": "kyatwee_den",
+   "sroId": 22,
+   "label": "Kya-Twee Den",
+   "zone": "donwhang_province",
+   "pos": {
+    "x": 4082.25,
+    "z": -136.35,
+    "y": 29.858
+   }
+  },
+  {
+   "id": "tarim_basin",
+   "sroId": 23,
+   "label": "Tarim Basin",
+   "zone": "donwhang_province",
+   "pos": {
+    "x": 3485.25,
+    "z": 688.05,
+    "y": 161.533
+   }
+  },
+  {
+   "id": "donwhang",
+   "sroId": 24,
+   "label": "Donwhang",
+   "zone": "donwhang_province",
+   "pos": {
+    "x": 5329.8,
+    "z": 3093.15,
+    "y": -16.01
+   }
+  },
+  {
+   "id": "old_land_of_huns",
+   "sroId": 25,
+   "label": "Old Land of the Huns",
+   "zone": "donwhang_province",
+   "pos": {
+    "x": 6739.8,
+    "z": 3308.1,
+    "y": -13.708
+   }
+  },
+  {
+   "id": "jangan",
+   "sroId": 26,
+   "label": "Jangan",
+   "zone": "jangan_province",
+   "pos": {
+    "x": 9653.25,
+    "z": 1609.8,
+    "y": -4.97
+   }
+  },
+  {
+   "id": "southern_plains",
+   "sroId": 27,
+   "label": "Southern Plains",
+   "zone": "jangan_province",
+   "pos": {
+    "x": 10157.1,
+    "z": 877.5,
+    "y": -3.028
+   }
+  },
+  {
+   "id": "bandit_stronghold",
+   "sroId": 28,
+   "label": "Bandit Stronghold",
+   "zone": "jangan_province",
+   "pos": {
+    "x": 7315.65,
+    "z": 144.9,
+    "y": 208.619
+   }
+  }
+ ]
+}

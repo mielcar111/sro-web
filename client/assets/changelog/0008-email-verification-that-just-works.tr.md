@@ -1,0 +1,41 @@
+## Eklendi
+
+- **Petlerin seninle geri geliyor** — çıkış yaptığında açık olan pet, oyuna girdiğin anda kendiliğinden yeniden çağrılıyor; tıpkı orijinal oyundaki gibi. Toplama ayarların da onunla birlikte geri geliyor. Bilerek kapattığın bir pet kapalı kalmaya devam ediyor.
+- **Öldüğün yere ışınlanma** — Işınlanma aksiyonu artık önce nereye gitmek istediğini soruyor: haritadan bir konum, "Öldüğün yer" ya da "Return attığın yer". "Öldüğün yer" seçeneğiyle düştüğün noktaya doğrudan geri dönüyorsun. Bir sonraki ölümüne kadar orada duruyor ve bölgeler arasında da çalışıyor.
+- **Return attığın yere dönüş** — aynı menüde "Return attığın yer" de var: son Return'ün tamamlandığı anda durduğun nokta. Şehre uğrayıp av yerine hemen dönmek için birebir. Her iki seçenek de hangi bölge olduğunu ve oradan ne kadar süre önce ayrıldığını gösteriyor; kayıtlı bir noktan yoksa soluk görünüyor.
+- **Ultra geniş çözünürlük** — ultra geniş ekran kullananlar için Ayarlar'a 3440x1440 eklendi.
+- **Büyü taşları istifleniyor** — büyü taşları artık her biri ayrı bir yuva kaplamak yerine bir yuvada 50'ye kadar birikiyor. Taşlar yalnızca özümseme riskleri aynıysa aynı yuvayı paylaşıyor; böylece yeni ürettiğin bir yığın taş, çantanın tamamı yerine birkaç istif olarak geliyor.
+- **Risk taşın adında** — bir büyü taşının özümseme riski artık adının bir parçası, örneğin "Magic Stone of Strength (D1) (%10)". %10'luk istifini %30'luktan tek bakışta böyle ayırıyorsun. Şans, Yıldız ve Koruma taşları risk taşımaz ve tek istif hâlinde toplanır.
+
+## Düzeltildi
+
+- **Giant'lar artık haritada unique gibi görünmüyor** — mor nokta yeniden yalnızca unique'lere ait. Champion ve giant'lar normal kırmızı noktayı kullanıyor; yani mini haritadaki mor nokta gerçekten bir unique demek.
+- **Sağ tık oyuna ait** — oyun penceresinde herhangi bir yere sağ tıklamak artık tarayıcının kendi menüsünü açmıyor.
+- **İstemsiz metin seçimi kalktı** — arayüzde tıklayıp sürüklemek artık pencereleri ve yazıları maviye boyamıyor. Sohbet metnini seçip kopyalamaya devam edebilirsin.
+- **Buff'lar parti listesinin arkasında kalmıyor** — buff simgelerin artık aşağı doğru parti çerçevelerinin altına inmek yerine karakter panelinin yanından ekranın üstü boyunca diziliyor; partideyken bile tüm buff'ların okunabilir kalıyor.
+- **Işınlanma bekleme süresinde hiçbir şey söylemiyordu** — Işınlanma'yı çok erken kullanmak hiçbir açıklama vermeden hiçbir şey yapmıyordu. Artık kaç saniye kaldığını söylüyor.
+- **Takas edilen büyü taşları riskini kaybediyordu** — takas ya da tezgâh üzerinden el değiştiren bir büyü taşı, özümseme riski silinmiş hâlde ulaşıyor ve asla özümseme yapmayan bir taşa dönüşüyordu. Taşlar artık nereye giderse gitsin üretildikleri riski koruyor.
+- **Dünyaya girerken kayan karakterler** — karakterler dünyaya girdikten ya da görüş alanına girdikten hemen sonra bir an yürüme animasyonu olmadan kayabiliyordu. Artık herkes ne yapıyorsa ona uygun duruşta, animasyonu hazır şekilde geliyor — çevrendeki canavarlar da ilk saniyelerde kayarak dolaşmak yerine dünyayla birlikte yüklenmiş geliyor.
+- **Yeniden bağlanınca "at üstünde" kalmak** — aynı sekmede yeniden bağlanmak, aslında binmemişken seni binmiş gibi gösterebiliyor; tüm yeteneklerini soluklaştırıp avlanma makrosunu engelliyordu. Biniş durumun artık girişte doğru şekilde geri yükleniyor ve tek bir "İn" tıklaması kalan hatalı durumu temizliyor.
+- **Doğrulama bağlantıları geçerli kalıyor** — "E-postayı tekrar gönder" demek artık önceki e-postalardaki bağlantıları bozmuyor. Sana gönderdiğimiz her bağlantı kendi süresi dolana kadar çalışıyor; hangi e-postayı açtığının önemi yok.
+- **Bağlantıya iki kez tıklamak** — bir doğrulama bağlantısını tekrar açmak (sayfayı yenilemek, başka bir cihazdan girmek ya da aceleci bir e-posta uygulaması) artık kafa karıştıran "geçersiz bağlantı" hatası yerine "e-postan zaten doğrulanmış" mesajını gösteriyor.
+- **Türkçe ve Almanca oyuncular bağlantılarını kaybediyordu** — siteyi Türkçe ya da Deutsch'a çevirdiysen, e-postalardaki doğrulama ve şifre sıfırlama bağlantıları her seferinde bozuk bir sayfaya düşüyordu. Bu düzeltildi — bağlantılar artık dil tercihinden etkilenmiyor.
+- **Büyücüler saldırıdan önce donuyordu** — çift elli asa, wand veya rod ile normal saldırı, hiçbir şey olmadan karakteri yaklaşık bir saniye hareketsiz bırakıyordu. Güç toplama animasyonu artık saldırının başladığı anda başlıyor — çevrendeki oyuncular da görüyor.
+- **Fire Blow'un alevi erken sönüyordu** — Fire Blow ve Salamander Blow'un alev hüzmesi yetenek sürerken birkaç saniye sonra kayboluyordu; artık yeteneğin tamamı boyunca yanıyor.
+- **Meteor yeniden gökten düşüyor** — Meteor'un kayası artık yerde belirivermek yerine hedefin üzerine gökten düşüyor; Snow Storm - Ice rain ve Flame Wave - Wide'ın parçaları da yağarak iniyor.
+- **Işınlanma gerçek animasyonunu oynatıyor** — Teleport ve Aerial Teleport artık eller boş büyü yapmak yerine orijinaldeki gibi asayı kaldırıyor.
+- **Yetenek açıklamaları ham değer göstermiyor** — bazı etkiler "-0.5 maxHpPct" gibi kod hâlinde görünüyordu. Artık düz yazıyla okunuyor: Life Control ve Life Turnover "-%50 maksimum HP" diyor; diğer yeteneklerin STR/INT bonusları, MP yenilenmesi, iyileştirme gücü ve MP maliyeti satırları da aynı şekilde düzeltildi.
+
+## Değiştirildi
+
+- **Dünya haritası görünümünü hatırlıyor** — haritayı tekrar açtığında bıraktığın yakınlaştırma ve konum geri geliyor; her seferinde tüm dünyaya sıfırlanmıyor.
+- **E-posta senin dilinde, bağlantı da öyle** — doğrulama ve şifre sıfırlama e-postaları artık siteyi e-postayla aynı dilde açıyor; seni her seferinde İngilizce sayfaya bırakmıyor.
+- **Giriş yapmışken kayıt olmak** — hesap oluşturma sayfası artık zaten giriş yapmış olduğunu söylüyor ve seni hesap sayfana yönlendiriyor; böylece kaybolan bir doğrulama e-postası seni yanlışlıkla ikinci bir hesap açmaya itmiyor. İstersen oradan çıkış yapıp yeni bir hesap yine oluşturabilirsin.
+- **Çok vuruşlu yetenekler tam güçle vuruyor** — Frozen Spear, Charged Wind ve Charged Squall — ve 4 Arrow Combo, 5 Arrow Combo, Cunning Stab, Butterfly Blow gibi diğer ustalıkların zincir yetenekleri — artık tek vuruşun hasarını seriye bölmek yerine orijinaldeki gibi her vuruşta tam hasar veriyor. Hepsi belirgin şekilde daha sert vuruyor ve her aşamanın vuruşları orijinaldeki gibi birlikte iniyor.
+- **Alan hasarı orijinaldeki gibi azalarak yayılıyor** — bir alan yeteneği yine en fazla orijinal hedef sayısını vuruyor (çoğu için beş, Meteor için üç) ve her ek hedef artık tam hasar yerine bir öncekinden daha az hasar alıyor. Ground Charge, Ground Rave ve Charged Squall ek hedeflerini orijinaldeki gibi büyücünün çevresinden seçiyor.
+- **Fire Blow, Salamander Blow, Lightning Bolt ve Chain Lightning** — alev püskürtmeleri ve yıldırımlar da orijinal hedef kurallarına uyuyor: en fazla üç hedef, her ek hedefte azalan hasar.
+- **Işınlanma orijinal menziline döndü** — Teleport artık kademesine göre 10/12,5/15 metre, Aerial Teleport 18 metre atlıyor; önceden orijinalin çok ötesine gidiyordu. Ayrıca başka bir eylem sırasında sıraya alınmış olsa bile tam tıkladığın noktaya iniyor.
+- **Intelligence tam doğru manayı kazandırıyor** — Intelligence pasifinin indirimi artık orijinalin hesapladığı şekilde birebir uygulanıyor; birçok büyücü yeteneği biraz daha az MP harcıyor.
+- **Freeze, Frostbite, Electric Shock, Root, Fear ve Mana Drain** — bu etkiler artık orijinal formülleri kullanıyor: süreler yeteneğin etki seviyesi ile hedefin direncine göre belirleniyor ve Frostbite ile Dull yavaşlatmaları orijinaldeki gibi birleşiyor.
+- **Earth Barrier ve Earth Fence** — artık orijinaldeki gibi yalnızca fiziksel hasarı azaltıyor (büyü hasarı geçiyor), seninle birlikte en fazla yedi parti üyesini daha koruyor ve birini kullanmak diğerini iptal etmiyor — aktif bariyer süresi bitene kadar duruyor, yalnızca aynı yeteneğin daha yüksek kademesi onun yerine geçiyor.
+- **Earth, Cold, Fire ve Lightning Spirit artık orijinaldeki gibi güçlendiriyor** — dört Spirit pasifi, kendi elementinin yeteneklerinde büyüsel saldırı gücünü sabit küçük bir hasar eklemek yerine çarpanla artırıyor (kademe başına +%4, 20. kademede +%80). Spirit'leri öğrenmiş bir büyücünün element yetenekleri artık çok daha sert vuruyor — orijinal formül bu.

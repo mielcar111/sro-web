@@ -1,0 +1,1134 @@
+{
+  "_meta": {
+    "status": "PARTIAL - only quest ids and localized title/desc exist in the shipped client package; the numeric quest catalog is server-authoritative and is NOT embedded anywhere in the bundle.",
+    "found": [
+      "id",
+      "i18n.tr.title",
+      "i18n.tr.desc",
+      "i18n.de.title",
+      "i18n.de.desc"
+    ],
+    "not_found": [
+      "title (source/EN)",
+      "description (source/EN)",
+      "minLevel",
+      "maxLevel",
+      "race",
+      "objective.type",
+      "objective.mobId",
+      "objective.alsoCounts",
+      "objective.count",
+      "rewards.gold",
+      "rewards.xp",
+      "rewards.sp",
+      "rewards.items",
+      "repeat.type",
+      "repeat.hours",
+      "requiresQuest",
+      "enabled"
+    ],
+    "id_source": [
+      "client/assets/locales/tr.json  (keys \"quest:<id>.title\" / \"quest:<id>.desc\")",
+      "client/assets/locales/de.json  (identical key set)"
+    ],
+    "why_no_values": "The client receives the quest catalog over the wire: server->client opcode 183 \"quest.catalog\" { available: QuestDef[] } and opcode 184 \"quest.state\" { mine: QuestState[] }. The bundle contains only the zod validators for those payloads, never any quest instance. Grep proof: the 81 quest ids (chain_01_mangyang, daily_jangan_field, eu_chain_01_movia, ghost_lights_daily, gyo_menace, hunt_mangyang_novice, ...) appear 0 times in index-BUMMQVRB.js, and \"mobId\" appears exactly 3 times - all inside schema/render code, never in a data literal.",
+    "authoring_schema": {
+      "_bundle_offset": 8719700,
+      "_bundle_file": "index-BUMMQVRB.js (referans istemci paketi)",
+      "id": "string, regex /^[a-z0-9_]+$/",
+      "title": "string, min 1, max 60",
+      "description": "string, max 400",
+      "minLevel": "int, min 1",
+      "maxLevel": "int, min 1  (refine: maxLevel >= minLevel)",
+      "race": "enum ['chinese','european','all'], default 'all'",
+      "objective": {
+        "type": "literal 'hunt'",
+        "mobId": "string",
+        "alsoCounts": "string[] (optional)",
+        "count": "int, min 1"
+      },
+      "rewards": {
+        "gold": "int, >=0 (optional)",
+        "xp": "int, >=0 (optional)",
+        "sp": "int, >=0 (optional)",
+        "items": "[{ itemDefId: string, qty: int > 0 }] (optional)",
+        "_refine": "quest must grant at least one reward (gold|xp|sp|items non-empty)"
+      },
+      "repeat": "union: {type:'none'} | {type:'unlimited'} | {type:'cooldown', hours: number > 0}; default {type:'none'}",
+      "requiresQuest": "string, nullable, optional",
+      "enabled": "boolean, default true"
+    },
+    "wire_protocol": {
+      "_bundle_offset": 25629500,
+      "opcode_183_quest.catalog": "{ available: QuestDef[] }",
+      "opcode_184_quest.state": "{ mine: [{ def: QuestDef, units: int, targetUnits: int, state: \"active\"|\"completed\"|\"claimed\", cooldownUntil?: number }] }",
+      "opcode_185_quest.progress": "{ questId: string, units: int, state: \"active\"|\"completed\" }",
+      "opcode_116_quest.accept": "{ questId: string }  (client -> server)",
+      "opcode_117_quest.abandon": "{ questId: string }  (client -> server)",
+      "opcode_118_quest.claim": "{ questId: string }  (client -> server)",
+      "QuestDef_wire_flat": "id, title, description, mobId, mobName, mobLevel?, count, minLevel, maxLevel, rewards{gold?,xp?,sp?,items?[{itemDefId,name,qty}]}, repeat",
+      "progress_units_note": "client divides units by 720720 to display kills (eRt = 720720)"
+    },
+    "changelog_hints": [
+      "assets/changelog/0020-...en.md: \"Keep the Road Clear\" (= quest:daily_jangan_field.title TR \"Yolu Acik Tut\") now counts Bandit + Bandit subordinate + Bandit Archer + Bandit bowman (alsoCounts); the Constantinople daily got the same fix.",
+      "assets/changelog/0020-...en.md: \"Restless Stones\" (= quest:chain_05_tombstone.title TR \"Huzursuz Taslar\") now also counts Tomb Stone Ghosts.",
+      "These are prose statements only - the exact mob ids and counts are not given, so no objective.alsoCounts value was written into this file."
+    ],
+    "count": 81
+  },
+  "quests": [
+    {
+      "id": "chain_01_mangyang",
+      "i18n": {
+        "tr": {
+          "title": "Bir Avcının İlk Adımları",
+          "desc": "Her avcı Jangan'ın güney kapısında başlar. Mangyang sürüleri kolay avdır — sayılarını azalt ve kılıcını tanı."
+        },
+        "de": {
+          "title": "Die ersten Schritte eines Jägers",
+          "desc": "Jeder Jäger beginnt am Südtor von Jangan. Die Mangyang-Rudel sind leichte Beute — dünne sie aus und lerne deine Klinge kennen."
+        }
+      }
+    },
+    {
+      "id": "chain_02_bigeye",
+      "i18n": {
+        "tr": {
+          "title": "Karanlıktaki Gözler",
+          "desc": "Big-eye hayaletleri alacakaranlıkta mezar höyüklerinden yükselir. Yola sapmadan önce onları huzura kavuştur."
+        },
+        "de": {
+          "title": "Augen im Dunkeln",
+          "desc": "Big-eye ghosts steigen in der Dämmerung aus den Grabhügeln auf. Bringe sie zur Ruhe, bevor sie zur Straße wandern."
+        }
+      }
+    },
+    {
+      "id": "chain_03_weasel",
+      "i18n": {
+        "tr": {
+          "title": "Nehir Kıyısı Gelincikleri",
+          "desc": "Gelincikler nehir kıyısını sahiplendi ve cüretlendi. Onları oradan sür — ve yol için bu iksirleri al."
+        },
+        "de": {
+          "title": "Die Wiesel am Flussufer",
+          "desc": "Die Wiesel haben das Flussufer erobert und werden dreist. Vertreibe sie — und nimm diese Tränke für den Weg."
+        }
+      }
+    },
+    {
+      "id": "chain_04_waterghost",
+      "i18n": {
+        "tr": {
+          "title": "Durgun Sular",
+          "desc": "Su hayaletleri geçidin doğusundaki sığlıklarda dolaşır. Sayıları az ama ısırıkları hızlıdır — dikkatle avlan."
+        },
+        "de": {
+          "title": "Stille Wasser",
+          "desc": "Water ghosts spuken in den Untiefen östlich der Furt. Sie sind wenige, doch ihr Biss ist schnell — jage vorsichtig."
+        }
+      }
+    },
+    {
+      "id": "chain_05_tombstone",
+      "i18n": {
+        "tr": {
+          "title": "Huzursuz Taşlar",
+          "desc": "Mezar taşları uyandı ve mezarların arasında sürükleniyor. Onları parçala ve ölüler yeniden huzura ersin."
+        },
+        "de": {
+          "title": "Ruhelose Steine",
+          "desc": "Die Grabsteine sind erwacht und wanken zwischen den Gräbern. Zerschlage sie, damit die Toten wieder ruhen."
+        }
+      }
+    },
+    {
+      "id": "chain_06_bandit_camp",
+      "i18n": {
+        "tr": {
+          "title": "Ticaret Yolunda Bela",
+          "desc": "Haydut yamakları Jangan'ın kuzeyindeki kervanları soyuyor. Kampı seyrelt — tüccarlar bir kese ve erzak teklif etti."
+        },
+        "de": {
+          "title": "Ärger auf der Handelsstraße",
+          "desc": "Banditen-Untergebene überfallen die Karawanen nördlich von Jangan. Dünne das Lager aus — die Händler bieten Gold und Vorräte."
+        }
+      }
+    },
+    {
+      "id": "chain_07_young_tiger",
+      "i18n": {
+        "tr": {
+          "title": "Pençeli Yavrular",
+          "desc": "Genç kaplanlar kuzey tepelerinde dolaşıyor, şimdiden tehlikeli. Daha kötü bir şeye dönüşmeden sürüyü azalt."
+        },
+        "de": {
+          "title": "Junge mit Krallen",
+          "desc": "Junge Tiger streifen durch die Nordhügel, schon jetzt gefährlich. Dünne das Rudel aus, bevor Schlimmeres heranwächst."
+        }
+      }
+    },
+    {
+      "id": "chain_08_bandit",
+      "i18n": {
+        "tr": {
+          "title": "Haydut Reisinin Adamları",
+          "desc": "Gerçek haydutlar — çelikleşmiş ve silahlı — yüksek kampları tutuyor. Güçlerini kır, ticaret yolu yeniden nefes alsın."
+        },
+        "de": {
+          "title": "Die Männer des Banditenchefs",
+          "desc": "Die echten Banditen — abgehärtet und bewaffnet — halten die Höhenlager. Brich ihre Stärke, und die Handelsstraße atmet wieder."
+        }
+      }
+    },
+    {
+      "id": "chain_09_whitetiger",
+      "i18n": {
+        "tr": {
+          "title": "Beyaz Dehşet",
+          "desc": "Bir beyaz kaplan sırtta pusuda ve akrabaları da geldi. Çeliğini tepelerin en vahşi avcılarına karşı kanıtla."
+        },
+        "de": {
+          "title": "Der weiße Schrecken",
+          "desc": "Ein weißer Tiger streift über den Grat, und seine Artgenossen folgen. Beweise deinen Stahl gegen die wildesten Jäger der Hügel."
+        }
+      }
+    },
+    {
+      "id": "chain_10_chakji",
+      "i18n": {
+        "tr": {
+          "title": "Chakji Pususu",
+          "desc": "Chakji'ler yolun daraldığı yerde pusuya yatar, dikkatsizlere saldırır. Geçidi temizle ki yolcular zarar görmeden geçsin."
+        },
+        "de": {
+          "title": "Chakji-Hinterhalt",
+          "desc": "Chakji lauern, wo der Pfad sich verengt, und stürzen sich auf Unachtsame. Räume den Pass, damit Reisende sicher passieren."
+        }
+      }
+    },
+    {
+      "id": "chain_11_devilbug",
+      "i18n": {
+        "tr": {
+          "title": "Sınırda Sürü",
+          "desc": "Şeytan böcekleri sınır çatlaklarından sürüler halinde fışkırıyor. Sınır karakollarını basmadan önce onları temizle."
+        },
+        "de": {
+          "title": "Schwarm an der Grenze",
+          "desc": "Devil bugs quellen in Schwärmen aus den Grenzspalten. Brenne dich durch sie, bevor sie die Grenzposten überrennen."
+        }
+      }
+    },
+    {
+      "id": "chain_12_hyungno",
+      "i18n": {
+        "tr": {
+          "title": "Hayalet Askerler",
+          "desc": "Hyungno hayalet askerleri ölümlerinden çok sonra bile eski devriyelerini sürdürüyor. Hayalet bölüğü huzura kavuştur."
+        },
+        "de": {
+          "title": "Geistersoldaten",
+          "desc": "Die Hyungno-Geistersoldaten ziehen noch immer ihre alten Patrouillen, lange nach dem Tod. Bringe die Phantom-Kompanie zur Ruhe."
+        }
+      }
+    },
+    {
+      "id": "chain_13_demonhorse",
+      "i18n": {
+        "tr": {
+          "title": "Lanetlilerin Toynakları",
+          "desc": "Şeytan atları Donwhang ovalarında gürleyerek koşuyor, yollarındaki her şeyi eziyor. Sürüyü indir."
+        },
+        "de": {
+          "title": "Hufe der Verdammten",
+          "desc": "Dämonenpferde donnern über die Ebenen von Donwhang und zertrampeln alles. Bring die Herde zur Strecke."
+        }
+      }
+    },
+    {
+      "id": "chain_14_earthghost",
+      "i18n": {
+        "tr": {
+          "title": "Topraktan Doğanlar",
+          "desc": "Toprak hayaletleri Donwhang toprağından büyük sayılarda tırmanıyor. Ovanın sana verebildiği kadarını yok et."
+        },
+        "de": {
+          "title": "Aus der Erde erhoben",
+          "desc": "Earth ghosts graben sich in Massen aus dem Boden von Donwhang. Erledige so viele, wie die Ebene entbehren kann."
+        }
+      }
+    },
+    {
+      "id": "chain_15_gunpowder",
+      "i18n": {
+        "tr": {
+          "title": "Uçucu Bir Düşman",
+          "desc": "Barut ruhları köşeye sıkışınca patlar — onları uzaktan avla ve barut tarlalarını temizle."
+        },
+        "de": {
+          "title": "Ein flüchtiger Feind",
+          "desc": "Die Gun-Powder-Geister explodieren, wenn man sie stellt — jage sie aus der Distanz und räume die Pulverfelder."
+        }
+      }
+    },
+    {
+      "id": "chain_16_hyeongcheon",
+      "i18n": {
+        "tr": {
+          "title": "Hyeongcheon Savaş Bandosu",
+          "desc": "Hyeongcheon savaş bandosu çölün kıyısını güçle tutuyor. Sayılarına ancak tecrübeli bir avcı meydan okumalı."
+        },
+        "de": {
+          "title": "Die Hyeongcheon-Kriegsschar",
+          "desc": "Die Hyeongcheon-Kriegsschar hält den Wüstenrand mit Macht. Nur ein erfahrener Jäger sollte ihrer Zahl trotzen."
+        }
+      }
+    },
+    {
+      "id": "chain_17_scorpion",
+      "i18n": {
+        "tr": {
+          "title": "Kumların Sokması",
+          "desc": "Akrepler kum tepelerini sarıyor, kuyrukları hazır. Kervan kuyularına daha da yaklaşıp yuvalanmadan onları azalt."
+        },
+        "de": {
+          "title": "Stich des Sandes",
+          "desc": "Skorpione wimmeln über die Dünen, die Schwänze erhoben. Dünne sie aus, bevor sie näher an den Karawanenbrunnen nisten."
+        }
+      }
+    },
+    {
+      "id": "chain_18_bloodflower",
+      "i18n": {
+        "tr": {
+          "title": "Kan Ölüm Çiçeği",
+          "desc": "Çölün derinliklerinde kan ölüm çiçekleri yakınından geçen her şeyle beslenir. Yayılmadan önce onları kes."
+        },
+        "de": {
+          "title": "Die Bluttodesblume",
+          "desc": "Tief in der Wüste nähren sich die Bluttodesblumen von allem, was nahe kommt. Schneide sie nieder, bevor sie sich ausbreiten."
+        }
+      }
+    },
+    {
+      "id": "chain_19_robber_archer",
+      "i18n": {
+        "tr": {
+          "title": "Kumullardan Oklar",
+          "desc": "Kara haydut okçuları yolcuları sırtlardan avlıyor. Onları derin kumullardaki yuvalarından söküp at."
+        },
+        "de": {
+          "title": "Pfeile aus den Dünen",
+          "desc": "Schwarze Räuber-Bogenschützen erlegen Reisende von den Graten aus. Jage sie aus ihren Nestern in den tiefen Dünen."
+        }
+      }
+    },
+    {
+      "id": "chain_20_blackrobber",
+      "i18n": {
+        "tr": {
+          "title": "Derin Çölün Efendileri",
+          "desc": "Kara haydutlar derin çölü demirle yönetiyor. Hakimiyetlerini kır — kervanlar cömertçe ve iyi ödeyecek."
+        },
+        "de": {
+          "title": "Herren der tiefen Wüste",
+          "desc": "Die schwarzen Räuber beherrschen die tiefe Wüste mit eiserner Hand. Brich ihre Macht — die Karawanen zahlen fürstlich."
+        }
+      }
+    },
+    {
+      "id": "chain_21_golem",
+      "i18n": {
+        "tr": {
+          "title": "Kaya Golemleri",
+          "desc": "Çölün en uzak ucunda kaya golemleri eski harabeleri koruyor. Onları paramparça et ve bir avcının uzun yolunu tamamla."
+        },
+        "de": {
+          "title": "Die Steingolems",
+          "desc": "Am äußersten Rand der Wüste bewachen Steingolems die alten Ruinen. Zerschmettere sie und vollende den langen Weg eines Jägers."
+        }
+      }
+    },
+    {
+      "id": "chain_22_redscorpion",
+      "i18n": {
+        "tr": {
+          "title": "Kızıl Kumların Zehri",
+          "desc": "Kızıl akrepler eski golem harabelerini sardı, zehirleri kuyuları bozuyor. Sayılarını azalt ve çölün kıyısının ötesine ilerle."
+        },
+        "de": {
+          "title": "Gift der roten Sande",
+          "desc": "Rote Skorpione haben die alten Golem-Ruinen überrannt, und ihr Gift verdirbt die Brunnen. Dünne sie aus und dringe über den Rand der Wüste hinaus vor."
+        }
+      }
+    },
+    {
+      "id": "chain_23_redeyeghost",
+      "i18n": {
+        "tr": {
+          "title": "Kin Dolu Gözler",
+          "desc": "Red-eye hayaletleri kumun taşa döndüğü yerde toplanıyor. Bakışları iradeyi kurutur — kök salmadan önce onları dağıt."
+        },
+        "de": {
+          "title": "Augen der Bosheit",
+          "desc": "Red-eye ghosts sammeln sich, wo der Sand dem Stein weicht. Ihr Blick lähmt den Willen — zerstreue sie, bevor sie sich festsetzen."
+        }
+      }
+    },
+    {
+      "id": "chain_24_maong",
+      "i18n": {
+        "tr": {
+          "title": "Maong Sürüsü",
+          "desc": "Maonglar etekleri büyük sayılarla sarıyor. Sürüyü kır ve ötedeki yaylalara giden yolu aç."
+        },
+        "de": {
+          "title": "Die Maong-Horde",
+          "desc": "Maong wimmeln in großer Zahl durch das Vorgebirge. Brich die Horde und öffne den Weg ins Hochland dahinter."
+        }
+      }
+    },
+    {
+      "id": "chain_25_bunwang",
+      "i18n": {
+        "tr": {
+          "title": "Geçitlerin Bunwangları",
+          "desc": "Bunwanglar dağ geçitlerini kaba bir kurnazlıkla koruyor. Güvenli geçişi hak etmek için gücünü onlara karşı kanıtla."
+        },
+        "de": {
+          "title": "Bunwang der Pässe",
+          "desc": "Die Bunwang bewachen die Gebirgspässe mit roher List. Beweise deine Stärke gegen sie und verdiene dir sicheres Geleit."
+        }
+      }
+    },
+    {
+      "id": "chain_26_blooddevil",
+      "i18n": {
+        "tr": {
+          "title": "Ultra Kan Şeytanları",
+          "desc": "Buradaki kan şeytanları düşenlerle beslenerek canavarca büyümüş. Kökleri bütün sırtı boğmadan onları kes."
+        },
+        "de": {
+          "title": "Ultra-Blutteufel",
+          "desc": "Die Blutteufel hier sind zu monströser Größe herangewachsen und nähren sich von den Gefallenen. Schneide sie nieder, bevor ihre Wurzeln den ganzen Grat ersticken."
+        }
+      }
+    },
+    {
+      "id": "chain_27_whitespider",
+      "i18n": {
+        "tr": {
+          "title": "Beyaz Örümcek Yuvası",
+          "desc": "Beyaz örümcekler dar vadiyi ipekle örüp kapattı. Yolcular diri diri kozaya sarılmadan yuvayı yakıp geç."
+        },
+        "de": {
+          "title": "Das Nest der weißen Spinnen",
+          "desc": "Weiße Spinnen haben die Schlucht mit Seide zugesponnen. Brenne dich durch das Nest, bevor Reisende lebendig eingesponnen werden."
+        }
+      }
+    },
+    {
+      "id": "chain_28_ujigi",
+      "i18n": {
+        "tr": {
+          "title": "Sisteki Ujigiler",
+          "desc": "Ujigiler dağ sisinde süzülüyor, kaybolanları uçurumlardan aşağı çekiyor. Ruhları huzura kavuştur ve yolu aydınlat."
+        },
+        "de": {
+          "title": "Ujigi im Nebel",
+          "desc": "Ujigi treiben durch den Bergnebel und locken Verirrte über die Klippen. Bringe die Geister zur Ruhe und erhelle den Weg."
+        }
+      }
+    },
+    {
+      "id": "chain_29_hashade",
+      "i18n": {
+        "tr": {
+          "title": "Hashade Yağmacıları",
+          "desc": "Hashade yağmacıları parlayan ne varsa almak için dağ tapınaklarını basıyor. Sürüyü kutsal topraktan temelli sür."
+        },
+        "de": {
+          "title": "Hashade-Plünderer",
+          "desc": "Hashade-Plünderer überfallen die Bergschreine für alles, was glänzt. Vertreibe die Meute endgültig vom heiligen Boden."
+        }
+      }
+    },
+    {
+      "id": "chain_30_whitefacespider",
+      "i18n": {
+        "tr": {
+          "title": "Derin Ormanın Dokumacıları",
+          "desc": "Daha derinlerde, beyaz yüzlü örümcekler kadim ormanı yönetiyor. Ağlarında ancak gerçek hünerli bir avcı yürümeli."
+        },
+        "de": {
+          "title": "Weberinnen des tiefen Waldes",
+          "desc": "Tiefer drinnen beherrschen die Weißgesicht-Spinnen den uralten Wald. Nur ein Jäger von wahrem Können sollte ihre Netze betreten."
+        }
+      }
+    },
+    {
+      "id": "chain_31_penon",
+      "i18n": {
+        "tr": {
+          "title": "Penon Savaş Bandosu",
+          "desc": "Penon savaşçıları yüksek yaylada toplanıyor; zırhlı ve disiplinli. Hatlarını kır ki kuzeye giden yol açılsın."
+        },
+        "de": {
+          "title": "Die Penon-Kriegsschar",
+          "desc": "Penon-Krieger sammeln sich auf dem Hochplateau, gepanzert und diszipliniert. Durchbrich ihre Linie, und der Weg nach Norden öffnet sich."
+        }
+      }
+    },
+    {
+      "id": "chain_32_sona",
+      "i18n": {
+        "tr": {
+          "title": "Dikilitaşların Sonaları",
+          "desc": "Sonalar dikilitaşlarda dolaşıyor — bu dünyada yarı yarıya var olan öte varlıklar. Çember tümüyle uyanmadan onları kov."
+        },
+        "de": {
+          "title": "Sona der stehenden Steine",
+          "desc": "Die Sona spuken um die stehenden Steine — Wesen aus anderen Ebenen, nur halb in dieser Welt. Verbanne sie, bevor der Kreis vollends erwacht."
+        }
+      }
+    },
+    {
+      "id": "chain_33_bigwhitespider",
+      "i18n": {
+        "tr": {
+          "title": "Büyük Beyaz Dokumacı",
+          "desc": "Büyük beyaz örümcekler yaylanın avıyla korkunç bir boyuta ulaştı. Kamplara inmeden önce onları devir."
+        },
+        "de": {
+          "title": "Die große weiße Weberin",
+          "desc": "Die großen weißen Spinnen sind an der Beute des Plateaus zu grausiger Größe herangewachsen. Fälle sie, bevor sie über die Lager herfallen."
+        }
+      }
+    },
+    {
+      "id": "chain_34_yeti",
+      "i18n": {
+        "tr": {
+          "title": "Kar Ovasının Dehşeti",
+          "desc": "Evil-yeti'ler dünyanın çatısındaki kar ovalarında sinsice geziniyor. Sürüyü azalt ve donmuş geçidi kendi adına sahiplen."
+        },
+        "de": {
+          "title": "Schrecken des Schneefelds",
+          "desc": "Evil-yeti streifen über die Schneefelder am Dach der Welt. Dünne das Rudel aus und beanspruche den gefrorenen Pass in deinem Namen."
+        }
+      }
+    },
+    {
+      "id": "chain_35_edimmu",
+      "i18n": {
+        "tr": {
+          "title": "Edimmu Lejyonu",
+          "desc": "Edimmular donmuş lejyonlarını zirvelerden yürütüyor. Ova kapılarına ulaşmadan saflarını paramparça et."
+        },
+        "de": {
+          "title": "Die Edimmu-Legion",
+          "desc": "Die Edimmu führen ihre gefrorene Legion über die Gipfel. Zerschlage ihre Reihen, bevor sie die Tore des Tieflands erreichen."
+        }
+      }
+    },
+    {
+      "id": "chain_36_darkkarra",
+      "i18n": {
+        "tr": {
+          "title": "Dark Karra'nın Fısıltıları",
+          "desc": "Dark Karralar geçitlerde oyalanan herkese delilik fısıldıyor. Onları sustur ve yolu lanetlerinden kurtar."
+        },
+        "de": {
+          "title": "Flüstern der Dark Karra",
+          "desc": "Dark Karra flüstern jedem Wahnsinn ein, der in den Pässen verweilt. Bringe sie zum Schweigen und befreie die Straße von ihrem Fluch."
+        }
+      }
+    },
+    {
+      "id": "chain_37_deathkara",
+      "i18n": {
+        "tr": {
+          "title": "Death Karra",
+          "desc": "Death Karraların ta kendileri artık yüksek buzda yürüyor, peşlerinde ölümü sürüklüyorlar. Onlarla yüzleş ve zirvelerin yaşayanlara ait olduğunu kanıtla."
+        },
+        "de": {
+          "title": "Die Death Karra",
+          "desc": "Die Death Karra selbst wandeln nun über das hohe Eis, den Tod im Gefolge. Stelle dich ihnen und beweise, dass die Gipfel den Lebenden gehören."
+        }
+      }
+    },
+    {
+      "id": "chain_38_devileye",
+      "i18n": {
+        "tr": {
+          "title": "Şeytan Gözünün Bakışı",
+          "desc": "Şeytan gözleri geçidin ötesindeki karanlık mağaralarda asılı duruyor; izliyor, bekliyor. Efendileri kıpırdanmadan önce hepsini kör et."
+        },
+        "de": {
+          "title": "Blick des Devil Eye",
+          "desc": "Devil eyes hängen in den dunklen Höhlen jenseits des Passes — wachend, wartend. Blende sie alle, bevor ihr Meister sich regt."
+        }
+      }
+    },
+    {
+      "id": "chain_39_niyaguard",
+      "i18n": {
+        "tr": {
+          "title": "Niya Duvarı",
+          "desc": "Niya muhafızları gömülü şehrin önünde kemikten sarsılmaz bir duvar örüyor. Yarıp geç — ölüler burada kolay huzur bulmaz."
+        },
+        "de": {
+          "title": "Der Niya-Wall",
+          "desc": "Die Niya-Wachen bilden einen unnachgiebigen Wall aus Knochen vor der begrabenen Stadt. Brich hindurch — die Toten ruhen hier nicht friedlich."
+        }
+      }
+    },
+    {
+      "id": "chain_40_niyahunter",
+      "i18n": {
+        "tr": {
+          "title": "Ölülerin Avcıları",
+          "desc": "Niya avcıları harabelerin her gölgesinden kemik oklar yağdırıyor. Kafileni seyreltmeden önce onları söküp çıkar."
+        },
+        "de": {
+          "title": "Jäger der Toten",
+          "desc": "Niya-Jäger schießen Knochenpfeile aus jedem Schatten der Ruinen. Treibe sie aus, bevor sie deine Gefährten dezimieren."
+        }
+      }
+    },
+    {
+      "id": "chain_41_niyashaman",
+      "i18n": {
+        "tr": {
+          "title": "Şamanın Ayinleri",
+          "desc": "Niya şamanları bitmez lejyonlarını ayağa kaldıran ayinleri söylüyor. Ritüeli bitir ki ölü seli nihayet çekilsin."
+        },
+        "de": {
+          "title": "Die Riten der Schamanen",
+          "desc": "Die Niya-Schamanen singen die Riten, die ihre endlose Legion erheben. Beende das Ritual, und die Flut der Toten mag endlich verebben."
+        }
+      }
+    },
+    {
+      "id": "chain_42_niyageneral",
+      "i18n": {
+        "tr": {
+          "title": "Niya Generalinin Düşüşü",
+          "desc": "Harabenin kalbinde Niya Generali ölü ordusunu komuta ediyor. Generali indir ve bir avcının en uzun yolunu tamamla."
+        },
+        "de": {
+          "title": "Fall des Niya-Generals",
+          "desc": "Im Herzen der Ruine befehligt der Niya-General das Heer der Toten. Bringe den General zu Fall und vollende den längsten Weg eines Jägers."
+        }
+      }
+    },
+    {
+      "id": "daily_constantinople_field",
+      "i18n": {
+        "tr": {
+          "title": "Tapınaklardaki Yılanlar",
+          "desc": "Ladonlar her gün yıkık tapınaklara geri dönüyor. Kıvrımlarını seyrelt, rahiplerin gümüşü sana aksın."
+        },
+        "de": {
+          "title": "Schlangen an den Schreinen",
+          "desc": "Die Ladon kehren täglich zu den verfallenen Schreinen zurück. Halte ihre Zahl klein, und das Silber der Priester fließt zu dir."
+        }
+      }
+    },
+    {
+      "id": "daily_constantinople_high",
+      "i18n": {
+        "tr": {
+          "title": "Şarkıyı Sustur",
+          "desc": "Seirenesler her şafak deniz surlarının altında toplanıyor. Liman reisleri indirilen her şarkıcı için günlük ödeme yapar."
+        },
+        "de": {
+          "title": "Bring das Lied zum Schweigen",
+          "desc": "Jeden Morgen sammeln sich Seirenes unter den Seemauern. Die Hafenmeister zahlen täglich für jede erlegte Sängerin."
+        }
+      }
+    },
+    {
+      "id": "daily_constantinople_starter",
+      "i18n": {
+        "tr": {
+          "title": "Kurt Devriyesi",
+          "desc": "Baroi kurtları su kemeri yoluna dönmekten asla vazgeçmiyor. Taze bir sürüyü avla — şehir muhafızları günlük kelle parası öder."
+        },
+        "de": {
+          "title": "Wolfspatrouille",
+          "desc": "Die Baroi-Wölfe kehren immer wieder zur Aquäduktstraße zurück. Erlege ein frisches Rudel — die Stadtwache zahlt ein tägliches Kopfgeld."
+        }
+      }
+    },
+    {
+      "id": "daily_donwhang_desert",
+      "i18n": {
+        "tr": {
+          "title": "Akrep Kuyuları",
+          "desc": "Akrepler her gün kervan kuyularına doğru sokuluyor. Sürekli ödül için onları kumlara sür."
+        },
+        "de": {
+          "title": "Skorpion-Brunnen",
+          "desc": "Skorpione kriechen täglich zurück zu den Karawanenbrunnen. Treibe sie in den Sand für ein stehendes Kopfgeld."
+        }
+      }
+    },
+    {
+      "id": "daily_donwhang_high",
+      "i18n": {
+        "tr": {
+          "title": "Derin Çöl Sözleşmesi",
+          "desc": "Kara haydutlar asla gerçekten azalmaz. Sürekli bir sözleşme, indirdiğin her akıncı için günlük öder."
+        },
+        "de": {
+          "title": "Vertrag der tiefen Wüste",
+          "desc": "Die schwarzen Räuber werden nie wirklich weniger. Ein stehender Vertrag zahlt täglich für jeden erledigten Räuber."
+        }
+      }
+    },
+    {
+      "id": "daily_donwhang_plains",
+      "i18n": {
+        "tr": {
+          "title": "Barut Tarlası Taraması",
+          "desc": "Barut ruhları her gece Donwhang ovalarında yeniden oluşuyor. Günün ödülü için tarlaları tekrar temizle."
+        },
+        "de": {
+          "title": "Pulverfeld-Säuberung",
+          "desc": "Die Gun-Powder-Geister formen sich nachts über den Ebenen von Donwhang neu. Räume die Felder für den Tageslohn."
+        }
+      }
+    },
+    {
+      "id": "daily_jangan_field",
+      "i18n": {
+        "tr": {
+          "title": "Yolu Açık Tut",
+          "desc": "Haydutlar her gün ticaret yoluna dönüyor. Sayılarını düşük tut, tüccarların altını sana aksın."
+        },
+        "de": {
+          "title": "Halte die Straße frei",
+          "desc": "Banditen kehren täglich zur Handelsstraße zurück. Halte ihre Zahl klein, und das Gold der Händler fließt zu dir."
+        }
+      }
+    },
+    {
+      "id": "daily_jangan_high",
+      "i18n": {
+        "tr": {
+          "title": "Kaplan Ödülü",
+          "desc": "Beyaz kaplanlar her şafak kuzey sırtında dolaşır. Avcılar loncası her post için günlük ödeme yapar."
+        },
+        "de": {
+          "title": "Tiger-Kopfgeld",
+          "desc": "Weiße Tiger streifen jeden Morgen über den Nordgrat. Die Jägergilde zahlt täglich für jedes erbeutete Fell."
+        }
+      }
+    },
+    {
+      "id": "daily_jangan_starter",
+      "i18n": {
+        "tr": {
+          "title": "Gelincik Devriyesi",
+          "desc": "Gelincikler güney nehri kıyısında durmadan ürüyor. Taze bir grubu azalt — muhafız günlük ödül veriyor."
+        },
+        "de": {
+          "title": "Wiesel-Patrouille",
+          "desc": "Die Wiesel vermehren sich am Südfluss ohne Ende. Dünne einen frischen Wurf aus — die Wache zahlt eine Tagesprämie."
+        }
+      }
+    },
+    {
+      "id": "daily_karakoram_low",
+      "i18n": {
+        "tr": {
+          "title": "Kar Ovası Ödülü",
+          "desc": "Bunwanglar her şafak geçitleri geri alıyor. Dağ bekçileri yolu açık tutmak için günlük ödül ödüyor."
+        },
+        "de": {
+          "title": "Schneefeld-Kopfgeld",
+          "desc": "Die Bunwang erobern die Pässe mit jedem Morgengrauen zurück. Die Bergwächter zahlen eine Tagesprämie, um die Straße offen zu halten."
+        }
+      }
+    },
+    {
+      "id": "daily_karakoram_mid",
+      "i18n": {
+        "tr": {
+          "title": "Donmuş Sözleşme",
+          "desc": "Evil-yeti'ler kar ovalarında asla gerçekten azalmaz. Sürekli bir sözleşme her gün indirdiğin her postu ödüllendirir."
+        },
+        "de": {
+          "title": "Gefrorener Vertrag",
+          "desc": "Evil-yeti werden auf den Schneefeldern nie wirklich weniger. Ein stehender Vertrag belohnt täglich jedes erbeutete Fell."
+        }
+      }
+    },
+    {
+      "id": "daily_niya_high",
+      "i18n": {
+        "tr": {
+          "title": "Bitmeyen Ölüler",
+          "desc": "Niyalar ölülerini düştükleri hızda yeniden diriltiyor. Kemik askerleri her gün azalt — ödül de onlar kadar kesin biçimde yenilenir."
+        },
+        "de": {
+          "title": "Die endlosen Toten",
+          "desc": "Die Niya erheben ihre Toten so schnell, wie sie fallen. Dünne die Knochensoldaten täglich aus — die Belohnung erneuert sich so sicher wie sie."
+        }
+      }
+    },
+    {
+      "id": "daily_samarkand_desert",
+      "i18n": {
+        "tr": {
+          "title": "Açık Gökyüzü",
+          "desc": "Peritonlar her gün kervan kuyularının üzerine geri dönüyor. Daimî ödül için onları gökten sür."
+        },
+        "de": {
+          "title": "Klarer Himmel",
+          "desc": "Peritons kreisen Tag für Tag wieder über den Karawanenbrunnen. Vertreibe sie vom Himmel für ein stehendes Kopfgeld."
+        }
+      }
+    },
+    {
+      "id": "daily_samarkand_high",
+      "i18n": {
+        "tr": {
+          "title": "Sungsung Sözleşmesi",
+          "desc": "Çöl kıyısındaki sungsunglar hiçbir zaman gerçekten azalmaz. Daimî bir sözleşme, yere serdiğin her yağmacı için günlük öder."
+        },
+        "de": {
+          "title": "Der Sungsung-Vertrag",
+          "desc": "Die Sungsung am Wüstenrand werden nie wirklich weniger. Ein stehender Vertrag zahlt täglich für jeden erlegten Plünderer."
+        }
+      }
+    },
+    {
+      "id": "daily_samarkand_plains",
+      "i18n": {
+        "tr": {
+          "title": "Ovayı Tut",
+          "desc": "Şeytani Tarikat her gece ovada taze asker topluyor. Günün ücreti için sabah talimlerini yeniden boz."
+        },
+        "de": {
+          "title": "Haltet die Ebene",
+          "desc": "Der Böse Orden hebt Nacht für Nacht frische Soldaten auf der Ebene aus. Sprenge ihren Morgendrill aufs Neue für den Tageslohn."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_01_movia",
+      "i18n": {
+        "tr": {
+          "title": "Surlarda İlk Nöbet",
+          "desc": "Her acemi, Konstantinopolis'in kara surlarının dışında başlar. Oradaki çayırlarda movia sürüleri otluyor — onları avla ve silahının ağırlığını öğren."
+        },
+        "de": {
+          "title": "Erste Wache an den Mauern",
+          "desc": "Jeder Rekrut beginnt vor den Landmauern Konstantinopels. Auf den Wiesen dort grasen die Movia-Herden — lichte sie und lerne das Gewicht deiner Waffe kennen."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_02_graesp",
+      "i18n": {
+        "tr": {
+          "title": "Çayırdaki Dikenler",
+          "desc": "Graespler su kemerinin ardındaki çukurlarda kümeleniyor; diken ve açlıktan ibaretler. Çobanlar bir sürü daha kaybetmeden onları temizle."
+        },
+        "de": {
+          "title": "Dornen auf der Weide",
+          "desc": "In den Senken hinter dem Aquädukt drängen sich die Graesp, nichts als Stacheln und Hunger. Räume sie aus, bevor die Hirten noch eine Herde verlieren."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_03_baroiwolf",
+      "i18n": {
+        "tr": {
+          "title": "Su Kemerindeki Kurtlar",
+          "desc": "Baroi kurtları alacakaranlıkta su kemeri yolu boyunca avlanmaya başladı. Onları defet — ve önündeki nöbetler için şu iksirleri yanına al."
+        },
+        "de": {
+          "title": "Wölfe am Aquädukt",
+          "desc": "Baroi-Wölfe jagen in der Dämmerung entlang der Aquäduktstraße. Vertreibe sie — und nimm diese Tränke für die kommenden Wachen mit."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_04_logosbaroi",
+      "i18n": {
+        "tr": {
+          "title": "Logos Baroiler",
+          "desc": "Logos baroiler az sayıda ama sıradan bir hayvandan çok daha kurnaz. Surların doğusundaki çalılıkta sinsice dolaşıyorlar — onları dikkatle avla."
+        },
+        "de": {
+          "title": "Die Logos-Baroi",
+          "desc": "Die Logos-Baroi sind wenige, aber listiger als jedes gewöhnliche Tier. Sie streifen durchs Gestrüpp östlich der Mauern — jage sie mit Bedacht."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_05_misosbaroi",
+      "i18n": {
+        "tr": {
+          "title": "Dört Ayaklı Nefret",
+          "desc": "Misos baroiler iki ayak üstünde yürüyen her şeyden nefret eder ve baskınları gitgide cüretleniyor. Köy bahçelerine ulaşmadan sürüleri dağıt."
+        },
+        "de": {
+          "title": "Hass auf vier Beinen",
+          "desc": "Die Misos-Baroi hassen alles, was aufrecht geht, und ihre Überfälle werden dreister. Zerschlage die Rudel, bevor sie die Dorfgärten erreichen."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_06_dowgenetos",
+      "i18n": {
+        "tr": {
+          "title": "Dow Genetos Yuvası",
+          "desc": "Dow genetoslar nehrin denize kavuştuğu bataklıklarda ürüyor. Yuvayı seyrelt — şehir bir kese altın ve erzak vaat etti."
+        },
+        "de": {
+          "title": "Die Brut der Dow Genetos",
+          "desc": "Dow Genetos brüten in den Sümpfen, wo der Fluss aufs Meer trifft. Dünne die Brut aus — die Stadt hat Geld und Vorräte ausgesetzt."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_07_brontes",
+      "i18n": {
+        "tr": {
+          "title": "Tepegözlerin Gürleyişi",
+          "desc": "Tek gözlü ve devasa Brontesler kayalıklardan indi. Tepegöz soyunu, dıştaki çiftlikleri yerle bir etmeden devir."
+        },
+        "de": {
+          "title": "Donner der Zyklopen",
+          "desc": "Brontes, einäugig und riesig, sind von den Felsen herabgestiegen. Fälle die Zyklopenbrut, bevor sie die äußeren Gehöfte platt schlägt."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_08_simosladon",
+      "i18n": {
+        "tr": {
+          "title": "Ladon'un Kıvrımları",
+          "desc": "Simos ladonlar şehrin doğusundaki yıkık tapınakların arasında kıvrılıp duruyor. Aralarından kılıçla geç — rahipler bir kese altın ve iksir vaat etti."
+        },
+        "de": {
+          "title": "Die Windungen des Ladon",
+          "desc": "Simos-Ladon winden sich zwischen den verfallenen Schreinen östlich der Stadt. Schlag dich durch — die Priester haben Gold und Tränke ausgesetzt."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_09_seirenes",
+      "i18n": {
+        "tr": {
+          "title": "Suların Üzerindeki Şarkı",
+          "desc": "Seirenesler denizcileri şarkılarıyla deniz surlarının altındaki kayalara çekiyor. Şarkıları bir gemi daha almadan sürüyü sustur."
+        },
+        "de": {
+          "title": "Gesang über dem Wasser",
+          "desc": "Die Seirenes singen Seeleute auf die Felsen unter den Seemauern. Bring den Schwarm zum Schweigen, ehe ihr Lied noch ein Schiff in die Tiefe reißt."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_10_seiren",
+      "i18n": {
+        "tr": {
+          "title": "Kadim Seirenler",
+          "desc": "Kadim seirenler, şarkılarının batırdığı enkazlarla beslenip güçlendi. Onlarla, kayalıkların denize döküldüğü yerde yüzleş."
+        },
+        "de": {
+          "title": "Die älteren Seiren",
+          "desc": "Die älteren Seiren sind stark geworden an den Wracks, die ihr Gesang gefordert hat. Stell dich ihnen, wo die Klippen ins Meer stürzen."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_11_megalopa",
+      "i18n": {
+        "tr": {
+          "title": "Kıyıdaki Kıskaçlar",
+          "desc": "Megalopalar zırhlı sürüler hâlinde sığlıklardan çıkıyor. Kabuklarını kır ve iskeleleri balıkçılara aç."
+        },
+        "de": {
+          "title": "Scheren am Ufer",
+          "desc": "Megalopa krabbeln in gepanzerten Scharen aus den Untiefen. Knacke ihre Panzer und mach die Anlegestellen für die Fischer frei."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_12_brigand",
+      "i18n": {
+        "tr": {
+          "title": "Sahil Yolu Haydutları",
+          "desc": "Korsan haydutlar Semerkant'a giden kervanları soyuyor. Kamplarını seyrelt — tüccarlar bir kese altın ve erzak vaat etti."
+        },
+        "de": {
+          "title": "Räuber der Küstenstraße",
+          "desc": "Piratenräuber überfallen die Karawanen auf dem Weg nach Samarkand. Lichte ihre Lager — die Händler haben Geld und Vorräte ausgesetzt."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_13_evilwolf",
+      "i18n": {
+        "tr": {
+          "title": "Bozkırın Kurtları",
+          "desc": "Şeytani kurtlar aç sürüler hâlinde bozkırı arşınlayıp kervan yollarını taciz ediyor. Kış onları daha da cüretlendirmeden sürüleri yere ser."
+        },
+        "de": {
+          "title": "Wölfe der Steppe",
+          "desc": "Böse Wölfe durchstreifen die Steppe in ausgehungerten Rudeln und bedrängen die Karawanenpfade. Streck die Rudel nieder, bevor der Winter sie dreister macht."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_14_orderhunter",
+      "i18n": {
+        "tr": {
+          "title": "Şeytani Tarikatın Okları",
+          "desc": "Şeytani Tarikat'ın avcıları Semerkant dışındaki sırtlardan yolcuları vuruyor. Onları tüneklerinden söküp at."
+        },
+        "de": {
+          "title": "Pfeile des Bösen Ordens",
+          "desc": "Jäger des Bösen Ordens schießen Reisende von den Graten vor Samarkand nieder. Treib sie aus ihren Nestern."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_15_ordersoldier",
+      "i18n": {
+        "tr": {
+          "title": "Tarikatın Piyadeleri",
+          "desc": "Şeytani Tarikat'ın askerleri ovada gittikçe büyüyen bölükler hâlinde talim yapıyor. Şehre yürümeden saflarını dağıt."
+        },
+        "de": {
+          "title": "Die Fußsoldaten des Ordens",
+          "desc": "Die Soldaten des Bösen Ordens exerzieren in wachsenden Kompanien auf der Ebene. Sprenge ihre Reihen, bevor sie gegen die Stadt marschieren."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_16_punisher",
+      "i18n": {
+        "tr": {
+          "title": "Cezalandırıcılar",
+          "desc": "Tarikat, direnen herkesin üzerine cezalandırıcılarını salıyor. Onlarla açık arazide karşılaş — bu sayıya ancak pişmiş bir avcı kalkışmalı."
+        },
+        "de": {
+          "title": "Die Bestrafer",
+          "desc": "Der Orden schickt seine Bestrafer gegen jeden, der Widerstand leistet. Stell dich ihnen auf offenem Feld — nur ein erfahrener Jäger sollte es mit ihrer Zahl aufnehmen."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_17_periton",
+      "i18n": {
+        "tr": {
+          "title": "Kanatlı Gölgeler",
+          "desc": "Peritonlar yüksek geçitlerin üzerinde süzülürken yere insan gölgesi düşürüyor. Sürüler dağılmadan kanatlı avcıları gökten indir."
+        },
+        "de": {
+          "title": "Schatten mit Schwingen",
+          "desc": "Peritons kreisen über den hohen Pässen und werfen die Schatten von Menschen. Hol die geflügelten Jäger vom Himmel, bevor die Herden auseinanderstieben."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_18_ong",
+      "i18n": {
+        "tr": {
+          "title": "Ong Kampları",
+          "desc": "Ong yağmacıları Semerkant'ın doğusundaki yol boyunca mevzilendi. Kamplarını yak ve İpek Yolu'nu yeniden aç."
+        },
+        "de": {
+          "title": "Die Lager der Ong",
+          "desc": "Ong-Plünderer haben sich an der Straße östlich von Samarkand eingegraben. Brenn dich durch ihre Lager und öffne die Seidenroute aufs Neue."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_19_hunshooter",
+      "i18n": {
+        "tr": {
+          "title": "Hun Okçuları",
+          "desc": "Hun okçuları tüccar yolunda kıpırdayan her şeye ok yağdırıyor. Onları yuvalandıkları kumullardan ve sırtlardan söküp avla."
+        },
+        "de": {
+          "title": "Die hunnischen Schützen",
+          "desc": "Hunnische Schützen schießen auf alles, was sich auf der Handelsstraße bewegt. Jage sie aus den Dünen und Graten, in denen sie nisten."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_20_sungsung",
+      "i18n": {
+        "tr": {
+          "title": "Sungsung Sürüsü",
+          "desc": "Sungsunglar çölün kıyısındaki meyve bahçeleriyle tahıl ambarlarına üşüşüyor. Sürüyü dağıt — yetiştiriciler eli açık ve seve seve öder."
+        },
+        "de": {
+          "title": "Die Sungsung-Horde",
+          "desc": "Sungsung fallen über die Obstgärten und Kornspeicher am Wüstenrand her. Zerstreue die Horde — die Bauern zahlen reichlich und gern."
+        }
+      }
+    },
+    {
+      "id": "eu_chain_21_rockgolem",
+      "i18n": {
+        "tr": {
+          "title": "Semerkant'ın Kaya Golemleri",
+          "desc": "Semerkant ovasının en uç noktasında kaya golemleri şehirden bile eski harabeleri bekliyor. Onları parçala ve bir avcının uzun yolunu tamamla."
+        },
+        "de": {
+          "title": "Die Steingolems von Samarkand",
+          "desc": "Am fernen Rand von Samarkands Ebene bewachen Steingolems Ruinen, die älter sind als die Stadt. Zerschmettere sie und vollende den langen Weg eines Jägers."
+        }
+      }
+    },
+    {
+      "id": "ghost_lights_daily",
+      "i18n": {
+        "tr": {
+          "title": "Hayalet Işıkları",
+          "desc": "Big-eye hayaletleri her gece mezar höyüklerine geri süzülüyor. Birinin onların sayısını dizginlemesi gerek — bugün o kişi sensin."
+        },
+        "de": {
+          "title": "Geisterlichter",
+          "desc": "Jede Nacht kehren die Big-eye ghosts zu den Grabhügeln zurück. Irgendjemand muss ihre Zahl klein halten — heute bist du dieser Jemand."
+        }
+      }
+    },
+    {
+      "id": "gyo_menace",
+      "i18n": {
+        "tr": {
+          "title": "Gyo Belası",
+          "desc": "Mangyanglar temizlenince nehir kıyısını gyolar sahiplendi. Onları oradan sür, yol için de şu iksirleri yanına al."
+        },
+        "de": {
+          "title": "Die Gyo-Plage",
+          "desc": "Nachdem die Mangyang dezimiert sind, haben die Gyo das Flussufer für sich beansprucht. Vertreibe sie — und nimm diese Tränke für unterwegs mit."
+        }
+      }
+    },
+    {
+      "id": "hunt_mangyang_novice",
+      "i18n": {
+        "tr": {
+          "title": "Mangyang Kırımı",
+          "desc": "Jangan'ın güney kapısının dışındaki mangyang sürüleri iyice cüretlendi. Kervanların başına dert olmadan sayılarını azalt."
+        },
+        "de": {
+          "title": "Mangyang-Jagd",
+          "desc": "Die Mangyang-Rudel vor dem Südtor von Jangan werden immer dreister. Dünne sie aus, bevor sie den Karawanen gefährlich werden."
+        }
+      }
+    }
+  ]
+}

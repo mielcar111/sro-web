@@ -1,0 +1,117 @@
+{
+ "$kaynak": "referans site istemci paketinden cikarilmis bolge verisi (GERCEK/paket_veri/zones/<zone>.json -> safeAreas). Hicbir kutu uydurulmadi.",
+ "zones": {
+  "donwhang_deprecated": [
+   {
+    "x": -554.696,
+    "z": 365.834,
+    "rotY": 0,
+    "shape": {
+     "kind": "box",
+     "hx": 232.361,
+     "hz": 178.975,
+     "ox": 0,
+     "oz": 0
+    }
+   }
+  ],
+  "donwhang_province": [
+   {
+    "x": 5205.304,
+    "z": 3101.834,
+    "rotY": 0,
+    "shape": {
+     "kind": "box",
+     "hx": 232.36,
+     "hz": 178.975,
+     "ox": 0,
+     "oz": 0
+    }
+   }
+  ],
+  "europe_province": [
+   {
+    "x": -16058.428,
+    "z": 3807.686,
+    "rotY": 0,
+    "shape": {
+     "kind": "box",
+     "hx": 411.924,
+     "hz": 565.471,
+     "ox": 0,
+     "oz": 0
+    }
+   }
+  ],
+  "hotan_province": [
+   {
+    "x": 248.136,
+    "z": 445.086,
+    "rotY": 0,
+    "shape": {
+     "kind": "box",
+     "hx": 257.798,
+     "hz": 680.589,
+     "ox": 0,
+     "oz": 0
+    }
+   }
+  ],
+  "jangan": [
+   {
+    "x": -22.17,
+    "z": 299.882,
+    "rotY": 0,
+    "shape": {
+     "kind": "box",
+     "hx": 361.271,
+     "hz": 244.615,
+     "ox": 0,
+     "oz": 0
+    }
+   }
+  ],
+  "jangan_province": [
+   {
+    "x": 9628.09,
+    "z": 1738.25,
+    "rotY": 0,
+    "shape": {
+     "kind": "box",
+     "hx": 384.01,
+     "hz": 267.98,
+     "ox": 0,
+     "oz": 0
+    }
+   }
+  ],
+  "jangan_world_deprecated": [
+   {
+    "x": 675.584,
+    "z": 601.76,
+    "rotY": 0,
+    "shape": {
+     "kind": "box",
+     "hx": 527.516,
+     "hz": 546.493,
+     "ox": 0,
+     "oz": 0
+    }
+   }
+  ],
+  "samarkand_province": [
+   {
+    "x": -7778.747,
+    "z": 4335.621,
+    "rotY": 0,
+    "shape": {
+     "kind": "box",
+     "hx": 271.964,
+     "hz": 245.901,
+     "ox": 0,
+     "oz": 0
+    }
+   }
+  ]
+ }
+}

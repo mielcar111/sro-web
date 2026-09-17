@@ -1,0 +1,7831 @@
+{
+  "npcCatalog": {
+    "npc_am_flyship": {
+      "id": "npc_am_flyship",
+      "name": "Aircraft Ticket Seller Shard",
+      "modelKey": "AsiaMinor_Flyship",
+      "sroCode": "NPC_AM_FLYSHIP"
+    },
+    "npc_ca_guild": {
+      "id": "npc_ca_guild",
+      "name": "Guild Manager Hapsa",
+      "modelKey": "khotanquest_minister",
+      "sroCode": "NPC_CA_GUILD"
+    },
+    "npc_ca_hunter": {
+      "id": "npc_ca_hunter",
+      "name": "Hunter Associate Shahad",
+      "modelKey": "CentralAsiaShop_Hunter",
+      "sroCode": "NPC_CA_HUNTER"
+    },
+    "npc_ca_merchant": {
+      "id": "npc_ca_merchant",
+      "name": "Merchant Associate Karen",
+      "modelKey": "CentralAsiaShop_Merchant",
+      "sroCode": "NPC_CA_MERCHANT"
+    },
+    "npc_ca_soldier_ea1": {
+      "id": "npc_ca_soldier_ea1",
+      "name": "Soldier Jooha",
+      "modelKey": "CentralAsiaQuest_Soldier_Ea1",
+      "sroCode": "NPC_CA_SOLDIER_EA1"
+    },
+    "npc_ca_soldier_ea2": {
+      "id": "npc_ca_soldier_ea2",
+      "name": "Soldier Paje",
+      "modelKey": "CentralAsiaQuest_Soldier_Ea2",
+      "sroCode": "NPC_CA_SOLDIER_EA2"
+    },
+    "npc_ca_soldier_so1": {
+      "id": "npc_ca_soldier_so1",
+      "name": "Soldier Dohwa",
+      "modelKey": "CentralAsiaQuest_Soldier_So1",
+      "sroCode": "NPC_CA_SOLDIER_SO1"
+    },
+    "npc_ca_soldier_so2": {
+      "id": "npc_ca_soldier_so2",
+      "name": "Soldier Tapai",
+      "modelKey": "CentralAsiaQuest_Soldier_So2",
+      "sroCode": "NPC_CA_SOLDIER_SO2"
+    },
+    "npc_ca_soldier_we1": {
+      "id": "npc_ca_soldier_we1",
+      "name": "Soldier Ahu",
+      "modelKey": "CentralAsiaQuest_Soldier_We1",
+      "sroCode": "NPC_CA_SOLDIER_WE1"
+    },
+    "npc_ca_soldier_we2": {
+      "id": "npc_ca_soldier_we2",
+      "name": "Soldier Asahap",
+      "modelKey": "CentralAsiaQuest_Soldier_We2",
+      "sroCode": "NPC_CA_SOLDIER_WE2"
+    },
+    "npc_ca_special": {
+      "id": "npc_ca_special",
+      "name": "Specialty Trader Toson",
+      "modelKey": "CentralAsiaShop_Special",
+      "sroCode": "NPC_CA_SPECIAL"
+    },
+    "npc_ch_beggarboy": {
+      "id": "npc_ch_beggarboy",
+      "name": "Bagger Sochil",
+      "modelKey": "chinaetc_slumboy",
+      "sroCode": "NPC_CH_BEGGARBOY"
+    },
+    "npc_ch_bigman": {
+      "id": "npc_ch_bigman",
+      "name": "Casino Guardian Huhoan",
+      "modelKey": "chinaetc_gamblingplaceman",
+      "sroCode": "NPC_CH_BIGMAN"
+    },
+    "npc_ch_chef": {
+      "id": "npc_ch_chef",
+      "name": "Village Chief Hwangno",
+      "modelKey": "chinaquest_villageheadman",
+      "sroCode": "NPC_CH_CHEF"
+    },
+    "npc_ch_doctor": {
+      "id": "npc_ch_doctor",
+      "name": "Merchant Associate Hwajung",
+      "modelKey": "chinaquest_doctor",
+      "sroCode": "NPC_CH_DOCTOR"
+    },
+    "npc_ch_europe": {
+      "id": "npc_ch_europe",
+      "name": "Adventurer Flora",
+      "modelKey": "chinaetc_europegirl",
+      "sroCode": "NPC_CH_EUROPE"
+    },
+    "npc_ch_fortress_official": {
+      "id": "npc_ch_fortress_official",
+      "name": "Jangan Fortress Clerk",
+      "modelKey": "chinaquest_merchant_sword",
+      "sroCode": "NPC_CH_FORTRESS_OFFICIAL"
+    },
+    "npc_ch_gacha_machine": {
+      "id": "npc_ch_gacha_machine",
+      "name": "Magic POP",
+      "modelKey": "gacha_machine",
+      "sroCode": "NPC_CH_GACHA_MACHINE"
+    },
+    "npc_ch_gacha_operator": {
+      "id": "npc_ch_gacha_operator",
+      "name": "Magic POP Guide Gori",
+      "modelKey": "westchinashop_herbalistman",
+      "sroCode": "NPC_CH_GACHA_OPERATOR"
+    },
+    "npc_ch_genaral": {
+      "id": "npc_ch_genaral",
+      "name": "General Sonhyeon",
+      "modelKey": "chinaquest_merchant",
+      "sroCode": "NPC_CH_GENARAL"
+    },
+    "npc_ch_genaral_bo": {
+      "id": "npc_ch_genaral_bo",
+      "name": "Juho",
+      "modelKey": "chinaquest_merchant_bow",
+      "sroCode": "NPC_CH_GENARAL_BO"
+    },
+    "npc_ch_genaral_sp": {
+      "id": "npc_ch_genaral_sp",
+      "name": "Guild Manager Leebaek",
+      "modelKey": "chinaquest_merchant_spear",
+      "sroCode": "NPC_CH_GENARAL_SP"
+    },
+    "npc_ch_genaral_sw": {
+      "id": "npc_ch_genaral_sw",
+      "name": "Hunter Associate Gwakwi",
+      "modelKey": "chinaquest_merchant_sword",
+      "sroCode": "NPC_CH_GENARAL_SW"
+    },
+    "npc_ch_india": {
+      "id": "npc_ch_india",
+      "name": "Buddhist Priest Kushyan",
+      "modelKey": "chinaetc_indiapriest",
+      "sroCode": "NPC_CH_INDIA"
+    },
+    "npc_ch_islam": {
+      "id": "npc_ch_islam",
+      "name": "Islam Merchant Ishyak",
+      "modelKey": "chinaetc_islamman",
+      "sroCode": "NPC_CH_ISLAM"
+    },
+    "npc_ch_kisaeng1": {
+      "id": "npc_ch_kisaeng1",
+      "name": "Gisaeng So-Ok",
+      "modelKey": "chinaetc_kisaeng1",
+      "sroCode": "NPC_CH_KISAENG1"
+    },
+    "npc_ch_kisaeng2": {
+      "id": "npc_ch_kisaeng2",
+      "name": "Gisaeng Juju",
+      "modelKey": "chinaetc_kisaeng2",
+      "sroCode": "NPC_CH_KISAENG2"
+    },
+    "npc_ch_kisaeng3": {
+      "id": "npc_ch_kisaeng3",
+      "name": "Gisaeng Ahjin",
+      "modelKey": "chinaetc_kisaeng3",
+      "sroCode": "NPC_CH_KISAENG3"
+    },
+    "npc_ch_kisaeng4": {
+      "id": "npc_ch_kisaeng4",
+      "name": "Gisaeng Mihyang",
+      "modelKey": "chinaetc_kisaeng4",
+      "sroCode": "NPC_CH_KISAENG4"
+    },
+    "npc_ch_kisaeng5": {
+      "id": "npc_ch_kisaeng5",
+      "name": "Gisaeng Juyeong",
+      "modelKey": "chinaetc_kisaeng5",
+      "sroCode": "NPC_CH_KISAENG5"
+    },
+    "npc_ch_kisaeng6": {
+      "id": "npc_ch_kisaeng6",
+      "name": "Gisaeng Yumi",
+      "modelKey": "chinaetc_kisaeng6",
+      "sroCode": "NPC_CH_KISAENG6"
+    },
+    "npc_ch_lottery": {
+      "id": "npc_ch_lottery",
+      "name": "Lottery Seller Wangwon",
+      "modelKey": "chinasystem_bookmakerman",
+      "sroCode": "NPC_CH_LOTTERY"
+    },
+    "npc_ch_moonshadow": {
+      "id": "npc_ch_moonshadow",
+      "name": "WalYoung",
+      "modelKey": "Chinaetc_QinshiQuest",
+      "sroCode": "NPC_CH_MOONSHADOW"
+    },
+    "npc_ch_priest": {
+      "id": "npc_ch_priest",
+      "name": "Buddhist Priest Jeonghye",
+      "modelKey": "chinaquest_priest",
+      "sroCode": "NPC_CH_PRIEST"
+    },
+    "npc_ch_shaman": {
+      "id": "npc_ch_shaman",
+      "name": "Exorcist Miaoryeong",
+      "modelKey": "chinasystem_shaman",
+      "sroCode": "NPC_CH_SHAMAN"
+    },
+    "npc_ch_soldier_ea1": {
+      "id": "npc_ch_soldier_ea1",
+      "name": "Soldier Iyang",
+      "modelKey": "chinaetc_soldiereast1",
+      "sroCode": "NPC_CH_SOLDIER_EA1"
+    },
+    "npc_ch_soldier_em2": {
+      "id": "npc_ch_soldier_em2",
+      "name": "Soldier Fengil",
+      "modelKey": "chinaetc_soldierpalace2",
+      "sroCode": "NPC_CH_SOLDIER_EM2"
+    },
+    "npc_ch_soldier_so2": {
+      "id": "npc_ch_soldier_so2",
+      "name": "Soldier Dangsam",
+      "modelKey": "chinaetc_soldiersouth2",
+      "sroCode": "NPC_CH_SOLDIER_SO2"
+    },
+    "npc_ch_soldier_we2": {
+      "id": "npc_ch_soldier_we2",
+      "name": "Soldier Jowi",
+      "modelKey": "chinaetc_soldierwest2",
+      "sroCode": "NPC_CH_SOLDIER_WE2"
+    },
+    "npc_ch_special": {
+      "id": "npc_ch_special",
+      "name": "Specialty Trader Jodaesan",
+      "modelKey": "chinashop_spacialmerchant",
+      "sroCode": "NPC_CH_SPECIAL"
+    },
+    "npc_ch_special2": {
+      "id": "npc_ch_special2",
+      "name": "Specialty Trader Seopok",
+      "modelKey": "thiefden_thief_e",
+      "sroCode": "NPC_CH_SPECIAL2"
+    },
+    "npc_ch_ticket": {
+      "id": "npc_ch_ticket",
+      "name": "Ticket Seller Gyoun",
+      "modelKey": "chinasystem_bookmakergirl",
+      "sroCode": "NPC_CH_TICKET"
+    },
+    "npc_ch_warehouse_w": {
+      "id": "npc_ch_warehouse_w",
+      "name": "Storage-Keeper Sansan",
+      "modelKey": "chinasystem_warehousekeeper_woman",
+      "sroCode": "NPC_CH_WAREHOUSE_W"
+    },
+    "npc_eu_adventurer": {
+      "id": "npc_eu_adventurer",
+      "name": "Adventurer Demetri",
+      "modelKey": "EastEuropeQuest_Adventure",
+      "sroCode": "NPC_EU_ADVENTURER"
+    },
+    "npc_eu_chinaboy": {
+      "id": "npc_eu_chinaboy",
+      "name": "Boy Yongso",
+      "modelKey": "EastEuropeQuest_ChinaSlave",
+      "sroCode": "NPC_EU_CHINABOY"
+    },
+    "npc_eu_consul": {
+      "id": "npc_eu_consul",
+      "name": "Consul Rialto",
+      "modelKey": "EastEuropeQuest_Chamberlain",
+      "sroCode": "NPC_EU_CONSUL"
+    },
+    "npc_eu_ferry": {
+      "id": "npc_eu_ferry",
+      "name": "Harbor Manager Georion",
+      "modelKey": "EastEuropeSystem_PortManager",
+      "sroCode": "NPC_EU_FERRY"
+    },
+    "npc_eu_general": {
+      "id": "npc_eu_general",
+      "name": "General Ratchel",
+      "modelKey": "EastEuropeQuest_Commander_Baltegru",
+      "sroCode": "NPC_EU_GENERAL"
+    },
+    "npc_eu_guild": {
+      "id": "npc_eu_guild",
+      "name": "Guild Manager Gilt",
+      "modelKey": "EastEuropeSystem_Guild",
+      "sroCode": "NPC_EU_GUILD"
+    },
+    "npc_eu_hunter": {
+      "id": "npc_eu_hunter",
+      "name": "Hunter Associate Adria",
+      "modelKey": "EastEuropeSystem_HunterUnion",
+      "sroCode": "NPC_EU_HUNTER"
+    },
+    "npc_eu_manager": {
+      "id": "npc_eu_manager",
+      "name": "Steward Yupitel",
+      "modelKey": "EastEuropeQuest_Steward",
+      "sroCode": "NPC_EU_MANAGER"
+    },
+    "npc_eu_merchant": {
+      "id": "npc_eu_merchant",
+      "name": "Merchant Associate Tana",
+      "modelKey": "EastEuropeSystem_MerchantUnion",
+      "sroCode": "NPC_EU_MERCHANT"
+    },
+    "npc_eu_priest": {
+      "id": "npc_eu_priest",
+      "name": "Clergy Gabriel",
+      "modelKey": "EastEuropeQuest_Priest",
+      "sroCode": "NPC_EU_PRIEST"
+    },
+    "npc_eu_soldier_ca1": {
+      "id": "npc_eu_soldier_ca1",
+      "name": "Soldier Vesaros",
+      "modelKey": "EastEuropeQuest_Soldier_Besaros",
+      "sroCode": "NPC_EU_SOLDIER_CA1"
+    },
+    "npc_eu_soldier_ca2": {
+      "id": "npc_eu_soldier_ca2",
+      "name": "Soldier Kasius",
+      "modelKey": "EastEuropeQuest_Soldier_Kasius",
+      "sroCode": "NPC_EU_SOLDIER_CA2"
+    },
+    "npc_eu_soldier_cc1": {
+      "id": "npc_eu_soldier_cc1",
+      "name": "Soldier justia",
+      "modelKey": "EastEuropeQuest_Soldier_Justia",
+      "sroCode": "NPC_EU_SOLDIER_CC1"
+    },
+    "npc_eu_soldier_ea1": {
+      "id": "npc_eu_soldier_ea1",
+      "name": "Soldier Takia",
+      "modelKey": "EastEuropeQuest_Soldier_Takia",
+      "sroCode": "NPC_EU_SOLDIER_EA1"
+    },
+    "npc_eu_soldier_ea2": {
+      "id": "npc_eu_soldier_ea2",
+      "name": "Soldier Alex",
+      "modelKey": "EastEuropeQuest_Soldier_Alex",
+      "sroCode": "NPC_EU_SOLDIER_EA2"
+    },
+    "npc_eu_soldier_no1": {
+      "id": "npc_eu_soldier_no1",
+      "name": "Soldier Kotomo",
+      "modelKey": "EastEuropeQuest_Soldier_Kotomo",
+      "sroCode": "NPC_EU_SOLDIER_NO1"
+    },
+    "npc_eu_soldier_no2": {
+      "id": "npc_eu_soldier_no2",
+      "name": "Soldier Riedo",
+      "modelKey": "EastEuropeQuest_Soldier_Riedo",
+      "sroCode": "NPC_EU_SOLDIER_NO2"
+    },
+    "npc_eu_soldier_po1": {
+      "id": "npc_eu_soldier_po1",
+      "name": "Soldier Maximus",
+      "modelKey": "EastEuropeQuest_Soldier_Masimus",
+      "sroCode": "NPC_EU_SOLDIER_PO1"
+    },
+    "npc_eu_soldier_po2": {
+      "id": "npc_eu_soldier_po2",
+      "name": "Soldier Kartino",
+      "modelKey": "EastEuropeQuest_Soldier_Kartino",
+      "sroCode": "NPC_EU_SOLDIER_PO2"
+    },
+    "npc_eu_special": {
+      "id": "npc_eu_special",
+      "name": "Specialty Trader Tina",
+      "modelKey": "EastEuropeShop_SpecialProduct",
+      "sroCode": "NPC_EU_SPECIAL"
+    },
+    "npc_eu_union1": {
+      "id": "npc_eu_union1",
+      "name": "Association Boss Kapros",
+      "modelKey": "EastEuropeQuest_UnionLeader_Kafros",
+      "sroCode": "NPC_EU_UNION1"
+    },
+    "npc_eu_union2": {
+      "id": "npc_eu_union2",
+      "name": "Association Boss Uvetino",
+      "modelKey": "EastEuropeQuest_UnionLeader_Ubetino",
+      "sroCode": "NPC_EU_UNION2"
+    },
+    "npc_eu_witch": {
+      "id": "npc_eu_witch",
+      "name": "Sunset Witch",
+      "modelKey": "EastEuropeQuest_WitchOfSunset",
+      "sroCode": "NPC_EU_WITCH"
+    },
+    "npc_kt_designer": {
+      "id": "npc_kt_designer",
+      "name": "Merchant Associate Asaman",
+      "modelKey": "khotanshop_designer",
+      "sroCode": "NPC_KT_DESIGNER"
+    },
+    "npc_kt_ferry": {
+      "id": "npc_kt_ferry",
+      "name": "Boat Ticket Seller Ahgon",
+      "modelKey": "khotansystem_turtleshipticketagent",
+      "sroCode": "NPC_KT_FERRY"
+    },
+    "npc_kt_flyship2": {
+      "id": "npc_kt_flyship2",
+      "name": "Airship Ticket Seller Poy",
+      "modelKey": "khotanshop_designer",
+      "sroCode": "NPC_KT_FLYSHIP2"
+    },
+    "npc_kt_fortress_official": {
+      "id": "npc_kt_fortress_official",
+      "name": "Hotan Fortress Clerk",
+      "modelKey": "khotanshop_craftsman",
+      "sroCode": "NPC_KT_FORTRESS_OFFICIAL"
+    },
+    "npc_kt_guild": {
+      "id": "npc_kt_guild",
+      "name": "Guild Manager Musai",
+      "modelKey": "khotanquest_minister",
+      "sroCode": "NPC_KT_GUILD"
+    },
+    "npc_kt_manager": {
+      "id": "npc_kt_manager",
+      "name": "Nephrite Refiner Pahap",
+      "modelKey": "khotanquest_refiner",
+      "sroCode": "NPC_KT_MANAGER"
+    },
+    "npc_kt_minister": {
+      "id": "npc_kt_minister",
+      "name": "Hunter Associate Ahmok",
+      "modelKey": "khotanquest_minister",
+      "sroCode": "NPC_KT_MINISTER"
+    },
+    "npc_kt_soldier_ea1": {
+      "id": "npc_kt_soldier_ea1",
+      "name": "Soldier Baoman",
+      "modelKey": "khotanetc_soldiereast",
+      "sroCode": "NPC_KT_SOLDIER_EA1"
+    },
+    "npc_kt_soldier_ea2": {
+      "id": "npc_kt_soldier_ea2",
+      "name": "Soldier Makhan",
+      "modelKey": "khotanetc_soldiereast2",
+      "sroCode": "NPC_KT_SOLDIER_EA2"
+    },
+    "npc_kt_soldier_em1": {
+      "id": "npc_kt_soldier_em1",
+      "name": "Soldier Pao",
+      "modelKey": "khotanetc_soldierpalace",
+      "sroCode": "NPC_KT_SOLDIER_EM1"
+    },
+    "npc_kt_soldier_em2": {
+      "id": "npc_kt_soldier_em2",
+      "name": "Soldier Tuolan",
+      "modelKey": "khotanetc_soldierpalace2",
+      "sroCode": "NPC_KT_SOLDIER_EM2"
+    },
+    "npc_kt_soldier_so1": {
+      "id": "npc_kt_soldier_so1",
+      "name": "Soldier Duyun",
+      "modelKey": "khotanetc_soldierwest",
+      "sroCode": "NPC_KT_SOLDIER_SO1"
+    },
+    "npc_kt_soldier_so2": {
+      "id": "npc_kt_soldier_so2",
+      "name": "Soldier Leihan",
+      "modelKey": "khotanetc_soldierwest2",
+      "sroCode": "NPC_KT_SOLDIER_SO2"
+    },
+    "npc_kt_soldier_we1": {
+      "id": "npc_kt_soldier_we1",
+      "name": "Soldier Wulan",
+      "modelKey": "khotanetc_soldiersouth",
+      "sroCode": "NPC_KT_SOLDIER_WE1"
+    },
+    "npc_kt_soldier_we2": {
+      "id": "npc_kt_soldier_we2",
+      "name": "Soldier Batu",
+      "modelKey": "khotanetc_soldiersouth2",
+      "sroCode": "NPC_KT_SOLDIER_WE2"
+    },
+    "npc_kt_special": {
+      "id": "npc_kt_special",
+      "name": "Specialty Trader Sanmok",
+      "modelKey": "khotanshop_spacialmerchant",
+      "sroCode": "NPC_KT_SPECIAL"
+    },
+    "npc_tk_special": {
+      "id": "npc_tk_special",
+      "name": "Specialty Trader Payi",
+      "modelKey": "khotanshop_spacialmerchant",
+      "sroCode": "NPC_TK_SPECIAL"
+    },
+    "npc_wc_doctor": {
+      "id": "npc_wc_doctor",
+      "name": "Merchant Associate Leegeuk",
+      "modelKey": "westchinaquest_doctor",
+      "sroCode": "NPC_WC_DOCTOR"
+    },
+    "npc_wc_genaral_bo": {
+      "id": "npc_wc_genaral_bo",
+      "name": "Honmusa",
+      "modelKey": "westchinaquest_merchant_bow",
+      "sroCode": "NPC_WC_GENARAL_BO"
+    },
+    "npc_wc_genaral_sp": {
+      "id": "npc_wc_genaral_sp",
+      "name": "Baekako",
+      "modelKey": "westchinaquest_merchant_spear",
+      "sroCode": "NPC_WC_GENARAL_SP"
+    },
+    "npc_wc_genaral_sw": {
+      "id": "npc_wc_genaral_sw",
+      "name": "Hunter Associate Haraho",
+      "modelKey": "westchinaquest_merchant_sword",
+      "sroCode": "NPC_WC_GENARAL_SW"
+    },
+    "npc_wc_guild": {
+      "id": "npc_wc_guild",
+      "name": "Guild Manager Ryukang",
+      "modelKey": "westchinaquest_merchant_sword",
+      "sroCode": "NPC_WC_GUILD"
+    },
+    "npc_wc_priest1": {
+      "id": "npc_wc_priest1",
+      "name": "Buddhist Priest Fa",
+      "modelKey": "westchinaquest_priest",
+      "sroCode": "NPC_WC_PRIEST1"
+    },
+    "npc_wc_priest2": {
+      "id": "npc_wc_priest2",
+      "name": "Buddhist Priest Hyeon",
+      "modelKey": "westchinaquest_hyunjang",
+      "sroCode": "NPC_WC_PRIEST2"
+    },
+    "npc_wc_priest3": {
+      "id": "npc_wc_priest3",
+      "name": "Buddhist Priest Bupgong",
+      "modelKey": "westchinaetc_maintemplepriest",
+      "sroCode": "NPC_WC_PRIEST3"
+    },
+    "npc_wc_soldier_ea1": {
+      "id": "npc_wc_soldier_ea1",
+      "name": "Soldier Moho",
+      "modelKey": "westchinaetc_soldiereast1",
+      "sroCode": "NPC_WC_SOLDIER_EA1"
+    },
+    "npc_wc_soldier_ea2": {
+      "id": "npc_wc_soldier_ea2",
+      "name": "Soldier Hahun",
+      "modelKey": "westchinaetc_soldiereast2",
+      "sroCode": "NPC_WC_SOLDIER_EA2"
+    },
+    "npc_wc_soldier_so": {
+      "id": "npc_wc_soldier_so",
+      "name": "Soldier Baeksong",
+      "modelKey": "westchinaetc_soldiersouth1",
+      "sroCode": "NPC_WC_SOLDIER_SO"
+    },
+    "npc_wc_soldier_we1": {
+      "id": "npc_wc_soldier_we1",
+      "name": "Soldier Manho",
+      "modelKey": "westchinaetc_soldierwest1",
+      "sroCode": "NPC_WC_SOLDIER_WE1"
+    },
+    "npc_wc_soldier_we2": {
+      "id": "npc_wc_soldier_we2",
+      "name": "Soldier Dooil",
+      "modelKey": "westchinaetc_soldierwest2",
+      "sroCode": "NPC_WC_SOLDIER_WE2"
+    },
+    "npc_wc_special": {
+      "id": "npc_wc_special",
+      "name": "Specialty Shop Elder Leegak",
+      "modelKey": "westchinaquest_oldman",
+      "sroCode": "NPC_WC_SPECIAL"
+    },
+    "npc_wc_special2": {
+      "id": "npc_wc_special2",
+      "name": "Specialty Trader Hounah",
+      "modelKey": "thiefden_thief_d",
+      "sroCode": "NPC_WC_SPECIAL2"
+    },
+    "npc_wc_warehouse_w": {
+      "id": "npc_wc_warehouse_w",
+      "name": "Storage-Keeper Irina",
+      "modelKey": "westchinasystem_warehousekeeper_woman",
+      "sroCode": "NPC_WC_WAREHOUSE_W"
+    },
+    "npc_merchant_wang": {
+      "id": "npc_merchant_wang",
+      "name": "Herbalist Yangyun",
+      "modelKey": "npc_ch_potion",
+      "sroCode": "NPC_CH_POTION",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Potions",
+            "items": [
+              "hp_potion_01",
+              "hp_potion_02",
+              "hp_potion_03",
+              "hp_potion_04",
+              "hp_potion_05",
+              "mp_potion_01",
+              "mp_potion_02",
+              "mp_potion_03",
+              "mp_potion_04",
+              "mp_potion_05",
+              "pill_universal_01",
+              "pill_universal_02",
+              "pill_universal_03",
+              "pill_universal_04",
+              "pill_universal_05",
+              "pill_purification_01",
+              "pill_purification_02",
+              "pill_purification_03",
+              "pill_purification_04"
+            ]
+          },
+          {
+            "name": "Special",
+            "items": [
+              "vigor_potion_01",
+              "vigor_potion_02",
+              "vigor_potion_03",
+              "hp_grain_01",
+              "mp_grain_01",
+              "vigor_grain_01",
+              "speed_potion_01",
+              "elixir_weapon",
+              "elixir_armor",
+              "elixir_shield",
+              "elixir_accessory",
+              "sp_saver"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_ch_armor": {
+      "id": "npc_ch_armor",
+      "name": "Protector Trader Mrs Jang",
+      "modelKey": "npc_ch_armor",
+      "sroCode": "NPC_CH_ARMOR",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Heavy Armor",
+            "race": "chinese",
+            "items": [
+              "heavy01_head",
+              "heavy02_head",
+              "heavy03_head",
+              "heavy01_shoulder",
+              "heavy02_shoulder",
+              "heavy03_shoulder",
+              "heavy01_chest",
+              "heavy02_chest",
+              "heavy03_chest",
+              "heavy01_pants",
+              "heavy02_pants",
+              "heavy03_pants",
+              "heavy01_gloves",
+              "heavy02_gloves",
+              "heavy03_gloves",
+              "heavy01_boots",
+              "heavy02_boots",
+              "heavy03_boots"
+            ]
+          },
+          {
+            "name": "Light Armor",
+            "race": "chinese",
+            "items": [
+              "light01_head",
+              "light02_head",
+              "light03_head",
+              "light01_shoulder",
+              "light02_shoulder",
+              "light03_shoulder",
+              "light01_chest",
+              "light02_chest",
+              "light03_chest",
+              "light01_pants",
+              "light02_pants",
+              "light03_pants",
+              "light01_gloves",
+              "light02_gloves",
+              "light03_gloves",
+              "light01_boots",
+              "light02_boots",
+              "light03_boots"
+            ]
+          },
+          {
+            "name": "Garments",
+            "race": "chinese",
+            "items": [
+              "clothes01_head",
+              "clothes02_head",
+              "clothes03_head",
+              "clothes01_shoulder",
+              "clothes02_shoulder",
+              "clothes03_shoulder",
+              "clothes01_chest",
+              "clothes02_chest",
+              "clothes03_chest",
+              "clothes01_pants",
+              "clothes02_pants",
+              "clothes03_pants",
+              "clothes01_gloves",
+              "clothes02_gloves",
+              "clothes03_gloves",
+              "clothes01_boots",
+              "clothes02_boots",
+              "clothes03_boots"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_ch_smith": {
+      "id": "npc_ch_smith",
+      "name": "Blacksmith Chulsan",
+      "modelKey": "npc_ch_smith",
+      "sroCode": "NPC_CH_SMITH",
+      "repair": true,
+      "shop": {
+        "tabs": [
+          {
+            "name": "Weapons",
+            "race": "chinese",
+            "items": [
+              "sword01",
+              "sword02",
+              "sword03",
+              "blade01",
+              "blade02",
+              "blade03",
+              "spear01",
+              "spear02",
+              "spear03",
+              "glavie01",
+              "glavie02",
+              "glavie03",
+              "bow01",
+              "bow02",
+              "bow03"
+            ]
+          },
+          {
+            "name": "Shields",
+            "race": "chinese",
+            "items": [
+              "shield01",
+              "shield02",
+              "shield03"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_ch_warehouse": {
+      "id": "npc_ch_warehouse",
+      "name": "Storage-Keeper Wangu",
+      "modelKey": "npc_ch_warehouse",
+      "sroCode": "NPC_CH_WAREHOUSE_M"
+    },
+    "npc_wc_potion": {
+      "id": "npc_wc_potion",
+      "name": "Herbalist Bori",
+      "modelKey": "npc_wc_potion",
+      "sroCode": "NPC_WC_POTION",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Potions",
+            "items": [
+              "hp_potion_01",
+              "hp_potion_02",
+              "hp_potion_03",
+              "hp_potion_04",
+              "hp_potion_05",
+              "mp_potion_01",
+              "mp_potion_02",
+              "mp_potion_03",
+              "mp_potion_04",
+              "mp_potion_05",
+              "pill_universal_02",
+              "pill_universal_03",
+              "pill_universal_04",
+              "pill_universal_05",
+              "pill_purification_01",
+              "pill_purification_02",
+              "pill_purification_03",
+              "pill_purification_04"
+            ]
+          },
+          {
+            "name": "Special",
+            "items": [
+              "vigor_potion_01",
+              "vigor_potion_02",
+              "vigor_potion_03",
+              "hp_grain_01",
+              "mp_grain_01",
+              "vigor_grain_01",
+              "speed_potion_01",
+              "elixir_weapon",
+              "elixir_armor",
+              "elixir_shield",
+              "elixir_accessory",
+              "sp_saver"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_wc_armor": {
+      "id": "npc_wc_armor",
+      "name": "Protector Trader Yeolah",
+      "modelKey": "npc_wc_armor",
+      "sroCode": "NPC_WC_ARMOR",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Heavy Armor",
+            "race": "chinese",
+            "items": [
+              "heavy03_head",
+              "heavy04_head",
+              "heavy05_head",
+              "heavy03_shoulder",
+              "heavy04_shoulder",
+              "heavy05_shoulder",
+              "heavy03_chest",
+              "heavy04_chest",
+              "heavy05_chest",
+              "heavy03_pants",
+              "heavy04_pants",
+              "heavy05_pants",
+              "heavy03_gloves",
+              "heavy04_gloves",
+              "heavy05_gloves",
+              "heavy03_boots",
+              "heavy04_boots",
+              "heavy05_boots"
+            ]
+          },
+          {
+            "name": "Light Armor",
+            "race": "chinese",
+            "items": [
+              "light03_head",
+              "light04_head",
+              "light05_head",
+              "light03_shoulder",
+              "light04_shoulder",
+              "light05_shoulder",
+              "light03_chest",
+              "light04_chest",
+              "light05_chest",
+              "light03_pants",
+              "light04_pants",
+              "light05_pants",
+              "light03_gloves",
+              "light04_gloves",
+              "light05_gloves",
+              "light03_boots",
+              "light04_boots",
+              "light05_boots"
+            ]
+          },
+          {
+            "name": "Garments",
+            "race": "chinese",
+            "items": [
+              "clothes03_head",
+              "clothes04_head",
+              "clothes05_head",
+              "clothes03_shoulder",
+              "clothes04_shoulder",
+              "clothes05_shoulder",
+              "clothes03_chest",
+              "clothes04_chest",
+              "clothes05_chest",
+              "clothes03_pants",
+              "clothes04_pants",
+              "clothes05_pants",
+              "clothes03_gloves",
+              "clothes04_gloves",
+              "clothes05_gloves",
+              "clothes03_boots",
+              "clothes04_boots",
+              "clothes05_boots"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_wc_smith": {
+      "id": "npc_wc_smith",
+      "name": "Blacksmith Agol",
+      "modelKey": "npc_wc_smith",
+      "sroCode": "NPC_WC_SMITH",
+      "repair": true,
+      "shop": {
+        "tabs": [
+          {
+            "name": "Weapons",
+            "race": "chinese",
+            "items": [
+              "sword03",
+              "sword04",
+              "sword05",
+              "blade03",
+              "blade04",
+              "blade05",
+              "spear03",
+              "spear04",
+              "spear05",
+              "glavie03",
+              "glavie04",
+              "glavie05",
+              "bow03",
+              "bow04",
+              "bow05"
+            ]
+          },
+          {
+            "name": "Shields",
+            "race": "chinese",
+            "items": [
+              "shield03",
+              "shield04",
+              "shield05"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_wc_warehouse": {
+      "id": "npc_wc_warehouse",
+      "name": "Storage-Keeper Paedo",
+      "modelKey": "npc_wc_warehouse",
+      "sroCode": "NPC_WC_WAREHOUSE_M"
+    },
+    "npc_kt_warehouse": {
+      "id": "npc_kt_warehouse",
+      "name": "Storage-Keeper Auisan",
+      "modelKey": "khotansystem_warehousekeeper",
+      "sroCode": "NPC_KT_WAREHOUSE"
+    },
+    "npc_ch_accessory": {
+      "id": "npc_ch_accessory",
+      "name": "Grocery Trader Jinjin",
+      "modelKey": "npc_ch_accessory",
+      "sroCode": "NPC_CH_ACCESSORY",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Accessories",
+            "race": "chinese",
+            "items": [
+              "ring01",
+              "ring02",
+              "ring03",
+              "earring01",
+              "earring02",
+              "earring03",
+              "necklace01",
+              "necklace02",
+              "necklace03"
+            ]
+          },
+          {
+            "name": "Alchemy",
+            "items": [
+              "lucky_powder_01",
+              "lucky_powder_02",
+              "lucky_powder_03",
+              "lucky_powder_04",
+              "lucky_powder_05",
+              "lucky_powder_06",
+              "lucky_powder_07",
+              "lucky_powder_08"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_wc_accessory": {
+      "id": "npc_wc_accessory",
+      "name": "Grocery Trader Yeosun",
+      "modelKey": "npc_wc_accessory",
+      "sroCode": "NPC_WC_ACCESSORY",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Accessories",
+            "race": "chinese",
+            "items": [
+              "ring03",
+              "ring04",
+              "ring05",
+              "earring03",
+              "earring04",
+              "earring05",
+              "necklace03",
+              "necklace04",
+              "necklace05"
+            ]
+          },
+          {
+            "name": "Alchemy",
+            "items": [
+              "lucky_powder_03",
+              "lucky_powder_04",
+              "lucky_powder_05",
+              "lucky_powder_06",
+              "lucky_powder_07",
+              "lucky_powder_08"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_kt_potion": {
+      "id": "npc_kt_potion",
+      "name": "Potion Merchant Manina",
+      "modelKey": "khotanshop_veilgirl",
+      "sroCode": "NPC_KT_POTION",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Potions",
+            "items": [
+              "hp_potion_03",
+              "hp_potion_04",
+              "hp_potion_05",
+              "mp_potion_03",
+              "mp_potion_04",
+              "mp_potion_05",
+              "pill_universal_01",
+              "pill_universal_02",
+              "pill_universal_03",
+              "pill_universal_04",
+              "pill_universal_05",
+              "pill_purification_01",
+              "pill_purification_02",
+              "pill_purification_03",
+              "pill_purification_04"
+            ]
+          },
+          {
+            "name": "Special",
+            "items": [
+              "vigor_potion_01",
+              "vigor_potion_02",
+              "vigor_potion_03",
+              "hp_grain_01",
+              "mp_grain_01",
+              "vigor_grain_01",
+              "speed_potion_01",
+              "elixir_weapon",
+              "elixir_armor",
+              "elixir_shield",
+              "elixir_accessory",
+              "sp_saver"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_kt_armor": {
+      "id": "npc_kt_armor",
+      "name": "Protector Trader Gonishya",
+      "modelKey": "khotanshop_armor",
+      "sroCode": "NPC_KT_ARMOR",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Heavy Armor",
+            "race": "chinese",
+            "items": [
+              "heavy05_head",
+              "heavy06_head",
+              "heavy07_head",
+              "heavy08_head",
+              "heavy05_shoulder",
+              "heavy06_shoulder",
+              "heavy07_shoulder",
+              "heavy08_shoulder",
+              "heavy05_chest",
+              "heavy06_chest",
+              "heavy07_chest",
+              "heavy08_chest",
+              "heavy05_pants",
+              "heavy06_pants",
+              "heavy07_pants",
+              "heavy08_pants",
+              "heavy05_gloves",
+              "heavy06_gloves",
+              "heavy07_gloves",
+              "heavy08_gloves",
+              "heavy05_boots",
+              "heavy06_boots",
+              "heavy07_boots",
+              "heavy08_boots"
+            ]
+          },
+          {
+            "name": "Light Armor",
+            "race": "chinese",
+            "items": [
+              "light05_head",
+              "light06_head",
+              "light07_head",
+              "light08_head",
+              "light05_shoulder",
+              "light06_shoulder",
+              "light07_shoulder",
+              "light08_shoulder",
+              "light05_chest",
+              "light06_chest",
+              "light07_chest",
+              "light08_chest",
+              "light05_pants",
+              "light06_pants",
+              "light07_pants",
+              "light08_pants",
+              "light05_gloves",
+              "light06_gloves",
+              "light07_gloves",
+              "light08_gloves",
+              "light05_boots",
+              "light06_boots",
+              "light07_boots",
+              "light08_boots"
+            ]
+          },
+          {
+            "name": "Garments",
+            "race": "chinese",
+            "items": [
+              "clothes05_head",
+              "clothes06_head",
+              "clothes07_head",
+              "clothes08_head",
+              "clothes05_shoulder",
+              "clothes06_shoulder",
+              "clothes07_shoulder",
+              "clothes08_shoulder",
+              "clothes05_chest",
+              "clothes06_chest",
+              "clothes07_chest",
+              "clothes08_chest",
+              "clothes05_pants",
+              "clothes06_pants",
+              "clothes07_pants",
+              "clothes08_pants",
+              "clothes05_gloves",
+              "clothes06_gloves",
+              "clothes07_gloves",
+              "clothes08_gloves",
+              "clothes05_boots",
+              "clothes06_boots",
+              "clothes07_boots",
+              "clothes08_boots"
+            ]
+          },
+          {
+            "name": "Heavy Armor",
+            "race": "european",
+            "items": [
+              "eu_heavy05_head",
+              "eu_heavy06_head",
+              "eu_heavy07_head",
+              "eu_heavy08_head",
+              "eu_heavy05_shoulder",
+              "eu_heavy06_shoulder",
+              "eu_heavy07_shoulder",
+              "eu_heavy08_shoulder",
+              "eu_heavy05_chest",
+              "eu_heavy06_chest",
+              "eu_heavy07_chest",
+              "eu_heavy08_chest",
+              "eu_heavy05_pants",
+              "eu_heavy06_pants",
+              "eu_heavy07_pants",
+              "eu_heavy08_pants",
+              "eu_heavy05_gloves",
+              "eu_heavy06_gloves",
+              "eu_heavy07_gloves",
+              "eu_heavy08_gloves",
+              "eu_heavy05_boots",
+              "eu_heavy06_boots",
+              "eu_heavy07_boots",
+              "eu_heavy08_boots"
+            ]
+          },
+          {
+            "name": "Light Armor",
+            "race": "european",
+            "items": [
+              "eu_light05_head",
+              "eu_light06_head",
+              "eu_light07_head",
+              "eu_light08_head",
+              "eu_light05_shoulder",
+              "eu_light06_shoulder",
+              "eu_light07_shoulder",
+              "eu_light08_shoulder",
+              "eu_light05_chest",
+              "eu_light06_chest",
+              "eu_light07_chest",
+              "eu_light08_chest",
+              "eu_light05_pants",
+              "eu_light06_pants",
+              "eu_light07_pants",
+              "eu_light08_pants",
+              "eu_light05_gloves",
+              "eu_light06_gloves",
+              "eu_light07_gloves",
+              "eu_light08_gloves",
+              "eu_light05_boots",
+              "eu_light06_boots",
+              "eu_light07_boots",
+              "eu_light08_boots"
+            ]
+          },
+          {
+            "name": "Garments",
+            "race": "european",
+            "items": [
+              "eu_clothes05_head",
+              "eu_clothes06_head",
+              "eu_clothes07_head",
+              "eu_clothes08_head",
+              "eu_clothes05_shoulder",
+              "eu_clothes06_shoulder",
+              "eu_clothes07_shoulder",
+              "eu_clothes08_shoulder",
+              "eu_clothes05_chest",
+              "eu_clothes06_chest",
+              "eu_clothes07_chest",
+              "eu_clothes08_chest",
+              "eu_clothes05_pants",
+              "eu_clothes06_pants",
+              "eu_clothes07_pants",
+              "eu_clothes08_pants",
+              "eu_clothes05_gloves",
+              "eu_clothes06_gloves",
+              "eu_clothes07_gloves",
+              "eu_clothes08_gloves",
+              "eu_clothes05_boots",
+              "eu_clothes06_boots",
+              "eu_clothes07_boots",
+              "eu_clothes08_boots"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_kt_smith": {
+      "id": "npc_kt_smith",
+      "name": "Blacksmith Soboi",
+      "modelKey": "khotanshop_smith",
+      "sroCode": "NPC_KT_SMITH",
+      "repair": true,
+      "shop": {
+        "tabs": [
+          {
+            "name": "Weapons",
+            "race": "chinese",
+            "items": [
+              "sword05",
+              "sword06",
+              "sword07",
+              "sword08",
+              "blade05",
+              "blade06",
+              "blade07",
+              "blade08",
+              "spear05",
+              "spear06",
+              "spear07",
+              "spear08",
+              "glavie05",
+              "glavie06",
+              "glavie07",
+              "glavie08",
+              "bow05",
+              "bow06",
+              "bow07",
+              "bow08"
+            ]
+          },
+          {
+            "name": "Shields",
+            "race": "chinese",
+            "items": [
+              "shield05",
+              "shield06",
+              "shield07",
+              "shield08"
+            ]
+          },
+          {
+            "name": "Weapons",
+            "race": "european",
+            "items": [
+              "eu_dagger05",
+              "eu_dagger06",
+              "eu_dagger07",
+              "eu_dagger08",
+              "eu_sword05",
+              "eu_sword06",
+              "eu_sword07",
+              "eu_sword08",
+              "eu_tsword05",
+              "eu_tsword06",
+              "eu_tsword07",
+              "eu_tsword08",
+              "eu_axe05",
+              "eu_axe06",
+              "eu_axe07",
+              "eu_axe08",
+              "eu_crossbow05",
+              "eu_crossbow06",
+              "eu_crossbow07",
+              "eu_crossbow08",
+              "eu_darkstaff05",
+              "eu_darkstaff06",
+              "eu_darkstaff07",
+              "eu_darkstaff08",
+              "eu_tstaff05",
+              "eu_tstaff06",
+              "eu_tstaff07",
+              "eu_tstaff08",
+              "eu_harp05",
+              "eu_harp06",
+              "eu_harp07",
+              "eu_harp08",
+              "eu_staff05",
+              "eu_staff06",
+              "eu_staff07",
+              "eu_staff08"
+            ]
+          },
+          {
+            "name": "Shields",
+            "race": "european",
+            "items": [
+              "eu_shield05",
+              "eu_shield06",
+              "eu_shield07",
+              "eu_shield08"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_kt_accessory": {
+      "id": "npc_kt_accessory",
+      "name": "Jewel Lapidary Mamoje",
+      "modelKey": "khotanshop_craftsman",
+      "sroCode": "NPC_KT_ACCESSORY",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Accessories",
+            "race": "chinese",
+            "items": [
+              "ring05",
+              "ring06",
+              "ring07",
+              "ring08",
+              "earring05",
+              "earring06",
+              "earring07",
+              "earring08",
+              "necklace05",
+              "necklace06",
+              "necklace07",
+              "necklace08"
+            ]
+          },
+          {
+            "name": "Accessories",
+            "race": "european",
+            "items": [
+              "eu_ring05",
+              "eu_ring06",
+              "eu_ring07",
+              "eu_ring08",
+              "eu_earring05",
+              "eu_earring06",
+              "eu_earring07",
+              "eu_earring08",
+              "eu_necklace05",
+              "eu_necklace06",
+              "eu_necklace07",
+              "eu_necklace08"
+            ]
+          },
+          {
+            "name": "Alchemy",
+            "items": [
+              "lucky_powder_05",
+              "lucky_powder_06",
+              "lucky_powder_07",
+              "lucky_powder_08"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_ch_horse": {
+      "id": "npc_ch_horse",
+      "name": "Stable-Keeper Machun",
+      "modelKey": "chinashop_stableman",
+      "sroCode": "NPC_CH_HORSE",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Horses",
+            "items": [
+              "horse_c1",
+              "horse_c2",
+              "horse_c3"
+            ]
+          },
+          {
+            "name": "Pets",
+            "items": [
+              "pet_wolf_flute"
+            ]
+          },
+          {
+            "name": "Cures",
+            "items": [
+              "cos_hp_potion_01",
+              "cos_hp_potion_02",
+              "pet_revival_grass",
+              "pet_hgp_potion_01",
+              "cos_hp_potion_03"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_wc_horse": {
+      "id": "npc_wc_horse",
+      "name": "Stable-Keeper Makgo",
+      "modelKey": "westchinashop_stableman",
+      "sroCode": "NPC_WC_HORSE",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Horses",
+            "items": [
+              "horse_c1",
+              "horse_c2",
+              "horse_c3"
+            ]
+          },
+          {
+            "name": "Pets",
+            "items": [
+              "pet_wolf_flute"
+            ]
+          },
+          {
+            "name": "Cures",
+            "items": [
+              "cos_hp_potion_01",
+              "cos_hp_potion_02",
+              "pet_revival_grass",
+              "pet_hgp_potion_01",
+              "cos_hp_potion_03"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_kt_horse": {
+      "id": "npc_kt_horse",
+      "name": "Stable-Keeper Salihap",
+      "modelKey": "khotanshop_stableman",
+      "sroCode": "NPC_KT_HORSE",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Horses",
+            "items": [
+              "horse_c1",
+              "horse_c2",
+              "horse_c3"
+            ]
+          },
+          {
+            "name": "Pets",
+            "items": [
+              "pet_wolf_flute"
+            ]
+          },
+          {
+            "name": "Cures",
+            "items": [
+              "cos_hp_potion_01",
+              "cos_hp_potion_02",
+              "pet_revival_grass",
+              "pet_hgp_potion_01",
+              "cos_hp_potion_03"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_eu_potion": {
+      "id": "npc_eu_potion",
+      "name": "Nun Retaldi",
+      "modelKey": "EastEuropeShop_Potion",
+      "sroCode": "NPC_EU_POTION",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Potions",
+            "items": [
+              "hp_potion_01",
+              "hp_potion_02",
+              "hp_potion_03",
+              "hp_potion_04",
+              "hp_potion_05",
+              "mp_potion_01",
+              "mp_potion_02",
+              "mp_potion_03",
+              "mp_potion_04",
+              "mp_potion_05",
+              "pill_universal_01",
+              "pill_universal_02",
+              "pill_universal_03",
+              "pill_universal_04",
+              "pill_universal_05",
+              "pill_purification_01",
+              "pill_purification_02",
+              "pill_purification_03",
+              "pill_purification_04"
+            ]
+          },
+          {
+            "name": "Special",
+            "items": [
+              "vigor_potion_01",
+              "vigor_potion_02",
+              "vigor_potion_03",
+              "hp_grain_01",
+              "mp_grain_01",
+              "vigor_grain_01",
+              "speed_potion_01",
+              "elixir_weapon",
+              "elixir_armor",
+              "elixir_shield",
+              "elixir_accessory",
+              "sp_saver"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_eu_horse": {
+      "id": "npc_eu_horse",
+      "name": "Stable-Keeper Treno",
+      "modelKey": "EastEuropeShop_Stable",
+      "sroCode": "NPC_EU_HORSE",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Horses",
+            "items": [
+              "horse_c1",
+              "horse_c2",
+              "horse_c3"
+            ]
+          },
+          {
+            "name": "Pets",
+            "items": [
+              "pet_wolf_flute"
+            ]
+          },
+          {
+            "name": "Cures",
+            "items": [
+              "cos_hp_potion_01",
+              "cos_hp_potion_02",
+              "pet_revival_grass",
+              "pet_hgp_potion_01",
+              "cos_hp_potion_03"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_ca_potion": {
+      "id": "npc_ca_potion",
+      "name": "Nun Martel",
+      "modelKey": "CentralAsiaShop_Potion",
+      "sroCode": "NPC_CA_POTION",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Potions",
+            "items": [
+              "hp_potion_02",
+              "hp_potion_03",
+              "hp_potion_04",
+              "hp_potion_05",
+              "mp_potion_02",
+              "mp_potion_03",
+              "mp_potion_04",
+              "mp_potion_05",
+              "pill_universal_01",
+              "pill_universal_02",
+              "pill_universal_03",
+              "pill_universal_04",
+              "pill_universal_05",
+              "pill_purification_01",
+              "pill_purification_02",
+              "pill_purification_03",
+              "pill_purification_04"
+            ]
+          },
+          {
+            "name": "Special",
+            "items": [
+              "vigor_potion_01",
+              "vigor_potion_02",
+              "vigor_potion_03",
+              "hp_grain_01",
+              "mp_grain_01",
+              "vigor_grain_01",
+              "speed_potion_01",
+              "elixir_weapon",
+              "elixir_armor",
+              "elixir_shield",
+              "elixir_accessory",
+              "sp_saver"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_ca_horse": {
+      "id": "npc_ca_horse",
+      "name": "Stable-Keeper Hoyun",
+      "modelKey": "CentralAsiaShop_Horse",
+      "sroCode": "NPC_CA_HORSE",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Horses",
+            "items": [
+              "horse_c1",
+              "horse_c2",
+              "horse_c3"
+            ]
+          },
+          {
+            "name": "Pets",
+            "items": [
+              "pet_wolf_flute"
+            ]
+          },
+          {
+            "name": "Cures",
+            "items": [
+              "cos_hp_potion_01",
+              "cos_hp_potion_02",
+              "pet_revival_grass",
+              "pet_hgp_potion_01",
+              "cos_hp_potion_03"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_eu_warehouse": {
+      "id": "npc_eu_warehouse",
+      "name": "Inn Master Sikeulro",
+      "modelKey": "EastEuropeQuest_GraveKeeper",
+      "sroCode": "NPC_EU_WAREHOUSE"
+    },
+    "npc_ca_warehouse": {
+      "id": "npc_ca_warehouse",
+      "name": "Storage-Keeper Saesa",
+      "modelKey": "CentralAsiaShop_Warehouse",
+      "sroCode": "NPC_CA_WAREHOUSE"
+    },
+    "npc_eu_smith": {
+      "id": "npc_eu_smith",
+      "name": "Weapon Trader Balbardo",
+      "modelKey": "EastEuropeShop_Smith",
+      "sroCode": "NPC_EU_SMITH",
+      "repair": true,
+      "shop": {
+        "tabs": [
+          {
+            "name": "Weapons",
+            "race": "european",
+            "items": [
+              "eu_dagger01",
+              "eu_dagger02",
+              "eu_dagger03",
+              "eu_sword01",
+              "eu_sword02",
+              "eu_sword03",
+              "eu_tsword01",
+              "eu_tsword02",
+              "eu_tsword03",
+              "eu_axe01",
+              "eu_axe02",
+              "eu_axe03",
+              "eu_crossbow01",
+              "eu_crossbow02",
+              "eu_crossbow03",
+              "eu_darkstaff01",
+              "eu_darkstaff02",
+              "eu_darkstaff03",
+              "eu_tstaff01",
+              "eu_tstaff02",
+              "eu_tstaff03",
+              "eu_harp01",
+              "eu_harp02",
+              "eu_harp03",
+              "eu_staff01",
+              "eu_staff02",
+              "eu_staff03"
+            ]
+          },
+          {
+            "name": "Shields",
+            "race": "european",
+            "items": [
+              "eu_shield01",
+              "eu_shield02",
+              "eu_shield03"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_eu_armor": {
+      "id": "npc_eu_armor",
+      "name": "Protector Trader Jatomo",
+      "modelKey": "EastEuropeShop_Armor",
+      "sroCode": "NPC_EU_ARMOR",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Heavy Armor",
+            "race": "european",
+            "items": [
+              "eu_heavy01_head",
+              "eu_heavy02_head",
+              "eu_heavy03_head",
+              "eu_heavy01_shoulder",
+              "eu_heavy02_shoulder",
+              "eu_heavy03_shoulder",
+              "eu_heavy01_chest",
+              "eu_heavy02_chest",
+              "eu_heavy03_chest",
+              "eu_heavy01_pants",
+              "eu_heavy02_pants",
+              "eu_heavy03_pants",
+              "eu_heavy01_gloves",
+              "eu_heavy02_gloves",
+              "eu_heavy03_gloves",
+              "eu_heavy01_boots",
+              "eu_heavy02_boots",
+              "eu_heavy03_boots"
+            ]
+          },
+          {
+            "name": "Light Armor",
+            "race": "european",
+            "items": [
+              "eu_light01_head",
+              "eu_light02_head",
+              "eu_light03_head",
+              "eu_light01_shoulder",
+              "eu_light02_shoulder",
+              "eu_light03_shoulder",
+              "eu_light01_chest",
+              "eu_light02_chest",
+              "eu_light03_chest",
+              "eu_light01_pants",
+              "eu_light02_pants",
+              "eu_light03_pants",
+              "eu_light01_gloves",
+              "eu_light02_gloves",
+              "eu_light03_gloves",
+              "eu_light01_boots",
+              "eu_light02_boots",
+              "eu_light03_boots"
+            ]
+          },
+          {
+            "name": "Garments",
+            "race": "european",
+            "items": [
+              "eu_clothes01_head",
+              "eu_clothes02_head",
+              "eu_clothes03_head",
+              "eu_clothes01_shoulder",
+              "eu_clothes02_shoulder",
+              "eu_clothes03_shoulder",
+              "eu_clothes01_chest",
+              "eu_clothes02_chest",
+              "eu_clothes03_chest",
+              "eu_clothes01_pants",
+              "eu_clothes02_pants",
+              "eu_clothes03_pants",
+              "eu_clothes01_gloves",
+              "eu_clothes02_gloves",
+              "eu_clothes03_gloves",
+              "eu_clothes01_boots",
+              "eu_clothes02_boots",
+              "eu_clothes03_boots"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_eu_accessory": {
+      "id": "npc_eu_accessory",
+      "name": "Grocery Trader Bajel",
+      "modelKey": "EastEuropeShop_Accessory",
+      "sroCode": "NPC_EU_ACCESSORY",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Accessories",
+            "race": "european",
+            "items": [
+              "eu_ring01",
+              "eu_ring02",
+              "eu_ring03",
+              "eu_earring01",
+              "eu_earring02",
+              "eu_earring03",
+              "eu_necklace01",
+              "eu_necklace02",
+              "eu_necklace03"
+            ]
+          },
+          {
+            "name": "Alchemy",
+            "items": [
+              "lucky_powder_01",
+              "lucky_powder_02",
+              "lucky_powder_03",
+              "lucky_powder_04",
+              "lucky_powder_05",
+              "lucky_powder_06",
+              "lucky_powder_07",
+              "lucky_powder_08"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_ca_smith": {
+      "id": "npc_ca_smith",
+      "name": "Weapon Trader Tricia",
+      "modelKey": "CentralAsiaShop_Weapon",
+      "sroCode": "NPC_CA_SMITH",
+      "repair": true,
+      "shop": {
+        "tabs": [
+          {
+            "name": "Weapons",
+            "race": "european",
+            "items": [
+              "eu_dagger03",
+              "eu_dagger04",
+              "eu_dagger05",
+              "eu_sword03",
+              "eu_sword04",
+              "eu_sword05",
+              "eu_tsword03",
+              "eu_tsword04",
+              "eu_tsword05",
+              "eu_axe03",
+              "eu_axe04",
+              "eu_axe05",
+              "eu_crossbow03",
+              "eu_crossbow04",
+              "eu_crossbow05",
+              "eu_darkstaff03",
+              "eu_darkstaff04",
+              "eu_darkstaff05",
+              "eu_tstaff03",
+              "eu_tstaff04",
+              "eu_tstaff05",
+              "eu_harp03",
+              "eu_harp04",
+              "eu_harp05",
+              "eu_staff03",
+              "eu_staff04",
+              "eu_staff05"
+            ]
+          },
+          {
+            "name": "Shields",
+            "race": "european",
+            "items": [
+              "eu_shield03",
+              "eu_shield04",
+              "eu_shield05"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_ca_armor": {
+      "id": "npc_ca_armor",
+      "name": "Protector Trader Aryoan",
+      "modelKey": "CentralAsiaShop_Armor",
+      "sroCode": "NPC_CA_ARMOR",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Heavy Armor",
+            "race": "european",
+            "items": [
+              "eu_heavy03_head",
+              "eu_heavy04_head",
+              "eu_heavy05_head",
+              "eu_heavy03_shoulder",
+              "eu_heavy04_shoulder",
+              "eu_heavy05_shoulder",
+              "eu_heavy03_chest",
+              "eu_heavy04_chest",
+              "eu_heavy05_chest",
+              "eu_heavy03_pants",
+              "eu_heavy04_pants",
+              "eu_heavy05_pants",
+              "eu_heavy03_gloves",
+              "eu_heavy04_gloves",
+              "eu_heavy05_gloves",
+              "eu_heavy03_boots",
+              "eu_heavy04_boots",
+              "eu_heavy05_boots"
+            ]
+          },
+          {
+            "name": "Light Armor",
+            "race": "european",
+            "items": [
+              "eu_light03_head",
+              "eu_light04_head",
+              "eu_light05_head",
+              "eu_light03_shoulder",
+              "eu_light04_shoulder",
+              "eu_light05_shoulder",
+              "eu_light03_chest",
+              "eu_light04_chest",
+              "eu_light05_chest",
+              "eu_light03_pants",
+              "eu_light04_pants",
+              "eu_light05_pants",
+              "eu_light03_gloves",
+              "eu_light04_gloves",
+              "eu_light05_gloves",
+              "eu_light03_boots",
+              "eu_light04_boots",
+              "eu_light05_boots"
+            ]
+          },
+          {
+            "name": "Garments",
+            "race": "european",
+            "items": [
+              "eu_clothes03_head",
+              "eu_clothes04_head",
+              "eu_clothes05_head",
+              "eu_clothes03_shoulder",
+              "eu_clothes04_shoulder",
+              "eu_clothes05_shoulder",
+              "eu_clothes03_chest",
+              "eu_clothes04_chest",
+              "eu_clothes05_chest",
+              "eu_clothes03_pants",
+              "eu_clothes04_pants",
+              "eu_clothes05_pants",
+              "eu_clothes03_gloves",
+              "eu_clothes04_gloves",
+              "eu_clothes05_gloves",
+              "eu_clothes03_boots",
+              "eu_clothes04_boots",
+              "eu_clothes05_boots"
+            ]
+          }
+        ]
+      }
+    },
+    "npc_ca_accessory": {
+      "id": "npc_ca_accessory",
+      "name": "Grocery Trader Saha",
+      "modelKey": "CentralAsiaShop_Accessory",
+      "sroCode": "NPC_CA_ACCESSORY",
+      "shop": {
+        "tabs": [
+          {
+            "name": "Accessories",
+            "race": "european",
+            "items": [
+              "eu_ring03",
+              "eu_ring04",
+              "eu_ring05",
+              "eu_earring03",
+              "eu_earring04",
+              "eu_earring05",
+              "eu_necklace03",
+              "eu_necklace04",
+              "eu_necklace05"
+            ]
+          },
+          {
+            "name": "Alchemy",
+            "items": [
+              "lucky_powder_03",
+              "lucky_powder_04",
+              "lucky_powder_05",
+              "lucky_powder_06",
+              "lucky_powder_07",
+              "lucky_powder_08"
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "zones": {
+    "jangan_province": {
+      "id": "jangan_province",
+      "name": "Jangan",
+      "kind": "field",
+      "bounds": {
+        "minX": 5760,
+        "maxX": 11520,
+        "minZ": -864,
+        "maxZ": 3168
+      },
+      "playerSpawn": {
+        "x": 9649.35,
+        "z": 1645.35
+      },
+      "respawnPoint": {
+        "x": 9649.35,
+        "z": 1645.35
+      },
+      "bin": {
+        "heights": "jangan_province/heights.bin",
+        "nav": "jangan_province/nav.bin",
+        "statics": "jangan_province/statics.json"
+      },
+      "npcs": [
+        {
+          "npcId": "npc_ch_smith",
+          "x": 9553.91,
+          "z": 1651.005,
+          "rotY": -0.237
+        },
+        {
+          "npcId": "npc_ch_armor",
+          "x": 9553.825,
+          "z": 1602.784,
+          "rotY": -0.211
+        },
+        {
+          "npcId": "npc_merchant_wang",
+          "x": 9741.612,
+          "z": 1651.094,
+          "rotY": -0.625
+        },
+        {
+          "npcId": "npc_ch_accessory",
+          "x": 9752.783,
+          "z": 1601.728,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_ch_horse",
+          "x": 9553.382,
+          "z": 1507.59,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_ch_special",
+          "x": 9768.048,
+          "z": 1512.033,
+          "y": 1.65,
+          "rotY": -1.571
+        },
+        {
+          "npcId": "npc_ch_warehouse",
+          "x": 9651.12,
+          "z": 1588.369,
+          "y": -4.864,
+          "rotY": -0.4
+        },
+        {
+          "npcId": "npc_ch_warehouse_w",
+          "x": 9651.053,
+          "z": 1588.378,
+          "y": -4.878,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_ch_ticket",
+          "x": 9819.57,
+          "z": 1576.962,
+          "y": -5.398,
+          "rotY": 3.124
+        },
+        {
+          "npcId": "npc_ch_lottery",
+          "x": 9825.876,
+          "z": 1576.706,
+          "y": -5.397,
+          "rotY": 3.124
+        },
+        {
+          "npcId": "npc_ch_shaman",
+          "x": 8661.432,
+          "z": 1851.317,
+          "y": 33.876,
+          "rotY": 1.99
+        },
+        {
+          "npcId": "npc_ch_chef",
+          "x": 9919.503,
+          "z": 1654.974,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_ch_genaral",
+          "x": 9304.208,
+          "z": 1772.988,
+          "rotY": -3.141
+        },
+        {
+          "npcId": "npc_ch_genaral_sw",
+          "x": 9456.047,
+          "z": 1788.057,
+          "rotY": 3.124
+        },
+        {
+          "npcId": "npc_ch_genaral_sp",
+          "x": 9370.05,
+          "z": 1813.469,
+          "rotY": 3.124
+        },
+        {
+          "npcId": "npc_ch_genaral_bo",
+          "x": 9439.704,
+          "z": 1956.01,
+          "y": 6,
+          "rotY": -3.141
+        },
+        {
+          "npcId": "npc_ch_priest",
+          "x": 9890.961,
+          "z": 1875.17,
+          "rotY": -3.141
+        },
+        {
+          "npcId": "npc_ch_doctor",
+          "x": 9768.126,
+          "z": 1493.626,
+          "y": 1.65,
+          "rotY": -1.571
+        },
+        {
+          "npcId": "npc_ch_islam",
+          "x": 9754.602,
+          "z": 1527.121,
+          "y": 1.65,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_ch_europe",
+          "x": 9754.619,
+          "z": 1479.081,
+          "y": 1.65,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_ch_india",
+          "x": 9895.824,
+          "z": 1748.602,
+          "y": -0.003,
+          "rotY": 3.124
+        },
+        {
+          "npcId": "npc_ch_soldier_em2",
+          "x": 9644.633,
+          "z": 1725.406,
+          "rotY": 3.124
+        },
+        {
+          "npcId": "npc_ch_soldier_ea1",
+          "x": 10000.18,
+          "z": 1720.831,
+          "rotY": -1.553
+        },
+        {
+          "npcId": "npc_ch_soldier_we2",
+          "x": 9266.16,
+          "z": 1717.374,
+          "y": -0.192,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_ch_soldier_so2",
+          "x": 9659.595,
+          "z": 1444.531,
+          "y": -0.066,
+          "rotY": 0.018
+        },
+        {
+          "npcId": "npc_ch_beggarboy",
+          "x": 9423.914,
+          "z": 1521.559,
+          "y": 2.511,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_ch_bigman",
+          "x": 9868.383,
+          "z": 1553.286,
+          "y": -9.724,
+          "rotY": 0
+        },
+        {
+          "npcId": "npc_ch_kisaeng1",
+          "x": 9351.227,
+          "z": 1533.177,
+          "y": 2.429,
+          "rotY": 0
+        },
+        {
+          "npcId": "npc_ch_kisaeng2",
+          "x": 9426.804,
+          "z": 1618.925,
+          "y": 0.107,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_ch_kisaeng3",
+          "x": 9335.087,
+          "z": 1595.088,
+          "y": -0.517,
+          "rotY": -1.239
+        },
+        {
+          "npcId": "npc_ch_kisaeng4",
+          "x": 9331.91,
+          "z": 1596.853,
+          "y": -0.318,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_ch_kisaeng5",
+          "x": 9441.003,
+          "z": 1584.925,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_ch_kisaeng6",
+          "x": 9313.13,
+          "z": 1495.132,
+          "y": 2.388,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_ch_special2",
+          "x": 7261.655,
+          "z": 227.383,
+          "y": 207.498,
+          "rotY": 2.793
+        },
+        {
+          "npcId": "npc_ch_gacha_machine",
+          "x": 9745.946,
+          "z": 1618.95,
+          "rotY": -1.571
+        },
+        {
+          "npcId": "npc_ch_gacha_operator",
+          "x": 9650.592,
+          "z": 1549.144,
+          "y": -4.893,
+          "rotY": 3.124
+        },
+        {
+          "npcId": "npc_ch_fortress_official",
+          "x": 9739.401,
+          "z": 1895.281,
+          "y": 10.473,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_ch_moonshadow",
+          "x": 9920.856,
+          "z": 1600.401,
+          "rotY": -0.017
+        }
+      ],
+      "teleporters": [
+        {
+          "id": "gate_ch",
+          "name": "Jangan Gate",
+          "modelKey": "portal_cj",
+          "x": 9692.571,
+          "z": 1646.356,
+          "y": -4.97,
+          "rotY": -2.356
+        },
+        {
+          "id": "gate_npc_ch_ferry",
+          "name": "Ferry Ticket Seller Doji",
+          "modelKey": "npc_ch_ferry",
+          "x": 7542.345,
+          "z": 1704.2,
+          "y": 10.872,
+          "rotY": 2.561
+        },
+        {
+          "id": "gate_npc_ch_ferry2",
+          "name": "Ferry Ticket Seller Chau",
+          "modelKey": "npc_ch_ferry",
+          "x": 6673.551,
+          "z": 1392.999,
+          "y": 9.284,
+          "rotY": 2.626
+        },
+        {
+          "id": "gate_npc_ch_soldier_ea2",
+          "name": "Solder Sangnam [Teleport]",
+          "modelKey": "chinaetc_soldiereast2",
+          "x": 10000.075,
+          "z": 1704.753,
+          "y": -0.01,
+          "rotY": -0.737
+        },
+        {
+          "id": "gate_npc_ch_soldier_em1",
+          "name": "Soldier Choiyoung [Teleport]",
+          "modelKey": "chinaetc_soldierpalace1",
+          "x": 9655.431,
+          "z": 1725.396,
+          "y": 0,
+          "rotY": -2.687
+        },
+        {
+          "id": "gate_npc_ch_soldier_so1",
+          "name": "Soldier Jingyo [Teleport]",
+          "modelKey": "chinaetc_soldiersouth1",
+          "x": 9643.511,
+          "z": 1444.599,
+          "y": -0.061,
+          "rotY": 0.852
+        },
+        {
+          "id": "gate_npc_ch_soldier_we1",
+          "name": "Soldier Hogang [Teleport]",
+          "modelKey": "chinaetc_soldierwest1",
+          "x": 9266.249,
+          "z": 1733.127,
+          "y": -0.042,
+          "rotY": 2.386
+        }
+      ],
+      "gates": [],
+      "slopeLimitUpPerU": 1000,
+      "slopeLimitDownPerU": 1000,
+      "slopeOverrides": [],
+      "water": [
+        {
+          "x0": 8640,
+          "z0": -576,
+          "x1": 8928,
+          "z1": -528,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8688,
+          "z0": -528,
+          "x1": 8928,
+          "z1": -480,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8736,
+          "z0": -480,
+          "x1": 8928,
+          "z1": -384,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8784,
+          "z0": -384,
+          "x1": 8928,
+          "z1": -336,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8832,
+          "z0": -336,
+          "x1": 8928,
+          "z1": -288,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5760,
+          "z0": -288,
+          "x1": 5808,
+          "z1": 336,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8880,
+          "z0": -288,
+          "x1": 9072,
+          "z1": -240,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8880,
+          "z0": -240,
+          "x1": 9024,
+          "z1": -192,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8784,
+          "z0": -192,
+          "x1": 8928,
+          "z1": -144,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8784,
+          "z0": -144,
+          "x1": 8880,
+          "z1": -96,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8736,
+          "z0": -96,
+          "x1": 8832,
+          "z1": 48,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8736,
+          "z0": 48,
+          "x1": 8784,
+          "z1": 336,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10656,
+          "z0": 96,
+          "x1": 10704,
+          "z1": 144,
+          "y": 46.5,
+          "kind": null
+        },
+        {
+          "x0": 8688,
+          "z0": 240,
+          "x1": 8736,
+          "z1": 480,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5760,
+          "z0": 384,
+          "x1": 5808,
+          "z1": 1344,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8736,
+          "z0": 384,
+          "x1": 8784,
+          "z1": 528,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8784,
+          "z0": 432,
+          "x1": 8832,
+          "z1": 528,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5808,
+          "z0": 480,
+          "x1": 5856,
+          "z1": 1344,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8832,
+          "z0": 480,
+          "x1": 8880,
+          "z1": 768,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10464,
+          "z0": 480,
+          "x1": 10560,
+          "z1": 528,
+          "y": 16.5,
+          "kind": null
+        },
+        {
+          "x0": 5856,
+          "z0": 528,
+          "x1": 5904,
+          "z1": 960,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8880,
+          "z0": 528,
+          "x1": 8928,
+          "z1": 672,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5904,
+          "z0": 624,
+          "x1": 5952,
+          "z1": 912,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9312,
+          "z0": 624,
+          "x1": 9408,
+          "z1": 720,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9840,
+          "z0": 624,
+          "x1": 10032,
+          "z1": 720,
+          "y": -12,
+          "kind": null
+        },
+        {
+          "x0": 8736,
+          "z0": 672,
+          "x1": 8832,
+          "z1": 816,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8688,
+          "z0": 720,
+          "x1": 8736,
+          "z1": 864,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9840,
+          "z0": 720,
+          "x1": 9984,
+          "z1": 816,
+          "y": -12,
+          "kind": null
+        },
+        {
+          "x0": 8640,
+          "z0": 768,
+          "x1": 8688,
+          "z1": 1344,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9984,
+          "z0": 768,
+          "x1": 10032,
+          "z1": 816,
+          "y": -12,
+          "kind": null
+        },
+        {
+          "x0": 9840,
+          "z0": 816,
+          "x1": 9936,
+          "z1": 864,
+          "y": -12,
+          "kind": null
+        },
+        {
+          "x0": 8592,
+          "z0": 864,
+          "x1": 8640,
+          "z1": 1008,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8592,
+          "z0": 1056,
+          "x1": 8640,
+          "z1": 1104,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8688,
+          "z0": 1056,
+          "x1": 8736,
+          "z1": 1536,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5856,
+          "z0": 1104,
+          "x1": 5952,
+          "z1": 1392,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10176,
+          "z0": 1104,
+          "x1": 10224,
+          "z1": 1200,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5952,
+          "z0": 1152,
+          "x1": 6096,
+          "z1": 1488,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6144,
+          "z0": 1152,
+          "x1": 6432,
+          "z1": 1776,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7968,
+          "z0": 1152,
+          "x1": 8064,
+          "z1": 1200,
+          "y": 148.5,
+          "kind": null
+        },
+        {
+          "x0": 8592,
+          "z0": 1152,
+          "x1": 8640,
+          "z1": 1200,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6096,
+          "z0": 1200,
+          "x1": 6144,
+          "z1": 1776,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6432,
+          "z0": 1200,
+          "x1": 6528,
+          "z1": 1776,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8736,
+          "z0": 1296,
+          "x1": 8784,
+          "z1": 1488,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6528,
+          "z0": 1344,
+          "x1": 6576,
+          "z1": 1776,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8784,
+          "z0": 1344,
+          "x1": 8832,
+          "z1": 1488,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9168,
+          "z0": 1344,
+          "x1": 9600,
+          "z1": 1392,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 9696,
+          "z0": 1344,
+          "x1": 10080,
+          "z1": 1392,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 6576,
+          "z0": 1392,
+          "x1": 6768,
+          "z1": 1968,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8640,
+          "z0": 1392,
+          "x1": 8688,
+          "z1": 1536,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8832,
+          "z0": 1392,
+          "x1": 8880,
+          "z1": 2112,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9168,
+          "z0": 1392,
+          "x1": 9216,
+          "z1": 1680,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 10032,
+          "z0": 1392,
+          "x1": 10080,
+          "z1": 1680,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 6768,
+          "z0": 1440,
+          "x1": 7152,
+          "z1": 2064,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6,
+          "z0": 1488,
+          "x1": 6096,
+          "z1": 1536,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6048,
+          "z0": 1536,
+          "x1": 6096,
+          "z1": 1584,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9600,
+          "z0": 1536,
+          "x1": 9696,
+          "z1": 1584,
+          "y": -4.95,
+          "kind": null
+        },
+        {
+          "x0": 9936,
+          "z0": 1536,
+          "x1": 9984,
+          "z1": 1584,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 7152,
+          "z0": 1584,
+          "x1": 7200,
+          "z1": 2016,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7200,
+          "z0": 1632,
+          "x1": 7248,
+          "z1": 2064,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8880,
+          "z0": 1632,
+          "x1": 8928,
+          "z1": 1824,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9264,
+          "z0": 1632,
+          "x1": 9504,
+          "z1": 1680,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 6048,
+          "z0": 1680,
+          "x1": 6096,
+          "z1": 1776,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7248,
+          "z0": 1680,
+          "x1": 7344,
+          "z1": 2352,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7344,
+          "z0": 1728,
+          "x1": 7440,
+          "z1": 2400,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7488,
+          "z0": 1728,
+          "x1": 7680,
+          "z1": 1968,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8784,
+          "z0": 1728,
+          "x1": 8832,
+          "z1": 1824,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9504,
+          "z0": 1728,
+          "x1": 9600,
+          "z1": 1824,
+          "y": -0.45,
+          "kind": null
+        },
+        {
+          "x0": 9888,
+          "z0": 1728,
+          "x1": 9936,
+          "z1": 1824,
+          "y": -4.5,
+          "kind": null
+        },
+        {
+          "x0": 7440,
+          "z0": 1776,
+          "x1": 7488,
+          "z1": 1968,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7680,
+          "z0": 1776,
+          "x1": 7728,
+          "z1": 2448,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9168,
+          "z0": 1776,
+          "x1": 9216,
+          "z1": 2064,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 9792,
+          "z0": 1776,
+          "x1": 9888,
+          "z1": 1824,
+          "y": -4.5,
+          "kind": null
+        },
+        {
+          "x0": 10032,
+          "z0": 1776,
+          "x1": 10080,
+          "z1": 2064,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 7728,
+          "z0": 1920,
+          "x1": 7776,
+          "z1": 2256,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8880,
+          "z0": 1920,
+          "x1": 8928,
+          "z1": 2064,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6576,
+          "z0": 1968,
+          "x1": 6624,
+          "z1": 2064,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6672,
+          "z0": 1968,
+          "x1": 6768,
+          "z1": 2064,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7584,
+          "z0": 1968,
+          "x1": 7680,
+          "z1": 2448,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7776,
+          "z0": 1968,
+          "x1": 7872,
+          "z1": 2256,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6624,
+          "z0": 2016,
+          "x1": 6672,
+          "z1": 2064,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7440,
+          "z0": 2016,
+          "x1": 7536,
+          "z1": 2400,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7872,
+          "z0": 2016,
+          "x1": 7968,
+          "z1": 2304,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9216,
+          "z0": 2016,
+          "x1": 10032,
+          "z1": 2064,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 7152,
+          "z0": 2064,
+          "x1": 7200,
+          "z1": 2304,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7536,
+          "z0": 2064,
+          "x1": 7584,
+          "z1": 2496,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7968,
+          "z0": 2064,
+          "x1": 8016,
+          "z1": 2400,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8784,
+          "z0": 2064,
+          "x1": 8832,
+          "z1": 2208,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8736,
+          "z0": 2112,
+          "x1": 8784,
+          "z1": 2352,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7200,
+          "z0": 2160,
+          "x1": 7248,
+          "z1": 2352,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8016,
+          "z0": 2160,
+          "x1": 8064,
+          "z1": 2496,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8688,
+          "z0": 2160,
+          "x1": 8736,
+          "z1": 2496,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10704,
+          "z0": 2208,
+          "x1": 10752,
+          "z1": 2256,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8064,
+          "z0": 2256,
+          "x1": 8160,
+          "z1": 2592,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8640,
+          "z0": 2256,
+          "x1": 8688,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8880,
+          "z0": 2256,
+          "x1": 9072,
+          "z1": 2400,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7920,
+          "z0": 2304,
+          "x1": 7968,
+          "z1": 2400,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8160,
+          "z0": 2304,
+          "x1": 8208,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8592,
+          "z0": 2304,
+          "x1": 8640,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9072,
+          "z0": 2304,
+          "x1": 9312,
+          "z1": 2496,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 11376,
+          "z0": 2304,
+          "x1": 11520,
+          "z1": 2400,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8208,
+          "z0": 2352,
+          "x1": 8592,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9312,
+          "z0": 2352,
+          "x1": 9360,
+          "z1": 2544,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9456,
+          "z0": 2352,
+          "x1": 9792,
+          "z1": 2592,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9840,
+          "z0": 2352,
+          "x1": 9984,
+          "z1": 2592,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7488,
+          "z0": 2400,
+          "x1": 7536,
+          "z1": 2448,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8784,
+          "z0": 2400,
+          "x1": 8976,
+          "z1": 2544,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9024,
+          "z0": 2400,
+          "x1": 9072,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9360,
+          "z0": 2400,
+          "x1": 9456,
+          "z1": 2448,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9792,
+          "z0": 2400,
+          "x1": 9840,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9984,
+          "z0": 2400,
+          "x1": 10080,
+          "z1": 2496,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 11472,
+          "z0": 2400,
+          "x1": 11520,
+          "z1": 2448,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7584,
+          "z0": 2448,
+          "x1": 7632,
+          "z1": 2496,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8976,
+          "z0": 2448,
+          "x1": 9024,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9360,
+          "z0": 2448,
+          "x1": 9408,
+          "z1": 2592,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9120,
+          "z0": 2496,
+          "x1": 9264,
+          "z1": 2592,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9408,
+          "z0": 2496,
+          "x1": 9456,
+          "z1": 2592,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9984,
+          "z0": 2496,
+          "x1": 10032,
+          "z1": 2592,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8928,
+          "z0": 2544,
+          "x1": 8976,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9072,
+          "z0": 2544,
+          "x1": 9120,
+          "z1": 2592,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9264,
+          "z0": 2544,
+          "x1": 9312,
+          "z1": 2592,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10032,
+          "z0": 2544,
+          "x1": 10080,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8112,
+          "z0": 2592,
+          "x1": 8160,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8688,
+          "z0": 2592,
+          "x1": 8928,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9552,
+          "z0": 2592,
+          "x1": 9600,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9696,
+          "z0": 2592,
+          "x1": 9792,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10080,
+          "z0": 2592,
+          "x1": 10128,
+          "z1": 3024,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 8064,
+          "z0": 2640,
+          "x1": 8112,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9072,
+          "z0": 2640,
+          "x1": 9552,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9600,
+          "z0": 2640,
+          "x1": 9696,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 9840,
+          "z0": 2640,
+          "x1": 10032,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10128,
+          "z0": 2688,
+          "x1": 10176,
+          "z1": 3024,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10608,
+          "z0": 2832,
+          "x1": 10944,
+          "z1": 2880,
+          "y": 0,
+          "kind": null
+        },
+        {
+          "x0": 10176,
+          "z0": 2880,
+          "x1": 10224,
+          "z1": 2976,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10896,
+          "z0": 2928,
+          "x1": 10944,
+          "z1": 3072,
+          "y": 0,
+          "kind": null
+        },
+        {
+          "x0": 6816,
+          "z0": 3024,
+          "x1": 6864,
+          "z1": 3072,
+          "y": -29.7,
+          "kind": null
+        },
+        {
+          "x0": 10176,
+          "z0": 3024,
+          "x1": 10272,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10656,
+          "z0": 3024,
+          "x1": 10704,
+          "z1": 3072,
+          "y": 0,
+          "kind": null
+        },
+        {
+          "x0": 10128,
+          "z0": 3072,
+          "x1": 10176,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10080,
+          "z0": 3120,
+          "x1": 10128,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 10272,
+          "z0": 3120,
+          "x1": 10320,
+          "z1": 3168,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5760,
+          "z0": 336,
+          "x1": 5808,
+          "z1": 384,
+          "y": 7.5,
+          "kind": "ice"
+        }
+      ],
+      "boundsU": {
+        "minX": 5760,
+        "maxX": 11520,
+        "minZ": -864,
+        "maxZ": 3168
+      }
+    },
+    "donwhang_province": {
+      "id": "donwhang_province",
+      "name": "Donwhang",
+      "kind": "field",
+      "bounds": {
+        "minX": 2016,
+        "maxX": 7776,
+        "minZ": -1152,
+        "maxZ": 4320
+      },
+      "playerSpawn": {
+        "x": 5327.55,
+        "z": 3106.2,
+        "y": -12
+      },
+      "respawnPoint": {
+        "x": 5327.55,
+        "z": 3106.2,
+        "y": -12
+      },
+      "bin": {
+        "heights": "donwhang_province/heights.bin",
+        "nav": "donwhang_province/nav.bin",
+        "statics": "donwhang_province/statics.json"
+      },
+      "npcs": [
+        {
+          "npcId": "npc_wc_smith",
+          "x": 5363.654,
+          "z": 3062.655,
+          "y": -16,
+          "rotY": -1.328
+        },
+        {
+          "npcId": "npc_wc_armor",
+          "x": 5363.463,
+          "z": 3015.207,
+          "y": -15.901,
+          "rotY": -1.07
+        },
+        {
+          "npcId": "npc_wc_potion",
+          "x": 5273.588,
+          "z": 3050.246,
+          "y": -15.969,
+          "rotY": -0.924
+        },
+        {
+          "npcId": "npc_wc_accessory",
+          "x": 5267.879,
+          "z": 2990.682,
+          "y": -15.642,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_wc_horse",
+          "x": 5396.261,
+          "z": 3127.754,
+          "y": -16.006,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_wc_warehouse",
+          "x": 5373.053,
+          "z": 2984.526,
+          "y": -15.871,
+          "rotY": -0.961
+        },
+        {
+          "npcId": "npc_wc_warehouse_w",
+          "x": 5373.053,
+          "z": 2984.535,
+          "y": -15.871,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_wc_special",
+          "x": 5242.959,
+          "z": 3114.047,
+          "y": -15.993,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_wc_priest1",
+          "x": 5324.594,
+          "z": 3436.69,
+          "y": -14.092,
+          "rotY": 0.018
+        },
+        {
+          "npcId": "npc_wc_priest2",
+          "x": 5394.308,
+          "z": 3356.797,
+          "y": -11.962,
+          "rotY": -1.536
+        },
+        {
+          "npcId": "npc_wc_genaral_sw",
+          "x": 5273.936,
+          "z": 3263.669,
+          "y": -15.937,
+          "rotY": 2.339
+        },
+        {
+          "npcId": "npc_wc_genaral_sp",
+          "x": 5237.742,
+          "z": 2950.201,
+          "y": -15.489,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_wc_genaral_bo",
+          "x": 5252.651,
+          "z": 2950.278,
+          "y": -15.505,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_wc_doctor",
+          "x": 5250.999,
+          "z": 3114.123,
+          "y": -16.002,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_wc_soldier_ea1",
+          "x": 5441.273,
+          "z": 3174.114,
+          "y": -16.005,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_wc_soldier_ea2",
+          "x": 5441.328,
+          "z": 3159.465,
+          "y": -16.005,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_wc_soldier_we1",
+          "x": 5202.063,
+          "z": 3168.093,
+          "y": -16.044,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_wc_soldier_we2",
+          "x": 5202.119,
+          "z": 3154.781,
+          "y": -16.036,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_wc_soldier_so",
+          "x": 5328.837,
+          "z": 2920.212,
+          "y": -15.817,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_wc_priest3",
+          "x": 5279.661,
+          "z": 3391.498,
+          "y": -14.437,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_wc_special2",
+          "x": 4201.863,
+          "z": -162.942,
+          "y": 28.949,
+          "rotY": -1.571
+        },
+        {
+          "npcId": "npc_ch_gacha_machine",
+          "x": 5265.586,
+          "z": 3110.004,
+          "y": -16.011,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_ch_gacha_operator",
+          "x": 5358.405,
+          "z": 3087.872,
+          "y": -16.005,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_wc_guild",
+          "x": 5387.163,
+          "z": 2947.342,
+          "y": -15.711,
+          "rotY": 0
+        }
+      ],
+      "teleporters": [
+        {
+          "id": "gate_npc_wc_ferry",
+          "name": "Ferry Ticket Seller Tayun",
+          "modelKey": "npc_wc_ferry",
+          "x": 7580,
+          "z": 2524,
+          "y": 8.627,
+          "rotY": 0.976
+        },
+        {
+          "id": "gate_npc_wc_ferry2",
+          "name": "Ferry Ticket Seller Hageuk",
+          "modelKey": "npc_wc_ferry",
+          "x": 6184,
+          "z": 1801,
+          "y": 5.66,
+          "rotY": 0.803
+        },
+        {
+          "id": "gate_npc_wc_ferry3",
+          "name": "Boat Ticket Seller Salmai",
+          "modelKey": "npc_wc_ferry",
+          "x": 2352.504,
+          "z": -25.822,
+          "y": 2.684,
+          "rotY": 1.17
+        },
+        {
+          "id": "gate_npc_wc_ferry4",
+          "name": "Boat Ticket Seller Asa",
+          "modelKey": "npc_wc_ferry",
+          "x": 2345.388,
+          "z": -442.727,
+          "y": -3.846,
+          "rotY": 1.621
+        },
+        {
+          "id": "gate_wc",
+          "name": "Donwhang Gate",
+          "modelKey": "portal_wcd",
+          "x": 5328.345,
+          "z": 3168.652,
+          "y": -16,
+          "rotY": 3.142
+        }
+      ],
+      "gates": [],
+      "slopeLimitUpPerU": 1000,
+      "slopeLimitDownPerU": 1000,
+      "slopeOverrides": [],
+      "water": [
+        {
+          "x0": 2016,
+          "z0": -1152,
+          "x1": 2304,
+          "z1": -624,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2592,
+          "z0": -1152,
+          "x1": 2880,
+          "z1": -912,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 2640,
+          "z0": -912,
+          "x1": 2880,
+          "z1": -864,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 2304,
+          "z0": -720,
+          "x1": 2784,
+          "z1": -672,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2304,
+          "z0": -672,
+          "x1": 2688,
+          "z1": -624,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2016,
+          "z0": -624,
+          "x1": 2064,
+          "z1": 912,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2112,
+          "z0": -624,
+          "x1": 2304,
+          "z1": -576,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2400,
+          "z0": -624,
+          "x1": 2544,
+          "z1": -576,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2592,
+          "z0": -624,
+          "x1": 2640,
+          "z1": -576,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2064,
+          "z0": -576,
+          "x1": 2112,
+          "z1": -48,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2160,
+          "z0": -576,
+          "x1": 2304,
+          "z1": 864,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 5376,
+          "z0": -576,
+          "x1": 5760,
+          "z1": -480,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 2112,
+          "z0": -528,
+          "x1": 2160,
+          "z1": -288,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2304,
+          "z0": -528,
+          "x1": 2352,
+          "z1": 384,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 5376,
+          "z0": -480,
+          "x1": 5712,
+          "z1": -96,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5712,
+          "z0": -336,
+          "x1": 5760,
+          "z1": 1152,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5760,
+          "z0": -288,
+          "x1": 5808,
+          "z1": 336,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 2112,
+          "z0": -240,
+          "x1": 2160,
+          "z1": 912,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 5424,
+          "z0": -96,
+          "x1": 5712,
+          "z1": 48,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 2064,
+          "z0": 0,
+          "x1": 2112,
+          "z1": 912,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 5472,
+          "z0": 48,
+          "x1": 5712,
+          "z1": 1008,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5424,
+          "z0": 96,
+          "x1": 5472,
+          "z1": 288,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5760,
+          "z0": 384,
+          "x1": 5808,
+          "z1": 1344,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5808,
+          "z0": 480,
+          "x1": 5856,
+          "z1": 1344,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5856,
+          "z0": 528,
+          "x1": 5904,
+          "z1": 960,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 2304,
+          "z0": 576,
+          "x1": 2352,
+          "z1": 816,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 5904,
+          "z0": 624,
+          "x1": 5952,
+          "z1": 912,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 4560,
+          "z0": 720,
+          "x1": 4752,
+          "z1": 864,
+          "y": -6.75,
+          "kind": null
+        },
+        {
+          "x0": 4512,
+          "z0": 768,
+          "x1": 4560,
+          "z1": 864,
+          "y": -6.75,
+          "kind": null
+        },
+        {
+          "x0": 4560,
+          "z0": 864,
+          "x1": 4704,
+          "z1": 960,
+          "y": -6.75,
+          "kind": null
+        },
+        {
+          "x0": 5520,
+          "z0": 1008,
+          "x1": 5712,
+          "z1": 1056,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5568,
+          "z0": 1056,
+          "x1": 5712,
+          "z1": 1104,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5616,
+          "z0": 1104,
+          "x1": 5712,
+          "z1": 1152,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5856,
+          "z0": 1104,
+          "x1": 5952,
+          "z1": 1392,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 5952,
+          "z0": 1152,
+          "x1": 6096,
+          "z1": 1488,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6144,
+          "z0": 1152,
+          "x1": 6432,
+          "z1": 1776,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6096,
+          "z0": 1200,
+          "x1": 6144,
+          "z1": 1776,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6432,
+          "z0": 1200,
+          "x1": 6528,
+          "z1": 1776,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 4464,
+          "z0": 1248,
+          "x1": 4560,
+          "z1": 1296,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 4512,
+          "z0": 1296,
+          "x1": 4560,
+          "z1": 1344,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 6528,
+          "z0": 1344,
+          "x1": 6576,
+          "z1": 1776,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6576,
+          "z0": 1392,
+          "x1": 6768,
+          "z1": 1968,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6768,
+          "z0": 1440,
+          "x1": 7152,
+          "z1": 2064,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6,
+          "z0": 1488,
+          "x1": 6096,
+          "z1": 1536,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6048,
+          "z0": 1536,
+          "x1": 6096,
+          "z1": 1584,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7152,
+          "z0": 1584,
+          "x1": 7200,
+          "z1": 2016,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7200,
+          "z0": 1632,
+          "x1": 7248,
+          "z1": 2064,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6048,
+          "z0": 1680,
+          "x1": 6096,
+          "z1": 1776,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7248,
+          "z0": 1680,
+          "x1": 7344,
+          "z1": 2352,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7344,
+          "z0": 1728,
+          "x1": 7440,
+          "z1": 2400,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7488,
+          "z0": 1728,
+          "x1": 7680,
+          "z1": 1968,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7440,
+          "z0": 1776,
+          "x1": 7488,
+          "z1": 1968,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7680,
+          "z0": 1776,
+          "x1": 7728,
+          "z1": 2448,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7728,
+          "z0": 1920,
+          "x1": 7776,
+          "z1": 2256,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6576,
+          "z0": 1968,
+          "x1": 6624,
+          "z1": 2064,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6672,
+          "z0": 1968,
+          "x1": 6768,
+          "z1": 2064,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7584,
+          "z0": 1968,
+          "x1": 7680,
+          "z1": 2448,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6624,
+          "z0": 2016,
+          "x1": 6672,
+          "z1": 2064,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7440,
+          "z0": 2016,
+          "x1": 7536,
+          "z1": 2400,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7152,
+          "z0": 2064,
+          "x1": 7200,
+          "z1": 2304,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7536,
+          "z0": 2064,
+          "x1": 7584,
+          "z1": 2496,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 4608,
+          "z0": 2112,
+          "x1": 4704,
+          "z1": 2256,
+          "y": -7.5,
+          "kind": null
+        },
+        {
+          "x0": 7200,
+          "z0": 2160,
+          "x1": 7248,
+          "z1": 2352,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7488,
+          "z0": 2400,
+          "x1": 7536,
+          "z1": 2448,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 7584,
+          "z0": 2448,
+          "x1": 7632,
+          "z1": 2496,
+          "y": 7.5,
+          "kind": null
+        },
+        {
+          "x0": 6816,
+          "z0": 3024,
+          "x1": 6864,
+          "z1": 3072,
+          "y": -29.7,
+          "kind": null
+        },
+        {
+          "x0": 5280,
+          "z0": 3120,
+          "x1": 5376,
+          "z1": 3168,
+          "y": -18,
+          "kind": null
+        },
+        {
+          "x0": 5280,
+          "z0": 3168,
+          "x1": 5328,
+          "z1": 3216,
+          "y": -18,
+          "kind": null
+        },
+        {
+          "x0": 5712,
+          "z0": 3552,
+          "x1": 5760,
+          "z1": 3600,
+          "y": -25.5,
+          "kind": null
+        },
+        {
+          "x0": 5760,
+          "z0": 336,
+          "x1": 5808,
+          "z1": 384,
+          "y": 7.5,
+          "kind": "ice"
+        }
+      ],
+      "boundsU": {
+        "minX": 2016,
+        "maxX": 7776,
+        "minZ": -1152,
+        "maxZ": 4320
+      }
+    },
+    "europe_province": {
+      "id": "europe_province",
+      "name": "Constantinople",
+      "kind": "field",
+      "bounds": {
+        "minX": -19296,
+        "maxX": -15264,
+        "minZ": 864,
+        "maxZ": 5472
+      },
+      "playerSpawn": {
+        "x": -15985.5,
+        "z": 3904.5,
+        "y": 12.6
+      },
+      "respawnPoint": {
+        "x": -15985.5,
+        "z": 3904.5,
+        "y": 12.6
+      },
+      "bin": {
+        "heights": "europe_province/heights.bin",
+        "nav": "europe_province/nav.bin",
+        "statics": "europe_province/statics.json"
+      },
+      "npcs": [
+        {
+          "npcId": "npc_eu_smith",
+          "x": -16010.296,
+          "z": 3973.906,
+          "y": 12.519,
+          "rotY": -2.86
+        },
+        {
+          "npcId": "npc_eu_armor",
+          "x": -16129.353,
+          "z": 3906.519,
+          "y": 12.581,
+          "rotY": 2.519
+        },
+        {
+          "npcId": "npc_eu_potion",
+          "x": -15927.181,
+          "z": 3954.134,
+          "y": 12.614,
+          "rotY": -2.411
+        },
+        {
+          "npcId": "npc_eu_accessory",
+          "x": -16023.127,
+          "z": 3782.083,
+          "y": 12,
+          "rotY": -0.943
+        },
+        {
+          "npcId": "npc_eu_horse",
+          "x": -16146.825,
+          "z": 3798.927,
+          "y": 12.581,
+          "rotY": 1.472
+        },
+        {
+          "npcId": "npc_eu_special",
+          "x": -16075.348,
+          "z": 3778.236,
+          "y": 12.06,
+          "rotY": 0
+        },
+        {
+          "npcId": "npc_eu_merchant",
+          "x": -16103.239,
+          "z": 3770,
+          "y": 12.824,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_eu_ferry",
+          "x": -15611.569,
+          "z": 3754.11,
+          "y": -4.138,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_eu_warehouse",
+          "x": -15925.665,
+          "z": 3870.882,
+          "y": 12,
+          "rotY": -2.015
+        },
+        {
+          "npcId": "npc_eu_hunter",
+          "x": -16252.213,
+          "z": 4055.134,
+          "y": 11.998,
+          "rotY": 0.506
+        },
+        {
+          "npcId": "npc_eu_witch",
+          "x": -15564.616,
+          "z": 4846.334,
+          "y": 111.584,
+          "rotY": -0.803
+        },
+        {
+          "npcId": "npc_eu_priest",
+          "x": -15579.775,
+          "z": 4164.107,
+          "y": 42.561,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_eu_adventurer",
+          "x": -15924.801,
+          "z": 3831.036,
+          "y": 12,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_eu_manager",
+          "x": -16320.631,
+          "z": 3925.958,
+          "y": 12.581,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_eu_chinaboy",
+          "x": -15587.77,
+          "z": 4830.585,
+          "y": 111.312,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_eu_consul",
+          "x": -16294.818,
+          "z": 4181.203,
+          "y": 14.728,
+          "rotY": 2.339
+        },
+        {
+          "npcId": "npc_eu_union1",
+          "x": -16248.57,
+          "z": 3607.118,
+          "y": 12.581,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_eu_union2",
+          "x": -16327.234,
+          "z": 3527.9,
+          "y": 12.579,
+          "rotY": 3.124
+        },
+        {
+          "npcId": "npc_eu_general",
+          "x": -16244.919,
+          "z": 3701.803,
+          "y": 12.581,
+          "rotY": 2.077
+        },
+        {
+          "npcId": "npc_eu_soldier_ca1",
+          "x": -16123.581,
+          "z": 3995.291,
+          "y": 12,
+          "rotY": 2.339
+        },
+        {
+          "npcId": "npc_eu_soldier_ca2",
+          "x": -16109.346,
+          "z": 4010.267,
+          "y": 12,
+          "rotY": 2.339
+        },
+        {
+          "npcId": "npc_eu_soldier_no1",
+          "x": -15921.717,
+          "z": 4403.633,
+          "y": 12,
+          "rotY": 3.124
+        },
+        {
+          "npcId": "npc_eu_soldier_no2",
+          "x": -15956.181,
+          "z": 4403.535,
+          "y": 12,
+          "rotY": 3.124
+        },
+        {
+          "npcId": "npc_eu_soldier_ea1",
+          "x": -16507.299,
+          "z": 3976.329,
+          "y": 11.844,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_eu_soldier_ea2",
+          "x": -16506.913,
+          "z": 3955.22,
+          "y": 11.85,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_eu_soldier_po1",
+          "x": -15720.288,
+          "z": 3726.659,
+          "y": -4.14,
+          "rotY": 2.339
+        },
+        {
+          "npcId": "npc_eu_soldier_po2",
+          "x": -15742.149,
+          "z": 3709.509,
+          "y": -4.14,
+          "rotY": 2.339
+        },
+        {
+          "npcId": "npc_eu_soldier_cc1",
+          "x": -16277.889,
+          "z": 3452.502,
+          "y": 12.303,
+          "rotY": 0.785
+        },
+        {
+          "npcId": "npc_eu_guild",
+          "x": -15828.339,
+          "z": 3493.529,
+          "y": -21.594,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_ch_gacha_machine",
+          "x": -16061.364,
+          "z": 3777.891,
+          "y": 12.048,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_ch_gacha_operator",
+          "x": -15981.144,
+          "z": 3877.281,
+          "y": 12.561,
+          "rotY": 1.571
+        }
+      ],
+      "teleporters": [
+        {
+          "id": "gate_eu",
+          "name": "Constantinople Gate",
+          "modelKey": "portal_eu",
+          "x": -16023.428,
+          "z": 3877.217,
+          "y": 10.353,
+          "rotY": -2.873
+        },
+        {
+          "id": "gate_npc_eu_advice",
+          "name": "Guide Lipria",
+          "modelKey": "EastEuropeQuest_Lipria",
+          "x": -15925.612,
+          "z": 4381.908,
+          "y": 12.405,
+          "rotY": -1.253
+        },
+        {
+          "id": "gate_npc_eu_advice2",
+          "name": "Guide Raffy",
+          "modelKey": "EastEuropeQuest_Lipria",
+          "x": -16456.47,
+          "z": 3943.872,
+          "y": 12.581,
+          "rotY": -0.704
+        },
+        {
+          "id": "gate_npc_eu_advice3",
+          "name": "Guide Riise",
+          "modelKey": "EastEuropeQuest_Lipria",
+          "x": -16043.571,
+          "z": 3914.787,
+          "y": 12.545,
+          "rotY": -1.187
+        },
+        {
+          "id": "gate_npc_eu_ferry2",
+          "name": "Harbor Manager Gale",
+          "modelKey": "EastEuropeSystem_PortManager2",
+          "x": -17136.292,
+          "z": 1742.846,
+          "y": -23.256,
+          "rotY": -1.272
+        }
+      ],
+      "gates": [],
+      "slopeLimitUpPerU": 1000,
+      "slopeLimitDownPerU": 1000,
+      "slopeOverrides": [
+        {
+          "x0": -18790,
+          "z0": 1520,
+          "x1": -18270,
+          "z1": 1930,
+          "upPerU": 1.75,
+          "downPerU": 1.75
+        },
+        {
+          "x0": -16680,
+          "z0": 3280,
+          "x1": -15360,
+          "z1": 4990,
+          "upPerU": 1.75,
+          "downPerU": 1.75
+        }
+      ],
+      "water": [
+        {
+          "x0": -18096,
+          "z0": 864,
+          "x1": -17856,
+          "z1": 1104,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18048,
+          "z0": 1104,
+          "x1": -17856,
+          "z1": 1440,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18096,
+          "z0": 1152,
+          "x1": -18048,
+          "z1": 1392,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17856,
+          "z0": 1152,
+          "x1": -15264,
+          "z1": 1344,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17856,
+          "z0": 1344,
+          "x1": -17664,
+          "z1": 1440,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17568,
+          "z0": 1344,
+          "x1": -15264,
+          "z1": 1392,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17472,
+          "z0": 1392,
+          "x1": -15264,
+          "z1": 1536,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18,
+          "z0": 1440,
+          "x1": -17760,
+          "z1": 1488,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17904,
+          "z0": 1488,
+          "x1": -17760,
+          "z1": 1536,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17424,
+          "z0": 1536,
+          "x1": -15264,
+          "z1": 1728,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17472,
+          "z0": 1584,
+          "x1": -17424,
+          "z1": 1776,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17520,
+          "z0": 1680,
+          "x1": -17472,
+          "z1": 1776,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17424,
+          "z0": 1728,
+          "x1": -17184,
+          "z1": 1776,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16992,
+          "z0": 1728,
+          "x1": -15264,
+          "z1": 1776,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17376,
+          "z0": 1776,
+          "x1": -17232,
+          "z1": 1824,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16944,
+          "z0": 1776,
+          "x1": -15264,
+          "z1": 1872,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16848,
+          "z0": 1872,
+          "x1": -15264,
+          "z1": 1920,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16608,
+          "z0": 1920,
+          "x1": -15264,
+          "z1": 3024,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16656,
+          "z0": 2112,
+          "x1": -16608,
+          "z1": 2592,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17040,
+          "z0": 2208,
+          "x1": -16896,
+          "z1": 2400,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -17088,
+          "z0": 2256,
+          "x1": -17040,
+          "z1": 2352,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -16656,
+          "z0": 2688,
+          "x1": -16608,
+          "z1": 3456,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16608,
+          "z0": 3024,
+          "x1": -15744,
+          "z1": 3072,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15696,
+          "z0": 3024,
+          "x1": -15408,
+          "z1": 3696,
+          "y": -25.5,
+          "kind": null
+        },
+        {
+          "x0": -15408,
+          "z0": 3024,
+          "x1": -15264,
+          "z1": 3120,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -19104,
+          "z0": 3072,
+          "x1": -19008,
+          "z1": 3408,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16704,
+          "z0": 3072,
+          "x1": -16656,
+          "z1": 3168,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16608,
+          "z0": 3072,
+          "x1": -15840,
+          "z1": 3120,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -19200,
+          "z0": 3120,
+          "x1": -19104,
+          "z1": 3456,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16608,
+          "z0": 3120,
+          "x1": -16560,
+          "z1": 3408,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16512,
+          "z0": 3120,
+          "x1": -16272,
+          "z1": 3168,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16224,
+          "z0": 3120,
+          "x1": -16080,
+          "z1": 3168,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15984,
+          "z0": 3120,
+          "x1": -15888,
+          "z1": 3168,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15792,
+          "z0": 3120,
+          "x1": -15696,
+          "z1": 3456,
+          "y": -25.5,
+          "kind": null
+        },
+        {
+          "x0": -15408,
+          "z0": 3120,
+          "x1": -15312,
+          "z1": 3984,
+          "y": -25.5,
+          "kind": null
+        },
+        {
+          "x0": -15312,
+          "z0": 3120,
+          "x1": -15264,
+          "z1": 3312,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15840,
+          "z0": 3168,
+          "x1": -15792,
+          "z1": 3456,
+          "y": -25.5,
+          "kind": null
+        },
+        {
+          "x0": -19248,
+          "z0": 3216,
+          "x1": -19200,
+          "z1": 3312,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18912,
+          "z0": 3216,
+          "x1": -18768,
+          "z1": 3360,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16704,
+          "z0": 3216,
+          "x1": -16656,
+          "z1": 3456,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -19008,
+          "z0": 3264,
+          "x1": -18912,
+          "z1": 3360,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16752,
+          "z0": 3264,
+          "x1": -16704,
+          "z1": 3456,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18768,
+          "z0": 3312,
+          "x1": -18624,
+          "z1": 3408,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16800,
+          "z0": 3312,
+          "x1": -16752,
+          "z1": 3456,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15312,
+          "z0": 3312,
+          "x1": -15264,
+          "z1": 3936,
+          "y": -25.5,
+          "kind": null
+        },
+        {
+          "x0": -18816,
+          "z0": 3360,
+          "x1": -18768,
+          "z1": 3408,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18624,
+          "z0": 3360,
+          "x1": -18528,
+          "z1": 3504,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16896,
+          "z0": 3360,
+          "x1": -16800,
+          "z1": 3456,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -19056,
+          "z0": 3408,
+          "x1": -18960,
+          "z1": 3456,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18720,
+          "z0": 3408,
+          "x1": -18624,
+          "z1": 3456,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18528,
+          "z0": 3408,
+          "x1": -18432,
+          "z1": 3552,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16944,
+          "z0": 3408,
+          "x1": -16896,
+          "z1": 3552,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18672,
+          "z0": 3456,
+          "x1": -18624,
+          "z1": 3504,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18432,
+          "z0": 3456,
+          "x1": -18336,
+          "z1": 3600,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17136,
+          "z0": 3456,
+          "x1": -16944,
+          "z1": 3600,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16896,
+          "z0": 3456,
+          "x1": -16848,
+          "z1": 3552,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16752,
+          "z0": 3456,
+          "x1": -16608,
+          "z1": 4656,
+          "y": -15,
+          "kind": null
+        },
+        {
+          "x0": -18576,
+          "z0": 3504,
+          "x1": -18528,
+          "z1": 3552,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18336,
+          "z0": 3504,
+          "x1": -18240,
+          "z1": 3696,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17520,
+          "z0": 3504,
+          "x1": -17424,
+          "z1": 3648,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17376,
+          "z0": 3504,
+          "x1": -17136,
+          "z1": 3648,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18480,
+          "z0": 3552,
+          "x1": -18432,
+          "z1": 3600,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18240,
+          "z0": 3552,
+          "x1": -18144,
+          "z1": 3696,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17856,
+          "z0": 3552,
+          "x1": -17712,
+          "z1": 3696,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17568,
+          "z0": 3552,
+          "x1": -17520,
+          "z1": 3696,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17424,
+          "z0": 3552,
+          "x1": -17376,
+          "z1": 3648,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18144,
+          "z0": 3600,
+          "x1": -17856,
+          "z1": 3696,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17712,
+          "z0": 3600,
+          "x1": -17568,
+          "z1": 3888,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17136,
+          "z0": 3600,
+          "x1": -17088,
+          "z1": 3648,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15744,
+          "z0": 3600,
+          "x1": -15696,
+          "z1": 3648,
+          "y": -25.5,
+          "kind": null
+        },
+        {
+          "x0": -18192,
+          "z0": 3696,
+          "x1": -18048,
+          "z1": 3744,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15600,
+          "z0": 3696,
+          "x1": -15408,
+          "z1": 3936,
+          "y": -25.5,
+          "kind": null
+        },
+        {
+          "x0": -15696,
+          "z0": 3744,
+          "x1": -15648,
+          "z1": 3888,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17760,
+          "z0": 3840,
+          "x1": -17712,
+          "z1": 4176,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16080,
+          "z0": 3840,
+          "x1": -15984,
+          "z1": 3936,
+          "y": 11.55,
+          "kind": null
+        },
+        {
+          "x0": -15744,
+          "z0": 3840,
+          "x1": -15696,
+          "z1": 3888,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17712,
+          "z0": 3888,
+          "x1": -17616,
+          "z1": 4512,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17616,
+          "z0": 3936,
+          "x1": -17568,
+          "z1": 4032,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15600,
+          "z0": 3936,
+          "x1": -15456,
+          "z1": 3984,
+          "y": -25.5,
+          "kind": null
+        },
+        {
+          "x0": -17184,
+          "z0": 3984,
+          "x1": -17136,
+          "z1": 4080,
+          "y": -1.5,
+          "kind": null
+        },
+        {
+          "x0": -15600,
+          "z0": 3984,
+          "x1": -15552,
+          "z1": 4032,
+          "y": -25.5,
+          "kind": null
+        },
+        {
+          "x0": -17232,
+          "z0": 4032,
+          "x1": -17184,
+          "z1": 4128,
+          "y": -1.5,
+          "kind": null
+        },
+        {
+          "x0": -17952,
+          "z0": 4272,
+          "x1": -17712,
+          "z1": 4368,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18144,
+          "z0": 4320,
+          "x1": -17952,
+          "z1": 4416,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18192,
+          "z0": 4368,
+          "x1": -18144,
+          "z1": 4704,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17952,
+          "z0": 4368,
+          "x1": -17904,
+          "z1": 4416,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17760,
+          "z0": 4368,
+          "x1": -17712,
+          "z1": 4416,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17616,
+          "z0": 4368,
+          "x1": -17568,
+          "z1": 4704,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18144,
+          "z0": 4416,
+          "x1": -18048,
+          "z1": 4512,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17568,
+          "z0": 4416,
+          "x1": -17520,
+          "z1": 5424,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18240,
+          "z0": 4512,
+          "x1": -18192,
+          "z1": 4800,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18144,
+          "z0": 4512,
+          "x1": -18096,
+          "z1": 4656,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17664,
+          "z0": 4512,
+          "x1": -17616,
+          "z1": 4560,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -16608,
+          "z0": 4512,
+          "x1": -15264,
+          "z1": 4656,
+          "y": -15,
+          "kind": null
+        },
+        {
+          "x0": -17520,
+          "z0": 4560,
+          "x1": -17472,
+          "z1": 5136,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18288,
+          "z0": 4608,
+          "x1": -18240,
+          "z1": 4848,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17472,
+          "z0": 4608,
+          "x1": -17424,
+          "z1": 4800,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15360,
+          "z0": 4656,
+          "x1": -15312,
+          "z1": 5472,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18336,
+          "z0": 4704,
+          "x1": -18288,
+          "z1": 4896,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15456,
+          "z0": 4704,
+          "x1": -15360,
+          "z1": 4944,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18384,
+          "z0": 4752,
+          "x1": -18336,
+          "z1": 4944,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18480,
+          "z0": 4800,
+          "x1": -18384,
+          "z1": 4992,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15312,
+          "z0": 4800,
+          "x1": -15264,
+          "z1": 5472,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18768,
+          "z0": 4848,
+          "x1": -18480,
+          "z1": 4944,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18816,
+          "z0": 4896,
+          "x1": -18768,
+          "z1": 5040,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17616,
+          "z0": 4896,
+          "x1": -17568,
+          "z1": 5280,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18960,
+          "z0": 4944,
+          "x1": -18816,
+          "z1": 5040,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18768,
+          "z0": 4944,
+          "x1": -18624,
+          "z1": 4992,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18528,
+          "z0": 4944,
+          "x1": -18480,
+          "z1": 4992,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17952,
+          "z0": 4944,
+          "x1": -17856,
+          "z1": 5040,
+          "y": -6,
+          "kind": null
+        },
+        {
+          "x0": -15408,
+          "z0": 4944,
+          "x1": -15360,
+          "z1": 5472,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -19008,
+          "z0": 4992,
+          "x1": -18960,
+          "z1": 5184,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18768,
+          "z0": 4992,
+          "x1": -18720,
+          "z1": 5040,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18960,
+          "z0": 5040,
+          "x1": -18864,
+          "z1": 5088,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15456,
+          "z0": 5040,
+          "x1": -15408,
+          "z1": 5472,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -18960,
+          "z0": 5088,
+          "x1": -18912,
+          "z1": 5184,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -19056,
+          "z0": 5136,
+          "x1": -19008,
+          "z1": 5232,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15504,
+          "z0": 5136,
+          "x1": -15456,
+          "z1": 5232,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -19104,
+          "z0": 5184,
+          "x1": -19056,
+          "z1": 5280,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -19152,
+          "z0": 5232,
+          "x1": -19104,
+          "z1": 5328,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -19200,
+          "z0": 5280,
+          "x1": -19152,
+          "z1": 5328,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15504,
+          "z0": 5280,
+          "x1": -15456,
+          "z1": 5328,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -17616,
+          "z0": 5376,
+          "x1": -17568,
+          "z1": 5424,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -15504,
+          "z0": 5376,
+          "x1": -15456,
+          "z1": 5472,
+          "y": -37.5,
+          "kind": null
+        }
+      ],
+      "boundsU": {
+        "minX": -19296,
+        "maxX": -15264,
+        "minZ": 864,
+        "maxZ": 5472
+      }
+    },
+    "hotan_province": {
+      "id": "hotan_province",
+      "name": "Hotan",
+      "kind": "field",
+      "bounds": {
+        "minX": -4320,
+        "maxX": 2304,
+        "minZ": -2304,
+        "maxZ": 4032
+      },
+      "playerSpawn": {
+        "x": 170.7,
+        "z": 22.95,
+        "y": 37.5
+      },
+      "respawnPoint": {
+        "x": 170.7,
+        "z": 22.95,
+        "y": 37.5
+      },
+      "bin": {
+        "heights": "hotan_province/heights.bin",
+        "nav": "hotan_province/nav.bin",
+        "statics": "hotan_province/statics.json"
+      },
+      "npcs": [
+        {
+          "npcId": "npc_kt_smith",
+          "x": 75.237,
+          "z": 114.941,
+          "y": 36.537,
+          "rotY": 0.482
+        },
+        {
+          "npcId": "npc_kt_armor",
+          "x": 86.72,
+          "z": 28.275,
+          "y": 36.572,
+          "rotY": 0.369
+        },
+        {
+          "npcId": "npc_kt_potion",
+          "x": 124.824,
+          "z": 164.046,
+          "y": 36.579,
+          "rotY": 0.413
+        },
+        {
+          "npcId": "npc_kt_accessory",
+          "x": 128.9,
+          "z": -6.891,
+          "y": 36.572,
+          "rotY": 0.258
+        },
+        {
+          "npcId": "npc_kt_horse",
+          "x": 231.132,
+          "z": -7.043,
+          "y": 37.472,
+          "rotY": 0.038
+        },
+        {
+          "npcId": "npc_kt_special",
+          "x": 227.332,
+          "z": 135.682,
+          "y": 36.599,
+          "rotY": -2.199
+        },
+        {
+          "npcId": "npc_kt_designer",
+          "x": 236.103,
+          "z": 126.024,
+          "y": 36.572,
+          "rotY": -2.199
+        },
+        {
+          "npcId": "npc_kt_ferry",
+          "x": 430.506,
+          "z": -97.454,
+          "y": 2.047,
+          "rotY": -0.803
+        },
+        {
+          "npcId": "npc_kt_warehouse",
+          "x": 170.142,
+          "z": 91.619,
+          "y": 36.563,
+          "rotY": 0.217
+        },
+        {
+          "npcId": "npc_kt_manager",
+          "x": 344.309,
+          "z": 674.865,
+          "y": -2.427,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_kt_minister",
+          "x": 337.332,
+          "z": 233.094,
+          "y": 3,
+          "rotY": 0.768
+        },
+        {
+          "npcId": "npc_kt_soldier_em1",
+          "x": 179.883,
+          "z": 529.179,
+          "y": 21.751,
+          "rotY": -3.141
+        },
+        {
+          "npcId": "npc_kt_soldier_em2",
+          "x": 163.734,
+          "z": 529.166,
+          "y": 21.798,
+          "rotY": 3.124
+        },
+        {
+          "npcId": "npc_kt_soldier_ea1",
+          "x": 476.096,
+          "z": 79.803,
+          "y": 2.047,
+          "rotY": -1.571
+        },
+        {
+          "npcId": "npc_kt_soldier_ea2",
+          "x": 476.054,
+          "z": 64.865,
+          "y": 2.035,
+          "rotY": -1.571
+        },
+        {
+          "npcId": "npc_kt_soldier_so1",
+          "x": 163.333,
+          "z": -231.358,
+          "y": 1.993,
+          "rotY": 0.018
+        },
+        {
+          "npcId": "npc_kt_soldier_so2",
+          "x": 178.581,
+          "z": -231.325,
+          "y": 1.986,
+          "rotY": 0.035
+        },
+        {
+          "npcId": "npc_kt_soldier_we1",
+          "x": -127.057,
+          "z": 78.532,
+          "y": 2.015,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_kt_soldier_we2",
+          "x": -127.097,
+          "z": 63.114,
+          "y": 2.015,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_kt_flyship2",
+          "x": -3904.273,
+          "z": -1572.984,
+          "y": 309.665,
+          "rotY": 2.444
+        },
+        {
+          "npcId": "npc_tk_special",
+          "x": -1708.288,
+          "z": 3666.742,
+          "y": 16.965,
+          "rotY": 0.262
+        },
+        {
+          "npcId": "npc_ch_gacha_machine",
+          "x": 247.857,
+          "z": 116.485,
+          "y": 36.573,
+          "rotY": -2.199
+        },
+        {
+          "npcId": "npc_ch_gacha_operator",
+          "x": 150.426,
+          "z": 73.438,
+          "y": 36.597,
+          "rotY": -1.571
+        },
+        {
+          "npcId": "npc_kt_guild",
+          "x": 171.834,
+          "z": 663.862,
+          "y": 40.151,
+          "rotY": -3.124
+        },
+        {
+          "npcId": "npc_kt_fortress_official",
+          "x": 23.157,
+          "z": 697.656,
+          "y": 22.729,
+          "rotY": 1.571
+        }
+      ],
+      "teleporters": [
+        {
+          "id": "gate_kt",
+          "name": "Hotan Gate",
+          "modelKey": "portal_kt",
+          "x": 169.566,
+          "z": 73.156,
+          "y": 35.46,
+          "rotY": 3.142
+        },
+        {
+          "id": "gate_npc_kt_ferry2",
+          "name": "Boat Ticket Seller Rahan",
+          "modelKey": "npc_kt_ferry",
+          "x": 1618.41,
+          "z": -89.314,
+          "y": -3.373,
+          "rotY": -1.274
+        },
+        {
+          "id": "gate_npc_kt_ferry3",
+          "name": "Boat Ticket Seller Asimo",
+          "modelKey": "npc_kt_ferry",
+          "x": 1686.624,
+          "z": -463.081,
+          "y": -4.809,
+          "rotY": -1.501
+        },
+        {
+          "id": "gate_npc_kt_flyship1",
+          "name": "Airship Ticket Seller Dawari",
+          "modelKey": "khotanshop_designer",
+          "x": -3939.669,
+          "z": 580.065,
+          "y": 320.211,
+          "rotY": 2.491
+        },
+        {
+          "id": "gate_npc_tk_tunnel_no",
+          "name": "Tunnel Manager Asui",
+          "modelKey": "TaklamakanSystem_Tunnel_No",
+          "x": -2856.276,
+          "z": 2972.232,
+          "y": 59.042,
+          "rotY": 1.649
+        },
+        {
+          "id": "gate_npc_tk_tunnel_so",
+          "name": "Tunnel Manager Maryokuk",
+          "modelKey": "TaklamakanSystem_Tunnel_So",
+          "x": -2852.523,
+          "z": 2081.587,
+          "y": 38.531,
+          "rotY": 1.323
+        }
+      ],
+      "gates": [],
+      "slopeLimitUpPerU": 1000,
+      "slopeLimitDownPerU": 1000,
+      "slopeOverrides": [
+        {
+          "x0": -140,
+          "z0": -390,
+          "x1": 640,
+          "z1": 470,
+          "upPerU": 1.75,
+          "downPerU": 1.75
+        }
+      ],
+      "water": [
+        {
+          "x0": 1728,
+          "z0": -1440,
+          "x1": 2304,
+          "z1": -624,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 1152,
+          "z0": -1344,
+          "x1": 1728,
+          "z1": -1248,
+          "y": -42,
+          "kind": null
+        },
+        {
+          "x0": 1200,
+          "z0": -1248,
+          "x1": 1296,
+          "z1": -1200,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": 1296,
+          "z0": -1248,
+          "x1": 1728,
+          "z1": -1104,
+          "y": -42,
+          "kind": null
+        },
+        {
+          "x0": 1248,
+          "z0": -1200,
+          "x1": 1296,
+          "z1": -1152,
+          "y": -37.5,
+          "kind": null
+        },
+        {
+          "x0": -2784,
+          "z0": -1104,
+          "x1": -2640,
+          "z1": -912,
+          "y": 120,
+          "kind": null
+        },
+        {
+          "x0": 1392,
+          "z0": -1104,
+          "x1": 1728,
+          "z1": -1056,
+          "y": -42,
+          "kind": null
+        },
+        {
+          "x0": -2832,
+          "z0": -1056,
+          "x1": -2784,
+          "z1": -864,
+          "y": 120,
+          "kind": null
+        },
+        {
+          "x0": 1584,
+          "z0": -1056,
+          "x1": 1632,
+          "z1": -1008,
+          "y": -42,
+          "kind": null
+        },
+        {
+          "x0": 1632,
+          "z0": -1056,
+          "x1": 1728,
+          "z1": -1008,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -2784,
+          "z0": -912,
+          "x1": -2688,
+          "z1": -864,
+          "y": 120,
+          "kind": null
+        },
+        {
+          "x0": 1152,
+          "z0": -816,
+          "x1": 1200,
+          "z1": -480,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1104,
+          "z0": -768,
+          "x1": 1152,
+          "z1": -480,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1200,
+          "z0": -768,
+          "x1": 1248,
+          "z1": -528,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1056,
+          "z0": -720,
+          "x1": 1104,
+          "z1": -432,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1248,
+          "z0": -720,
+          "x1": 1680,
+          "z1": -624,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 912,
+          "z0": -672,
+          "x1": 960,
+          "z1": -336,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1008,
+          "z0": -672,
+          "x1": 1056,
+          "z1": -432,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1680,
+          "z0": -672,
+          "x1": 1728,
+          "z1": -624,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 960,
+          "z0": -624,
+          "x1": 1008,
+          "z1": -384,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1248,
+          "z0": -624,
+          "x1": 1536,
+          "z1": -576,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1728,
+          "z0": -624,
+          "x1": 2064,
+          "z1": -576,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2112,
+          "z0": -624,
+          "x1": 2304,
+          "z1": -576,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 1248,
+          "z0": -576,
+          "x1": 1296,
+          "z1": -528,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1680,
+          "z0": -576,
+          "x1": 1968,
+          "z1": -384,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2016,
+          "z0": -576,
+          "x1": 2112,
+          "z1": -48,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2160,
+          "z0": -576,
+          "x1": 2304,
+          "z1": 864,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 864,
+          "z0": -528,
+          "x1": 912,
+          "z1": -336,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1968,
+          "z0": -528,
+          "x1": 2016,
+          "z1": 2880,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2112,
+          "z0": -528,
+          "x1": 2160,
+          "z1": -288,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": -48,
+          "z0": -480,
+          "x1": 96,
+          "z1": -240,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 816,
+          "z0": -480,
+          "x1": 864,
+          "z1": -336,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 192,
+          "z0": -432,
+          "x1": 432,
+          "z1": -240,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 720,
+          "z0": -432,
+          "x1": 816,
+          "z1": -144,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 96,
+          "z0": -384,
+          "x1": 192,
+          "z1": -240,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 432,
+          "z0": -384,
+          "x1": 480,
+          "z1": -48,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 672,
+          "z0": -384,
+          "x1": 720,
+          "z1": -144,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1728,
+          "z0": -384,
+          "x1": 1968,
+          "z1": 96,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 480,
+          "z0": -336,
+          "x1": 528,
+          "z1": 912,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1680,
+          "z0": -336,
+          "x1": 1728,
+          "z1": 96,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": -96,
+          "z0": -288,
+          "x1": -48,
+          "z1": -96,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 528,
+          "z0": -288,
+          "x1": 576,
+          "z1": 528,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -144,
+          "z0": -240,
+          "x1": -96,
+          "z1": 48,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -48,
+          "z0": -240,
+          "x1": 48,
+          "z1": -192,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 288,
+          "z0": -240,
+          "x1": 432,
+          "z1": -192,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 576,
+          "z0": -240,
+          "x1": 672,
+          "z1": 48,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 2112,
+          "z0": -240,
+          "x1": 2160,
+          "z1": 912,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": -48,
+          "z0": -192,
+          "x1": 0,
+          "z1": -144,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 336,
+          "z0": -192,
+          "x1": 432,
+          "z1": -144,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -240,
+          "z0": -144,
+          "x1": -144,
+          "z1": 1008,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 384,
+          "z0": -144,
+          "x1": 432,
+          "z1": -96,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1632,
+          "z0": -144,
+          "x1": 1680,
+          "z1": 96,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": -288,
+          "z0": -96,
+          "x1": -240,
+          "z1": 48,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 2016,
+          "z0": -48,
+          "x1": 2064,
+          "z1": 912,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 2064,
+          "z0": 0,
+          "x1": 2112,
+          "z1": 912,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": -144,
+          "z0": 48,
+          "x1": -96,
+          "z1": 96,
+          "y": -42,
+          "kind": null
+        },
+        {
+          "x0": 576,
+          "z0": 48,
+          "x1": 624,
+          "z1": 480,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -288,
+          "z0": 96,
+          "x1": -240,
+          "z1": 432,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -144,
+          "z0": 96,
+          "x1": -96,
+          "z1": 1056,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 624,
+          "z0": 96,
+          "x1": 672,
+          "z1": 288,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1824,
+          "z0": 96,
+          "x1": 1968,
+          "z1": 2880,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": 672,
+          "z0": 144,
+          "x1": 768,
+          "z1": 192,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1152,
+          "z0": 144,
+          "x1": 1200,
+          "z1": 240,
+          "y": -3.75,
+          "kind": null
+        },
+        {
+          "x0": 432,
+          "z0": 192,
+          "x1": 480,
+          "z1": 960,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 672,
+          "z0": 192,
+          "x1": 720,
+          "z1": 240,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -96,
+          "z0": 240,
+          "x1": -48,
+          "z1": 1104,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 384,
+          "z0": 240,
+          "x1": 432,
+          "z1": 1200,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1776,
+          "z0": 240,
+          "x1": 1824,
+          "z1": 336,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": -48,
+          "z0": 288,
+          "x1": 0,
+          "z1": 576,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 336,
+          "z0": 288,
+          "x1": 384,
+          "z1": 672,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 0,
+          "z0": 336,
+          "x1": 48,
+          "z1": 576,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 192,
+          "z0": 336,
+          "x1": 240,
+          "z1": 528,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 288,
+          "z0": 336,
+          "x1": 336,
+          "z1": 528,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 48,
+          "z0": 384,
+          "x1": 192,
+          "z1": 528,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 240,
+          "z0": 384,
+          "x1": 288,
+          "z1": 528,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 624,
+          "z0": 384,
+          "x1": 672,
+          "z1": 480,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1776,
+          "z0": 432,
+          "x1": 1824,
+          "z1": 2880,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": -288,
+          "z0": 528,
+          "x1": -240,
+          "z1": 672,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 144,
+          "z0": 528,
+          "x1": 192,
+          "z1": 576,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 192,
+          "z0": 528,
+          "x1": 240,
+          "z1": 624,
+          "y": 1.5,
+          "kind": null
+        },
+        {
+          "x0": -48,
+          "z0": 576,
+          "x1": 144,
+          "z1": 624,
+          "y": -1.5,
+          "kind": null
+        },
+        {
+          "x0": 240,
+          "z0": 576,
+          "x1": 288,
+          "z1": 624,
+          "y": 1.5,
+          "kind": null
+        },
+        {
+          "x0": -48,
+          "z0": 624,
+          "x1": 48,
+          "z1": 672,
+          "y": -1.5,
+          "kind": null
+        },
+        {
+          "x0": 528,
+          "z0": 624,
+          "x1": 576,
+          "z1": 672,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 0,
+          "z0": 672,
+          "x1": 48,
+          "z1": 816,
+          "y": -1.5,
+          "kind": null
+        },
+        {
+          "x0": 96,
+          "z0": 672,
+          "x1": 144,
+          "z1": 720,
+          "y": -1.5,
+          "kind": null
+        },
+        {
+          "x0": 144,
+          "z0": 672,
+          "x1": 192,
+          "z1": 720,
+          "y": 34.5,
+          "kind": null
+        },
+        {
+          "x0": 336,
+          "z0": 720,
+          "x1": 384,
+          "z1": 1200,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 816,
+          "z0": 720,
+          "x1": 912,
+          "z1": 816,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": 48,
+          "z0": 768,
+          "x1": 96,
+          "z1": 864,
+          "y": -1.5,
+          "kind": null
+        },
+        {
+          "x0": 240,
+          "z0": 768,
+          "x1": 288,
+          "z1": 864,
+          "y": -1.5,
+          "kind": null
+        },
+        {
+          "x0": -288,
+          "z0": 816,
+          "x1": -240,
+          "z1": 1008,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 96,
+          "z0": 816,
+          "x1": 240,
+          "z1": 864,
+          "y": -1.5,
+          "kind": null
+        },
+        {
+          "x0": -336,
+          "z0": 864,
+          "x1": -288,
+          "z1": 1008,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -48,
+          "z0": 864,
+          "x1": 144,
+          "z1": 1056,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 144,
+          "z0": 912,
+          "x1": 336,
+          "z1": 1056,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 1728,
+          "z0": 912,
+          "x1": 1776,
+          "z1": 2880,
+          "y": -9,
+          "kind": null
+        },
+        {
+          "x0": -480,
+          "z0": 960,
+          "x1": -384,
+          "z1": 1152,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -384,
+          "z0": 1008,
+          "x1": -336,
+          "z1": 1056,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -528,
+          "z0": 1056,
+          "x1": -480,
+          "z1": 1200,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 240,
+          "z0": 1056,
+          "x1": 336,
+          "z1": 1152,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -672,
+          "z0": 1104,
+          "x1": -528,
+          "z1": 1200,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": 288,
+          "z0": 1152,
+          "x1": 336,
+          "z1": 1200,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -720,
+          "z0": 1200,
+          "x1": -576,
+          "z1": 1248,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -768,
+          "z0": 1248,
+          "x1": -672,
+          "z1": 1296,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -816,
+          "z0": 1296,
+          "x1": -720,
+          "z1": 1440,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -864,
+          "z0": 1344,
+          "x1": -816,
+          "z1": 1440,
+          "y": -39,
+          "kind": null
+        },
+        {
+          "x0": -432,
+          "z0": 1536,
+          "x1": -384,
+          "z1": 1584,
+          "y": -7.5,
+          "kind": null
+        },
+        {
+          "x0": -240,
+          "z0": 1728,
+          "x1": -144,
+          "z1": 1776,
+          "y": -6.75,
+          "kind": null
+        },
+        {
+          "x0": -192,
+          "z0": 1776,
+          "x1": -144,
+          "z1": 1824,
+          "y": -6.75,
+          "kind": null
+        },
+        {
+          "x0": -624,
+          "z0": 3120,
+          "x1": -576,
+          "z1": 3312,
+          "y": -17.25,
+          "kind": null
+        },
+        {
+          "x0": -672,
+          "z0": 3168,
+          "x1": -624,
+          "z1": 3264,
+          "y": -17.25,
+          "kind": null
+        },
+        {
+          "x0": -576,
+          "z0": 3168,
+          "x1": -528,
+          "z1": 3264,
+          "y": -17.25,
+          "kind": null
+        },
+        {
+          "x0": -2160,
+          "z0": -1248,
+          "x1": -1968,
+          "z1": 288,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2256,
+          "z0": -1200,
+          "x1": -2160,
+          "z1": 288,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -1968,
+          "z0": -1200,
+          "x1": -1872,
+          "z1": 240,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2496,
+          "z0": -1152,
+          "x1": -2352,
+          "z1": 288,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2304,
+          "z0": -1152,
+          "x1": -2256,
+          "z1": 288,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -1872,
+          "z0": -1152,
+          "x1": -1488,
+          "z1": -528,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2592,
+          "z0": -1104,
+          "x1": -2496,
+          "z1": 192,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2352,
+          "z0": -1104,
+          "x1": -2304,
+          "z1": 288,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -1488,
+          "z0": -1104,
+          "x1": -1440,
+          "z1": -624,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -1440,
+          "z0": -1008,
+          "x1": -1392,
+          "z1": -720,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2688,
+          "z0": -864,
+          "x1": -2592,
+          "z1": 48,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2784,
+          "z0": -816,
+          "x1": -2688,
+          "z1": 0,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2880,
+          "z0": -768,
+          "x1": -2784,
+          "z1": 0,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2928,
+          "z0": -576,
+          "x1": -2880,
+          "z1": 0,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -1872,
+          "z0": -528,
+          "x1": -1536,
+          "z1": -432,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -3024,
+          "z0": -480,
+          "x1": -2928,
+          "z1": -48,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -1872,
+          "z0": -432,
+          "x1": -1584,
+          "z1": 144,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -1584,
+          "z0": -336,
+          "x1": -1536,
+          "z1": 96,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -1536,
+          "z0": -192,
+          "x1": -1488,
+          "z1": 48,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2976,
+          "z0": -48,
+          "x1": -2928,
+          "z1": 0,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2736,
+          "z0": 0,
+          "x1": -2688,
+          "z1": 48,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2640,
+          "z0": 48,
+          "x1": -2592,
+          "z1": 96,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -1872,
+          "z0": 144,
+          "x1": -1632,
+          "z1": 240,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2544,
+          "z0": 192,
+          "x1": -2496,
+          "z1": 240,
+          "y": 120,
+          "kind": "ice"
+        },
+        {
+          "x0": -2880,
+          "z0": 624,
+          "x1": -2784,
+          "z1": 720,
+          "y": 202.5,
+          "kind": "ice"
+        },
+        {
+          "x0": -2928,
+          "z0": 672,
+          "x1": -2880,
+          "z1": 720,
+          "y": 202.5,
+          "kind": "ice"
+        }
+      ],
+      "boundsU": {
+        "minX": -4320,
+        "maxX": 2304,
+        "minZ": -2304,
+        "maxZ": 4032
+      }
+    },
+    "samarkand_province": {
+      "id": "samarkand_province",
+      "name": "Samarkand",
+      "kind": "field",
+      "bounds": {
+        "minX": -13536,
+        "maxX": -4032,
+        "minZ": 1152,
+        "maxZ": 4896
+      },
+      "playerSpawn": {
+        "x": -7735.5,
+        "z": 4245.15,
+        "y": 27
+      },
+      "respawnPoint": {
+        "x": -7735.5,
+        "z": 4245.15,
+        "y": 27
+      },
+      "bin": {
+        "heights": "samarkand_province/heights.bin",
+        "nav": "samarkand_province/nav.bin",
+        "statics": "samarkand_province/statics.json"
+      },
+      "npcs": [
+        {
+          "npcId": "npc_am_flyship",
+          "x": -9278.413,
+          "z": 1450.635,
+          "y": 93.982,
+          "rotY": -1.501
+        },
+        {
+          "npcId": "npc_ca_smith",
+          "x": -7799.608,
+          "z": 4441.467,
+          "y": 27,
+          "rotY": 2.947
+        },
+        {
+          "npcId": "npc_ca_armor",
+          "x": -7869.283,
+          "z": 4373.742,
+          "y": 27,
+          "rotY": 1.969
+        },
+        {
+          "npcId": "npc_ca_potion",
+          "x": -7850.089,
+          "z": 4309.65,
+          "y": 27,
+          "rotY": 1.222
+        },
+        {
+          "npcId": "npc_ca_accessory",
+          "x": -7817.278,
+          "z": 4251.054,
+          "y": 27,
+          "rotY": 0.428
+        },
+        {
+          "npcId": "npc_ca_horse",
+          "x": -7673.016,
+          "z": 4357.001,
+          "y": 27,
+          "rotY": -1.77
+        },
+        {
+          "npcId": "npc_ca_special",
+          "x": -7650.429,
+          "z": 4305.487,
+          "y": 27,
+          "rotY": 0.018
+        },
+        {
+          "npcId": "npc_ca_merchant",
+          "x": -7675.546,
+          "z": 4305.494,
+          "y": 27,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_ca_warehouse",
+          "x": -7691.485,
+          "z": 4201.749,
+          "y": 27,
+          "rotY": -0.578
+        },
+        {
+          "npcId": "npc_ca_hunter",
+          "x": -7715.119,
+          "z": 4512.44,
+          "y": 27,
+          "rotY": -1.571
+        },
+        {
+          "npcId": "npc_ca_soldier_ea1",
+          "x": -7501.764,
+          "z": 4347.663,
+          "y": 27,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_ca_soldier_ea2",
+          "x": -7501.809,
+          "z": 4325.319,
+          "y": 27,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_ca_soldier_so1",
+          "x": -7784.602,
+          "z": 4064.735,
+          "y": 27,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_ca_soldier_so2",
+          "x": -7764.612,
+          "z": 4064.802,
+          "y": 27,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_ca_soldier_we1",
+          "x": -8046.522,
+          "z": 4348.538,
+          "y": 27,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_ca_soldier_we2",
+          "x": -8046.522,
+          "z": 4329.011,
+          "y": 27,
+          "rotY": 1.571
+        },
+        {
+          "npcId": "npc_ch_gacha_machine",
+          "x": -7638.946,
+          "z": 4306.314,
+          "y": 27,
+          "rotY": -0.017
+        },
+        {
+          "npcId": "npc_ch_gacha_operator",
+          "x": -7688.002,
+          "z": 4244.211,
+          "y": 27,
+          "rotY": -1.588
+        },
+        {
+          "npcId": "npc_ca_guild",
+          "x": -7755.181,
+          "z": 4456.557,
+          "y": 27,
+          "rotY": -1.588
+        }
+      ],
+      "teleporters": [
+        {
+          "id": "gate_ca",
+          "name": "Samarkand Gate",
+          "modelKey": "portal_ca",
+          "x": -7776.3,
+          "z": 4336.194,
+          "y": 27,
+          "rotY": 3.142
+        },
+        {
+          "id": "gate_npc_am_ferry1",
+          "name": "Pirate Morgun",
+          "modelKey": "AsiaMinor_Ferry1",
+          "x": -13048.422,
+          "z": 3304.313,
+          "y": 3.94,
+          "rotY": -0.357
+        },
+        {
+          "id": "gate_npc_am_ferry2",
+          "name": "Priate Blackbeard",
+          "modelKey": "AsiaMinor_Ferry2",
+          "x": -13049.5,
+          "z": 2741.942,
+          "y": 4.039,
+          "rotY": -0.352
+        },
+        {
+          "id": "gate_npc_ca_flyship",
+          "name": "Aircraft Ticket Seller Saena",
+          "modelKey": "CentralAsiaSystem_Flyship",
+          "x": -4402.691,
+          "z": 2792.382,
+          "y": 48.722,
+          "rotY": -0.006
+        },
+        {
+          "id": "gate_npc_ca_tunnel_no",
+          "name": "Tunnel Manager Topni",
+          "modelKey": "CentralAsiaSystem_Tunnel_No",
+          "x": -4140.734,
+          "z": 4018.019,
+          "y": 89.723,
+          "rotY": -1.61
+        },
+        {
+          "id": "gate_npc_ca_tunnel_so",
+          "name": "Tunnel Manager Salhap",
+          "modelKey": "CentralAsiaSystem_Tunnel_So",
+          "x": -4096.536,
+          "z": 3156.441,
+          "y": 27.809,
+          "rotY": -1.562
+        }
+      ],
+      "gates": [],
+      "slopeLimitUpPerU": 1000,
+      "slopeLimitDownPerU": 1000,
+      "slopeOverrides": [],
+      "water": [
+        {
+          "x0": -12096,
+          "z0": 1152,
+          "x1": -11808,
+          "z1": 1632,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12672,
+          "z0": 1440,
+          "x1": -12096,
+          "z1": 1872,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12096,
+          "z0": 1632,
+          "x1": -11856,
+          "z1": 1728,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13536,
+          "z0": 1728,
+          "x1": -12672,
+          "z1": 2064,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12096,
+          "z0": 1728,
+          "x1": -11952,
+          "z1": 1776,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12096,
+          "z0": 1776,
+          "x1": -12,
+          "z1": 1824,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12096,
+          "z0": 1824,
+          "x1": -12048,
+          "z1": 1872,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12672,
+          "z0": 1872,
+          "x1": -12144,
+          "z1": 1920,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12672,
+          "z0": 1920,
+          "x1": -12288,
+          "z1": 2016,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12672,
+          "z0": 2016,
+          "x1": -12336,
+          "z1": 2064,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13536,
+          "z0": 2064,
+          "x1": -12912,
+          "z1": 2112,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12816,
+          "z0": 2064,
+          "x1": -12384,
+          "z1": 2112,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13536,
+          "z0": 2112,
+          "x1": -12960,
+          "z1": 2256,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13536,
+          "z0": 2256,
+          "x1": -13008,
+          "z1": 2304,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13536,
+          "z0": 2304,
+          "x1": -13056,
+          "z1": 2352,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13536,
+          "z0": 2352,
+          "x1": -13104,
+          "z1": 2400,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13536,
+          "z0": 2400,
+          "x1": -13152,
+          "z1": 2448,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13536,
+          "z0": 2448,
+          "x1": -13200,
+          "z1": 2928,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13200,
+          "z0": 2496,
+          "x1": -13056,
+          "z1": 2592,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -11808,
+          "z0": 2496,
+          "x1": -11760,
+          "z1": 2784,
+          "y": 15,
+          "kind": null
+        },
+        {
+          "x0": -11856,
+          "z0": 2544,
+          "x1": -11808,
+          "z1": 2784,
+          "y": 15,
+          "kind": null
+        },
+        {
+          "x0": -11760,
+          "z0": 2544,
+          "x1": -11712,
+          "z1": 2784,
+          "y": 15,
+          "kind": null
+        },
+        {
+          "x0": -13200,
+          "z0": 2592,
+          "x1": -13104,
+          "z1": 2832,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -11904,
+          "z0": 2592,
+          "x1": -11856,
+          "z1": 2736,
+          "y": 15,
+          "kind": null
+        },
+        {
+          "x0": -11712,
+          "z0": 2592,
+          "x1": -11664,
+          "z1": 2784,
+          "y": 15,
+          "kind": null
+        },
+        {
+          "x0": -11664,
+          "z0": 2640,
+          "x1": -11616,
+          "z1": 2736,
+          "y": 15,
+          "kind": null
+        },
+        {
+          "x0": -5376,
+          "z0": 2688,
+          "x1": -5328,
+          "z1": 2976,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -13104,
+          "z0": 2736,
+          "x1": -13056,
+          "z1": 2832,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -5328,
+          "z0": 2880,
+          "x1": -5280,
+          "z1": 2976,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -13536,
+          "z0": 2928,
+          "x1": -13248,
+          "z1": 3600,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -5280,
+          "z0": 2928,
+          "x1": -5232,
+          "z1": 3024,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -5232,
+          "z0": 2976,
+          "x1": -5184,
+          "z1": 3360,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -13248,
+          "z0": 3120,
+          "x1": -13152,
+          "z1": 3456,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13152,
+          "z0": 3168,
+          "x1": -13104,
+          "z1": 3408,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13104,
+          "z0": 3264,
+          "x1": -13056,
+          "z1": 3360,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -5184,
+          "z0": 3264,
+          "x1": -5136,
+          "z1": 3648,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -13248,
+          "z0": 3456,
+          "x1": -13200,
+          "z1": 3504,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -5232,
+          "z0": 3456,
+          "x1": -5184,
+          "z1": 3792,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -13536,
+          "z0": 3600,
+          "x1": -13296,
+          "z1": 4032,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13248,
+          "z0": 3648,
+          "x1": -13104,
+          "z1": 4320,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -11280,
+          "z0": 3648,
+          "x1": -10992,
+          "z1": 3744,
+          "y": 37.5,
+          "kind": null
+        },
+        {
+          "x0": -13296,
+          "z0": 3696,
+          "x1": -13248,
+          "z1": 4032,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -13104,
+          "z0": 3696,
+          "x1": -12960,
+          "z1": 4320,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -5184,
+          "z0": 3696,
+          "x1": -5136,
+          "z1": 3840,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -12960,
+          "z0": 3744,
+          "x1": -12912,
+          "z1": 4320,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -11088,
+          "z0": 3744,
+          "x1": -11040,
+          "z1": 3792,
+          "y": 37.5,
+          "kind": null
+        },
+        {
+          "x0": -5136,
+          "z0": 3744,
+          "x1": -5088,
+          "z1": 3840,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -5088,
+          "z0": 3792,
+          "x1": -5040,
+          "z1": 4032,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -5040,
+          "z0": 3840,
+          "x1": -4992,
+          "z1": 4080,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -12912,
+          "z0": 3984,
+          "x1": -12720,
+          "z1": 4320,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12672,
+          "z0": 3984,
+          "x1": -12624,
+          "z1": 4608,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12720,
+          "z0": 4032,
+          "x1": -12672,
+          "z1": 4320,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -4992,
+          "z0": 4032,
+          "x1": -4944,
+          "z1": 4224,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -12624,
+          "z0": 4080,
+          "x1": -12432,
+          "z1": 4608,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12432,
+          "z0": 4128,
+          "x1": -12384,
+          "z1": 4608,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -4944,
+          "z0": 4128,
+          "x1": -4896,
+          "z1": 4320,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -12384,
+          "z0": 4224,
+          "x1": -12288,
+          "z1": 4608,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -12288,
+          "z0": 4272,
+          "x1": -11856,
+          "z1": 4608,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -11664,
+          "z0": 4272,
+          "x1": -11328,
+          "z1": 4320,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -4896,
+          "z0": 4272,
+          "x1": -4848,
+          "z1": 4464,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -11856,
+          "z0": 4320,
+          "x1": -11376,
+          "z1": 4608,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -4848,
+          "z0": 4368,
+          "x1": -4800,
+          "z1": 4464,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -11376,
+          "z0": 4416,
+          "x1": -11328,
+          "z1": 4608,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -11328,
+          "z0": 4464,
+          "x1": -11232,
+          "z1": 4608,
+          "y": -3,
+          "kind": null
+        },
+        {
+          "x0": -4800,
+          "z0": 4464,
+          "x1": -4704,
+          "z1": 4512,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -4752,
+          "z0": 4512,
+          "x1": -4656,
+          "z1": 4560,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -4704,
+          "z0": 4560,
+          "x1": -4608,
+          "z1": 4608,
+          "y": 23.25,
+          "kind": null
+        },
+        {
+          "x0": -4656,
+          "z0": 4608,
+          "x1": -4608,
+          "z1": 4656,
+          "y": 23.25,
+          "kind": null
+        }
+      ],
+      "boundsU": {
+        "minX": -13536,
+        "maxX": -4032,
+        "minZ": 1152,
+        "maxZ": 4896
+      }
+    }
+  }
+}

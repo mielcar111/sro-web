@@ -1,0 +1,528 @@
+{
+ "$comment": "Hand-placed gather nodes (hand-owned; survives pnpm gen:sro). One entry = one node spawned at zone boot, respawning in place after depletion. `node` joins professions.json nodes[], `grade` joins grades[] (the glow colour = the XP multiplier). `model` optionally overrides the zone/region default GLB. Capture coordinates in-game with /gm node <tree|rock> <grade>, which echoes a paste-ready line for this file. Wood needs NO entries here - map trees are converted in place (see convertMapStatics).",
+ "$comment_jangan_tomb": "Jangan tomb mining field (the graveyard east of the city, statics span x 10380-11040 / z 245-720). 24 seams, >=26u apart. Pads are vetted for REACHABILITY, not just local flatness: ground stays within ~3u across an 18u ring and 9u+ clear of any scenery mesh - an earlier pass that only checked a 3u neighbourhood put a node at the foot of a 20u cliff. (CORRECTED 2026-08-16: this line used to read '0.3u across an 18u ring'. It was never true - `survey-walks pads --verify` measures these 24 seams at up to 1.14u of ring variance, and 0.3u fails 23 of them. The tomb reads flatter than its own filter only because the graveyard sits on a plateau. Trusting the 0.3 figure sent a later pass looking for pads that do not exist.) Grades come from the SAME position hash the server uses for converted map trees (FNV-1a salt 'grade', weights 70/20/8/2), so the field's rarity mix matches the rest of the world instead of being hand-tuned.",
+ "$comment_jangan_bandit_shelf": "Generated 2026-08-16 by `survey-walks pads --zone jangan_province --rect 7150,20,7500,280 --count 13`. 13 seams, y 208..213. Filters: >=26u apart (incl. from every other placement in this zone), ground within 3u across a 18u approach ring and 0.5u across a 2.5u seat ring, >=9u clear of any static mesh, unblocked, not a stacked deck, boot yHint=0 seats on the same surface, off water and >=40u outside every safe area, and >=5/8 20u walk-ins REACH it with the real mover. Grades from the position hash (weights 70/20/8/2), same as converted map trees.",
+ "$comment_jangan_south_plains": "Generated 2026-08-16 by `survey-walks pads --zone jangan_province --rect 9800,600,10450,1200 --count 12`. 12 seams, y -1..10. Filters: >=26u apart (incl. from every other placement in this zone), ground within 3u across a 18u approach ring and 0.5u across a 2.5u seat ring, >=9u clear of any static mesh, unblocked, not a stacked deck, boot yHint=0 seats on the same surface, off water and >=40u outside every safe area, and >=5/8 20u walk-ins REACH it with the real mover. Grades from the position hash (weights 70/20/8/2), same as converted map trees.",
+ "$comment_europe_golden_plain": "Generated 2026-08-16 by `survey-walks pads --zone europe_province --rect -18700,1440,-18400,1640 --count 13`. 13 seams, y 128..128. Filters: >=26u apart (incl. from every other placement in this zone), ground within 3u across a 18u approach ring and 0.5u across a 2.5u seat ring, >=9u clear of any static mesh, unblocked, not a stacked deck, boot yHint=0 seats on the same surface, off water and >=40u outside every safe area, and >=5/8 20u walk-ins REACH it with the real mover. Grades from the position hash (weights 70/20/8/2), same as converted map trees.",
+ "$comment_europe_eastern_plain": "Generated 2026-08-16 by `survey-walks pads --zone europe_province --rect -17100,4560,-16700,4850 --count 12`. 12 seams, y 0..7. Filters: >=26u apart (incl. from every other placement in this zone), ground within 3u across a 18u approach ring and 0.5u across a 2.5u seat ring, >=9u clear of any static mesh, unblocked, not a stacked deck, boot yHint=0 seats on the same surface, off water and >=40u outside every safe area, and >=5/8 20u walk-ins REACH it with the real mover. Grades from the position hash (weights 70/20/8/2), same as converted map trees.",
+ "placements": [
+  {
+   "zone": "jangan_province",
+   "x": 10492,
+   "z": 666,
+   "node": "rock",
+   "grade": "yellow"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10548,
+   "z": 550,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10516,
+   "z": 682,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10536,
+   "z": 702,
+   "node": "rock",
+   "grade": "red"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10580,
+   "z": 582,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10520,
+   "z": 546,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10992,
+   "z": 670,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10900,
+   "z": 530,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10924,
+   "z": 542,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10480,
+   "z": 634,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10924,
+   "z": 514,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10868,
+   "z": 730,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10548,
+   "z": 726,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10920,
+   "z": 618,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10548,
+   "z": 578,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10848,
+   "z": 262,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 11012,
+   "z": 650,
+   "node": "rock",
+   "grade": "red"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10904,
+   "z": 494,
+   "node": "rock",
+   "grade": "red"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10876,
+   "z": 486,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10864,
+   "z": 330,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10804,
+   "z": 606,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 11004,
+   "z": 622,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 11024,
+   "z": 678,
+   "node": "rock",
+   "grade": "red"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10872,
+   "z": 282,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7474,
+   "z": 64,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7278,
+   "z": 124,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7154,
+   "z": 48,
+   "node": "rock",
+   "grade": "yellow"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7346,
+   "z": 108,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7490,
+   "z": 40,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7458,
+   "z": 88,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7358,
+   "z": 132,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7338,
+   "z": 152,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7302,
+   "z": 112,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7258,
+   "z": 96,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7234,
+   "z": 124,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7474,
+   "z": 192,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 7350,
+   "z": 220,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10424,
+   "z": 940,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10424,
+   "z": 1016,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10364,
+   "z": 888,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10400,
+   "z": 952,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10300,
+   "z": 1032,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 9976,
+   "z": 964,
+   "node": "rock",
+   "grade": "yellow"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10244,
+   "z": 824,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10340,
+   "z": 872,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10168,
+   "z": 724,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10428,
+   "z": 1148,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 10368,
+   "z": 1100,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "jangan_province",
+   "x": 9948,
+   "z": 948,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18592,
+   "z": 1440,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18592,
+   "z": 1468,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18592,
+   "z": 1496,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18580,
+   "z": 1520,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18568,
+   "z": 1480,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18564,
+   "z": 1452,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18436,
+   "z": 1440,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18432,
+   "z": 1472,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18620,
+   "z": 1440,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18404,
+   "z": 1472,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18436,
+   "z": 1512,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18464,
+   "z": 1440,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "europe_province",
+   "x": -18604,
+   "z": 1536,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -16768,
+   "z": 4592,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -16704,
+   "z": 4704,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -16704,
+   "z": 4732,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -16704,
+   "z": 4768,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -16704,
+   "z": 4796,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -16884,
+   "z": 4796,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -16868,
+   "z": 4768,
+   "node": "rock",
+   "grade": "blue"
+  },
+  {
+   "zone": "europe_province",
+   "x": -16896,
+   "z": 4768,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -17028,
+   "z": 4728,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -16840,
+   "z": 4768,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -16928,
+   "z": 4764,
+   "node": "rock",
+   "grade": "green"
+  },
+  {
+   "zone": "europe_province",
+   "x": -16856,
+   "z": 4792,
+   "node": "rock",
+   "grade": "green"
+  }
+ ]
+}

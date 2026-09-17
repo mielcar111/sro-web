@@ -1,0 +1,6123 @@
+{
+  "kaynak": "referans istemci playjs index-CMAf3Hp2.js  (JQ(name, opcode, zodSchema, rateClass) kayitlari; 2026-09-03 canli paketle esitlendi, eski dokum: index-BUMMQVRB)",
+  "gosterim": {
+    "?": "optional",
+    "|null": "nullable",
+    "=X": "default deger",
+    "[T]": "T dizisi",
+    "[\"a\",\"b\"]": "enum",
+    "const:x": "z.literal(x)",
+    "@Ad": "tipler[Ad] referansi",
+    "int(0..159)": "z.number().int().min(0).max(159)",
+    "string(len1..30)": "z.string().min(1).max(30) -- string icin min/max UZUNLUKTUR",
+    "__tip__": "nesne/dizi/enum/birlesim/ayrik_birlesim/demet/kayit -- bayrak tasiyan bilesik tip",
+    "yon": "opcode<128 c2s, 128-216 s2c, >=240 sys (gorevde verilen kural)",
+    "gozlem_yon": "istemci kodunda send()/on() kullanimindan gozlenen gercek yon (yon ile celisiyorsa yazildi)"
+  },
+  "mesajlar": {
+    "auth": {
+      "opcode": 1,
+      "yon": "c2s",
+      "rateClass": "auth",
+      "alanlar": {
+        "ticket": "string?",
+        "resumeToken": "string?",
+        "version": "string?",
+        "proto": "int?"
+      }
+    },
+    "ping": {
+      "opcode": 2,
+      "yon": "c2s",
+      "rateClass": "ping",
+      "alanlar": {
+        "t": "number"
+      }
+    },
+    "move.click": {
+      "opcode": 16,
+      "yon": "c2s",
+      "rateClass": "move",
+      "alanlar": {
+        "x": "number",
+        "z": "number"
+      }
+    },
+    "move.stop": {
+      "opcode": 17,
+      "yon": "c2s",
+      "rateClass": "move",
+      "alanlar": {}
+    },
+    "target.set": {
+      "opcode": 18,
+      "yon": "c2s",
+      "rateClass": "move",
+      "alanlar": {
+        "id": "int"
+      }
+    },
+    "target.clear": {
+      "opcode": 19,
+      "yon": "c2s",
+      "rateClass": "move",
+      "alanlar": {}
+    },
+    "combat.attack": {
+      "opcode": 20,
+      "yon": "c2s",
+      "rateClass": "combat",
+      "alanlar": {
+        "id": "int"
+      }
+    },
+    "combat.stop": {
+      "opcode": 21,
+      "yon": "c2s",
+      "rateClass": "combat",
+      "alanlar": {}
+    },
+    "skill.cast": {
+      "opcode": 22,
+      "yon": "c2s",
+      "rateClass": "combat",
+      "alanlar": {
+        "groupId": "string",
+        "targetId": "int?",
+        "gx": "number?",
+        "gz": "number?",
+        "stage": "int(1..7)?",
+        "aid": "int?"
+      }
+    },
+    "buff.cancel": {
+      "opcode": 23,
+      "yon": "c2s",
+      "rateClass": "combat",
+      "alanlar": {
+        "groupId": "string"
+      }
+    },
+    "macro.save": {
+      "opcode": 24,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "v": "const:1",
+        "attack": {
+          "__tip__": "dizi",
+          "__eleman__": "string(len<=64)",
+          "__uzunluk__": "<=12"
+        },
+        "buffs": {
+          "__tip__": "dizi",
+          "__eleman__": "string(len<=64)",
+          "__uzunluk__": "<=12"
+        },
+        "attack2": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "t": [
+              "skill",
+              "auto",
+              "weapon"
+            ],
+            "id": "string(len<=64)?",
+            "cond": {
+              "__tip__": "enum",
+              "__degerler__": [
+                "champion",
+                "giant",
+                "unique",
+                "special"
+              ],
+              "__opsiyonel__": true
+            }
+          },
+          "__opsiyonel__": true,
+          "__uzunluk__": "<=12"
+        },
+        "buffs2": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "t": [
+              "skill",
+              "auto",
+              "weapon"
+            ],
+            "id": "string(len<=64)?",
+            "cond": {
+              "__tip__": "enum",
+              "__degerler__": [
+                "champion",
+                "giant",
+                "unique",
+                "special"
+              ],
+              "__opsiyonel__": true
+            }
+          },
+          "__opsiyonel__": true,
+          "__uzunluk__": "<=12"
+        },
+        "radiusU": "number(10..150)",
+        "skipChampions": "bool",
+        "skipGiants": "bool",
+        "skipUniques": "bool",
+        "autoAttackFiller": "bool",
+        "roam": "bool?",
+        "noLimit": "bool?",
+        "speedItem": "string(len<=64)?"
+      }
+    },
+    "item.spscroll": {
+      "opcode": 25,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "op",
+        "__secenekler__": [
+          {
+            "op": "const:create",
+            "bagSlot": "int(0..383)",
+            "tier": "int(0..2)"
+          },
+          {
+            "op": "const:use",
+            "bagSlot": "int(0..383)"
+          }
+        ]
+      }
+    },
+    "autopotion.save": {
+      "opcode": 30,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "v": "const:1",
+        "hp": {
+          "itemDefId": "string(len<=64)|null",
+          "enabled": "bool",
+          "thresholdPct": "int(10..90)"
+        },
+        "mp": {
+          "itemDefId": "string(len<=64)|null",
+          "enabled": "bool",
+          "thresholdPct": "int(10..90)"
+        },
+        "pill": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "itemDefId": "string(len<=64)|null",
+            "enabled": "bool"
+          },
+          "__opsiyonel__": true
+        },
+        "petHp": {
+          "itemDefId": "string(len<=64)|null",
+          "enabled": "bool",
+          "thresholdPct": "int(10..90)",
+          "target": [
+            "growth",
+            "mount"
+          ]
+        },
+        "petHgp": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "itemDefId": "string(len<=64)|null",
+            "enabled": "bool",
+            "thresholdPct": "int(10..90)"
+          },
+          "__opsiyonel__": true
+        },
+        "vigor": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "itemDefId": "string(len<=64)|null",
+            "hpEnabled": "bool",
+            "hpThresholdPct": "int(10..90)",
+            "mpEnabled": "bool",
+            "mpThresholdPct": "int(10..90)"
+          },
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "hotbar.save": {
+      "opcode": 31,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "v": "const:1",
+        "page": "int(0..3)",
+        "pages": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "__tip__": "dizi",
+            "__eleman__": {
+              "__tip__": "birlesim",
+              "__secenekler__": [
+                {
+                  "kind": "const:skill",
+                  "groupId": "string(len<=64)"
+                },
+                {
+                  "kind": "const:item",
+                  "itemDefId": "string(len<=64)"
+                },
+                {
+                  "kind": "const:action",
+                  "actionId": "string(len<=32)"
+                }
+              ],
+              "__null__": true
+            },
+            "__uzunluk__": "len=10"
+          },
+          "__uzunluk__": "len=4"
+        },
+        "m": {
+          "__tip__": "birlesim",
+          "__secenekler__": [
+            {
+              "kind": "const:skill",
+              "groupId": "string(len<=64)"
+            },
+            {
+              "kind": "const:item",
+              "itemDefId": "string(len<=64)"
+            },
+            {
+              "kind": "const:action",
+              "actionId": "string(len<=32)"
+            }
+          ],
+          "__null__": true
+        },
+        "extra": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "__tip__": "birlesim",
+            "__secenekler__": [
+              {
+                "kind": "const:skill",
+                "groupId": "string(len<=64)"
+              },
+              {
+                "kind": "const:item",
+                "itemDefId": "string(len<=64)"
+              },
+              {
+                "kind": "const:action",
+                "actionId": "string(len<=32)"
+              }
+            ],
+            "__null__": true
+          },
+          "__uzunluk__": "len=10"
+        }
+      }
+    },
+    "stats.allocate": {
+      "opcode": 32,
+      "yon": "c2s",
+      "rateClass": "progression",
+      "alanlar": {
+        "str": "int(0..1000)",
+        "int": "int(0..1000)"
+      }
+    },
+    "mastery.raise": {
+      "opcode": 33,
+      "yon": "c2s",
+      "rateClass": "progression",
+      "alanlar": {
+        "masteryId": "string"
+      }
+    },
+    "skill.learn": {
+      "opcode": 34,
+      "yon": "c2s",
+      "rateClass": "progression",
+      "alanlar": {
+        "skillId": "string"
+      }
+    },
+    "profession.learn": {
+      "opcode": 35,
+      "yon": "c2s",
+      "rateClass": "progression",
+      "alanlar": {
+        "npcId": "string",
+        "professionId": "string"
+      }
+    },
+    "gather.start": {
+      "opcode": 36,
+      "yon": "c2s",
+      "rateClass": "combat",
+      "alanlar": {
+        "nodeId": "int"
+      }
+    },
+    "gather.cancel": {
+      "opcode": 37,
+      "yon": "c2s",
+      "rateClass": "combat",
+      "alanlar": {}
+    },
+    "stone.craft": {
+      "opcode": 38,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "stoneId": "string"
+      }
+    },
+    "stone.apply": {
+      "opcode": 39,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "target": {
+          "c": [
+            "bag",
+            "equip"
+          ],
+          "i": "int(0..159)"
+        },
+        "stone": {
+          "c": [
+            "bag",
+            "equip"
+          ],
+          "i": "int(0..159)"
+        }
+      }
+    },
+    "carrier.op": {
+      "opcode": 40,
+      "yon": "c2s",
+      "rateClass": "shop",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "op",
+        "__secenekler__": [
+          {
+            "op": "const:confirm",
+            "lines": {
+              "__tip__": "dizi",
+              "__eleman__": {
+                "npcId": "string(len<=64)",
+                "itemId": "string(len<=64)",
+                "qty": "int(1..9999)"
+              },
+              "__uzunluk__": "1..32"
+            }
+          },
+          {
+            "op": "const:collect",
+            "slot": "int(0..63)",
+            "qty": "int(1..9999)"
+          },
+          {
+            "op": "const:collectAll"
+          }
+        ]
+      }
+    },
+    "profession.scroll": {
+      "opcode": 41,
+      "yon": "c2s",
+      "rateClass": "progression",
+      "alanlar": {
+        "bagSlot": "int(0..383)"
+      }
+    },
+    "item.repairHammer": {
+      "opcode": 42,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "bagSlot": "int(0..383)"
+      }
+    },
+    "inv.split": {
+      "opcode": 43,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "bagSlot": "int(0..383)",
+        "itemId": "string",
+        "qty": "int(1..1000)"
+      }
+    },
+    "inv.destroy": {
+      "opcode": 47,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "bagSlot": "int(0..383)",
+        "itemId": "string",
+        "qty": "int(1..1000)"
+      }
+    },
+    "inv.move": {
+      "opcode": 48,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "from": {
+          "c": [
+            "bag",
+            "equip"
+          ],
+          "i": "int(0..159)"
+        },
+        "to": {
+          "c": [
+            "bag",
+            "equip"
+          ],
+          "i": "int(0..159)"
+        }
+      }
+    },
+    "inv.use": {
+      "opcode": 49,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "bagSlot": "int(0..383)",
+        "petTarget": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "growth",
+            "mount"
+          ],
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "loot.pickup": {
+      "opcode": 50,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "id": "int"
+      }
+    },
+    "shop.buy": {
+      "opcode": 51,
+      "yon": "c2s",
+      "rateClass": "shop",
+      "alanlar": {
+        "npcId": "string",
+        "itemId": "string",
+        "qty": "int(1..1000)"
+      }
+    },
+    "shop.sell": {
+      "opcode": 52,
+      "yon": "c2s",
+      "rateClass": "shop",
+      "alanlar": {
+        "npcId": "string",
+        "bagSlot": "int(0..383)",
+        "qty": "int(1..1000)"
+      }
+    },
+    "item.enhance": {
+      "opcode": 53,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "elixir": {
+          "c": [
+            "bag",
+            "equip"
+          ],
+          "i": "int(0..159)"
+        },
+        "target": {
+          "c": [
+            "bag",
+            "equip"
+          ],
+          "i": "int(0..159)"
+        },
+        "powder": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "c": [
+              "bag",
+              "equip"
+            ],
+            "i": "int(0..159)"
+          },
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "item.repair": {
+      "opcode": 54,
+      "yon": "c2s",
+      "rateClass": "shop",
+      "alanlar": {
+        "npcId": "string"
+      }
+    },
+    "trade.request": {
+      "opcode": 55,
+      "yon": "c2s",
+      "rateClass": "trade",
+      "alanlar": {
+        "targetId": "int"
+      }
+    },
+    "trade.respond": {
+      "opcode": 56,
+      "yon": "c2s",
+      "rateClass": "trade",
+      "alanlar": {
+        "accept": "bool"
+      }
+    },
+    "trade.offerItem": {
+      "opcode": 57,
+      "yon": "c2s",
+      "rateClass": "trade",
+      "alanlar": {
+        "bagSlot": "int(0..383)",
+        "qty": "int(1..1000)"
+      }
+    },
+    "trade.retract": {
+      "opcode": 58,
+      "yon": "c2s",
+      "rateClass": "trade",
+      "alanlar": {
+        "bagSlot": "int(0..383)"
+      }
+    },
+    "trade.setGold": {
+      "opcode": 59,
+      "yon": "c2s",
+      "rateClass": "trade",
+      "alanlar": {
+        "gold": "int(>=0)"
+      }
+    },
+    "trade.approve": {
+      "opcode": 60,
+      "yon": "c2s",
+      "rateClass": "trade",
+      "alanlar": {
+        "rev": "int(>=0)"
+      }
+    },
+    "trade.unapprove": {
+      "opcode": 61,
+      "yon": "c2s",
+      "rateClass": "trade",
+      "alanlar": {}
+    },
+    "trade.confirm": {
+      "opcode": 62,
+      "yon": "c2s",
+      "rateClass": "trade",
+      "alanlar": {
+        "rev": "int(>=0)"
+      }
+    },
+    "trade.cancel": {
+      "opcode": 63,
+      "yon": "c2s",
+      "rateClass": "trade",
+      "alanlar": {}
+    },
+    "chat.send": {
+      "opcode": 64,
+      "yon": "c2s",
+      "rateClass": "chat",
+      "alanlar": {
+        "ch": [
+          "local",
+          "global",
+          "party",
+          "guild"
+        ],
+        "text": "string(len1..200)"
+      }
+    },
+    "pet.summon": {
+      "opcode": 65,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "bagSlot": "int(0..383)",
+        "settings": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "grab": "bool",
+            "scope": [
+              "own",
+              "all"
+            ],
+            "gold": "bool",
+            "equipment": "bool",
+            "other": "bool"
+          },
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "pet.dismiss": {
+      "opcode": 66,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {}
+    },
+    "pet.settings": {
+      "opcode": 67,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "grab": "bool",
+        "scope": [
+          "own",
+          "all"
+        ],
+        "gold": "bool",
+        "equipment": "bool",
+        "other": "bool"
+      }
+    },
+    "chat.whisper": {
+      "opcode": 68,
+      "yon": "c2s",
+      "rateClass": "chat",
+      "alanlar": {
+        "to": "string(len1..16)",
+        "text": "string(len1..200)"
+      }
+    },
+    "mount.use": {
+      "opcode": 69,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "bagSlot": "int(0..383)"
+      }
+    },
+    "mount.dismount": {
+      "opcode": 70,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {}
+    },
+    "party.create": {
+      "opcode": 71,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "expShare": "bool",
+        "itemShare": "bool"
+      }
+    },
+    "party.match": {
+      "opcode": 72,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "op",
+        "__secenekler__": [
+          {
+            "op": "const:sub"
+          },
+          {
+            "op": "const:unsub"
+          },
+          {
+            "op": "const:register",
+            "title": "string(len1..64)",
+            "raceReq": [
+              "chinese",
+              "european",
+              "both"
+            ],
+            "minLevel": "int(1..200)",
+            "maxLevel": "int(1..200)"
+          },
+          {
+            "op": "const:unregister"
+          },
+          {
+            "op": "const:apply",
+            "matchId": "int(>0)"
+          },
+          {
+            "op": "const:applyCancel"
+          },
+          {
+            "op": "const:applyRespond",
+            "applicantCharId": "string",
+            "accept": "bool"
+          }
+        ]
+      }
+    },
+    "gpet.summon": {
+      "opcode": 73,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "bagSlot": "int(0..383)"
+      }
+    },
+    "gpet.dismiss": {
+      "opcode": 74,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {}
+    },
+    "gpet.command": {
+      "opcode": 75,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "op",
+        "__secenekler__": [
+          {
+            "op": "const:attack",
+            "targetId": "int"
+          },
+          {
+            "op": "const:follow"
+          },
+          {
+            "op": "const:mode",
+            "mode": [
+              "offensive",
+              "defensive"
+            ]
+          }
+        ]
+      }
+    },
+    "respawn.request": {
+      "opcode": 80,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {}
+    },
+    "zone.ready": {
+      "opcode": 81,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {}
+    },
+    "teleport.use": {
+      "opcode": 82,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "teleporterId": "string",
+        "destId": "string"
+      }
+    },
+    "return.start": {
+      "opcode": 83,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {}
+    },
+    "return.cancel": {
+      "opcode": 84,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {}
+    },
+    "revive.respond": {
+      "opcode": 85,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "offerId": "int",
+        "accept": "bool"
+      }
+    },
+    "taction.teleport": {
+      "opcode": 86,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "presetId": "string(len>=1)"
+      }
+    },
+    "world.logout": {
+      "opcode": 87,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {}
+    },
+    "party.invite": {
+      "opcode": 88,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "targetId": "int"
+      }
+    },
+    "party.respond": {
+      "opcode": 89,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "accept": "bool"
+      }
+    },
+    "party.leave": {
+      "opcode": 90,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {}
+    },
+    "party.kick": {
+      "opcode": 91,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "charId": "string"
+      }
+    },
+    "party.lead": {
+      "opcode": 92,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "charId": "string"
+      }
+    },
+    "unique.op": {
+      "opcode": 93,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "op",
+        "__secenekler__": [
+          {
+            "op": "const:board"
+          },
+          {
+            "op": "const:levelBoard"
+          },
+          {
+            "op": "const:professionBoard",
+            "professionId": "string(len1..64)"
+          }
+        ]
+      }
+    },
+    "item.reset": {
+      "opcode": 94,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "op",
+        "__secenekler__": [
+          {
+            "op": "const:stats",
+            "bagSlot": "int(0..383)"
+          },
+          {
+            "op": "const:mastery",
+            "bagSlot": "int(0..383)",
+            "masteryId": "string"
+          }
+        ]
+      }
+    },
+    "bank.moveItem": {
+      "opcode": 95,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "npcId": "string",
+        "from": "int(0..359)",
+        "to": "int(0..359)"
+      }
+    },
+    "exch.open": {
+      "opcode": 96,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {}
+    },
+    "exch.close": {
+      "opcode": 97,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {}
+    },
+    "exch.place": {
+      "opcode": 98,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "side": [
+          "buy",
+          "sell"
+        ],
+        "price": "int(100..2000000000)",
+        "qtyUnits": "int(100..100000000)",
+        "tif": [
+          "gtc",
+          "ioc"
+        ]
+      }
+    },
+    "exch.cancel": {
+      "opcode": 99,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "orderId": "string"
+      }
+    },
+    "exch.withdrawGold": {
+      "opcode": 100,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "amount": "int(1..999999999999)"
+      }
+    },
+    "exch.mockDeposit": {
+      "opcode": 101,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "jadeUnits": "int(1..10000000000)"
+      }
+    },
+    "exch.mockWithdraw": {
+      "opcode": 102,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "jadeUnits": "int(>=1)"
+      }
+    },
+    "exch.stake": {
+      "opcode": 103,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "lockDays": "int(1..365)",
+        "jadeUnits": "int(100..100000000)"
+      }
+    },
+    "exch.claimStake": {
+      "opcode": 104,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "stakeId": "string"
+      }
+    },
+    "bank.depositGold": {
+      "opcode": 105,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "npcId": "string",
+        "amount": "int(1..999999999999)"
+      }
+    },
+    "bank.withdrawGold": {
+      "opcode": 106,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "npcId": "string",
+        "amount": "int(1..999999999999)"
+      }
+    },
+    "bank.depositItem": {
+      "opcode": 107,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "npcId": "string",
+        "bagSlot": "int(0..383)",
+        "qty": "int(1..1000)",
+        "slot": "int(0..359)?"
+      }
+    },
+    "bank.withdrawItem": {
+      "opcode": 108,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "alanlar": {
+        "npcId": "string",
+        "bankSlot": "int(0..359)",
+        "qty": "int(1..1000)"
+      }
+    },
+    "stall.open": {
+      "opcode": 109,
+      "yon": "c2s",
+      "rateClass": "stall",
+      "alanlar": {
+        "title": "string(len1..30)",
+        "notice": "string(len0..64)",
+        "color": "int(0..7)",
+        "items": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "bagSlot": "int(0..383)",
+            "qty": "int(1..1000)",
+            "price": "int(1..999999999999)"
+          },
+          "__uzunluk__": "1..10"
+        }
+      }
+    },
+    "stall.close": {
+      "opcode": 110,
+      "yon": "c2s",
+      "rateClass": "stall",
+      "alanlar": {}
+    },
+    "stall.modify": {
+      "opcode": 111,
+      "yon": "c2s",
+      "rateClass": "stall",
+      "alanlar": {}
+    },
+    "stall.update": {
+      "opcode": 112,
+      "yon": "c2s",
+      "rateClass": "stall",
+      "alanlar": {
+        "title": "string(len1..30)",
+        "notice": "string(len0..64)",
+        "color": "int(0..7)",
+        "items": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "bagSlot": "int(0..383)",
+            "qty": "int(1..1000)",
+            "price": "int(1..999999999999)"
+          },
+          "__uzunluk__": "1..10"
+        }
+      }
+    },
+    "stall.enter": {
+      "opcode": 113,
+      "yon": "c2s",
+      "rateClass": "stall",
+      "alanlar": {
+        "ownerId": "int"
+      }
+    },
+    "stall.leave": {
+      "opcode": 114,
+      "yon": "c2s",
+      "rateClass": "stall",
+      "alanlar": {}
+    },
+    "stall.buy": {
+      "opcode": 115,
+      "yon": "c2s",
+      "rateClass": "shop",
+      "alanlar": {
+        "ownerId": "int",
+        "bagSlot": "int(0..383)"
+      }
+    },
+    "quest.accept": {
+      "opcode": 116,
+      "yon": "c2s",
+      "rateClass": "quest",
+      "alanlar": {
+        "questId": "string"
+      }
+    },
+    "quest.abandon": {
+      "opcode": 117,
+      "yon": "c2s",
+      "rateClass": "quest",
+      "alanlar": {
+        "questId": "string"
+      }
+    },
+    "quest.claim": {
+      "opcode": 118,
+      "yon": "c2s",
+      "rateClass": "quest",
+      "alanlar": {
+        "questId": "string"
+      }
+    },
+    "mall.buy": {
+      "opcode": 119,
+      "yon": "c2s",
+      "rateClass": "shop",
+      "alanlar": {
+        "itemId": "string(len>=1)"
+      }
+    },
+    "premium.buy": {
+      "opcode": 120,
+      "yon": "c2s",
+      "rateClass": "shop",
+      "alanlar": {
+        "tier": [
+          "bronze",
+          "silver",
+          "gold"
+        ]
+      }
+    },
+    "guild.create": {
+      "opcode": 121,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "alanlar": {
+        "name": "string(len3..16)"
+      }
+    },
+    "guild.manage": {
+      "opcode": 122,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "op",
+        "__secenekler__": [
+          {
+            "op": "const:invite",
+            "targetId": "int"
+          },
+          {
+            "op": "const:respond",
+            "accept": "bool"
+          },
+          {
+            "op": "const:leave"
+          },
+          {
+            "op": "const:kick",
+            "charId": "string"
+          },
+          {
+            "op": "const:setRank",
+            "charId": "string",
+            "rank": [
+              "master",
+              "officer",
+              "member",
+              "recruit"
+            ]
+          },
+          {
+            "op": "const:setPerms",
+            "charId": "string",
+            "perms": "int(0..31)"
+          },
+          {
+            "op": "const:notice",
+            "text": "string(len<=500)"
+          },
+          {
+            "op": "const:transfer",
+            "charId": "string"
+          },
+          {
+            "op": "const:disband"
+          },
+          {
+            "op": "const:apply",
+            "guildId": "string"
+          },
+          {
+            "op": "const:applyCancel",
+            "guildId": "string"
+          },
+          {
+            "op": "const:applyRespond",
+            "charId": "string",
+            "accept": "bool"
+          }
+        ]
+      }
+    },
+    "guild.bank": {
+      "opcode": 123,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "op",
+        "__secenekler__": [
+          {
+            "op": "const:open",
+            "npcId": "string"
+          },
+          {
+            "op": "const:depositGold",
+            "npcId": "string",
+            "amount": "int(1..999999999999)"
+          },
+          {
+            "op": "const:withdrawGold",
+            "npcId": "string",
+            "amount": "int(1..999999999999)"
+          },
+          {
+            "op": "const:depositItem",
+            "npcId": "string",
+            "bagSlot": "int(0..383)",
+            "qty": "int(1..1000)",
+            "slot": "int(0..127)?"
+          },
+          {
+            "op": "const:withdrawItem",
+            "npcId": "string",
+            "bankSlot": "int(0..127)",
+            "qty": "int(1..1000)"
+          },
+          {
+            "op": "const:moveItem",
+            "npcId": "string",
+            "from": "int(0..127)",
+            "to": "int(0..127)"
+          }
+        ]
+      }
+    },
+    "guild.query": {
+      "opcode": 124,
+      "yon": "c2s",
+      "rateClass": "misc",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "op",
+        "__secenekler__": [
+          {
+            "op": "const:directory",
+            "page": "int(>=0)",
+            "search": "string(len<=16)?"
+          },
+          {
+            "op": "const:log",
+            "page": "int(>=0)"
+          }
+        ]
+      }
+    },
+    "auction.op": {
+      "opcode": 125,
+      "yon": "c2s",
+      "rateClass": "exchange",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "op",
+        "__secenekler__": [
+          {
+            "op": "const:sub"
+          },
+          {
+            "op": "const:unsub"
+          },
+          {
+            "op": "const:list",
+            "page": "int(0..9999)"
+          },
+          {
+            "op": "const:create",
+            "auctioneerSlot": "int(0..159)",
+            "itemSlot": "int(0..159)",
+            "startPrice": "int(1..999999999999)",
+            "buyNowPrice": "int(2..999999999999)",
+            "durationH": {
+              "__tip__": "birlesim",
+              "__secenekler__": [
+                "const:7",
+                "const:24",
+                "const:48"
+              ]
+            }
+          },
+          {
+            "op": "const:bid",
+            "auctionId": "string(uuid)",
+            "amount": "int(1..999999999999)"
+          },
+          {
+            "op": "const:buyNow",
+            "auctionId": "string(uuid)"
+          },
+          {
+            "op": "const:cancel",
+            "auctionId": "string(uuid)"
+          },
+          {
+            "op": "const:claim",
+            "auctionId": "string(uuid)"
+          }
+        ]
+      }
+    },
+    "item.expand": {
+      "opcode": 126,
+      "yon": "c2s",
+      "rateClass": "inv",
+      "alanlar": {
+        "bagSlot": "int(0..383)"
+      }
+    },
+    "hello": {
+      "opcode": 128,
+      "yon": "s2c",
+      "alanlar": {
+        "worldId": "string",
+        "proto": "int",
+        "serverTime": "number",
+        "requiredVersion": "string?"
+      }
+    },
+    "auth.ok": {
+      "opcode": 129,
+      "yon": "s2c",
+      "alanlar": {
+        "charId": "string",
+        "resumeToken": "string"
+      }
+    },
+    "pong": {
+      "opcode": 130,
+      "yon": "s2c",
+      "alanlar": {
+        "t": "number",
+        "serverTime": "number"
+      }
+    },
+    "zone.init": {
+      "opcode": 131,
+      "yon": "s2c",
+      "alanlar": {
+        "zoneId": "string",
+        "zoneName": "string",
+        "kind": [
+          "safe",
+          "field"
+        ],
+        "tick": "int",
+        "serverTime": "number",
+        "self": {
+          "entityId": "int",
+          "charId": "string",
+          "name": "string",
+          "race": "string",
+          "style": "string",
+          "gender": [
+            "male",
+            "female"
+          ],
+          "level": "int",
+          "xp": "int",
+          "xpToNext": "int|null",
+          "spExp": "int",
+          "spExpToNext": "int",
+          "sp": "int",
+          "statPoints": "int",
+          "str": "int",
+          "int": "int",
+          "hp": "int",
+          "mp": "int",
+          "derived": {
+            "maxHp": "int",
+            "maxMp": "int",
+            "physAtkMin": "number",
+            "physAtkMax": "number",
+            "magAtkMin": "number",
+            "magAtkMax": "number",
+            "physAtkIncPct": "number",
+            "magAtkIncPct": "number",
+            "dmgIncPct": "number",
+            "physDef": "number",
+            "magDef": "number",
+            "physBalancePct": "number",
+            "magBalancePct": "number",
+            "hitRatio": "number",
+            "parryRatio": "number",
+            "blockRatio": "number",
+            "critRating": "number",
+            "physAbsorb": "number",
+            "magAbsorb": "number",
+            "mpDiscountPct": "number=0?",
+            "statusResists": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "fb": "number",
+                "es": "number",
+                "bu": "number",
+                "ps": "number",
+                "zb": "number"
+              },
+              "__opsiyonel__": true
+            }
+          },
+          "masteries": [
+            {
+              "masteryId": "string",
+              "level": "int(>=1)"
+            }
+          ],
+          "professions": {
+            "__tip__": "dizi",
+            "__eleman__": {
+              "id": "string",
+              "level": "int",
+              "xp": "int",
+              "xpToNext": "int|null"
+            },
+            "__opsiyonel__": true
+          },
+          "knownSkills": [
+            "string"
+          ],
+          "buffs": [
+            {
+              "groupId": "string",
+              "category": [
+                "imbue",
+                "stat",
+                "hawk"
+              ],
+              "expiresAt": "number",
+              "pool": "number?",
+              "poolMax": "number?",
+              "allyCast": "bool?",
+              "maintained": "bool?"
+            }
+          ],
+          "statuses": {
+            "__tip__": "dizi",
+            "__eleman__": {
+              "iid": "int",
+              "code": "string",
+              "level": "int",
+              "expiresAt": "number",
+              "srcId": "int?",
+              "skillId": "string?"
+            },
+            "__opsiyonel__": true
+          },
+          "inventory": {
+            "gold": "int(>=0)",
+            "bag": [
+              {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              }
+            ],
+            "equip": {
+              "weapon": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "shield": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "head": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "shoulder": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "chest": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "gloves": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "pants": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "boots": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "avatarDress": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "avatarHat": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "avatarAttach": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "earring": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "necklace": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "ringL": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              },
+              "ringR": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "__null__": true
+              }
+            }
+          },
+          "dead": "bool",
+          "cooldowns": {
+            "__tip__": "dizi",
+            "__eleman__": {
+              "groupId": "string",
+              "readyAt": "number"
+            },
+            "__opsiyonel__": true
+          },
+          "potionCooldowns": {
+            "__tip__": "dizi",
+            "__eleman__": {
+              "group": "string",
+              "readyAt": "number"
+            },
+            "__opsiyonel__": true
+          },
+          "actionCooldowns": {
+            "__tip__": "dizi",
+            "__eleman__": {
+              "key": "string",
+              "readyAt": "number"
+            },
+            "__opsiyonel__": true
+          },
+          "premiumTier": {
+            "__tip__": "enum",
+            "__degerler__": [
+              "bronze",
+              "silver",
+              "gold"
+            ],
+            "__null__": true
+          },
+          "premiumExpiresAt": "number|null",
+          "guild": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "id": "string",
+              "name": "string",
+              "level": "int",
+              "rank": [
+                "master",
+                "officer",
+                "member",
+                "recruit"
+              ]
+            },
+            "__null__": true
+          },
+          "guildPenaltyUntil": "number|null?",
+          "safeUntil": "number?",
+          "hotbar": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "v": "const:1",
+              "page": "int(0..3)",
+              "pages": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "__tip__": "dizi",
+                  "__eleman__": {
+                    "__tip__": "birlesim",
+                    "__secenekler__": [
+                      {
+                        "kind": "const:skill",
+                        "groupId": "string(len<=64)"
+                      },
+                      {
+                        "kind": "const:item",
+                        "itemDefId": "string(len<=64)"
+                      },
+                      {
+                        "kind": "const:action",
+                        "actionId": "string(len<=32)"
+                      }
+                    ],
+                    "__null__": true
+                  },
+                  "__uzunluk__": "len=10"
+                },
+                "__uzunluk__": "len=4"
+              },
+              "m": {
+                "__tip__": "birlesim",
+                "__secenekler__": [
+                  {
+                    "kind": "const:skill",
+                    "groupId": "string(len<=64)"
+                  },
+                  {
+                    "kind": "const:item",
+                    "itemDefId": "string(len<=64)"
+                  },
+                  {
+                    "kind": "const:action",
+                    "actionId": "string(len<=32)"
+                  }
+                ],
+                "__null__": true
+              },
+              "extra": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "__tip__": "birlesim",
+                  "__secenekler__": [
+                    {
+                      "kind": "const:skill",
+                      "groupId": "string(len<=64)"
+                    },
+                    {
+                      "kind": "const:item",
+                      "itemDefId": "string(len<=64)"
+                    },
+                    {
+                      "kind": "const:action",
+                      "actionId": "string(len<=32)"
+                    }
+                  ],
+                  "__null__": true
+                },
+                "__uzunluk__": "len=10"
+              }
+            },
+            "__opsiyonel__": true,
+            "__null__": true
+          },
+          "autoPotion": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "v": "const:1",
+              "hp": {
+                "itemDefId": "string(len<=64)|null",
+                "enabled": "bool",
+                "thresholdPct": "int(10..90)"
+              },
+              "mp": {
+                "itemDefId": "string(len<=64)|null",
+                "enabled": "bool",
+                "thresholdPct": "int(10..90)"
+              },
+              "pill": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemDefId": "string(len<=64)|null",
+                  "enabled": "bool"
+                },
+                "__opsiyonel__": true
+              },
+              "petHp": {
+                "itemDefId": "string(len<=64)|null",
+                "enabled": "bool",
+                "thresholdPct": "int(10..90)",
+                "target": [
+                  "growth",
+                  "mount"
+                ]
+              },
+              "petHgp": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemDefId": "string(len<=64)|null",
+                  "enabled": "bool",
+                  "thresholdPct": "int(10..90)"
+                },
+                "__opsiyonel__": true
+              },
+              "vigor": {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "itemDefId": "string(len<=64)|null",
+                  "hpEnabled": "bool",
+                  "hpThresholdPct": "int(10..90)",
+                  "mpEnabled": "bool",
+                  "mpThresholdPct": "int(10..90)"
+                },
+                "__opsiyonel__": true
+              }
+            },
+            "__opsiyonel__": true,
+            "__null__": true
+          },
+          "macro": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "v": "const:1",
+              "attack": {
+                "__tip__": "dizi",
+                "__eleman__": "string(len<=64)",
+                "__uzunluk__": "<=12"
+              },
+              "buffs": {
+                "__tip__": "dizi",
+                "__eleman__": "string(len<=64)",
+                "__uzunluk__": "<=12"
+              },
+              "attack2": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "t": [
+                    "skill",
+                    "auto",
+                    "weapon"
+                  ],
+                  "id": "string(len<=64)?",
+                  "cond": {
+                    "__tip__": "enum",
+                    "__degerler__": [
+                      "champion",
+                      "giant",
+                      "unique",
+                      "special"
+                    ],
+                    "__opsiyonel__": true
+                  }
+                },
+                "__opsiyonel__": true,
+                "__uzunluk__": "<=12"
+              },
+              "buffs2": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "t": [
+                    "skill",
+                    "auto",
+                    "weapon"
+                  ],
+                  "id": "string(len<=64)?",
+                  "cond": {
+                    "__tip__": "enum",
+                    "__degerler__": [
+                      "champion",
+                      "giant",
+                      "unique",
+                      "special"
+                    ],
+                    "__opsiyonel__": true
+                  }
+                },
+                "__opsiyonel__": true,
+                "__uzunluk__": "<=12"
+              },
+              "radiusU": "number(10..150)",
+              "skipChampions": "bool",
+              "skipGiants": "bool",
+              "skipUniques": "bool",
+              "autoAttackFiller": "bool",
+              "roam": "bool?",
+              "noLimit": "bool?",
+              "speedItem": "string(len<=64)?"
+            },
+            "__opsiyonel__": true,
+            "__null__": true
+          }
+        },
+        "entities": [
+          {
+            "id": "int",
+            "kind": [
+              "player",
+              "monster",
+              "npc",
+              "ground_item",
+              "pet",
+              "growth_pet"
+            ],
+            "modelKey": "string",
+            "name": "string",
+            "x": "number",
+            "z": "number",
+            "y": "number?",
+            "rotY": "number",
+            "level": "int?",
+            "hp": "int?",
+            "maxHp": "int?",
+            "dead": "bool?",
+            "moving": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "tx": "number",
+                "tz": "number",
+                "speed": "number"
+              },
+              "__opsiyonel__": true
+            },
+            "npcId": "string?",
+            "itemId": "string?",
+            "qty": "int?",
+            "gold": "int?",
+            "rarity": {
+              "__tip__": "enum",
+              "__degerler__": [
+                "champion",
+                "giant",
+                "unique"
+              ],
+              "__opsiyonel__": true
+            },
+            "scalePct": "int?",
+            "premiumTier": {
+              "__tip__": "enum",
+              "__degerler__": [
+                "bronze",
+                "silver",
+                "gold"
+              ],
+              "__opsiyonel__": true
+            },
+            "guild": "string?",
+            "appearance": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "style": "string",
+                "equip": {
+                  "__tip__": "kayit",
+                  "__anahtar__": "string",
+                  "__deger__": "string"
+                }
+              },
+              "__opsiyonel__": true
+            },
+            "stall": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "title": "string",
+                "color": "int"
+              },
+              "__opsiyonel__": true
+            },
+            "mount": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "modelKey": "string",
+                "hp": "int",
+                "maxHp": "int"
+              },
+              "__opsiyonel__": true
+            },
+            "ownerId": "int?",
+            "casting": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "groupId": "string",
+                "castMs": "int",
+                "remainingMs": "int(>=0)",
+                "aid": "int?"
+              },
+              "__opsiyonel__": true
+            },
+            "buffs": {
+              "__tip__": "dizi",
+              "__eleman__": {
+                "groupId": "string",
+                "category": "string",
+                "expiresAt": "number",
+                "allyCast": "bool?",
+                "maintained": "bool?"
+              },
+              "__opsiyonel__": true
+            },
+            "statuses": {
+              "__tip__": "dizi",
+              "__eleman__": {
+                "iid": "int",
+                "code": "string",
+                "level": "int",
+                "expiresAt": "number",
+                "srcId": "int?",
+                "skillId": "string?"
+              },
+              "__opsiyonel__": true
+            },
+            "monsterAction": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "aid": "int",
+                "skillId": "string",
+                "slot": "string?",
+                "targetId": "int",
+                "contactRemainingMs": "int(>=0)",
+                "projectile": "bool?",
+                "school": {
+                  "__tip__": "enum",
+                  "__degerler__": [
+                    "physical",
+                    "magical"
+                  ],
+                  "__opsiyonel__": true
+                }
+              },
+              "__opsiyonel__": true
+            },
+            "nodeGrade": "string?",
+            "gathering": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "nodeId": "int",
+                "anim": [
+                  "cut",
+                  "mine"
+                ],
+                "swingMs": "int(>0)"
+              },
+              "__opsiyonel__": true
+            }
+          }
+        ]
+      }
+    },
+    "zone.transfer": {
+      "opcode": 132,
+      "yon": "s2c",
+      "alanlar": {
+        "zoneId": "string",
+        "wsUrl": "string?",
+        "ticket": "string?"
+      }
+    },
+    "state.delta": {
+      "opcode": 133,
+      "yon": "s2c",
+      "alanlar": {
+        "add": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "id": "int",
+            "kind": [
+              "player",
+              "monster",
+              "npc",
+              "ground_item",
+              "pet",
+              "growth_pet"
+            ],
+            "modelKey": "string",
+            "name": "string",
+            "x": "number",
+            "z": "number",
+            "y": "number?",
+            "rotY": "number",
+            "level": "int?",
+            "hp": "int?",
+            "maxHp": "int?",
+            "dead": "bool?",
+            "moving": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "tx": "number",
+                "tz": "number",
+                "speed": "number"
+              },
+              "__opsiyonel__": true
+            },
+            "npcId": "string?",
+            "itemId": "string?",
+            "qty": "int?",
+            "gold": "int?",
+            "rarity": {
+              "__tip__": "enum",
+              "__degerler__": [
+                "champion",
+                "giant",
+                "unique"
+              ],
+              "__opsiyonel__": true
+            },
+            "scalePct": "int?",
+            "premiumTier": {
+              "__tip__": "enum",
+              "__degerler__": [
+                "bronze",
+                "silver",
+                "gold"
+              ],
+              "__opsiyonel__": true
+            },
+            "guild": "string?",
+            "appearance": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "style": "string",
+                "equip": {
+                  "__tip__": "kayit",
+                  "__anahtar__": "string",
+                  "__deger__": "string"
+                }
+              },
+              "__opsiyonel__": true
+            },
+            "stall": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "title": "string",
+                "color": "int"
+              },
+              "__opsiyonel__": true
+            },
+            "mount": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "modelKey": "string",
+                "hp": "int",
+                "maxHp": "int"
+              },
+              "__opsiyonel__": true
+            },
+            "ownerId": "int?",
+            "casting": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "groupId": "string",
+                "castMs": "int",
+                "remainingMs": "int(>=0)",
+                "aid": "int?"
+              },
+              "__opsiyonel__": true
+            },
+            "buffs": {
+              "__tip__": "dizi",
+              "__eleman__": {
+                "groupId": "string",
+                "category": "string",
+                "expiresAt": "number",
+                "allyCast": "bool?",
+                "maintained": "bool?"
+              },
+              "__opsiyonel__": true
+            },
+            "statuses": {
+              "__tip__": "dizi",
+              "__eleman__": {
+                "iid": "int",
+                "code": "string",
+                "level": "int",
+                "expiresAt": "number",
+                "srcId": "int?",
+                "skillId": "string?"
+              },
+              "__opsiyonel__": true
+            },
+            "monsterAction": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "aid": "int",
+                "skillId": "string",
+                "slot": "string?",
+                "targetId": "int",
+                "contactRemainingMs": "int(>=0)",
+                "projectile": "bool?",
+                "school": {
+                  "__tip__": "enum",
+                  "__degerler__": [
+                    "physical",
+                    "magical"
+                  ],
+                  "__opsiyonel__": true
+                }
+              },
+              "__opsiyonel__": true
+            },
+            "nodeGrade": "string?",
+            "gathering": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "nodeId": "int",
+                "anim": [
+                  "cut",
+                  "mine"
+                ],
+                "swingMs": "int(>0)"
+              },
+              "__opsiyonel__": true
+            }
+          },
+          "__opsiyonel__": true
+        },
+        "rem": {
+          "__tip__": "dizi",
+          "__eleman__": "int",
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "entity.move": {
+      "opcode": 134,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "fx": "number",
+        "fz": "number",
+        "fy": "number?",
+        "tx": "number",
+        "tz": "number",
+        "speed": "number"
+      }
+    },
+    "entity.stop": {
+      "opcode": 135,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "x": "number",
+        "z": "number",
+        "y": "number?"
+      }
+    },
+    "entity.teleport": {
+      "opcode": 136,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "x": "number",
+        "z": "number",
+        "y": "number?",
+        "blink": "bool?"
+      }
+    },
+    "entity.hp": {
+      "opcode": 137,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "hp": "int",
+        "maxHp": "int"
+      }
+    },
+    "cast.start": {
+      "opcode": 138,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "groupId": "string",
+        "castMs": "int",
+        "targetId": "int?",
+        "aid": "int?",
+        "at": "number?",
+        "q": "int?"
+      }
+    },
+    "cast.ok": {
+      "opcode": 139,
+      "yon": "s2c",
+      "alanlar": {
+        "groupId": "string",
+        "readyAt": "number"
+      }
+    },
+    "combat.event": {
+      "opcode": 140,
+      "yon": "s2c",
+      "alanlar": {
+        "src": "int",
+        "dst": "int",
+        "kind": [
+          "auto",
+          "skill",
+          "heal",
+          "dot"
+        ],
+        "skillId": "string?",
+        "statusCode": "string?",
+        "dmg": "int",
+        "mp": "int?",
+        "imbueDmg": "int?",
+        "imbueGroup": "string?",
+        "followup": "bool?",
+        "hitIndex": "int(>=0)?",
+        "mpAbsorbed": "int?",
+        "absorbed": "int?",
+        "blocked": "bool?",
+        "miss": "bool?",
+        "parried": "bool?",
+        "aid": "int?",
+        "secondary": "const:true?",
+        "baseAttackId": "string?",
+        "ko": "int(>0)?",
+        "kb": "int(>0)?",
+        "stun": "int(>0)?",
+        "crit": "bool",
+        "dstHp": "int"
+      }
+    },
+    "combat.death": {
+      "opcode": 141,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "killerId": "int",
+        "aid": "int?"
+      }
+    },
+    "buffs.update": {
+      "opcode": 142,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "buffs": [
+          {
+            "groupId": "string",
+            "category": [
+              "imbue",
+              "stat",
+              "hawk"
+            ],
+            "expiresAt": "number",
+            "pool": "number?",
+            "poolMax": "number?",
+            "allyCast": "bool?",
+            "maintained": "bool?"
+          }
+        ]
+      }
+    },
+    "skill.fire": {
+      "opcode": 143,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "skillId": "string",
+        "targetId": "int?",
+        "aid": "int?",
+        "flightMs": "int(>=0)?",
+        "at": "number?",
+        "q": "int?"
+      }
+    },
+    "progress.update": {
+      "opcode": 144,
+      "yon": "s2c",
+      "alanlar": {
+        "xp": "int",
+        "xpToNext": "int|null",
+        "spExp": "int",
+        "spExpToNext": "int",
+        "sp": "int"
+      }
+    },
+    "progress.levelUp": {
+      "opcode": 145,
+      "yon": "s2c",
+      "alanlar": {
+        "level": "int",
+        "statPoints": "int"
+      }
+    },
+    "stats.update": {
+      "opcode": 146,
+      "yon": "s2c",
+      "alanlar": {
+        "base": {
+          "str": "int",
+          "int": "int",
+          "unspent": "int"
+        },
+        "derived": {
+          "maxHp": "int",
+          "maxMp": "int",
+          "physAtkMin": "number",
+          "physAtkMax": "number",
+          "magAtkMin": "number",
+          "magAtkMax": "number",
+          "physAtkIncPct": "number",
+          "magAtkIncPct": "number",
+          "dmgIncPct": "number",
+          "physDef": "number",
+          "magDef": "number",
+          "physBalancePct": "number",
+          "magBalancePct": "number",
+          "hitRatio": "number",
+          "parryRatio": "number",
+          "blockRatio": "number",
+          "critRating": "number",
+          "physAbsorb": "number",
+          "magAbsorb": "number",
+          "mpDiscountPct": "number=0?",
+          "statusResists": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "fb": "number",
+              "es": "number",
+              "bu": "number",
+              "ps": "number",
+              "zb": "number"
+            },
+            "__opsiyonel__": true
+          }
+        },
+        "hp": "int",
+        "mp": "int"
+      }
+    },
+    "mastery.update": {
+      "opcode": 147,
+      "yon": "s2c",
+      "alanlar": {
+        "masteryId": "string",
+        "level": "int",
+        "sp": "int"
+      }
+    },
+    "skills.update": {
+      "opcode": 148,
+      "yon": "s2c",
+      "alanlar": {
+        "known": [
+          "string"
+        ],
+        "sp": "int"
+      }
+    },
+    "inv.update": {
+      "opcode": 149,
+      "yon": "s2c",
+      "alanlar": {
+        "gold": "int(>=0)",
+        "bag": [
+          {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          }
+        ],
+        "equip": {
+          "weapon": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "shield": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "head": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "shoulder": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "chest": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "gloves": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "pants": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "boots": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "avatarDress": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "avatarHat": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "avatarAttach": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "earring": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "necklace": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "ringL": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          },
+          "ringR": {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "__null__": true
+          }
+        }
+      }
+    },
+    "vitals.update": {
+      "opcode": 150,
+      "yon": "s2c",
+      "alanlar": {
+        "hp": "int",
+        "mp": "int"
+      }
+    },
+    "appearance.update": {
+      "opcode": 151,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "equip": {
+          "__tip__": "kayit",
+          "__anahtar__": "string",
+          "__deger__": "string"
+        }
+      }
+    },
+    "trade.incoming": {
+      "opcode": 152,
+      "yon": "s2c",
+      "alanlar": {
+        "fromId": "int",
+        "fromName": "string"
+      }
+    },
+    "trade.update": {
+      "opcode": 153,
+      "yon": "s2c",
+      "alanlar": {
+        "partnerId": "int",
+        "partnerName": "string",
+        "rev": "int",
+        "self": {
+          "items": [
+            {
+              "bagSlot": "int",
+              "stack": {
+                "itemId": "string",
+                "qty": "int(>=1)",
+                "plus": "int(>=0)?",
+                "dur": "int(>=0)?",
+                "maxDur": "int(>=1)?",
+                "variance": "int(>=0)?",
+                "blues": {
+                  "__tip__": "dizi",
+                  "__eleman__": {
+                    "id": "int(>0)",
+                    "value": "number"
+                  },
+                  "__opsiyonel__": true
+                },
+                "rolls": {
+                  "__tip__": "kayit",
+                  "__anahtar__": "string",
+                  "__deger__": "number",
+                  "__opsiyonel__": true
+                }
+              }
+            }
+          ],
+          "gold": "int",
+          "approved": "bool"
+        },
+        "other": {
+          "items": [
+            {
+              "stack": {
+                "itemId": "string",
+                "qty": "int(>=1)",
+                "plus": "int(>=0)?",
+                "dur": "int(>=0)?",
+                "maxDur": "int(>=1)?",
+                "variance": "int(>=0)?",
+                "blues": {
+                  "__tip__": "dizi",
+                  "__eleman__": {
+                    "id": "int(>0)",
+                    "value": "number"
+                  },
+                  "__opsiyonel__": true
+                },
+                "rolls": {
+                  "__tip__": "kayit",
+                  "__anahtar__": "string",
+                  "__deger__": "number",
+                  "__opsiyonel__": true
+                }
+              }
+            }
+          ],
+          "gold": "int",
+          "approved": "bool"
+        }
+      }
+    },
+    "trade.close": {
+      "opcode": 154,
+      "yon": "s2c",
+      "alanlar": {
+        "reason": [
+          "completed",
+          "declined",
+          "cancelled",
+          "partner_left",
+          "error"
+        ]
+      }
+    },
+    "entity.pickup": {
+      "opcode": 155,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int"
+      }
+    },
+    "stall.own": {
+      "opcode": 156,
+      "yon": "s2c",
+      "alanlar": {
+        "stall": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "mode": [
+              "edit",
+              "selling"
+            ],
+            "title": "string",
+            "notice": "string",
+            "color": "int",
+            "listings": [
+              {
+                "bagSlot": "int",
+                "item": {
+                  "itemId": "string",
+                  "qty": "int(>=1)",
+                  "plus": "int(>=0)?",
+                  "dur": "int(>=0)?",
+                  "maxDur": "int(>=1)?",
+                  "variance": "int(>=0)?",
+                  "blues": {
+                    "__tip__": "dizi",
+                    "__eleman__": {
+                      "id": "int(>0)",
+                      "value": "number"
+                    },
+                    "__opsiyonel__": true
+                  },
+                  "rolls": {
+                    "__tip__": "kayit",
+                    "__anahtar__": "string",
+                    "__deger__": "number",
+                    "__opsiyonel__": true
+                  }
+                },
+                "qty": "int",
+                "price": "int"
+              }
+            ],
+            "earned": "int",
+            "log": [
+              {
+                "itemName": "string",
+                "qty": "int",
+                "price": "int",
+                "buyer": "string",
+                "at": "number"
+              }
+            ]
+          },
+          "__null__": true
+        }
+      }
+    },
+    "stall.view": {
+      "opcode": 157,
+      "yon": "s2c",
+      "alanlar": {
+        "ownerId": "int",
+        "ownerName": "string",
+        "title": "string",
+        "notice": "string",
+        "listings": [
+          {
+            "bagSlot": "int",
+            "item": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "qty": "int",
+            "price": "int"
+          }
+        ]
+      }
+    },
+    "stall.viewClosed": {
+      "opcode": 158,
+      "yon": "s2c",
+      "alanlar": {
+        "ownerId": "int",
+        "reason": [
+          "closed",
+          "modify",
+          "owner_left",
+          "range"
+        ]
+      }
+    },
+    "stall.board": {
+      "opcode": 159,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "stall": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "title": "string",
+            "color": "int"
+          },
+          "__null__": true
+        }
+      }
+    },
+    "chat.recv": {
+      "opcode": 160,
+      "yon": "s2c",
+      "alanlar": {
+        "ch": [
+          "local",
+          "global",
+          "party",
+          "guild",
+          "system"
+        ],
+        "from": "string",
+        "text": "string",
+        "fromTier": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "bronze",
+            "silver",
+            "gold"
+          ],
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "pet.state": {
+      "opcode": 161,
+      "yon": "s2c",
+      "alanlar": {
+        "active": "bool",
+        "petId": "string?",
+        "entityId": "int?",
+        "bagSlot": "int?",
+        "expiresAt": "number?",
+        "settings": {
+          "grab": "bool",
+          "scope": [
+            "own",
+            "all"
+          ],
+          "gold": "bool",
+          "equipment": "bool",
+          "other": "bool"
+        }
+      }
+    },
+    "chat.pm": {
+      "opcode": 162,
+      "yon": "s2c",
+      "alanlar": {
+        "peer": "string",
+        "kind": [
+          "in",
+          "out",
+          "system"
+        ],
+        "text": "string",
+        "key": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "sys.progress.xp",
+            "sys.progress.level_up",
+            "sys.skills.learned",
+            "sys.skills.mastery_raised",
+            "sys.profession.learned",
+            "sys.profession.gathered",
+            "sys.profession.level_up",
+            "sys.loot.picked_up",
+            "sys.loot.gold",
+            "sys.loot.gold_share",
+            "sys.quest.completed",
+            "sys.quest.reward_claimed",
+            "sys.quest.log_full",
+            "sys.quest.bag_full",
+            "sys.quest.gold_cap",
+            "sys.quest.def_missing",
+            "sys.trade.request_sent",
+            "sys.trade.declined_by",
+            "sys.trade.completed_with",
+            "sys.trade.failed_bag",
+            "sys.stall.bought",
+            "sys.stall.sold",
+            "sys.bank.gold_in",
+            "sys.bank.gold_out",
+            "sys.bank.item_in",
+            "sys.bank.item_out",
+            "sys.exch.order_placed",
+            "sys.exch.partial_fill_refunded",
+            "sys.exch.order_filled_buy",
+            "sys.exch.order_filled_sell",
+            "sys.exch.refunded_none",
+            "sys.exch.cancelled_gold",
+            "sys.exch.cancelled_jade",
+            "sys.exch.staked",
+            "sys.exch.stake_claimed",
+            "sys.exch.deposit",
+            "sys.exch.withdraw",
+            "sys.premium.activated",
+            "sys.mall.bought",
+            "sys.reset.stats",
+            "sys.reset.mastery",
+            "sys.expand.bag",
+            "sys.expand.storage",
+            "sys.expand.carrier",
+            "sys.carrier.ordered",
+            "sys.carrier.arrived",
+            "sys.carrier.collected",
+            "sys.carrier.expired",
+            "sys.spscroll.created",
+            "sys.spscroll.used",
+            "sys.pets.rental_expired",
+            "sys.pets.grab_off",
+            "sys.gpet.hungry",
+            "sys.gpet.starved",
+            "sys.gpet.xp",
+            "sys.gpet.level_up",
+            "sys.combat.item_broke",
+            "sys.economy.alchemy_ok",
+            "sys.economy.alchemy_reset",
+            "sys.economy.alchemy_fail",
+            "sys.stone.crafted",
+            "sys.stone.apply_ok",
+            "sys.stone.apply_fail",
+            "sys.stone.assim_white",
+            "sys.stone.assim_blue",
+            "sys.stone.assim_prevented",
+            "sys.stone.luck_used",
+            "sys.stone.astral_saved",
+            "sys.economy.nothing_to_repair",
+            "sys.economy.repaired",
+            "sys.economy.repaired_free",
+            "sys.economy.bought",
+            "sys.economy.sold",
+            "sys.economy.destroyed",
+            "sys.teleport.arrived",
+            "sys.teleport.arrived_paid",
+            "sys.party.invite_sent",
+            "sys.party.invite_declined",
+            "sys.party.join_failed",
+            "sys.party.not_in_party",
+            "sys.party.match_registered",
+            "sys.party.match_unregistered",
+            "sys.party.match_applied",
+            "sys.party.match_apply_refused",
+            "sys.party.match_apply_expired",
+            "sys.guild.created",
+            "sys.guild.name_taken",
+            "sys.guild.name_invalid",
+            "sys.guild.invite_sent",
+            "sys.guild.invite_declined",
+            "sys.guild.join_failed_full",
+            "sys.guild.join_failed_penalty",
+            "sys.guild.join_failed_in_guild",
+            "sys.guild.joined",
+            "sys.guild.member_joined",
+            "sys.guild.member_left",
+            "sys.guild.member_kicked",
+            "sys.guild.promoted",
+            "sys.guild.demoted",
+            "sys.guild.notice_updated",
+            "sys.guild.level_up",
+            "sys.guild.bank_denied",
+            "sys.guild.bank_full",
+            "sys.guild.bank_gold_in",
+            "sys.guild.bank_gold_out",
+            "sys.guild.bank_item_in",
+            "sys.guild.bank_item_out",
+            "sys.guild.transfer_done",
+            "sys.guild.disband_bank_not_empty",
+            "sys.guild.disband_members_remain",
+            "sys.guild.disbanded",
+            "sys.guild.apply_sent",
+            "sys.guild.apply_limit",
+            "sys.guild.master_cannot_leave",
+            "sys.guild.no_permission",
+            "sys.auction.created",
+            "sys.auction.bid_placed",
+            "sys.auction.bought",
+            "sys.auction.cancelled",
+            "sys.auction.claimed",
+            "sys.whisper.self",
+            "sys.whisper.offline",
+            "sys.lifecycle.zone_updating",
+            "sys.lifecycle.restarting",
+            "sys.save.failing",
+            "sys.mount.died",
+            "sys.unique.spawned",
+            "sys.unique.defeated",
+            "sys.unique.defeated_by",
+            "sys.unique.points",
+            "raw"
+          ],
+          "__opsiyonel__": true
+        },
+        "params": {
+          "__tip__": "kayit",
+          "__anahtar__": "string",
+          "__deger__": {
+            "__tip__": "birlesim",
+            "__secenekler__": [
+              "string",
+              "number"
+            ]
+          },
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "guild.state": {
+      "opcode": 163,
+      "yon": "s2c",
+      "alanlar": {
+        "guild": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "id": "string",
+            "name": "string",
+            "level": "int",
+            "xp": "int",
+            "nextLevelXp": "int|null",
+            "rating": "int",
+            "notice": "string",
+            "masterId": "string",
+            "memberCap": "int"
+          },
+          "__null__": true
+        },
+        "members": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "charId": "string",
+            "name": "string",
+            "level": "int",
+            "rank": [
+              "master",
+              "officer",
+              "member",
+              "recruit"
+            ],
+            "perms": "int",
+            "online": "bool",
+            "contributedXp": "int",
+            "race": "string?"
+          },
+          "__opsiyonel__": true
+        },
+        "myPerms": "int?",
+        "applications": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "charId": "string",
+            "name": "string",
+            "level": "int",
+            "at": "number"
+          },
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "guild.invited": {
+      "opcode": 164,
+      "yon": "s2c",
+      "alanlar": {
+        "guildId": "string",
+        "guildName": "string",
+        "fromName": "string",
+        "expiresAt": "number"
+      }
+    },
+    "guild.left": {
+      "opcode": 165,
+      "yon": "s2c",
+      "alanlar": {
+        "reason": [
+          "left",
+          "kicked",
+          "disbanded"
+        ],
+        "penaltyUntil": "number?"
+      }
+    },
+    "guild.bankState": {
+      "opcode": 166,
+      "yon": "s2c",
+      "alanlar": {
+        "gold": "int",
+        "capacity": "int",
+        "items": [
+          {
+            "slot": "int",
+            "stack": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            }
+          }
+        ]
+      }
+    },
+    "guild.log": {
+      "opcode": 167,
+      "yon": "s2c",
+      "alanlar": {
+        "page": "int",
+        "total": "int",
+        "entries": [
+          {
+            "at": "number",
+            "actorName": "string",
+            "action": "string",
+            "itemDefId": "string?",
+            "quantity": "int?",
+            "gold": "int?"
+          }
+        ]
+      }
+    },
+    "party.invited": {
+      "opcode": 168,
+      "yon": "s2c",
+      "alanlar": {
+        "fromCharId": "string",
+        "fromName": "string",
+        "fromLevel": "int",
+        "partySize": "int",
+        "partyCap": "int?",
+        "expiresAt": "number"
+      }
+    },
+    "party.update": {
+      "opcode": 169,
+      "yon": "s2c",
+      "alanlar": {
+        "partyId": "string",
+        "leaderCharId": "string",
+        "members": [
+          {
+            "charId": "string",
+            "name": "string",
+            "level": "int",
+            "entityId": "int",
+            "zoneId": "string",
+            "x": "int?",
+            "z": "int?",
+            "hp": "int",
+            "maxHp": "int",
+            "mp": "int?",
+            "maxMp": "int?",
+            "buffs": {
+              "__tip__": "dizi",
+              "__eleman__": {
+                "groupId": "string",
+                "category": [
+                  "imbue",
+                  "stat",
+                  "hawk"
+                ],
+                "expiresAt": "number",
+                "pool": "number?",
+                "poolMax": "number?",
+                "allyCast": "bool?",
+                "maintained": "bool?"
+              },
+              "__opsiyonel__": true
+            },
+            "statuses": {
+              "__tip__": "dizi",
+              "__eleman__": {
+                "iid": "int",
+                "code": "string",
+                "level": "int",
+                "expiresAt": "number",
+                "srcId": "int?",
+                "skillId": "string?"
+              },
+              "__opsiyonel__": true
+            },
+            "dead": "bool?",
+            "linkdead": "bool?",
+            "premiumTier": {
+              "__tip__": "enum",
+              "__degerler__": [
+                "bronze",
+                "silver",
+                "gold"
+              ],
+              "__opsiyonel__": true
+            },
+            "style": "string?",
+            "topMasteries": {
+              "__tip__": "dizi",
+              "__eleman__": {
+                "masteryId": "string",
+                "level": "int(>=1)"
+              },
+              "__opsiyonel__": true
+            },
+            "race": "string?"
+          }
+        ],
+        "expShare": "bool?",
+        "itemShare": "bool?",
+        "matchId": "int?"
+      }
+    },
+    "party.left": {
+      "opcode": 170,
+      "yon": "s2c",
+      "alanlar": {
+        "reason": [
+          "left",
+          "kicked",
+          "disband"
+        ]
+      }
+    },
+    "guild.directory": {
+      "opcode": 171,
+      "yon": "s2c",
+      "alanlar": {
+        "page": "int",
+        "total": "int",
+        "guilds": [
+          {
+            "id": "string",
+            "name": "string",
+            "level": "int",
+            "memberCount": "int",
+            "memberCap": "int",
+            "rating": "int",
+            "masterName": "string",
+            "applied": "bool"
+          }
+        ]
+      }
+    },
+    "entity.guild": {
+      "opcode": 172,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "guild": "string|null"
+      }
+    },
+    "mount.update": {
+      "opcode": 173,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "mount": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "modelKey": "string",
+            "hp": "int",
+            "maxHp": "int"
+          },
+          "__null__": true
+        }
+      }
+    },
+    "party.matchBoard": {
+      "opcode": 174,
+      "yon": "s2c",
+      "alanlar": {
+        "rows": [
+          {
+            "matchId": "int",
+            "title": "string",
+            "leaderName": "string",
+            "raceReq": [
+              "chinese",
+              "european",
+              "both"
+            ],
+            "minLevel": "int",
+            "maxLevel": "int",
+            "memberCount": "int",
+            "maxMembers": "int",
+            "expShare": "bool",
+            "itemShare": "bool",
+            "ltp": "bool"
+          }
+        ],
+        "appliedMatchId": "int?"
+      }
+    },
+    "party.matchApplication": {
+      "opcode": 175,
+      "yon": "s2c",
+      "alanlar": {
+        "applicant": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "charId": "string",
+            "name": "string",
+            "level": "int",
+            "race": "string",
+            "expiresAt": "number"
+          },
+          "__null__": true
+        }
+      }
+    },
+    "exch.book": {
+      "opcode": 176,
+      "yon": "s2c",
+      "alanlar": {
+        "bids": [
+          {
+            "price": "int",
+            "units": "int"
+          }
+        ],
+        "asks": [
+          {
+            "price": "int",
+            "units": "int"
+          }
+        ]
+      }
+    },
+    "exch.wallet": {
+      "opcode": 177,
+      "yon": "s2c",
+      "alanlar": {
+        "jadeUnits": "int",
+        "jadeLockedUnits": "int",
+        "gold": "int",
+        "depositAddress": "string"
+      }
+    },
+    "exch.orders": {
+      "opcode": 178,
+      "yon": "s2c",
+      "alanlar": {
+        "orders": [
+          {
+            "id": "string",
+            "side": [
+              "buy",
+              "sell"
+            ],
+            "price": "int",
+            "qtyUnits": "int",
+            "filledUnits": "int",
+            "status": [
+              "open",
+              "filled",
+              "cancelled"
+            ],
+            "createdAt": "number"
+          }
+        ]
+      }
+    },
+    "exch.trades": {
+      "opcode": 179,
+      "yon": "s2c",
+      "alanlar": {
+        "trades": [
+          {
+            "price": "int",
+            "units": "int",
+            "takerSide": [
+              "buy",
+              "sell"
+            ],
+            "createdAt": "number"
+          }
+        ]
+      }
+    },
+    "exch.fill": {
+      "opcode": 180,
+      "yon": "s2c",
+      "alanlar": {
+        "orderId": "string",
+        "side": [
+          "buy",
+          "sell"
+        ],
+        "role": [
+          "maker",
+          "taker"
+        ],
+        "price": "int",
+        "units": "int",
+        "remainingUnits": "int",
+        "goldDelta": "int",
+        "jadeDelta": "int"
+      }
+    },
+    "exch.stakes": {
+      "opcode": 181,
+      "yon": "s2c",
+      "alanlar": {
+        "stakes": [
+          {
+            "id": "string",
+            "principalUnits": "int",
+            "aprBps": "int",
+            "lockDays": "int",
+            "rewardUnits": "int",
+            "startedAt": "number",
+            "unlockAt": "number",
+            "status": [
+              "active",
+              "claimed"
+            ]
+          }
+        ],
+        "serverTime": "number"
+      }
+    },
+    "bank.items": {
+      "opcode": 182,
+      "yon": "s2c",
+      "alanlar": {
+        "slots": [
+          {
+            "slot": "int",
+            "stack": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            }
+          }
+        ],
+        "capacity": "int?"
+      }
+    },
+    "quest.catalog": {
+      "opcode": 183,
+      "yon": "s2c",
+      "alanlar": {
+        "available": [
+          {
+            "id": "string",
+            "title": "string",
+            "description": "string",
+            "mobId": "string",
+            "mobName": "string",
+            "mobLevel": "int?",
+            "count": "int",
+            "minLevel": "int",
+            "maxLevel": "int",
+            "rewards": {
+              "gold": "int?",
+              "xp": "int?",
+              "sp": "int?",
+              "items": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "itemDefId": "string",
+                  "name": "string",
+                  "qty": "int"
+                },
+                "__opsiyonel__": true
+              }
+            },
+            "repeat": {
+              "__tip__": "birlesim",
+              "__secenekler__": [
+                {
+                  "type": "const:none"
+                },
+                {
+                  "type": "const:unlimited"
+                },
+                {
+                  "type": "const:cooldown",
+                  "hours": "number"
+                }
+              ]
+            }
+          }
+        ]
+      }
+    },
+    "quest.state": {
+      "opcode": 184,
+      "yon": "s2c",
+      "alanlar": {
+        "mine": [
+          {
+            "def": {
+              "id": "string",
+              "title": "string",
+              "description": "string",
+              "mobId": "string",
+              "mobName": "string",
+              "mobLevel": "int?",
+              "count": "int",
+              "minLevel": "int",
+              "maxLevel": "int",
+              "rewards": {
+                "gold": "int?",
+                "xp": "int?",
+                "sp": "int?",
+                "items": {
+                  "__tip__": "dizi",
+                  "__eleman__": {
+                    "itemDefId": "string",
+                    "name": "string",
+                    "qty": "int"
+                  },
+                  "__opsiyonel__": true
+                }
+              },
+              "repeat": {
+                "__tip__": "birlesim",
+                "__secenekler__": [
+                  {
+                    "type": "const:none"
+                  },
+                  {
+                    "type": "const:unlimited"
+                  },
+                  {
+                    "type": "const:cooldown",
+                    "hours": "number"
+                  }
+                ]
+              }
+            },
+            "units": "int",
+            "targetUnits": "int",
+            "state": [
+              "active",
+              "completed",
+              "claimed"
+            ],
+            "cooldownUntil": "number?"
+          }
+        ]
+      }
+    },
+    "quest.progress": {
+      "opcode": 185,
+      "yon": "s2c",
+      "alanlar": {
+        "questId": "string",
+        "units": "int",
+        "state": [
+          "active",
+          "completed"
+        ]
+      }
+    },
+    "item.enhanced": {
+      "opcode": 186,
+      "yon": "s2c",
+      "alanlar": {
+        "target": {
+          "c": [
+            "bag",
+            "equip"
+          ],
+          "i": "int(0..159)"
+        },
+        "success": "bool",
+        "plus": "int(>=0)"
+      }
+    },
+    "fx.itemUsed": {
+      "opcode": 187,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "group": [
+          "hp",
+          "mp",
+          "vigor",
+          "pill",
+          "speed"
+        ]
+      }
+    },
+    "fx.levelUp": {
+      "opcode": 188,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int"
+      }
+    },
+    "premium.update": {
+      "opcode": 189,
+      "yon": "s2c",
+      "alanlar": {
+        "tier": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "bronze",
+            "silver",
+            "gold"
+          ],
+          "__null__": true
+        },
+        "expiresAt": "number|null"
+      }
+    },
+    "entity.premium": {
+      "opcode": 190,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "tier": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "bronze",
+            "silver",
+            "gold"
+          ],
+          "__null__": true
+        }
+      }
+    },
+    "fx.returnStart": {
+      "opcode": 191,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int"
+      }
+    },
+    "fx.returnStop": {
+      "opcode": 192,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "done": "bool?"
+      }
+    },
+    "return.begin": {
+      "opcode": 193,
+      "yon": "s2c",
+      "alanlar": {
+        "durationMs": "number",
+        "kind": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "return",
+            "teleport"
+          ],
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "return.end": {
+      "opcode": 194,
+      "yon": "s2c",
+      "alanlar": {}
+    },
+    "sys.notice": {
+      "opcode": 195,
+      "yon": "s2c",
+      "alanlar": {
+        "key": [
+          "sys.progress.xp",
+          "sys.progress.level_up",
+          "sys.skills.learned",
+          "sys.skills.mastery_raised",
+          "sys.profession.learned",
+          "sys.profession.gathered",
+          "sys.profession.level_up",
+          "sys.loot.picked_up",
+          "sys.loot.gold",
+          "sys.loot.gold_share",
+          "sys.loot.item_distributed",
+          "sys.quest.completed",
+          "sys.quest.reward_claimed",
+          "sys.quest.log_full",
+          "sys.quest.bag_full",
+          "sys.quest.gold_cap",
+          "sys.quest.def_missing",
+          "sys.trade.request_sent",
+          "sys.trade.declined_by",
+          "sys.trade.completed_with",
+          "sys.trade.failed_bag",
+          "sys.stall.bought",
+          "sys.stall.sold",
+          "sys.bank.gold_in",
+          "sys.bank.gold_out",
+          "sys.bank.item_in",
+          "sys.bank.item_out",
+          "sys.exch.order_placed",
+          "sys.exch.partial_fill_refunded",
+          "sys.exch.order_filled_buy",
+          "sys.exch.order_filled_sell",
+          "sys.exch.refunded_none",
+          "sys.exch.cancelled_gold",
+          "sys.exch.cancelled_jade",
+          "sys.exch.staked",
+          "sys.exch.stake_claimed",
+          "sys.exch.deposit",
+          "sys.exch.withdraw",
+          "sys.premium.activated",
+          "sys.mall.bought",
+          "sys.reset.stats",
+          "sys.reset.mastery",
+          "sys.expand.bag",
+          "sys.expand.storage",
+          "sys.expand.carrier",
+          "sys.carrier.ordered",
+          "sys.carrier.arrived",
+          "sys.carrier.collected",
+          "sys.carrier.expired",
+          "sys.spscroll.created",
+          "sys.spscroll.used",
+          "sys.pets.rental_expired",
+          "sys.pets.grab_off",
+          "sys.gpet.hungry",
+          "sys.gpet.starved",
+          "sys.gpet.xp",
+          "sys.gpet.level_up",
+          "sys.combat.item_broke",
+          "sys.economy.alchemy_ok",
+          "sys.economy.alchemy_reset",
+          "sys.economy.alchemy_fail",
+          "sys.stone.crafted",
+          "sys.stone.apply_ok",
+          "sys.stone.apply_fail",
+          "sys.stone.assim_white",
+          "sys.stone.assim_blue",
+          "sys.stone.assim_prevented",
+          "sys.stone.luck_used",
+          "sys.stone.astral_saved",
+          "sys.economy.nothing_to_repair",
+          "sys.economy.repaired",
+          "sys.economy.repaired_free",
+          "sys.economy.bought",
+          "sys.economy.sold",
+          "sys.economy.destroyed",
+          "sys.teleport.arrived",
+          "sys.teleport.arrived_paid",
+          "sys.party.invite_sent",
+          "sys.party.invite_declined",
+          "sys.party.join_failed",
+          "sys.party.not_in_party",
+          "sys.party.match_registered",
+          "sys.party.match_unregistered",
+          "sys.party.match_applied",
+          "sys.party.match_apply_refused",
+          "sys.party.match_apply_expired",
+          "sys.guild.created",
+          "sys.guild.name_taken",
+          "sys.guild.name_invalid",
+          "sys.guild.invite_sent",
+          "sys.guild.invite_declined",
+          "sys.guild.join_failed_full",
+          "sys.guild.join_failed_penalty",
+          "sys.guild.join_failed_in_guild",
+          "sys.guild.joined",
+          "sys.guild.member_joined",
+          "sys.guild.member_left",
+          "sys.guild.member_kicked",
+          "sys.guild.promoted",
+          "sys.guild.demoted",
+          "sys.guild.notice_updated",
+          "sys.guild.level_up",
+          "sys.guild.bank_denied",
+          "sys.guild.bank_full",
+          "sys.guild.bank_gold_in",
+          "sys.guild.bank_gold_out",
+          "sys.guild.bank_item_in",
+          "sys.guild.bank_item_out",
+          "sys.guild.transfer_done",
+          "sys.guild.disband_bank_not_empty",
+          "sys.guild.disband_members_remain",
+          "sys.guild.disbanded",
+          "sys.guild.apply_sent",
+          "sys.guild.apply_limit",
+          "sys.guild.master_cannot_leave",
+          "sys.guild.no_permission",
+          "sys.auction.created",
+          "sys.auction.bid_placed",
+          "sys.auction.bought",
+          "sys.auction.cancelled",
+          "sys.auction.claimed",
+          "sys.whisper.self",
+          "sys.whisper.offline",
+          "sys.lifecycle.zone_updating",
+          "sys.lifecycle.restarting",
+          "sys.save.failing",
+          "sys.mount.died",
+          "sys.unique.spawned",
+          "sys.unique.defeated",
+          "sys.unique.defeated_by",
+          "sys.unique.points",
+          "raw"
+        ],
+        "params": {
+          "__tip__": "kayit",
+          "__anahtar__": "string",
+          "__deger__": {
+            "__tip__": "birlesim",
+            "__secenekler__": [
+              "string",
+              "number"
+            ]
+          },
+          "__opsiyonel__": true
+        },
+        "display": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "line",
+            "banner"
+          ],
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "cast.cancel": {
+      "opcode": 196,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "aid": "int?"
+      }
+    },
+    "combat.monsterAction": {
+      "opcode": 197,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "aid": "int",
+        "skillId": "string",
+        "slot": "string?",
+        "targetId": "int",
+        "castMs": "int(>=0)",
+        "contactMs": "int(>=0)",
+        "projectile": "bool?",
+        "school": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "physical",
+            "magical"
+          ],
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "fx.petAppear": {
+      "opcode": 198,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int"
+      }
+    },
+    "statuses.update": {
+      "opcode": 199,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "statuses": [
+          {
+            "iid": "int",
+            "code": "string",
+            "level": "int",
+            "expiresAt": "number",
+            "srcId": "int?",
+            "skillId": "string?"
+          }
+        ],
+        "removed": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "code": "string",
+            "reason": [
+              "expired",
+              "cured",
+              "death",
+              "replaced"
+            ]
+          },
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "cast.queued": {
+      "opcode": 200,
+      "yon": "s2c",
+      "alanlar": {
+        "state": [
+          "queued",
+          "started",
+          "dropped"
+        ],
+        "groupId": "string",
+        "targetId": "int?",
+        "q": "int?",
+        "aid": "int?",
+        "reason": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "rejected",
+            "superseded",
+            "cancelled",
+            "expired"
+          ],
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "revive.offer": {
+      "opcode": 201,
+      "yon": "s2c",
+      "alanlar": {
+        "offerId": "int",
+        "casterId": "int",
+        "casterName": "string",
+        "skillId": "string",
+        "expiresAt": "number",
+        "hp": "int(>=0)",
+        "mp": "int(>=0)"
+      }
+    },
+    "revive.result": {
+      "opcode": 202,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "ok": "bool",
+        "hp": "int?",
+        "mp": "int?",
+        "casterId": "int?",
+        "skillId": "string?",
+        "reason": "string?"
+      }
+    },
+    "unique.timers": {
+      "opcode": 203,
+      "yon": "s2c",
+      "alanlar": {
+        "serverTime": "number",
+        "uniques": [
+          {
+            "monsterId": "string",
+            "zoneId": "string",
+            "live": "bool",
+            "spawnAtMs": "number|null",
+            "totalMs": "number|null"
+          }
+        ]
+      }
+    },
+    "unique.board": {
+      "opcode": 204,
+      "yon": "s2c",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "kind",
+        "__secenekler__": [
+          {
+            "kind": "const:unique",
+            "rows": [
+              {
+                "rank": "int",
+                "name": "string",
+                "level": "int",
+                "points": "int"
+              }
+            ],
+            "me": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "rank": "int",
+                "points": "int"
+              },
+              "__null__": true
+            }
+          },
+          {
+            "kind": "const:level",
+            "rows": [
+              {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "rank": "int",
+                  "name": "string",
+                  "level": "int"
+                },
+                "__strict__": true
+              }
+            ],
+            "me": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "rank": "int",
+                "level": "int"
+              },
+              "__null__": true
+            }
+          },
+          {
+            "kind": "const:profession",
+            "professionId": "string",
+            "rows": [
+              {
+                "__tip__": "nesne",
+                "__alanlar__": {
+                  "rank": "int",
+                  "name": "string",
+                  "level": "int"
+                },
+                "__strict__": true
+              }
+            ],
+            "me": {
+              "__tip__": "nesne",
+              "__alanlar__": {
+                "rank": "int",
+                "level": "int"
+              },
+              "__null__": true
+            }
+          }
+        ]
+      }
+    },
+    "env.clock": {
+      "opcode": 205,
+      "yon": "s2c",
+      "alanlar": {
+        "serverTime": "number",
+        "time": "number(0..1)",
+        "moonPhase": "int(0..29)",
+        "rate": "number(>=0)"
+      }
+    },
+    "progress.gainFx": {
+      "opcode": 206,
+      "yon": "s2c",
+      "alanlar": {
+        "sourceId": "int(>0)",
+        "xpDelta": "int(>=0)",
+        "spExpDelta": "int(>=0)",
+        "recipientLevelAfter": "int(>0)",
+        "xpVisualDenominator": "int(>0)",
+        "killerId": "int",
+        "aid": "int?"
+      }
+    },
+    "profession.update": {
+      "opcode": 207,
+      "yon": "s2c",
+      "alanlar": {
+        "professions": [
+          {
+            "id": "string",
+            "level": "int",
+            "xp": "int",
+            "xpToNext": "int|null"
+          }
+        ]
+      }
+    },
+    "gather.action": {
+      "opcode": 208,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "nodeId": "int",
+        "anim": [
+          "cut",
+          "mine"
+        ],
+        "swingMs": "int(>0)"
+      }
+    },
+    "gather.end": {
+      "opcode": 209,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int"
+      }
+    },
+    "gather.yield": {
+      "opcode": 210,
+      "yon": "s2c",
+      "alanlar": {
+        "nodeId": "int",
+        "items": [
+          {
+            "itemId": "string",
+            "qty": "int(>0)"
+          }
+        ],
+        "xp": "int(>=0)"
+      }
+    },
+    "stone.crafted": {
+      "opcode": 211,
+      "yon": "s2c",
+      "alanlar": {
+        "itemId": "string",
+        "asm": "int|null",
+        "xp": "int(>=0)"
+      }
+    },
+    "stone.applied": {
+      "opcode": 212,
+      "yon": "s2c",
+      "alanlar": {
+        "target": {
+          "c": [
+            "bag",
+            "equip"
+          ],
+          "i": "int(0..159)"
+        },
+        "success": "bool",
+        "effect": "string",
+        "value": "number?",
+        "mode": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "append",
+            "replace",
+            "counter"
+          ],
+          "__opsiyonel__": true
+        },
+        "assimilation": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "kind": [
+              "prevented",
+              "white",
+              "blue",
+              "blue_noop"
+            ],
+            "whiteSlot": "int?"
+          },
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "carrier.state": {
+      "opcode": 213,
+      "yon": "s2c",
+      "alanlar": {
+        "phase": [
+          "idle",
+          "flying",
+          "landed"
+        ],
+        "zoneId": "string?",
+        "x": "number?",
+        "z": "number?",
+        "arriveAtMs": "number?",
+        "landedUntilMs": "number?",
+        "birdEntityId": "int?",
+        "slots": [
+          {
+            "__tip__": "nesne",
+            "__alanlar__": {
+              "itemId": "string",
+              "qty": "int"
+            },
+            "__null__": true
+          }
+        ],
+        "slotsMax": "int",
+        "readyAt": "number"
+      }
+    },
+    "gpet.state": {
+      "opcode": 214,
+      "yon": "s2c",
+      "alanlar": {
+        "active": "bool",
+        "petId": "string?",
+        "entityId": "int?",
+        "bagSlot": "int?",
+        "level": "int?",
+        "xp": "int?",
+        "xpToNext": "int|null?",
+        "hp": "int?",
+        "maxHp": "int?",
+        "hgp": "int?",
+        "hgpMax": "int?",
+        "dead": "bool?",
+        "mode": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "offensive",
+            "defensive"
+          ],
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "taction.marks": {
+      "opcode": 215,
+      "yon": "s2c",
+      "alanlar": {
+        "death": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "zone": "string",
+            "x": "number",
+            "z": "number",
+            "y": "number?",
+            "at": "number"
+          },
+          "__opsiyonel__": true
+        },
+        "ret": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "zone": "string",
+            "x": "number",
+            "z": "number",
+            "y": "number?",
+            "at": "number"
+          },
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "auto.windup": {
+      "opcode": 216,
+      "yon": "s2c",
+      "alanlar": {
+        "id": "int",
+        "targetId": "int",
+        "castMs": "int(>=0)"
+      }
+    },
+    "err": {
+      "opcode": 240,
+      "yon": "sys",
+      "gozlem_yon": "s2c",
+      "alanlar": {
+        "code": [
+          "ERR_VALIDATION",
+          "ERR_AUTH",
+          "ERR_VERSION",
+          "ERR_RANGE",
+          "ERR_NO_MP",
+          "ERR_NO_HP",
+          "ERR_NO_SP",
+          "ERR_NO_GOLD",
+          "ERR_NO_JADE",
+          "ERR_NO_STAT_POINTS",
+          "ERR_COOLDOWN",
+          "ERR_REQ_MASTERY",
+          "ERR_REQ_LEVEL",
+          "ERR_REQ_WEAPON",
+          "ERR_REQ_PROFESSION",
+          "ERR_PROFESSION_STATE",
+          "ERR_TWO_HANDED",
+          "ERR_MASTERY_CAP",
+          "ERR_RACE",
+          "ERR_BAG_FULL",
+          "ERR_DEAD",
+          "ERR_BUSY",
+          "ERR_RATE",
+          "ERR_SAFE_ZONE",
+          "ERR_NOT_FOUND",
+          "ERR_OWNER_LOCK",
+          "ERR_UNKNOWN_SKILL",
+          "ERR_PARTY_FULL",
+          "ERR_PARTY_NOT_LEADER",
+          "ERR_PARTY_IN_PARTY",
+          "ERR_PARTY_NO_INVITE",
+          "ERR_PARTY_NOT_MEMBER",
+          "ERR_PARTY_MATCH_STATE",
+          "ERR_QUEST_STATE",
+          "ERR_QUEST_LIMIT",
+          "ERR_QUEST_PREREQ",
+          "ERR_STALL_STATE",
+          "ERR_STALL_ZONE",
+          "ERR_STALL_RANGE",
+          "ERR_STALL_SOLD",
+          "ERR_STALL_INVALID",
+          "ERR_PET_STATE",
+          "ERR_PET_COMBAT"
+        ],
+        "key": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "err.premium.required",
+            "err.teleport.in_combat",
+            "err.teleport.cooldown",
+            "err.taction.no_mark",
+            "err.busy.stall_open",
+            "err.busy.trade_open",
+            "err.busy.bank",
+            "err.busy.exchange",
+            "err.busy.guild_bank",
+            "err.busy.downed",
+            "err.busy.knockedback",
+            "err.busy.stunned",
+            "err.busy.cc",
+            "err.busy.returning",
+            "err.skill.queue_timeout",
+            "err.bank.internal",
+            "err.bank.full",
+            "err.gold_cap",
+            "err.save_unhealthy",
+            "err.save_unhealthy_other",
+            "err.pet.unsummon_first",
+            "err.pet.activated_bound",
+            "err.potion.full",
+            "err.potion.recovering",
+            "err.gpet.unsummon_first",
+            "err.gpet.dead",
+            "err.gpet.dead_revive",
+            "err.gpet.dead_no_dismiss",
+            "err.gpet.in_combat",
+            "err.gpet.no_dead",
+            "err.gpet.mount_invalid",
+            "err.mount.no_combat",
+            "err.mount.level",
+            "err.mount.town",
+            "err.mount.combat",
+            "err.mount.mounted",
+            "err.mount.not_mounted",
+            "err.skill.requires_downed",
+            "err.revive.target_level",
+            "err.skill.requires_shield",
+            "err.skill.weapon_broken",
+            "err.skill.shield_broken",
+            "err.skill.needs_ally",
+            "err.link.cap_full",
+            "err.link.already_linked",
+            "err.skill.experiment_gated",
+            "err.skill.disabled",
+            "err.skill.feared",
+            "err.skill.forced_target",
+            "err.skill.requires_song",
+            "err.spawn.protected",
+            "err.auction.ended",
+            "err.auction.too_low",
+            "err.auction.use_buynow",
+            "err.auction.own_auction",
+            "err.auction.already_top",
+            "err.auction.has_bids",
+            "err.auction.bag_full",
+            "err.auction.not_gear",
+            "err.auction.no_auctioneer",
+            "err.auction.too_many",
+            "err.auction.gold",
+            "err.auction.bad_price",
+            "err.auction.not_claimable",
+            "err.expand.max",
+            "err.equip.china_only",
+            "err.equip.europe_only",
+            "err.profession.required",
+            "err.profession.level",
+            "err.profession.already_learned",
+            "err.profession.category_taken",
+            "err.profession.tool_no_combat",
+            "err.profession.wrong_tool",
+            "err.stone.level",
+            "err.stone.materials",
+            "err.stone.degree",
+            "err.stone.target",
+            "err.stone.capacity",
+            "err.stone.counter_cap",
+            "err.carrier.active",
+            "err.carrier.no_city",
+            "err.carrier.not_landed",
+            "err.carrier.slots",
+            "err.loot.share_full",
+            "err.combat.target_returning"
+          ],
+          "__opsiyonel__": true
+        },
+        "msg": "string?",
+        "q": "number?",
+        "params": {
+          "__tip__": "kayit",
+          "__anahtar__": "string",
+          "__deger__": {
+            "__tip__": "birlesim",
+            "__secenekler__": [
+              "string",
+              "number"
+            ]
+          },
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "kick": {
+      "opcode": 241,
+      "yon": "sys",
+      "gozlem_yon": "s2c",
+      "alanlar": {
+        "reason": [
+          "login_elsewhere",
+          "slow_link",
+          "rate_limit",
+          "shutdown",
+          "gm",
+          "char_deleted",
+          "save_failed"
+        ]
+      }
+    },
+    "auction.list": {
+      "opcode": 242,
+      "yon": "sys",
+      "gozlem_yon": "s2c",
+      "alanlar": {
+        "auctions": [
+          {
+            "id": "string",
+            "seller": "string",
+            "item": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "startPrice": "int",
+            "buyNowPrice": "int",
+            "currentBid": "int",
+            "bidCount": "int",
+            "endsAt": "number",
+            "status": [
+              "active",
+              "ended_sold",
+              "ended_unsold",
+              "cancelled"
+            ],
+            "finalPrice": "int|null",
+            "youAreTop": "bool",
+            "mine": "bool",
+            "claimable": "bool"
+          }
+        ],
+        "page": "int",
+        "pages": "int",
+        "serverTime": "number"
+      }
+    },
+    "auction.mine": {
+      "opcode": 243,
+      "yon": "sys",
+      "gozlem_yon": "s2c",
+      "alanlar": {
+        "entries": [
+          {
+            "id": "string",
+            "seller": "string",
+            "item": {
+              "itemId": "string",
+              "qty": "int(>=1)",
+              "plus": "int(>=0)?",
+              "dur": "int(>=0)?",
+              "maxDur": "int(>=1)?",
+              "variance": "int(>=0)?",
+              "blues": {
+                "__tip__": "dizi",
+                "__eleman__": {
+                  "id": "int(>0)",
+                  "value": "number"
+                },
+                "__opsiyonel__": true
+              },
+              "rolls": {
+                "__tip__": "kayit",
+                "__anahtar__": "string",
+                "__deger__": "number",
+                "__opsiyonel__": true
+              }
+            },
+            "startPrice": "int",
+            "buyNowPrice": "int",
+            "currentBid": "int",
+            "bidCount": "int",
+            "endsAt": "number",
+            "status": [
+              "active",
+              "ended_sold",
+              "ended_unsold",
+              "cancelled"
+            ],
+            "finalPrice": "int|null",
+            "youAreTop": "bool",
+            "mine": "bool",
+            "claimable": "bool"
+          }
+        ],
+        "serverTime": "number"
+      }
+    },
+    "auction.notice": {
+      "opcode": 244,
+      "yon": "sys",
+      "gozlem_yon": "s2c",
+      "sema": {
+        "__tip__": "ayrik_birlesim",
+        "__ayirici__": "kind",
+        "__secenekler__": [
+          {
+            "kind": "const:outbid",
+            "auctionId": "string",
+            "itemDefId": "string",
+            "amount": "int"
+          },
+          {
+            "kind": "const:won",
+            "auctionId": "string",
+            "itemDefId": "string",
+            "amount": "int"
+          },
+          {
+            "kind": "const:sold",
+            "auctionId": "string",
+            "itemDefId": "string",
+            "amount": "int"
+          },
+          {
+            "kind": "const:expired",
+            "auctionId": "string",
+            "itemDefId": "string"
+          }
+        ]
+      }
+    }
+  },
+  "tipler": {
+    "C$": {
+      "kullanildigi_alanlar": [
+        "extra",
+        "m",
+        "pages"
+      ],
+      "sema": {
+        "__tip__": "birlesim",
+        "__secenekler__": [
+          {
+            "kind": "const:skill",
+            "groupId": "string(len<=64)"
+          },
+          {
+            "kind": "const:item",
+            "itemDefId": "string(len<=64)"
+          },
+          {
+            "kind": "const:action",
+            "actionId": "string(len<=32)"
+          }
+        ],
+        "__null__": true
+      }
+    },
+    "sht": {
+      "kullanildigi_alanlar": [
+        "hotbar",
+        "hotbar.save"
+      ],
+      "alanlar": {
+        "v": "const:1",
+        "page": "int(0..3)",
+        "pages": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "__tip__": "dizi",
+            "__eleman__": "@C$",
+            "__uzunluk__": "len=10"
+          },
+          "__uzunluk__": "len=4"
+        },
+        "m": "@C$",
+        "extra": {
+          "__tip__": "dizi",
+          "__eleman__": "@C$",
+          "__uzunluk__": "len=10"
+        }
+      }
+    },
+    "w$": {
+      "kullanildigi_alanlar": [
+        "hp",
+        "mp",
+        "petHgp",
+        "uht"
+      ],
+      "alanlar": {
+        "itemDefId": "string(len<=64)|null",
+        "enabled": "bool",
+        "thresholdPct": "int(10..90)"
+      }
+    },
+    "cht": {
+      "kullanildigi_alanlar": [
+        "pill"
+      ],
+      "alanlar": {
+        "itemDefId": "string(len<=64)|null",
+        "enabled": "bool"
+      }
+    },
+    "lht": {
+      "kullanildigi_alanlar": [
+        "petTarget",
+        "target"
+      ],
+      "sema": [
+        "growth",
+        "mount"
+      ]
+    },
+    "uht": {
+      "kullanildigi_alanlar": [
+        "petHp"
+      ],
+      "sema": {
+        "__tip__": "genisletme",
+        "__temel__": "@w$",
+        "__ek__": {
+          "target": "@lht"
+        }
+      }
+    },
+    "dht": {
+      "kullanildigi_alanlar": [
+        "vigor"
+      ],
+      "alanlar": {
+        "itemDefId": "string(len<=64)|null",
+        "hpEnabled": "bool",
+        "hpThresholdPct": "int(10..90)",
+        "mpEnabled": "bool",
+        "mpThresholdPct": "int(10..90)"
+      }
+    },
+    "fht": {
+      "kullanildigi_alanlar": [
+        "autoPotion",
+        "autopotion.save"
+      ],
+      "alanlar": {
+        "v": "const:1",
+        "hp": "@w$",
+        "mp": "@w$",
+        "pill": "@cht?",
+        "petHp": "@uht?",
+        "petHgp": "@w$?",
+        "vigor": "@dht?"
+      }
+    },
+    "pht": {
+      "kullanildigi_alanlar": [
+        "cond"
+      ],
+      "sema": [
+        "champion",
+        "giant",
+        "unique",
+        "special"
+      ]
+    },
+    "mht": {
+      "kullanildigi_alanlar": [
+        "attack2",
+        "buffs2"
+      ],
+      "alanlar": {
+        "t": [
+          "skill",
+          "auto",
+          "weapon"
+        ],
+        "id": "string(len<=64)?",
+        "cond": "@pht?"
+      }
+    },
+    "hht": {
+      "kullanildigi_alanlar": [
+        "macro",
+        "macro.save"
+      ],
+      "alanlar": {
+        "v": "const:1",
+        "attack": {
+          "__tip__": "dizi",
+          "__eleman__": "string(len<=64)",
+          "__uzunluk__": "<=12"
+        },
+        "buffs": {
+          "__tip__": "dizi",
+          "__eleman__": "string(len<=64)",
+          "__uzunluk__": "<=12"
+        },
+        "attack2": {
+          "__tip__": "dizi",
+          "__eleman__": "@mht",
+          "__opsiyonel__": true,
+          "__uzunluk__": "<=12"
+        },
+        "buffs2": {
+          "__tip__": "dizi",
+          "__eleman__": "@mht",
+          "__opsiyonel__": true,
+          "__uzunluk__": "<=12"
+        },
+        "radiusU": "number(10..150)",
+        "skipChampions": "bool",
+        "skipGiants": "bool",
+        "skipUniques": "bool",
+        "autoAttackFiller": "bool",
+        "roam": "bool?",
+        "noLimit": "bool?",
+        "speedItem": "string(len<=64)?"
+      }
+    },
+    "D$": {
+      "kullanildigi_alanlar": [
+        "qty"
+      ],
+      "sema": "int(1..1000)"
+    },
+    "E$": {
+      "kullanildigi_alanlar": [
+        "elixir",
+        "from",
+        "powder",
+        "stone",
+        "target",
+        "to"
+      ],
+      "alanlar": {
+        "c": [
+          "bag",
+          "equip"
+        ],
+        "i": "int(0..159)"
+      }
+    },
+    "y$": {
+      "kullanildigi_alanlar": [
+        "pet.settings",
+        "settings"
+      ],
+      "alanlar": {
+        "grab": "bool",
+        "scope": [
+          "own",
+          "all"
+        ],
+        "gold": "bool",
+        "equipment": "bool",
+        "other": "bool"
+      }
+    },
+    "tht": {
+      "kullanildigi_alanlar": [
+        "mode"
+      ],
+      "sema": [
+        "offensive",
+        "defensive"
+      ]
+    },
+    "Dht": {
+      "kullanildigi_alanlar": [
+        "raceReq"
+      ],
+      "sema": [
+        "chinese",
+        "european",
+        "both"
+      ]
+    },
+    "kht": {
+      "kullanildigi_alanlar": [
+        "items"
+      ],
+      "alanlar": {
+        "bagSlot": "int(0..383)",
+        "qty": "@D$",
+        "price": "int(1..999999999999)"
+      }
+    },
+    "Aht": {
+      "kullanildigi_alanlar": [
+        "stall.open",
+        "stall.update"
+      ],
+      "alanlar": {
+        "title": "string(len1..30)",
+        "notice": "string(len0..64)",
+        "color": "int(0..7)",
+        "items": {
+          "__tip__": "dizi",
+          "__eleman__": "@kht",
+          "__uzunluk__": "1..10"
+        }
+      }
+    },
+    "_$": {
+      "kullanildigi_alanlar": [
+        "fromTier",
+        "premiumTier",
+        "tier"
+      ],
+      "sema": [
+        "bronze",
+        "silver",
+        "gold"
+      ]
+    },
+    "v$": {
+      "kullanildigi_alanlar": [
+        "rank"
+      ],
+      "sema": [
+        "master",
+        "officer",
+        "member",
+        "recruit"
+      ]
+    },
+    "rht": {
+      "kullanildigi_alanlar": [
+        "derived"
+      ],
+      "alanlar": {
+        "maxHp": "int",
+        "maxMp": "int",
+        "physAtkMin": "number",
+        "physAtkMax": "number",
+        "magAtkMin": "number",
+        "magAtkMax": "number",
+        "physAtkIncPct": "number",
+        "magAtkIncPct": "number",
+        "dmgIncPct": "number",
+        "physDef": "number",
+        "magDef": "number",
+        "physBalancePct": "number",
+        "magBalancePct": "number",
+        "hitRatio": "number",
+        "parryRatio": "number",
+        "blockRatio": "number",
+        "critRating": "number",
+        "physAbsorb": "number",
+        "magAbsorb": "number",
+        "mpDiscountPct": "number=0?",
+        "statusResists": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "fb": "number",
+            "es": "number",
+            "bu": "number",
+            "ps": "number",
+            "zb": "number"
+          },
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "oht": {
+      "kullanildigi_alanlar": [
+        "masteries",
+        "topMasteries"
+      ],
+      "alanlar": {
+        "masteryId": "string",
+        "level": "int(>=1)"
+      }
+    },
+    "ght": {
+      "kullanildigi_alanlar": [
+        "professions"
+      ],
+      "alanlar": {
+        "id": "string",
+        "level": "int",
+        "xp": "int",
+        "xpToNext": "int|null"
+      }
+    },
+    "b$": {
+      "kullanildigi_alanlar": [
+        "buffs"
+      ],
+      "alanlar": {
+        "groupId": "string",
+        "category": [
+          "imbue",
+          "stat",
+          "hawk"
+        ],
+        "expiresAt": "number",
+        "pool": "number?",
+        "poolMax": "number?",
+        "allyCast": "bool?",
+        "maintained": "bool?"
+      }
+    },
+    "x$": {
+      "kullanildigi_alanlar": [
+        "statuses"
+      ],
+      "alanlar": {
+        "iid": "int",
+        "code": "string",
+        "level": "int",
+        "expiresAt": "number",
+        "srcId": "int?",
+        "skillId": "string?"
+      }
+    },
+    "S$": {
+      "kullanildigi_alanlar": [
+        "avatarAttach",
+        "avatarDress",
+        "avatarHat",
+        "bag",
+        "boots",
+        "chest",
+        "earring",
+        "gloves",
+        "head",
+        "item",
+        "necklace",
+        "pants",
+        "ringL",
+        "ringR",
+        "shield",
+        "shoulder",
+        "stack",
+        "weapon"
+      ],
+      "alanlar": {
+        "itemId": "string",
+        "qty": "int(>=1)",
+        "plus": "int(>=0)?",
+        "dur": "int(>=0)?",
+        "maxDur": "int(>=1)?",
+        "variance": "int(>=0)?",
+        "blues": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "id": "int(>0)",
+            "value": "number"
+          },
+          "__opsiyonel__": true
+        },
+        "rolls": {
+          "__tip__": "kayit",
+          "__anahtar__": "string",
+          "__deger__": "number",
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "iht": {
+      "kullanildigi_alanlar": [
+        "equip"
+      ],
+      "alanlar": {
+        "weapon": "@S$|null",
+        "shield": "@S$|null",
+        "head": "@S$|null",
+        "shoulder": "@S$|null",
+        "chest": "@S$|null",
+        "gloves": "@S$|null",
+        "pants": "@S$|null",
+        "boots": "@S$|null",
+        "avatarDress": "@S$|null",
+        "avatarHat": "@S$|null",
+        "avatarAttach": "@S$|null",
+        "earring": "@S$|null",
+        "necklace": "@S$|null",
+        "ringL": "@S$|null",
+        "ringR": "@S$|null"
+      }
+    },
+    "aht": {
+      "kullanildigi_alanlar": [
+        "inv.update",
+        "inventory"
+      ],
+      "alanlar": {
+        "gold": "int(>=0)",
+        "bag": [
+          "@S$|null"
+        ],
+        "equip": "@iht"
+      }
+    },
+    "_ht": {
+      "kullanildigi_alanlar": [
+        "self"
+      ],
+      "alanlar": {
+        "entityId": "int",
+        "charId": "string",
+        "name": "string",
+        "race": "string",
+        "style": "string",
+        "gender": [
+          "male",
+          "female"
+        ],
+        "level": "int",
+        "xp": "int",
+        "xpToNext": "int|null",
+        "spExp": "int",
+        "spExpToNext": "int",
+        "sp": "int",
+        "statPoints": "int",
+        "str": "int",
+        "int": "int",
+        "hp": "int",
+        "mp": "int",
+        "derived": "@rht",
+        "masteries": [
+          "@oht"
+        ],
+        "professions": {
+          "__tip__": "dizi",
+          "__eleman__": "@ght",
+          "__opsiyonel__": true
+        },
+        "knownSkills": [
+          "string"
+        ],
+        "buffs": [
+          "@b$"
+        ],
+        "statuses": {
+          "__tip__": "dizi",
+          "__eleman__": "@x$",
+          "__opsiyonel__": true
+        },
+        "inventory": "@aht",
+        "dead": "bool",
+        "cooldowns": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "groupId": "string",
+            "readyAt": "number"
+          },
+          "__opsiyonel__": true
+        },
+        "potionCooldowns": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "group": "string",
+            "readyAt": "number"
+          },
+          "__opsiyonel__": true
+        },
+        "actionCooldowns": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "key": "string",
+            "readyAt": "number"
+          },
+          "__opsiyonel__": true
+        },
+        "premiumTier": "@_$|null",
+        "premiumExpiresAt": "number|null",
+        "guild": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "id": "string",
+            "name": "string",
+            "level": "int",
+            "rank": "@v$"
+          },
+          "__null__": true
+        },
+        "guildPenaltyUntil": "number|null?",
+        "safeUntil": "number?",
+        "hotbar": "@sht|null?",
+        "autoPotion": "@fht|null?",
+        "macro": "@hht|null?"
+      }
+    },
+    "Zmt": {
+      "kullanildigi_alanlar": [
+        "kind"
+      ],
+      "sema": [
+        "player",
+        "monster",
+        "npc",
+        "ground_item",
+        "pet",
+        "growth_pet"
+      ]
+    },
+    "Qmt": {
+      "kullanildigi_alanlar": [
+        "moving"
+      ],
+      "alanlar": {
+        "tx": "number",
+        "tz": "number",
+        "speed": "number"
+      }
+    },
+    "$mt": {
+      "kullanildigi_alanlar": [
+        "add",
+        "entities"
+      ],
+      "alanlar": {
+        "id": "int",
+        "kind": "@Zmt",
+        "modelKey": "string",
+        "name": "string",
+        "x": "number",
+        "z": "number",
+        "y": "number?",
+        "rotY": "number",
+        "level": "int?",
+        "hp": "int?",
+        "maxHp": "int?",
+        "dead": "bool?",
+        "moving": "@Qmt?",
+        "npcId": "string?",
+        "itemId": "string?",
+        "qty": "int?",
+        "gold": "int?",
+        "rarity": {
+          "__tip__": "enum",
+          "__degerler__": [
+            "champion",
+            "giant",
+            "unique"
+          ],
+          "__opsiyonel__": true
+        },
+        "scalePct": "int?",
+        "premiumTier": "@_$?",
+        "guild": "string?",
+        "appearance": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "style": "string",
+            "equip": {
+              "__tip__": "kayit",
+              "__anahtar__": "string",
+              "__deger__": "string"
+            }
+          },
+          "__opsiyonel__": true
+        },
+        "stall": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "title": "string",
+            "color": "int"
+          },
+          "__opsiyonel__": true
+        },
+        "mount": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "modelKey": "string",
+            "hp": "int",
+            "maxHp": "int"
+          },
+          "__opsiyonel__": true
+        },
+        "ownerId": "int?",
+        "casting": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "groupId": "string",
+            "castMs": "int",
+            "remainingMs": "int(>=0)",
+            "aid": "int?"
+          },
+          "__opsiyonel__": true
+        },
+        "buffs": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "groupId": "string",
+            "category": "string",
+            "expiresAt": "number",
+            "allyCast": "bool?",
+            "maintained": "bool?"
+          },
+          "__opsiyonel__": true
+        },
+        "statuses": {
+          "__tip__": "dizi",
+          "__eleman__": {
+            "iid": "int",
+            "code": "string",
+            "level": "int",
+            "expiresAt": "number",
+            "srcId": "int?",
+            "skillId": "string?"
+          },
+          "__opsiyonel__": true
+        },
+        "monsterAction": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "aid": "int",
+            "skillId": "string",
+            "slot": "string?",
+            "targetId": "int",
+            "contactRemainingMs": "int(>=0)",
+            "projectile": "bool?",
+            "school": {
+              "__tip__": "enum",
+              "__degerler__": [
+                "physical",
+                "magical"
+              ],
+              "__opsiyonel__": true
+            }
+          },
+          "__opsiyonel__": true
+        },
+        "nodeGrade": "string?",
+        "gathering": {
+          "__tip__": "nesne",
+          "__alanlar__": {
+            "nodeId": "int",
+            "anim": [
+              "cut",
+              "mine"
+            ],
+            "swingMs": "int(>0)"
+          },
+          "__opsiyonel__": true
+        }
+      }
+    },
+    "jht": {
+      "kullanildigi_alanlar": [
+        "listings"
+      ],
+      "alanlar": {
+        "bagSlot": "int",
+        "item": "@S$",
+        "qty": "int",
+        "price": "int"
+      }
+    },
+    "eht": {
+      "kullanildigi_alanlar": [
+        "pet.state"
+      ],
+      "alanlar": {
+        "active": "bool",
+        "petId": "string?",
+        "entityId": "int?",
+        "bagSlot": "int?",
+        "expiresAt": "number?",
+        "settings": "@y$"
+      }
+    },
+    "nht": {
+      "kullanildigi_alanlar": [
+        "gpet.state"
+      ],
+      "alanlar": {
+        "active": "bool",
+        "petId": "string?",
+        "entityId": "int?",
+        "bagSlot": "int?",
+        "level": "int?",
+        "xp": "int?",
+        "xpToNext": "int|null?",
+        "hp": "int?",
+        "maxHp": "int?",
+        "hgp": "int?",
+        "hgpMax": "int?",
+        "dead": "bool?",
+        "mode": "@tht?"
+      }
+    },
+    "Mht": {
+      "kullanildigi_alanlar": [
+        "death",
+        "ret"
+      ],
+      "alanlar": {
+        "zone": "string",
+        "x": "number",
+        "z": "number",
+        "y": "number?",
+        "at": "number"
+      }
+    },
+    "Nht": {
+      "kullanildigi_alanlar": [
+        "members"
+      ],
+      "alanlar": {
+        "charId": "string",
+        "name": "string",
+        "level": "int",
+        "entityId": "int",
+        "zoneId": "string",
+        "x": "int?",
+        "z": "int?",
+        "hp": "int",
+        "maxHp": "int",
+        "mp": "int?",
+        "maxMp": "int?",
+        "buffs": {
+          "__tip__": "dizi",
+          "__eleman__": "@b$",
+          "__opsiyonel__": true
+        },
+        "statuses": {
+          "__tip__": "dizi",
+          "__eleman__": "@x$",
+          "__opsiyonel__": true
+        },
+        "dead": "bool?",
+        "linkdead": "bool?",
+        "premiumTier": "@_$?",
+        "style": "string?",
+        "topMasteries": {
+          "__tip__": "dizi",
+          "__eleman__": "@oht",
+          "__opsiyonel__": true
+        },
+        "race": "string?"
+      }
+    },
+    "Pht": {
+      "kullanildigi_alanlar": [
+        "members"
+      ],
+      "alanlar": {
+        "charId": "string",
+        "name": "string",
+        "level": "int",
+        "rank": "@v$",
+        "perms": "int",
+        "online": "bool",
+        "contributedXp": "int",
+        "race": "string?"
+      }
+    },
+    "Fht": {
+      "kullanildigi_alanlar": [
+        "asks",
+        "bids"
+      ],
+      "alanlar": {
+        "price": "int",
+        "units": "int"
+      }
+    },
+    "Iht": {
+      "kullanildigi_alanlar": [
+        "available",
+        "def"
+      ],
+      "alanlar": {
+        "id": "string",
+        "title": "string",
+        "description": "string",
+        "mobId": "string",
+        "mobName": "string",
+        "mobLevel": "int?",
+        "count": "int",
+        "minLevel": "int",
+        "maxLevel": "int",
+        "rewards": {
+          "gold": "int?",
+          "xp": "int?",
+          "sp": "int?",
+          "items": {
+            "__tip__": "dizi",
+            "__eleman__": {
+              "itemDefId": "string",
+              "name": "string",
+              "qty": "int"
+            },
+            "__opsiyonel__": true
+          }
+        },
+        "repeat": {
+          "__tip__": "birlesim",
+          "__secenekler__": [
+            {
+              "type": "const:none"
+            },
+            {
+              "type": "const:unlimited"
+            },
+            {
+              "type": "const:cooldown",
+              "hours": "number"
+            }
+          ]
+        }
+      }
+    },
+    "Lht": {
+      "kullanildigi_alanlar": [
+        "mine"
+      ],
+      "alanlar": {
+        "def": "@Iht",
+        "units": "int",
+        "targetUnits": "int",
+        "state": [
+          "active",
+          "completed",
+          "claimed"
+        ],
+        "cooldownUntil": "number?"
+      }
+    },
+    "vht": {
+      "kullanildigi_alanlar": [
+        "auctions",
+        "entries"
+      ],
+      "alanlar": {
+        "id": "string",
+        "seller": "string",
+        "item": "@S$",
+        "startPrice": "int",
+        "buyNowPrice": "int",
+        "currentBid": "int",
+        "bidCount": "int",
+        "endsAt": "number",
+        "status": [
+          "active",
+          "ended_sold",
+          "ended_unsold",
+          "cancelled"
+        ],
+        "finalPrice": "int|null",
+        "youAreTop": "bool",
+        "mine": "bool",
+        "claimable": "bool"
+      }
+    }
+  }
+}

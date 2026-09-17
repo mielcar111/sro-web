@@ -1,0 +1,187 @@
+2026-09-15T21:45:44.842Z [log] bolge jangan_province: egim up=1000 down=1000 override=0 su=141 sinir=var dogusY=YOK yaricap=0.5
+2026-09-15T21:45:44.842Z [log] bolge donwhang_province: egim up=1000 down=1000 override=0 su=70 sinir=var dogusY=-12 yaricap=0.5
+2026-09-15T21:45:44.842Z [log] bolge europe_province: egim up=1000 down=1000 override=2 su=124 sinir=var dogusY=12.6 yaricap=0.5
+2026-09-15T21:45:44.843Z [log] bolge hotan_province: egim up=1000 down=1000 override=1 su=139 sinir=var dogusY=37.5 yaricap=0.5
+2026-09-15T21:45:44.843Z [log] bolge samarkand_province: egim up=1000 down=1000 override=0 su=68 sinir=var dogusY=27 yaricap=0.5
+2026-09-15T21:45:44.846Z [log] mob katalogu: 158 tur
+2026-09-15T21:45:44.879Z [log] drop tablosu: 158
+2026-09-15T21:45:44.897Z [log] spawn noktasi: 7350 (5 bolge)
+2026-09-15T21:45:44.899Z [log] savas sabitleri: combat.json
+2026-09-15T21:45:44.937Z [log] esya stat katalogu: 2860 esya
+2026-09-15T21:45:44.940Z [log] mavi secenek katalogu: 416 satir
+2026-09-15T21:45:44.992Z [log] silah->ustalik: 14 silah turu
+2026-09-15T21:45:45.025Z [log] meslek aleti: 2 esya
+2026-09-15T21:45:45.053Z [log] dusus +N merdiveni: 13 satir ($optLevelSel)
+2026-09-15T21:45:45.055Z [log] taban saldiri: 15 silah turu
+2026-09-15T21:45:45.055Z [log] ilerleme: 79 seviye, maxLevel=80, 400 spExp/SP
+2026-09-15T21:45:45.057Z [log] oranlar: xp x25, sp x40, altin x30 (tabloya pismis), esya x1, muhur bronz x1 / gumus x6 / altin-muhur x6
+2026-09-15T21:45:45.092Z [log] [admin] esya eslemesi: 4610 vSRO kodu -> 2860 referans oyun esyasi
+2026-09-15T21:45:45.098Z [log] canavar beceri fx: 294 kayit
+2026-09-15T21:45:45.100Z [log] canavar beceri katalogu: 330 kayit
+2026-09-15T21:45:45.101Z [log] oyun dongusu basladi (100ms)
+2026-09-15T21:45:45.102Z [log] sistem yuklendi: envanter
+2026-09-15T21:45:45.104Z [log] sistem yuklendi: stat-ustalik
+2026-09-15T21:45:45.105Z [log] sistem yuklendi: dukkan
+2026-09-15T21:45:45.108Z [log] sistem yuklendi: beceri
+2026-09-15T21:45:45.110Z [log] sistem yuklendi: gorev
+2026-09-15T21:45:45.112Z [log] sistem yuklendi: donus-isinlanma
+2026-09-15T21:45:45.113Z [log] sistem yuklendi: banka-depo
+2026-09-15T21:45:45.115Z [log] sistem yuklendi: arayuz-durumu
+2026-09-15T21:45:45.117Z [log] sistem yuklendi: binek-pet
+2026-09-15T21:45:45.119Z [log] sistem yuklendi: parti
+2026-09-15T21:45:45.120Z [log] sistem yuklendi: ticaret
+2026-09-15T21:45:45.122Z [log] sistem yuklendi: tezgah
+2026-09-15T21:45:45.124Z [log] sistem yuklendi: borsa
+2026-09-15T21:45:45.128Z [log] sistem yuklendi: lonca
+2026-09-15T21:45:45.130Z [log] sistem yuklendi: gelistirme
+2026-09-15T21:45:45.131Z [log] sistem yuklendi: meslek
+2026-09-15T21:45:45.132Z [log] sistem yuklendi: yerinde-dirilis
+2026-09-15T21:45:45.135Z [log] sistem yuklendi: kucuk-sistemler
+2026-09-15T21:45:45.137Z [log] sistem yuklendi: dirilis-unique
+2026-09-15T21:45:45.185Z [log] [stat-ustalik] veri: 13 ustalik, 3256 beceri, 437 grup
+2026-09-15T21:45:45.221Z [log] dukkan: 33 NPC (npcshops.json 33), 3005 esya (items.json 3005), 148 yerlesim
+2026-09-15T21:45:45.259Z [log] beceri: 3256 beceri / 437 grup / 437 fx grubu yuklendi
+2026-09-15T21:45:45.263Z [log] [gorev] 81 gorev tanimi yuklendi
+2026-09-15T21:45:45.265Z [log] donus-isinlanma: 23 harita noktasi, 35 isinlayici yuklendi
+2026-09-15T21:45:45.307Z [log] banka: 5 depo NPC'si, menzil NPC basina (15/22.75)
+2026-09-15T21:45:45.312Z [log] binek-pet: 3 binek, 4 pet, 2 gelisim peti, 8 bolgede sehir kutusu
+2026-09-15T21:45:45.315Z [log] borsa: 9 mesaj hazir (exch.open/close/place/cancel/withdrawGold/stake/claimStake/mock*)
+2026-09-15T21:45:45.356Z [log] gelistirme: katalog 3005 esya (120 uretilmis tas), 416 mavi secenek satiri, 10 malzeme, 3256 beceri
+2026-09-15T21:45:45.544Z [log] jangan_province: 14754 zemin ucgeni (nav.bin yuzeyleri)
+2026-09-15T21:45:45.689Z [log] europe_province: 64299 zemin ucgeni (nav.bin yuzeyleri)
+2026-09-15T21:45:45.903Z [log] donwhang_province: 6105 zemin ucgeni (nav.bin yuzeyleri)
+2026-09-15T21:45:46.122Z [log] hotan_province: 11157 zemin ucgeni (nav.bin yuzeyleri)
+2026-09-15T21:45:46.307Z [log] samarkand_province: 28520 zemin ucgeni (nav.bin yuzeyleri)
+2026-09-15T21:45:46.308Z [log] sistem_meslek: 74 el yerlestirmesi + 813 harita agaci = 887 dugum, 4 meslek, 10 malzeme
+2026-09-15T21:45:46.309Z [log] yerinde-dirilis: esik seviye 110
+2026-09-15T21:45:46.373Z [log] kucuk-sistemler: 3005 esya, 39 mall kalemi, 3 premium kademesi, 6 unique, 5 tasiyici kuresi, 33 dukkan stogu
+2026-09-15T21:45:46.409Z [log] dirilis-unique: 37 dirilis becerisi / 8 grup
+2026-09-15T21:45:46.417Z [log] dirilis-unique: 6 unique, 64 unique yuvasi normal dogumdan ayrildi
+2026-09-15T21:45:46.417Z [log] sistem modulu: 19/19
+2026-09-15T21:45:46.418Z [log] GM komutlari: 30
+2026-09-15T21:45:46.563Z [log] SQL bagli -> localhost / SRO_VT_SHARD
+2026-09-15T21:45:46.623Z [log] unique dogdu: mob_tigerwoman @ jangan_province nest 5906 (entity 1000888)
+2026-09-15T21:45:46.624Z [log] unique dogdu: mob_uruchi @ donwhang_province nest 5916 (entity 1000889)
+2026-09-15T21:45:46.624Z [log] unique dogdu: mob_isyutaru @ hotan_province nest 5921 (entity 1000890)
+2026-09-15T21:45:46.624Z [log] unique dogdu: mob_bonelord @ hotan_province nest 21069 (entity 1000891)
+2026-09-15T21:45:46.625Z [log] unique dogdu: mob_kerberos @ europe_province nest 8757 (entity 1000892)
+2026-09-15T21:45:46.625Z [log] unique dogdu: mob_ivy @ samarkand_province nest 20998 (entity 1000893)
+2026-09-15T21:45:46.712Z [log] SRO_VT_SHARD referans verisi: 400 item, 400 mob
+2026-09-15T21:45:46.836Z [log] SRO_WEB_GAME bagli - kimlik/karakter uclari aktif
+2026-09-15T21:45:46.843Z [log] kalicilik: itemmap-tam.json 2860 esya / 4610 vSRO id
+2026-09-15T21:45:46.969Z [log] kalicilik: WebCharInventory hazir
+2026-09-15T21:45:46.972Z [log] kalicilik: WebCharInventoryEk hazir (maxDur/rolls)
+2026-09-15T21:45:46.972Z [log] [stat-ustalik] SQL havuzu baglandi - kalicilik acik
+2026-09-15T21:45:46.972Z [log] [gorev] SQL havuzu baglandi - _CharQuest kaliciligi acik
+2026-09-15T21:45:46.972Z [log] arayuz durumu kaliciligi: ACIK (SRO_WEB_GAME.WebCharUi)
+2026-09-15T21:45:46.972Z [log] sistem_meslek: ortak SRO_WEB_GAME havuzu baglandi - kalicilik acik
+2026-09-15T21:45:47.011Z [log] [stat-ustalik] veri: 13 ustalik, 3256 beceri, 437 grup
+2026-09-15T21:45:47.045Z [log] dukkan: 33 NPC (npcshops.json 33), 3005 esya (items.json 3005), 148 yerlesim
+2026-09-15T21:45:47.096Z [log] beceri: 3256 beceri / 437 grup / 437 fx grubu yuklendi
+2026-09-15T21:45:47.099Z [log] [gorev] 81 gorev tanimi yuklendi
+2026-09-15T21:45:47.102Z [log] donus-isinlanma: 23 harita noktasi, 35 isinlayici yuklendi
+2026-09-15T21:45:47.140Z [log] banka: 5 depo NPC'si, menzil NPC basina (15/22.75)
+2026-09-15T21:45:47.145Z [log] binek-pet: 3 binek, 4 pet, 2 gelisim peti, 8 bolgede sehir kutusu
+2026-09-15T21:45:47.146Z [log] borsa: 9 mesaj hazir (exch.open/close/place/cancel/withdrawGold/stake/claimStake/mock*)
+2026-09-15T21:45:47.187Z [log] gelistirme: katalog 3005 esya (120 uretilmis tas), 416 mavi secenek satiri, 10 malzeme, 3256 beceri
+2026-09-15T21:45:47.190Z [log] sistem_meslek: yeniden kurulum - 5 bolgedeki 887 dugum ONBELLEKTEN (entity id'ler korundu)
+2026-09-15T21:45:47.190Z [log] yerinde-dirilis: esik seviye 110
+2026-09-15T21:45:47.228Z [log] kucuk-sistemler: 3005 esya, 39 mall kalemi, 3 premium kademesi, 6 unique, 5 tasiyici kuresi, 33 dukkan stogu
+2026-09-15T21:45:47.263Z [log] dirilis-unique: 37 dirilis becerisi / 8 grup
+2026-09-15T21:45:47.268Z [log] dirilis-unique: 6 unique, 0 unique yuvasi normal dogumdan ayrildi, 6 kopya varlik silindi
+2026-09-15T21:45:47.268Z [log] kalicilik: 4 modul webBagla ile, 15 modul yeniden kurularak baglandi
+2026-09-15T21:45:47.269Z [log] Onceki ornek (PID 18900, 2026-09-15T21:40:49.649Z) temiz kapanmamis; kaydi bayat - uzerine yaziliyor.
+2026-09-15T21:45:47.271Z [log] ==========================================================
+2026-09-15T21:45:47.271Z [log]   Sunucu hazir  ->  http://127.0.0.1:3000
+2026-09-15T21:45:47.271Z [log]   WebSocket     ->  ws://127.0.0.1:3000/ws   (proto 10)
+2026-09-15T21:45:47.271Z [log]   Istemci       ->  YUKLU
+2026-09-15T21:45:47.271Z [log]   SQL           ->  bagli
+2026-09-15T21:45:47.271Z [log]   Protokol      ->  100 giden + 89 gelen mesaj
+2026-09-15T21:45:47.272Z [log]   Statik onbellek -> 96 MB tavan, tek dosya <= 2 MB
+2026-09-15T21:45:47.272Z [log]   Surec         ->  PID 21744  (node v24.21.0)
+2026-09-15T21:45:47.272Z [log]   Kod surumu    ->  server.js sha256:120ff54b6965
+2026-09-15T21:45:47.272Z [log]   Calisma logu  ->  D:\FORUM-SHARE\loglar\sunucu-2026-09-15T21-45-44-pid21744.log
+2026-09-15T21:45:47.272Z [log] ==========================================================
+2026-09-15T21:45:47.283Z [log] parti: onceki oturumdan 0 ilan kapatildi
+2026-09-15T21:45:47.288Z [log] mezat: 0 acik kayit yuklendi
+2026-09-15T21:45:47.327Z [log] lonca semasi hazir (19 toplu is; DROP calistirilmadi)
+2026-09-15T21:45:47.334Z [log] lonca verisi yuklendi: 0 lonca, 0 uye
+2026-09-15T21:45:47.471Z [log] unique dogdu: mob_tigerwoman @ jangan_province nest 5658 (entity 1000894) [devir - duyurusuz]
+2026-09-15T21:45:47.472Z [log] unique dogdu: mob_uruchi @ donwhang_province nest 5913 (entity 1000895) [devir - duyurusuz]
+2026-09-15T21:45:47.472Z [log] unique dogdu: mob_isyutaru @ hotan_province nest 5921 (entity 1000896) [devir - duyurusuz]
+2026-09-15T21:45:47.472Z [log] unique dogdu: mob_bonelord @ hotan_province nest 21289 (entity 1000897) [devir - duyurusuz]
+2026-09-15T21:45:47.472Z [log] unique dogdu: mob_kerberos @ europe_province nest 8755 (entity 1000898) [devir - duyurusuz]
+2026-09-15T21:45:47.472Z [log] unique dogdu: mob_ivy @ samarkand_province nest 21001 (entity 1000899) [devir - duyurusuz]
+2026-09-15T21:46:10.569Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:46:40.364Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:46:45.098Z [log] statik onbellek: 2 dosya / 0.0 MB (tavan 96 MB) - isabet 5 (%71), iska 2, atim 0, bayat 0; rss 659 MB
+2026-09-15T21:46:45.098Z [log] kardes varyant kapisi: 5 imzali, 0 mirasli (.meta yok), 0 bayat -> anlik sikistirma
+2026-09-15T21:47:26.709Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:27.528Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:27.760Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:27.949Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:28.121Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:28.299Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:28.466Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:28.643Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:28.818Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:29.001Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:29.175Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:29.360Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:29.530Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:29.710Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:29.884Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:30.053Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:30.247Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:30.446Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:30.634Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:30.846Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:31.170Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:31.639Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:31.837Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:32.022Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:32.205Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:32.400Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:32.564Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:32.751Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:32.968Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:33.155Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:33.357Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:33.557Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:33.743Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:33.921Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:34.123Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:34.331Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:34.515Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:34.711Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:34.896Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:47:35.093Z [log] kayit hatasi: Invalid column name 'Play123Time'.
+2026-09-15T21:48:18.768Z [log] vSRO hesabi web'e tasindi: admin
+2026-09-15T21:48:18.791Z [log] giris: admin [GM] (beni hatirla)
+2026-09-15T21:48:31.001Z [log] dunyaya giris: [GM] Admin
+2026-09-15T21:48:31.032Z [log] hiz-gozlem ? auth: tepe 1/10000ms
+2026-09-15T21:48:31.520Z [log] [stat-ustalik] vSRO esleme: 3256/3256 beceri, 13/13 ustalik
+2026-09-15T21:48:31.536Z [log] [gorev] [GM] Admin: 0 gorev kaydi yuklendi, 15 yabanci QuestID atlandi
+2026-09-15T21:48:31.698Z [log] kalicilik: SRO_VT_SHARD havuzu acildi (_Items/_Inventory yolu aktif)
+2026-09-15T21:48:31.830Z [log] kalicilik: char 1 - 0 vSRO esyasi cozuldu, 8 kod cozulemedi (dokunulmadi)
+2026-09-15T21:48:31.844Z [log] giris kareleri: env.clock, unique.timers, guild.state + batch[pet.state, gpet.state, carrier.state]
+2026-09-15T21:48:31.844Z [log] WS giris: [GM] Admin (entity 1001) -> jangan_province
+2026-09-15T21:48:32.010Z [log] kalicilik: char 1 - 0 esya vSRO'ya, 5 esya yedege (equip[0] ITEM_CH_BLADE_01_A_DEF -> yedek: slot 6: referans oyun disi vSRO esyasi korunuyor ; equip[1] ITEM_CH_SHIELD_01_A_DEF -> yedek: slot 7: referans oyun disi vSRO esyasi korunuyor ; equip[4] ITEM_CH_W_LIGHT_01_BA_A_DEF -> yedek: slot 1: referans oyun disi vSRO esyasi korunuyor ; equip[6] ITEM_CH_W_LIGHT_01_LA_A_DEF -> yedek: slot 4: referans oyun disi vSRO esyasi korunuyor ...)
+2026-09-15T21:48:32.167Z [log] npc ilgi: jangan_province 45 varlik ilgi yonetimine bagladi
+2026-09-15T21:48:45.107Z [log] statik onbellek: 217 dosya / 55.8 MB (tavan 96 MB) - isabet 5 (%2), iska 217, atim 0, bayat 0; rss 733 MB
+2026-09-15T21:48:45.107Z [log] kardes varyant kapisi: 18 imzali, 0 mirasli (.meta yok), 0 bayat -> anlik sikistirma
+2026-09-15T21:49:21.052Z [log] hiz-gozlem [GM] Admin move: tepe 1/10000ms
+2026-09-15T21:49:21.071Z [log] jangan_province: 141 su alani (taban kisiti aktif)
+2026-09-15T21:49:45.120Z [log] statik onbellek: 386 dosya / 89.7 MB (tavan 96 MB) - isabet 9 (%2), iska 386, atim 0, bayat 0; rss 770 MB
+2026-09-15T21:49:45.120Z [log] kardes varyant kapisi: 60 imzali, 0 mirasli (.meta yok), 0 bayat -> anlik sikistirma
+2026-09-15T21:50:05.691Z [log] giris: admin [GM]
+2026-09-15T21:50:06.074Z [log] [bildirim] ice aktarim: hata 0 eklendi / 0 zaten vardi, ozellik 0 eklendi / 0 zaten vardi
+2026-09-15T21:50:10.113Z [log] giris: admin [GM]
+2026-09-15T21:50:45.121Z [log] statik onbellek: 387 dosya / 89.7 MB (tavan 96 MB) - isabet 9 (%2), iska 387, atim 0, bayat 0; rss 796 MB
+2026-09-15T21:50:45.121Z [log] kardes varyant kapisi: 61 imzali, 0 mirasli (.meta yok), 0 bayat -> anlik sikistirma
+2026-09-15T21:51:33.975Z [log] WS cikis: [GM] Admin
+2026-09-15T21:52:45.145Z [log] statik onbellek: 387 dosya / 89.7 MB (tavan 96 MB) - isabet 13 (%3), iska 387, atim 0, bayat 0; rss 799 MB
+2026-09-15T21:52:45.145Z [log] kardes varyant kapisi: 65 imzali, 0 mirasli (.meta yok), 0 bayat -> anlik sikistirma
+2026-09-15T21:54:13.056Z [log] giris: admin [GM]
+2026-09-15T21:54:45.150Z [log] statik onbellek: 391 dosya / 89.8 MB (tavan 96 MB) - isabet 13 (%3), iska 391, atim 0, bayat 0; rss 783 MB
+2026-09-15T21:54:45.150Z [log] kardes varyant kapisi: 65 imzali, 0 mirasli (.meta yok), 0 bayat -> anlik sikistirma

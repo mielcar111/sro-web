@@ -1,0 +1,82 @@
+2026-09-15T20:51:43.417Z [log] bolge jangan_province: egim up=1000 down=1000 override=0 su=141 sinir=var dogusY=YOK yaricap=0.5
+2026-09-15T20:51:43.417Z [log] bolge donwhang_province: egim up=1000 down=1000 override=0 su=70 sinir=var dogusY=-12 yaricap=0.5
+2026-09-15T20:51:43.417Z [log] bolge europe_province: egim up=1000 down=1000 override=2 su=124 sinir=var dogusY=12.6 yaricap=0.5
+2026-09-15T20:51:43.417Z [log] bolge hotan_province: egim up=1000 down=1000 override=1 su=139 sinir=var dogusY=37.5 yaricap=0.5
+2026-09-15T20:51:43.418Z [log] bolge samarkand_province: egim up=1000 down=1000 override=0 su=68 sinir=var dogusY=27 yaricap=0.5
+2026-09-15T20:51:43.420Z [log] mob katalogu: 158 tur
+2026-09-15T20:51:43.451Z [log] drop tablosu: 158
+2026-09-15T20:51:43.471Z [log] spawn noktasi: 7350 (5 bolge)
+2026-09-15T20:51:43.473Z [log] savas sabitleri: combat.json
+2026-09-15T20:51:43.516Z [log] esya stat katalogu: 2860 esya
+2026-09-15T20:51:43.521Z [log] mavi secenek katalogu: 416 satir
+2026-09-15T20:51:43.576Z [log] silah->ustalik: 14 silah turu
+2026-09-15T20:51:43.612Z [log] meslek aleti: 2 esya
+2026-09-15T20:51:43.644Z [log] dusus +N merdiveni: 13 satir ($optLevelSel)
+2026-09-15T20:51:43.645Z [log] taban saldiri: 15 silah turu
+2026-09-15T20:51:43.646Z [log] ilerleme: 79 seviye, maxLevel=80, 400 spExp/SP
+2026-09-15T20:51:43.649Z [log] oranlar: xp x25, sp x40, altin x30 (tabloya pismis), esya x1, muhur bronz x1 / gumus x6 / altin-muhur x6
+2026-09-15T20:51:43.687Z [log] [admin] esya eslemesi: 4610 vSRO kodu -> 2860 referans oyun esyasi
+2026-09-15T20:51:43.692Z [log] canavar beceri fx: 294 kayit
+2026-09-15T20:51:43.695Z [log] canavar beceri katalogu: 330 kayit
+2026-09-15T20:51:43.696Z [log] oyun dongusu basladi (100ms)
+2026-09-15T20:51:43.697Z [log] sistem yuklendi: envanter
+2026-09-15T20:51:43.699Z [log] sistem yuklendi: stat-ustalik
+2026-09-15T20:51:43.701Z [log] sistem yuklendi: dukkan
+2026-09-15T20:51:43.703Z [log] sistem yuklendi: beceri
+2026-09-15T20:51:43.705Z [log] sistem yuklendi: gorev
+2026-09-15T20:51:43.707Z [log] sistem yuklendi: donus-isinlanma
+2026-09-15T20:51:43.708Z [log] sistem yuklendi: banka-depo
+2026-09-15T20:51:43.710Z [log] sistem yuklendi: arayuz-durumu
+2026-09-15T20:51:43.713Z [log] sistem yuklendi: binek-pet
+2026-09-15T20:51:43.714Z [log] sistem yuklendi: parti
+2026-09-15T20:51:43.716Z [log] sistem yuklendi: ticaret
+2026-09-15T20:51:43.718Z [log] sistem yuklendi: tezgah
+2026-09-15T20:51:43.720Z [log] sistem yuklendi: borsa
+2026-09-15T20:51:43.725Z [log] sistem yuklendi: lonca
+2026-09-15T20:51:43.726Z [log] sistem yuklendi: gelistirme
+2026-09-15T20:51:43.728Z [log] sistem yuklendi: meslek
+2026-09-15T20:51:43.729Z [log] sistem yuklendi: yerinde-dirilis
+2026-09-15T20:51:43.732Z [log] sistem yuklendi: kucuk-sistemler
+2026-09-15T20:51:43.735Z [log] sistem yuklendi: dirilis-unique
+2026-09-15T20:51:43.796Z [log] [stat-ustalik] veri: 13 ustalik, 3256 beceri, 437 grup
+2026-09-15T20:51:43.837Z [log] dukkan: 33 NPC (npcshops.json 33), 3005 esya (items.json 3005), 148 yerlesim
+2026-09-15T20:51:43.880Z [log] beceri: 3256 beceri / 437 grup / 437 fx grubu yuklendi
+2026-09-15T20:51:43.884Z [log] [gorev] 81 gorev tanimi yuklendi
+2026-09-15T20:51:43.887Z [log] donus-isinlanma: 23 harita noktasi, 35 isinlayici yuklendi
+2026-09-15T20:51:43.932Z [log] banka: 5 depo NPC'si, menzil NPC basina (15/22.75)
+2026-09-15T20:51:43.937Z [log] binek-pet: 3 binek, 4 pet, 2 gelisim peti, 8 bolgede sehir kutusu
+2026-09-15T20:51:43.940Z [log] borsa: 9 mesaj hazir (exch.open/close/place/cancel/withdrawGold/stake/claimStake/mock*)
+2026-09-15T20:51:43.988Z [log] gelistirme: katalog 3005 esya (120 uretilmis tas), 416 mavi secenek satiri, 10 malzeme, 3256 beceri
+2026-09-15T20:51:44.219Z [log] jangan_province: 14754 zemin ucgeni (nav.bin yuzeyleri)
+2026-09-15T20:51:44.396Z [log] europe_province: 64299 zemin ucgeni (nav.bin yuzeyleri)
+2026-09-15T20:51:44.653Z [log] donwhang_province: 6105 zemin ucgeni (nav.bin yuzeyleri)
+2026-09-15T20:51:44.918Z [log] hotan_province: 11157 zemin ucgeni (nav.bin yuzeyleri)
+2026-09-15T20:51:45.143Z [log] samarkand_province: 28520 zemin ucgeni (nav.bin yuzeyleri)
+2026-09-15T20:51:45.144Z [log] sistem_meslek: 74 el yerlestirmesi + 813 harita agaci = 887 dugum, 4 meslek, 10 malzeme
+2026-09-15T20:51:45.145Z [log] yerinde-dirilis: esik seviye 110
+2026-09-15T20:51:45.218Z [log] kucuk-sistemler: 3005 esya, 39 mall kalemi, 3 premium kademesi, 6 unique, 5 tasiyici kuresi, 33 dukkan stogu
+2026-09-15T20:51:45.257Z [log] dirilis-unique: 37 dirilis becerisi / 8 grup
+2026-09-15T20:51:45.266Z [log] dirilis-unique: 6 unique, 64 unique yuvasi normal dogumdan ayrildi
+2026-09-15T20:51:45.266Z [log] sistem modulu: 19/19
+2026-09-15T20:51:45.267Z [log] GM komutlari: 30
+2026-09-15T20:51:45.282Z [log] SQL baglanamadi (sunucu yine de calisir): Failed to connect to localhost:1433 - Could not connect (sequence)
+2026-09-15T20:51:45.282Z [log] Onceki ornek (PID 27540, 2026-09-15T20:41:29.628Z) temiz kapanmamis; kaydi bayat - uzerine yaziliyor.
+2026-09-15T20:51:45.285Z [log] ==========================================================
+2026-09-15T20:51:45.285Z [log]   Sunucu hazir  ->  http://127.0.0.1:3000
+2026-09-15T20:51:45.285Z [log]   WebSocket     ->  ws://127.0.0.1:3000/ws   (proto 10)
+2026-09-15T20:51:45.285Z [log]   Istemci       ->  YUKLU
+2026-09-15T20:51:45.285Z [log]   SQL           ->  kapali/bagli degil
+2026-09-15T20:51:45.285Z [log]   Protokol      ->  100 giden + 89 gelen mesaj
+2026-09-15T20:51:45.285Z [log]   Statik onbellek -> 96 MB tavan, tek dosya <= 2 MB
+2026-09-15T20:51:45.286Z [log]   Surec         ->  PID 26572  (node v24.21.0)
+2026-09-15T20:51:45.286Z [log]   Kod surumu    ->  server.js sha256:120ff54b6965
+2026-09-15T20:51:45.286Z [log]   Calisma logu  ->  D:\FORUM-SHARE\loglar\sunucu-2026-09-15T20-51-43-pid26572.log
+2026-09-15T20:51:45.286Z [log] ==========================================================
+2026-09-15T20:51:45.470Z [log] unique dogdu: mob_tigerwoman @ jangan_province nest 5908 (entity 1000888)
+2026-09-15T20:51:45.470Z [log] unique dogdu: mob_uruchi @ donwhang_province nest 5915 (entity 1000889)
+2026-09-15T20:51:45.471Z [log] unique dogdu: mob_isyutaru @ hotan_province nest 5917 (entity 1000890)
+2026-09-15T20:51:45.471Z [log] unique dogdu: mob_bonelord @ hotan_province nest 21289 (entity 1000891)
+2026-09-15T20:51:45.471Z [log] unique dogdu: mob_kerberos @ europe_province nest 8564 (entity 1000892)
+2026-09-15T20:51:45.471Z [log] unique dogdu: mob_ivy @ samarkand_province nest 20996 (entity 1000893)
+2026-09-15T20:52:43.703Z [log] statik onbellek: 2 dosya / 0.0 MB (tavan 96 MB) - isabet 4 (%67), iska 2, atim 0, bayat 0; rss 654 MB
+2026-09-15T20:52:43.704Z [log] kardes varyant kapisi: 4 imzali, 0 mirasli (.meta yok), 0 bayat -> anlik sikistirma

@@ -1,0 +1,26 @@
+[
+ {
+  "id": "mount_c_horse1",
+  "name": "Horse",
+  "modelKey": "mount_c_horse1",
+  "speedU": 13.5,
+  "maxHp": 983,
+  "reqLevel": 20
+ },
+ {
+  "id": "mount_c_horse2",
+  "name": "Fine Horse",
+  "modelKey": "mount_c_horse2",
+  "speedU": 14.25,
+  "maxHp": 2544,
+  "reqLevel": 40
+ },
+ {
+  "id": "mount_c_horse3",
+  "name": "Noble Horse",
+  "modelKey": "mount_c_horse3",
+  "speedU": 15.75,
+  "maxHp": 5388,
+  "reqLevel": 60
+ }
+]

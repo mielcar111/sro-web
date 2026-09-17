@@ -1,0 +1,18 @@
+## Changed
+
+- **Kombo beceriler adım adım** — Crosswise ve Flying Stone Smash, altı Sword Chain becerisi, Devil ve Demon Cut Blade, Dragon Sore Blade, Spear Chain becerileri, Jade Breaking ve Windless Spear, Lightning Bird Spear, iki Soul Spear ve 4/5 Arrow Combo artık orijinaldeki gibi işliyor. Kombonun her vuruşu, tek bir uzun birleşik hareket yerine kendi zamanlaması ve toparlanma süresi olan ayrı bir onaylı adım; kesilen bir kombo da orada duruyor. Tek tuşa bastıktan sonra artık kombonun tamamı boyunca kilitli kalmıyorsun.
+- **Beceri verileri artık orijinal sunucunun kendi tablolarından geliyor** — yedi Çin ustalık ağacı; bekleme süreleri, güçlendirme süreleri, gereksinimleri ve etki değerlerini daha sonraki bir veritabanı kopyası yerine orijinal oyun sunucusunun gerçekten yüklediği tablodan okuyor. Bunun değiştirdiği her şey aşağıda.
+- **Guard of Ice, Fire Protection, Flame Body, Piercing Force, Concentration ve Fire Shield artık sona eriyor** — bu kendine yönelik güçlendirmeler eskiden tam bir gün sürüyordu. Orijinalde rütbeye göre yaklaşık 5,5 ile 12 dakika arasında sürüyorlar; artık burada da öyle. Yenilemeyi hesaba kat.
+- **Daha hızlı iyileştirme ve tedavi** — Force iyileştirme becerileri artık 10 saniye yerine 3 saniyede, kendini iyileştirme ve Force Cure becerileri 10 ve 16 saniye yerine yaklaşık 2 saniyede hazır oluyor. Alan tedavisi Cure Therapy ise 30 saniyeyle daha yavaş. Arrow Combo becerileri 6 yerine 4 saniyede, Grass Walk ise 25 yerine 2 saniyede dönüyor.
+- **Vital Spot etkileri çok daha sık tutuyor** — Vital Spot Body, Mind ve Zero artık %45 yerine orijinal %80 şansla uygulanıyor.
+- **Alan becerileri fazladan hedeflerini orijinaldeki gibi seçiyor** — Soul Blade Force, Sword Dance becerileri, Ghost ve Dancing Demon Spear, Chain Spear Shura ve Dragon, Wolf Bite Spear hattı, Berserker/Demon/Devil Arrow, Mind Bow becerileri, Snow Storm Ice Rain, Flame Wave Wide, Lion Shout ve Thunderbolt becerileri artık hangi düşmanların kapsandığını — ve hangilerinin azaltılmış hasar aldığını — oyunda karşılığı olmayan bir iç sıralama yerine orijinalin alanı tarama biçimine göre belirliyor.
+- **Snow Shield daha çok mana harcıyor** — kalkan artık canından düşürdüğü her hasar puanı için orijinaldeki gibi 1,2 yerine 1,5 mana harcıyor. Vuruştan emdiği pay aynı.
+- **Ice ve Fire Wall kendiliğinden yok olmuyor** — duvar artık parçalanana, bakım manasını ödeyemeyene ya da sen iptal edene kadar duruyor. Daha önce dokunulmayan bir duvar bir gün sonra sessizce kayboluyordu.
+- **Diriltme bir tık daha az veriyor** — dirilen karakterin uyandığı can ve mana artık orijinaldeki gibi aşağı yuvarlanıyor; bu, öncekinden bir puan düşük olabilir.
+- **Her ağacın ilk becerisi ustalık 5 istiyor** — Strike Smash, Wolf Bite Spear, Anti Devil Bow, üç element gücü ve Self Breathe Heal artık tam olarak orijinaldeki gibi ustalık seviyesi 5 gerektiriyor. Yeni karakterler ilk becerilerini almadan önce ustalık puanlarını yatırmalı.
+- **Fire Combustion ve Vision Fire Combustion** — gizlenme ve görünmezlik oyunun parçası olmadığı için bu iki tespit becerisinin hâlâ bir etkisi yok.
+
+## Fixed
+
+- **Fire Shield yine kalkan istiyor, bu kez doğru nedenle** — gereksinim artık sonradan eklenmek yerine doğrudan orijinalin kendi verisinden okunuyor ve aynı şekilde davranıyor: büyüyü yapmak için kalkan gerekiyor, sonradan kalkanı çıkarsan koruma devam ediyor.
+- **Tedaviler hangi rahatsızlığı gidereceğini tam orijinaldeki gibi seçiyor** — Force Cure becerileri, Cure Therapy ve arınma hapları artık orijinalin kendi rastgele seçim biçimini kullanıyor; birkaç rahatsızlıktan birini tedavi etme olasılıkları aynı.

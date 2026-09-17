@@ -1,0 +1,243 @@
+{
+ "$comment": "HAND-OWNED (survives pnpm gen:sro). Blue-option magic stones: crafted by the enchanter profession from wood+stone materials, applied to same-degree gear via the Alchemy window. Application mechanics follow .decompilation/silkroad-item-blue-options-and-magic-stones.md (9-line cap, same-family replace, retail 50% roll, assimilation {10,20,30}); acquisition (crafting) is ours. Item defs are expanded at load: one magicstone_<effect>_<degree> per family x degree 1-8.",
+ "maxBlueLines": 9,
+ "resistCapPct": 80,
+ "enhanceCounters": {
+  "luckBonusPct": 5,
+  "astralFloorPlus": 4
+ },
+ "families": [
+  {
+   "effect": "str",
+   "name": "Magic Stone of Strength",
+   "icon": "magicstone_str",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 50
+  },
+  {
+   "effect": "int",
+   "name": "Magic Stone of Intellect",
+   "icon": "magicstone_int",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 50
+  },
+  {
+   "effect": "hp",
+   "name": "Magic Stone of Vitality",
+   "icon": "magicstone_hp",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 50
+  },
+  {
+   "effect": "mp",
+   "name": "Magic Stone of Mana",
+   "icon": "magicstone_mp",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 50
+  },
+  {
+   "effect": "duru",
+   "name": "Magic Stone of Solidity",
+   "icon": "magicstone_duru",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 50
+  },
+  {
+   "effect": "hr",
+   "name": "Magic Stone of Accuracy",
+   "icon": "magicstone_hr",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 50
+  },
+  {
+   "effect": "er",
+   "name": "Magic Stone of Evasion",
+   "icon": "magicstone_er",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 50
+  },
+  {
+   "effect": "fz",
+   "name": "Magic Stone of Frost Ward",
+   "icon": "magicstone_fz",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 60
+  },
+  {
+   "effect": "es",
+   "name": "Magic Stone of Shock Ward",
+   "icon": "magicstone_es",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 60
+  },
+  {
+   "effect": "bu",
+   "name": "Magic Stone of Flame Ward",
+   "icon": "magicstone_bu",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 60
+  },
+  {
+   "effect": "ps",
+   "name": "Magic Stone of Venom Ward",
+   "icon": "magicstone_ps",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 60
+  },
+  {
+   "effect": "zb",
+   "name": "Magic Stone of Plague Ward",
+   "icon": "magicstone_zb",
+   "kind": "stat",
+   "baseChancePct": 50,
+   "assimilationBytes": [
+    10,
+    20,
+    30
+   ],
+   "sellPrice": 60
+  },
+  {
+   "effect": "luck",
+   "name": "Magic Stone of Luck",
+   "icon": "magicstone_luck",
+   "kind": "counter",
+   "baseChancePct": 100,
+   "assimilationBytes": [],
+   "sellPrice": 120
+  },
+  {
+   "effect": "astr",
+   "name": "Magic Stone of Astral",
+   "icon": "magicstone_astr",
+   "kind": "counter",
+   "baseChancePct": 100,
+   "assimilationBytes": [],
+   "sellPrice": 120
+  },
+  {
+   "effect": "ape",
+   "name": "Magic Stone of Preservation",
+   "icon": "magicstone_ape",
+   "kind": "counter",
+   "baseChancePct": 100,
+   "assimilationBytes": [],
+   "sellPrice": 120
+  }
+ ],
+ "craft": {
+  "$comment": "Recipes consume BOTH collector lines at tierByDegree; counters additionally burn one tier-5 pinch of counterT5Resource. Craft always succeeds (risk lives at application) and grants xpByDegree enchanter XP.",
+  "tierByDegree": {
+   "1": 1,
+   "2": 1,
+   "3": 2,
+   "4": 2,
+   "5": 3,
+   "6": 3,
+   "7": 4,
+   "8": 4
+  },
+  "reqLevelByDegree": {
+   "1": 1,
+   "2": 5,
+   "3": 12,
+   "4": 20,
+   "5": 28,
+   "6": 38,
+   "7": 50,
+   "8": 62
+  },
+  "xpByDegree": {
+   "1": 8,
+   "2": 12,
+   "3": 18,
+   "4": 26,
+   "5": 38,
+   "6": 55,
+   "7": 80,
+   "8": 115
+  },
+  "inputs": {
+   "stat": {
+    "wood": 4,
+    "stone": 4
+   },
+   "counter": {
+    "wood": 6,
+    "stone": 6,
+    "t5Qty": 1
+   }
+  },
+  "counterT5Resource": {
+   "luck": "wood",
+   "astr": "stone",
+   "ape": "wood"
+  }
+ }
+}

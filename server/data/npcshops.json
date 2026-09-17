@@ -1,0 +1,5420 @@
+{
+ "shops": {
+  "npc_merchant_wang": {
+   "id": "npc_merchant_wang",
+   "name": "Herbalist Yangyun",
+   "modelKey": "npc_ch_potion",
+   "sroCode": "NPC_CH_POTION",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "hp_potion_01",
+     "hp_potion_02",
+     "hp_potion_03",
+     "hp_potion_04",
+     "hp_potion_05",
+     "mp_potion_01",
+     "mp_potion_02",
+     "mp_potion_03",
+     "mp_potion_04",
+     "mp_potion_05",
+     "pill_universal_01",
+     "pill_universal_02",
+     "pill_universal_03",
+     "pill_universal_04",
+     "pill_universal_05",
+     "pill_purification_01",
+     "pill_purification_02",
+     "pill_purification_03",
+     "pill_purification_04",
+     "vigor_potion_01",
+     "vigor_potion_02",
+     "vigor_potion_03",
+     "hp_grain_01",
+     "mp_grain_01",
+     "vigor_grain_01",
+     "speed_potion_01",
+     "elixir_weapon",
+     "elixir_armor",
+     "elixir_shield",
+     "elixir_accessory",
+     "sp_saver"
+    ],
+    "tabs": [
+     {
+      "name": "Potions",
+      "items": [
+       "hp_potion_01",
+       "hp_potion_02",
+       "hp_potion_03",
+       "hp_potion_04",
+       "hp_potion_05",
+       "mp_potion_01",
+       "mp_potion_02",
+       "mp_potion_03",
+       "mp_potion_04",
+       "mp_potion_05",
+       "pill_universal_01",
+       "pill_universal_02",
+       "pill_universal_03",
+       "pill_universal_04",
+       "pill_universal_05",
+       "pill_purification_01",
+       "pill_purification_02",
+       "pill_purification_03",
+       "pill_purification_04"
+      ]
+     },
+     {
+      "name": "Special",
+      "items": [
+       "vigor_potion_01",
+       "vigor_potion_02",
+       "vigor_potion_03",
+       "hp_grain_01",
+       "mp_grain_01",
+       "vigor_grain_01",
+       "speed_potion_01",
+       "elixir_weapon",
+       "elixir_armor",
+       "elixir_shield",
+       "elixir_accessory",
+       "sp_saver"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "jangan_province",
+     "x": 9741.612,
+     "z": 1651.094,
+     "rotY": -0.625
+    },
+    {
+     "zone": "jangan_world_deprecated",
+     "x": 957.612,
+     "z": 211.093,
+     "rotY": -0.625
+    },
+    {
+     "zone": "zone_city",
+     "x": 12,
+     "z": 4,
+     "rotY": 3.6
+    }
+   ]
+  },
+  "npc_ch_armor": {
+   "id": "npc_ch_armor",
+   "name": "Protector Trader Mrs Jang",
+   "modelKey": "npc_ch_armor",
+   "sroCode": "NPC_CH_ARMOR",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "heavy01_head",
+     "heavy02_head",
+     "heavy03_head",
+     "heavy01_shoulder",
+     "heavy02_shoulder",
+     "heavy03_shoulder",
+     "heavy01_chest",
+     "heavy02_chest",
+     "heavy03_chest",
+     "heavy01_pants",
+     "heavy02_pants",
+     "heavy03_pants",
+     "heavy01_gloves",
+     "heavy02_gloves",
+     "heavy03_gloves",
+     "heavy01_boots",
+     "heavy02_boots",
+     "heavy03_boots",
+     "light01_head",
+     "light02_head",
+     "light03_head",
+     "light01_shoulder",
+     "light02_shoulder",
+     "light03_shoulder",
+     "light01_chest",
+     "light02_chest",
+     "light03_chest",
+     "light01_pants",
+     "light02_pants",
+     "light03_pants",
+     "light01_gloves",
+     "light02_gloves",
+     "light03_gloves",
+     "light01_boots",
+     "light02_boots",
+     "light03_boots",
+     "clothes01_head",
+     "clothes02_head",
+     "clothes03_head",
+     "clothes01_shoulder",
+     "clothes02_shoulder",
+     "clothes03_shoulder",
+     "clothes01_chest",
+     "clothes02_chest",
+     "clothes03_chest",
+     "clothes01_pants",
+     "clothes02_pants",
+     "clothes03_pants",
+     "clothes01_gloves",
+     "clothes02_gloves",
+     "clothes03_gloves",
+     "clothes01_boots",
+     "clothes02_boots",
+     "clothes03_boots"
+    ],
+    "tabs": [
+     {
+      "name": "Heavy Armor",
+      "race": "chinese",
+      "items": [
+       "heavy01_head",
+       "heavy02_head",
+       "heavy03_head",
+       "heavy01_shoulder",
+       "heavy02_shoulder",
+       "heavy03_shoulder",
+       "heavy01_chest",
+       "heavy02_chest",
+       "heavy03_chest",
+       "heavy01_pants",
+       "heavy02_pants",
+       "heavy03_pants",
+       "heavy01_gloves",
+       "heavy02_gloves",
+       "heavy03_gloves",
+       "heavy01_boots",
+       "heavy02_boots",
+       "heavy03_boots"
+      ]
+     },
+     {
+      "name": "Light Armor",
+      "race": "chinese",
+      "items": [
+       "light01_head",
+       "light02_head",
+       "light03_head",
+       "light01_shoulder",
+       "light02_shoulder",
+       "light03_shoulder",
+       "light01_chest",
+       "light02_chest",
+       "light03_chest",
+       "light01_pants",
+       "light02_pants",
+       "light03_pants",
+       "light01_gloves",
+       "light02_gloves",
+       "light03_gloves",
+       "light01_boots",
+       "light02_boots",
+       "light03_boots"
+      ]
+     },
+     {
+      "name": "Garments",
+      "race": "chinese",
+      "items": [
+       "clothes01_head",
+       "clothes02_head",
+       "clothes03_head",
+       "clothes01_shoulder",
+       "clothes02_shoulder",
+       "clothes03_shoulder",
+       "clothes01_chest",
+       "clothes02_chest",
+       "clothes03_chest",
+       "clothes01_pants",
+       "clothes02_pants",
+       "clothes03_pants",
+       "clothes01_gloves",
+       "clothes02_gloves",
+       "clothes03_gloves",
+       "clothes01_boots",
+       "clothes02_boots",
+       "clothes03_boots"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "jangan",
+     "x": -94.17,
+     "z": 162.78,
+     "rotY": 1.5708
+    },
+    {
+     "zone": "jangan_province",
+     "x": 9553.825,
+     "z": 1602.784,
+     "rotY": -0.211
+    },
+    {
+     "zone": "jangan_world_deprecated",
+     "x": 769.825,
+     "z": 162.784,
+     "rotY": -0.211
+    }
+   ]
+  },
+  "npc_ch_smith": {
+   "id": "npc_ch_smith",
+   "name": "Blacksmith Chulsan",
+   "modelKey": "npc_ch_smith",
+   "sroCode": "NPC_CH_SMITH",
+   "interactRangeU": 15.25,
+   "repair": true,
+   "shop": {
+    "stock": [
+     "sword01",
+     "sword02",
+     "sword03",
+     "blade01",
+     "blade02",
+     "blade03",
+     "spear01",
+     "spear02",
+     "spear03",
+     "glavie01",
+     "glavie02",
+     "glavie03",
+     "bow01",
+     "bow02",
+     "bow03",
+     "shield01",
+     "shield02",
+     "shield03"
+    ],
+    "tabs": [
+     {
+      "name": "Weapons",
+      "race": "chinese",
+      "items": [
+       "sword01",
+       "sword02",
+       "sword03",
+       "blade01",
+       "blade02",
+       "blade03",
+       "spear01",
+       "spear02",
+       "spear03",
+       "glavie01",
+       "glavie02",
+       "glavie03",
+       "bow01",
+       "bow02",
+       "bow03"
+      ]
+     },
+     {
+      "name": "Shields",
+      "race": "chinese",
+      "items": [
+       "shield01",
+       "shield02",
+       "shield03"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "jangan",
+     "x": -94.09,
+     "z": 211.01,
+     "rotY": 1.5708
+    },
+    {
+     "zone": "jangan_province",
+     "x": 9553.91,
+     "z": 1651.005,
+     "rotY": -0.237
+    },
+    {
+     "zone": "jangan_world_deprecated",
+     "x": 769.909,
+     "z": 211.005,
+     "rotY": -0.237
+    }
+   ]
+  },
+  "npc_wc_potion": {
+   "id": "npc_wc_potion",
+   "name": "Herbalist Bori",
+   "modelKey": "npc_wc_potion",
+   "sroCode": "NPC_WC_POTION",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "hp_potion_01",
+     "hp_potion_02",
+     "hp_potion_03",
+     "hp_potion_04",
+     "hp_potion_05",
+     "mp_potion_01",
+     "mp_potion_02",
+     "mp_potion_03",
+     "mp_potion_04",
+     "mp_potion_05",
+     "pill_universal_02",
+     "pill_universal_03",
+     "pill_universal_04",
+     "pill_universal_05",
+     "pill_purification_01",
+     "pill_purification_02",
+     "pill_purification_03",
+     "pill_purification_04",
+     "vigor_potion_01",
+     "vigor_potion_02",
+     "vigor_potion_03",
+     "hp_grain_01",
+     "mp_grain_01",
+     "vigor_grain_01",
+     "speed_potion_01",
+     "elixir_weapon",
+     "elixir_armor",
+     "elixir_shield",
+     "elixir_accessory",
+     "sp_saver"
+    ],
+    "tabs": [
+     {
+      "name": "Potions",
+      "items": [
+       "hp_potion_01",
+       "hp_potion_02",
+       "hp_potion_03",
+       "hp_potion_04",
+       "hp_potion_05",
+       "mp_potion_01",
+       "mp_potion_02",
+       "mp_potion_03",
+       "mp_potion_04",
+       "mp_potion_05",
+       "pill_universal_02",
+       "pill_universal_03",
+       "pill_universal_04",
+       "pill_universal_05",
+       "pill_purification_01",
+       "pill_purification_02",
+       "pill_purification_03",
+       "pill_purification_04"
+      ]
+     },
+     {
+      "name": "Special",
+      "items": [
+       "vigor_potion_01",
+       "vigor_potion_02",
+       "vigor_potion_03",
+       "hp_grain_01",
+       "mp_grain_01",
+       "vigor_grain_01",
+       "speed_potion_01",
+       "elixir_weapon",
+       "elixir_armor",
+       "elixir_shield",
+       "elixir_accessory",
+       "sp_saver"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "donwhang_province",
+     "x": 5273.588,
+     "z": 3050.246,
+     "rotY": -0.924,
+     "y": -15.969
+    },
+    {
+     "zone": "donwhang_deprecated",
+     "x": -486.413,
+     "z": 314.245,
+     "rotY": -0.924,
+     "y": -15.969
+    }
+   ]
+  },
+  "npc_wc_armor": {
+   "id": "npc_wc_armor",
+   "name": "Protector Trader Yeolah",
+   "modelKey": "npc_wc_armor",
+   "sroCode": "NPC_WC_ARMOR",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "heavy03_head",
+     "heavy04_head",
+     "heavy05_head",
+     "heavy03_shoulder",
+     "heavy04_shoulder",
+     "heavy05_shoulder",
+     "heavy03_chest",
+     "heavy04_chest",
+     "heavy05_chest",
+     "heavy03_pants",
+     "heavy04_pants",
+     "heavy05_pants",
+     "heavy03_gloves",
+     "heavy04_gloves",
+     "heavy05_gloves",
+     "heavy03_boots",
+     "heavy04_boots",
+     "heavy05_boots",
+     "light03_head",
+     "light04_head",
+     "light05_head",
+     "light03_shoulder",
+     "light04_shoulder",
+     "light05_shoulder",
+     "light03_chest",
+     "light04_chest",
+     "light05_chest",
+     "light03_pants",
+     "light04_pants",
+     "light05_pants",
+     "light03_gloves",
+     "light04_gloves",
+     "light05_gloves",
+     "light03_boots",
+     "light04_boots",
+     "light05_boots",
+     "clothes03_head",
+     "clothes04_head",
+     "clothes05_head",
+     "clothes03_shoulder",
+     "clothes04_shoulder",
+     "clothes05_shoulder",
+     "clothes03_chest",
+     "clothes04_chest",
+     "clothes05_chest",
+     "clothes03_pants",
+     "clothes04_pants",
+     "clothes05_pants",
+     "clothes03_gloves",
+     "clothes04_gloves",
+     "clothes05_gloves",
+     "clothes03_boots",
+     "clothes04_boots",
+     "clothes05_boots"
+    ],
+    "tabs": [
+     {
+      "name": "Heavy Armor",
+      "race": "chinese",
+      "items": [
+       "heavy03_head",
+       "heavy04_head",
+       "heavy05_head",
+       "heavy03_shoulder",
+       "heavy04_shoulder",
+       "heavy05_shoulder",
+       "heavy03_chest",
+       "heavy04_chest",
+       "heavy05_chest",
+       "heavy03_pants",
+       "heavy04_pants",
+       "heavy05_pants",
+       "heavy03_gloves",
+       "heavy04_gloves",
+       "heavy05_gloves",
+       "heavy03_boots",
+       "heavy04_boots",
+       "heavy05_boots"
+      ]
+     },
+     {
+      "name": "Light Armor",
+      "race": "chinese",
+      "items": [
+       "light03_head",
+       "light04_head",
+       "light05_head",
+       "light03_shoulder",
+       "light04_shoulder",
+       "light05_shoulder",
+       "light03_chest",
+       "light04_chest",
+       "light05_chest",
+       "light03_pants",
+       "light04_pants",
+       "light05_pants",
+       "light03_gloves",
+       "light04_gloves",
+       "light05_gloves",
+       "light03_boots",
+       "light04_boots",
+       "light05_boots"
+      ]
+     },
+     {
+      "name": "Garments",
+      "race": "chinese",
+      "items": [
+       "clothes03_head",
+       "clothes04_head",
+       "clothes05_head",
+       "clothes03_shoulder",
+       "clothes04_shoulder",
+       "clothes05_shoulder",
+       "clothes03_chest",
+       "clothes04_chest",
+       "clothes05_chest",
+       "clothes03_pants",
+       "clothes04_pants",
+       "clothes05_pants",
+       "clothes03_gloves",
+       "clothes04_gloves",
+       "clothes05_gloves",
+       "clothes03_boots",
+       "clothes04_boots",
+       "clothes05_boots"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "donwhang_province",
+     "x": 5363.463,
+     "z": 3015.207,
+     "rotY": -1.07,
+     "y": -15.901
+    },
+    {
+     "zone": "donwhang_deprecated",
+     "x": -396.537,
+     "z": 279.207,
+     "rotY": -1.07,
+     "y": -15.901
+    }
+   ]
+  },
+  "npc_wc_smith": {
+   "id": "npc_wc_smith",
+   "name": "Blacksmith Agol",
+   "modelKey": "npc_wc_smith",
+   "sroCode": "NPC_WC_SMITH",
+   "interactRangeU": 15.25,
+   "repair": true,
+   "shop": {
+    "stock": [
+     "sword03",
+     "sword04",
+     "sword05",
+     "blade03",
+     "blade04",
+     "blade05",
+     "spear03",
+     "spear04",
+     "spear05",
+     "glavie03",
+     "glavie04",
+     "glavie05",
+     "bow03",
+     "bow04",
+     "bow05",
+     "shield03",
+     "shield04",
+     "shield05"
+    ],
+    "tabs": [
+     {
+      "name": "Weapons",
+      "race": "chinese",
+      "items": [
+       "sword03",
+       "sword04",
+       "sword05",
+       "blade03",
+       "blade04",
+       "blade05",
+       "spear03",
+       "spear04",
+       "spear05",
+       "glavie03",
+       "glavie04",
+       "glavie05",
+       "bow03",
+       "bow04",
+       "bow05"
+      ]
+     },
+     {
+      "name": "Shields",
+      "race": "chinese",
+      "items": [
+       "shield03",
+       "shield04",
+       "shield05"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "donwhang_province",
+     "x": 5363.654,
+     "z": 3062.655,
+     "rotY": -1.328,
+     "y": -16
+    },
+    {
+     "zone": "donwhang_deprecated",
+     "x": -396.346,
+     "z": 326.655,
+     "rotY": -1.328,
+     "y": -16
+    }
+   ]
+  },
+  "npc_ch_accessory": {
+   "id": "npc_ch_accessory",
+   "name": "Grocery Trader Jinjin",
+   "modelKey": "npc_ch_accessory",
+   "sroCode": "NPC_CH_ACCESSORY",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "ring01",
+     "ring02",
+     "ring03",
+     "earring01",
+     "earring02",
+     "earring03",
+     "necklace01",
+     "necklace02",
+     "necklace03",
+     "lucky_powder_01",
+     "lucky_powder_02",
+     "lucky_powder_03",
+     "lucky_powder_04",
+     "lucky_powder_05",
+     "lucky_powder_06",
+     "lucky_powder_07",
+     "lucky_powder_08"
+    ],
+    "tabs": [
+     {
+      "name": "Accessories",
+      "race": "chinese",
+      "items": [
+       "ring01",
+       "ring02",
+       "ring03",
+       "earring01",
+       "earring02",
+       "earring03",
+       "necklace01",
+       "necklace02",
+       "necklace03"
+      ]
+     },
+     {
+      "name": "Alchemy",
+      "items": [
+       "lucky_powder_01",
+       "lucky_powder_02",
+       "lucky_powder_03",
+       "lucky_powder_04",
+       "lucky_powder_05",
+       "lucky_powder_06",
+       "lucky_powder_07",
+       "lucky_powder_08"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "jangan_province",
+     "x": 9752.783,
+     "z": 1601.728,
+     "rotY": -1.588
+    },
+    {
+     "zone": "jangan_world_deprecated",
+     "x": 968.782,
+     "z": 161.728,
+     "rotY": -1.588
+    }
+   ]
+  },
+  "npc_wc_accessory": {
+   "id": "npc_wc_accessory",
+   "name": "Grocery Trader Yeosun",
+   "modelKey": "npc_wc_accessory",
+   "sroCode": "NPC_WC_ACCESSORY",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "ring03",
+     "ring04",
+     "ring05",
+     "earring03",
+     "earring04",
+     "earring05",
+     "necklace03",
+     "necklace04",
+     "necklace05",
+     "lucky_powder_03",
+     "lucky_powder_04",
+     "lucky_powder_05",
+     "lucky_powder_06",
+     "lucky_powder_07",
+     "lucky_powder_08"
+    ],
+    "tabs": [
+     {
+      "name": "Accessories",
+      "race": "chinese",
+      "items": [
+       "ring03",
+       "ring04",
+       "ring05",
+       "earring03",
+       "earring04",
+       "earring05",
+       "necklace03",
+       "necklace04",
+       "necklace05"
+      ]
+     },
+     {
+      "name": "Alchemy",
+      "items": [
+       "lucky_powder_03",
+       "lucky_powder_04",
+       "lucky_powder_05",
+       "lucky_powder_06",
+       "lucky_powder_07",
+       "lucky_powder_08"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "donwhang_province",
+     "x": 5267.879,
+     "z": 2990.682,
+     "rotY": 1.571,
+     "y": -15.642
+    },
+    {
+     "zone": "donwhang_deprecated",
+     "x": -492.121,
+     "z": 254.682,
+     "rotY": 1.571,
+     "y": -15.642
+    }
+   ]
+  },
+  "npc_kt_potion": {
+   "id": "npc_kt_potion",
+   "name": "Potion Merchant Manina",
+   "modelKey": "khotanshop_veilgirl",
+   "sroCode": "NPC_KT_POTION",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "hp_potion_03",
+     "hp_potion_04",
+     "hp_potion_05",
+     "mp_potion_03",
+     "mp_potion_04",
+     "mp_potion_05",
+     "pill_universal_01",
+     "pill_universal_02",
+     "pill_universal_03",
+     "pill_universal_04",
+     "pill_universal_05",
+     "pill_purification_01",
+     "pill_purification_02",
+     "pill_purification_03",
+     "pill_purification_04",
+     "vigor_potion_01",
+     "vigor_potion_02",
+     "vigor_potion_03",
+     "hp_grain_01",
+     "mp_grain_01",
+     "vigor_grain_01",
+     "speed_potion_01",
+     "elixir_weapon",
+     "elixir_armor",
+     "elixir_shield",
+     "elixir_accessory",
+     "sp_saver"
+    ],
+    "tabs": [
+     {
+      "name": "Potions",
+      "items": [
+       "hp_potion_03",
+       "hp_potion_04",
+       "hp_potion_05",
+       "mp_potion_03",
+       "mp_potion_04",
+       "mp_potion_05",
+       "pill_universal_01",
+       "pill_universal_02",
+       "pill_universal_03",
+       "pill_universal_04",
+       "pill_universal_05",
+       "pill_purification_01",
+       "pill_purification_02",
+       "pill_purification_03",
+       "pill_purification_04"
+      ]
+     },
+     {
+      "name": "Special",
+      "items": [
+       "vigor_potion_01",
+       "vigor_potion_02",
+       "vigor_potion_03",
+       "hp_grain_01",
+       "mp_grain_01",
+       "vigor_grain_01",
+       "speed_potion_01",
+       "elixir_weapon",
+       "elixir_armor",
+       "elixir_shield",
+       "elixir_accessory",
+       "sp_saver"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "hotan_province",
+     "x": 124.824,
+     "z": 164.046,
+     "rotY": 0.413,
+     "y": 36.579
+    }
+   ]
+  },
+  "npc_kt_armor": {
+   "id": "npc_kt_armor",
+   "name": "Protector Trader Gonishya",
+   "modelKey": "khotanshop_armor",
+   "sroCode": "NPC_KT_ARMOR",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "heavy05_head",
+     "heavy06_head",
+     "heavy07_head",
+     "heavy08_head",
+     "heavy05_shoulder",
+     "heavy06_shoulder",
+     "heavy07_shoulder",
+     "heavy08_shoulder",
+     "heavy05_chest",
+     "heavy06_chest",
+     "heavy07_chest",
+     "heavy08_chest",
+     "heavy05_pants",
+     "heavy06_pants",
+     "heavy07_pants",
+     "heavy08_pants",
+     "heavy05_gloves",
+     "heavy06_gloves",
+     "heavy07_gloves",
+     "heavy08_gloves",
+     "heavy05_boots",
+     "heavy06_boots",
+     "heavy07_boots",
+     "heavy08_boots",
+     "light05_head",
+     "light06_head",
+     "light07_head",
+     "light08_head",
+     "light05_shoulder",
+     "light06_shoulder",
+     "light07_shoulder",
+     "light08_shoulder",
+     "light05_chest",
+     "light06_chest",
+     "light07_chest",
+     "light08_chest",
+     "light05_pants",
+     "light06_pants",
+     "light07_pants",
+     "light08_pants",
+     "light05_gloves",
+     "light06_gloves",
+     "light07_gloves",
+     "light08_gloves",
+     "light05_boots",
+     "light06_boots",
+     "light07_boots",
+     "light08_boots",
+     "clothes05_head",
+     "clothes06_head",
+     "clothes07_head",
+     "clothes08_head",
+     "clothes05_shoulder",
+     "clothes06_shoulder",
+     "clothes07_shoulder",
+     "clothes08_shoulder",
+     "clothes05_chest",
+     "clothes06_chest",
+     "clothes07_chest",
+     "clothes08_chest",
+     "clothes05_pants",
+     "clothes06_pants",
+     "clothes07_pants",
+     "clothes08_pants",
+     "clothes05_gloves",
+     "clothes06_gloves",
+     "clothes07_gloves",
+     "clothes08_gloves",
+     "clothes05_boots",
+     "clothes06_boots",
+     "clothes07_boots",
+     "clothes08_boots",
+     "eu_heavy05_head",
+     "eu_heavy06_head",
+     "eu_heavy07_head",
+     "eu_heavy08_head",
+     "eu_heavy05_shoulder",
+     "eu_heavy06_shoulder",
+     "eu_heavy07_shoulder",
+     "eu_heavy08_shoulder",
+     "eu_heavy05_chest",
+     "eu_heavy06_chest",
+     "eu_heavy07_chest",
+     "eu_heavy08_chest",
+     "eu_heavy05_pants",
+     "eu_heavy06_pants",
+     "eu_heavy07_pants",
+     "eu_heavy08_pants",
+     "eu_heavy05_gloves",
+     "eu_heavy06_gloves",
+     "eu_heavy07_gloves",
+     "eu_heavy08_gloves",
+     "eu_heavy05_boots",
+     "eu_heavy06_boots",
+     "eu_heavy07_boots",
+     "eu_heavy08_boots",
+     "eu_light05_head",
+     "eu_light06_head",
+     "eu_light07_head",
+     "eu_light08_head",
+     "eu_light05_shoulder",
+     "eu_light06_shoulder",
+     "eu_light07_shoulder",
+     "eu_light08_shoulder",
+     "eu_light05_chest",
+     "eu_light06_chest",
+     "eu_light07_chest",
+     "eu_light08_chest",
+     "eu_light05_pants",
+     "eu_light06_pants",
+     "eu_light07_pants",
+     "eu_light08_pants",
+     "eu_light05_gloves",
+     "eu_light06_gloves",
+     "eu_light07_gloves",
+     "eu_light08_gloves",
+     "eu_light05_boots",
+     "eu_light06_boots",
+     "eu_light07_boots",
+     "eu_light08_boots",
+     "eu_clothes05_head",
+     "eu_clothes06_head",
+     "eu_clothes07_head",
+     "eu_clothes08_head",
+     "eu_clothes05_shoulder",
+     "eu_clothes06_shoulder",
+     "eu_clothes07_shoulder",
+     "eu_clothes08_shoulder",
+     "eu_clothes05_chest",
+     "eu_clothes06_chest",
+     "eu_clothes07_chest",
+     "eu_clothes08_chest",
+     "eu_clothes05_pants",
+     "eu_clothes06_pants",
+     "eu_clothes07_pants",
+     "eu_clothes08_pants",
+     "eu_clothes05_gloves",
+     "eu_clothes06_gloves",
+     "eu_clothes07_gloves",
+     "eu_clothes08_gloves",
+     "eu_clothes05_boots",
+     "eu_clothes06_boots",
+     "eu_clothes07_boots",
+     "eu_clothes08_boots"
+    ],
+    "tabs": [
+     {
+      "name": "Heavy Armor",
+      "race": "chinese",
+      "items": [
+       "heavy05_head",
+       "heavy06_head",
+       "heavy07_head",
+       "heavy08_head",
+       "heavy05_shoulder",
+       "heavy06_shoulder",
+       "heavy07_shoulder",
+       "heavy08_shoulder",
+       "heavy05_chest",
+       "heavy06_chest",
+       "heavy07_chest",
+       "heavy08_chest",
+       "heavy05_pants",
+       "heavy06_pants",
+       "heavy07_pants",
+       "heavy08_pants",
+       "heavy05_gloves",
+       "heavy06_gloves",
+       "heavy07_gloves",
+       "heavy08_gloves",
+       "heavy05_boots",
+       "heavy06_boots",
+       "heavy07_boots",
+       "heavy08_boots"
+      ]
+     },
+     {
+      "name": "Light Armor",
+      "race": "chinese",
+      "items": [
+       "light05_head",
+       "light06_head",
+       "light07_head",
+       "light08_head",
+       "light05_shoulder",
+       "light06_shoulder",
+       "light07_shoulder",
+       "light08_shoulder",
+       "light05_chest",
+       "light06_chest",
+       "light07_chest",
+       "light08_chest",
+       "light05_pants",
+       "light06_pants",
+       "light07_pants",
+       "light08_pants",
+       "light05_gloves",
+       "light06_gloves",
+       "light07_gloves",
+       "light08_gloves",
+       "light05_boots",
+       "light06_boots",
+       "light07_boots",
+       "light08_boots"
+      ]
+     },
+     {
+      "name": "Garments",
+      "race": "chinese",
+      "items": [
+       "clothes05_head",
+       "clothes06_head",
+       "clothes07_head",
+       "clothes08_head",
+       "clothes05_shoulder",
+       "clothes06_shoulder",
+       "clothes07_shoulder",
+       "clothes08_shoulder",
+       "clothes05_chest",
+       "clothes06_chest",
+       "clothes07_chest",
+       "clothes08_chest",
+       "clothes05_pants",
+       "clothes06_pants",
+       "clothes07_pants",
+       "clothes08_pants",
+       "clothes05_gloves",
+       "clothes06_gloves",
+       "clothes07_gloves",
+       "clothes08_gloves",
+       "clothes05_boots",
+       "clothes06_boots",
+       "clothes07_boots",
+       "clothes08_boots"
+      ]
+     },
+     {
+      "name": "Heavy Armor",
+      "race": "european",
+      "items": [
+       "eu_heavy05_head",
+       "eu_heavy06_head",
+       "eu_heavy07_head",
+       "eu_heavy08_head",
+       "eu_heavy05_shoulder",
+       "eu_heavy06_shoulder",
+       "eu_heavy07_shoulder",
+       "eu_heavy08_shoulder",
+       "eu_heavy05_chest",
+       "eu_heavy06_chest",
+       "eu_heavy07_chest",
+       "eu_heavy08_chest",
+       "eu_heavy05_pants",
+       "eu_heavy06_pants",
+       "eu_heavy07_pants",
+       "eu_heavy08_pants",
+       "eu_heavy05_gloves",
+       "eu_heavy06_gloves",
+       "eu_heavy07_gloves",
+       "eu_heavy08_gloves",
+       "eu_heavy05_boots",
+       "eu_heavy06_boots",
+       "eu_heavy07_boots",
+       "eu_heavy08_boots"
+      ]
+     },
+     {
+      "name": "Light Armor",
+      "race": "european",
+      "items": [
+       "eu_light05_head",
+       "eu_light06_head",
+       "eu_light07_head",
+       "eu_light08_head",
+       "eu_light05_shoulder",
+       "eu_light06_shoulder",
+       "eu_light07_shoulder",
+       "eu_light08_shoulder",
+       "eu_light05_chest",
+       "eu_light06_chest",
+       "eu_light07_chest",
+       "eu_light08_chest",
+       "eu_light05_pants",
+       "eu_light06_pants",
+       "eu_light07_pants",
+       "eu_light08_pants",
+       "eu_light05_gloves",
+       "eu_light06_gloves",
+       "eu_light07_gloves",
+       "eu_light08_gloves",
+       "eu_light05_boots",
+       "eu_light06_boots",
+       "eu_light07_boots",
+       "eu_light08_boots"
+      ]
+     },
+     {
+      "name": "Garments",
+      "race": "european",
+      "items": [
+       "eu_clothes05_head",
+       "eu_clothes06_head",
+       "eu_clothes07_head",
+       "eu_clothes08_head",
+       "eu_clothes05_shoulder",
+       "eu_clothes06_shoulder",
+       "eu_clothes07_shoulder",
+       "eu_clothes08_shoulder",
+       "eu_clothes05_chest",
+       "eu_clothes06_chest",
+       "eu_clothes07_chest",
+       "eu_clothes08_chest",
+       "eu_clothes05_pants",
+       "eu_clothes06_pants",
+       "eu_clothes07_pants",
+       "eu_clothes08_pants",
+       "eu_clothes05_gloves",
+       "eu_clothes06_gloves",
+       "eu_clothes07_gloves",
+       "eu_clothes08_gloves",
+       "eu_clothes05_boots",
+       "eu_clothes06_boots",
+       "eu_clothes07_boots",
+       "eu_clothes08_boots"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "hotan_province",
+     "x": 86.72,
+     "z": 28.275,
+     "rotY": 0.369,
+     "y": 36.572
+    }
+   ]
+  },
+  "npc_kt_smith": {
+   "id": "npc_kt_smith",
+   "name": "Blacksmith Soboi",
+   "modelKey": "khotanshop_smith",
+   "sroCode": "NPC_KT_SMITH",
+   "interactRangeU": 15,
+   "repair": true,
+   "shop": {
+    "stock": [
+     "sword05",
+     "sword06",
+     "sword07",
+     "sword08",
+     "blade05",
+     "blade06",
+     "blade07",
+     "blade08",
+     "spear05",
+     "spear06",
+     "spear07",
+     "spear08",
+     "glavie05",
+     "glavie06",
+     "glavie07",
+     "glavie08",
+     "bow05",
+     "bow06",
+     "bow07",
+     "bow08",
+     "shield05",
+     "shield06",
+     "shield07",
+     "shield08",
+     "eu_dagger05",
+     "eu_dagger06",
+     "eu_dagger07",
+     "eu_dagger08",
+     "eu_sword05",
+     "eu_sword06",
+     "eu_sword07",
+     "eu_sword08",
+     "eu_tsword05",
+     "eu_tsword06",
+     "eu_tsword07",
+     "eu_tsword08",
+     "eu_axe05",
+     "eu_axe06",
+     "eu_axe07",
+     "eu_axe08",
+     "eu_crossbow05",
+     "eu_crossbow06",
+     "eu_crossbow07",
+     "eu_crossbow08",
+     "eu_darkstaff05",
+     "eu_darkstaff06",
+     "eu_darkstaff07",
+     "eu_darkstaff08",
+     "eu_tstaff05",
+     "eu_tstaff06",
+     "eu_tstaff07",
+     "eu_tstaff08",
+     "eu_harp05",
+     "eu_harp06",
+     "eu_harp07",
+     "eu_harp08",
+     "eu_staff05",
+     "eu_staff06",
+     "eu_staff07",
+     "eu_staff08",
+     "eu_shield05",
+     "eu_shield06",
+     "eu_shield07",
+     "eu_shield08"
+    ],
+    "tabs": [
+     {
+      "name": "Weapons",
+      "race": "chinese",
+      "items": [
+       "sword05",
+       "sword06",
+       "sword07",
+       "sword08",
+       "blade05",
+       "blade06",
+       "blade07",
+       "blade08",
+       "spear05",
+       "spear06",
+       "spear07",
+       "spear08",
+       "glavie05",
+       "glavie06",
+       "glavie07",
+       "glavie08",
+       "bow05",
+       "bow06",
+       "bow07",
+       "bow08"
+      ]
+     },
+     {
+      "name": "Shields",
+      "race": "chinese",
+      "items": [
+       "shield05",
+       "shield06",
+       "shield07",
+       "shield08"
+      ]
+     },
+     {
+      "name": "Weapons",
+      "race": "european",
+      "items": [
+       "eu_dagger05",
+       "eu_dagger06",
+       "eu_dagger07",
+       "eu_dagger08",
+       "eu_sword05",
+       "eu_sword06",
+       "eu_sword07",
+       "eu_sword08",
+       "eu_tsword05",
+       "eu_tsword06",
+       "eu_tsword07",
+       "eu_tsword08",
+       "eu_axe05",
+       "eu_axe06",
+       "eu_axe07",
+       "eu_axe08",
+       "eu_crossbow05",
+       "eu_crossbow06",
+       "eu_crossbow07",
+       "eu_crossbow08",
+       "eu_darkstaff05",
+       "eu_darkstaff06",
+       "eu_darkstaff07",
+       "eu_darkstaff08",
+       "eu_tstaff05",
+       "eu_tstaff06",
+       "eu_tstaff07",
+       "eu_tstaff08",
+       "eu_harp05",
+       "eu_harp06",
+       "eu_harp07",
+       "eu_harp08",
+       "eu_staff05",
+       "eu_staff06",
+       "eu_staff07",
+       "eu_staff08"
+      ]
+     },
+     {
+      "name": "Shields",
+      "race": "european",
+      "items": [
+       "eu_shield05",
+       "eu_shield06",
+       "eu_shield07",
+       "eu_shield08"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "hotan_province",
+     "x": 75.237,
+     "z": 114.941,
+     "rotY": 0.482,
+     "y": 36.537
+    }
+   ]
+  },
+  "npc_kt_accessory": {
+   "id": "npc_kt_accessory",
+   "name": "Jewel Lapidary Mamoje",
+   "modelKey": "khotanshop_craftsman",
+   "sroCode": "NPC_KT_ACCESSORY",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "ring05",
+     "ring06",
+     "ring07",
+     "ring08",
+     "earring05",
+     "earring06",
+     "earring07",
+     "earring08",
+     "necklace05",
+     "necklace06",
+     "necklace07",
+     "necklace08",
+     "eu_ring05",
+     "eu_ring06",
+     "eu_ring07",
+     "eu_ring08",
+     "eu_earring05",
+     "eu_earring06",
+     "eu_earring07",
+     "eu_earring08",
+     "eu_necklace05",
+     "eu_necklace06",
+     "eu_necklace07",
+     "eu_necklace08",
+     "lucky_powder_05",
+     "lucky_powder_06",
+     "lucky_powder_07",
+     "lucky_powder_08"
+    ],
+    "tabs": [
+     {
+      "name": "Accessories",
+      "race": "chinese",
+      "items": [
+       "ring05",
+       "ring06",
+       "ring07",
+       "ring08",
+       "earring05",
+       "earring06",
+       "earring07",
+       "earring08",
+       "necklace05",
+       "necklace06",
+       "necklace07",
+       "necklace08"
+      ]
+     },
+     {
+      "name": "Accessories",
+      "race": "european",
+      "items": [
+       "eu_ring05",
+       "eu_ring06",
+       "eu_ring07",
+       "eu_ring08",
+       "eu_earring05",
+       "eu_earring06",
+       "eu_earring07",
+       "eu_earring08",
+       "eu_necklace05",
+       "eu_necklace06",
+       "eu_necklace07",
+       "eu_necklace08"
+      ]
+     },
+     {
+      "name": "Alchemy",
+      "items": [
+       "lucky_powder_05",
+       "lucky_powder_06",
+       "lucky_powder_07",
+       "lucky_powder_08"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "hotan_province",
+     "x": 128.9,
+     "z": -6.891,
+     "rotY": 0.258,
+     "y": 36.572
+    }
+   ]
+  },
+  "npc_ch_horse": {
+   "id": "npc_ch_horse",
+   "name": "Stable-Keeper Machun",
+   "modelKey": "chinashop_stableman",
+   "sroCode": "NPC_CH_HORSE",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "horse_c1",
+     "horse_c2",
+     "horse_c3",
+     "pet_wolf_flute",
+     "cos_hp_potion_01",
+     "cos_hp_potion_02",
+     "pet_revival_grass",
+     "pet_hgp_potion_01",
+     "cos_hp_potion_03"
+    ],
+    "tabs": [
+     {
+      "name": "Horses",
+      "items": [
+       "horse_c1",
+       "horse_c2",
+       "horse_c3"
+      ]
+     },
+     {
+      "name": "Pets",
+      "items": [
+       "pet_wolf_flute"
+      ]
+     },
+     {
+      "name": "Cures",
+      "items": [
+       "cos_hp_potion_01",
+       "cos_hp_potion_02",
+       "pet_revival_grass",
+       "pet_hgp_potion_01",
+       "cos_hp_potion_03"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "jangan_province",
+     "x": 9553.382,
+     "z": 1507.59,
+     "rotY": 1.571
+    }
+   ]
+  },
+  "npc_wc_horse": {
+   "id": "npc_wc_horse",
+   "name": "Stable-Keeper Makgo",
+   "modelKey": "westchinashop_stableman",
+   "sroCode": "NPC_WC_HORSE",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "horse_c1",
+     "horse_c2",
+     "horse_c3",
+     "pet_wolf_flute",
+     "cos_hp_potion_01",
+     "cos_hp_potion_02",
+     "pet_revival_grass",
+     "pet_hgp_potion_01",
+     "cos_hp_potion_03"
+    ],
+    "tabs": [
+     {
+      "name": "Horses",
+      "items": [
+       "horse_c1",
+       "horse_c2",
+       "horse_c3"
+      ]
+     },
+     {
+      "name": "Pets",
+      "items": [
+       "pet_wolf_flute"
+      ]
+     },
+     {
+      "name": "Cures",
+      "items": [
+       "cos_hp_potion_01",
+       "cos_hp_potion_02",
+       "pet_revival_grass",
+       "pet_hgp_potion_01",
+       "cos_hp_potion_03"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "donwhang_province",
+     "x": 5396.261,
+     "z": 3127.754,
+     "rotY": -0.017,
+     "y": -16.006
+    }
+   ]
+  },
+  "npc_kt_horse": {
+   "id": "npc_kt_horse",
+   "name": "Stable-Keeper Salihap",
+   "modelKey": "khotanshop_stableman",
+   "sroCode": "NPC_KT_HORSE",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "horse_c1",
+     "horse_c2",
+     "horse_c3",
+     "pet_wolf_flute",
+     "cos_hp_potion_01",
+     "cos_hp_potion_02",
+     "pet_revival_grass",
+     "pet_hgp_potion_01",
+     "cos_hp_potion_03"
+    ],
+    "tabs": [
+     {
+      "name": "Horses",
+      "items": [
+       "horse_c1",
+       "horse_c2",
+       "horse_c3"
+      ]
+     },
+     {
+      "name": "Pets",
+      "items": [
+       "pet_wolf_flute"
+      ]
+     },
+     {
+      "name": "Cures",
+      "items": [
+       "cos_hp_potion_01",
+       "cos_hp_potion_02",
+       "pet_revival_grass",
+       "pet_hgp_potion_01",
+       "cos_hp_potion_03"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "hotan_province",
+     "x": 231.132,
+     "z": -7.043,
+     "rotY": 0.038,
+     "y": 37.472
+    }
+   ]
+  },
+  "npc_eu_potion": {
+   "id": "npc_eu_potion",
+   "name": "Nun Retaldi",
+   "modelKey": "EastEuropeShop_Potion",
+   "sroCode": "NPC_EU_POTION",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "hp_potion_01",
+     "hp_potion_02",
+     "hp_potion_03",
+     "hp_potion_04",
+     "hp_potion_05",
+     "mp_potion_01",
+     "mp_potion_02",
+     "mp_potion_03",
+     "mp_potion_04",
+     "mp_potion_05",
+     "pill_universal_01",
+     "pill_universal_02",
+     "pill_universal_03",
+     "pill_universal_04",
+     "pill_universal_05",
+     "pill_purification_01",
+     "pill_purification_02",
+     "pill_purification_03",
+     "pill_purification_04",
+     "vigor_potion_01",
+     "vigor_potion_02",
+     "vigor_potion_03",
+     "hp_grain_01",
+     "mp_grain_01",
+     "vigor_grain_01",
+     "speed_potion_01",
+     "elixir_weapon",
+     "elixir_armor",
+     "elixir_shield",
+     "elixir_accessory",
+     "sp_saver"
+    ],
+    "tabs": [
+     {
+      "name": "Potions",
+      "items": [
+       "hp_potion_01",
+       "hp_potion_02",
+       "hp_potion_03",
+       "hp_potion_04",
+       "hp_potion_05",
+       "mp_potion_01",
+       "mp_potion_02",
+       "mp_potion_03",
+       "mp_potion_04",
+       "mp_potion_05",
+       "pill_universal_01",
+       "pill_universal_02",
+       "pill_universal_03",
+       "pill_universal_04",
+       "pill_universal_05",
+       "pill_purification_01",
+       "pill_purification_02",
+       "pill_purification_03",
+       "pill_purification_04"
+      ]
+     },
+     {
+      "name": "Special",
+      "items": [
+       "vigor_potion_01",
+       "vigor_potion_02",
+       "vigor_potion_03",
+       "hp_grain_01",
+       "mp_grain_01",
+       "vigor_grain_01",
+       "speed_potion_01",
+       "elixir_weapon",
+       "elixir_armor",
+       "elixir_shield",
+       "elixir_accessory",
+       "sp_saver"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "europe_province",
+     "x": -15927.181,
+     "z": 3954.134,
+     "rotY": -2.411,
+     "y": 12.614
+    }
+   ]
+  },
+  "npc_eu_horse": {
+   "id": "npc_eu_horse",
+   "name": "Stable-Keeper Treno",
+   "modelKey": "EastEuropeShop_Stable",
+   "sroCode": "NPC_EU_HORSE",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "horse_c1",
+     "horse_c2",
+     "horse_c3",
+     "pet_wolf_flute",
+     "cos_hp_potion_01",
+     "cos_hp_potion_02",
+     "pet_revival_grass",
+     "pet_hgp_potion_01",
+     "cos_hp_potion_03"
+    ],
+    "tabs": [
+     {
+      "name": "Horses",
+      "items": [
+       "horse_c1",
+       "horse_c2",
+       "horse_c3"
+      ]
+     },
+     {
+      "name": "Pets",
+      "items": [
+       "pet_wolf_flute"
+      ]
+     },
+     {
+      "name": "Cures",
+      "items": [
+       "cos_hp_potion_01",
+       "cos_hp_potion_02",
+       "pet_revival_grass",
+       "pet_hgp_potion_01",
+       "cos_hp_potion_03"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "europe_province",
+     "x": -16146.825,
+     "z": 3798.927,
+     "rotY": 1.472,
+     "y": 12.581
+    }
+   ]
+  },
+  "npc_ca_potion": {
+   "id": "npc_ca_potion",
+   "name": "Nun Martel",
+   "modelKey": "CentralAsiaShop_Potion",
+   "sroCode": "NPC_CA_POTION",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "hp_potion_02",
+     "hp_potion_03",
+     "hp_potion_04",
+     "hp_potion_05",
+     "mp_potion_02",
+     "mp_potion_03",
+     "mp_potion_04",
+     "mp_potion_05",
+     "pill_universal_01",
+     "pill_universal_02",
+     "pill_universal_03",
+     "pill_universal_04",
+     "pill_universal_05",
+     "pill_purification_01",
+     "pill_purification_02",
+     "pill_purification_03",
+     "pill_purification_04",
+     "vigor_potion_01",
+     "vigor_potion_02",
+     "vigor_potion_03",
+     "hp_grain_01",
+     "mp_grain_01",
+     "vigor_grain_01",
+     "speed_potion_01",
+     "elixir_weapon",
+     "elixir_armor",
+     "elixir_shield",
+     "elixir_accessory",
+     "sp_saver"
+    ],
+    "tabs": [
+     {
+      "name": "Potions",
+      "items": [
+       "hp_potion_02",
+       "hp_potion_03",
+       "hp_potion_04",
+       "hp_potion_05",
+       "mp_potion_02",
+       "mp_potion_03",
+       "mp_potion_04",
+       "mp_potion_05",
+       "pill_universal_01",
+       "pill_universal_02",
+       "pill_universal_03",
+       "pill_universal_04",
+       "pill_universal_05",
+       "pill_purification_01",
+       "pill_purification_02",
+       "pill_purification_03",
+       "pill_purification_04"
+      ]
+     },
+     {
+      "name": "Special",
+      "items": [
+       "vigor_potion_01",
+       "vigor_potion_02",
+       "vigor_potion_03",
+       "hp_grain_01",
+       "mp_grain_01",
+       "vigor_grain_01",
+       "speed_potion_01",
+       "elixir_weapon",
+       "elixir_armor",
+       "elixir_shield",
+       "elixir_accessory",
+       "sp_saver"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "samarkand_province",
+     "x": -7850.089,
+     "z": 4309.65,
+     "rotY": 1.222,
+     "y": 27
+    }
+   ]
+  },
+  "npc_ca_horse": {
+   "id": "npc_ca_horse",
+   "name": "Stable-Keeper Hoyun",
+   "modelKey": "CentralAsiaShop_Horse",
+   "sroCode": "NPC_CA_HORSE",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "horse_c1",
+     "horse_c2",
+     "horse_c3",
+     "pet_wolf_flute",
+     "cos_hp_potion_01",
+     "cos_hp_potion_02",
+     "pet_revival_grass",
+     "pet_hgp_potion_01",
+     "cos_hp_potion_03"
+    ],
+    "tabs": [
+     {
+      "name": "Horses",
+      "items": [
+       "horse_c1",
+       "horse_c2",
+       "horse_c3"
+      ]
+     },
+     {
+      "name": "Pets",
+      "items": [
+       "pet_wolf_flute"
+      ]
+     },
+     {
+      "name": "Cures",
+      "items": [
+       "cos_hp_potion_01",
+       "cos_hp_potion_02",
+       "pet_revival_grass",
+       "pet_hgp_potion_01",
+       "cos_hp_potion_03"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "samarkand_province",
+     "x": -7673.016,
+     "z": 4357.001,
+     "rotY": -1.77,
+     "y": 27
+    }
+   ]
+  },
+  "npc_eu_smith": {
+   "id": "npc_eu_smith",
+   "name": "Weapon Trader Balbardo",
+   "modelKey": "EastEuropeShop_Smith",
+   "sroCode": "NPC_EU_SMITH",
+   "interactRangeU": 15,
+   "repair": true,
+   "shop": {
+    "stock": [
+     "eu_dagger01",
+     "eu_dagger02",
+     "eu_dagger03",
+     "eu_sword01",
+     "eu_sword02",
+     "eu_sword03",
+     "eu_tsword01",
+     "eu_tsword02",
+     "eu_tsword03",
+     "eu_axe01",
+     "eu_axe02",
+     "eu_axe03",
+     "eu_crossbow01",
+     "eu_crossbow02",
+     "eu_crossbow03",
+     "eu_darkstaff01",
+     "eu_darkstaff02",
+     "eu_darkstaff03",
+     "eu_tstaff01",
+     "eu_tstaff02",
+     "eu_tstaff03",
+     "eu_harp01",
+     "eu_harp02",
+     "eu_harp03",
+     "eu_staff01",
+     "eu_staff02",
+     "eu_staff03",
+     "eu_shield01",
+     "eu_shield02",
+     "eu_shield03"
+    ],
+    "tabs": [
+     {
+      "name": "Weapons",
+      "race": "european",
+      "items": [
+       "eu_dagger01",
+       "eu_dagger02",
+       "eu_dagger03",
+       "eu_sword01",
+       "eu_sword02",
+       "eu_sword03",
+       "eu_tsword01",
+       "eu_tsword02",
+       "eu_tsword03",
+       "eu_axe01",
+       "eu_axe02",
+       "eu_axe03",
+       "eu_crossbow01",
+       "eu_crossbow02",
+       "eu_crossbow03",
+       "eu_darkstaff01",
+       "eu_darkstaff02",
+       "eu_darkstaff03",
+       "eu_tstaff01",
+       "eu_tstaff02",
+       "eu_tstaff03",
+       "eu_harp01",
+       "eu_harp02",
+       "eu_harp03",
+       "eu_staff01",
+       "eu_staff02",
+       "eu_staff03"
+      ]
+     },
+     {
+      "name": "Shields",
+      "race": "european",
+      "items": [
+       "eu_shield01",
+       "eu_shield02",
+       "eu_shield03"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "europe_province",
+     "x": -16010.296,
+     "z": 3973.906,
+     "rotY": -2.86,
+     "y": 12.519
+    }
+   ]
+  },
+  "npc_eu_armor": {
+   "id": "npc_eu_armor",
+   "name": "Protector Trader Jatomo",
+   "modelKey": "EastEuropeShop_Armor",
+   "sroCode": "NPC_EU_ARMOR",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "eu_heavy01_head",
+     "eu_heavy02_head",
+     "eu_heavy03_head",
+     "eu_heavy01_shoulder",
+     "eu_heavy02_shoulder",
+     "eu_heavy03_shoulder",
+     "eu_heavy01_chest",
+     "eu_heavy02_chest",
+     "eu_heavy03_chest",
+     "eu_heavy01_pants",
+     "eu_heavy02_pants",
+     "eu_heavy03_pants",
+     "eu_heavy01_gloves",
+     "eu_heavy02_gloves",
+     "eu_heavy03_gloves",
+     "eu_heavy01_boots",
+     "eu_heavy02_boots",
+     "eu_heavy03_boots",
+     "eu_light01_head",
+     "eu_light02_head",
+     "eu_light03_head",
+     "eu_light01_shoulder",
+     "eu_light02_shoulder",
+     "eu_light03_shoulder",
+     "eu_light01_chest",
+     "eu_light02_chest",
+     "eu_light03_chest",
+     "eu_light01_pants",
+     "eu_light02_pants",
+     "eu_light03_pants",
+     "eu_light01_gloves",
+     "eu_light02_gloves",
+     "eu_light03_gloves",
+     "eu_light01_boots",
+     "eu_light02_boots",
+     "eu_light03_boots",
+     "eu_clothes01_head",
+     "eu_clothes02_head",
+     "eu_clothes03_head",
+     "eu_clothes01_shoulder",
+     "eu_clothes02_shoulder",
+     "eu_clothes03_shoulder",
+     "eu_clothes01_chest",
+     "eu_clothes02_chest",
+     "eu_clothes03_chest",
+     "eu_clothes01_pants",
+     "eu_clothes02_pants",
+     "eu_clothes03_pants",
+     "eu_clothes01_gloves",
+     "eu_clothes02_gloves",
+     "eu_clothes03_gloves",
+     "eu_clothes01_boots",
+     "eu_clothes02_boots",
+     "eu_clothes03_boots"
+    ],
+    "tabs": [
+     {
+      "name": "Heavy Armor",
+      "race": "european",
+      "items": [
+       "eu_heavy01_head",
+       "eu_heavy02_head",
+       "eu_heavy03_head",
+       "eu_heavy01_shoulder",
+       "eu_heavy02_shoulder",
+       "eu_heavy03_shoulder",
+       "eu_heavy01_chest",
+       "eu_heavy02_chest",
+       "eu_heavy03_chest",
+       "eu_heavy01_pants",
+       "eu_heavy02_pants",
+       "eu_heavy03_pants",
+       "eu_heavy01_gloves",
+       "eu_heavy02_gloves",
+       "eu_heavy03_gloves",
+       "eu_heavy01_boots",
+       "eu_heavy02_boots",
+       "eu_heavy03_boots"
+      ]
+     },
+     {
+      "name": "Light Armor",
+      "race": "european",
+      "items": [
+       "eu_light01_head",
+       "eu_light02_head",
+       "eu_light03_head",
+       "eu_light01_shoulder",
+       "eu_light02_shoulder",
+       "eu_light03_shoulder",
+       "eu_light01_chest",
+       "eu_light02_chest",
+       "eu_light03_chest",
+       "eu_light01_pants",
+       "eu_light02_pants",
+       "eu_light03_pants",
+       "eu_light01_gloves",
+       "eu_light02_gloves",
+       "eu_light03_gloves",
+       "eu_light01_boots",
+       "eu_light02_boots",
+       "eu_light03_boots"
+      ]
+     },
+     {
+      "name": "Garments",
+      "race": "european",
+      "items": [
+       "eu_clothes01_head",
+       "eu_clothes02_head",
+       "eu_clothes03_head",
+       "eu_clothes01_shoulder",
+       "eu_clothes02_shoulder",
+       "eu_clothes03_shoulder",
+       "eu_clothes01_chest",
+       "eu_clothes02_chest",
+       "eu_clothes03_chest",
+       "eu_clothes01_pants",
+       "eu_clothes02_pants",
+       "eu_clothes03_pants",
+       "eu_clothes01_gloves",
+       "eu_clothes02_gloves",
+       "eu_clothes03_gloves",
+       "eu_clothes01_boots",
+       "eu_clothes02_boots",
+       "eu_clothes03_boots"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "europe_province",
+     "x": -16129.353,
+     "z": 3906.519,
+     "rotY": 2.519,
+     "y": 12.581
+    }
+   ]
+  },
+  "npc_eu_accessory": {
+   "id": "npc_eu_accessory",
+   "name": "Grocery Trader Bajel",
+   "modelKey": "EastEuropeShop_Accessory",
+   "sroCode": "NPC_EU_ACCESSORY",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "eu_ring01",
+     "eu_ring02",
+     "eu_ring03",
+     "eu_earring01",
+     "eu_earring02",
+     "eu_earring03",
+     "eu_necklace01",
+     "eu_necklace02",
+     "eu_necklace03",
+     "lucky_powder_01",
+     "lucky_powder_02",
+     "lucky_powder_03",
+     "lucky_powder_04",
+     "lucky_powder_05",
+     "lucky_powder_06",
+     "lucky_powder_07",
+     "lucky_powder_08"
+    ],
+    "tabs": [
+     {
+      "name": "Accessories",
+      "race": "european",
+      "items": [
+       "eu_ring01",
+       "eu_ring02",
+       "eu_ring03",
+       "eu_earring01",
+       "eu_earring02",
+       "eu_earring03",
+       "eu_necklace01",
+       "eu_necklace02",
+       "eu_necklace03"
+      ]
+     },
+     {
+      "name": "Alchemy",
+      "items": [
+       "lucky_powder_01",
+       "lucky_powder_02",
+       "lucky_powder_03",
+       "lucky_powder_04",
+       "lucky_powder_05",
+       "lucky_powder_06",
+       "lucky_powder_07",
+       "lucky_powder_08"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "europe_province",
+     "x": -16023.127,
+     "z": 3782.083,
+     "rotY": -0.943,
+     "y": 12
+    }
+   ]
+  },
+  "npc_ca_smith": {
+   "id": "npc_ca_smith",
+   "name": "Weapon Trader Tricia",
+   "modelKey": "CentralAsiaShop_Weapon",
+   "sroCode": "NPC_CA_SMITH",
+   "interactRangeU": 15,
+   "repair": true,
+   "shop": {
+    "stock": [
+     "eu_dagger03",
+     "eu_dagger04",
+     "eu_dagger05",
+     "eu_sword03",
+     "eu_sword04",
+     "eu_sword05",
+     "eu_tsword03",
+     "eu_tsword04",
+     "eu_tsword05",
+     "eu_axe03",
+     "eu_axe04",
+     "eu_axe05",
+     "eu_crossbow03",
+     "eu_crossbow04",
+     "eu_crossbow05",
+     "eu_darkstaff03",
+     "eu_darkstaff04",
+     "eu_darkstaff05",
+     "eu_tstaff03",
+     "eu_tstaff04",
+     "eu_tstaff05",
+     "eu_harp03",
+     "eu_harp04",
+     "eu_harp05",
+     "eu_staff03",
+     "eu_staff04",
+     "eu_staff05",
+     "eu_shield03",
+     "eu_shield04",
+     "eu_shield05"
+    ],
+    "tabs": [
+     {
+      "name": "Weapons",
+      "race": "european",
+      "items": [
+       "eu_dagger03",
+       "eu_dagger04",
+       "eu_dagger05",
+       "eu_sword03",
+       "eu_sword04",
+       "eu_sword05",
+       "eu_tsword03",
+       "eu_tsword04",
+       "eu_tsword05",
+       "eu_axe03",
+       "eu_axe04",
+       "eu_axe05",
+       "eu_crossbow03",
+       "eu_crossbow04",
+       "eu_crossbow05",
+       "eu_darkstaff03",
+       "eu_darkstaff04",
+       "eu_darkstaff05",
+       "eu_tstaff03",
+       "eu_tstaff04",
+       "eu_tstaff05",
+       "eu_harp03",
+       "eu_harp04",
+       "eu_harp05",
+       "eu_staff03",
+       "eu_staff04",
+       "eu_staff05"
+      ]
+     },
+     {
+      "name": "Shields",
+      "race": "european",
+      "items": [
+       "eu_shield03",
+       "eu_shield04",
+       "eu_shield05"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "samarkand_province",
+     "x": -7799.608,
+     "z": 4441.467,
+     "rotY": 2.947,
+     "y": 27
+    }
+   ]
+  },
+  "npc_ca_armor": {
+   "id": "npc_ca_armor",
+   "name": "Protector Trader Aryoan",
+   "modelKey": "CentralAsiaShop_Armor",
+   "sroCode": "NPC_CA_ARMOR",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "eu_heavy03_head",
+     "eu_heavy04_head",
+     "eu_heavy05_head",
+     "eu_heavy03_shoulder",
+     "eu_heavy04_shoulder",
+     "eu_heavy05_shoulder",
+     "eu_heavy03_chest",
+     "eu_heavy04_chest",
+     "eu_heavy05_chest",
+     "eu_heavy03_pants",
+     "eu_heavy04_pants",
+     "eu_heavy05_pants",
+     "eu_heavy03_gloves",
+     "eu_heavy04_gloves",
+     "eu_heavy05_gloves",
+     "eu_heavy03_boots",
+     "eu_heavy04_boots",
+     "eu_heavy05_boots",
+     "eu_light03_head",
+     "eu_light04_head",
+     "eu_light05_head",
+     "eu_light03_shoulder",
+     "eu_light04_shoulder",
+     "eu_light05_shoulder",
+     "eu_light03_chest",
+     "eu_light04_chest",
+     "eu_light05_chest",
+     "eu_light03_pants",
+     "eu_light04_pants",
+     "eu_light05_pants",
+     "eu_light03_gloves",
+     "eu_light04_gloves",
+     "eu_light05_gloves",
+     "eu_light03_boots",
+     "eu_light04_boots",
+     "eu_light05_boots",
+     "eu_clothes03_head",
+     "eu_clothes04_head",
+     "eu_clothes05_head",
+     "eu_clothes03_shoulder",
+     "eu_clothes04_shoulder",
+     "eu_clothes05_shoulder",
+     "eu_clothes03_chest",
+     "eu_clothes04_chest",
+     "eu_clothes05_chest",
+     "eu_clothes03_pants",
+     "eu_clothes04_pants",
+     "eu_clothes05_pants",
+     "eu_clothes03_gloves",
+     "eu_clothes04_gloves",
+     "eu_clothes05_gloves",
+     "eu_clothes03_boots",
+     "eu_clothes04_boots",
+     "eu_clothes05_boots"
+    ],
+    "tabs": [
+     {
+      "name": "Heavy Armor",
+      "race": "european",
+      "items": [
+       "eu_heavy03_head",
+       "eu_heavy04_head",
+       "eu_heavy05_head",
+       "eu_heavy03_shoulder",
+       "eu_heavy04_shoulder",
+       "eu_heavy05_shoulder",
+       "eu_heavy03_chest",
+       "eu_heavy04_chest",
+       "eu_heavy05_chest",
+       "eu_heavy03_pants",
+       "eu_heavy04_pants",
+       "eu_heavy05_pants",
+       "eu_heavy03_gloves",
+       "eu_heavy04_gloves",
+       "eu_heavy05_gloves",
+       "eu_heavy03_boots",
+       "eu_heavy04_boots",
+       "eu_heavy05_boots"
+      ]
+     },
+     {
+      "name": "Light Armor",
+      "race": "european",
+      "items": [
+       "eu_light03_head",
+       "eu_light04_head",
+       "eu_light05_head",
+       "eu_light03_shoulder",
+       "eu_light04_shoulder",
+       "eu_light05_shoulder",
+       "eu_light03_chest",
+       "eu_light04_chest",
+       "eu_light05_chest",
+       "eu_light03_pants",
+       "eu_light04_pants",
+       "eu_light05_pants",
+       "eu_light03_gloves",
+       "eu_light04_gloves",
+       "eu_light05_gloves",
+       "eu_light03_boots",
+       "eu_light04_boots",
+       "eu_light05_boots"
+      ]
+     },
+     {
+      "name": "Garments",
+      "race": "european",
+      "items": [
+       "eu_clothes03_head",
+       "eu_clothes04_head",
+       "eu_clothes05_head",
+       "eu_clothes03_shoulder",
+       "eu_clothes04_shoulder",
+       "eu_clothes05_shoulder",
+       "eu_clothes03_chest",
+       "eu_clothes04_chest",
+       "eu_clothes05_chest",
+       "eu_clothes03_pants",
+       "eu_clothes04_pants",
+       "eu_clothes05_pants",
+       "eu_clothes03_gloves",
+       "eu_clothes04_gloves",
+       "eu_clothes05_gloves",
+       "eu_clothes03_boots",
+       "eu_clothes04_boots",
+       "eu_clothes05_boots"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "samarkand_province",
+     "x": -7869.283,
+     "z": 4373.742,
+     "rotY": 1.969,
+     "y": 27
+    }
+   ]
+  },
+  "npc_ca_accessory": {
+   "id": "npc_ca_accessory",
+   "name": "Grocery Trader Saha",
+   "modelKey": "CentralAsiaShop_Accessory",
+   "sroCode": "NPC_CA_ACCESSORY",
+   "interactRangeU": 15,
+   "shop": {
+    "stock": [
+     "eu_ring03",
+     "eu_ring04",
+     "eu_ring05",
+     "eu_earring03",
+     "eu_earring04",
+     "eu_earring05",
+     "eu_necklace03",
+     "eu_necklace04",
+     "eu_necklace05",
+     "lucky_powder_03",
+     "lucky_powder_04",
+     "lucky_powder_05",
+     "lucky_powder_06",
+     "lucky_powder_07",
+     "lucky_powder_08"
+    ],
+    "tabs": [
+     {
+      "name": "Accessories",
+      "race": "european",
+      "items": [
+       "eu_ring03",
+       "eu_ring04",
+       "eu_ring05",
+       "eu_earring03",
+       "eu_earring04",
+       "eu_earring05",
+       "eu_necklace03",
+       "eu_necklace04",
+       "eu_necklace05"
+      ]
+     },
+     {
+      "name": "Alchemy",
+      "items": [
+       "lucky_powder_03",
+       "lucky_powder_04",
+       "lucky_powder_05",
+       "lucky_powder_06",
+       "lucky_powder_07",
+       "lucky_powder_08"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "samarkand_province",
+     "x": -7817.278,
+     "z": 4251.054,
+     "rotY": 0.428,
+     "y": 27
+    }
+   ]
+  },
+  "npc_ca_special": {
+   "id": "npc_ca_special",
+   "name": "Specialty Trader Toson",
+   "modelKey": "CentralAsiaShop_Special",
+   "sroCode": "NPC_CA_SPECIAL",
+   "interactRangeU": 15,
+   "trainer": {
+    "professions": [
+     "lumberjack",
+     "miner"
+    ]
+   },
+   "shop": {
+    "stock": [
+     "profession_axe",
+     "profession_pickaxe"
+    ],
+    "tabs": [
+     {
+      "name": "Tools",
+      "items": [
+       "profession_axe",
+       "profession_pickaxe"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "samarkand_province",
+     "x": -7650.429,
+     "z": 4305.487,
+     "rotY": 0.018,
+     "y": 27
+    }
+   ]
+  },
+  "npc_ch_special": {
+   "id": "npc_ch_special",
+   "name": "Specialty Trader Jodaesan",
+   "modelKey": "chinashop_spacialmerchant",
+   "sroCode": "NPC_CH_SPECIAL",
+   "interactRangeU": 15,
+   "trainer": {
+    "professions": [
+     "lumberjack",
+     "miner"
+    ]
+   },
+   "shop": {
+    "stock": [
+     "profession_axe",
+     "profession_pickaxe"
+    ],
+    "tabs": [
+     {
+      "name": "Tools",
+      "items": [
+       "profession_axe",
+       "profession_pickaxe"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "jangan_province",
+     "x": 9768.048,
+     "z": 1512.033,
+     "rotY": -1.571,
+     "y": 1.65
+    }
+   ]
+  },
+  "npc_ch_special2": {
+   "id": "npc_ch_special2",
+   "name": "Specialty Trader Seopok",
+   "modelKey": "thiefden_thief_e",
+   "sroCode": "NPC_CH_SPECIAL2",
+   "interactRangeU": 18.25,
+   "trainer": {
+    "professions": [
+     "lumberjack",
+     "miner"
+    ]
+   },
+   "shop": {
+    "stock": [
+     "profession_axe",
+     "profession_pickaxe"
+    ],
+    "tabs": [
+     {
+      "name": "Tools",
+      "items": [
+       "profession_axe",
+       "profession_pickaxe"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "jangan_province",
+     "x": 7261.655,
+     "z": 227.383,
+     "rotY": 2.793,
+     "y": 207.498
+    }
+   ]
+  },
+  "npc_eu_special": {
+   "id": "npc_eu_special",
+   "name": "Specialty Trader Tina",
+   "modelKey": "EastEuropeShop_SpecialProduct",
+   "sroCode": "NPC_EU_SPECIAL",
+   "interactRangeU": 15,
+   "trainer": {
+    "professions": [
+     "lumberjack",
+     "miner"
+    ]
+   },
+   "shop": {
+    "stock": [
+     "profession_axe",
+     "profession_pickaxe"
+    ],
+    "tabs": [
+     {
+      "name": "Tools",
+      "items": [
+       "profession_axe",
+       "profession_pickaxe"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "europe_province",
+     "x": -16075.348,
+     "z": 3778.236,
+     "rotY": 0,
+     "y": 12.06
+    }
+   ]
+  },
+  "npc_kt_special": {
+   "id": "npc_kt_special",
+   "name": "Specialty Trader Sanmok",
+   "modelKey": "khotanshop_spacialmerchant",
+   "sroCode": "NPC_KT_SPECIAL",
+   "interactRangeU": 15,
+   "trainer": {
+    "professions": [
+     "lumberjack",
+     "miner"
+    ]
+   },
+   "shop": {
+    "stock": [
+     "profession_axe",
+     "profession_pickaxe"
+    ],
+    "tabs": [
+     {
+      "name": "Tools",
+      "items": [
+       "profession_axe",
+       "profession_pickaxe"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "hotan_province",
+     "x": 227.332,
+     "z": 135.682,
+     "rotY": -2.199,
+     "y": 36.599
+    }
+   ]
+  },
+  "npc_tk_special": {
+   "id": "npc_tk_special",
+   "name": "Specialty Trader Payi",
+   "modelKey": "khotanshop_spacialmerchant",
+   "sroCode": "NPC_TK_SPECIAL",
+   "interactRangeU": 15,
+   "trainer": {
+    "professions": [
+     "lumberjack",
+     "miner"
+    ]
+   },
+   "shop": {
+    "stock": [
+     "profession_axe",
+     "profession_pickaxe"
+    ],
+    "tabs": [
+     {
+      "name": "Tools",
+      "items": [
+       "profession_axe",
+       "profession_pickaxe"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "hotan_province",
+     "x": -1708.288,
+     "z": 3666.742,
+     "rotY": 0.262,
+     "y": 16.965
+    }
+   ]
+  },
+  "npc_wc_special": {
+   "id": "npc_wc_special",
+   "name": "Specialty Shop Elder Leegak",
+   "modelKey": "westchinaquest_oldman",
+   "sroCode": "NPC_WC_SPECIAL",
+   "interactRangeU": 15,
+   "trainer": {
+    "professions": [
+     "lumberjack",
+     "miner"
+    ]
+   },
+   "shop": {
+    "stock": [
+     "profession_axe",
+     "profession_pickaxe"
+    ],
+    "tabs": [
+     {
+      "name": "Tools",
+      "items": [
+       "profession_axe",
+       "profession_pickaxe"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "donwhang_province",
+     "x": 5242.959,
+     "z": 3114.047,
+     "rotY": -0.017,
+     "y": -15.993
+    }
+   ]
+  },
+  "npc_wc_special2": {
+   "id": "npc_wc_special2",
+   "name": "Specialty Trader Hounah",
+   "modelKey": "thiefden_thief_d",
+   "sroCode": "NPC_WC_SPECIAL2",
+   "interactRangeU": 15,
+   "trainer": {
+    "professions": [
+     "lumberjack",
+     "miner"
+    ]
+   },
+   "shop": {
+    "stock": [
+     "profession_axe",
+     "profession_pickaxe"
+    ],
+    "tabs": [
+     {
+      "name": "Tools",
+      "items": [
+       "profession_axe",
+       "profession_pickaxe"
+      ]
+     }
+    ]
+   },
+   "placements": [
+    {
+     "zone": "donwhang_province",
+     "x": 4201.863,
+     "z": -162.942,
+     "rotY": -1.571,
+     "y": 28.949
+    }
+   ]
+  },
+  "npc_ch_warehouse": {
+   "id": "npc_ch_warehouse",
+   "name": "Storage-Keeper Wangu",
+   "modelKey": "npc_ch_warehouse",
+   "sroCode": "NPC_CH_WAREHOUSE_M",
+   "interactRangeU": 22.75,
+   "bank": true
+  },
+  "npc_wc_warehouse": {
+   "id": "npc_wc_warehouse",
+   "name": "Storage-Keeper Paedo",
+   "modelKey": "npc_wc_warehouse",
+   "sroCode": "NPC_WC_WAREHOUSE_M",
+   "interactRangeU": 22.75,
+   "bank": true
+  },
+  "npc_kt_warehouse": {
+   "id": "npc_kt_warehouse",
+   "name": "Storage-Keeper Auisan",
+   "modelKey": "khotansystem_warehousekeeper",
+   "sroCode": "NPC_KT_WAREHOUSE",
+   "interactRangeU": 15,
+   "bank": true
+  },
+  "npc_eu_warehouse": {
+   "id": "npc_eu_warehouse",
+   "name": "Inn Master Sikeulro",
+   "modelKey": "EastEuropeQuest_GraveKeeper",
+   "sroCode": "NPC_EU_WAREHOUSE",
+   "interactRangeU": 15,
+   "bank": true
+  },
+  "npc_ca_warehouse": {
+   "id": "npc_ca_warehouse",
+   "name": "Storage-Keeper Saesa",
+   "modelKey": "CentralAsiaShop_Warehouse",
+   "sroCode": "NPC_CA_WAREHOUSE",
+   "interactRangeU": 15,
+   "bank": true
+  }
+ },
+ "teleporters": {
+  "jangan_province": [
+   {
+    "id": "gate_ch",
+    "name": "Jangan Gate",
+    "modelKey": "portal_cj",
+    "x": 9692.571,
+    "z": 1646.356,
+    "y": -4.97,
+    "rotY": -2.356,
+    "interactRangeU": 48,
+    "destinations": [
+     {
+      "id": "gate_wc",
+      "label": "Donwhang",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 5327.55,
+       "z": 3106.2,
+       "y": -12
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_ferry",
+    "name": "Ferry Ticket Seller Doji",
+    "modelKey": "npc_ch_ferry",
+    "x": 7542.345,
+    "z": 1704.2,
+    "y": 10.872,
+    "rotY": 2.561,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry",
+      "label": "Western China East Ferry",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 7583.4,
+       "z": 2526.3,
+       "y": 24
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_ferry2",
+    "name": "Ferry Ticket Seller Chau",
+    "modelKey": "npc_ch_ferry",
+    "x": 6673.551,
+    "z": 1392.999,
+    "y": 9.284,
+    "rotY": 2.626,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry2",
+      "label": "Western West Ferry",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 6201.75,
+       "z": 1818.15,
+       "y": 24
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_soldier_ea2",
+    "name": "Solder Sangnam [Teleport]",
+    "modelKey": "chinaetc_soldiereast2",
+    "x": 10000.075,
+    "z": 1704.753,
+    "y": -0.01,
+    "rotY": -0.737,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_soldier_em1",
+      "label": "Jangan Palace Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9650.4,
+       "z": 1715.1,
+       "y": -0.907
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_so1",
+      "label": "Jangan South Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9651.45,
+       "z": 1451.55,
+       "y": -0.07
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_we1",
+      "label": "Jangan West Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9273.9,
+       "z": 1725,
+       "y": -0.057
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_soldier_em1",
+    "name": "Soldier Choiyoung [Teleport]",
+    "modelKey": "chinaetc_soldierpalace1",
+    "x": 9655.431,
+    "z": 1725.396,
+    "y": 0,
+    "rotY": -2.687,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_soldier_ea2",
+      "label": "Jangan East Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9993,
+       "z": 1712.55,
+       "y": -0.032
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_so1",
+      "label": "Jangan South Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9651.45,
+       "z": 1451.55,
+       "y": -0.07
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_we1",
+      "label": "Jangan West Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9273.9,
+       "z": 1725,
+       "y": -0.057
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_soldier_so1",
+    "name": "Soldier Jingyo [Teleport]",
+    "modelKey": "chinaetc_soldiersouth1",
+    "x": 9643.511,
+    "z": 1444.599,
+    "y": -0.061,
+    "rotY": 0.852,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_soldier_em1",
+      "label": "Jangan Palace Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9650.4,
+       "z": 1715.1,
+       "y": -0.907
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_ea2",
+      "label": "Jangan East Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9993,
+       "z": 1712.55,
+       "y": -0.032
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_we1",
+      "label": "Jangan West Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9273.9,
+       "z": 1725,
+       "y": -0.057
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_soldier_we1",
+    "name": "Soldier Hogang [Teleport]",
+    "modelKey": "chinaetc_soldierwest1",
+    "x": 9266.249,
+    "z": 1733.127,
+    "y": -0.042,
+    "rotY": 2.386,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_soldier_em1",
+      "label": "Jangan Palace Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9650.4,
+       "z": 1715.1,
+       "y": -0.907
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_ea2",
+      "label": "Jangan East Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9993,
+       "z": 1712.55,
+       "y": -0.032
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_so1",
+      "label": "Jangan South Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9651.45,
+       "z": 1451.55,
+       "y": -0.07
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "donwhang_province": [
+   {
+    "id": "gate_npc_wc_ferry",
+    "name": "Ferry Ticket Seller Tayun",
+    "modelKey": "npc_wc_ferry",
+    "x": 7580,
+    "z": 2524,
+    "y": 8.627,
+    "rotY": 0.976,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_ferry",
+      "label": "China East Ferry",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 7572,
+       "z": 1659,
+       "y": 21
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_wc_ferry2",
+    "name": "Ferry Ticket Seller Hageuk",
+    "modelKey": "npc_wc_ferry",
+    "x": 6184,
+    "z": 1801,
+    "y": 5.66,
+    "rotY": 0.803,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_ferry2",
+      "label": "China West Ferry",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 6702.45,
+       "z": 1342.05,
+       "y": 21
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_wc_ferry3",
+    "name": "Boat Ticket Seller Salmai",
+    "modelKey": "npc_wc_ferry",
+    "x": 2352.504,
+    "z": -25.822,
+    "y": 2.684,
+    "rotY": 1.17,
+    "destinations": [
+     {
+      "id": "gate_npc_kt_ferry2",
+      "label": "Hotan East Ferry",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": 1575.6,
+       "z": -76.2,
+       "y": -3.522
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_wc_ferry4",
+    "name": "Boat Ticket Seller Asa",
+    "modelKey": "npc_wc_ferry",
+    "x": 2345.388,
+    "z": -442.727,
+    "y": -3.846,
+    "rotY": 1.621,
+    "destinations": [
+     {
+      "id": "gate_npc_kt_ferry3",
+      "label": "Hotan South Ferry",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": 1651.95,
+       "z": -460.65,
+       "y": -5.665
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_wc",
+    "name": "Donwhang Gate",
+    "modelKey": "portal_wcd",
+    "x": 5328.345,
+    "z": 3168.652,
+    "y": -16,
+    "rotY": 3.142,
+    "interactRangeU": 128,
+    "destinations": [
+     {
+      "id": "gate_ch",
+      "label": "Jangan",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9649.35,
+       "z": 1645.35,
+       "y": -4.97
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_kt",
+      "label": "Hotan",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": 170.7,
+       "z": 22.95,
+       "y": 37.5
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "hotan_province": [
+   {
+    "id": "gate_kt",
+    "name": "Hotan Gate",
+    "modelKey": "portal_kt",
+    "x": 169.566,
+    "z": 73.156,
+    "y": 35.46,
+    "rotY": 3.142,
+    "interactRangeU": 32,
+    "destinations": [
+     {
+      "id": "gate_wc",
+      "label": "Donwhang",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 5327.55,
+       "z": 3106.2,
+       "y": -12
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_ca",
+      "label": "Samarkand",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -7735.5,
+       "z": 4245.15,
+       "y": 27
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_kt_ferry2",
+    "name": "Boat Ticket Seller Rahan",
+    "modelKey": "npc_kt_ferry",
+    "x": 1618.41,
+    "z": -89.314,
+    "y": -3.373,
+    "rotY": -1.274,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry3",
+      "label": "Tarim North Ferry",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 2391.45,
+       "z": -9.3,
+       "y": -3.357
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_kt_ferry3",
+    "name": "Boat Ticket Seller Asimo",
+    "modelKey": "npc_kt_ferry",
+    "x": 1686.624,
+    "z": -463.081,
+    "y": -4.809,
+    "rotY": -1.501,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry4",
+      "label": "Tarim South Ferry",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 2373.6,
+       "z": -444.15,
+       "y": -8.57
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_kt_flyship1",
+    "name": "Airship Ticket Seller Dawari",
+    "modelKey": "khotanshop_designer",
+    "x": -3939.669,
+    "z": 580.065,
+    "y": 320.211,
+    "rotY": 2.491,
+    "destinations": [
+     {
+      "id": "gate_npc_ca_flyship",
+      "label": "Samarkand Airship Dock",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -4402.95,
+       "z": 2835.9,
+       "y": 44.37
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_tk_tunnel_no",
+    "name": "Tunnel Manager Asui",
+    "modelKey": "TaklamakanSystem_Tunnel_No",
+    "x": -2856.276,
+    "z": 2972.232,
+    "y": 59.042,
+    "rotY": 1.649,
+    "destinations": [
+     {
+      "id": "gate_npc_ca_tunnel_no",
+      "label": "Tunnel of Abyss North (Samarkand)",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -4159.2,
+       "z": 4017.3,
+       "y": 89.717
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_tk_tunnel_so",
+    "name": "Tunnel Manager Maryokuk",
+    "modelKey": "TaklamakanSystem_Tunnel_So",
+    "x": -2852.523,
+    "z": 2081.587,
+    "y": 38.531,
+    "rotY": 1.323,
+    "destinations": [
+     {
+      "id": "gate_npc_ca_tunnel_so",
+      "label": "Tunnel of Abyss South (Samarkand)",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -4114.2,
+       "z": 3156.6,
+       "y": 27.52
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "europe_province": [
+   {
+    "id": "gate_eu",
+    "name": "Constantinople Gate",
+    "modelKey": "portal_eu",
+    "x": -16023.428,
+    "z": 3877.217,
+    "y": 10.353,
+    "rotY": -2.873,
+    "interactRangeU": 64,
+    "destinations": [
+     {
+      "id": "gate_ca",
+      "label": "Samarkand",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -7735.5,
+       "z": 4245.15,
+       "y": 27
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_eu_advice",
+    "name": "Guide Lipria",
+    "modelKey": "EastEuropeQuest_Lipria",
+    "x": -15925.612,
+    "z": 4381.908,
+    "y": 12.405,
+    "rotY": -1.253,
+    "destinations": [
+     {
+      "id": "gate_npc_eu_advice3",
+      "label": "Guide Riise (Plaza)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -16046.7,
+       "z": 3916.05,
+       "y": 12.56
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_eu_advice2",
+      "label": "Guide Raffy (Harbor)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -16462.65,
+       "z": 3951.15,
+       "y": 12.092
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_eu_advice2",
+    "name": "Guide Raffy",
+    "modelKey": "EastEuropeQuest_Lipria",
+    "x": -16456.47,
+    "z": 3943.872,
+    "y": 12.581,
+    "rotY": -0.704,
+    "destinations": [
+     {
+      "id": "gate_npc_eu_advice",
+      "label": "Guide Lipria (West Gate)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -15929.85,
+       "z": 4383.3,
+       "y": 12.4
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_eu_advice3",
+      "label": "Guide Riise (Plaza)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -16046.7,
+       "z": 3916.05,
+       "y": 12.56
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_eu_advice3",
+    "name": "Guide Riise",
+    "modelKey": "EastEuropeQuest_Lipria",
+    "x": -16043.571,
+    "z": 3914.787,
+    "y": 12.545,
+    "rotY": -1.187,
+    "destinations": [
+     {
+      "id": "gate_npc_eu_advice",
+      "label": "Guide Lipria (West Gate)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -15929.85,
+       "z": 4383.3,
+       "y": 12.4
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_eu_advice2",
+      "label": "Guide Raffy (Harbor)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -16462.65,
+       "z": 3951.15,
+       "y": 12.092
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_eu_ferry2",
+    "name": "Harbor Manager Gale",
+    "modelKey": "EastEuropeSystem_PortManager2",
+    "x": -17136.292,
+    "z": 1742.846,
+    "y": -23.256,
+    "rotY": -1.272,
+    "destinations": [
+     {
+      "id": "gate_npc_am_ferry1",
+      "label": "Sigia Dock Ferry",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -13048.422,
+       "z": 3304.313,
+       "y": 3.94
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_am_ferry2",
+      "label": "Droa Dock Ferry",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -13049.5,
+       "z": 2741.942,
+       "y": 4.039
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "samarkand_province": [
+   {
+    "id": "gate_ca",
+    "name": "Samarkand Gate",
+    "modelKey": "portal_ca",
+    "x": -7776.3,
+    "z": 4336.194,
+    "y": 27,
+    "rotY": 3.142,
+    "interactRangeU": 19,
+    "destinations": [
+     {
+      "id": "gate_eu",
+      "label": "Constantinople",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -15985.5,
+       "z": 3904.5,
+       "y": 12.56
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_kt",
+      "label": "Hotan",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": 170.7,
+       "z": 22.95,
+       "y": 37.5
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_am_ferry1",
+    "name": "Pirate Morgun",
+    "modelKey": "AsiaMinor_Ferry1",
+    "x": -13048.422,
+    "z": 3304.313,
+    "y": 3.94,
+    "rotY": -0.357,
+    "destinations": [
+     {
+      "id": "gate_npc_eu_ferry2",
+      "label": "Constantinople Harbor Ferry",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -17136.292,
+       "z": 1742.846,
+       "y": -23.256
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_am_ferry2",
+    "name": "Priate Blackbeard",
+    "modelKey": "AsiaMinor_Ferry2",
+    "x": -13049.5,
+    "z": 2741.942,
+    "y": 4.039,
+    "rotY": -0.352,
+    "destinations": [
+     {
+      "id": "gate_npc_eu_ferry2",
+      "label": "Constantinople Harbor Ferry",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -17136.292,
+       "z": 1742.846,
+       "y": -23.256
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ca_flyship",
+    "name": "Aircraft Ticket Seller Saena",
+    "modelKey": "CentralAsiaSystem_Flyship",
+    "x": -4402.691,
+    "z": 2792.382,
+    "y": 48.722,
+    "rotY": -0.006,
+    "destinations": [
+     {
+      "id": "gate_npc_kt_flyship1",
+      "label": "Hotan Airship Dock",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": -3902.7,
+       "z": 531.45,
+       "y": 315.883
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ca_tunnel_no",
+    "name": "Tunnel Manager Topni",
+    "modelKey": "CentralAsiaSystem_Tunnel_No",
+    "x": -4140.734,
+    "z": 4018.019,
+    "y": 89.723,
+    "rotY": -1.61,
+    "destinations": [
+     {
+      "id": "gate_npc_tk_tunnel_no",
+      "label": "Tunnel of Abyss North (Taklamakan)",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": -2825.7,
+       "z": 2969.85,
+       "y": 59.008
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ca_tunnel_so",
+    "name": "Tunnel Manager Salhap",
+    "modelKey": "CentralAsiaSystem_Tunnel_So",
+    "x": -4096.536,
+    "z": 3156.441,
+    "y": 27.809,
+    "rotY": -1.562,
+    "destinations": [
+     {
+      "id": "gate_npc_tk_tunnel_so",
+      "label": "Tunnel of Abyss South (Taklamakan)",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": -2823.6,
+       "z": 2088.9,
+       "y": 36.662
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "jangan_world_deprecated": [
+   {
+    "id": "gate_ch",
+    "name": "Jangan Gate",
+    "modelKey": "portal_cj",
+    "x": 908.571,
+    "z": 206.356,
+    "y": -4.97,
+    "rotY": -2.356,
+    "interactRangeU": 48,
+    "destinations": [
+     {
+      "id": "gate_wc",
+      "label": "Donwhang",
+      "toZone": "donwhang_deprecated",
+      "toPos": {
+       "x": -432.45,
+       "z": 370.2,
+       "y": -16.01
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_ferry",
+    "name": "Ferry Ticket Seller Doji",
+    "modelKey": "npc_ch_ferry",
+    "x": -1241.655,
+    "z": 264.199,
+    "y": 10.872,
+    "rotY": 2.561,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry",
+      "label": "Western China East Ferry",
+      "toZone": "donwhang_deprecated",
+      "toPos": {
+       "x": 1823.4,
+       "z": -209.7,
+       "y": 8.626
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_ferry2",
+    "name": "Ferry Ticket Seller Chau",
+    "modelKey": "npc_ch_ferry",
+    "x": -2110.449,
+    "z": -47.001,
+    "y": 9.284,
+    "rotY": 2.626,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry2",
+      "label": "Western West Ferry",
+      "toZone": "donwhang_deprecated",
+      "toPos": {
+       "x": 441.75,
+       "z": -917.85,
+       "y": 5.793
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "donwhang_deprecated": [
+   {
+    "id": "gate_npc_wc_ferry",
+    "name": "Ferry Ticket Seller Tayun",
+    "modelKey": "npc_wc_ferry",
+    "x": 1820,
+    "z": -212,
+    "y": 8.627,
+    "rotY": 0.976,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_ferry",
+      "label": "China East Ferry",
+      "toZone": "jangan_world_deprecated",
+      "toPos": {
+       "x": -1212,
+       "z": 219,
+       "y": 11.02
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_wc_ferry2",
+    "name": "Ferry Ticket Seller Hageuk",
+    "modelKey": "npc_wc_ferry",
+    "x": 424,
+    "z": -935,
+    "y": 5.66,
+    "rotY": 0.803,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_ferry2",
+      "label": "China West Ferry",
+      "toZone": "jangan_world_deprecated",
+      "toPos": {
+       "x": -2081.55,
+       "z": -97.95,
+       "y": 7.581
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_wc",
+    "name": "Donwhang Gate",
+    "modelKey": "portal_wcd",
+    "x": -431.655,
+    "z": 432.652,
+    "y": -16,
+    "rotY": 3.142,
+    "interactRangeU": 128,
+    "destinations": [
+     {
+      "id": "gate_ch",
+      "label": "Jangan",
+      "toZone": "jangan_world_deprecated",
+      "toPos": {
+       "x": 865.35,
+       "z": 205.35,
+       "y": -4.97
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ]
+ },
+ "zones": {
+  "jangan": {
+   "id": "jangan",
+   "name": "Jangan",
+   "kind": "field",
+   "boundsU": {
+    "minX": -1008,
+    "maxX": 1008,
+    "minZ": -864,
+    "maxZ": 864
+   },
+   "playerSpawn": {
+    "x": -94.091,
+    "z": 211.005
+   },
+   "respawnPoint": {
+    "x": -94.091,
+    "z": 211.005
+   },
+   "gates": [],
+   "safeAreas": [
+    {
+     "x": -22.17,
+     "z": 299.882,
+     "rotY": 0,
+     "shape": {
+      "kind": "box",
+      "hx": 361.271,
+      "hz": 244.615,
+      "ox": 0,
+      "oz": 0
+     }
+    }
+   ],
+   "npcs": [
+    {
+     "npcId": "npc_ch_armor",
+     "x": -94.17,
+     "z": 162.78,
+     "rotY": 1.5708
+    },
+    {
+     "npcId": "npc_ch_smith",
+     "x": -94.09,
+     "z": 211.01,
+     "rotY": 1.5708
+    },
+    {
+     "npcId": "npc_ch_warehouse",
+     "x": 3.12,
+     "z": 148.37,
+     "rotY": 0
+    }
+   ],
+   "teleporterIds": []
+  },
+  "jangan_province": {
+   "id": "jangan_province",
+   "name": "Jangan",
+   "kind": "field",
+   "boundsU": {
+    "minX": 5760,
+    "maxX": 11520,
+    "minZ": -864,
+    "maxZ": 3168
+   },
+   "playerSpawn": {
+    "x": 9649.35,
+    "z": 1645.35
+   },
+   "respawnPoint": {
+    "x": 9649.35,
+    "z": 1645.35
+   },
+   "gates": [],
+   "safeAreas": [
+    {
+     "x": 9628.09,
+     "z": 1738.25,
+     "rotY": 0,
+     "shape": {
+      "kind": "box",
+      "hx": 384.01,
+      "hz": 267.98,
+      "ox": 0,
+      "oz": 0
+     }
+    }
+   ],
+   "npcs": [
+    {
+     "npcId": "npc_ch_smith",
+     "x": 9553.91,
+     "z": 1651.005,
+     "rotY": -0.237
+    },
+    {
+     "npcId": "npc_ch_armor",
+     "x": 9553.825,
+     "z": 1602.784,
+     "rotY": -0.211
+    },
+    {
+     "npcId": "npc_merchant_wang",
+     "x": 9741.612,
+     "z": 1651.094,
+     "rotY": -0.625
+    },
+    {
+     "npcId": "npc_ch_accessory",
+     "x": 9752.783,
+     "z": 1601.728,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_ch_horse",
+     "x": 9553.382,
+     "z": 1507.59,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_ch_special",
+     "x": 9768.048,
+     "z": 1512.033,
+     "y": 1.65,
+     "rotY": -1.571
+    },
+    {
+     "npcId": "npc_ch_warehouse",
+     "x": 9651.12,
+     "z": 1588.369,
+     "y": -4.864,
+     "rotY": -0.4
+    },
+    {
+     "npcId": "npc_ch_warehouse_w",
+     "x": 9651.053,
+     "z": 1588.378,
+     "y": -4.878,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_ch_ticket",
+     "x": 9819.57,
+     "z": 1576.962,
+     "y": -5.398,
+     "rotY": 3.124
+    },
+    {
+     "npcId": "npc_ch_lottery",
+     "x": 9825.876,
+     "z": 1576.706,
+     "y": -5.397,
+     "rotY": 3.124
+    },
+    {
+     "npcId": "npc_ch_shaman",
+     "x": 8661.432,
+     "z": 1851.317,
+     "y": 33.876,
+     "rotY": 1.99
+    },
+    {
+     "npcId": "npc_ch_chef",
+     "x": 9919.503,
+     "z": 1654.974,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_ch_genaral",
+     "x": 9304.208,
+     "z": 1772.988,
+     "rotY": -3.141
+    },
+    {
+     "npcId": "npc_ch_genaral_sw",
+     "x": 9456.047,
+     "z": 1788.057,
+     "rotY": 3.124
+    },
+    {
+     "npcId": "npc_ch_genaral_sp",
+     "x": 9370.05,
+     "z": 1813.469,
+     "rotY": 3.124
+    },
+    {
+     "npcId": "npc_ch_genaral_bo",
+     "x": 9439.704,
+     "z": 1956.01,
+     "y": 6,
+     "rotY": -3.141
+    },
+    {
+     "npcId": "npc_ch_priest",
+     "x": 9890.961,
+     "z": 1875.17,
+     "rotY": -3.141
+    },
+    {
+     "npcId": "npc_ch_doctor",
+     "x": 9768.126,
+     "z": 1493.626,
+     "y": 1.65,
+     "rotY": -1.571
+    },
+    {
+     "npcId": "npc_ch_islam",
+     "x": 9754.602,
+     "z": 1527.121,
+     "y": 1.65,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_ch_europe",
+     "x": 9754.619,
+     "z": 1479.081,
+     "y": 1.65,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_ch_india",
+     "x": 9895.824,
+     "z": 1748.602,
+     "y": -0.003,
+     "rotY": 3.124
+    },
+    {
+     "npcId": "npc_ch_soldier_em2",
+     "x": 9644.633,
+     "z": 1725.406,
+     "rotY": 3.124
+    },
+    {
+     "npcId": "npc_ch_soldier_ea1",
+     "x": 10000.18,
+     "z": 1720.831,
+     "rotY": -1.553
+    },
+    {
+     "npcId": "npc_ch_soldier_we2",
+     "x": 9266.16,
+     "z": 1717.374,
+     "y": -0.192,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_ch_soldier_so2",
+     "x": 9659.595,
+     "z": 1444.531,
+     "y": -0.066,
+     "rotY": 0.018
+    },
+    {
+     "npcId": "npc_ch_beggarboy",
+     "x": 9423.914,
+     "z": 1521.559,
+     "y": 2.511,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_ch_bigman",
+     "x": 9868.383,
+     "z": 1553.286,
+     "y": -9.724,
+     "rotY": 0
+    },
+    {
+     "npcId": "npc_ch_kisaeng1",
+     "x": 9351.227,
+     "z": 1533.177,
+     "y": 2.429,
+     "rotY": 0
+    },
+    {
+     "npcId": "npc_ch_kisaeng2",
+     "x": 9426.804,
+     "z": 1618.925,
+     "y": 0.107,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_ch_kisaeng3",
+     "x": 9335.087,
+     "z": 1595.088,
+     "y": -0.517,
+     "rotY": -1.239
+    },
+    {
+     "npcId": "npc_ch_kisaeng4",
+     "x": 9331.91,
+     "z": 1596.853,
+     "y": -0.318,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_ch_kisaeng5",
+     "x": 9441.003,
+     "z": 1584.925,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_ch_kisaeng6",
+     "x": 9313.13,
+     "z": 1495.132,
+     "y": 2.388,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_ch_special2",
+     "x": 7261.655,
+     "z": 227.383,
+     "y": 207.498,
+     "rotY": 2.793
+    },
+    {
+     "npcId": "npc_ch_gacha_machine",
+     "x": 9745.946,
+     "z": 1618.95,
+     "rotY": -1.571
+    },
+    {
+     "npcId": "npc_ch_gacha_operator",
+     "x": 9650.592,
+     "z": 1549.144,
+     "y": -4.893,
+     "rotY": 3.124
+    },
+    {
+     "npcId": "npc_ch_fortress_official",
+     "x": 9739.401,
+     "z": 1895.281,
+     "y": 10.473,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_ch_moonshadow",
+     "x": 9920.856,
+     "z": 1600.401,
+     "rotY": -0.017
+    }
+   ],
+   "teleporterIds": [
+    "gate_ch",
+    "gate_npc_ch_ferry",
+    "gate_npc_ch_ferry2",
+    "gate_npc_ch_soldier_ea2",
+    "gate_npc_ch_soldier_em1",
+    "gate_npc_ch_soldier_so1",
+    "gate_npc_ch_soldier_we1"
+   ]
+  },
+  "donwhang_province": {
+   "id": "donwhang_province",
+   "name": "Donwhang",
+   "kind": "field",
+   "boundsU": {
+    "minX": 2016,
+    "maxX": 7776,
+    "minZ": -1152,
+    "maxZ": 4320
+   },
+   "playerSpawn": {
+    "x": 5327.55,
+    "z": 3106.2,
+    "y": -12
+   },
+   "respawnPoint": {
+    "x": 5327.55,
+    "z": 3106.2,
+    "y": -12
+   },
+   "gates": [],
+   "safeAreas": [
+    {
+     "x": 5205.304,
+     "z": 3101.834,
+     "rotY": 0,
+     "shape": {
+      "kind": "box",
+      "hx": 232.36,
+      "hz": 178.975,
+      "ox": 0,
+      "oz": 0
+     }
+    }
+   ],
+   "npcs": [
+    {
+     "npcId": "npc_wc_smith",
+     "x": 5363.654,
+     "z": 3062.655,
+     "y": -16,
+     "rotY": -1.328
+    },
+    {
+     "npcId": "npc_wc_armor",
+     "x": 5363.463,
+     "z": 3015.207,
+     "y": -15.901,
+     "rotY": -1.07
+    },
+    {
+     "npcId": "npc_wc_potion",
+     "x": 5273.588,
+     "z": 3050.246,
+     "y": -15.969,
+     "rotY": -0.924
+    },
+    {
+     "npcId": "npc_wc_accessory",
+     "x": 5267.879,
+     "z": 2990.682,
+     "y": -15.642,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_wc_horse",
+     "x": 5396.261,
+     "z": 3127.754,
+     "y": -16.006,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_wc_warehouse",
+     "x": 5373.053,
+     "z": 2984.526,
+     "y": -15.871,
+     "rotY": -0.961
+    },
+    {
+     "npcId": "npc_wc_warehouse_w",
+     "x": 5373.053,
+     "z": 2984.535,
+     "y": -15.871,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_wc_special",
+     "x": 5242.959,
+     "z": 3114.047,
+     "y": -15.993,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_wc_priest1",
+     "x": 5324.594,
+     "z": 3436.69,
+     "y": -14.092,
+     "rotY": 0.018
+    },
+    {
+     "npcId": "npc_wc_priest2",
+     "x": 5394.308,
+     "z": 3356.797,
+     "y": -11.962,
+     "rotY": -1.536
+    },
+    {
+     "npcId": "npc_wc_genaral_sw",
+     "x": 5273.936,
+     "z": 3263.669,
+     "y": -15.937,
+     "rotY": 2.339
+    },
+    {
+     "npcId": "npc_wc_genaral_sp",
+     "x": 5237.742,
+     "z": 2950.201,
+     "y": -15.489,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_wc_genaral_bo",
+     "x": 5252.651,
+     "z": 2950.278,
+     "y": -15.505,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_wc_doctor",
+     "x": 5250.999,
+     "z": 3114.123,
+     "y": -16.002,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_wc_soldier_ea1",
+     "x": 5441.273,
+     "z": 3174.114,
+     "y": -16.005,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_wc_soldier_ea2",
+     "x": 5441.328,
+     "z": 3159.465,
+     "y": -16.005,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_wc_soldier_we1",
+     "x": 5202.063,
+     "z": 3168.093,
+     "y": -16.044,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_wc_soldier_we2",
+     "x": 5202.119,
+     "z": 3154.781,
+     "y": -16.036,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_wc_soldier_so",
+     "x": 5328.837,
+     "z": 2920.212,
+     "y": -15.817,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_wc_priest3",
+     "x": 5279.661,
+     "z": 3391.498,
+     "y": -14.437,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_wc_special2",
+     "x": 4201.863,
+     "z": -162.942,
+     "y": 28.949,
+     "rotY": -1.571
+    },
+    {
+     "npcId": "npc_ch_gacha_machine",
+     "x": 5265.586,
+     "z": 3110.004,
+     "y": -16.011,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_ch_gacha_operator",
+     "x": 5358.405,
+     "z": 3087.872,
+     "y": -16.005,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_wc_guild",
+     "x": 5387.163,
+     "z": 2947.342,
+     "y": -15.711,
+     "rotY": 0
+    }
+   ],
+   "teleporterIds": [
+    "gate_npc_wc_ferry",
+    "gate_npc_wc_ferry2",
+    "gate_npc_wc_ferry3",
+    "gate_npc_wc_ferry4",
+    "gate_wc"
+   ]
+  },
+  "hotan_province": {
+   "id": "hotan_province",
+   "name": "Hotan",
+   "kind": "field",
+   "boundsU": {
+    "minX": -4320,
+    "maxX": 2304,
+    "minZ": -2304,
+    "maxZ": 4032
+   },
+   "playerSpawn": {
+    "x": 170.7,
+    "z": 22.95,
+    "y": 37.5
+   },
+   "respawnPoint": {
+    "x": 170.7,
+    "z": 22.95,
+    "y": 37.5
+   },
+   "gates": [],
+   "safeAreas": [
+    {
+     "x": 248.136,
+     "z": 445.086,
+     "rotY": 0,
+     "shape": {
+      "kind": "box",
+      "hx": 257.798,
+      "hz": 680.589,
+      "ox": 0,
+      "oz": 0
+     }
+    }
+   ],
+   "npcs": [
+    {
+     "npcId": "npc_kt_smith",
+     "x": 75.237,
+     "z": 114.941,
+     "y": 36.537,
+     "rotY": 0.482
+    },
+    {
+     "npcId": "npc_kt_armor",
+     "x": 86.72,
+     "z": 28.275,
+     "y": 36.572,
+     "rotY": 0.369
+    },
+    {
+     "npcId": "npc_kt_potion",
+     "x": 124.824,
+     "z": 164.046,
+     "y": 36.579,
+     "rotY": 0.413
+    },
+    {
+     "npcId": "npc_kt_accessory",
+     "x": 128.9,
+     "z": -6.891,
+     "y": 36.572,
+     "rotY": 0.258
+    },
+    {
+     "npcId": "npc_kt_horse",
+     "x": 231.132,
+     "z": -7.043,
+     "y": 37.472,
+     "rotY": 0.038
+    },
+    {
+     "npcId": "npc_kt_special",
+     "x": 227.332,
+     "z": 135.682,
+     "y": 36.599,
+     "rotY": -2.199
+    },
+    {
+     "npcId": "npc_kt_designer",
+     "x": 236.103,
+     "z": 126.024,
+     "y": 36.572,
+     "rotY": -2.199
+    },
+    {
+     "npcId": "npc_kt_ferry",
+     "x": 430.506,
+     "z": -97.454,
+     "y": 2.047,
+     "rotY": -0.803
+    },
+    {
+     "npcId": "npc_kt_warehouse",
+     "x": 170.142,
+     "z": 91.619,
+     "y": 36.563,
+     "rotY": 0.217
+    },
+    {
+     "npcId": "npc_kt_manager",
+     "x": 344.309,
+     "z": 674.865,
+     "y": -2.427,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_kt_minister",
+     "x": 337.332,
+     "z": 233.094,
+     "y": 3,
+     "rotY": 0.768
+    },
+    {
+     "npcId": "npc_kt_soldier_em1",
+     "x": 179.883,
+     "z": 529.179,
+     "y": 21.751,
+     "rotY": -3.141
+    },
+    {
+     "npcId": "npc_kt_soldier_em2",
+     "x": 163.734,
+     "z": 529.166,
+     "y": 21.798,
+     "rotY": 3.124
+    },
+    {
+     "npcId": "npc_kt_soldier_ea1",
+     "x": 476.096,
+     "z": 79.803,
+     "y": 2.047,
+     "rotY": -1.571
+    },
+    {
+     "npcId": "npc_kt_soldier_ea2",
+     "x": 476.054,
+     "z": 64.865,
+     "y": 2.035,
+     "rotY": -1.571
+    },
+    {
+     "npcId": "npc_kt_soldier_so1",
+     "x": 163.333,
+     "z": -231.358,
+     "y": 1.993,
+     "rotY": 0.018
+    },
+    {
+     "npcId": "npc_kt_soldier_so2",
+     "x": 178.581,
+     "z": -231.325,
+     "y": 1.986,
+     "rotY": 0.035
+    },
+    {
+     "npcId": "npc_kt_soldier_we1",
+     "x": -127.057,
+     "z": 78.532,
+     "y": 2.015,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_kt_soldier_we2",
+     "x": -127.097,
+     "z": 63.114,
+     "y": 2.015,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_kt_flyship2",
+     "x": -3904.273,
+     "z": -1572.984,
+     "y": 309.665,
+     "rotY": 2.444
+    },
+    {
+     "npcId": "npc_tk_special",
+     "x": -1708.288,
+     "z": 3666.742,
+     "y": 16.965,
+     "rotY": 0.262
+    },
+    {
+     "npcId": "npc_ch_gacha_machine",
+     "x": 247.857,
+     "z": 116.485,
+     "y": 36.573,
+     "rotY": -2.199
+    },
+    {
+     "npcId": "npc_ch_gacha_operator",
+     "x": 150.426,
+     "z": 73.438,
+     "y": 36.597,
+     "rotY": -1.571
+    },
+    {
+     "npcId": "npc_kt_guild",
+     "x": 171.834,
+     "z": 663.862,
+     "y": 40.151,
+     "rotY": -3.124
+    },
+    {
+     "npcId": "npc_kt_fortress_official",
+     "x": 23.157,
+     "z": 697.656,
+     "y": 22.729,
+     "rotY": 1.571
+    }
+   ],
+   "teleporterIds": [
+    "gate_kt",
+    "gate_npc_kt_ferry2",
+    "gate_npc_kt_ferry3",
+    "gate_npc_kt_flyship1",
+    "gate_npc_tk_tunnel_no",
+    "gate_npc_tk_tunnel_so"
+   ]
+  },
+  "europe_province": {
+   "id": "europe_province",
+   "name": "Constantinople",
+   "kind": "field",
+   "boundsU": {
+    "minX": -19296,
+    "maxX": -15264,
+    "minZ": 864,
+    "maxZ": 5472
+   },
+   "playerSpawn": {
+    "x": -15985.5,
+    "z": 3904.5,
+    "y": 12.6
+   },
+   "respawnPoint": {
+    "x": -15985.5,
+    "z": 3904.5,
+    "y": 12.6
+   },
+   "gates": [],
+   "safeAreas": [
+    {
+     "x": -16058.428,
+     "z": 3807.686,
+     "rotY": 0,
+     "shape": {
+      "kind": "box",
+      "hx": 411.924,
+      "hz": 565.471,
+      "ox": 0,
+      "oz": 0
+     }
+    }
+   ],
+   "npcs": [
+    {
+     "npcId": "npc_eu_smith",
+     "x": -16010.296,
+     "z": 3973.906,
+     "y": 12.519,
+     "rotY": -2.86
+    },
+    {
+     "npcId": "npc_eu_armor",
+     "x": -16129.353,
+     "z": 3906.519,
+     "y": 12.581,
+     "rotY": 2.519
+    },
+    {
+     "npcId": "npc_eu_potion",
+     "x": -15927.181,
+     "z": 3954.134,
+     "y": 12.614,
+     "rotY": -2.411
+    },
+    {
+     "npcId": "npc_eu_accessory",
+     "x": -16023.127,
+     "z": 3782.083,
+     "y": 12,
+     "rotY": -0.943
+    },
+    {
+     "npcId": "npc_eu_horse",
+     "x": -16146.825,
+     "z": 3798.927,
+     "y": 12.581,
+     "rotY": 1.472
+    },
+    {
+     "npcId": "npc_eu_special",
+     "x": -16075.348,
+     "z": 3778.236,
+     "y": 12.06,
+     "rotY": 0
+    },
+    {
+     "npcId": "npc_eu_merchant",
+     "x": -16103.239,
+     "z": 3770,
+     "y": 12.824,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_eu_ferry",
+     "x": -15611.569,
+     "z": 3754.11,
+     "y": -4.138,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_eu_warehouse",
+     "x": -15925.665,
+     "z": 3870.882,
+     "y": 12,
+     "rotY": -2.015
+    },
+    {
+     "npcId": "npc_eu_hunter",
+     "x": -16252.213,
+     "z": 4055.134,
+     "y": 11.998,
+     "rotY": 0.506
+    },
+    {
+     "npcId": "npc_eu_witch",
+     "x": -15564.616,
+     "z": 4846.334,
+     "y": 111.584,
+     "rotY": -0.803
+    },
+    {
+     "npcId": "npc_eu_priest",
+     "x": -15579.775,
+     "z": 4164.107,
+     "y": 42.561,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_eu_adventurer",
+     "x": -15924.801,
+     "z": 3831.036,
+     "y": 12,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_eu_manager",
+     "x": -16320.631,
+     "z": 3925.958,
+     "y": 12.581,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_eu_chinaboy",
+     "x": -15587.77,
+     "z": 4830.585,
+     "y": 111.312,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_eu_consul",
+     "x": -16294.818,
+     "z": 4181.203,
+     "y": 14.728,
+     "rotY": 2.339
+    },
+    {
+     "npcId": "npc_eu_union1",
+     "x": -16248.57,
+     "z": 3607.118,
+     "y": 12.581,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_eu_union2",
+     "x": -16327.234,
+     "z": 3527.9,
+     "y": 12.579,
+     "rotY": 3.124
+    },
+    {
+     "npcId": "npc_eu_general",
+     "x": -16244.919,
+     "z": 3701.803,
+     "y": 12.581,
+     "rotY": 2.077
+    },
+    {
+     "npcId": "npc_eu_soldier_ca1",
+     "x": -16123.581,
+     "z": 3995.291,
+     "y": 12,
+     "rotY": 2.339
+    },
+    {
+     "npcId": "npc_eu_soldier_ca2",
+     "x": -16109.346,
+     "z": 4010.267,
+     "y": 12,
+     "rotY": 2.339
+    },
+    {
+     "npcId": "npc_eu_soldier_no1",
+     "x": -15921.717,
+     "z": 4403.633,
+     "y": 12,
+     "rotY": 3.124
+    },
+    {
+     "npcId": "npc_eu_soldier_no2",
+     "x": -15956.181,
+     "z": 4403.535,
+     "y": 12,
+     "rotY": 3.124
+    },
+    {
+     "npcId": "npc_eu_soldier_ea1",
+     "x": -16507.299,
+     "z": 3976.329,
+     "y": 11.844,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_eu_soldier_ea2",
+     "x": -16506.913,
+     "z": 3955.22,
+     "y": 11.85,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_eu_soldier_po1",
+     "x": -15720.288,
+     "z": 3726.659,
+     "y": -4.14,
+     "rotY": 2.339
+    },
+    {
+     "npcId": "npc_eu_soldier_po2",
+     "x": -15742.149,
+     "z": 3709.509,
+     "y": -4.14,
+     "rotY": 2.339
+    },
+    {
+     "npcId": "npc_eu_soldier_cc1",
+     "x": -16277.889,
+     "z": 3452.502,
+     "y": 12.303,
+     "rotY": 0.785
+    },
+    {
+     "npcId": "npc_eu_guild",
+     "x": -15828.339,
+     "z": 3493.529,
+     "y": -21.594,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_ch_gacha_machine",
+     "x": -16061.364,
+     "z": 3777.891,
+     "y": 12.048,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_ch_gacha_operator",
+     "x": -15981.144,
+     "z": 3877.281,
+     "y": 12.561,
+     "rotY": 1.571
+    }
+   ],
+   "teleporterIds": [
+    "gate_eu",
+    "gate_npc_eu_advice",
+    "gate_npc_eu_advice2",
+    "gate_npc_eu_advice3",
+    "gate_npc_eu_ferry2"
+   ]
+  },
+  "samarkand_province": {
+   "id": "samarkand_province",
+   "name": "Samarkand",
+   "kind": "field",
+   "boundsU": {
+    "minX": -13536,
+    "maxX": -4032,
+    "minZ": 1152,
+    "maxZ": 4896
+   },
+   "playerSpawn": {
+    "x": -7735.5,
+    "z": 4245.15,
+    "y": 27
+   },
+   "respawnPoint": {
+    "x": -7735.5,
+    "z": 4245.15,
+    "y": 27
+   },
+   "gates": [],
+   "safeAreas": [
+    {
+     "x": -7778.747,
+     "z": 4335.621,
+     "rotY": 0,
+     "shape": {
+      "kind": "box",
+      "hx": 271.964,
+      "hz": 245.901,
+      "ox": 0,
+      "oz": 0
+     }
+    }
+   ],
+   "npcs": [
+    {
+     "npcId": "npc_am_flyship",
+     "x": -9278.413,
+     "z": 1450.635,
+     "y": 93.982,
+     "rotY": -1.501
+    },
+    {
+     "npcId": "npc_ca_smith",
+     "x": -7799.608,
+     "z": 4441.467,
+     "y": 27,
+     "rotY": 2.947
+    },
+    {
+     "npcId": "npc_ca_armor",
+     "x": -7869.283,
+     "z": 4373.742,
+     "y": 27,
+     "rotY": 1.969
+    },
+    {
+     "npcId": "npc_ca_potion",
+     "x": -7850.089,
+     "z": 4309.65,
+     "y": 27,
+     "rotY": 1.222
+    },
+    {
+     "npcId": "npc_ca_accessory",
+     "x": -7817.278,
+     "z": 4251.054,
+     "y": 27,
+     "rotY": 0.428
+    },
+    {
+     "npcId": "npc_ca_horse",
+     "x": -7673.016,
+     "z": 4357.001,
+     "y": 27,
+     "rotY": -1.77
+    },
+    {
+     "npcId": "npc_ca_special",
+     "x": -7650.429,
+     "z": 4305.487,
+     "y": 27,
+     "rotY": 0.018
+    },
+    {
+     "npcId": "npc_ca_merchant",
+     "x": -7675.546,
+     "z": 4305.494,
+     "y": 27,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_ca_warehouse",
+     "x": -7691.485,
+     "z": 4201.749,
+     "y": 27,
+     "rotY": -0.578
+    },
+    {
+     "npcId": "npc_ca_hunter",
+     "x": -7715.119,
+     "z": 4512.44,
+     "y": 27,
+     "rotY": -1.571
+    },
+    {
+     "npcId": "npc_ca_soldier_ea1",
+     "x": -7501.764,
+     "z": 4347.663,
+     "y": 27,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_ca_soldier_ea2",
+     "x": -7501.809,
+     "z": 4325.319,
+     "y": 27,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_ca_soldier_so1",
+     "x": -7784.602,
+     "z": 4064.735,
+     "y": 27,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_ca_soldier_so2",
+     "x": -7764.612,
+     "z": 4064.802,
+     "y": 27,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_ca_soldier_we1",
+     "x": -8046.522,
+     "z": 4348.538,
+     "y": 27,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_ca_soldier_we2",
+     "x": -8046.522,
+     "z": 4329.011,
+     "y": 27,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_ch_gacha_machine",
+     "x": -7638.946,
+     "z": 4306.314,
+     "y": 27,
+     "rotY": -0.017
+    },
+    {
+     "npcId": "npc_ch_gacha_operator",
+     "x": -7688.002,
+     "z": 4244.211,
+     "y": 27,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_ca_guild",
+     "x": -7755.181,
+     "z": 4456.557,
+     "y": 27,
+     "rotY": -1.588
+    }
+   ],
+   "teleporterIds": [
+    "gate_ca",
+    "gate_npc_am_ferry1",
+    "gate_npc_am_ferry2",
+    "gate_npc_ca_flyship",
+    "gate_npc_ca_tunnel_no",
+    "gate_npc_ca_tunnel_so"
+   ]
+  },
+  "jangan_world_deprecated": {
+   "id": "jangan_world_deprecated",
+   "name": "Jangan",
+   "kind": "field",
+   "boundsU": {
+    "minX": -2736,
+    "maxX": 2736,
+    "minZ": -1728,
+    "maxZ": 1728
+   },
+   "playerSpawn": {
+    "x": 780,
+    "z": 208
+   },
+   "respawnPoint": {
+    "x": 780,
+    "z": 208
+   },
+   "gates": [],
+   "safeAreas": [
+    {
+     "x": 675.584,
+     "z": 601.76,
+     "rotY": 0,
+     "shape": {
+      "kind": "box",
+      "hx": 527.516,
+      "hz": 546.493,
+      "ox": 0,
+      "oz": 0
+     }
+    }
+   ],
+   "npcs": [
+    {
+     "npcId": "npc_ch_smith",
+     "x": 769.909,
+     "z": 211.005,
+     "rotY": -0.237
+    },
+    {
+     "npcId": "npc_ch_armor",
+     "x": 769.825,
+     "z": 162.784,
+     "rotY": -0.211
+    },
+    {
+     "npcId": "npc_merchant_wang",
+     "x": 957.612,
+     "z": 211.093,
+     "rotY": -0.625
+    },
+    {
+     "npcId": "npc_ch_accessory",
+     "x": 968.782,
+     "z": 161.728,
+     "rotY": -1.588
+    },
+    {
+     "npcId": "npc_ch_warehouse",
+     "x": 867.12,
+     "z": 148.369,
+     "y": -4.864,
+     "rotY": -0.4
+    }
+   ],
+   "teleporterIds": [
+    "gate_ch",
+    "gate_npc_ch_ferry",
+    "gate_npc_ch_ferry2"
+   ]
+  },
+  "donwhang_deprecated": {
+   "id": "donwhang_deprecated",
+   "name": "Donwhang",
+   "kind": "field",
+   "boundsU": {
+    "minX": -2016,
+    "maxX": 2016,
+    "minZ": -1584,
+    "maxZ": 1584
+   },
+   "playerSpawn": {
+    "x": -406,
+    "z": 320
+   },
+   "respawnPoint": {
+    "x": -406,
+    "z": 320
+   },
+   "gates": [],
+   "safeAreas": [
+    {
+     "x": -554.696,
+     "z": 365.834,
+     "rotY": 0,
+     "shape": {
+      "kind": "box",
+      "hx": 232.361,
+      "hz": 178.975,
+      "ox": 0,
+      "oz": 0
+     }
+    }
+   ],
+   "npcs": [
+    {
+     "npcId": "npc_wc_smith",
+     "x": -396.346,
+     "z": 326.655,
+     "y": -16,
+     "rotY": -1.328
+    },
+    {
+     "npcId": "npc_wc_armor",
+     "x": -396.537,
+     "z": 279.207,
+     "y": -15.901,
+     "rotY": -1.07
+    },
+    {
+     "npcId": "npc_wc_potion",
+     "x": -486.413,
+     "z": 314.245,
+     "y": -15.969,
+     "rotY": -0.924
+    },
+    {
+     "npcId": "npc_wc_accessory",
+     "x": -492.121,
+     "z": 254.682,
+     "y": -15.642,
+     "rotY": 1.571
+    },
+    {
+     "npcId": "npc_wc_warehouse",
+     "x": -386.947,
+     "z": 248.526,
+     "y": -15.871,
+     "rotY": -0.961
+    }
+   ],
+   "teleporterIds": [
+    "gate_npc_wc_ferry",
+    "gate_npc_wc_ferry2",
+    "gate_wc"
+   ]
+  },
+  "zone_city": {
+   "id": "zone_city",
+   "name": "Donggu City",
+   "kind": "safe",
+   "boundsU": {
+    "minX": -80,
+    "maxX": 80,
+    "minZ": -80,
+    "maxZ": 80
+   },
+   "playerSpawn": {
+    "x": 0,
+    "z": -6
+   },
+   "respawnPoint": {
+    "x": 0,
+    "z": -6
+   },
+   "gates": [
+    {
+     "id": "gate_city_north",
+     "x": 0,
+     "z": 76,
+     "radiusU": 4,
+     "toZone": "zone_field",
+     "toPos": {
+      "x": 0,
+      "z": -184
+     }
+    }
+   ],
+   "safeAreas": [],
+   "npcs": [
+    {
+     "npcId": "npc_merchant_wang",
+     "x": 12,
+     "z": 4,
+     "rotY": 3.6
+    }
+   ],
+   "teleporterIds": []
+  },
+  "zone_field": {
+   "id": "zone_field",
+   "name": "Donggu Plains",
+   "kind": "field",
+   "boundsU": {
+    "minX": -200,
+    "maxX": 200,
+    "minZ": -200,
+    "maxZ": 200
+   },
+   "playerSpawn": {
+    "x": 0,
+    "z": -184
+   },
+   "respawnPoint": {
+    "x": 0,
+    "z": -184
+   },
+   "gates": [
+    {
+     "id": "gate_field_south",
+     "x": 0,
+     "z": -190,
+     "radiusU": 4,
+     "toZone": "zone_city",
+     "toPos": {
+      "x": 0,
+      "z": 70
+     }
+    }
+   ],
+   "safeAreas": [],
+   "npcs": [],
+   "teleporterIds": []
+  },
+  "zone_hills_test": {
+   "id": "zone_hills_test",
+   "name": "Hills Test",
+   "kind": "field",
+   "boundsU": {
+    "minX": -100,
+    "maxX": 100,
+    "minZ": -100,
+    "maxZ": 100
+   },
+   "playerSpawn": {
+    "x": 0,
+    "z": -60
+   },
+   "respawnPoint": {
+    "x": 0,
+    "z": -60
+   },
+   "gates": [],
+   "safeAreas": [],
+   "npcs": [],
+   "teleporterIds": []
+  }
+ }
+}

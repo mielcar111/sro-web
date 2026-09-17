@@ -1,0 +1,360 @@
+{
+ "weapons": {
+  "sword": {
+   "code": "ITEM_CH_SWORD_01_A",
+   "id": 71
+  },
+  "blade": {
+   "code": "ITEM_CH_BLADE_01_A",
+   "id": 107
+  },
+  "glavie": {
+   "code": "ITEM_CH_TBLADE_01_A",
+   "id": 179
+  },
+  "spear": {
+   "code": "ITEM_CH_SPEAR_01_A",
+   "id": 143
+  },
+  "bow": {
+   "code": "ITEM_CH_BOW_01_A",
+   "id": 215
+  },
+  "eu_sword": {
+   "code": "ITEM_EU_SWORD_01_A",
+   "id": 10933
+  },
+  "eu_tsword": {
+   "code": "ITEM_EU_TSWORD_01_A",
+   "id": 10969
+  },
+  "eu_axe": {
+   "code": "ITEM_EU_AXE_01_A",
+   "id": 11005
+  },
+  "eu_dagger": {
+   "code": "ITEM_EU_DAGGER_01_A",
+   "id": 10897
+  },
+  "eu_crossbow": {
+   "code": "ITEM_EU_CROSSBOW_01_A",
+   "id": 11041
+  },
+  "eu_darkstaff": {
+   "code": "ITEM_EU_DARKSTAFF_01_A",
+   "id": 11077
+  },
+  "eu_tstaff": {
+   "code": "ITEM_EU_TSTAFF_01_A",
+   "id": 11113
+  },
+  "eu_staff": {
+   "code": "ITEM_EU_STAFF_01_A",
+   "id": 11185
+  },
+  "eu_harp": {
+   "code": "ITEM_EU_HARP_01_A",
+   "id": 11149
+  }
+ },
+ "shields": {
+  "chinese": {
+   "code": "ITEM_CH_SHIELD_01_A",
+   "id": 251
+  },
+  "european": {
+   "code": "ITEM_EU_SHIELD_01_A",
+   "id": 11545
+  }
+ },
+ "armor": {
+  "chinese|male|heavy|head": {
+   "code": "ITEM_CH_M_HEAVY_01_HA_A",
+   "id": 287
+  },
+  "chinese|male|heavy|shoulder": {
+   "code": "ITEM_CH_M_HEAVY_01_SA_A",
+   "id": 359
+  },
+  "chinese|male|heavy|chest": {
+   "code": "ITEM_CH_M_HEAVY_01_BA_A",
+   "id": 395
+  },
+  "chinese|male|heavy|pants": {
+   "code": "ITEM_CH_M_HEAVY_01_LA_A",
+   "id": 431
+  },
+  "chinese|male|heavy|gloves": {
+   "code": "ITEM_CH_M_HEAVY_01_AA_A",
+   "id": 467
+  },
+  "chinese|male|heavy|boots": {
+   "code": "ITEM_CH_M_HEAVY_01_FA_A",
+   "id": 503
+  },
+  "chinese|male|light|head": {
+   "code": "ITEM_CH_M_LIGHT_01_HA_A",
+   "id": 539
+  },
+  "chinese|male|light|shoulder": {
+   "code": "ITEM_CH_M_LIGHT_01_SA_A",
+   "id": 611
+  },
+  "chinese|male|light|chest": {
+   "code": "ITEM_CH_M_LIGHT_01_BA_A",
+   "id": 647
+  },
+  "chinese|male|light|pants": {
+   "code": "ITEM_CH_M_LIGHT_01_LA_A",
+   "id": 683
+  },
+  "chinese|male|light|gloves": {
+   "code": "ITEM_CH_M_LIGHT_01_AA_A",
+   "id": 719
+  },
+  "chinese|male|light|boots": {
+   "code": "ITEM_CH_M_LIGHT_01_FA_A",
+   "id": 755
+  },
+  "chinese|male|clothes|head": {
+   "code": "ITEM_CH_M_CLOTHES_01_HA_A",
+   "id": 791
+  },
+  "chinese|male|clothes|shoulder": {
+   "code": "ITEM_CH_M_CLOTHES_01_SA_A",
+   "id": 863
+  },
+  "chinese|male|clothes|chest": {
+   "code": "ITEM_CH_M_CLOTHES_01_BA_A",
+   "id": 899
+  },
+  "chinese|male|clothes|pants": {
+   "code": "ITEM_CH_M_CLOTHES_01_LA_A",
+   "id": 935
+  },
+  "chinese|male|clothes|gloves": {
+   "code": "ITEM_CH_M_CLOTHES_01_AA_A",
+   "id": 971
+  },
+  "chinese|male|clothes|boots": {
+   "code": "ITEM_CH_M_CLOTHES_01_FA_A",
+   "id": 1007
+  },
+  "chinese|female|heavy|head": {
+   "code": "ITEM_CH_W_HEAVY_01_HA_A",
+   "id": 1043
+  },
+  "chinese|female|heavy|shoulder": {
+   "code": "ITEM_CH_W_HEAVY_01_SA_A",
+   "id": 1115
+  },
+  "chinese|female|heavy|chest": {
+   "code": "ITEM_CH_W_HEAVY_01_BA_A",
+   "id": 1151
+  },
+  "chinese|female|heavy|pants": {
+   "code": "ITEM_CH_W_HEAVY_01_LA_A",
+   "id": 1187
+  },
+  "chinese|female|heavy|gloves": {
+   "code": "ITEM_CH_W_HEAVY_01_AA_A",
+   "id": 1223
+  },
+  "chinese|female|heavy|boots": {
+   "code": "ITEM_CH_W_HEAVY_01_FA_A",
+   "id": 1259
+  },
+  "chinese|female|light|head": {
+   "code": "ITEM_CH_W_LIGHT_01_HA_A",
+   "id": 1295
+  },
+  "chinese|female|light|shoulder": {
+   "code": "ITEM_CH_W_LIGHT_01_SA_A",
+   "id": 1367
+  },
+  "chinese|female|light|chest": {
+   "code": "ITEM_CH_W_LIGHT_01_BA_A",
+   "id": 1403
+  },
+  "chinese|female|light|pants": {
+   "code": "ITEM_CH_W_LIGHT_01_LA_A",
+   "id": 1439
+  },
+  "chinese|female|light|gloves": {
+   "code": "ITEM_CH_W_LIGHT_01_AA_A",
+   "id": 1475
+  },
+  "chinese|female|light|boots": {
+   "code": "ITEM_CH_W_LIGHT_01_FA_A",
+   "id": 1511
+  },
+  "chinese|female|clothes|head": {
+   "code": "ITEM_CH_W_CLOTHES_01_HA_A",
+   "id": 1547
+  },
+  "chinese|female|clothes|shoulder": {
+   "code": "ITEM_CH_W_CLOTHES_01_SA_A",
+   "id": 1619
+  },
+  "chinese|female|clothes|chest": {
+   "code": "ITEM_CH_W_CLOTHES_01_BA_A",
+   "id": 1655
+  },
+  "chinese|female|clothes|pants": {
+   "code": "ITEM_CH_W_CLOTHES_01_LA_A",
+   "id": 1691
+  },
+  "chinese|female|clothes|gloves": {
+   "code": "ITEM_CH_W_CLOTHES_01_AA_A",
+   "id": 1727
+  },
+  "chinese|female|clothes|boots": {
+   "code": "ITEM_CH_W_CLOTHES_01_FA_A",
+   "id": 1763
+  },
+  "european|male|heavy|head": {
+   "code": "ITEM_EU_M_HEAVY_01_HA_A",
+   "id": 11635
+  },
+  "european|male|heavy|shoulder": {
+   "code": "ITEM_EU_M_HEAVY_01_SA_A",
+   "id": 11707
+  },
+  "european|male|heavy|chest": {
+   "code": "ITEM_EU_M_HEAVY_01_BA_A",
+   "id": 11743
+  },
+  "european|male|heavy|pants": {
+   "code": "ITEM_EU_M_HEAVY_01_LA_A",
+   "id": 11779
+  },
+  "european|male|heavy|gloves": {
+   "code": "ITEM_EU_M_HEAVY_01_AA_A",
+   "id": 11815
+  },
+  "european|male|heavy|boots": {
+   "code": "ITEM_EU_M_HEAVY_01_FA_A",
+   "id": 11851
+  },
+  "european|male|light|head": {
+   "code": "ITEM_EU_M_LIGHT_01_HA_A",
+   "id": 11887
+  },
+  "european|male|light|shoulder": {
+   "code": "ITEM_EU_M_LIGHT_01_SA_A",
+   "id": 11959
+  },
+  "european|male|light|chest": {
+   "code": "ITEM_EU_M_LIGHT_01_BA_A",
+   "id": 11995
+  },
+  "european|male|light|pants": {
+   "code": "ITEM_EU_M_LIGHT_01_LA_A",
+   "id": 12031
+  },
+  "european|male|light|gloves": {
+   "code": "ITEM_EU_M_LIGHT_01_AA_A",
+   "id": 12067
+  },
+  "european|male|light|boots": {
+   "code": "ITEM_EU_M_LIGHT_01_FA_A",
+   "id": 12103
+  },
+  "european|male|clothes|head": {
+   "code": "ITEM_EU_M_CLOTHES_01_HA_A",
+   "id": 12139
+  },
+  "european|male|clothes|shoulder": {
+   "code": "ITEM_EU_M_CLOTHES_01_SA_A",
+   "id": 12211
+  },
+  "european|male|clothes|chest": {
+   "code": "ITEM_EU_M_CLOTHES_01_BA_A",
+   "id": 12247
+  },
+  "european|male|clothes|pants": {
+   "code": "ITEM_EU_M_CLOTHES_01_LA_A",
+   "id": 12283
+  },
+  "european|male|clothes|gloves": {
+   "code": "ITEM_EU_M_CLOTHES_01_AA_A",
+   "id": 12319
+  },
+  "european|male|clothes|boots": {
+   "code": "ITEM_EU_M_CLOTHES_01_FA_A",
+   "id": 12355
+  },
+  "european|female|heavy|head": {
+   "code": "ITEM_EU_W_HEAVY_01_HA_A",
+   "id": 13147
+  },
+  "european|female|heavy|shoulder": {
+   "code": "ITEM_EU_W_HEAVY_01_SA_A",
+   "id": 13219
+  },
+  "european|female|heavy|chest": {
+   "code": "ITEM_EU_W_HEAVY_01_BA_A",
+   "id": 13255
+  },
+  "european|female|heavy|pants": {
+   "code": "ITEM_EU_W_HEAVY_01_LA_A",
+   "id": 13291
+  },
+  "european|female|heavy|gloves": {
+   "code": "ITEM_EU_W_HEAVY_01_AA_A",
+   "id": 13327
+  },
+  "european|female|heavy|boots": {
+   "code": "ITEM_EU_W_HEAVY_01_FA_A",
+   "id": 13363
+  },
+  "european|female|light|head": {
+   "code": "ITEM_EU_W_LIGHT_01_HA_A",
+   "id": 13399
+  },
+  "european|female|light|shoulder": {
+   "code": "ITEM_EU_W_LIGHT_01_SA_A",
+   "id": 13471
+  },
+  "european|female|light|chest": {
+   "code": "ITEM_EU_W_LIGHT_01_BA_A",
+   "id": 13507
+  },
+  "european|female|light|pants": {
+   "code": "ITEM_EU_W_LIGHT_01_LA_A",
+   "id": 13543
+  },
+  "european|female|light|gloves": {
+   "code": "ITEM_EU_W_LIGHT_01_AA_A",
+   "id": 13579
+  },
+  "european|female|light|boots": {
+   "code": "ITEM_EU_W_LIGHT_01_FA_A",
+   "id": 13615
+  },
+  "european|female|clothes|head": {
+   "code": "ITEM_EU_W_CLOTHES_01_HA_A",
+   "id": 13651
+  },
+  "european|female|clothes|shoulder": {
+   "code": "ITEM_EU_W_CLOTHES_01_SA_A",
+   "id": 13723
+  },
+  "european|female|clothes|chest": {
+   "code": "ITEM_EU_W_CLOTHES_01_BA_A",
+   "id": 13759
+  },
+  "european|female|clothes|pants": {
+   "code": "ITEM_EU_W_CLOTHES_01_LA_A",
+   "id": 13795
+  },
+  "european|female|clothes|gloves": {
+   "code": "ITEM_EU_W_CLOTHES_01_AA_A",
+   "id": 13831
+  },
+  "european|female|clothes|boots": {
+   "code": "ITEM_EU_W_CLOTHES_01_FA_A",
+   "id": 13867
+  }
+ }
+}

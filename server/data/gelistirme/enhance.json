@@ -1,0 +1,24 @@
+{
+ "$comment": "Alchemy + durability tunables (M22). successByPlus keyed by the item's CURRENT plus — values follow the community-reversed vSRO rates (retail rates were hardcoded in Joymax's server binary, never in data files). failurePolicy 'reset' = authentic old-SRO: a failed fuse drops the item back to +0 (elixir always consumed). Lucky Powder multiplies the chance by powderBonusMult (capped at 100%) and its tier must match the gear's degree. Durability drops probabilistically (weapon per attack/skill strike, armor per hit taken, shield per block); at 0 the piece contributes no stats until repaired. The wear chances are EXPLICIT NON-PARITY POLICY: the original wear trigger/probability is [UNRESOLVED] in .decompilation/silkroad-item-durability-calculation.md §8 — tuned 2026-08 (BR-0052) so a botting caster drains a d8 weapon in hours, not minutes. Repair gold uses the client-proven per-item CostRepair/CostRevive quote (same doc §6), not a flat per-point price.",
+ "maxPlus": 10,
+ "successByPlus": {
+  "0": 0.9,
+  "1": 0.75,
+  "2": 0.6,
+  "3": 0.5,
+  "4": 0.4,
+  "5": 0.32,
+  "6": 0.25,
+  "7": 0.2,
+  "8": 0.16,
+  "9": 0.13
+ },
+ "powderBonusMult": 1.5,
+ "failurePolicy": "reset",
+ "powderTierMustMatchDegree": true,
+ "durability": {
+  "weaponLossChancePerAttack": 0.01,
+  "armorLossChancePerHitTaken": 0.0067,
+  "shieldLossChancePerBlock": 0.0167
+ }
+}

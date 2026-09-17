@@ -1,0 +1,93 @@
+{
+ "$comment": "Global gameplay tunables. All hand-editable.",
+ "tickHz": 10,
+ "playerMoveSpeedU": 7.5,
+ "entityRadiusU": 0.5,
+ "slopeLimitUpPerU": 1.2,
+ "slopeLimitDownPerU": 1.2,
+ "pickupRangeU": 3,
+ "npcInteractRangeU": 25,
+ "targetSearchRangeU": 75,
+ "pickupSearchRangeU": 50,
+ "lootOwnerLockMs": 15000,
+ "lootDespawnMs": 60000,
+ "xpRate": 25,
+ "spRate": 40,
+ "professionXpRate": 1,
+ "petXpRate": 1,
+ "goldRate": 30,
+ "itemDropRate": 1,
+ "rareDropRate": 1,
+ "deathXpPenaltyPct": 0,
+ "respawnHpPct": 0.5,
+ "returnChannelMs": 0,
+ "tactionChannelMs": 5000,
+ "masteryTotalCapPerLevel": {
+  "chinese": 3,
+  "european": 2
+ },
+ "bagSlots": 32,
+ "chatMaxLen": 200,
+ "linkdeadGraceMs": 15000,
+ "spawnSafeTimeMs": 20000,
+ "corpseDespawnMs": 6000,
+ "partyMaxSize": 8,
+ "partyShareRangeU": 150,
+ "partyXpBonusPerMember": 0.1,
+ "xpShareMode": "party",
+ "partyInviteTimeoutMs": 30000,
+ "ltpMinMembers": 4,
+ "ltpMaxMembers": 4,
+ "ltpXpBonusPct": 10,
+ "partyMatchTitleMaxLen": 40,
+ "petDetectRadiusU": 50,
+ "petCatchupU": 45,
+ "petFollowU": 2.5,
+ "petFollowStartU": 8,
+ "petPickMs": 500,
+ "petCombatLockoutMs": 20000,
+ "petSummonReqLevel": 5,
+ "growthPets": {
+  "hgpMax": 10000,
+  "hgpDrainPerSec": 1,
+  "hgpLowFrac": 0.3,
+  "xpShareFrac": 1,
+  "reviveHpFrac": 0.25
+ },
+ "referral": {
+  "rewardJade": 100,
+  "requiredLevel": 10
+ },
+ "social": {
+  "rewardJade": {
+   "discord": 50,
+   "reddit": 50
+  },
+  "requiredLevel": 10,
+  "minAccountAgeDays": 7,
+  "requirePlatformVerified": true,
+  "requireDiscordMfa": false,
+  "recheckCooldownSec": 60,
+  "recheckDailyCap": 20
+ },
+ "carrier": {
+  "baseSlots": 12,
+  "slotsPerExpansion": 4,
+  "flightSpeedU": 40,
+  "cooldownMs": 3600000,
+  "landedLingerMs": 600000,
+  "landThresholdU": 10,
+  "interactRangeU": 25,
+  "orbByZone": {
+   "jangan_province": "gate_ch",
+   "donwhang_province": "gate_wc",
+   "hotan_province": "gate_kt",
+   "europe_province": "gate_eu",
+   "samarkand_province": "gate_ca"
+  }
+ },
+ "pvp": {
+  "enabled": false
+ },
+ "$kaynak": "referans site istemci paketi: Fst nesnesi = gameConfig = \"config/game-config.json\" (IY() icinde PY(vat, Fst, \"config/game-config.json\"))"
+}

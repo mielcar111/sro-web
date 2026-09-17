@@ -1,0 +1,3 @@
+## Changed
+
+- **Earth, Cold, Fire and Lightning Spirit empower the whole spell** — the Spirit percentage now multiplies the full strength of the spell, the skill's own damage included, exactly as the original computes it. In the last update the bonus applied only to your magical attack power, which left every empowered spell a step short. Ground Charge, Earth Shock, Ground Rave, Earth Quake, Ice Bolt, Snow Wind, Frozen Spear, Blizzard, Fire Bolt, Fire Blow, Meteor, Salamander Blow, Lightning Bolt, Charged Wind, Chain Lightning and Charged Squall all hit noticeably harder again — around a quarter more at high Spirit ranks.

@@ -1,0 +1,808 @@
+{
+ "$kaynak": "istemci paketi: r6 tablosu (+ yayilimlar)",
+ "$not": "modelKey -> assets/models/<file>.glb. Naif \"mob_ kirp\" kurali YANLIS. | n6(anahtar,dosya,yukseklik) CAGRILARI da tabloyu dolduruyor - sadece nesne degismezi taramak YETMEZ, NPC kayitlari bu yolla giriyor.",
+ "models": {
+  "mob_mangyang": {
+   "file": "mangnyang",
+   "scale": 0.15,
+   "height": 1.4
+  },
+  "mob_bigeyeghost": {
+   "file": "bigeyeghost",
+   "scale": 0.15,
+   "height": 1.8
+  },
+  "mob_gyo": {
+   "file": "gyo",
+   "scale": 0.15,
+   "height": 1.6
+  },
+  "mob_waterghost": {
+   "file": "waterghost",
+   "scale": 0.15,
+   "height": 2
+  },
+  "mob_stoneghost": {
+   "file": "stoneghost",
+   "scale": 0.15,
+   "height": 2.4
+  },
+  "mob_tombstone": {
+   "file": "tombstone",
+   "scale": 0.15,
+   "height": 2.2,
+   "dieFile": "tombstone_die"
+  },
+  "mob_yeoha": {
+   "file": "yeoha",
+   "scale": 0.15,
+   "height": 1.7
+  },
+  "mob_banditarcher": {
+   "file": "banditarcher",
+   "scale": 0.15,
+   "height": 1.8
+  },
+  "mob_tiger": {
+   "file": "tiger",
+   "scale": 0.15,
+   "height": 1.5
+  },
+  "mob_bandit": {
+   "file": "bandit",
+   "scale": 0.15,
+   "height": 1.8
+  },
+  "mob_archer": {
+   "file": "archer",
+   "scale": 0.15,
+   "height": 3.9
+  },
+  "mob_archer_clon": {
+   "file": "archer_clon",
+   "scale": 0.15,
+   "height": 3.9
+  },
+  "mob_bandit_clon": {
+   "file": "bandit_clon",
+   "scale": 0.15,
+   "height": 2.2
+  },
+  "mob_banditarcher_clon": {
+   "file": "banditarcher_clon",
+   "scale": 0.15,
+   "height": 2.2
+  },
+  "mob_baroi": {
+   "file": "baroi",
+   "scale": 0.15,
+   "height": 3.9
+  },
+  "mob_baroi_clon": {
+   "file": "baroi_clon",
+   "scale": 0.15,
+   "height": 3.9
+  },
+  "mob_bartis": {
+   "file": "bartis",
+   "scale": 0.15,
+   "height": 4.3
+  },
+  "mob_bartis_clon": {
+   "file": "bartis_clon",
+   "scale": 0.15,
+   "height": 4.3
+  },
+  "mob_bigeyeghost_clon": {
+   "file": "bigeyeghost_clon",
+   "scale": 0.15,
+   "height": 2.3
+  },
+  "mob_blackrobber": {
+   "file": "blackrobber",
+   "scale": 0.15,
+   "height": 3.7
+  },
+  "mob_blackrobber_clon": {
+   "file": "blackrobber_clon",
+   "scale": 0.15,
+   "height": 3.7
+  },
+  "mob_blackrobberarcher": {
+   "file": "blackrobberarcher",
+   "scale": 0.15,
+   "height": 3.2
+  },
+  "mob_blackrobberarcher_clon": {
+   "file": "blackrobberarcher_clon",
+   "scale": 0.15,
+   "height": 3.2
+  },
+  "mob_bonegeneral": {
+   "file": "bonegeneral",
+   "scale": 0.15,
+   "height": 5.6
+  },
+  "mob_bonegeneral_clon": {
+   "file": "bonegeneral_clon",
+   "scale": 0.15,
+   "height": 5.6
+  },
+  "mob_bonehunter": {
+   "file": "bonehunter",
+   "scale": 0.15,
+   "height": 3.7,
+   "dieFile": "bonehunter_die"
+  },
+  "mob_bonehunter_clon": {
+   "file": "bonehunter_clon",
+   "scale": 0.15,
+   "height": 3.7,
+   "dieFile": "bonehunter_die"
+  },
+  "mob_bonelord": {
+   "file": "bonelord",
+   "scale": 0.15,
+   "height": 12.9
+  },
+  "mob_bonemage": {
+   "file": "bonemage",
+   "scale": 0.15,
+   "height": 7.4,
+   "dieFile": "bonemage_die"
+  },
+  "mob_bonemage_clon": {
+   "file": "bonemage_clon",
+   "scale": 0.15,
+   "height": 7.4,
+   "dieFile": "bonemage_die"
+  },
+  "mob_bonesoldier": {
+   "file": "bonesoldier",
+   "scale": 0.15,
+   "height": 3.3,
+   "dieFile": "bonesoldier_die"
+  },
+  "mob_bonesoldier_clon": {
+   "file": "bonesoldier_clon",
+   "scale": 0.15,
+   "height": 3.3,
+   "dieFile": "bonesoldier_die"
+  },
+  "mob_bunwang": {
+   "file": "bunwang",
+   "scale": 0.15,
+   "height": 2.9
+  },
+  "mob_bunwang_clon": {
+   "file": "bunwang_clon",
+   "scale": 0.15,
+   "height": 2.9
+  },
+  "mob_chakji": {
+   "file": "chakji",
+   "scale": 0.15,
+   "height": 3.5
+  },
+  "mob_chakji_clon": {
+   "file": "chakji_clon",
+   "scale": 0.15,
+   "height": 3.5
+  },
+  "mob_crab": {
+   "file": "crab",
+   "scale": 0.15,
+   "height": 4.2
+  },
+  "mob_crab_clon": {
+   "file": "crab_clon",
+   "scale": 0.15,
+   "height": 4.2
+  },
+  "mob_deathkara": {
+   "file": "deathkara",
+   "scale": 0.15,
+   "height": 2.1
+  },
+  "mob_deathkara_clon": {
+   "file": "deathkara_clon",
+   "scale": 0.15,
+   "height": 2.1
+  },
+  "mob_demonhorse": {
+   "file": "demonhorse",
+   "scale": 0.15,
+   "height": 3.3
+  },
+  "mob_demonhorse_clon": {
+   "file": "demonhorse_clon",
+   "scale": 0.15,
+   "height": 3.3
+  },
+  "mob_deserttrunkz": {
+   "file": "deserttrunkz",
+   "scale": 0.15,
+   "height": 3.9
+  },
+  "mob_deserttrunkz_clon": {
+   "file": "deserttrunkz_clon",
+   "scale": 0.15,
+   "height": 3.9
+  },
+  "mob_deserttrunkz_clon2": {
+   "file": "deserttrunkz_clon2",
+   "scale": 0.15,
+   "height": 3.9
+  },
+  "mob_devilbug": {
+   "file": "devilbug",
+   "scale": 0.15,
+   "height": 3.6
+  },
+  "mob_devileye": {
+   "file": "devileye",
+   "scale": 0.15,
+   "height": 1.8
+  },
+  "mob_devileye_clon": {
+   "file": "devileye_clon",
+   "scale": 0.15,
+   "height": 1.8
+  },
+  "mob_dowb": {
+   "file": "dowb",
+   "scale": 0.15,
+   "height": 4.6
+  },
+  "mob_dowb_clon": {
+   "file": "dowb_clon",
+   "scale": 0.15,
+   "height": 4.6
+  },
+  "mob_earthghost": {
+   "file": "earthghost",
+   "scale": 0.15,
+   "height": 1.7
+  },
+  "mob_earthghost_clon": {
+   "file": "earthghost_clon",
+   "scale": 0.15,
+   "height": 1.7
+  },
+  "mob_earthking": {
+   "file": "earthking",
+   "scale": 0.15,
+   "height": 3.1
+  },
+  "mob_earthking_clon": {
+   "file": "earthking_clon",
+   "scale": 0.15,
+   "height": 3.1
+  },
+  "mob_edenp": {
+   "file": "edenp",
+   "scale": 0.15,
+   "height": 2.3
+  },
+  "mob_edenp_clon": {
+   "file": "edenp_clon",
+   "scale": 0.15,
+   "height": 2.3
+  },
+  "mob_edimmu": {
+   "file": "edimmu",
+   "scale": 0.15,
+   "height": 3.7
+  },
+  "mob_edimmu_clon": {
+   "file": "edimmu_clon",
+   "scale": 0.15,
+   "height": 3.7
+  },
+  "mob_ghostbug": {
+   "file": "ghostbug",
+   "scale": 0.12,
+   "height": 3.1
+  },
+  "mob_golem": {
+   "file": "golem",
+   "scale": 0.15,
+   "height": 5.5
+  },
+  "mob_golem_clon": {
+   "file": "golem_clon",
+   "scale": 0.15,
+   "height": 5.5
+  },
+  "mob_gunpowderghost": {
+   "file": "gunpowderghost",
+   "scale": 0.15,
+   "height": 1.7
+  },
+  "mob_gunpowderghost_clon": {
+   "file": "gunpowderghost_clon",
+   "scale": 0.15,
+   "height": 1.7
+  },
+  "mob_gwhitespider": {
+   "file": "gwhitespider",
+   "scale": 0.15,
+   "height": 3.6
+  },
+  "mob_gwhitespider_clon": {
+   "file": "gwhitespider_clon",
+   "scale": 0.15,
+   "height": 3.6
+  },
+  "mob_gyo_clon": {
+   "file": "gyo_clon",
+   "scale": 0.15,
+   "height": 2.2
+  },
+  "mob_hunarcher": {
+   "file": "hunarcher",
+   "scale": 0.15,
+   "height": 4.4
+  },
+  "mob_hunarcher_clon": {
+   "file": "hunarcher_clon",
+   "scale": 0.15,
+   "height": 4.4
+  },
+  "mob_hunlancer": {
+   "file": "hunlancer",
+   "scale": 0.15,
+   "height": 4.4
+  },
+  "mob_hunlancer_clon": {
+   "file": "hunlancer_clon",
+   "scale": 0.15,
+   "height": 4.4
+  },
+  "mob_hyeongcheon": {
+   "file": "hyeongcheon",
+   "scale": 0.15,
+   "height": 4.3
+  },
+  "mob_hyeongcheon_clon": {
+   "file": "hyeongcheon_clon",
+   "scale": 0.12,
+   "height": 3.5
+  },
+  "mob_hyungno": {
+   "file": "hyungno",
+   "scale": 0.15,
+   "height": 3.6
+  },
+  "mob_hyungno_clon": {
+   "file": "hyungno_clon",
+   "scale": 0.15,
+   "height": 3.6
+  },
+  "mob_ishade": {
+   "file": "ishade",
+   "scale": 0.15,
+   "height": 5.4
+  },
+  "mob_ishade_clon": {
+   "file": "ishade_clon",
+   "scale": 0.15,
+   "height": 5.4
+  },
+  "mob_isyutaru": {
+   "file": "isyutaru",
+   "scale": 0.15,
+   "height": 7.3
+  },
+  "mob_ivy": {
+   "file": "ivy",
+   "scale": 0.15,
+   "height": 5.1
+  },
+  "mob_kerberos": {
+   "file": "kerberos",
+   "scale": 0.15,
+   "height": 10
+  },
+  "mob_kyklopess": {
+   "file": "kyklopess",
+   "scale": 0.15,
+   "height": 6.4
+  },
+  "mob_kyklopess_clon": {
+   "file": "kyklopess_clon",
+   "scale": 0.15,
+   "height": 6.4
+  },
+  "mob_kyklopess_clon2": {
+   "file": "kyklopess_clon2",
+   "scale": 0.15,
+   "height": 6.4
+  },
+  "mob_ladon": {
+   "file": "ladon",
+   "scale": 0.15,
+   "height": 5.5
+  },
+  "mob_ladon_clon": {
+   "file": "ladon_clon",
+   "scale": 0.15,
+   "height": 5.5
+  },
+  "mob_lion": {
+   "file": "lion",
+   "scale": 0.15,
+   "height": 3
+  },
+  "mob_lion_clon": {
+   "file": "lion_clon",
+   "scale": 0.15,
+   "height": 3
+  },
+  "mob_monkey": {
+   "file": "monkey",
+   "scale": 0.15,
+   "height": 2.9
+  },
+  "mob_monkey_clon": {
+   "file": "monkey_clon",
+   "scale": 0.15,
+   "height": 2.9
+  },
+  "mob_movoi": {
+   "file": "movoi",
+   "scale": 0.15,
+   "height": 2.7
+  },
+  "mob_movoi_clon": {
+   "file": "movoi_clon",
+   "scale": 0.15,
+   "height": 2.7
+  },
+  "mob_mujigi": {
+   "file": "mujigi",
+   "scale": 0.15,
+   "height": 7.4
+  },
+  "mob_mujigi_clon": {
+   "file": "mujigi_clon",
+   "scale": 0.15,
+   "height": 7.4
+  },
+  "mob_ong": {
+   "file": "ong",
+   "scale": 0.15,
+   "height": 5.3
+  },
+  "mob_ong_clon": {
+   "file": "ong_clon",
+   "scale": 0.15,
+   "height": 5.3
+  },
+  "mob_ong_clon2": {
+   "file": "ong_clon2",
+   "scale": 0.15,
+   "height": 5.3
+  },
+  "mob_penon_f": {
+   "file": "penon_f",
+   "scale": 0.15,
+   "height": 3.6,
+   "dieFile": "penon_f_die"
+  },
+  "mob_penon_w": {
+   "file": "penon_w",
+   "scale": 0.15,
+   "height": 3.6,
+   "dieFile": "penon_w_die"
+  },
+  "mob_peryton": {
+   "file": "peryton",
+   "scale": 0.15,
+   "height": 4.5
+  },
+  "mob_peryton_clon": {
+   "file": "peryton_clon",
+   "scale": 0.15,
+   "height": 4.5
+  },
+  "mob_planar": {
+   "file": "planar",
+   "scale": 0.15,
+   "height": 3.1,
+   "dieFile": "planar_die"
+  },
+  "mob_planar_clon": {
+   "file": "planar_clon",
+   "scale": 0.15,
+   "height": 3.1,
+   "dieFile": "planar_die"
+  },
+  "mob_punisher": {
+   "file": "punisher",
+   "scale": 0.15,
+   "height": 6.5
+  },
+  "mob_punisher_clon": {
+   "file": "punisher_clon",
+   "scale": 0.15,
+   "height": 6.5
+  },
+  "mob_redeyeghost": {
+   "file": "redeyeghost",
+   "scale": 0.15,
+   "height": 1.8
+  },
+  "mob_redeyeghost_clon": {
+   "file": "redeyeghost_clon",
+   "scale": 0.15,
+   "height": 1.8
+  },
+  "mob_redscorpion": {
+   "file": "redscorpion",
+   "scale": 0.15,
+   "height": 3.4
+  },
+  "mob_redscorpion_clon": {
+   "file": "redscorpion_clon",
+   "scale": 0.15,
+   "height": 3.4
+  },
+  "mob_rogue": {
+   "file": "rogue",
+   "scale": 0.15,
+   "height": 3
+  },
+  "mob_rogue_clon": {
+   "file": "rogue_clon",
+   "scale": 0.15,
+   "height": 3
+  },
+  "mob_scorpion": {
+   "file": "scorpion",
+   "scale": 0.15,
+   "height": 2.4
+  },
+  "mob_scorpion_clon": {
+   "file": "scorpion_clon",
+   "scale": 0.15,
+   "height": 2.4
+  },
+  "mob_siren": {
+   "file": "siren",
+   "scale": 0.15,
+   "height": 4.9
+  },
+  "mob_siren_clon": {
+   "file": "siren_clon",
+   "scale": 0.15,
+   "height": 4.9
+  },
+  "mob_soldier": {
+   "file": "soldier",
+   "scale": 0.15,
+   "height": 4.3
+  },
+  "mob_soldier_clon": {
+   "file": "soldier_clon",
+   "scale": 0.15,
+   "height": 4.3
+  },
+  "mob_spider": {
+   "file": "spider",
+   "scale": 0.15,
+   "height": 2.4
+  },
+  "mob_spider_clon": {
+   "file": "spider_clon",
+   "scale": 0.15,
+   "height": 2.4
+  },
+  "mob_stoneghost_clon": {
+   "file": "stoneghost_clon",
+   "scale": 0.15,
+   "height": 2.6
+  },
+  "mob_tiger_clon": {
+   "file": "tiger",
+   "scale": 0.12,
+   "height": 2.4
+  },
+  "mob_tigerwoman": {
+   "file": "tigerwoman",
+   "scale": 0.15,
+   "height": 3.2
+  },
+  "mob_tombstone_clon": {
+   "file": "tombstone_clon",
+   "scale": 0.15,
+   "height": 4.6,
+   "dieFile": "tombstone_die"
+  },
+  "mob_uruchi": {
+   "file": "uruchi",
+   "scale": 0.15,
+   "height": 6.5
+  },
+  "mob_waterghost_clon": {
+   "file": "waterghost_clon",
+   "scale": 0.15,
+   "height": 2.3
+  },
+  "mob_whitespider": {
+   "file": "whitespider",
+   "scale": 0.15,
+   "height": 2.4
+  },
+  "mob_whitespider_clon": {
+   "file": "whitespider_clon",
+   "scale": 0.15,
+   "height": 2.4
+  },
+  "mob_whitetiger": {
+   "file": "whitetiger",
+   "scale": 0.15,
+   "height": 3
+  },
+  "mob_whitetiger_clon": {
+   "file": "whitetiger_clon",
+   "scale": 0.15,
+   "height": 3
+  },
+  "mob_wolf": {
+   "file": "wolf",
+   "scale": 0.15,
+   "height": 3
+  },
+  "mob_wolf_clon": {
+   "file": "wolf_clon",
+   "scale": 0.15,
+   "height": 3
+  },
+  "mob_yeoha_clon": {
+   "file": "yeoha_clon",
+   "scale": 0.15,
+   "height": 3.2
+  },
+  "mob_yeowa": {
+   "file": "yeowa",
+   "scale": 0.15,
+   "height": 3.3
+  },
+  "mob_yeowa_clon": {
+   "file": "yeowa_clon",
+   "scale": 0.15,
+   "height": 3.3
+  },
+  "mob_yeti": {
+   "file": "yeti",
+   "scale": 0.15,
+   "height": 7.2
+  },
+  "mob_yeti_clon": {
+   "file": "yeti_clon",
+   "scale": 0.15,
+   "height": 7.2
+  },
+  "npc_ch_potion": {
+   "file": "chinashop_herbalistman",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "npc_ch_armor": {
+   "file": "chinashop_dignifiedgirl",
+   "scale": 0.15,
+   "height": 1.7,
+   "runSpeedU": 0
+  },
+  "npc_ch_smith": {
+   "file": "chinashop_smith",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "npc_ch_accessory": {
+   "file": "chinashop_accessoryshopgirl",
+   "scale": 0.15,
+   "height": 1.7,
+   "runSpeedU": 0
+  },
+  "npc_wc_potion": {
+   "file": "westchinashop_herbalistman",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "npc_wc_armor": {
+   "file": "westchinashop_armorshopgirl",
+   "scale": 0.15,
+   "height": 1.7,
+   "runSpeedU": 0
+  },
+  "npc_wc_smith": {
+   "file": "westchinashop_smith",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "npc_wc_accessory": {
+   "file": "westchinashop_accessoryshopgirl",
+   "scale": 0.15,
+   "height": 1.7,
+   "runSpeedU": 0
+  },
+  "npc_ch_warehouse": {
+   "file": "chinasystem_warehousekeeper",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "npc_wc_warehouse": {
+   "file": "westchinasystem_warehousekeeper",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "chinaetc_soldiereast2": {
+   "file": "chinaetc_soldiereast2",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "chinaetc_soldierpalace1": {
+   "file": "chinaetc_soldierpalace1",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "chinaetc_soldiersouth1": {
+   "file": "chinaetc_soldiersouth1",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "chinaetc_soldierwest1": {
+   "file": "chinaetc_soldierwest1",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "npc_ch_ferry": {
+   "file": "chinasystem_boatman1",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "npc_wc_ferry": {
+   "file": "westchinasystem_boatman1",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "npc_kt_ferry": {
+   "file": "khotansystem_turtleshipticketagent",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "EastEuropeQuest_Lipria": {
+   "file": "EastEuropeQuest_Lipria",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "AsiaMinor_Ferry1": {
+   "file": "AsiaMinor_Ferry1",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  },
+  "AsiaMinor_Ferry2": {
+   "file": "AsiaMinor_Ferry2",
+   "scale": 0.15,
+   "height": 1.8,
+   "runSpeedU": 0
+  }
+ }
+}

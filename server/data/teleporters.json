@@ -1,0 +1,1011 @@
+{
+ "$kaynak": "GERCEK/paket_veri/zones/<bolge>.json -> teleporters[] (birebir)",
+ "zones": {
+  "donwhang_deprecated": [
+   {
+    "id": "gate_npc_wc_ferry",
+    "name": "Ferry Ticket Seller Tayun",
+    "modelKey": "npc_wc_ferry",
+    "x": 1820,
+    "z": -212,
+    "y": 8.627,
+    "rotY": 0.976,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_ferry",
+      "label": "China East Ferry",
+      "toZone": "jangan_world_deprecated",
+      "toPos": {
+       "x": -1212,
+       "z": 219,
+       "y": 11.02
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_wc_ferry2",
+    "name": "Ferry Ticket Seller Hageuk",
+    "modelKey": "npc_wc_ferry",
+    "x": 424,
+    "z": -935,
+    "y": 5.66,
+    "rotY": 0.803,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_ferry2",
+      "label": "China West Ferry",
+      "toZone": "jangan_world_deprecated",
+      "toPos": {
+       "x": -2081.55,
+       "z": -97.95,
+       "y": 7.581
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_wc",
+    "name": "Donwhang Gate",
+    "modelKey": "portal_wcd",
+    "x": -431.655,
+    "z": 432.652,
+    "y": -16,
+    "rotY": 3.142,
+    "interactRangeU": 128,
+    "destinations": [
+     {
+      "id": "gate_ch",
+      "label": "Jangan",
+      "toZone": "jangan_world_deprecated",
+      "toPos": {
+       "x": 865.35,
+       "z": 205.35,
+       "y": -4.97
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "donwhang_province": [
+   {
+    "id": "gate_npc_wc_ferry",
+    "name": "Ferry Ticket Seller Tayun",
+    "modelKey": "npc_wc_ferry",
+    "x": 7580,
+    "z": 2524,
+    "y": 8.627,
+    "rotY": 0.976,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_ferry",
+      "label": "China East Ferry",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 7572,
+       "z": 1659,
+       "y": 21
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_wc_ferry2",
+    "name": "Ferry Ticket Seller Hageuk",
+    "modelKey": "npc_wc_ferry",
+    "x": 6184,
+    "z": 1801,
+    "y": 5.66,
+    "rotY": 0.803,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_ferry2",
+      "label": "China West Ferry",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 6702.45,
+       "z": 1342.05,
+       "y": 21
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_wc_ferry3",
+    "name": "Boat Ticket Seller Salmai",
+    "modelKey": "npc_wc_ferry",
+    "x": 2352.504,
+    "z": -25.822,
+    "y": 2.684,
+    "rotY": 1.17,
+    "destinations": [
+     {
+      "id": "gate_npc_kt_ferry2",
+      "label": "Hotan East Ferry",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": 1575.6,
+       "z": -76.2,
+       "y": -3.522
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_wc_ferry4",
+    "name": "Boat Ticket Seller Asa",
+    "modelKey": "npc_wc_ferry",
+    "x": 2345.388,
+    "z": -442.727,
+    "y": -3.846,
+    "rotY": 1.621,
+    "destinations": [
+     {
+      "id": "gate_npc_kt_ferry3",
+      "label": "Hotan South Ferry",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": 1651.95,
+       "z": -460.65,
+       "y": -5.665
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_wc",
+    "name": "Donwhang Gate",
+    "modelKey": "portal_wcd",
+    "x": 5328.345,
+    "z": 3168.652,
+    "y": -16,
+    "rotY": 3.142,
+    "interactRangeU": 128,
+    "destinations": [
+     {
+      "id": "gate_ch",
+      "label": "Jangan",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9649.35,
+       "z": 1645.35,
+       "y": -4.97
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_kt",
+      "label": "Hotan",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": 170.7,
+       "z": 22.95,
+       "y": 37.5
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "europe_province": [
+   {
+    "id": "gate_eu",
+    "name": "Constantinople Gate",
+    "modelKey": "portal_eu",
+    "x": -16023.428,
+    "z": 3877.217,
+    "y": 10.353,
+    "rotY": -2.873,
+    "interactRangeU": 64,
+    "destinations": [
+     {
+      "id": "gate_ca",
+      "label": "Samarkand",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -7735.5,
+       "z": 4245.15,
+       "y": 27
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_eu_advice",
+    "name": "Guide Lipria",
+    "modelKey": "EastEuropeQuest_Lipria",
+    "x": -15925.612,
+    "z": 4381.908,
+    "y": 12.405,
+    "rotY": -1.253,
+    "destinations": [
+     {
+      "id": "gate_npc_eu_advice3",
+      "label": "Guide Riise (Plaza)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -16046.7,
+       "z": 3916.05,
+       "y": 12.56
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_eu_advice2",
+      "label": "Guide Raffy (Harbor)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -16462.65,
+       "z": 3951.15,
+       "y": 12.092
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_eu_advice2",
+    "name": "Guide Raffy",
+    "modelKey": "EastEuropeQuest_Lipria",
+    "x": -16456.47,
+    "z": 3943.872,
+    "y": 12.581,
+    "rotY": -0.704,
+    "destinations": [
+     {
+      "id": "gate_npc_eu_advice",
+      "label": "Guide Lipria (West Gate)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -15929.85,
+       "z": 4383.3,
+       "y": 12.4
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_eu_advice3",
+      "label": "Guide Riise (Plaza)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -16046.7,
+       "z": 3916.05,
+       "y": 12.56
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_eu_advice3",
+    "name": "Guide Riise",
+    "modelKey": "EastEuropeQuest_Lipria",
+    "x": -16043.571,
+    "z": 3914.787,
+    "y": 12.545,
+    "rotY": -1.187,
+    "destinations": [
+     {
+      "id": "gate_npc_eu_advice",
+      "label": "Guide Lipria (West Gate)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -15929.85,
+       "z": 4383.3,
+       "y": 12.4
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_eu_advice2",
+      "label": "Guide Raffy (Harbor)",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -16462.65,
+       "z": 3951.15,
+       "y": 12.092
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_eu_ferry2",
+    "name": "Harbor Manager Gale",
+    "modelKey": "EastEuropeSystem_PortManager2",
+    "x": -17136.292,
+    "z": 1742.846,
+    "y": -23.256,
+    "rotY": -1.272,
+    "destinations": [
+     {
+      "id": "gate_npc_am_ferry1",
+      "label": "Sigia Dock Ferry",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -13048.422,
+       "z": 3304.313,
+       "y": 3.94
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_am_ferry2",
+      "label": "Droa Dock Ferry",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -13049.5,
+       "z": 2741.942,
+       "y": 4.039
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "hotan_province": [
+   {
+    "id": "gate_kt",
+    "name": "Hotan Gate",
+    "modelKey": "portal_kt",
+    "x": 169.566,
+    "z": 73.156,
+    "y": 35.46,
+    "rotY": 3.142,
+    "interactRangeU": 32,
+    "destinations": [
+     {
+      "id": "gate_wc",
+      "label": "Donwhang",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 5327.55,
+       "z": 3106.2,
+       "y": -12
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_ca",
+      "label": "Samarkand",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -7735.5,
+       "z": 4245.15,
+       "y": 27
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_kt_ferry2",
+    "name": "Boat Ticket Seller Rahan",
+    "modelKey": "npc_kt_ferry",
+    "x": 1618.41,
+    "z": -89.314,
+    "y": -3.373,
+    "rotY": -1.274,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry3",
+      "label": "Tarim North Ferry",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 2391.45,
+       "z": -9.3,
+       "y": -3.357
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_kt_ferry3",
+    "name": "Boat Ticket Seller Asimo",
+    "modelKey": "npc_kt_ferry",
+    "x": 1686.624,
+    "z": -463.081,
+    "y": -4.809,
+    "rotY": -1.501,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry4",
+      "label": "Tarim South Ferry",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 2373.6,
+       "z": -444.15,
+       "y": -8.57
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_kt_flyship1",
+    "name": "Airship Ticket Seller Dawari",
+    "modelKey": "khotanshop_designer",
+    "x": -3939.669,
+    "z": 580.065,
+    "y": 320.211,
+    "rotY": 2.491,
+    "destinations": [
+     {
+      "id": "gate_npc_ca_flyship",
+      "label": "Samarkand Airship Dock",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -4402.95,
+       "z": 2835.9,
+       "y": 44.37
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_tk_tunnel_no",
+    "name": "Tunnel Manager Asui",
+    "modelKey": "TaklamakanSystem_Tunnel_No",
+    "x": -2856.276,
+    "z": 2972.232,
+    "y": 59.042,
+    "rotY": 1.649,
+    "destinations": [
+     {
+      "id": "gate_npc_ca_tunnel_no",
+      "label": "Tunnel of Abyss North (Samarkand)",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -4159.2,
+       "z": 4017.3,
+       "y": 89.717
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_tk_tunnel_so",
+    "name": "Tunnel Manager Maryokuk",
+    "modelKey": "TaklamakanSystem_Tunnel_So",
+    "x": -2852.523,
+    "z": 2081.587,
+    "y": 38.531,
+    "rotY": 1.323,
+    "destinations": [
+     {
+      "id": "gate_npc_ca_tunnel_so",
+      "label": "Tunnel of Abyss South (Samarkand)",
+      "toZone": "samarkand_province",
+      "toPos": {
+       "x": -4114.2,
+       "z": 3156.6,
+       "y": 27.52
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "jangan_province": [
+   {
+    "id": "gate_ch",
+    "name": "Jangan Gate",
+    "modelKey": "portal_cj",
+    "x": 9692.571,
+    "z": 1646.356,
+    "y": -4.97,
+    "rotY": -2.356,
+    "interactRangeU": 48,
+    "destinations": [
+     {
+      "id": "gate_wc",
+      "label": "Donwhang",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 5327.55,
+       "z": 3106.2,
+       "y": -12
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_ferry",
+    "name": "Ferry Ticket Seller Doji",
+    "modelKey": "npc_ch_ferry",
+    "x": 7542.345,
+    "z": 1704.2,
+    "y": 10.872,
+    "rotY": 2.561,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry",
+      "label": "Western China East Ferry",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 7583.4,
+       "z": 2526.3,
+       "y": 24
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_ferry2",
+    "name": "Ferry Ticket Seller Chau",
+    "modelKey": "npc_ch_ferry",
+    "x": 6673.551,
+    "z": 1392.999,
+    "y": 9.284,
+    "rotY": 2.626,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry2",
+      "label": "Western West Ferry",
+      "toZone": "donwhang_province",
+      "toPos": {
+       "x": 6201.75,
+       "z": 1818.15,
+       "y": 24
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_soldier_ea2",
+    "name": "Solder Sangnam [Teleport]",
+    "modelKey": "chinaetc_soldiereast2",
+    "x": 10000.075,
+    "z": 1704.753,
+    "y": -0.01,
+    "rotY": -0.737,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_soldier_em1",
+      "label": "Jangan Palace Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9650.4,
+       "z": 1715.1,
+       "y": -0.907
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_so1",
+      "label": "Jangan South Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9651.45,
+       "z": 1451.55,
+       "y": -0.07
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_we1",
+      "label": "Jangan West Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9273.9,
+       "z": 1725,
+       "y": -0.057
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_soldier_em1",
+    "name": "Soldier Choiyoung [Teleport]",
+    "modelKey": "chinaetc_soldierpalace1",
+    "x": 9655.431,
+    "z": 1725.396,
+    "y": 0,
+    "rotY": -2.687,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_soldier_ea2",
+      "label": "Jangan East Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9993,
+       "z": 1712.55,
+       "y": -0.032
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_so1",
+      "label": "Jangan South Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9651.45,
+       "z": 1451.55,
+       "y": -0.07
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_we1",
+      "label": "Jangan West Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9273.9,
+       "z": 1725,
+       "y": -0.057
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_soldier_so1",
+    "name": "Soldier Jingyo [Teleport]",
+    "modelKey": "chinaetc_soldiersouth1",
+    "x": 9643.511,
+    "z": 1444.599,
+    "y": -0.061,
+    "rotY": 0.852,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_soldier_em1",
+      "label": "Jangan Palace Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9650.4,
+       "z": 1715.1,
+       "y": -0.907
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_ea2",
+      "label": "Jangan East Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9993,
+       "z": 1712.55,
+       "y": -0.032
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_we1",
+      "label": "Jangan West Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9273.9,
+       "z": 1725,
+       "y": -0.057
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_soldier_we1",
+    "name": "Soldier Hogang [Teleport]",
+    "modelKey": "chinaetc_soldierwest1",
+    "x": 9266.249,
+    "z": 1733.127,
+    "y": -0.042,
+    "rotY": 2.386,
+    "destinations": [
+     {
+      "id": "gate_npc_ch_soldier_em1",
+      "label": "Jangan Palace Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9650.4,
+       "z": 1715.1,
+       "y": -0.907
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_ea2",
+      "label": "Jangan East Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9993,
+       "z": 1712.55,
+       "y": -0.032
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_npc_ch_soldier_so1",
+      "label": "Jangan South Gate",
+      "toZone": "jangan_province",
+      "toPos": {
+       "x": 9651.45,
+       "z": 1451.55,
+       "y": -0.07
+      },
+      "costGold": 0,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "jangan_world_deprecated": [
+   {
+    "id": "gate_ch",
+    "name": "Jangan Gate",
+    "modelKey": "portal_cj",
+    "x": 908.571,
+    "z": 206.356,
+    "y": -4.97,
+    "rotY": -2.356,
+    "interactRangeU": 48,
+    "destinations": [
+     {
+      "id": "gate_wc",
+      "label": "Donwhang",
+      "toZone": "donwhang_deprecated",
+      "toPos": {
+       "x": -432.45,
+       "z": 370.2,
+       "y": -16.01
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_ferry",
+    "name": "Ferry Ticket Seller Doji",
+    "modelKey": "npc_ch_ferry",
+    "x": -1241.655,
+    "z": 264.199,
+    "y": 10.872,
+    "rotY": 2.561,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry",
+      "label": "Western China East Ferry",
+      "toZone": "donwhang_deprecated",
+      "toPos": {
+       "x": 1823.4,
+       "z": -209.7,
+       "y": 8.626
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ch_ferry2",
+    "name": "Ferry Ticket Seller Chau",
+    "modelKey": "npc_ch_ferry",
+    "x": -2110.449,
+    "z": -47.001,
+    "y": 9.284,
+    "rotY": 2.626,
+    "destinations": [
+     {
+      "id": "gate_npc_wc_ferry2",
+      "label": "Western West Ferry",
+      "toZone": "donwhang_deprecated",
+      "toPos": {
+       "x": 441.75,
+       "z": -917.85,
+       "y": 5.793
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ],
+  "samarkand_province": [
+   {
+    "id": "gate_ca",
+    "name": "Samarkand Gate",
+    "modelKey": "portal_ca",
+    "x": -7776.3,
+    "z": 4336.194,
+    "y": 27,
+    "rotY": 3.142,
+    "interactRangeU": 19,
+    "destinations": [
+     {
+      "id": "gate_eu",
+      "label": "Constantinople",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -15985.5,
+       "z": 3904.5,
+       "y": 12.56
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     },
+     {
+      "id": "gate_kt",
+      "label": "Hotan",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": 170.7,
+       "z": 22.95,
+       "y": 37.5
+      },
+      "costGold": 5000,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_am_ferry1",
+    "name": "Pirate Morgun",
+    "modelKey": "AsiaMinor_Ferry1",
+    "x": -13048.422,
+    "z": 3304.313,
+    "y": 3.94,
+    "rotY": -0.357,
+    "destinations": [
+     {
+      "id": "gate_npc_eu_ferry2",
+      "label": "Constantinople Harbor Ferry",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -17136.292,
+       "z": 1742.846,
+       "y": -23.256
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_am_ferry2",
+    "name": "Priate Blackbeard",
+    "modelKey": "AsiaMinor_Ferry2",
+    "x": -13049.5,
+    "z": 2741.942,
+    "y": 4.039,
+    "rotY": -0.352,
+    "destinations": [
+     {
+      "id": "gate_npc_eu_ferry2",
+      "label": "Constantinople Harbor Ferry",
+      "toZone": "europe_province",
+      "toPos": {
+       "x": -17136.292,
+       "z": 1742.846,
+       "y": -23.256
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ca_flyship",
+    "name": "Aircraft Ticket Seller Saena",
+    "modelKey": "CentralAsiaSystem_Flyship",
+    "x": -4402.691,
+    "z": 2792.382,
+    "y": 48.722,
+    "rotY": -0.006,
+    "destinations": [
+     {
+      "id": "gate_npc_kt_flyship1",
+      "label": "Hotan Airship Dock",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": -3902.7,
+       "z": 531.45,
+       "y": 315.883
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ca_tunnel_no",
+    "name": "Tunnel Manager Topni",
+    "modelKey": "CentralAsiaSystem_Tunnel_No",
+    "x": -4140.734,
+    "z": 4018.019,
+    "y": 89.723,
+    "rotY": -1.61,
+    "destinations": [
+     {
+      "id": "gate_npc_tk_tunnel_no",
+      "label": "Tunnel of Abyss North (Taklamakan)",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": -2825.7,
+       "z": 2969.85,
+       "y": 59.008
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   },
+   {
+    "id": "gate_npc_ca_tunnel_so",
+    "name": "Tunnel Manager Salhap",
+    "modelKey": "CentralAsiaSystem_Tunnel_So",
+    "x": -4096.536,
+    "z": 3156.441,
+    "y": 27.809,
+    "rotY": -1.562,
+    "destinations": [
+     {
+      "id": "gate_npc_tk_tunnel_so",
+      "label": "Tunnel of Abyss South (Taklamakan)",
+      "toZone": "hotan_province",
+      "toPos": {
+       "x": -2823.6,
+       "z": 2088.9,
+       "y": 36.662
+      },
+      "costGold": 500,
+      "arrivalRadiusU": 6
+     }
+    ]
+   }
+  ]
+ }
+}
